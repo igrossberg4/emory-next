@@ -10,15 +10,16 @@ export default function LateralImageExpanded(props:any) {
   return (
     <Fragment>
       <Box background={props.background}>
-      <button onClick={() => router.back()}>{props.button_close_text}</button>
+        <button onClick={() => router.back()}>{props.button_close_text}</button>
 
-      <motion.figure
-        layoutId={props.img_src}
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 1 }}
-        >
-      <Image alt="" width={200} height={200} src={props.img_src}></Image>
-        </motion.figure>        <h2>{props.header}</h2>
+        <motion.figure
+          layoutId={props.img_src}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          >
+          <Image alt="" width={200} height={200} src={props.img_src}></Image>
+        </motion.figure>
+        <h2>{props.header}</h2>
         <p>
           {props.text}
         </p>

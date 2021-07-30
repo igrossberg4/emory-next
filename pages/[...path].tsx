@@ -75,18 +75,16 @@ const pathJsonText = {
                 props: {
                   view: [
                     {
-                      component: "HeaderTop",
+                      component: "CarouselItem",
                       props: {
-                        about: "About the campaign",
                         header:
                           "Building on Emory's commitment to serve humanity",
-                        text: "Extra text",
                         button_scroll: "Scroll to",
                         action: {
                           type: "navigate",
                           route_to: "landing/another/thing",
                         },
-                        img_src: "Collegue_arts.png",
+                        img_src: "collegue_arts-sm.jpg",
                       },
                     },
                   ],
@@ -146,7 +144,7 @@ const pathJsonText = {
             header: "Building on Emory's commitment to serve humanity",
             text: "Extra text",
             button_scroll: "Scroll to",
-            img_src: "Collegue_arts.png",
+            img_src: "collegue_arts.jpg",
             img_full:true,
           },
         },

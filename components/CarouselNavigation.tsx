@@ -37,6 +37,7 @@ export const NextButton = ({ enabled, onClick }: ButtonEnabled) => (
 const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => {
   const [viewportRef, embla] = useEmblaCarousel({
     align: "center",
+    loop: true,
     skipSnaps: false,
     startIndex:current
   });

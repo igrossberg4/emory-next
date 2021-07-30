@@ -10,6 +10,7 @@ import LateralImageText from "./LateralImageText";
 import LateralImageExpanded from './LateralImageExpanded';
 import CarouselNavigation from "./CarouselNavigation";
 import AccordionComponent from './AccordionComponent';
+import CarouselItem from "./CarouselItem";
 export default function DynamicComponentMatcher(props:any) {
   return (
     <Fragment>
@@ -39,13 +40,20 @@ export default function DynamicComponentMatcher(props:any) {
                   {...component.props}
                 ></LateralImageExpanded>
               );
-              case "CarouselNavigation":
-                return (
-                    <CarouselNavigation
-                      key={i.toString()}
-                      {...component.props}
-                    ></CarouselNavigation>
-                  );
+          case "CarouselNavigation":
+            return (
+                <CarouselNavigation
+                  key={i.toString()}
+                  {...component.props}
+                ></CarouselNavigation>
+              );
+          case "CarouselItem":
+            return (
+                <CarouselItem
+                  key={i.toString()}
+                  {...component.props}
+                ></CarouselItem>
+              );
           case "DynamicComponentMatcher":
             return (
               <DynamicComponentMatcher
