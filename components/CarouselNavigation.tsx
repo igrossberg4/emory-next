@@ -43,8 +43,28 @@ const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => 
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      console.log(
+        `App is changing to ${url}`
+      )
+      console.log(embla)
+      if (!embla) return;
+      console.log(embla.canScrollNext(), embla.canScrollPrev(), router.query);
+      setPrevBtnEnabled(embla.canScrollPrev());
+      setNextBtnEnabled(embla.canScrollNext());   
+    
+    }
+
+    router.events.on('beforeHistoryChange', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('beforeHistoryChange', handleRouteChange)
+    }
+  }, [router, embla])
   const changeRoute = useCallback(() => {
-    console.log("Es llamado", embla)
     if (!embla) return;
 
     const path = router?.query?.path;
@@ -75,27 +95,21 @@ const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => 
     embla && embla.scrollNext();
     changeRoute()
   } , [embla, changeRoute]);
+  const onDragEnd = useCallback(() => {
+    if (!embla) return;
+    changeRoute();
+  }, [embla, changeRoute]);
   const onSelect = useCallback(() => {
     if (!embla) return;
-
-
-    /*router.push(
-      {
-        pathname: route,
-        query: { slide: embla.selectedScrollSnap().toString() },
-      },
-      route+`?slide=${ embla.selectedScrollSnap().toString()}`,
-      { shallow: true }
-    );*/
-
     setPrevBtnEnabled(embla.canScrollPrev());
     setNextBtnEnabled(embla.canScrollNext());
-  }, [embla, router]);
+  }, [embla]);
   useEffect(() => {
     if (!embla) return;
     embla.on("select", onSelect);
-    onSelect();
-  }, [embla, onSelect]);
+    embla.on('pointerUp', onDragEnd)
+    //onSelect();
+  }, [embla, onSelect, onDragEnd]);
   return (
     <div className="embla">
       <div className="embla__viewport" ref={viewportRef}>
