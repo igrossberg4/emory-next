@@ -16,7 +16,7 @@ export default function CarouselItem(props: any) {
           {/*</motion.figure>*/}
         </div>
         <h2 className="title">{props.header}</h2>
-        <div className="button"
+        <div className="btn"
             onClick={(e) => {
               if (props.action && props.action.type === "navigate") {
                 router.push(props.action.route_to);

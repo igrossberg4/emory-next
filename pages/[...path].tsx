@@ -142,27 +142,27 @@ const pathJsonText = {
         description: "Some description for other page",
       },
       view: [
-        {
-          component: "MenuTop",
-          props: {
-            title: "Select School",
-            options: [
-              {
-                title: "Text option",
-                route_to: "/intro",
-              },
-            ],
-          },
-        },
+        // {
+        //   component: "MenuTop",
+        //   props: {
+        //     title: "Select School",
+        //     options: [
+        //       {
+        //         title: "Text option",
+        //         route_to: "/intro",
+        //       },
+        //     ],
+        //   },
+        // },
         {
           component: "HeaderTop",
           props: {
             about: "About the campaign",
             header: "Building on Emory's commitment to serve humanity",
-            text: "Extra text",
+            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
             button_scroll: "Scroll to",
             img_src: "collegue_arts.jpg",
-            img_full:true,
+            // img_full:true,
           },
         },
         {
