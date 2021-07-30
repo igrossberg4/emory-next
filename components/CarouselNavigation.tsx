@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React, { Fragment } from "react";
-import styles from "../../styles/Home.module.css";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
@@ -47,7 +46,7 @@ const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => 
   const changeRoute = useCallback(() => {
     console.log("Es llamado", embla)
     if (!embla) return;
-    
+
     const path = router?.query?.path;
     const slide = router.query.slide;
     let route;

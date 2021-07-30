@@ -6,6 +6,7 @@ import { Box } from "@chakra-ui/react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { useRouter } from "next/dist/client/router";
+import { motion } from "framer-motion";
 
 export default function VideoIntro(props: any) {
   const videoRef = useRef<HTMLVideoElement|undefined>(undefined);
@@ -13,7 +14,11 @@ export default function VideoIntro(props: any) {
   const router = useRouter();
   return (
     <Fragment>
-      <Box>
+    <motion.figure
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      >
+      <div className="container" >
         {playing}
         <video
           onEnded={(en) => {
@@ -50,7 +55,8 @@ export default function VideoIntro(props: any) {
         ) : (
           ""
         )}
-      </Box>
+      </div>
+      </motion.figure>
     </Fragment>
   );
 }

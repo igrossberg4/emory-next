@@ -1,22 +1,23 @@
 import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import React from "react";
 import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
+import { Fragment } from "react";
 
 export default function Home(props: any) {
   const router = useRouter();
   return (
-    <div className={styles.container}>
+    <Fragment>
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <DynamicComponentMatcher view={props.view}></DynamicComponentMatcher>
-    </div>
+    </Fragment>
   );
 }
 
@@ -85,7 +86,7 @@ const pathJsonText = {
                           type: "navigate",
                           route_to: "landing/another/thing",
                         },
-                        
+
                         img_src: "Collegue_arts.png",
                       },
                     },
@@ -224,7 +225,7 @@ export async function getStaticProps({ params }: { params: { path: [] } }) {
 // the path has not been generated.
 export async function getStaticPaths() {
   /*const posts = [{id:1}, {id:2}, {id:3}, {id:"dos/tres"}];
-  
+
     // Get the paths we want to pre-render based on posts
     const paths = posts.map((post) => ({
       params: { path: post.id.toString().split('/') },
