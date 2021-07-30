@@ -86,7 +86,6 @@ const pathJsonText = {
                           type: "navigate",
                           route_to: "landing/another/thing",
                         },
-
                         img_src: "Collegue_arts.png",
                       },
                     },

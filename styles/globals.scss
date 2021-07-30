@@ -22,6 +22,7 @@ body {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 // Styles
@@ -30,18 +31,13 @@ html {
 }
 
 body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  height: 100%;
 
   #__next {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
 
     > .container {
-      flex-grow: 1;
+      height: 100%;
     }
   }
 }
@@ -79,30 +75,24 @@ a {
   }
 }
 
-// Intro page
-.full-page-video {
+.container-fit {
+  height: 100%;
+  width: 100%;
+}
+
+// Intro page.
+.container-video-intro {
   position: relative;
 
   video {
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
-
-  .btn-big-rounded {
+  .start-wp {
     position: absolute;
-    z-index: 10;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  .btn-translucent {
-    position: absolute;
-    z-index: 10;
-    bottom: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }

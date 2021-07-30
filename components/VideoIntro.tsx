@@ -13,25 +13,24 @@ export default function VideoIntro(props: any) {
   const [playing, setPlaying] = useState(false);
   const router = useRouter();
   return (
-    <Fragment>
     <motion.figure
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      className="container container-fit container-video-intro">
+      <video
+        onEnded={(en) => {
+          // Check if the video has ended.
+          // TO DO define if we take some action on end.
+          console.log(en);
+        }}
+        ref={(ref) => {
+          videoRef.current = ref as any;
+        }}
+        id="myVideo"
       >
-      <div className="container full-page-video" >
-        <video
-          onEnded={(en) => {
-            // Check if the video has ended.
-            // TO DO define if we take some action on end.
-            console.log(en);
-          }}
-          ref={(ref) => {
-            videoRef.current = ref as any;
-          }}
-          id="myVideo"
-        >
-          <source src={props.video_src} type="video/mp4"></source>
-        </video>
+        <source src={props.video_src} type="video/mp4"></source>
+      </video>
+      <div className="start-wp">
         {videoRef && !playing ? (
           <button className="btn-big-rounded"
             onClick={async () => {
@@ -55,7 +54,6 @@ export default function VideoIntro(props: any) {
           ""
         )}
       </div>
-      </motion.figure>
-    </Fragment>
+    </motion.figure>
   );
 }
