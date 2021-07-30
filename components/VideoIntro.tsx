@@ -18,8 +18,7 @@ export default function VideoIntro(props: any) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       >
-      <div className="container" >
-        {playing}
+      <div className="container full-page-video" >
         <video
           onEnded={(en) => {
             // Check if the video has ended.
@@ -34,7 +33,7 @@ export default function VideoIntro(props: any) {
           <source src={props.video_src} type="video/mp4"></source>
         </video>
         {videoRef && !playing ? (
-          <button
+          <button className="btn-big-rounded"
             onClick={async () => {
               if (videoRef && videoRef.current && !playing) {
                 videoRef?.current?.play();
@@ -49,7 +48,7 @@ export default function VideoIntro(props: any) {
           ""
         )}
         {videoRef && playing ? (
-          <button onClick={() => router.push(props.route_to)}>
+          <button className="btn-translucent" onClick={() => router.push(props.route_to)}>
             {props.button_stop_text}
           </button>
         ) : (
