@@ -79,35 +79,52 @@ const pathJsonText = {
                       props: {
                         header:
                           "Building on Emory's commitment to serve humanity",
-                        button_scroll: "Scroll to",
+                        button_scroll: "Scroll to explore",
                         action: {
                           type: "navigate",
                           route_to: "landing/another/thing",
                         },
-                        img_src: "collegue_arts-sm.jpg",
+                        img_src: "collegue_arts.jpg",
                       },
                     },
                   ],
                 },
               },
-
               {
                 component: "DynamicComponentMatcher",
                 props: {
                   view: [
                     {
-                      component: "HeaderTop",
+                      component: "CarouselItem",
                       props: {
-                        about: "About the campaign",
                         header:
-                          "Building on Emory's commitment to serve humanity",
-                        text: "Extra text",
-                        button_scroll: "Scroll to",
-                        img_src: "vercel.svg",
+                            "Building on Emory's commitment to serve humanity 2",
+                        button_scroll: "Scroll to explore",
                         action: {
                           type: "navigate",
                           route_to: "landing/another/thing",
                         },
+                        img_src: "vercel.svg",
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                component: "DynamicComponentMatcher",
+                props: {
+                  view: [
+                    {
+                      component: "CarouselItem",
+                      props: {
+                        header:
+                            "Building on Emory's commitment to serve humanity 3",
+                        button_scroll: "Scroll to explore",
+                        action: {
+                          type: "navigate",
+                          route_to: "landing/another/thing",
+                        },
+                        img_src: "collegue_arts.jpg",
                       },
                     },
                   ],
