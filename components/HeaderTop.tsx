@@ -7,36 +7,43 @@ import { motion } from "framer-motion";
 
 export default function HeaderTop(props: any) {
   const router = useRouter();
-  const previosPath = router.asPath.search('#') > 0 ? router.asPath.split('#').slice(-1) : false
+  let previosPath: string;
+  previosPath = router.asPath.search('#') > -1 ? router.asPath.split('#').slice(-1).toString() : '';
   const variants = {
     mainImage_active: {
-      'max-width': '1600px',
+      opacity: 1,
+      maxWidth: '1600px',
       scale: 1.5,
       bottom: '10%',
       transition: { duration: 4 }
     },
     mainImage_initialFromCarousel: {
       opacity: 1,
-      'max-width': '530px',
+      maxWidth: '530px',
       scale: 1,
       bottom: '30%',
     },
     teaserImage_active: {
-      'max-width': 0,
+      maxWidth: 0,
+      margin: 0,
+      border: 0,
+      transitionEnd: {
+        display: "none",
+      },
       transition: { duration: 2 }
     },
     teaserImage_initialFromCarousel: {
-      'max-width': '530px',
+      maxWidth: '530px',
     },
     title_active: {
-      'font-size': '3.5em',
-      'max-width': '780px',
+      fontSize: '3.5em',
+      maxWidth: '780px',
       transition: { duration: 4 }
     },
     title_initialFromCarousel: {
       opacity: 1,
-      'font-size': '2em',
-      'max-width': '650px',
+      fontSize: '2em',
+      maxWidth: '650px',
     },
     fadeIn_active: {
       opacity: 1,
@@ -47,6 +54,7 @@ export default function HeaderTop(props: any) {
     }
   };
 
+  // @ts-ignore
   return (
     <div className="content-header">
       <motion.img className="image round-wp"
@@ -73,8 +81,8 @@ export default function HeaderTop(props: any) {
           >{props.about}</motion.div>
           <motion.h1 className="title"
                      variants={variants}
-                     initial={previosPath == 'carousel' ? 'title_initialFromCarousel' : 'fadeIn_initial'}
-                     animate={previosPath == 'carousel' ? 'title_active' : 'fadeIn_active'}
+                     initial={previosPath === 'carousel' ? 'title_initialFromCarousel' : 'fadeIn_initial'}
+                     animate={previosPath === 'carousel' ? 'title_active' : 'fadeIn_active'}
           >{props.header}</motion.h1>
           <motion.div className="subtitle"
                       variants={variants}
