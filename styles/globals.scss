@@ -8,6 +8,9 @@ $default-box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.5),
     2px 2px 6px rgba(95, 92, 89, 0.12),
     4px 4px 11px rgba(177, 167, 162, 0.4);
 
+$default-sparation: 30px;
+$default-section-padding: 20px;
+
 // Resets
 html,
 body {
@@ -26,6 +29,10 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+}
+img{
+  width: 100%;
+  height: auto;
 }
 
 // Styles
@@ -48,13 +55,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  display: inline-block;
 }
 
 
 // Buttons
 .btn {
   text-transform: uppercase;
-  padding: 0 30px;
+  padding: 0 1em;
 }
 .btn-big-rounded {
   background-color: $color-white;
@@ -84,15 +92,15 @@ a {
   height: 100%;
   width: 100%;
 }
-.container-screen-fit {
-  min-height: 100vh;
+.container-force-screen-fit-y {
+  height: 100vh;
   width: 100%;
 }
 
 .content {
   max-width: 982px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 $default-sparation / 2;
 }
 
 .round-wp{
@@ -106,7 +114,7 @@ a {
 
 .line-separator {
   position: relative;
-  padding: 80px 0;
+  padding: $default-section-padding * 2 0;
   width: 100%;
 
   &:before {
@@ -124,7 +132,7 @@ a {
   }
 
   &.line-separator--half-height {
-    padding: 40px 0;
+    padding: $default-section-padding 0;
   }
 
   &.line-separator--overflowed {
@@ -151,95 +159,91 @@ a {
   }
 }
 
-
-//Carousel item
-.carousel-item {
+//Carousel item and Header top content
+.carousel-item,
+.content-header__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0 100px 0;
+  text-align: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
   .image,
-  .title,
-  .button{
-    margin-bottom: 40px;
+  .btn {
+    margin-bottom: $default-sparation;
   }
 
   .image {
-    width: 80%;
     max-width: 530px;
+    //height: 100%;
+    //width: auto;
   }
 
   .title {
     text-transform: uppercase;
     font-size: 2em;
     line-height: 1em;
-    text-align: center;
-    max-width: 780px;
-    padding: 0 30px;
+    max-width: 650px;
+  }
+
+  .actions {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
 }
 
 // Header top / content header
 .content-header {
-  .content-header__background-image {
+  overflow: hidden;
+  position: relative;
+
+  > .image {
     position: absolute;
     z-index: -1;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    .image {
-      display: inline-flex;
-      position: absolute;
-      left: 50%;
-      bottom: 80px;
-      transform: translateX(-50%);
-      width: 200vh;
-      max-width: 1600px;
-    }
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+    bottom: 10%;
+    transform: scale(1.5);
   }
 
-  .content-header__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    > .content {
-       text-align: center;
+  .content-header__container {
+    .image {
+      z-index: -2;
+      position: relative;
+      opacity: 0;
     }
 
     .pretitle,
-    .subtitle,
-    .title {
+    .subtitle {
       margin: 0 auto;
     }
-   .pretitle {
-        text-transform: uppercase;
-      }
-    .title {
-      font-size: 3.5em;
-      line-height: 1em;
+    .pretitle {
       text-transform: uppercase;
+      margin-bottom: $default-sparation / 2;
+    }
+    .title {
+      margin-bottom: $default-sparation;
+      font-size: 3.5em;
+      max-width: 780px;
     }
     .subtitle {
-      margin-top: 20px;
+      //margin-top: $default-sparation;
       max-width: 530px;
     }
-
-    .btn {
-      margin-bottom: 20px;
-    }
-
-    .actions {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-    }
-
-
-
   }
 }

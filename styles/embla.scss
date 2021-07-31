@@ -1,7 +1,6 @@
 .embla {
     position: relative;
     background-color: #f7f7f7;
-    padding: 20px;
     margin-left: auto;
     height: 100vh;
     margin-right: auto;
@@ -32,25 +31,12 @@
 
   .embla__slide {
     position: relative;
-    min-width: 80%;
-    padding-left: 10px;
+    min-width: 70vw;
   }
 
   .embla__slide__inner {
     position: relative;
-    overflow: hidden;
-  }
-
-  .embla__slide__img {
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    min-height: 100%;
-    min-width: 100%;
-    max-width: none;
-    transform: translate(-50%, -50%);
+    //overflow: hidden;
   }
 
   .embla__button {

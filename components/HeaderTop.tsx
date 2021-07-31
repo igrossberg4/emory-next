@@ -2,23 +2,85 @@ import Head from "next/head";
 import React, { Fragment } from "react";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
-import { Box, Container } from "@chakra-ui/react";
+import {Box, Container, transition} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 export default function HeaderTop(props: any) {
   const router = useRouter();
+  const previosPath = router.asPath.search('#') > 0 ? router.asPath.split('#').slice(-1) : false
+  const variants = {
+    mainImage_active: {
+      'max-width': '1600px',
+      scale: 1.5,
+      bottom: '10%',
+      transition: { duration: 4 }
+    },
+    mainImage_initialFromCarousel: {
+      opacity: 1,
+      'max-width': '530px',
+      scale: 1,
+      bottom: '30%',
+    },
+    teaserImage_active: {
+      'max-width': 0,
+      transition: { duration: 2 }
+    },
+    teaserImage_initialFromCarousel: {
+      'max-width': '530px',
+    },
+    title_active: {
+      'font-size': '3.5em',
+      'max-width': '780px',
+      transition: { duration: 4 }
+    },
+    title_initialFromCarousel: {
+      opacity: 1,
+      'font-size': '2em',
+      'max-width': '650px',
+    },
+    fadeIn_active: {
+      opacity: 1,
+      transition: { duration: 2 }
+    },
+    fadeIn_initial: {
+      opacity: 0,
+    }
+  };
+
   return (
     <div className="content-header">
-      <div className="content-header__background-image">
-         <div className="image round-wp">
-           <Image alt="" src={props.img_src} width="1600" height="1600" ></Image>
-         </div>
-      </div>
-      <div className="content-header__container container container-screen-fit">
+      <motion.img className="image round-wp"
+                  variants={variants}
+                  style={{ originY: 1 }}
+                  initial={previosPath == 'carousel' ? 'mainImage_initialFromCarousel' : 'fadeIn_initial'}
+                  animate={previosPath == 'carousel' ? 'mainImage_active' : 'fadeIn_active'}
+                  alt={props.header} src={props.img_src}
+                 >
+      </motion.img>
+      <div className="content-header__container container container-force-screen-fit-y">
         <div className="content">
-          <div className="pretitle">{props.about}</div>
-          <h1 className="title">{props.header}</h1>
-          <div className="subtitle">{props.text}</div>
+          <motion.img className="image round-wp"
+                      variants={variants}
+                      style={{ originY: 1 }}
+                      initial="teaserImage_initialFromCarousel"
+                      animate="teaserImage_active"
+                      alt={props.header} src={props.img_src}
+          ></motion.img>
+          <motion.div className="pretitle"
+                      variants={variants}
+                      initial="fadeIn_initial"
+                      animate="fadeIn_active"
+          >{props.about}</motion.div>
+          <motion.h1 className="title"
+                     variants={variants}
+                     initial={previosPath == 'carousel' ? 'title_initialFromCarousel' : 'fadeIn_initial'}
+                     animate={previosPath == 'carousel' ? 'title_active' : 'fadeIn_active'}
+          >{props.header}</motion.h1>
+          <motion.div className="subtitle"
+                      variants={variants}
+                      initial="fadeIn_initial"
+                      animate="fadeIn_active"
+          >{props.text}</motion.div>
         </div>
         <div className="actions">
             <div className="btn"
