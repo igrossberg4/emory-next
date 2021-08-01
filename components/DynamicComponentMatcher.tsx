@@ -11,6 +11,7 @@ import LateralImageExpanded from './LateralImageExpanded';
 import CarouselNavigation from "./CarouselNavigation";
 import AccordionComponent from './AccordionComponent';
 import CarouselItem from "./CarouselItem";
+import IntroPage from './IntroPage';
 export default function DynamicComponentMatcher(props:any) {
   return (
     <Fragment>
@@ -19,6 +20,10 @@ export default function DynamicComponentMatcher(props:any) {
           case "VideoIntro":
             return (
               <VideoIntro key={i.toString()} {...component.props}></VideoIntro>
+            );
+          case "IntroPage":
+            return (
+              <IntroPage key={i.toString()} {...component.props}></IntroPage>
             );
           case "MenuTop":
             return <MenuTop key={i.toString()} {...component.props}></MenuTop>;

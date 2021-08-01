@@ -1,7 +1,10 @@
+@use 'sass:math';
+
 // Variables
 $color-text: #000000;
 $color-gray: #212121;
 $color-white: #ffffff;
+$color-black: #212322;
 
 $default-transition: all .6s ease-in-out;
 $default-box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.5),
@@ -63,29 +66,6 @@ a {
 .btn {
   text-transform: uppercase;
   padding: 0 1em;
-}
-.btn-big-rounded {
-  background-color: $color-white;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  box-shadow: $default-box-shadow;
-  transition: $default-transition;
-
-  &:hover {
-    background-color: $color-gray;
-  }
-}
-.btn-translucent {
-  min-width: 180px;
-  border-radius: 20px;
-  padding: .5em 1em;
-  background-color: rgba($color-white, .3);
-  transition: $default-transition;
-
-  &:hover {
-    background-color: rgba($color-white, 1);
-  }
 }
 
 .container-fit {
@@ -151,11 +131,49 @@ a {
     height: 100%;
     object-fit: cover;
   }
-  .start-wp {
+  .btn-begin-experience {
+    background-color: $color-white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: $default-box-shadow;
+    transition: $default-transition;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .15em;
+    color: $color-black;
+    white-space: break-spaces;
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
+
+    &:hover {
+      background-color: rgba($color-white, .8);
+    }
+  }
+
+  .btn-skip-intro {
+    min-width: 108px;
+    border-radius: 20px;
+    padding: .5em 1em;
+    color: $color-black;
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: rgba($color-white, .9);
+    transition: $default-transition;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+
+    &:hover {
+      background-color: rgba($color-white, 1);
+    }
   }
 }
 
@@ -234,7 +252,7 @@ a {
     }
     .pretitle {
       text-transform: uppercase;
-      margin-bottom: $default-sparation / 2;
+      margin-bottom: math.div($default-sparation, 2);
     }
     .title {
       margin-bottom: $default-sparation;

@@ -28,11 +28,11 @@ const pathJsonText = {
       meta: { title: "Emory intro", description: "Some description for intro" },
       view: [
         {
-          component: "VideoIntro",
+          component: "IntroPage",
           props: {
             video_src: "video.mp4",
-            button_start_text: "Begin you experience",
-            button_stop_text: "Skip video",
+            text_play: "Begin\r\nyour\r\nexperience",
+            text_skip: "Skip video",
             route_to: "/landing/carousel",
           },
         },

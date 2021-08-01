@@ -8,6 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import { useRouter } from "next/dist/client/router";
 import { motion } from "framer-motion";
 
+// @TODO Deprecated.
 export default function VideoIntro(props: any) {
   const videoRef = useRef<HTMLVideoElement|undefined>(undefined);
   const [playing, setPlaying] = useState(false);
