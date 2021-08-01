@@ -45,7 +45,7 @@ const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => 
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const router = useRouter();
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: any) => {
       console.log(
         `App is changing to ${url}`
       )
@@ -53,8 +53,7 @@ const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => 
       if (!embla) return;
       console.log(embla.canScrollNext(), embla.canScrollPrev(), router.query);
       setPrevBtnEnabled(embla.canScrollPrev());
-      setNextBtnEnabled(embla.canScrollNext());   
-    
+      setNextBtnEnabled(embla.canScrollNext());
     }
 
     router.events.on('beforeHistoryChange', handleRouteChange)
