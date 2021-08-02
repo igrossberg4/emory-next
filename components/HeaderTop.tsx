@@ -19,7 +19,7 @@ export default function HeaderTop(props: any) {
     },
     mainImage_initialFromCarousel: {
       opacity: 1,
-      maxWidth: '530px',
+      maxWidth: 530,
       scale: 1,
       bottom: '30%',
     },
@@ -60,8 +60,8 @@ export default function HeaderTop(props: any) {
       <motion.img className="image round-wp"
                   variants={variants}
                   style={{ originY: 1 }}
-                  initial={previosPath == 'carousel' ? 'mainImage_initialFromCarousel' : 'fadeIn_initial'}
-                  animate={previosPath == 'carousel' ? 'mainImage_active' : 'fadeIn_active'}
+                  initial={previosPath != 'carousel' ? 'mainImage_initialFromCarousel' : 'fadeIn_initial'}
+                  animate={previosPath != 'carousel' ? 'mainImage_active' : 'fadeIn_active'}
                   alt={props.header} src={props.img_src}
                  >
       </motion.img>
@@ -81,8 +81,8 @@ export default function HeaderTop(props: any) {
           >{props.about}</motion.div>
           <motion.h1 className="title"
                      variants={variants}
-                     initial={previosPath === 'carousel' ? 'title_initialFromCarousel' : 'fadeIn_initial'}
-                     animate={previosPath === 'carousel' ? 'title_active' : 'fadeIn_active'}
+                     initial={previosPath !== 'carousel' ? 'title_initialFromCarousel' : 'fadeIn_initial'}
+                     animate={previosPath !== 'carousel' ? 'title_active' : 'fadeIn_active'}
           >{props.header}</motion.h1>
           <motion.div className="subtitle"
                       variants={variants}
@@ -93,9 +93,9 @@ export default function HeaderTop(props: any) {
         <div className="actions">
             <div className="btn"
                  onClick={(e) => {
-                     if (props.action && props.action.type === "navigate") {
+                     /*if (props.action && props.action.type === "navigate") {
                          router.push(props.action.route_to);
-                     }
+                     }*/
                  }}
             >
                 {" "}

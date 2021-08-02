@@ -6,6 +6,7 @@ import { Box } from "@chakra-ui/react";
 import { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ButtonEnabled {
   enabled: boolean;
@@ -34,70 +35,49 @@ export const NextButton = ({ enabled, onClick }: ButtonEnabled) => (
     </svg>
   </button>
 );
-const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => {
+const EmblaCarousel = ({
+  slides,
+  current,
+  actual,
+}: {
+  slides: any;
+  actual: any;
+  current: number;
+}) => {
   const [viewportRef, embla] = useEmblaCarousel({
     align: "center",
     loop: true,
     skipSnaps: false,
-    startIndex:current
   });
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(actual.prev != null);
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(actual.next != null);
   const router = useRouter();
-  useEffect(() => {
-    const handleRouteChange = (url: any) => {
-      console.log(
-        `App is changing to ${url}`
-      )
-      console.log(embla)
-      if (!embla) return;
-      console.log(embla.canScrollNext(), embla.canScrollPrev(), router.query);
-      setPrevBtnEnabled(embla.canScrollPrev());
-      setNextBtnEnabled(embla.canScrollNext());
-    }
-
-    router.events.on('beforeHistoryChange', handleRouteChange)
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method:
-    return () => {
-      router.events.off('beforeHistoryChange', handleRouteChange)
-    }
-  }, [router, embla])
-  const changeRoute = useCallback(() => {
-    if (!embla) return;
-
-    const path = router?.query?.path;
-    const slide = router.query.slide;
-    let route;
-    if (path) {
-      if (typeof path === "string") {
-        route = path;
-      } else {
-        route = path.join("/");
-      }
-    }
-    router.push(
-      {
-        pathname: route,
-        query: { slide: embla.selectedScrollSnap().toString() },
-      },
-      route+`?slide=${ embla.selectedScrollSnap().toString()}`,
-      { shallow: false }
-    );
-  }, [router, embla])
+  console.log(slides, actual);
+  const changeRoute = useCallback(
+    (route) => {
+      if (!embla && !route) return;
+      console.log(route);
+      router.push(
+        {
+          pathname: route,
+        },
+        route,
+        //{ shallow: false }
+      );
+    },
+    [router, embla]
+  );
   const scrollPrev = useCallback(() => {
     embla && embla.scrollPrev();
-    changeRoute()
-  }
-    , [embla, changeRoute]);
+    changeRoute(actual.prev);
+  }, [embla, changeRoute]);
   const scrollNext = useCallback(() => {
     embla && embla.scrollNext();
-    changeRoute()
-  } , [embla, changeRoute]);
+    changeRoute(actual.next);
+  }, [embla, changeRoute]);
   const onDragEnd = useCallback(() => {
     if (!embla) return;
-    changeRoute();
+    //changeRoute();
   }, [embla, changeRoute]);
   const onSelect = useCallback(() => {
     if (!embla) return;
@@ -107,22 +87,47 @@ const EmblaCarousel = ({ slides, current }: { slides: any, current:number }) => 
   useEffect(() => {
     if (!embla) return;
     embla.on("select", onSelect);
-    embla.on('pointerUp', onDragEnd)
+    //embla.on('pointerUp', onDragEnd)
     //onSelect();
   }, [embla, onSelect, onDragEnd]);
   return (
     <div className="embla">
       <div className="embla__viewport" ref={viewportRef}>
         <div className="embla__container">
-          {slides.map((slide: any, index: number) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
-                <DynamicComponentMatcher
-                  view={[slide]}
-                ></DynamicComponentMatcher>
-              </div>
-            </div>
-          ))}
+          {
+            slides.map((slide: any, index: number) => {
+              console.log(slide);
+              return (
+                <div className="embla__slide" key={index}>
+                  <div className="embla__slide__inner">
+                    <DynamicComponentMatcher
+                      view={[slide]}
+                    ></DynamicComponentMatcher>
+                  </div>
+                </div>
+              );
+            })
+            /*[actual.actual, slides[1]].map((slide: any, index: number) => {
+              return (
+                <div className="embla__slide" key={index}>
+                  <div className="embla__slide__inner">
+                    {
+                      <motion.div
+                        layoutId="carousel"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <DynamicComponentMatcher
+                          view={[slide]}
+                        ></DynamicComponentMatcher>
+                      </motion.div>
+                    }
+                  </div>
+                </div>
+              );
+            })*/
+          }
         </div>
       </div>
       <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
@@ -134,6 +139,6 @@ const SLIDE_COUNT = 5;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 export default function CarouselNavigation(props: any) {
   const [emblaRef] = useEmblaCarousel();
-  const router = useRouter();
-  return <EmblaCarousel slides={props.slides} current={router.query.slide ? Number(router.query.slide) : 0 } />;
+  console.log(props);
+  return <EmblaCarousel slides={props.slides} actual={props} />;
 }

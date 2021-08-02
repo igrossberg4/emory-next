@@ -38,6 +38,57 @@ const slide_1 =          {
           img_src: "/collegue_arts.jpg",
         },
       },
+
+      {
+        component: "LateralImageText",
+        props: {
+          header: "Header 2",
+          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
+          convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
+          leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu
+          justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a,
+          porttitor pretium est. Aenean sed mi semper, sodales urna rutrum,
+          consequat risus. Integer at nulla purus. In finibus, nulla ac viverra
+          aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget
+          enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non
+          laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit
+          urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget
+          nulla eu nibh condimentum pellentesque. Duis id neque tincidunt,
+          ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum
+          odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt
+          erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a
+          turpis et nisi malesuada scelerisque nec in lectus. Cras molestie,
+          eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus
+          libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus
+          sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi
+          ac posuere rutrum, elit odio faucibus dui, commodo posuere libero
+          tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
+          tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
+          imperdiet nec leo eu egestas.`,
+          img_src: "vercel.svg",
+          route_expand: "landing/image/expand",
+          image_expand_id: "image_expanded_test",
+        },
+      },
+      
+      {
+        component: "AccordionComponent",
+        props: {
+          items: [
+            {
+              title: "Accordion title",
+              description: "Accordion description",
+            },
+            {
+              title: "Accordion title",
+              description: "Accordion description",
+            },
+          ],
+        },
+      },
     ],
   },
 };
@@ -81,6 +132,78 @@ const slide_3 =           {
     ],
   },
 };
+
+
+const carousel_1 = {
+  path: "landing/carousel/1",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:null,
+        actual:slide_1,
+        next: 'landing/carousel/2',
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
+
+const carousel_2 = {
+  path: "landing/carousel/2",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:'landing/carousel/1',
+        actual:slide_2,
+        next: 'landing/carousel/3',
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
+const carousel_3 = {
+  path: "landing/carousel/3",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:'landing/carousel/2',
+        actual:slide_3,
+        next: null,
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
 const carouselInit = {
   path: "landing/carousel",
   meta: {
@@ -104,78 +227,6 @@ const carouselInit = {
     },
   ],
 };
-
-const carousel_1 = {
-  path: "landing/carousel/1",
-  meta: {
-    title: "Emory carousel",
-    description: "Some description for carousel page",
-  },
-  view: [
-    {
-      component: "CarouselNavigation",
-      props: {
-        prev:null,
-        actual:slide_1,
-        next: slide_2,
-        slides: [
-          slide_1, 
-          slide_2,
-          slide_3
-
-        ],
-      },
-    },
-  ],
-};
-
-const carousel_2 = {
-  path: "landing/carousel/2",
-  meta: {
-    title: "Emory carousel",
-    description: "Some description for carousel page",
-  },
-  view: [
-    {
-      component: "CarouselNavigation",
-      props: {
-        prev:slide_1,
-        actual:slide_2,
-        next: slide_3,
-        slides: [
-          slide_1, 
-          slide_2,
-          slide_3
-
-        ],
-      },
-    },
-  ],
-};
-const carousel_3 = {
-  path: "landing/carousel/3",
-  meta: {
-    title: "Emory carousel",
-    description: "Some description for carousel page",
-  },
-  view: [
-    {
-      component: "CarouselNavigation",
-      props: {
-        prev:slide_2,
-        actual:slide_3,
-        next: null,
-        slides: [
-          slide_1, 
-          slide_2,
-          slide_3
-
-        ],
-      },
-    },
-  ],
-};
-
 
 const pathJsonText = {
   paths: [
@@ -219,87 +270,6 @@ const pathJsonText = {
     carousel_1,
     carousel_2,
     carousel_3,
-    {
-      path: "landing/another/thing",
-      meta: {
-        title: "Emory some",
-        description: "Some description for other page",
-      },
-      view: [
-        // {
-        //   component: "MenuTop",
-        //   props: {
-        //     title: "Select School",
-        //     options: [
-        //       {
-        //         title: "Text option",
-        //         route_to: "/intro",
-        //       },
-        //     ],
-        //   },
-        // },
-        {
-          component: "HeaderTop",
-          props: {
-            about: "About the campaign",
-            header: "Building on Emory's commitment to serve humanity",
-            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-            button_scroll: "Scroll to",
-            img_src: "/collegue_arts.jpg",
-            // img_full:true,
-          },
-        },
-        {
-          component: "LateralImageText",
-          props: {
-            header: "Header 2",
-            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
-            convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
-            leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu
-            justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a,
-            porttitor pretium est. Aenean sed mi semper, sodales urna rutrum,
-            consequat risus. Integer at nulla purus. In finibus, nulla ac viverra
-            aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget
-            enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non
-            laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit
-            urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget
-            nulla eu nibh condimentum pellentesque. Duis id neque tincidunt,
-            ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum
-            odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt
-            erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a
-            turpis et nisi malesuada scelerisque nec in lectus. Cras molestie,
-            eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus
-            libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-            per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus
-            sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi
-            ac posuere rutrum, elit odio faucibus dui, commodo posuere libero
-            tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
-            tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
-            imperdiet nec leo eu egestas.`,
-            img_src: "vercel.svg",
-            route_expand: "landing/image/expand",
-            image_expand_id: "image_expanded_test",
-          },
-        },
-        {
-          component: "AccordionComponent",
-          props: {
-            items: [
-              {
-                title: "Accordion title",
-                description: "Accordion description",
-              },
-              {
-                title: "Accordion title",
-                description: "Accordion description",
-              },
-            ],
-          },
-        },
-      ],
-    },
   ],
 };
 
