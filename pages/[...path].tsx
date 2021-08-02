@@ -8,6 +8,7 @@ import { Fragment } from "react";
 
 export default function Home(props: any) {
   const router = useRouter();
+  console.log(props)
   return (
     <Fragment>
       <Head>
@@ -20,6 +21,161 @@ export default function Home(props: any) {
     </Fragment>
   );
 }
+const slide_1 =          {
+  component: "DynamicComponentMatcher",
+  props: {
+    view: [
+      {
+        component: "CarouselItem",
+        props: {
+          header:
+            "Building on Emory's commitment to serve humanity",
+          button_scroll: "Scroll to explore",
+          action: {
+            type: "navigate",
+            route_to: "/landing/another/thing",
+          },
+          img_src: "/collegue_arts.jpg",
+        },
+      },
+    ],
+  },
+};
+const slide_2 =   {
+  component: "DynamicComponentMatcher",
+  props: {
+    view: [
+      {
+        component: "CarouselItem",
+        props: {
+          header:
+              "Building on Emory's commitment to serve humanity 2",
+          button_scroll: "Scroll to explore",
+          action: {
+            type: "navigate",
+            route_to: "/landing/another/thing",
+          },
+          img_src: "/vercel.svg",
+        },
+      },
+    ],
+  },
+};
+const slide_3 =           {
+  component: "DynamicComponentMatcher",
+  props: {
+    view: [
+      {
+        component: "CarouselItem",
+        props: {
+          header:
+              "Building on Emory's commitment to serve humanity 3",
+          button_scroll: "Scroll to explore",
+          action: {
+            type: "navigate",
+            route_to: "/landing/another/thing",
+          },
+          img_src: "/collegue_arts.jpg",
+        },
+      },
+    ],
+  },
+};
+const carouselInit = {
+  path: "landing/carousel",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:null,
+        actual:slide_1,
+        next: slide_2,
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
+
+const carousel_1 = {
+  path: "landing/carousel/1",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:null,
+        actual:slide_1,
+        next: slide_2,
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
+
+const carousel_2 = {
+  path: "landing/carousel/2",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:slide_1,
+        actual:slide_2,
+        next: slide_3,
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
+const carousel_3 = {
+  path: "landing/carousel/3",
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev:slide_2,
+        actual:slide_3,
+        next: null,
+        slides: [
+          slide_1, 
+          slide_2,
+          slide_3
+
+        ],
+      },
+    },
+  ],
+};
+
 
 const pathJsonText = {
   paths: [
@@ -59,82 +215,10 @@ const pathJsonText = {
       ],
     },
 
-    {
-      path: "landing/carousel",
-      meta: {
-        title: "Emory carousel",
-        description: "Some description for carousel page",
-      },
-      view: [
-        {
-          component: "CarouselNavigation",
-          props: {
-            slides: [
-              {
-                component: "DynamicComponentMatcher",
-                props: {
-                  view: [
-                    {
-                      component: "CarouselItem",
-                      props: {
-                        header:
-                          "Building on Emory's commitment to serve humanity",
-                        button_scroll: "Scroll to explore",
-                        action: {
-                          type: "navigate",
-                          route_to: "/landing/another/thing",
-                        },
-                        img_src: "/collegue_arts.jpg",
-                      },
-                    },
-                  ],
-                },
-              },
-              {
-                component: "DynamicComponentMatcher",
-                props: {
-                  view: [
-                    {
-                      component: "CarouselItem",
-                      props: {
-                        header:
-                            "Building on Emory's commitment to serve humanity 2",
-                        button_scroll: "Scroll to explore",
-                        action: {
-                          type: "navigate",
-                          route_to: "/landing/another/thing",
-                        },
-                        img_src: "/vercel.svg",
-                      },
-                    },
-                  ],
-                },
-              },
-              {
-                component: "DynamicComponentMatcher",
-                props: {
-                  view: [
-                    {
-                      component: "CarouselItem",
-                      props: {
-                        header:
-                            "Building on Emory's commitment to serve humanity 3",
-                        button_scroll: "Scroll to explore",
-                        action: {
-                          type: "navigate",
-                          route_to: "/landing/another/thing",
-                        },
-                        img_src: "/collegue_arts.jpg",
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-    },
+    carouselInit,
+    carousel_1,
+    carousel_2,
+    carousel_3,
     {
       path: "landing/another/thing",
       meta: {
@@ -249,6 +333,7 @@ export async function getStaticPaths() {
   const paths = pathJsonText.paths.map((post) => ({
     params: { path: post.path.toString().split("/") },
   }));
+  console.log(pathJsonText)
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
