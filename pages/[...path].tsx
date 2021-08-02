@@ -240,7 +240,7 @@ const pathJsonText = {
             video_src: "video.mp4",
             text_play: "Begin\r\nyour\r\nexperience",
             text_skip: "Skip video",
-            route_to: "/landing/carousel",
+            route_to: "/landing/carousel/1",
           },
         },
       ],
