@@ -8,10 +8,10 @@ const initialState = {
     slide:undefined,
 };
 
-const Store = ({children}) => {
+const Store = ({children}:{children:any}) => {
     const [state, dispatch] = useReducer(Reducer, initialState);
     return (
-        <Context.Provider value={[state, dispatch]}>
+        <Context.Provider value={[state, dispatch] as any}>
             {children}
         </Context.Provider>
     )

@@ -7,12 +7,11 @@ import { Carousel } from "react-responsive-carousel";
 import { useRouter } from "next/dist/client/router";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { withTransition } from "./CarouselItem";
 import { Context } from "../state/Store";
 
 function BottomNavigation(props: any) {
   const router = useRouter();
-  const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context) as any;
   return (
     <Fragment>
       <div>

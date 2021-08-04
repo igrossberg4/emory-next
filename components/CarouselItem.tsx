@@ -17,18 +17,7 @@ const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
 };
 
-export const withTransition = (OriginalComponent) => {
-  return (props) => (
-    <motion.div
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ x: 0, opacity: 0 }}
-    >
-      <OriginalComponent {...props} />
-    </motion.div>
-  );
-};
-function CarouselItem(props: any) {
+export default function CarouselItem(props: any){
   const router = useRouter();
   const [animated, setAnimated] = useState(false);
   const [scroll, setScroll] = useState(0);
@@ -260,4 +249,3 @@ function CarouselItem(props: any) {
         </div>
     </div> : <HeaderTop {...props}></HeaderTop> }*/
 }
-export default CarouselItem;

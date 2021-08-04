@@ -1,4 +1,4 @@
-const Reducer = (state, action) => {
+const Reducer = (state: any, action:{payload:any, type:string}) => {
     switch (action.type) {
         case 'SET_NAV':
             return {

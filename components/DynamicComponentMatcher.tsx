@@ -9,7 +9,7 @@ import LateralImageText from "./LateralImageText";
 import LateralImageExpanded from "./LateralImageExpanded";
 import CarouselNavigation from "./CarouselNavigation";
 import AccordionComponent from "./AccordionComponent";
-import CarouselItem, { withTransition } from "./CarouselItem";
+import CarouselItem from "./CarouselItem";
 import IntroPage from "./IntroPage";
 import BottomNavigation from "./BottomNavigation";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";

@@ -79,25 +79,25 @@ const EmblaCarousel = ({
 }: {
   slides: any;
   actual: any;
-  current: number;
 }) => {
-  const index = slides.findIndex(
-    (slide) => MD5(slide) === MD5(actual.actual)
-  );
-  const [[page, direction], setPage] = useState([slides.findIndex(
-    (slide) => MD5(slide) === MD5(actual.actual)
-  ), 0]);
-  console.log(slides.findIndex(
-    (slide) => MD5(slide) === MD5(actual.actual)
-  ));
+  const index = slides.findIndex((slide: any) => MD5(slide) === MD5(actual.actual));
+  const [[page, direction], setPage] = useState([
+    slides.findIndex((slide: any) => MD5(slide) === MD5(actual.actual)),
+    0,
+  ]);
+  console.log(slides.findIndex((slide:any) => MD5(slide) === MD5(actual.actual)));
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
   // then wrap that within 0-2 to find our image ID in the array below. By passing an
   // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
   // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
   const imageIndex = wrap(0, slides.length, page);
   console.log(slides, page, actual);
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(page === 0 ? false : true);
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(page < slides.length - 1 ? false : true);
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(
+    page === 0 ? false : true
+  );
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(
+    page < slides.length - 1 ? false : true
+  );
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
@@ -110,8 +110,7 @@ const EmblaCarousel = ({
         {
           pathname: route,
         },
-        route,
-
+        route
       );
     },
     [router]
@@ -120,7 +119,7 @@ const EmblaCarousel = ({
   const scrollPrev = useCallback(() => {
     if (page > 0) {
       paginate(-1);
-      changeRoute(actual.prev)
+      changeRoute(actual.prev);
     }
 
     //dispatch({ type: "MOVE_SLIDE", payload: "back" });
@@ -134,11 +133,10 @@ const EmblaCarousel = ({
   }, [paginate, page]);
   return (
     <div>
-    <div className="embla">
-      <div className="embla__viewport">
-        <motion.div
-
-                       /* custom={direction}
+      <div className="embla">
+        <div className="embla__viewport">
+          <motion.div
+            /* custom={direction}
                         variants={variants}
                         initial="enter"
                         animate="center"
@@ -160,9 +158,11 @@ const EmblaCarousel = ({
                             scrollPrev()
                           }
                         }}*/
-        className="embla__container" style={{transform: `translateX(${-page*100}%)`}}>
-          {
-            /* 
+            className="embla__container"
+            style={{ transform: `translateX(${-page * 100}%)` }}
+          >
+            {
+              /* 
                       <motion.div
                         key={page}
                         custom={direction}
@@ -188,60 +188,52 @@ const EmblaCarousel = ({
                           }
                         }}
                       >*/
-            slides.map((value, i) => {
-              return (
-
-                <div key={i}  className="embla__slide">
-                  <div className="embla__slide__inner">
-                    <DynamicComponentMatcher
-                      
-                      view={[
-                        {
-                          component: "DynamicComponentMatcher",
-                          props: { view: [value.props.view[0]] },
-                        },
-                      ]}
-                    ></DynamicComponentMatcher>
+              slides.map((value: any, i:number) => {
+                return (
+                  <div key={i} className="embla__slide">
+                    <div className="embla__slide__inner">
+                      <DynamicComponentMatcher
+                        view={[
+                          {
+                            component: "DynamicComponentMatcher",
+                            props: { view: [value.props.view[0]] },
+                          },
+                        ]}
+                      ></DynamicComponentMatcher>
+                    </div>
                   </div>
-                </div>
-
-              );
-            }) /*
+                );
+              }) /*
                         <DynamicComponentMatcher
                           view={[slides[imageIndex]]}
                         ></DynamicComponentMatcher>
                       </motion.div>
                     </AnimatePresence>*/
-          }
-        </motion.div>
+            }
+          </motion.div>
+        </div>
+        <PrevButton
+          href={actual.prev}
+          onClick={scrollPrev}
+          enabled={prevBtnEnabled}
+        />
+        <NextButton
+          href={actual.next}
+          onClick={scrollNext}
+          enabled={nextBtnEnabled}
+        />
       </div>
-      <PrevButton
-        href={actual.prev}
-        onClick={scrollPrev}
-        enabled={prevBtnEnabled}
-      />
-      <NextButton
-        href={actual.next}
-        onClick={scrollNext}
-        enabled={nextBtnEnabled}
-      />
-    </div>
-    <DynamicComponentMatcher
-                          view={[
-                            {
-                              component: "DynamicComponentMatcher",
-                              props: { view: slides[page].props.view.slice(1) },
-                            },
-                          ]}
-                        ></DynamicComponentMatcher>
+      <DynamicComponentMatcher
+        view={[
+          {
+            component: "DynamicComponentMatcher",
+            props: { view: slides[page].props.view.slice(1) },
+          },
+        ]}
+      ></DynamicComponentMatcher>
     </div>
   );
 };
 export default function CarouselNavigation(props: any) {
-  return (
-    <EmblaCarousel
-      slides={props.slides}
-      actual={props}
-    />
-  );
+  return <EmblaCarousel slides={props.slides} actual={props} />;
 }
