@@ -6,13 +6,11 @@ import { useRouter } from "next/dist/client/router";
 import React, { useState, useEffect } from "react";
 import Store from "../state/Store";
 
-
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <Store>
-
-          <Component {...pageProps} key={router.route} />
-          </Store>
+      <Component {...pageProps} key={router.route} />
+    </Store>
   );
 }
 export default MyApp;

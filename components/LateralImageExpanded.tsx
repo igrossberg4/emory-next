@@ -9,10 +9,11 @@ export default function LateralImageExpanded(props:any) {
     const router = useRouter();
   return (
     <Fragment>
-      <Box background={props.background}>
+      <div className="container-force-screen-fit-y" style={{background:props.background}}>
         <button onClick={() => router.back()}>{props.button_close_text}</button>
 
         <motion.figure
+          layout
           layoutId={props.img_src}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
@@ -23,7 +24,7 @@ export default function LateralImageExpanded(props:any) {
         <p>
           {props.text}
         </p>
-      </Box>
+      </div>
     </Fragment>
   );
 }

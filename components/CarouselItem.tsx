@@ -157,7 +157,8 @@ function CarouselItem(props: any) {
   // @ts-ignore
   return (
     
-    <div className="content-header">
+    <motion.div className="content-header">
+      
       {/*  <motion.img
         className="image round-wp"
        variants={variants}
@@ -235,7 +236,7 @@ function CarouselItem(props: any) {
           <div className="line-separator line-separator--overflowed line-separator--half-height"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   ); /*{!animated ? <div className="carousel-item container-force-screen-fit-y">
       <div ref={(ref) => listInnerRef.current = ref}  className="content">
         <img  className="image round-wp" alt={props.header} src={props.img_src} />

@@ -2,7 +2,7 @@ import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
@@ -10,16 +10,22 @@ import { Context } from "../state/Store";
 
 export default function Home(props: any) {
   const router = useRouter();
-  // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
-  console.log(props);
-  const spring = {
-    delay: 0.3,
-    duration: 2,
+  const [scroll, setScroll] = useState(0);
+  const [innerHeight, setInnerHeight] = useState(0);
 
-    staggerChildren: 0.17,
-    delayChildren: 0.2,
-    y: { type: "spring", stiffness: 100 },
+  // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
+  const spring = {
+    duration: 1,
   };
+  
+  const handleScroll = useCallback(() => {
+    setScroll(window.scrollY);
+    setInnerHeight(window.innerHeight);
+  }, [scroll, setScroll, innerHeight, setInnerHeight]);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
   const [state, dispatch] = useContext(Context);
   return (
     <Fragment>
@@ -29,25 +35,40 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      {
-        <AnimatePresence>
-          {" "}
+      {state.route != "" ? (
+        <AnimatePresence
+        
+        >
           <motion.div
-            key={state.route}
-            layout
-            layoutId="test"
+            key={router.asPath}
+            layout={true}
             transition={spring}
-            initial={{ y: -300, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 1 }}
+            initial={{
+              y: scroll < innerHeight ? scroll : innerHeight,
+              opacity: 1,
+            }}
+            animate={{
+            //   y: 0, opacity: 1, height: 0
+            }
+            }
+            exit={{
+               y: -scroll * 15, opacity: 0, height: 0 }
+          }
           >
-            <DynamicComponentMatcher
-              key={state.route}
-              view={props.view}
-            ></DynamicComponentMatcher>
+            <AnimateSharedLayout>
+              <DynamicComponentMatcher
+                key={state.route}
+                view={props.view}
+              ></DynamicComponentMatcher>
+            </AnimateSharedLayout>
           </motion.div>{" "}
         </AnimatePresence>
-      }
+      ) : (
+        <DynamicComponentMatcher
+          key={state.route}
+          view={props.view}
+        ></DynamicComponentMatcher>
+      )}
     </Fragment>
   );
 }

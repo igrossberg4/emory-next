@@ -1,10 +1,11 @@
+import { useAnimation } from "framer-motion";
 import React, {createContext, useReducer} from "react";
 import Reducer from './Reducer'
 
 
 const initialState = {
     route:'',
-    slide:undefined
+    slide:undefined,
 };
 
 const Store = ({children}) => {

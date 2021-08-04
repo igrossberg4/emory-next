@@ -16,6 +16,7 @@ export default function LateralImageText(props:any) {
           {props.text}
         </p>
         <motion.figure
+        layout
         layoutId={props.img_src}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

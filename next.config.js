@@ -5,9 +5,6 @@ module.exports = {
     loader: 'imgix',
     path: '/',
   },
-  experimental: {
-    scrollRestoration: true
-  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

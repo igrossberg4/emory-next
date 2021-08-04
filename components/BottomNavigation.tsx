@@ -13,7 +13,6 @@ import { Context } from "../state/Store";
 function BottomNavigation(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context);
-  console.log("FROM BOTTOM", props);
   return (
     <Fragment>
       <div>
@@ -22,7 +21,7 @@ function BottomNavigation(props: any) {
             dispatch({ type: "SET_NAV", payload: props.previous_route });
           }}
         >
-          <Link scroll={false} href={props.previous_route}>
+          <Link  href={props.previous_route}>
             Previous
           </Link>
         </div>
@@ -38,7 +37,7 @@ function BottomNavigation(props: any) {
             dispatch({ type: "SET_NAV", payload: props.next_route });
           }}
         >
-          <Link scroll={false} href={props.next_route}>
+          <Link href={props.next_route}>
             Next
           </Link>{" "}
         </div>
