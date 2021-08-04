@@ -1,0 +1,17 @@
+.nav {
+    background: white;
+    height: 2em;
+  }
+  .content {
+    opacity: 0;
+    background-color: cornflowerblue;
+    transition: 1s;
+    height: calc(100vh - 4em);
+    overflow: auto;
+    padding: 1em;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+  }
+  

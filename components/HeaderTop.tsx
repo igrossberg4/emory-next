@@ -58,36 +58,36 @@ export default function HeaderTop(props: any) {
   return (
     <div className="content-header">
       <motion.img className="image round-wp"
-                  variants={variants}
+                  /*variants={variants}
                   style={{ originY: 1 }}
                   initial={previosPath != 'carousel' ? 'mainImage_initialFromCarousel' : 'fadeIn_initial'}
                   animate={previosPath != 'carousel' ? 'mainImage_active' : 'fadeIn_active'}
-                  alt={props.header} src={props.img_src}
+                  alt={props.header} src={props.img_src}*/
                  >
       </motion.img>
       <div className="content-header__container container container-force-screen-fit-y">
         <div className="content">
           <motion.img className="image round-wp"
-                      variants={variants}
+                      /*variants={variants}
                       style={{ originY: 1 }}
                       initial="teaserImage_initialFromCarousel"
                       animate="teaserImage_active"
-                      alt={props.header} src={props.img_src}
+                      alt={props.header} src={props.img_src}*/
           ></motion.img>
           <motion.div className="pretitle"
-                      variants={variants}
+                      /*variants={variants}
                       initial="fadeIn_initial"
-                      animate="fadeIn_active"
+                      animate="fadeIn_active"*/
           >{props.about}</motion.div>
           <motion.h1 className="title"
-                     variants={variants}
+                     /*variants={variants}
                      initial={previosPath !== 'carousel' ? 'title_initialFromCarousel' : 'fadeIn_initial'}
-                     animate={previosPath !== 'carousel' ? 'title_active' : 'fadeIn_active'}
+                     animate={previosPath !== 'carousel' ? 'title_active' : 'fadeIn_active'}*/
           >{props.header}</motion.h1>
           <motion.div className="subtitle"
-                      variants={variants}
+                      /*variants={variants}
                       initial="fadeIn_initial"
-                      animate="fadeIn_active"
+                      animate="fadeIn_active"*/
           >{props.text}</motion.div>
         </div>
         <div className="actions">

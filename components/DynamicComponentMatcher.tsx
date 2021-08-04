@@ -3,24 +3,21 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
-import VideoIntro from "./VideoIntro";
 import MenuTop from "./MenuTop";
 import HeaderTop from "./HeaderTop";
 import LateralImageText from "./LateralImageText";
-import LateralImageExpanded from './LateralImageExpanded';
+import LateralImageExpanded from "./LateralImageExpanded";
 import CarouselNavigation from "./CarouselNavigation";
-import AccordionComponent from './AccordionComponent';
-import CarouselItem from "./CarouselItem";
-import IntroPage from './IntroPage';
-export default function DynamicComponentMatcher(props:any) {
+import AccordionComponent from "./AccordionComponent";
+import CarouselItem, { withTransition } from "./CarouselItem";
+import IntroPage from "./IntroPage";
+import BottomNavigation from "./BottomNavigation";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+function DynamicComponentMatcher(props: any) {
   return (
     <Fragment>
-      {props.view.map((component:any, i:number) => {
+      {props.view.map((component: any, i: number) => {
         switch (component.component) {
-          case "VideoIntro":
-            return (
-              <VideoIntro key={i.toString()} {...component.props}></VideoIntro>
-            );
           case "IntroPage":
             return (
               <IntroPage key={i.toString()} {...component.props}></IntroPage>
@@ -31,6 +28,24 @@ export default function DynamicComponentMatcher(props:any) {
             return (
               <HeaderTop key={i.toString()} {...component.props}></HeaderTop>
             );
+          case "AnimatePresence":
+            return (
+              <AnimatePresence key={i.toString()} {...component.props}>
+                <DynamicComponentMatcher
+                  key={i.toString()}
+                  {...component.props}
+                ></DynamicComponentMatcher>
+              </AnimatePresence>
+            );
+          case "AnimatedTransition":
+            return (
+              <AnimateSharedLayout key={i.toString()} {...component.props}>
+                <DynamicComponentMatcher
+                  key={i.toString()}
+                  {...component.props}
+                ></DynamicComponentMatcher>
+              </AnimateSharedLayout>
+            );
           case "LateralImageText":
             return (
               <LateralImageText
@@ -40,25 +55,25 @@ export default function DynamicComponentMatcher(props:any) {
             );
           case "LateralImageExpanded":
             return (
-                <LateralImageExpanded
-                  key={i.toString()}
-                  {...component.props}
-                ></LateralImageExpanded>
-              );
+              <LateralImageExpanded
+                key={i.toString()}
+                {...component.props}
+              ></LateralImageExpanded>
+            );
           case "CarouselNavigation":
             return (
-                <CarouselNavigation
-                  key={i.toString()}
-                  {...component.props}
-                ></CarouselNavigation>
-              );
+              <CarouselNavigation
+                key={i.toString()}
+                {...component.props}
+              ></CarouselNavigation>
+            );
           case "CarouselItem":
             return (
-                <CarouselItem
-                  key={i.toString()}
-                  {...component.props}
-                ></CarouselItem>
-              );
+              <CarouselItem
+                key={i.toString()}
+                {...component.props}
+              ></CarouselItem>
+            );
           case "DynamicComponentMatcher":
             return (
               <DynamicComponentMatcher
@@ -66,8 +81,20 @@ export default function DynamicComponentMatcher(props:any) {
                 {...component.props}
               ></DynamicComponentMatcher>
             );
+          case "BottomNavigation":
+            return (
+              <BottomNavigation
+                key={i.toString()}
+                {...component.props}
+              ></BottomNavigation>
+            );
           case "AccordionComponent":
-            return <AccordionComponent key={i.toString()} {...component.props}></AccordionComponent>
+            return (
+              <AccordionComponent
+                key={i.toString()}
+                {...component.props}
+              ></AccordionComponent>
+            );
           default:
             return "";
         }
@@ -75,3 +102,4 @@ export default function DynamicComponentMatcher(props:any) {
     </Fragment>
   );
 }
+export default (DynamicComponentMatcher)

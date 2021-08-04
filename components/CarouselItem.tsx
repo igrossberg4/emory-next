@@ -13,9 +13,22 @@ import { Box, Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import HeaderTop from "./HeaderTop";
-const normalize = (val, max, min) => { return (val - min) / (max - min); }
+const normalize = (val: number, max: number, min: number) => {
+  return (val - min) / (max - min);
+};
 
-export default function CarouselItem(props: any) {
+export const withTransition = (OriginalComponent) => {
+  return (props) => (
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ x: 0, opacity: 0 }}
+    >
+      <OriginalComponent {...props} />
+    </motion.div>
+  );
+};
+function CarouselItem(props: any) {
   const router = useRouter();
   const [animated, setAnimated] = useState(false);
   const [scroll, setScroll] = useState(0);
@@ -129,7 +142,6 @@ export default function CarouselItem(props: any) {
       }
 
       prevScrollY.current = currentScrollY;
-
     };
 
     window.addEventListener("scroll", handleScroll, { passive: false });
@@ -144,6 +156,7 @@ export default function CarouselItem(props: any) {
 
   // @ts-ignore
   return (
+    
     <div className="content-header">
       {/*  <motion.img
         className="image round-wp"
@@ -187,9 +200,8 @@ export default function CarouselItem(props: any) {
               console.log(e);
             }}
             className="title"
-             variants={variants}
-            initial={ false
-            }
+            variants={variants}
+            initial={false}
             animate={
               previosPath !== "carousel" ? "title_active" : "fadeIn_active"
             }
@@ -247,3 +259,4 @@ export default function CarouselItem(props: any) {
         </div>
     </div> : <HeaderTop {...props}></HeaderTop> }*/
 }
+export default CarouselItem;
