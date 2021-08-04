@@ -1,16 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Emory University 2036 Campaign Website
 
-## Getting Started
+Aspirational and visionary, the 2036 Campaign invests in people for the
+benefit of people. Not only about how Emory moves forward but also how
+investments in Emory will lead to a better world, 2O36 presents an inspiring
+vision of what we will accomplish together.
 
-First, run the development server:
+The website engages Emory donors and constituents with stories, the “why”, the
+potential impact of the campaign; communicating the goals of each of Emory’s
+schools & units in order to raise awareness, increase engagement, and ultimately, garner financial support for the University.
+
+
+# Milestones
+
+* Phase 1 (September 2021-February 2022ish) - soft launch. Goals to drum up
+interest in the campaign, geared toward, but not exclusively focused on, major
+and principal gift donors. Campaign committee members will also need access to specific information on the site.
+
+* Phase 2 (February 2022-the life of the campaign) - public launch to a broader Emory audience, including the full alumni base, faculty, staff, students,
+parents, community members.
+
+## Tech Stack
+
+[Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+## Development
+
+* Install javascript dependencies:
+
+```bash
+npm install
+```
+
+* Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Open [http://localhost:3000/intro](http://localhost:3000/intro) in your browser.
+
+
+## Getting Started
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
@@ -18,17 +49,19 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Resources
 
-## Deploy on Vercel
+* [2036 Creative Brief][creative-brief] (PDF)
+* [2036 Technical Brief][technical-brief] (GDocs)
+* [2036 Brand Guidelines][brand-guide] (GDrive folder)
+* [2036 Designs & Component Library][figma] (Figma)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[creative-brief]: https://drive.google.com/file/d/1TFiqv9IY3kSJSGcR6pqZRUskEguNjGgA/view
+[technical-brief]: https://docs.google.com/document/d/1QsFaQ1iJL__LEeZFuiLoUCdJ1gpkcrtfjijpMgwmOVw/
+[brand-guide]: https://drive.google.com/drive/folders/1kmWQ2nrndwP6nzaY7_brTNkqytepOiE2
+[figma]: https://www.figma.com/file/ts9PYKFK6a53xMCnplR50t/2O36
