@@ -11,12 +11,12 @@
   }
 
   .embla__viewport.is-draggable {
-    cursor: move;
-    cursor: grab;
+    //cursor: move;
+    //cursor: grab;
   }
 
   .embla__viewport.is-dragging {
-    cursor: grabbing;
+    //cursor: grabbing;
   }
 
   .embla__container {
@@ -26,6 +26,7 @@
     -khtml-user-select: none;
     -webkit-tap-highlight-color: transparent;
     margin-left: -10px;
+    transition: all 2s;
     //scroll-snap-type: x mandatory;
     //overflow-x: auto;
   }
@@ -33,6 +34,7 @@
   .embla__slide {
     position: relative;
     min-width: 100vw;
+    z-index: 5;
     //scroll-snap-align: center;
   }
 

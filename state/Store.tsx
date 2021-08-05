@@ -5,7 +5,7 @@ import Reducer from './Reducer'
 
 const initialState = {
     route:'',
-    slide:undefined,
+    slide:{page:0, direction:0},
 };
 
 const Store = ({children}:{children:any}) => {

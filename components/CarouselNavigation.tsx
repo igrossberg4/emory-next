@@ -12,6 +12,8 @@ import Link from "next/link";
 import { route } from "next/dist/next-server/server/router";
 import { Context } from "../state/Store";
 import { wrap } from "popmotion";
+
+
 interface ButtonEnabled {
   enabled: boolean;
   onClick: () => void;
@@ -56,8 +58,8 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
   const index = slides.findIndex(
     (slide: any) => MD5(slide) === MD5(actual.actual)
   );
-  const [[page, direction], setPage] = useState([index, 0]);
-  const bottomRef = useRef<HTMLDivElement|undefined>(undefined);
+  
+  const [[page, direction, isTransitioning], setPage] = useState([index, 1, false]);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(
     page === 0 ? false : true
   );
@@ -65,7 +67,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
     page < slides.length - 1 ? false : true
   );
   const paginate = (newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
+    setPage([page + newDirection, newDirection, true]);
   };
   const router = useRouter();
   const changeRoute = useCallback(
@@ -73,44 +75,33 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
       if (!route) return;
       router.push(
         {
+          
           pathname: route,
         },
-        route, 
-        
+        route,
+        { scroll: false }
       );
     },
     [router]
   );
 
   const scrollPrev = useCallback(() => {
-    if (page > 0) {
+    if (page > 0 && !isTransitioning) {
       paginate(-1);
-      setTimeout(() =>{
-        changeRoute(actual.prev);
-
-      }, 200)
     }
-
-    //dispatch({ type: "MOVE_SLIDE", payload: "back" });
   }, [paginate, page]);
   const scrollNext = useCallback(() => {
-    if (page < slides.length) {
+    if (page < slides.length && !isTransitioning) {
       paginate(1);
-      setTimeout(() =>{
-        changeRoute(actual.next);
-
-      }, 200)
     }
-    //dispatch({ type: "MOVE_SLIDE", payload: "next" });
   }, [paginate, page]);
-
   const variants = {
-    /*enter: (direction: number) => {
+    enter: (direction: number) => {
       return {
         x: direction > 0 ? 1000 : -1000,
         opacity: 1,
       };
-    },*/
+    },
     center: {
       zIndex: 1,
       x: 0,
@@ -124,64 +115,79 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
       };
     },
   };
-  console.log(page);
   return (
     <div>
-      <div className="embla" key='id-test'>
-        <div className="embla__viewport">
+
+      <div 
+
+      className="embla" key="id-test">
+
+        <div className="embla__viewport" key={"viewPort"}>
           <motion.div
             className="embla__container"
-            style={{ transform: `translateX(${-page * 100}%)` }}
+            onTransitionEnd={(e) => {
+              console.log("Transition end", e, direction);
+              changeRoute(direction === 1 ? actual.next : actual.prev);
+            }}
+            style={{ transform: `translateX(calc(${-page * 100}% - ${0}px))` }}
           >
             <AnimatePresence>
-              {
-                slides.map((value: any, i: number) => {
-                  return (
-                    <motion.div
-                      layout
-                      custom={direction}
-                      variants={variants}
-                      initial="enter"
-                      animate="center"
-                      exit="exit"
-                      transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 },
-                      }}
-                      
-                      drag="x"
-                      dragConstraints={{ left: 0, right: 0 }}
-                      dragElastic={1}
-                      onDragEnd={(e, { offset, velocity }) => {
-                        const swipe = swipePower(offset.x, velocity.x);
+              {slides.map((value: any, i: number) => {
+                return (
 
-                        if (swipe < -swipeConfidenceThreshold) {
-                          scrollNext();
-                        } else if (swipe > swipeConfidenceThreshold) {
-                          scrollPrev();
-                        }
-                      }}
-                      key={MD5(value)}
-                      className="embla__slide"
+                  <motion.div
+                    drag="x"
+                    layout
+                    dragPropagation
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    transition={{
+                      x: { type: "spring", stiffness: 300, damping: 30 },
+                    }}
+                    /*drag="x"
+                    */
+                    onClick={(e) => {
+                      console.log(e)
+                    }}
+                    onDrag={(e, { offset, velocity }) => {
+                      const swipe = swipePower(offset.x, velocity.x);
+                      //console.log(swipe, offset)
+                      /*if(swipe !== 0){
+                        setDragX(offset.x);
+                      }*/
+                      //
+                      //console.log(e.nativeEvent.offsetX)
+                      if (swipe < -swipeConfidenceThreshold) {
+                        scrollNext();
+                      } else if (swipe > swipeConfidenceThreshold) {
+                        scrollPrev();
+                      }
+                    }}
+                    //draggable={true}
+                    className="embla__slide"
+                    key={MD5(value)}
+                  >
+                    <div className="embla__slide__inner"
+
                     >
-                      <div className="embla__slide__inner">
-                        <DynamicComponentMatcher
-                          key={MD5(value)}
-                          view={[
-                            {
-                              component: "DynamicComponentMatcher",
-                              props: { view: [value.props.view[0]] },
-                            },
-                          ]}
-                        ></DynamicComponentMatcher>
-                      </div>
-                    </motion.div>
-                  );
-                }) 
-              }
+                      <DynamicComponentMatcher
+                        key={MD5(value)}
+                        view={[
+                          {
+                            component: "DynamicComponentMatcher",
+                            props: { view: [value.props.view[0]] },
+                          },
+                        ]}
+                      ></DynamicComponentMatcher>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </motion.div>
+          
         </div>
+
         <PrevButton
           href={actual.prev}
           onClick={scrollPrev}
@@ -193,15 +199,19 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
           enabled={nextBtnEnabled}
         />
       </div>
-      <div id="carouselContent">
-      <DynamicComponentMatcher
-        view={[
-          {
-            component: "DynamicComponentMatcher",
-            props: { view: slides[page].props.view.slice(1) },
-          },
-        ]}
-      ></DynamicComponentMatcher></div>
+      <motion.div 
+      layout
+      layoutId="carouselContent"
+      id="carouselContent">
+        <DynamicComponentMatcher
+          view={[
+            {
+              component: "DynamicComponentMatcher",
+              props: { view: slides[page].props.view.slice(1) },
+            },
+          ]}
+        ></DynamicComponentMatcher>
+      </motion.div>
     </div>
   );
 };

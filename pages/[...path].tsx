@@ -45,10 +45,13 @@ export default function Home(props: any) {
           <motion.div
             className="container"
             onAnimationComplete={() => {
-              dispatch({ type: "SET_NAV", payload: "" });
+              if (state.route !== "") {
+                console.log("entra aqui", state);
+                dispatch({ type: "SET_NAV", payload: "" });
+              }
             }}
             key={router.asPath}
-            layout
+            layout={true}
             transition={spring}
             initial={{
               y:
@@ -70,17 +73,17 @@ export default function Home(props: any) {
               height: 0,
             }}
           >
-              <DynamicComponentMatcher
-                key={state.route}
-                view={props.view}
-              ></DynamicComponentMatcher>
+            <DynamicComponentMatcher
+              key={state.route}
+              view={props.view}
+            ></DynamicComponentMatcher>
           </motion.div>{" "}
         </AnimatePresence>
       ) : (
-          <DynamicComponentMatcher
-            key={state.route}
-            view={props.view}
-          ></DynamicComponentMatcher>
+        <DynamicComponentMatcher
+          key={state.route}
+          view={props.view}
+        ></DynamicComponentMatcher>
       )}
     </Fragment>
   );
@@ -134,7 +137,6 @@ const slide_1 = {
           imperdiet nec leo eu egestas.`,
           img_src: "vercel.svg",
           button_close_text: "Close",
-
         },
       },
 
@@ -217,7 +219,6 @@ const slide_2 = {
           img_src: "vercel.svg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
-
         },
       },
       {
@@ -254,9 +255,9 @@ const slide_2 = {
           img_src: "vercel.svg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
-
         },
-      },      {
+      },
+      {
         component: "LateralImageText",
         props: {
           header: "Header 2",
@@ -290,9 +291,9 @@ const slide_2 = {
           img_src: "vercel.svg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
-
         },
-      },      {
+      },
+      {
         component: "LateralImageText",
         props: {
           header: "Header 2",
