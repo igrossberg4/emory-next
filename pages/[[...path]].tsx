@@ -40,13 +40,12 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      {router.asPath !== "/intro" ? (
+      {props.skipTransitionAnimations !== true ? (
         <AnimatePresence>
           <motion.div
             className="container"
             onAnimationComplete={() => {
               if (state.route !== "") {
-                console.log("entra aqui", state);
                 dispatch({ type: "SET_NAV", payload: "" });
               }
             }}
@@ -451,10 +450,11 @@ const carouselInit = {
   ],
 };
 
-const pathJsonText = {
+export const pathJsonText = {
   paths: [
     {
-      path: "intro",
+      path: "",
+      skipTransitionAnimations:true,
       meta: { title: "Emory intro", description: "Some description for intro" },
       view: [
         {
@@ -479,7 +479,8 @@ const pathJsonText = {
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
-  const joinPath = params.path.join("/");
+  console.log(params)
+  const joinPath = params.path ? params.path.join("/") : '';
   const findPath = pathJsonText.paths.find((value) => value.path === joinPath);
   return {
     props: findPath,

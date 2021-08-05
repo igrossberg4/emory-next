@@ -13,7 +13,6 @@ import { route } from "next/dist/next-server/server/router";
 import { Context } from "../state/Store";
 import { wrap } from "popmotion";
 
-
 interface ButtonEnabled {
   enabled: boolean;
   onClick: () => void;
@@ -58,8 +57,12 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
   const index = slides.findIndex(
     (slide: any) => MD5(slide) === MD5(actual.actual)
   );
-  
-  const [[page, direction, isTransitioning], setPage] = useState([index, 1, false]);
+
+  const [[page, direction, isTransitioning], setPage] = useState([
+    index,
+    1,
+    false,
+  ]);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(
     page === 0 ? false : true
   );
@@ -75,7 +78,6 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
       if (!route) return;
       router.push(
         {
-          
           pathname: route,
         },
         route,
@@ -95,33 +97,9 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
       paginate(1);
     }
   }, [paginate, page]);
-  const variants = {
-    enter: (direction: number) => {
-      return {
-        x: direction > 0 ? 1000 : -1000,
-        opacity: 1,
-      };
-    },
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => {
-      return {
-        zIndex: 0,
-        x: direction < 0 ? 1000 : -1000,
-        opacity: 1,
-      };
-    },
-  };
   return (
     <div>
-
-      <div 
-
-      className="embla" key="id-test">
-
+      <div className="embla" key="id-test">
         <div className="embla__viewport" key={"viewPort"}>
           <motion.div
             className="embla__container"
@@ -134,7 +112,6 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
             <AnimatePresence>
               {slides.map((value: any, i: number) => {
                 return (
-
                   <motion.div
                     drag="x"
                     layout
@@ -144,19 +121,8 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                     transition={{
                       x: { type: "spring", stiffness: 300, damping: 30 },
                     }}
-                    /*drag="x"
-                    */
-                    onClick={(e) => {
-                      console.log(e)
-                    }}
                     onDrag={(e, { offset, velocity }) => {
                       const swipe = swipePower(offset.x, velocity.x);
-                      //console.log(swipe, offset)
-                      /*if(swipe !== 0){
-                        setDragX(offset.x);
-                      }*/
-                      //
-                      //console.log(e.nativeEvent.offsetX)
                       if (swipe < -swipeConfidenceThreshold) {
                         scrollNext();
                       } else if (swipe > swipeConfidenceThreshold) {
@@ -167,9 +133,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                     className="embla__slide"
                     key={MD5(value)}
                   >
-                    <div className="embla__slide__inner"
-
-                    >
+                    <div className="embla__slide__inner">
                       <DynamicComponentMatcher
                         key={MD5(value)}
                         view={[
@@ -185,7 +149,6 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
               })}
             </AnimatePresence>
           </motion.div>
-          
         </div>
 
         <PrevButton
@@ -199,10 +162,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
           enabled={nextBtnEnabled}
         />
       </div>
-      <motion.div 
-      layout
-      layoutId="carouselContent"
-      id="carouselContent">
+      <motion.div layout layoutId="carouselContent" id="carouselContent">
         <DynamicComponentMatcher
           view={[
             {
