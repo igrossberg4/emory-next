@@ -157,8 +157,7 @@ export default function CarouselItem(props: any) {
             {props.about}
           </motion.div>
           <motion.h1
-            onClick={(e) => {
-            }}
+
             className="title"
             variants={variants}
             initial={false}
@@ -169,9 +168,7 @@ export default function CarouselItem(props: any) {
             {props.header}
           </motion.h1>
           <motion.div
-            onClick={(e) => {
-              console.log(e);
-            }}
+
             className="subtitle"
             /*variants={variants}
             initial="fadeIn_initial"

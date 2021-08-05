@@ -27,7 +27,6 @@ export default function IntroPage(props: any) {
         onEnded={(en) => {
           // Check if the video has ended.
           // TO DO define if we take some action on end.
-          console.log(en);
         }}
         ref={(ref) => {
           videoRef.current = ref as any;
