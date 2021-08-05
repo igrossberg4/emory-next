@@ -70,21 +70,17 @@ export default function Home(props: any) {
               height: 0,
             }}
           >
-            <AnimateSharedLayout>
               <DynamicComponentMatcher
                 key={state.route}
                 view={props.view}
               ></DynamicComponentMatcher>
-            </AnimateSharedLayout>
           </motion.div>{" "}
         </AnimatePresence>
       ) : (
-        <AnimateSharedLayout>
           <DynamicComponentMatcher
             key={state.route}
             view={props.view}
           ></DynamicComponentMatcher>
-        </AnimateSharedLayout>
       )}
     </Fragment>
   );
@@ -109,6 +105,7 @@ const slide_1 = {
       {
         component: "LateralImageText",
         props: {
+          background: "grey",
           header: "Header 2",
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
@@ -136,8 +133,8 @@ const slide_1 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           img_src: "vercel.svg",
-          route_expand: "landing/image/expand",
-          image_expand_id: "image_expanded_test",
+          button_close_text: "Close",
+
         },
       },
 
@@ -190,6 +187,8 @@ const slide_2 = {
         component: "LateralImageText",
         props: {
           header: "Header 2",
+          background: "grey",
+
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
@@ -216,14 +215,17 @@ const slide_2 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           img_src: "vercel.svg",
-          route_expand: "landing/image/expand",
           image_expand_id: "image_expanded_test",
+          button_close_text: "Close",
+
         },
       },
       {
         component: "LateralImageText",
         props: {
           header: "Header 2",
+          background: "grey",
+
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
@@ -250,13 +252,16 @@ const slide_2 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           img_src: "vercel.svg",
-          route_expand: "landing/image/expand",
           image_expand_id: "image_expanded_test",
+          button_close_text: "Close",
+
         },
       },      {
         component: "LateralImageText",
         props: {
           header: "Header 2",
+          background: "grey",
+
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
@@ -283,13 +288,16 @@ const slide_2 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           img_src: "vercel.svg",
-          route_expand: "landing/image/expand",
           image_expand_id: "image_expanded_test",
+          button_close_text: "Close",
+
         },
       },      {
         component: "LateralImageText",
         props: {
           header: "Header 2",
+          background: "grey",
+
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
@@ -316,8 +324,8 @@ const slide_2 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           img_src: "vercel.svg",
-          route_expand: "landing/image/expand",
           image_expand_id: "image_expanded_test",
+          button_close_text: "Close",
         },
       },
 
@@ -459,27 +467,6 @@ const pathJsonText = {
         },
       ],
     },
-    {
-      path: "landing/image/expand",
-      meta: {
-        title: "Emory image expand",
-        description: "Some description for image expand",
-      },
-      view: [
-        {
-          component: "LateralImageExpanded",
-          props: {
-            background: "grey",
-            button_close_text: "Close",
-            header: "Header",
-            text: `Text for image expanded`,
-            img_src: "vercel.svg",
-            image_expand_id: "image_expanded_test",
-          },
-        },
-      ],
-    },
-
     carouselInit,
     carousel_1,
     carousel_2,
@@ -517,7 +504,6 @@ export async function getStaticPaths() {
   const paths = pathJsonText.paths.map((post) => ({
     params: { path: post.path.toString().split("/") },
   }));
-  console.log(pathJsonText);
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
