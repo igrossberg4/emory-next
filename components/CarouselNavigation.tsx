@@ -93,7 +93,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
     }
   }, [paginate, page]);
   const scrollNext = useCallback(() => {
-    if (page < slides.length && !isTransitioning) {
+    if (page < slides.length -1 && !isTransitioning) {
       paginate(1);
     }
   }, [paginate, page]);
