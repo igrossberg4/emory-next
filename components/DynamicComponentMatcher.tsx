@@ -13,7 +13,10 @@ import CarouselItem from "./CarouselItem";
 import IntroPage from "./IntroPage";
 import BottomNavigation from "./BottomNavigation";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import Video from "./Video";
+import CircleContentWrapper from "./CircleContentWrapper";
 function DynamicComponentMatcher(props: any) {
+  console.log(props);
   return (
     <Fragment>
       {props.view.map((component: any, i: number) => {
@@ -95,6 +98,16 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></AccordionComponent>
             );
+          case "Video":
+            return <Video key={i.toString()} {...component.props}></Video>;
+          case "CircleContentWrapper":
+            return (
+              <CircleContentWrapper key={i.toString()}>
+                <DynamicComponentMatcher
+                  {...component.props}
+                ></DynamicComponentMatcher>
+              </CircleContentWrapper>
+            );
           default:
             return "";
         }
@@ -102,4 +115,4 @@ function DynamicComponentMatcher(props: any) {
     </Fragment>
   );
 }
-export default (DynamicComponentMatcher)
+export default DynamicComponentMatcher;

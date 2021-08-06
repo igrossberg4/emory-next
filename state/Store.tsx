@@ -2,11 +2,22 @@ import { useAnimation } from "framer-motion";
 import React, {createContext, useReducer} from "react";
 import Reducer from './Reducer'
 
+export interface IVideoController{
+    paused:boolean;
+    muted:boolean;
+    videoRef:HTMLVideoElement;
+    skipped:boolean;
+}
+export interface IStore{
+    videoStore:{ [key: string]: IVideoController; };
+    route:string;
+}
+
 
 const initialState = {
     route:'',
-    slide:{page:0, direction:0},
-};
+    videoStore:{}
+}
 
 const Store = ({children}:{children:any}) => {
     const [state, dispatch] = useReducer(Reducer, initialState);
