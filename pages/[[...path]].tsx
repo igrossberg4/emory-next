@@ -87,20 +87,41 @@ export default function Home(props: any) {
     </Fragment>
   );
 }
+
+const menuExample = {
+  component: "MenuTop",
+  props: {
+    title: "Menu",
+    options: [
+      {
+        link_to: "/",
+        title: "Home",
+      },
+    ],
+  },
+};
 const slide_1 = {
   component: "DynamicComponentMatcher",
   props: {
     view: [
       {
-        component: "CarouselItem",
+        component: "DynamicComponentMatcher",
         props: {
-          header: "Building on Emory's commitment to serve humanity",
-          button_scroll: "Scroll to explore",
-          action: {
-            type: "navigate",
-            route_to: "/landing/another/thing",
-          },
-          img_src: "/collegue_arts.jpg",
+          view: [
+            //menuExample,
+            {
+              component: "CarouselItem",
+              props: {
+                header: "Building on Emory's commitment to serve humanity",
+                button_scroll: "Scroll to explore",
+                action: {
+                  type: "navigate",
+                  route_to: "/landing/another/thing",
+                },
+                img_src: "/collegue_arts.jpg",
+              },
+            },
+          ],
         },
       },
 
@@ -172,15 +193,23 @@ const slide_2 = {
   props: {
     view: [
       {
-        component: "CarouselItem",
+        component: "DynamicComponentMatcher",
         props: {
-          header: "Building on Emory's commitment to serve humanity 2",
-          button_scroll: "Scroll to explore",
-          action: {
-            type: "navigate",
-            route_to: "/landing/another/thing",
-          },
-          img_src: "/vercel.svg",
+          view: [
+            //menuExample,
+            {
+              component: "CarouselItem",
+              props: {
+                header: "Building on Emory's commitment to serve humanity 2",
+                button_scroll: "Scroll to explore",
+                action: {
+                  type: "navigate",
+                  route_to: "/landing/another/thing",
+                },
+                img_src: "/vercel.svg",
+              },
+            },
+          ],
         },
       },
 
@@ -361,15 +390,23 @@ const slide_3 = {
   props: {
     view: [
       {
-        component: "CarouselItem",
+        component: "DynamicComponentMatcher",
         props: {
-          header: "Building on Emory's commitment to serve humanity 3",
-          button_scroll: "Scroll to explore",
-          action: {
-            type: "navigate",
-            route_to: "/landing/another/thing",
-          },
-          img_src: "/collegue_arts.jpg",
+          view: [
+            //menuExample,
+            {
+              component: "CarouselItem",
+              props: {
+                header: "Building on Emory's commitment to serve humanity 3",
+                button_scroll: "Scroll to explore",
+                action: {
+                  type: "navigate",
+                  route_to: "/landing/another/thing",
+                },
+                img_src: "/collegue_arts.jpg",
+              },
+            },
+          ],
         },
       },
     ],
@@ -383,6 +420,7 @@ const carousel_1 = {
     description: "Some description for carousel page",
   },
   view: [
+    menuExample,
     {
       component: "CarouselNavigation",
       props: {
@@ -402,6 +440,7 @@ const carousel_2 = {
     description: "Some description for carousel page",
   },
   view: [
+    menuExample,
     {
       component: "CarouselNavigation",
       props: {
@@ -420,6 +459,7 @@ const carousel_3 = {
     description: "Some description for carousel page",
   },
   view: [
+    menuExample,
     {
       component: "CarouselNavigation",
       props: {
@@ -438,6 +478,7 @@ const carouselInit = {
     description: "Some description for carousel page",
   },
   view: [
+    menuExample,
     {
       component: "CarouselNavigation",
       props: {
@@ -454,7 +495,7 @@ export const pathJsonText = {
   paths: [
     {
       path: "",
-      skipTransitionAnimations:true,
+      skipTransitionAnimations: true,
       meta: { title: "Emory intro", description: "Some description for intro" },
       view: [
         {
@@ -479,8 +520,7 @@ export const pathJsonText = {
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
-  console.log(params)
-  const joinPath = params.path ? params.path.join("/") : '';
+  const joinPath = params.path ? params.path.join("/") : "";
   const findPath = pathJsonText.paths.find((value) => value.path === joinPath);
   return {
     props: findPath,

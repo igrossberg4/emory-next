@@ -183,9 +183,6 @@ export default function CarouselItem(props: any) {
             onClick={(e) => {
               const contentElement = document.getElementById('carouselContent');
               window.scrollTo({top:contentElement?.offsetHeight, behavior:'smooth'})
-              /*if (props.action && props.action.type === "navigate") {
-                         router.push(props.action.route_to);
-                     }*/
             }}
           >
             {" "}
