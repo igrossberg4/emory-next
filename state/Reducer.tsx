@@ -1,18 +1,57 @@
-const Reducer = (state: any, action:{payload:any, type:string}) => {
-    switch (action.type) {
-        case 'SET_NAV':
-            return {
-                ...state,
-                route: action.payload
-            };
-        case 'MOVE_SLIDE':
-            return {
-                ...state,
-                slide: action.payload
-            };
-        default:
-            return state;
-    }
+import { IVideoController } from "./Store";
+
+const Reducer = (state: any, action: { payload: any; type: string }) => {
+  switch (action.type) {
+    case "SET_NAV":
+      return {
+        ...state,
+        route: action.payload,
+      };
+    case "REGISTER_VIDEO":
+      return {
+        ...state,
+        // We must provide some unique id based on key property and their value.
+        videoStore: Object.assign(state.videoStore, {
+          [action.payload.key]: action.payload.value,
+        }),
+      };
+    case "TOGGLE_VIDEO":
+      const videoStore = state.videoStore[
+        action.payload.key
+      ] as IVideoController;
+      videoStore.paused = !videoStore.paused;
+      return {
+        ...state,
+        videoStore: Object.assign(state.videoStore, {
+          [action.payload.key]: videoStore,
+        }),
+      };
+    case "TOGGLE_VIDEO_MUTE":
+      const videoStoreMute = state.videoStore[
+        action.payload.key
+      ] as IVideoController;
+      videoStoreMute.muted = !videoStoreMute.muted;
+      return {
+        ...state,
+        videoStore: Object.assign(state.videoStore, {
+          [action.payload.key]: videoStoreMute,
+        }),
+      };
+      case "SKIP_VIDEO":
+        const videoStoreSKIP= state.videoStore[
+          action.payload.key
+        ] as IVideoController;
+        videoStoreSKIP.skipped = true;
+        return {
+          ...state,
+          videoStore: Object.assign(state.videoStore, {
+            [action.payload.key]: videoStoreSKIP,
+          }),
+        };
+
+    default:
+      return state;
+  }
 };
 
 export default Reducer;

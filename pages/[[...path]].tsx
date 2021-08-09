@@ -40,7 +40,8 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      {props.skipTransitionAnimations !== true ? (
+      {
+      props.skipTransitionAnimations !== true  ? (
         <AnimatePresence>
           <motion.div
             className="min-container"
@@ -79,10 +80,12 @@ export default function Home(props: any) {
           </motion.div>{" "}
         </AnimatePresence>
       ) : (
-        <DynamicComponentMatcher
-          key={state.route}
-          view={props.view}
-        ></DynamicComponentMatcher>
+        <AnimatePresence>
+          <DynamicComponentMatcher
+            key={state.route}
+            view={props.view}
+          ></DynamicComponentMatcher>
+        </AnimatePresence>
       )}
     </Fragment>
   );
@@ -422,6 +425,52 @@ const slide_3 = {
   },
 };
 
+const slide_0 = {
+  
+    component: "DynamicComponentMatcher",
+    props:{
+      view:[
+        {
+        component: "CircleContentWrapper",
+        props: {
+          view: [
+            {
+              component: "Video",
+              props: {
+                video_src: "video.mp4",
+              },
+            },
+          ],
+        },
+      }
+      ]
+    }
+  }
+
+
+
+
+const carousel_0 = {
+  path: "landing/carousel/zero",
+  skipTransitionAnimations: true,
+
+  meta: {
+    title: "Emory carousel",
+    description: "Some description for carousel page",
+  },
+  view: [
+    menuExample,
+    {
+      component: "CarouselNavigation",
+      props: {
+        prev: null,
+        actual: slide_0,
+        next: "landing/carousel/first",
+        slides: [slide_0, slide_1, slide_2, slide_3],
+      },
+    },
+  ],
+};
 const carousel_1 = {
   path: "landing/carousel/first",
   meta: {
@@ -433,10 +482,10 @@ const carousel_1 = {
     {
       component: "CarouselNavigation",
       props: {
-        prev: null,
+        prev: "landing/carousel/zero",
         actual: slide_1,
         next: "landing/carousel/second",
-        slides: [slide_1, slide_2, slide_3],
+        slides: [slide_0, slide_1, slide_2, slide_3],
       },
     },
   ],
@@ -456,7 +505,7 @@ const carousel_2 = {
         prev: "/landing/carousel/first",
         actual: slide_2,
         next: "/landing/carousel/third",
-        slides: [slide_1, slide_2, slide_3],
+        slides: [slide_0, slide_1, slide_2, slide_3],
       },
     },
   ],
@@ -475,7 +524,7 @@ const carousel_3 = {
         prev: "/landing/carousel/second",
         actual: slide_3,
         next: null,
-        slides: [slide_1, slide_2, slide_3],
+        slides: [slide_0, slide_1, slide_2, slide_3],
       },
     },
   ],
@@ -503,6 +552,33 @@ const carouselInit = {
 export const pathJsonText = {
   paths: [
     {
+      path: "one",
+      skipTransitionAnimations: true,
+      meta: { title: "Emory intro", description: "Some description for intro" },
+      view: [
+{
+  component: "DynamicComponentMatcher",
+  props:{
+    view:[
+      {
+      component: "CircleContentWrapper",
+      props: {
+        view: [
+          {
+            component: "Video",
+            props: {
+              video_src: "video.mp4",
+            },
+          },
+        ],
+      },
+    }
+    ]
+  }
+}
+      ],
+    },
+    {
       path: "",
       skipTransitionAnimations: true,
       meta: { title: "Emory intro", description: "Some description for intro" },
@@ -513,12 +589,13 @@ export const pathJsonText = {
             video_src: "video.mp4",
             text_play: "Begin\r\nyour\r\nexperience",
             text_skip: "Skip video",
-            route_to: "/landing/carousel/first",
+            route_to: "/one",
           },
         },
       ],
     },
     carouselInit,
+    carousel_0,
     carousel_1,
     carousel_2,
     carousel_3,
@@ -558,5 +635,5 @@ export async function getStaticPaths() {
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
