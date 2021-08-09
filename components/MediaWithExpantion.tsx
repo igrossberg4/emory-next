@@ -14,12 +14,11 @@ export default function MediaWithExpantion(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   const [expanded, setExpanded] = useState(false);
   const [layoutId, setLayoutID] = useState(Math.random().toString());
-  console.log("Changes", layoutId);
   return (
     <Fragment>
       <AnimateSharedLayout type="crossfade">
-        {!expanded ? (
-          <div className="component-media-with-expansion">
+          <div className={{'component-media-with-expansion is-expanded': expanded, 'component-media-with-expansion': !expanded}}>
+          {!expanded ? (
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
               layout
@@ -28,7 +27,7 @@ export default function MediaWithExpantion(props: any) {
               animate={{ opacity: 1 }}
             >
               {props.media_type === "image" ? (
-                <img alt={props.media_alt} src={props.media_src} ></img>
+                <img alt={props.media_alt} src={props.media_src} />
               ) : (
                 <Video {...props} ></Video>
               )}
@@ -40,7 +39,6 @@ export default function MediaWithExpantion(props: any) {
             >
               {props.media_type === "image" ? <IconButton icon={"eye"} ></IconButton> : <IconButton icon={"play"} />}
             </div>
-          </div>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
@@ -48,7 +46,7 @@ export default function MediaWithExpantion(props: any) {
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
             transition={{ duration: 0.2, delay: 0.15 }}
             className="container-force-screen-fit-y overlay"
-            style={{ background: props.background, pointerEvents: "auto" }}
+            style={{ pointerEvents: "auto" }}
           >
             <button
               onClick={() => {
@@ -74,6 +72,7 @@ export default function MediaWithExpantion(props: any) {
             <p>{props.text}</p>
           </motion.div>
         )}
+          </div>
       </AnimateSharedLayout>
     </Fragment>
   );

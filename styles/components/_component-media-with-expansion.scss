@@ -8,4 +8,14 @@
     z-index: 2;
     transform: translate(-50%, 50%);
   }
+
+  .overlay {
+    padding: $default-separation;
+    display: flex;
+    flex-direction: column;
+
+    figure {
+      max-height: 50vh;
+    }
+  }
 }
