@@ -20,8 +20,8 @@ export default function MediaWithExpantion(props: any) {
           <div className="floating-media">
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
-              layout
-              layoutId={props.media_src}
+              //layout
+              //layoutId={props.media_src}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
