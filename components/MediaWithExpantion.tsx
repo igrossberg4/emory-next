@@ -7,6 +7,7 @@ import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import LateralImageExpanded from "./LateralImageExpanded";
 import Video from "./Video";
+import IconButton from "./IconButton";
 
 export default function MediaWithExpantion(props: any) {
   const router = useRouter();
@@ -40,7 +41,7 @@ export default function MediaWithExpantion(props: any) {
                 setExpanded(true);
               }}
             >
-              X
+              {props.media_type === "image" ? <IconButton icon={"eye"} ></IconButton> : <IconButton icon={"play"} />}
             </button>
           </div>
         ) : (
