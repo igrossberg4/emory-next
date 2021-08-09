@@ -13,6 +13,8 @@ export default function MediaWithExpantion(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
   const [expanded, setExpanded] = useState(false);
+  const [layoutId, setLayoutID] = useState(Math.random().toString());
+  console.log("Changes", layoutId);
   return (
     <Fragment>
       <AnimateSharedLayout type="crossfade">
@@ -20,8 +22,8 @@ export default function MediaWithExpantion(props: any) {
           <div className="floating-media">
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
-              //layout
-              //layoutId={props.media_src}
+              layout
+              layoutId={layoutId}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -58,7 +60,7 @@ export default function MediaWithExpantion(props: any) {
 
             <motion.figure
               layout
-              layoutId={props.media_src}
+              layoutId={layoutId}
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
             >
