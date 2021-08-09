@@ -17,8 +17,13 @@ export default function IntroPage(props: any) {
 
   const actualVideo = state.videoStore[props.video_src] as IVideoController;
   return (
-    <div className="container container-fit container-video-intro">
-
+    <motion.div
+    onTransitionEnd={() => {
+      console.log("End")
+    }}
+    animate={controls}
+    className="container container-fit container-video-intro">
+      
       <Video   {...props}></Video>
       {actualVideo ? (
         <Fragment>
@@ -44,19 +49,21 @@ export default function IntroPage(props: any) {
           </motion.button>
           <motion.button
             className="btn-skip-intro"
-            onClick={() => {
+
+            onClick={ async () => {
               dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src}});
-              /*controls.start({
+              /*await controls.start({
                 opacity: 1,
                 width:'400px',
                 height:'400px',
                 margin:'0 auto',
-
                 backgroundColor: "#f00",
                 borderRadius:'50%',
-                transition: { duration: 0.2 },
-              })*/
-              router.push(props.route_to);
+                transition: { duration: 3 },
+              });*/
+              console.log("End")
+
+              //router.push(props.route_to);
 
             }}
             animate={
@@ -74,6 +81,6 @@ export default function IntroPage(props: any) {
       ) : (
         ""
       )}
-    </div>
+    </motion.div>
   );
 }

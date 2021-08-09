@@ -30,14 +30,15 @@ export default function Video(props: any) {
       <motion.video
         key={props.video_src}
         initial={{ opacity: 0 }}
-        exit={{ opacity: 0.5, height: "400px", width: "400px", borderRadius:'50%' }}
+        exit={{ opacity: 1, height: "400px", width: "400px", borderRadius:'50%' }}
         transition={{}}
         animate={
-          !state.videoStore[props.video_src]?.paused ? "playing" : "default"
+          state.videoStore[props.video_src]?.skip ? 'skip' : (!state.videoStore[props.video_src]?.paused ? "playing" : "default")
         }
         variants={{
           default: { opacity: 0.5 },
           playing: { opacity: 1 },
+          skip: {width:0, height:0}
         }}
         layout
         onEnded={(en) => {
