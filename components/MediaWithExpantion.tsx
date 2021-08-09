@@ -26,15 +26,7 @@ export default function MediaWithExpantion(props: any) {
               animate={{ opacity: 1 }}
             >
               {props.media_type === "image" ? (
-                      <img
-                          alt={props.media_alt}
-                          src={props.img_src}
-                      ></img>
-                // <Image
-                // alt={props.media_alt}
-                // layout="fill"
-                //   src={props.media_src}
-                // ></Image>
+                <img alt={props.media_alt} src={props.img_src} ></img>
               ) : (
                 <Video {...props}></Video>
               )}
@@ -71,12 +63,7 @@ export default function MediaWithExpantion(props: any) {
               animate={{ opacity: 1 }}
             >
               {props.media_type === "image" ? (
-                <Image
-                  alt={props.media_alt}
-                  width={props.size}
-                  height={props.size}
-                  src={props.media_src}
-                ></Image>
+                  <img alt={props.media_alt} src={props.media_src} ></img>
               ) : (
                 <Video {...props}></Video>
               )}
