@@ -1,0 +1,94 @@
+// Variables
+
+$spacer: 1rem !default;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 5
+) !default;
+
+$grid-breakpoints: (
+        xs: 0,
+        //sm: 576px,
+        md: 768px,
+        lg: 992px,
+        //xl: 1200px,
+        //xxl: 1400px
+) !default;
+
+$container-max-widths: (
+        xs: 474px,
+        sm: 576px,
+        md: 778px,
+        lg: 982px,
+        //xl: 1140px,
+        xxl: 1440px
+) !default;
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-size-base: 1.125rem !default; // 18px
+$font-size-xs: $font-size-base * 0.667; // 12px
+//$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.222 !default; // 22px
+$font-size-xlg: $font-size-base * 1.333 !default; // 24px
+
+//$font-weight-lighter: lighter !default;
+//$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+//$font-weight-semibold: 600;
+$font-weight-bold: 700;
+//$font-weight-bolder: bolder !default;
+
+//$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.4;
+$line-height-xs: .9 !default;
+$line-height-sm: 1.1 !default;
+$line-height-lg: 1.5 !default;
+
+$display-font-size--desktop: $font-size-base * 6.222; // 112px
+//$h1-font-size: $font-size-base * 3.06; // 96px
+$h1-font-size--desktop: $font-size-base * 5.333; // 96px
+$h2-font-size: $font-size-base * 2.778; // 50px
+$h2-font-size--desktop: $font-size-base * 3.556; // 64px
+$h3-font-size: $font-size-base * 2.222; // 40px
+$h3-font-size--desktop: $font-size-base * 2.889; // 52px
+//$h4-font-size: $font-size-base * 2.222; // 40px
+//$h4-font-size--desktop: $font-size-base * 2.889; // 52px
+//$h5-font-size: $font-size-base * 1.25;
+//$h6-font-size: $font-size-base !default;
+//
+//$grid-columns: 12 !default;
+//$grid-gutter-width: 1.5rem !default;
+//$grid-row-columns: 6 !default;
+
+
+// Colors
+$color_white: #fff;
+$color_black_soft: #212322;
+$color_black: #000;
+
+$color-text: $color_black_soft;
+
+$body-bg: #F5F4F5 !default;
+$body-color: $color-text;
+
+//$color-gray: #212121;
+
+// Other
+$default-transition: all .6s ease-in-out;
+$default-box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.5),
+    2px 2px 6px rgba(95, 92, 89, 0.12),
+    4px 4px 11px rgba(177, 167, 162, 0.4);
+$default-box-shadow--hover: -6px -6px 3px rgba(255, 255, 255, 0.5),
+    0px 0px 3px rgba(95, 92, 89, 0.12),
+    2px 2px 6px rgba(177, 167, 162, 0.4);
+
+$default-separation: 30px;
+$default-section-padding: 30px;

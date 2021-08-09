@@ -1,0 +1,50 @@
+.text-body,
+body {
+  font-family: $font-family-sans-serif;
+  color: $color-text;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+.text-body--lg{
+  font-size: $font-size-lg;
+  @include media-breakpoint-up(md){
+    font-size: $font-size-xlg;
+  }
+}
+
+%text-label{
+  font-size: $font-size-xs;
+  line-height: $line-height-lg;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.text-label {
+  @extend %text-label;
+}
+
+.header-xlarge,
+.header-h1,
+.header-h2{
+  font-family: $font-family-serif;
+  line-height: $line-height-xs;
+}
+.header-xlarge{
+  font-size: $h2-font-size;
+  @include media-breakpoint-up(md){
+    font-size: $display-font-size--desktop;
+  }
+}
+.header-h2{
+  font-size: $h2-font-size;
+  @include media-breakpoint-up(md){
+    font-size: $h2-font-size--desktop;
+  }
+}
+.header-h3{
+  font-size: $h3-font-size;
+  @include media-breakpoint-up(md){
+    font-size: $h3-font-size--desktop;
+  }
+}
+

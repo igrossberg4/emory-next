@@ -115,4 +115,4 @@ function DynamicComponentMatcher(props: any) {
     </Fragment>
   );
 }
-export default DynamicComponentMatcher;
+export default (DynamicComponentMatcher)
