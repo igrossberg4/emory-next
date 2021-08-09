@@ -5,17 +5,12 @@ import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
-import LateralImageExpanded from "./LateralImageExpanded";
 
-export default function LateralImageText(props:any) {
+export default function ImageTextOneColumn(props:any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
   const [expanded, setExpanded] = useState(false);
   return (
-    <Fragment>
-      <AnimateSharedLayout type="crossfade">
-
-      {!expanded ? 
             <div className="section component-text-center">
                 <div className="container">
                   <div className="row">
@@ -44,10 +39,5 @@ export default function LateralImageText(props:any) {
                   </div>
                 </div>
             </div>
-                :
-      <LateralImageExpanded {...props} setExpanded={setExpanded}></LateralImageExpanded> }
-            </AnimateSharedLayout>
-
-    </Fragment>
   );
 }

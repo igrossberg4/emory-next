@@ -129,7 +129,7 @@ const slide_1 = {
       },
 
       {
-        component: "LateralImageText",
+        component: "ImageTextOneColumn",
         props: {
           background: "grey",
           header: "Header 2",
@@ -217,7 +217,7 @@ const slide_2 = {
       },
 
       {
-        component: "LateralImageText",
+        component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
           background: "grey",
@@ -253,7 +253,7 @@ const slide_2 = {
         },
       },
       {
-        component: "LateralImageText",
+        component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
           background: "grey",
@@ -289,7 +289,7 @@ const slide_2 = {
         },
       },
       {
-        component: "LateralImageText",
+        component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
           background: "grey",
@@ -325,7 +325,7 @@ const slide_2 = {
         },
       },
       {
-        component: "LateralImageText",
+        component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
           background: "grey",

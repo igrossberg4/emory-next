@@ -5,7 +5,7 @@ import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
 import MenuTop from "./MenuTop";
 import HeaderTop from "./HeaderTop";
-import LateralImageText from "./LateralImageText";
+import ImageTextOneColumn from "./ImageTextOneColumn";
 import LateralImageExpanded from "./LateralImageExpanded";
 import CarouselNavigation from "./CarouselNavigation";
 import AccordionComponent from "./AccordionComponent";
@@ -50,12 +50,12 @@ function DynamicComponentMatcher(props: any) {
                 ></DynamicComponentMatcher>
               </AnimateSharedLayout>
             );
-          case "LateralImageText":
+          case "ImageTextOneColumn":
             return (
-              <LateralImageText
+              <ImageTextOneColumn
                 key={i.toString()}
                 {...component.props}
-              ></LateralImageText>
+              ></ImageTextOneColumn>
             );
           case "LateralImageExpanded":
             return (
