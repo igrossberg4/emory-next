@@ -182,7 +182,9 @@ export default function CarouselItem(props: any) {
             className="btn"
             onClick={(e) => {
               const contentElement = document.getElementById('carouselContent');
-              window.scrollTo({top:contentElement?.offsetHeight, behavior:'smooth'})
+              console.log(contentElement);
+              contentElement?.scrollIntoView({behavior: 'smooth'});
+              //window.scrollTo({top:contentElement?.offsetHeight, behavior:'smooth'})
             }}
           >
             {" "}
