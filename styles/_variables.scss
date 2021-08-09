@@ -29,8 +29,8 @@ $container-max-widths: (
         xxl: 1440px
 ) !default;
 
-$font-family-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif: 'Playfair Display', "Times New Roman", Times, serif !default;
+$font-family-sans-serif: 'Pangram', sans-serif !default;
+$font-family-serif: 'Ampersand', serif !default;
 
 $font-size-base: 1.125rem !default; // 18px
 $font-size-xs: $font-size-base * 0.667; // 12px
