@@ -58,12 +58,14 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Project Resources
 
-* [2036 Creative Brief][creative-brief] (PDF)
-* [2036 Technical Brief][technical-brief] (GDocs)
-* [2036 Brand Guidelines][brand-guide] (GDrive folder)
-* [2036 Designs & Component Library][figma] (Figma)
+* [Creative Brief][creative-brief] (PDF)
+* [Technical Brief][technical-brief] (GDocs)
+* [Brand Guidelines][brand-guide] (GDrive folder)
+* [Designs & Component Library][figma] (Figma)
+* [Technical Spec][miro] (Miro)
 
 [creative-brief]: https://drive.google.com/file/d/1TFiqv9IY3kSJSGcR6pqZRUskEguNjGgA/view
 [technical-brief]: https://docs.google.com/document/d/1QsFaQ1iJL__LEeZFuiLoUCdJ1gpkcrtfjijpMgwmOVw/
 [brand-guide]: https://drive.google.com/drive/folders/1kmWQ2nrndwP6nzaY7_brTNkqytepOiE2
 [figma]: https://www.figma.com/file/ts9PYKFK6a53xMCnplR50t/2O36
+[miro]: https://miro.com/app/board/o9J_l7T5iRo=/
