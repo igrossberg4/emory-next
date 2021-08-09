@@ -1,3 +1,5 @@
+![2036 Homepage screenshot](https://i.imgur.com/Nq9CHb1.jpeg)
+
 # Emory University 2036 Campaign Website
 
 Aspirational and visionary, the 2036 Campaign invests in people for the
