@@ -62,18 +62,15 @@ addCollection({
     "height": 24
 });
 
-
-
 function IconButton(props: any) {
     return props.link ? 
       <Link href={props.link}>
         <a className="icon-button">
           <Icon icon={'em:' + props.icon} />
         </a>
-      </Link> : <a className="icon-button">
+      </Link> : <button className="icon-button">
           <Icon icon={'em:' + props.icon} />
-        </a>
-    }
+        </button>
 }
 
 export default IconButton;

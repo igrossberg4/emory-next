@@ -31,13 +31,13 @@ export default function MediaWithExpantion(props: any) {
                 <Video {...props}></Video>
               )}
             </motion.figure>
-            <button
+            <div
               onClick={() => {
                 setExpanded(true);
               }}
             >
               {props.media_type === "image" ? <IconButton icon={"eye"} ></IconButton> : <IconButton icon={"play"} />}
-            </button>
+            </div>
           </div>
         ) : (
           <motion.div
