@@ -22,8 +22,8 @@ export default function MediaWithExpantion(props: any) {
             <Fragment>
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
-              layout
-              layoutId={layoutId}
+              //layout
+              //layoutId={layoutId}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -60,10 +60,10 @@ export default function MediaWithExpantion(props: any) {
             </button>
 
             <motion.figure
-              layout
-              layoutId={layoutId}
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
+              //layout
+              //layoutId={layoutId}
+              //initial={{ opacity: 1 }}
+              //animate={{ opacity: 1 }}
             >
               {props.media_type === "image" ? (
                   <img alt={props.media_alt} src={props.media_src} ></img>

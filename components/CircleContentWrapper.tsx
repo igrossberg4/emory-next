@@ -27,13 +27,13 @@ export default function CircleContentWrapper(props:any) {
               layoutId="mainMedia"
               layout
               transition={{duration:2, delay:2}}
-              enter={{width:'100%'}}
+              //enter={{width:'100%'}}
               animate={{width:'200px',  borderRadius:'50%', display:'block', position:'relative', top:0}}
       className="circle-wrapper" style={{maxWidth: '400px',  margin:'0 auto', border:'1px solid', position:'absolute', top:'50%'}}>
         {props.children}
       </motion.div>
       <motion.div
-                    enter={{opacity:1}}
+                    //enter={{opacity:1}}
                     animate={{opacity:1, width:'400px', height:'400px'}}
                     layoutId="mainMedia"
                     layout
