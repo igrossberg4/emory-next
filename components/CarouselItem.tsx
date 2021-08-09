@@ -183,6 +183,7 @@ export default function CarouselItem(props: any) {
         <div className="actions">
           <div
             className="btn"
+            style={{cursor: "pointer"}}
             onClick={(e) => {
               const contentElement = document.getElementById('carouselContent');
               //contentElement?.scrollIntoView({behavior: 'smooth'});
