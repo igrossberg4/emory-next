@@ -1,11 +1,11 @@
 // Text in one column with floating media.
-.component-text-center {
+.component-image-text-one-column {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 50%;
+
   .column {
     padding: $default-separation;
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
-    //justify-content: center;
   }
 
   .title {
@@ -13,6 +13,7 @@
     max-width: map-get($container-max-widths, 'md');
     margin-bottom: math.div($default-separation, 1.5);
   }
+
   .body {
     max-width: map-get($container-max-widths, 'sm');
   }
