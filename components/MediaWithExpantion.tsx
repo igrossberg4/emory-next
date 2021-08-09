@@ -52,7 +52,7 @@ export default function MediaWithExpantion(props: any) {
           >
             <button
               onClick={() => {
-                props.setExpanded(false);
+                setExpanded(false);
               }}
             >
               Close
