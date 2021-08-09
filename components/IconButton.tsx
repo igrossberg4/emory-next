@@ -65,13 +65,15 @@ addCollection({
 
 
 function IconButton(props: any) {
-    return (
+    return props.link ? 
       <Link href={props.link}>
         <a className="icon-button">
           <Icon icon={'em:' + props.icon} />
         </a>
-      </Link>
-  );
+      </Link> : <a className="icon-button">
+          <Icon icon={'em:' + props.icon} />
+        </a>
+    }
 }
 
 export default IconButton;
