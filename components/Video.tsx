@@ -28,12 +28,12 @@ export default function Video(props: any) {
   return (
     <Fragment>
       <motion.video
-        key={props.video_src}
+        key={props.video_src ? props.video_src : props.media_src}
         initial={{ opacity: 0 }}
         exit={{ opacity: 1, height: "400px", width: "400px", borderRadius:'50%' }}
         transition={{}}
         animate={
-          state.videoStore[props.video_src]?.skip ? 'skip' : (!state.videoStore[props.video_src]?.paused ? "playing" : "default")
+          state.videoStore[props.video_src ? props.video_src : props.media_src]?.skip ? 'skip' : (!state.videoStore[props.video_src ? props.video_src : props.media_src]?.paused ? "playing" : "default")
         }
         variants={{
           default: { opacity: 0.5 },
@@ -42,7 +42,7 @@ export default function Video(props: any) {
         }}
         layout
         onEnded={(en) => {
-          dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src}});
+          dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src ? props.video_src : props.media_src}});
 
           //router.push(props.route_to)
           // Check if the video has ended.
@@ -53,13 +53,13 @@ export default function Video(props: any) {
           dispatch({
             type: "REGISTER_VIDEO",
             payload: {
-              key: props.video_src,
+              key: props.video_src ? props.video_src : props.media_src,
               value: { paused: true, muted: true, videoRef: ref },
             },
           });
         }}
       >
-        <source src={props.video_src} type="video/mp4"></source>
+        <source src={props.video_src ? props.video_src : props.media_src} type="video/mp4"></source>
       </motion.video>
     </Fragment>
   );

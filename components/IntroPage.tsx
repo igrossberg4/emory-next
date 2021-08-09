@@ -63,7 +63,7 @@ export default function IntroPage(props: any) {
               });*/
               console.log("End")
 
-              //router.push(props.route_to);
+              router.push(props.route_to);
 
             }}
             animate={

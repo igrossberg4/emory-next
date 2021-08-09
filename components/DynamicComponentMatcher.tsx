@@ -15,6 +15,7 @@ import BottomNavigation from "./BottomNavigation";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import Video from "./Video";
 import CircleContentWrapper from "./CircleContentWrapper";
+import MediaWithExpantion from "./MediaWithExpantion";
 function DynamicComponentMatcher(props: any) {
   console.log(props);
   return (
@@ -108,6 +109,13 @@ function DynamicComponentMatcher(props: any) {
                 ></DynamicComponentMatcher>
               </CircleContentWrapper>
             );
+            case "MediaWithExpantion":
+              return (
+                <MediaWithExpantion 
+                {...component.props}
+                key={i.toString()}>
+                </MediaWithExpantion>
+              );
           default:
             return "";
         }
