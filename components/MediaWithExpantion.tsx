@@ -22,8 +22,8 @@ export default function MediaWithExpantion(props: any) {
             <Fragment>
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
-              //layout
-              //layoutId={layoutId}
+              // layout
+              // layoutId={layoutId}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -51,7 +51,7 @@ export default function MediaWithExpantion(props: any) {
             className="container-force-screen-fit-y overlay"
             style={{ pointerEvents: "auto" }}
           >
-            <button
+            <button className="close-popup text-label"
               onClick={() => {
                 setExpanded(false);
               }}
@@ -71,7 +71,7 @@ export default function MediaWithExpantion(props: any) {
                 <Video {...props} controls={true}></Video>
               )}
             </motion.figure>
-            <h6>{props.header}</h6>
+            <h6 className="text-body">{props.header}</h6>
             <p>{props.text}</p>
           </motion.div>
         )}

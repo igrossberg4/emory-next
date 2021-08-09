@@ -37,7 +37,7 @@
       padding: 2em;
       margin: 0;
       margin-left: -85%;
-      margin-top: calc(100% - #{$round-image-size-big} + 4em);
+      margin-top: calc(100% - #{$round-image-size-big} + 2em);
       shape-outside: circle(50% at 50% 50%) padding-box;
     }
   }

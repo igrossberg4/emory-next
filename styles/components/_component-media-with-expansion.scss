@@ -13,9 +13,22 @@
     padding: $default-separation;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .close-popup {
+      position: absolute;
+      right: math.div($default-separation, 2);
+      top: math.div($default-separation, 2);
+    }
 
     figure {
       max-height: 50vh;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
 }
