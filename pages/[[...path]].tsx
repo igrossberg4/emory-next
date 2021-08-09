@@ -39,6 +39,9 @@ export default function Home(props: any) {
         <meta name="description" content={props.meta.description} />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
       {
       props.skipTransitionAnimations !== true  ? (
@@ -131,8 +134,9 @@ const slide_1 = {
       {
         component: "ImageTextOneColumn",
         props: {
-          background: "grey",
           header: "Header 2",
+          background_image: "bg_brain.jpg",
+
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
@@ -220,7 +224,7 @@ const slide_2 = {
         component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
-          background: "grey",
+          background_image: "bg_brain.jpg",
 
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
@@ -256,7 +260,7 @@ const slide_2 = {
         component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
-          background: "grey",
+          background_image: "bg_brain.jpg",
 
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
@@ -292,7 +296,7 @@ const slide_2 = {
         component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
-          background: "grey",
+          background_image: "bg_brain.jpg",
 
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
@@ -328,7 +332,7 @@ const slide_2 = {
         component: "ImageTextOneColumn",
         props: {
           header: "Header 2",
-          background: "grey",
+          background_image: "bg_brain.jpg",
 
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in

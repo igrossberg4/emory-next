@@ -11,13 +11,12 @@ export default function ImageTextOneColumn(props:any) {
   const [state, dispatch] = useContext(Context) as any;
   const [expanded, setExpanded] = useState(false);
   return (
-            <div className="section component-text-center">
+            <div className="section component-image-text-one-column" style={{backgroundImage:props.background_image ?  `url(/${props.background_image})` : ''}}>
                 <div className="container">
                   <div className="row">
                     <div className="column">
                         <h2 className="title header-h3">{props.header}</h2>
                         <div className="body">
-
                         <div className="floating-media">
                             <motion.figure
                                 className="round-wp"
@@ -33,7 +32,9 @@ export default function ImageTextOneColumn(props:any) {
                             }
                             } >X</button>
                         </div>
+
                             {props.text}
+
                         </div>
                     </div>
                   </div>
