@@ -51,10 +51,10 @@ a {
   border: 12px solid $color-white;
   box-shadow: $default-box-shadow;
   background-color: $color-white;
-  max-width: 373px;
+  max-width: $round-image-size;
 
-  .size--big {
-    max-width: 580px;
+  &.size--big {
+    max-width: $round-image-size-big;
   }
 }
 

@@ -137,7 +137,7 @@ const slide_1 = {
           header: "Header 2",
           background_image: "bg_brain.jpg",
 
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
+          text: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
           convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
           leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu
@@ -147,7 +147,7 @@ const slide_1 = {
           aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget
           enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non
           laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit
-          urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget
+          urna. Quisque ac laoreet libero, at ullamcorper orci.</p> <p>Suspendisse eget
           nulla eu nibh condimentum pellentesque. Duis id neque tincidunt,
           ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum
           odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt
@@ -161,7 +161,7 @@ const slide_1 = {
           ac posuere rutrum, elit odio faucibus dui, commodo posuere libero
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
-          imperdiet nec leo eu egestas.`,
+          imperdiet nec leo eu egestas.</p>`,
           img_src: "/collegue_arts.jpg",
           media_src: "/collegue_arts.jpg",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",

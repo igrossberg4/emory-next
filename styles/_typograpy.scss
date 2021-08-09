@@ -6,6 +6,14 @@ body {
   line-height: $line-height-base;
 }
 
+p {
+  margin-bottom: $line-height-base + em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .text-body--lg{
   font-size: $font-size-lg;
   @include media-breakpoint-up(md){

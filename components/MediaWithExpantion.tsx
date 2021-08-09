@@ -19,7 +19,7 @@ export default function MediaWithExpantion(props: any) {
     <Fragment>
       <AnimateSharedLayout type="crossfade">
         {!expanded ? (
-          <div className="floating-media">
+          <div className="component-media-with-expansion">
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
               layout
@@ -33,7 +33,7 @@ export default function MediaWithExpantion(props: any) {
                 <Video {...props}></Video>
               )}
             </motion.figure>
-            <div
+            <div className="actions"
               onClick={() => {
                 setExpanded(true);
               }}
