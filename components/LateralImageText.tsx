@@ -16,25 +16,35 @@ export default function LateralImageText(props:any) {
       <AnimateSharedLayout type="crossfade">
 
       {!expanded ? 
-            <div>
-            <h2>{props.header}</h2>
-            <p>
-    
-              {props.text}
-            </p>
-            <motion.figure
-            layout
-            layoutId={props.img_src}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            >
-          <Image alt="" width={200} height={200} src={props.img_src}></Image>
-            </motion.figure>
-            <button  onClick={()=> {
-              setExpanded(true);
-            }
-            } >X</button>
-          </div> :
+            <div className="section component-text-center">
+                <div className="container">
+                  <div className="row">
+                    <div className="column">
+                        <h2 className="title header-h3">{props.header}</h2>
+                        <div className="body">
+
+                        <div className="floating-media">
+                            <motion.figure
+                                className="round-wp"
+                                layout
+                                layoutId={props.img_src}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                            >
+                                <Image alt="" width={200} height={200} src={props.img_src}></Image>
+                            </motion.figure>
+                            <button  onClick={()=> {
+                                setExpanded(true);
+                            }
+                            } >X</button>
+                        </div>
+                            {props.text}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                :
       <LateralImageExpanded {...props} setExpanded={setExpanded}></LateralImageExpanded> }
             </AnimateSharedLayout>
 

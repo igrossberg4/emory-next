@@ -43,7 +43,7 @@ export default function Home(props: any) {
       {props.skipTransitionAnimations !== true ? (
         <AnimatePresence>
           <motion.div
-            className="container"
+            className="min-container"
             onAnimationComplete={() => {
               if (state.route !== "") {
                 dispatch({ type: "SET_NAV", payload: "" });
@@ -378,7 +378,7 @@ const slide_2 = {
         props: {
           previous_title: "Previous title",
           next_title: "Next title",
-          previous_route: "/landing/carousel/second",
+          previous_route: "/landing/carousel/first",
           next_route: "/landing/carousel/third",
         },
       },
@@ -404,6 +404,15 @@ const slide_3 = {
                   route_to: "/landing/another/thing",
                 },
                 img_src: "/collegue_arts.jpg",
+              },
+            },
+            {
+              component: "BottomNavigation",
+              props: {
+                previous_title: "Previous title",
+                next_title: "Next title",
+                previous_route: "/landing/carousel/second",
+                next_route: "/landing/carousel/first",
               },
             },
           ],

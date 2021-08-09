@@ -1,0 +1,91 @@
+//Carousel item and Header top content
+.carousel-item,
+.content-header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0 100px 0;
+  text-align: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .image,
+  .btn {
+    margin-bottom: $default-separation;
+  }
+
+  .image {
+    max-width: 530px;
+    //height: 100%;
+    //width: auto;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    max-width: 650px;
+  }
+
+  .actions {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+// Header top / content header
+/*
+.content-header {
+  overflow: hidden;
+  position: relative;
+
+  > .image {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+    bottom: 10%;
+    transform: scale(1.5);
+  }
+
+
+  .content-header__container {
+    .image {
+      z-index: -2;
+      position: relative;
+      opacity: 0;
+    }
+
+    .pretitle,
+    .subtitle {
+      margin: 0 auto;
+    }
+    .pretitle {
+      text-transform: uppercase;
+      margin-bottom: math.div($default-separation, 2);
+    }
+    .title {
+      margin-bottom: $default-separation;
+      font-size: 3.5em;
+      max-width: 780px;
+    }
+    .subtitle {
+      //margin-top: $default-separation;
+      max-width: 530px;
+    }
+  }
+}
+*/
+
