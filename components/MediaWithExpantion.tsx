@@ -30,7 +30,7 @@ export default function MediaWithExpantion(props: any) {
               {props.media_type === "image" ? (
                 <img alt={props.media_alt} src={props.media_src} ></img>
               ) : (
-                <Video {...props}></Video>
+                <Video {...props} ></Video>
               )}
             </motion.figure>
             <div className="actions"
@@ -67,7 +67,7 @@ export default function MediaWithExpantion(props: any) {
               {props.media_type === "image" ? (
                   <img alt={props.media_alt} src={props.media_src} ></img>
               ) : (
-                <Video {...props}></Video>
+                <Video {...props} controls={true}></Video>
               )}
             </motion.figure>
             <h6>{props.header}</h6>

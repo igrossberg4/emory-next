@@ -28,6 +28,7 @@ export default function Video(props: any) {
   return (
     <Fragment>
       <motion.video
+        controls={props.controls}
         key={props.video_src ? props.video_src : props.media_src}
         initial={{ opacity: 0 }}
         exit={{ opacity: 1, height: "400px", width: "400px", borderRadius:'50%' }}
