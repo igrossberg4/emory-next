@@ -17,8 +17,9 @@ export default function MediaWithExpantion(props: any) {
   return (
     <Fragment>
       <AnimateSharedLayout type="crossfade">
-          <div className={{'component-media-with-expansion is-expanded': expanded, 'component-media-with-expansion': !expanded}}>
+          <div className={expanded ? 'component-media-with-expansion is-expanded': 'component-media-with-expansion'}>
           {!expanded ? (
+            <Fragment>
             <motion.figure
               className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
               layout
@@ -39,6 +40,8 @@ export default function MediaWithExpantion(props: any) {
             >
               {props.media_type === "image" ? <IconButton icon={"eye"} ></IconButton> : <IconButton icon={"play"} />}
             </div>
+            </Fragment>
+            
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
