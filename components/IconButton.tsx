@@ -24,6 +24,9 @@ addCollection({
         "plus": {
             "body": "<path d=\"M5 13v-1h6V6h1v6h6v1h-6v6h-1v-6H5z\" fill=\"currentColor\"/>"
         },
+        "close": {
+            "body": "<path d=\"M5 13v-1h6V6h1v6h6v1h-6v6h-1v-6H5z\" fill=\"currentColor\" transform=\"rotate(45)\"/>"
+        },
         "minus": {
             "body": "<path d=\"M5 13v-1h13.01L18 13H5z\" fill=\"currentColor\"/>"
         },
