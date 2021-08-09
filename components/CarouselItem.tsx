@@ -33,6 +33,7 @@ export default function CarouselItem(props: any) {
       scale: scroll > 170 ? 1.5 : 1,
       bottom: "10%",
       transition: { duration: 4 },
+
     },
     mainImage_initialFromCarousel: {
       opacity: 1,
@@ -79,8 +80,10 @@ export default function CarouselItem(props: any) {
         mainImage_active: {
           opacity: 1,
           maxWidth: scroll > 170 ? '1500px' : '530px',
+
           scale: scroll > 170 ? 1.5 : 1,
           bottom: scroll > 170 ? '10%' : '30%',
+
           transition: { duration: 2 },
         },
         mainImage_initialFromCarousel: {
@@ -142,7 +145,7 @@ export default function CarouselItem(props: any) {
           <motion.img
             className="image round-wp"
             variants={variants}
-            style={{ originY: 1 }}
+            style={{ originY: 1,       height: scroll > 170 ? '1500px' : '530px'          }}
             key={props.img_src}
             animate="mainImage_active"
             alt={props.header}
