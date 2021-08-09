@@ -5,6 +5,7 @@ import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
+import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function ImageTextOneColumn(props:any) {
   const router = useRouter();
@@ -18,23 +19,9 @@ export default function ImageTextOneColumn(props:any) {
                         <h2 className="title header-h3">{props.header}</h2>
                         <div className="body">
                         <div className="floating-media">
-                            <motion.figure
-                                className="round-wp"
-                                layout
-                                layoutId={props.img_src}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                            >
-                                <Image alt="" width={200} height={200} src={props.img_src}></Image>
-                            </motion.figure>
-                            <button  onClick={()=> {
-                                setExpanded(true);
-                            }
-                            } >X</button>
+                            <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.header} text={props.text} ></MediaWithExpantion>
                         </div>
-
                             {props.text}
-
                         </div>
                     </div>
                   </div>

@@ -19,19 +19,22 @@ export default function MediaWithExpantion(props: any) {
         {!expanded ? (
           <div className="floating-media">
             <motion.figure
-              className="round-wp"
+              className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
               layout
               layoutId={props.media_src}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
               {props.media_type === "image" ? (
-                <Image
-                alt={props.media_alt}
-                  width={props.size}
-                  height={props.size}
-                  src={props.media_src}
-                ></Image>
+                      <img
+                          alt={props.media_alt}
+                          src={props.img_src}
+                      ></img>
+                // <Image
+                // alt={props.media_alt}
+                // layout="fill"
+                //   src={props.media_src}
+                // ></Image>
               ) : (
                 <Video {...props}></Video>
               )}
@@ -58,7 +61,7 @@ export default function MediaWithExpantion(props: any) {
                 props.setExpanded(false);
               }}
             >
-              {props.button_close_text}
+              Close
             </button>
 
             <motion.figure
@@ -78,7 +81,7 @@ export default function MediaWithExpantion(props: any) {
                 <Video {...props}></Video>
               )}
             </motion.figure>
-            <h2>{props.header}</h2>
+            <h6>{props.header}</h6>
             <p>{props.text}</p>
           </motion.div>
         )}

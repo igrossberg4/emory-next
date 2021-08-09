@@ -162,8 +162,12 @@ const slide_1 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "vercel.svg",
-          button_close_text: "Close",
+          img_src: "/collegue_arts.jpg",
+          media_src: "/collegue_arts.jpg",
+          media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+          media_type: "image",
+          media_header: 'Image title',
+          media_text: 'Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas.',
         },
       },
 
@@ -251,7 +255,7 @@ const slide_2 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "vercel.svg",
+          img_src: "collegue_arts.jpg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
         },
@@ -287,7 +291,7 @@ const slide_2 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "vercel.svg",
+          img_src: "collegue_arts.jpg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
         },
@@ -323,7 +327,7 @@ const slide_2 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "vercel.svg",
+          img_src: "collegue_arts.jpg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
         },
@@ -359,7 +363,7 @@ const slide_2 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "vercel.svg",
+          img_src: "collegue_arts.jpg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
         },
