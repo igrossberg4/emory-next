@@ -3,7 +3,7 @@ import React, { Fragment, useContext, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
-import { AnimateSharedLayout, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Context } from "../state/Store";
 import LateralImageExpanded from "./LateralImageExpanded";
 import Video from "./Video";
@@ -16,38 +16,42 @@ export default function MediaWithExpantion(props: any) {
   const [layoutId, setLayoutID] = useState(Math.random().toString());
   return (
     <Fragment>
-      <AnimateSharedLayout type="crossfade">
-          <div className={expanded ? 'component-media-with-expansion is-expanded': 'component-media-with-expansion'}>
-          {!expanded ? (
-            <Fragment>
-            <motion.figure
-              className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
-              // layout
-              // layoutId={layoutId}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              {props.media_type === "image" ? (
-                <img alt={props.media_alt} src={props.media_src} />
-              ) : (
-                <Video {...props} ></Video>
-              )}
-            </motion.figure>
-            <div className="actions"
-              onClick={() => {
-                setExpanded(true);
-              }}
-            >
-              {props.media_type === "image" ? <IconButton icon={"eye"} ></IconButton> : <IconButton icon={"play"} />}
-            </div>
-            </Fragment>
-            
-        ) : (
+      <div className={expanded ? 'component-media-with-expansion is-expanded': 'component-media-with-expansion'}>
+        <motion.figure
+          className={props.size !== 'normal' ? 'round-wp size--' + props.size : 'round-wp' }
+          // layout
+          // layoutId={layoutId}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.figure
+            // layout
+            // layoutId={layoutId}
+            // initial={{ opacity: 1 }}
+            // animate={{ opacity: 1 }}
+          >
+            {props.media_type === "image" ? (
+              <img alt={props.media_alt} src={props.media_src} />
+            ) : (
+              <Video {...props} ></Video>
+            )}
+          </motion.figure>
+        </motion.figure>
+        <div className="actions"
+          onClick={() => {
+            setExpanded(true);
+          }}
+        >
+          {props.media_type === "image" ? <IconButton icon={"eye"} ></IconButton> : <IconButton icon={"play"} />}
+        </div>
+
+        {expanded ? (
           <motion.div
+            // layoutId={layoutId}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.15 } }}
-            transition={{ duration: 0.2, delay: 0.15 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
             className="container-force-screen-fit-y overlay"
             style={{ pointerEvents: "auto" }}
           >
@@ -58,25 +62,24 @@ export default function MediaWithExpantion(props: any) {
             >
               Close
             </button>
-
             <motion.figure
-              //layout
-              //layoutId={layoutId}
-              //initial={{ opacity: 1 }}
-              //animate={{ opacity: 1 }}
+              // layout
+              // layoutId={layoutId}
+              // initial={{ opacity: 1 }}
+              // animate={{ opacity: 1 }}
             >
               {props.media_type === "image" ? (
-                  <img alt={props.media_alt} src={props.media_src} ></img>
+                <img alt={props.media_alt} src={props.media_src} ></img>
               ) : (
                 <Video {...props} controls={true}></Video>
               )}
             </motion.figure>
             <h6 className="text-body">{props.header}</h6>
-            <p>{props.text}</p>
+            <div className="body" dangerouslySetInnerHTML={{__html:props.text}}></div>
           </motion.div>
-        )}
-          </div>
-      </AnimateSharedLayout>
+        ) : ("")}
+
+      </div>
     </Fragment>
   );
 }
