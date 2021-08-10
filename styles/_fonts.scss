@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Ampersand;
+  src: url(/fonts/ampersand-medium.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Pangram;
+  src:
+    url(/fonts/pangram-regular.woff2) format("woff2"),
+    url(/fonts/pangram-regular.woff2) format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Pangram;
+  src:
+    url(/fonts/pangram-bold.woff2) format("woff2"),
+    url(/fonts/pangram-bold.woff2) format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
