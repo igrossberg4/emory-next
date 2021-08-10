@@ -26,7 +26,7 @@ parents, community members.
 [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
-## Development
+## Development using local environment
 
 * Install javascript dependencies:
 
@@ -40,7 +40,31 @@ npm install
 npm run dev
 ```
 
-* Open [http://localhost:3000/intro](http://localhost:3000/intro) in your browser.
+* Open [http://localhost:3000/](http://localhost:3000/) in your browser.
+
+## Development using docker and docker compose
+
+* Setup build:
+```bash
+docker-compose up -d
+```
+* Check the development server at http://localhost:3000/
+  
+* Check the production server at http://localhost:8080/
+  
+* Regenerate production build:
+```bash
+docker-compose up -d --build
+```
+or
+```bash
+docker-compose exec next_prod npm run build
+```
+
+* If not server or process is present at port 8080, check the logs with:
+```bash
+docker-compose logs next_prod
+```
 
 
 ## Getting Started
