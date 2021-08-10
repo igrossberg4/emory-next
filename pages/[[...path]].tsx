@@ -129,7 +129,7 @@ const slide_1 = {
                   type: "navigate",
                   route_to: "/landing/another/thing",
                 },
-                img_src: "/collegue_arts.jpg",
+                img_src: "/images/2036_cancer_cells_red_uncropped.jpg",
               },
             },
           ],
@@ -167,8 +167,8 @@ const slide_1 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.</p>`,
-          img_src: "/collegue_arts.jpg",
-          media_src: "/collegue_arts.jpg",
+          img_src: "/images/2036_brain_health_neurons_red.jpg",
+          media_src: "/images/2036_brain_health_neurons.jpg",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
           media_type: "image",
           media_header: 'Image title',
@@ -216,13 +216,13 @@ const slide_2 = {
             {
               component: "CarouselItem",
               props: {
-                header: "Building on Emory's commitment to serve humanity 2",
+                header: "College of Arts & Sciences",
                 button_scroll: "Scroll to explore",
                 action: {
                   type: "navigate",
                   route_to: "/landing/another/thing",
                 },
-                img_src: "/vercel.svg",
+                img_src: "/images/2036_brain_health_smoke_blue.jpg",
               },
             },
           ],
@@ -260,7 +260,7 @@ const slide_2 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          media_src: "/collegue_arts.jpg",
+          media_src: "/images/2036_brain_health_neurons_blue.jpg",
           media_type: "image",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
           image_expand_id: "image_expanded_test",
@@ -299,7 +299,7 @@ const slide_2 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           image_expand_id: "image_expanded_test",
-          img_src:"/collegue_arts.jpg",
+          img_src:"/images/2036_cancer_cells_blue.jpg",
           button_close_text: "Close",
           media_src: "/video.mp4",
           media_type: "video",
@@ -338,7 +338,7 @@ const slide_2 = {
           imperdiet nec leo eu egestas.`,
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
-          media_src: "/collegue_arts.jpg",
+          media_src: "/images/2036_brain_health_smoke_blue.jpg",
           media_type: "image",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         },
@@ -374,10 +374,10 @@ const slide_2 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "/collegue_arts.jpg",
+          img_src: "/images/2036_brain_health_smoke_blue.jpg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
-          media_src: "/collegue_arts.jpg",
+          media_src: "/images/2036_brain_health_smoke_blue_uncropped.jpg",
           media_type: "image",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         },
@@ -421,13 +421,13 @@ const slide_3 = {
             {
               component: "CarouselItem",
               props: {
-                header: "Building on Emory's commitment to serve humanity 3",
+                header: "Data Science",
                 button_scroll: "Scroll to explore",
                 action: {
                   type: "navigate",
                   route_to: "/landing/another/thing",
                 },
-                img_src: "/collegue_arts.jpg",
+                img_src: "/images/2036_data_science_code_yellow.jpg",
               },
             },
            
@@ -465,10 +465,10 @@ const slide_3 = {
           tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
-          img_src: "/collegue_arts.jpg",
+          img_src: "/images/2036_data_science_grid_yellow.jpg",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
-          media_src: "/collegue_arts.jpg",
+          media_src: "/images/2036_data_science_grid_yellow.jpg",
           media_type: "image",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         },
