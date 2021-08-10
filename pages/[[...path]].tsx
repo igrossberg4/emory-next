@@ -7,11 +7,10 @@ import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
 import {
   AnimatePresence,
-  AnimateSharedLayout,
   motion,
-  useAnimation,
 } from "framer-motion";
 import { Context } from "../state/Store";
+import {instantiateEmscriptenWasm} from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
 
 export default function Home(props: any) {
   const router = useRouter();
@@ -32,6 +31,23 @@ export default function Home(props: any) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
   const [state, dispatch] = useContext(Context) as any;
+
+  const variants = {
+    initialWithRoute: {
+      // Load new route in overlay
+      y: scroll < innerHeight ? scroll : innerHeight,
+    },
+    animateWithRoute: {
+      // End transition overlay (new section)
+      y: 0,
+      opacity: 1,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    }
+  }
+
   return (
     <Fragment>
       <Head>
@@ -47,40 +63,30 @@ export default function Home(props: any) {
       props.skipTransitionAnimations !== true  ? (
         <AnimatePresence>
           <motion.div
-            className="min-container"
+            className="main-container"
+            id={router.asPath + ' ---- ' + state.route}
             onAnimationComplete={() => {
               if (state.route !== "") {
                 dispatch({ type: "SET_NAV", payload: "" });
               }
             }}
             key={router.asPath}
-            layout={true}
+            // layout={true}
             transition={spring}
-            initial={{
-              y:
-                state.route != ""
-                  ? scroll < innerHeight
-                    ? scroll
-                    : innerHeight
-                  : 0,
-              opacity: 1,
-            }}
-            animate={{
-              y: 0,
-              opacity: 1,
-              height: 0,
-            }}
+            variants={variants}
+            initial={state.route === router.asPath ? "initialWithRoute" : false }
+            animate={state.route === router.asPath ? "animateWithRoute" : "animate"}
             exit={{
-              y: state.route != "" ? -scroll * 15 : 0,
               opacity: 0,
-              height: 0,
+              zIndex: -1,
+              position: "absolute",
             }}
           >
             <DynamicComponentMatcher
               key={state.route}
               view={props.view}
             ></DynamicComponentMatcher>
-          </motion.div>{" "}
+          </motion.div>
         </AnimatePresence>
       ) : (
         <AnimatePresence>

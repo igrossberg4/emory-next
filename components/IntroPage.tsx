@@ -22,7 +22,7 @@ export default function IntroPage(props: any) {
       console.log("End")
     }}
     animate={controls}
-    className="container container-fit container-video-intro">
+    className="container-fit container-video-intro">
       
       <Video   {...props}></Video>
       {actualVideo ? (

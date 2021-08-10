@@ -171,7 +171,6 @@ export default function CarouselItem(props: any) {
             {props.header}
           </motion.h1>
           <motion.div
-
             className="subtitle"
             /*variants={variants}
             initial="fadeIn_initial"
