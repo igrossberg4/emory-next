@@ -1,20 +1,11 @@
-import Head from "next/head";
 import React, { useContext } from "react";
-import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider,
   Button,
-  Box,
 } from "@chakra-ui/react";
 import { Context } from "../state/Store";
 import Link from "next/link";

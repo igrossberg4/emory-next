@@ -13,24 +13,28 @@ import Video from "./Video";
 export default function IntroPage(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   const router = useRouter();
-  const controls = useAnimation()
+  const controls = useAnimation();
 
   const actualVideo = state.videoStore[props.video_src] as IVideoController;
   return (
     <motion.div
-    onTransitionEnd={() => {
-      console.log("End")
-    }}
-    animate={controls}
-    className="container-fit container-video-intro">
-      
-      <Video   {...props}></Video>
+      onTransitionEnd={() => {
+        console.log("End");
+      }}
+      animate={controls}
+      className="container-fit container-video-intro"
+    >
+      <Video {...props}></Video>
       {actualVideo ? (
         <Fragment>
           <motion.button
             className="btn-begin-experience"
             animate={
-              actualVideo.skipped ? "skip" : !actualVideo.paused ? "playing" : "default"
+              actualVideo.skipped
+                ? "skip"
+                : !actualVideo.paused
+                ? "playing"
+                : "default"
             }
             variants={{
               default: { opacity: 1 },
@@ -40,8 +44,10 @@ export default function IntroPage(props: any) {
             onClick={async () => {
               if (actualVideo && actualVideo.videoRef && actualVideo.paused) {
                 actualVideo.videoRef?.play();
-                actualVideo.paused = false;
-                dispatch({ type: 'TOGGLE_VIDEO', payload:{key:props.video_src}});
+                dispatch({
+                  type: "TOGGLE_VIDEO",
+                  payload: { key: props.video_src },
+                });
               }
             }}
           >
@@ -49,9 +55,11 @@ export default function IntroPage(props: any) {
           </motion.button>
           <motion.button
             className="btn-skip-intro"
-
-            onClick={ async () => {
-              dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src}});
+            onClick={async () => {
+              dispatch({
+                type: "SKIP_VIDEO",
+                payload: { key: props.video_src },
+              });
               /*await controls.start({
                 opacity: 1,
                 width:'400px',
@@ -61,13 +69,16 @@ export default function IntroPage(props: any) {
                 borderRadius:'50%',
                 transition: { duration: 3 },
               });*/
-              console.log("End")
+              console.log("End");
 
               router.push(props.route_to);
-
             }}
             animate={
-              actualVideo.skipped ? "skip" : !actualVideo.paused ? "playing" : "default"
+              actualVideo.skipped
+                ? "skip"
+                : !actualVideo.paused
+                ? "playing"
+                : "default"
             }
             variants={{
               default: { opacity: 0 },

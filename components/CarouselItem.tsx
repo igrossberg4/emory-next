@@ -18,7 +18,7 @@ const normalize = (val: number, max: number, min: number) => {
 };
 
 export default function CarouselItem(props: any) {
-  const [animated, setAnimated] = useState(false);
+  const [animated, setAnimated] = useState(true);
   const [scroll, setScroll] = useState(0);
   const listInnerRef = useRef();
 
@@ -29,11 +29,10 @@ export default function CarouselItem(props: any) {
   const [variants, setVariants] = useState({
     mainImage_active: {
       opacity: 1,
-      maxWidth: scroll > 170 ? '1500px' : '530px',
+      maxWidth: scroll > 170 ? "1500px" : "530px",
       scale: scroll > 170 ? 1.5 : 1,
       bottom: "10%",
       transition: { duration: 4 },
-
     },
     mainImage_initialFromCarousel: {
       opacity: 1,
@@ -79,10 +78,10 @@ export default function CarouselItem(props: any) {
       setVariants({
         mainImage_active: {
           opacity: 1,
-          maxWidth: scroll > 170 ? '1500px' : '530px',
+          maxWidth: scroll > 170 ? "1500px" : "530px",
 
           scale: scroll > 170 ? 1.5 : 1,
-          bottom: scroll > 170 ? '10%' : '30%',
+          bottom: scroll > 170 ? "10%" : "30%",
 
           transition: { duration: 2 },
         },
@@ -137,7 +136,7 @@ export default function CarouselItem(props: any) {
     window.addEventListener("scroll", handleScroll, { passive: false });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [goingUp, scroll, variants]);  // @ts-ignore
+  }, [goingUp, scroll, variants]); // @ts-ignore
   return (
     <motion.div className="content-header">
       <div className="content-header__container container container-force-screen-fit-y">
@@ -145,9 +144,9 @@ export default function CarouselItem(props: any) {
           <motion.img
             className="image round-wp"
             variants={variants}
-            style={{ originY: 1,       height: scroll > 170 ? '1500px' : '530px'          }}
+            style={{ originY: 1, height: scroll > 170 ? "1500px" : "530px" }}
             key={props.img_src}
-            animate="mainImage_active"
+            animate={animated ? 'mainImage_active' : false}
             alt={props.header}
             src={props.img_src}
           ></motion.img>
@@ -160,13 +159,10 @@ export default function CarouselItem(props: any) {
             {props.about}
           </motion.div>
           <motion.h1
-
             className="title header-h2"
             variants={variants}
             initial={false}
-            animate={
-              "title_active" // : "fadeIn_active"
-            }
+            animate={animated ? 'title_active' : false}
           >
             {props.header}
           </motion.h1>
@@ -182,11 +178,14 @@ export default function CarouselItem(props: any) {
         <div className="actions">
           <div
             className="btn"
-            style={{cursor: "pointer"}}
+            style={{ cursor: "pointer" }}
             onClick={(e) => {
-              const contentElement = document.getElementById('carouselContent');
+              const contentElement = document.getElementById("carouselContent");
               //contentElement?.scrollIntoView({behavior: 'smooth'});
-              window.scrollTo({top:contentElement?.offsetTop, behavior:'smooth'})
+              window.scrollTo({
+                top: contentElement?.offsetTop,
+                behavior: "smooth",
+              });
             }}
           >
             {" "}

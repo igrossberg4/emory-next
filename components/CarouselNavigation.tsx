@@ -110,7 +110,13 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
           >
             <AnimatePresence>
               {slides.map((value: any, i: number) => {
+                //value.props.view[0].props.view[0].props.is_selected = i === page;
                 return (
+                  <div
+                  className={`embla_slide_present ${page === i ?'selected' : 'no_selected'} ${i < page ? 'first' : ''} ${i > page ? 'last' : ''} `}
+                  key={MD5(value)}
+                  //style={{transform:`translateX(${page === i ? 0 :(page > i ? 100 : -100)}px)`}}
+                  >
                   <motion.div
                     drag="x"
                     layout
@@ -120,6 +126,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                     transition={{
                       x: { type: "spring", stiffness: 300, damping: 30 },
                     }}
+
                     onDrag={(e, { offset, velocity }) => {
                       const swipe = swipePower(offset.x, velocity.x);
                       if (swipe < -swipeConfidenceThreshold) {
@@ -130,7 +137,6 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                     }}
                     //draggable={true}
                     className="embla__slide"
-                    key={MD5(value)}
                   >
                     <div className="embla__slide__inner">
                       <DynamicComponentMatcher
@@ -144,6 +150,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                       ></DynamicComponentMatcher>
                     </div>
                   </motion.div>
+                  </div>
                 );
               })}
             </AnimatePresence>
@@ -161,7 +168,9 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
           enabled={nextBtnEnabled}
         />
       </div>
-      <motion.div layout layoutId="carouselContent" id="carouselContent">
+      <motion.div 
+      key={MD5(slides[page].props.view.slice(1))}
+      layout layoutId={MD5(slides[page].props.view.slice(1))} id="carouselContent">
         <DynamicComponentMatcher
           view={[
             {

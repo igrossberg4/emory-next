@@ -30,11 +30,9 @@ export default function MediaWithExpantion(props: any) {
             // initial={{ opacity: 1 }}
             // animate={{ opacity: 1 }}
           >
-            {props.media_type === "image" ? (
-              <img alt={props.media_alt} src={props.media_src} />
-            ) : (
-              <Video {...props} ></Video>
-            )}
+            
+              <img alt={props.media_alt} src={props.img_src ? props.img_src : props.media_src} />
+
           </motion.figure>
         </motion.figure>
         <div className="actions"
