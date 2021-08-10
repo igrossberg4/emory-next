@@ -64,7 +64,6 @@ export default function Home(props: any) {
         <AnimatePresence>
           <motion.div
             className="main-container"
-            id={router.asPath + ' ---- ' + state.route}
             onAnimationComplete={() => {
               if (state.route !== "") {
                 dispatch({ type: "SET_NAV", payload: "" });
