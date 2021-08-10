@@ -200,10 +200,10 @@ const slide_1 = {
       {
         component: "BottomNavigation",
         props: {
-          previous_title: "Previous title",
-          next_title: "Next title",
-          previous_route: "/landing/carousel/second",
-          next_route: "/landing/carousel/third",
+          previous_title: "Data Science",
+          next_title: "College of Arts and Science",
+          previous_route: "/landing/carousel/third",
+          next_route: "/landing/carousel/second",
         },
       },
     ],
@@ -407,8 +407,8 @@ const slide_2 = {
       {
         component: "BottomNavigation",
         props: {
-          previous_title: "Previous title",
-          next_title: "Next title",
+          previous_title: "About the Emory 2036 Campaign",
+          next_title: "Data Science",
           previous_route: "/landing/carousel/first",
           next_route: "/landing/carousel/third",
         },
@@ -482,8 +482,8 @@ const slide_3 = {
       {
         component: "BottomNavigation",
         props: {
-          previous_title: "Previous title",
-          next_title: "Next title",
+          previous_title: "Emory College of Arts and Sciences",
+          next_title: "About the 2036 Campaign",
           previous_route: "/landing/carousel/second",
           next_route: "/landing/carousel/first",
         },
