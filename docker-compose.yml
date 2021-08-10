@@ -1,0 +1,16 @@
+version: '3'
+services:
+  next_dev:
+    build: .
+    command: npm run dev
+    volumes:
+      - .:/usr/app/
+    ports:
+      - "3000:3000"
+  next_prod:
+    build: .
+    command: http-server out/
+    volumes:
+      - .:/usr/app/
+    ports:
+      - "8080:8080"
