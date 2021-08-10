@@ -19,7 +19,6 @@ export default function IntroPage(props: any) {
   return (
     <motion.div
       onTransitionEnd={() => {
-        console.log("End");
       }}
       animate={controls}
       className="container-fit container-video-intro"
@@ -32,7 +31,7 @@ export default function IntroPage(props: any) {
             animate={
               actualVideo.skipped
                 ? "skip"
-                : !actualVideo.paused
+                : !actualVideo?.videoRef?.paused
                 ? "playing"
                 : "default"
             }
@@ -41,9 +40,8 @@ export default function IntroPage(props: any) {
               playing: { opacity: 0 },
               skip: { opacity: 0 },
             }}
-            onClick={async () => {
+            onClick={() => {
               if (actualVideo && actualVideo.videoRef && actualVideo.paused) {
-                actualVideo.videoRef?.play();
                 dispatch({
                   type: "TOGGLE_VIDEO",
                   payload: { key: props.video_src },
@@ -55,7 +53,7 @@ export default function IntroPage(props: any) {
           </motion.button>
           <motion.button
             className="btn-skip-intro"
-            onClick={async () => {
+            onClick={() => {
               dispatch({
                 type: "SKIP_VIDEO",
                 payload: { key: props.video_src },
@@ -69,14 +67,13 @@ export default function IntroPage(props: any) {
                 borderRadius:'50%',
                 transition: { duration: 3 },
               });*/
-              console.log("End");
 
               router.push(props.route_to);
             }}
             animate={
               actualVideo.skipped
                 ? "skip"
-                : !actualVideo.paused
+                : !actualVideo?.videoRef?.paused
                 ? "playing"
                 : "default"
             }

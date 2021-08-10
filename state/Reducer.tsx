@@ -20,6 +20,8 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         action.payload.key
       ] as IVideoController;
       videoStore.paused = !videoStore.paused;
+      state.videoStore[action.payload.key] = videoStore;
+      videoStore.videoRef?.play();
       return {
         ...state,
         videoStore: Object.assign(state.videoStore, {
