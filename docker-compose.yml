@@ -9,9 +9,7 @@ services:
       - "3000:3000"
   next_prod:
     build: .
-    command: 
-        - npm run build
-        - http-server out/
+    command: http-server out/
     volumes:
       - .:/usr/app/
     ports:
