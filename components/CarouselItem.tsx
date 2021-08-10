@@ -164,7 +164,7 @@ export default function CarouselItem(props: any) {
             initial={false}
             animate={animated ? 'title_active' : false}
           >
-            {props.header}
+            {props.header.toUpperCase()}
           </motion.h1>
           <motion.div
             className="subtitle text-body--lg"
