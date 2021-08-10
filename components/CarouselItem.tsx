@@ -152,7 +152,7 @@ export default function CarouselItem(props: any) {
             src={props.img_src}
           ></motion.img>
           <motion.div
-            className="pretitle"
+            className="pretitle text-label"
             variants={variants}
             //initial="fadeIn_initial"
             //animate="fadeIn_active"
@@ -161,7 +161,7 @@ export default function CarouselItem(props: any) {
           </motion.div>
           <motion.h1
 
-            className="title"
+            className="title header-h2"
             variants={variants}
             initial={false}
             animate={
@@ -171,7 +171,7 @@ export default function CarouselItem(props: any) {
             {props.header}
           </motion.h1>
           <motion.div
-            className="subtitle"
+            className="subtitle text-body--lg"
             /*variants={variants}
             initial="fadeIn_initial"
             animate="fadeIn_active"*/

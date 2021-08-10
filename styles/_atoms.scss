@@ -22,8 +22,7 @@ a {
 
 // Buttons
 .btn {
-  text-transform: uppercase;
-  padding: 0 1em;
+  @extend %text-label;
 }
 .icon-button {
   @extend %rounded-with-shadow;
