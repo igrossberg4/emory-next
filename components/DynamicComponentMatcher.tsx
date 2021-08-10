@@ -3,29 +3,32 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
-import MenuTop from "./MenuTop";
 import HeaderTop from "./HeaderTop";
-import ImageTextOneColumn from "./ImageTextOneColumn";
-import LateralImageExpanded from "./LateralImageExpanded";
-import CarouselNavigation from "./CarouselNavigation";
-import AccordionComponent from "./AccordionComponent";
-import CarouselItem from "./CarouselItem";
-import IntroPage from "./IntroPage";
-import BottomNavigation from "./BottomNavigation";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import Video from "./Video";
-import CircleContentWrapper from "./CircleContentWrapper";
-import MediaWithExpantion from "./MediaWithExpantion";
+import dynamic from 'next/dynamic'
+
+const IntroPage = dynamic(()=> import('./IntroPage'));
+const MenuTop = dynamic(()=> import('./MenuTop'));
+const ImageTextOneColumn = dynamic(()=> import('./ImageTextOneColumn'));
+const LateralImageExpanded = dynamic(()=> import('./LateralImageExpanded'));
+const CarouselNavigation = dynamic(()=> import('./CarouselNavigation'));
+const CarouselItem = dynamic(()=> import('./CarouselItem'));
+const BottomNavigation = dynamic(()=> import('./BottomNavigation'));
+const AccordionComponent = dynamic(()=> import('./AccordionComponent'));
+const Video = dynamic(()=> import('./Video'));
+const CircleContentWrapper = dynamic(()=> import('./CircleContentWrapper'));
+const MediaWithExpantion = dynamic(()=> import('./MediaWithExpantion'));
+
+
 function DynamicComponentMatcher(props: any) {
-  console.log(props);
   return (
     <Fragment>
       {props.view.map((component: any, i: number) => {
         switch (component.component) {
           case "IntroPage":
-            return (
-              <IntroPage key={i.toString()} {...component.props}></IntroPage>
-            );
+
+            return <IntroPage key={i.toString()} {...component.props}></IntroPage>;
+            
           case "MenuTop":
             return <MenuTop key={i.toString()} {...component.props}></MenuTop>;
           case "HeaderTop":
