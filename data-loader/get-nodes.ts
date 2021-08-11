@@ -6,7 +6,7 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
-function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:any, nextNode:any) {
+function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any) {
     return pages.map(page => {
         const nodeFinded = nodes.find(node => page === node.id)
         return actual.id !== nodeFinded.id ? {
@@ -30,9 +30,9 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     }
 
                 ].concat(nodeFinded.components)
-                .concat(
-                    prepareBottomMenu(lastNode, nextNode, nodes)
-                )
+                    .concat(
+                        prepareBottomMenu(lastNode, nextNode, nodes)
+                    )
             }
         }
     })
@@ -90,14 +90,14 @@ function prepareMenu(nodes: Array<any>) {
     }
 }
 
-function prepareBottomMenu(lastNode:any, nextNode:any, nodes:Array<any>){
-    return                     {
+function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>) {
+    return {
         "component": "BottomNavigation",
         "props": {
-            "previous_title": lastNode ? lastNode?.page_props?.header : nodes[0]?.page_props?.header ,
+            "previous_title": lastNode ? lastNode?.page_props?.header : nodes[0]?.page_props?.header,
             "next_title": nextNode ? nextNode?.page_props?.header : nodes[0]?.page_props?.header,
-            "previous_route": lastNode ? lastNode.path : nodes[0],
-            "next_route": nextNode ? nextNode.path : nodes[0]
+            "previous_route": lastNode ? lastNode.path : nodes[0].path,
+            "next_route": nextNode ? nextNode.path : nodes[0].path
         }
     }
 }
@@ -106,7 +106,7 @@ function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus:
     return pages.map((page, i) => {
         const nodeFinded = nodes.find(node => page === node.id);
         const prevNode = i === 0 ? null : nodes.find(node => node.id === pages[i - 1]);
-        const nextNode= i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
+        const nextNode = i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
         return {
             path: nodeFinded.path,
             meta: Object.assign({}, nodeFinded.metatag),
@@ -125,7 +125,7 @@ function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus:
                                         props: nodeFinded.page_props
                                     }
 
-                                ].concat(nodeFinded.components).concat(     prepareBottomMenu(prevNode, nextNode, nodes))
+                                ].concat(nodeFinded.components).concat(prepareBottomMenu(prevNode, nextNode, nodes))
                             }
                         },
                         next: nextNode ? nextNode.path : null,
