@@ -45,13 +45,14 @@ a {
 }
 
 .round-wp{
-  display: inline-flex;
+  display: inline-block;
   overflow: hidden;
   border-radius: 50%;
   border: 12px solid $color-white;
   box-shadow: $default-box-shadow;
   background-color: $color-white;
   max-width: $round-image-size;
+  margin: 0 auto;
   aspect-ratio: 1 / 1;
 
   &.size--big {

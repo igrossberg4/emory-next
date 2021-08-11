@@ -138,21 +138,21 @@ export default function CarouselItem(props: any) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [goingUp, scroll, variants]); // @ts-ignore
   return (
-    <motion.div className="content-header">
-      <div className="content-header__container container container-force-screen-fit-y">
-        <div className="content">
+    // <motion.div className="content-header">
+      <div className="content-header__container container-force-screen-fit-y">
+        <div className="header-inner-content">
           <motion.img
             className="image round-wp"
-            variants={variants}
-            style={{ originY: 1, height: scroll > 170 ? "1500px" : "530px" }}
-            key={props.img_src}
-            animate={animated ? 'mainImage_active' : false}
+            // variants={variants}
+            // style={{ originY: 1, height: scroll > 170 ? "1500px" : "530px" }}
+            // key={props.img_src}
+            // animate={animated ? 'mainImage_active' : false}
             alt={props.header}
             src={props.img_src}
           ></motion.img>
           <motion.div
             className="pretitle text-label"
-            variants={variants}
+            // variants={variants}
             //initial="fadeIn_initial"
             //animate="fadeIn_active"
           >
@@ -160,9 +160,9 @@ export default function CarouselItem(props: any) {
           </motion.div>
           <motion.h1
             className="title header-h2"
-            variants={variants}
-            initial={false}
-            animate={animated ? 'title_active' : false}
+            // variants={variants}
+            // initial={false}
+            // animate={animated ? 'title_active' : false}
           >
             {props.header.toUpperCase()}
           </motion.h1>
@@ -194,6 +194,6 @@ export default function CarouselItem(props: any) {
           <div className="line-separator line-separator--overflowed line-separator--half-height"></div>
         </div>
       </div>
-    </motion.div>
+    // </motion.div>
   );
 }

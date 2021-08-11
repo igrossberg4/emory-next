@@ -27,53 +27,17 @@
     -webkit-touch-callout: none;
     -khtml-user-select: none;
     -webkit-tap-highlight-color: transparent;
-    margin-left: -10px;
     transition: all 2s;
-    /*.embla_slide_present{
-      transition: all 2s;
-      &.no_selected{
-        transition: all 2s;
 
-        //background-color: red;
-        &.first{
-          transform: translateX(100px);
-          .content-header__container{
-            align-items: flex-end;
-            transition: all 2s;
-
-          }
-        }
-        &.last{
-          transform: translateX(-100px);
-          .content-header__container{
-            align-items: flex-start;
-            transition: all 2s;
-
-          }
-        }
-        filter:blur(1px);
-        .content-header__container{
-          width: 580px;          
-          transition: all 2s;
-
-        }
-        .content{
-          transition: all 2s;
-
-          margin: 0;
-        }
-
-      }
-    }*/
-    //scroll-snap-type: x mandatory;
-    //overflow-x: auto;
+    .no_selected {
+      z-index: -1;
+    }
   }
 
   .embla__slide {
     position: relative;
     min-width: 100vw;
     z-index: 5;
-    //scroll-snap-align: center;
   }
 
   .embla__slide__inner {
