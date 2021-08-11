@@ -45,6 +45,11 @@ export default function Home(props: any) {
     animate: {
       y: 0,
       opacity: 1,
+    },
+    exit: {
+      opacity: 0,
+      zIndex: -1,
+      position: "absolute",
     }
   }
 
@@ -67,6 +72,7 @@ export default function Home(props: any) {
         <AnimatePresence>
           <motion.div
             className="main-container"
+            id={state.route + ' --- ' + state.route}
             onAnimationComplete={() => {
               if (state.route !== "") {
                 dispatch({ type: "SET_NAV", payload: "" });
@@ -76,13 +82,9 @@ export default function Home(props: any) {
             // layout={true}
             transition={spring}
             variants={variants}
-            initial={state.route === router.asPath ? "initialWithRoute" : false }
-            animate={state.route === router.asPath ? "animateWithRoute" : "animate"}
-            exit={{
-              opacity: 0,
-              zIndex: -1,
-              position: "absolute",
-            }}
+            initial={state.route !== "" && state.route === router.asPath ? "initialWithRoute" : false }
+            animate={state.route !== "" && state.route === router.asPath ? "animateWithRoute" : "animate"}
+            exit={state.route !== "" ? "exit" : false }
           >
             <DynamicComponentMatcher
               key={state.route}
