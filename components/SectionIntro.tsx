@@ -8,9 +8,6 @@ import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function SectionIntro(props:any) {
-  const router = useRouter();
-  const [state, dispatch] = useContext(Context) as any;
-  const [expanded, setExpanded] = useState(false);
   return (
     <div className="section component-intro-text" style={{backgroundImage:props.background_image ?  `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(/${props.background_image})` : ''}}>
         <div className="container">
