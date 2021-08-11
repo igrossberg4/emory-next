@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import { Context } from "../state/Store";
 import {instantiateEmscriptenWasm} from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
+import { getNodes } from "../data-loader/get-nodes";
 
 export default function Home(props: any) {
   const router = useRouter();
@@ -670,7 +671,7 @@ export const pathJsonText = {
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
-  const findPath = pathJsonText.paths.find((value) => value.path === joinPath);
+  const findPath = getNodes().paths.find((value) => value.path === joinPath);
   return {
     props: findPath,
     // Next.js will attempt to re-generate the page:
@@ -691,8 +692,7 @@ export async function getStaticPaths() {
       params: { path: post.id.toString().split('/') },
     }))
   */
-
-  const paths = pathJsonText.paths.map((post) => ({
+  const paths = getNodes().paths.map((post) => ({
     params: { path: post.path.toString().split("/") },
   }));
   // We'll pre-render only these paths at build time.
