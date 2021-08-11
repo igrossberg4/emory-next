@@ -1,8 +1,10 @@
 @use 'sass:math';
 
+@import "_functions";
 
 @import "_variables";
 @import "mixins/_breakpoints";
+@import "mixins/_grid";
 
 @import "_fonts";
 @import "_reset";
@@ -15,6 +17,6 @@
 @import "components/_intro";
 @import "components/_header-top";
 @import "components/_separator";
-@import "components/_component-image-text-one-column";
+@import "components/component-intro-text";
 @import "components/_component-media-with-expansion";
 @import "components/_bottom-navigation";

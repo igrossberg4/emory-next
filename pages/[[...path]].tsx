@@ -140,36 +140,13 @@ const slide_1 = {
       },
 
       {
-        component: "ImageTextOneColumn",
+        component: "SectionIntro",
         props: {
-          header: "Header 2",
+          header: "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
           background_image: "bg_brain.jpg",
 
-          text: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done
-          convallis dictum elit at feugiat. Vestibulum ante ipsum primis in
-          faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu
-          leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu
-          justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a,
-          porttitor pretium est. Aenean sed mi semper, sodales urna rutrum,
-          consequat risus. Integer at nulla purus. In finibus, nulla ac viverra
-          aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget
-          enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non
-          laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit
-          urna. Quisque ac laoreet libero, at ullamcorper orci.</p> <p>Suspendisse eget
-          nulla eu nibh condimentum pellentesque. Duis id neque tincidunt,
-          ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum
-          odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt
-          erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a
-          turpis et nisi malesuada scelerisque nec in lectus. Cras molestie,
-          eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus
-          libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante.
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-          per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus
-          sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi
-          ac posuere rutrum, elit odio faucibus dui, commodo posuere libero
-          tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed
-          tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
-          imperdiet nec leo eu egestas.</p>`,
+          text: `<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p>
+                 <p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>`,
           img_src: "/images/2036_brain_health_neurons_red.jpg",
           media_src: "/images/2036_brain_health_neurons.jpg",
           media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
@@ -233,7 +210,7 @@ const slide_2 = {
       },
 
       {
-        component: "ImageTextOneColumn",
+        component: "SectionIntro",
         props: {
           header: "Header 2",
           background_image: "bg_brain.jpg",
@@ -271,7 +248,7 @@ const slide_2 = {
         },
       },
       {
-        component: "ImageTextOneColumn",
+        component: "SectionIntro",
         props: {
           header: "Header 1",
           background_image: "bg_brain.jpg",
@@ -309,7 +286,7 @@ const slide_2 = {
         },
       },
       {
-        component: "ImageTextOneColumn",
+        component: "SectionIntro",
         props: {
           header: "Header 2",
           background_image: "bg_brain.jpg",
@@ -347,7 +324,7 @@ const slide_2 = {
         },
       },
       {
-        component: "ImageTextOneColumn",
+        component: "SectionIntro",
         props: {
           header: "Header 2",
           background_image: "bg_brain.jpg",
@@ -438,7 +415,7 @@ const slide_3 = {
         },
       },
       {
-        component: "ImageTextOneColumn",
+        component: "SectionIntro",
         props: {
           header: "Header 2",
           background_image: "bg_brain.jpg",

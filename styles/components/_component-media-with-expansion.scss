@@ -1,5 +1,7 @@
 .component-media-with-expansion {
   position: relative;
+  display: inline-block;
+  margin-bottom: math.div($icon-button-size, 2);
 
   .actions {
     position: absolute;
