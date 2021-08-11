@@ -2,7 +2,7 @@
   "id": "page2",
   "type": "collection",
   "page_props":{
-    "header": "Building on Emory's commitment to serve humanity",
+    "header": "Building on Emory's commitment to serve humanity 2",
     "button_scroll": "Scroll to explore",
     "img_src": "/collegue_arts.jpg"      
   },
@@ -14,7 +14,7 @@
   "components": [
 
   {
-    "component": "ImageTextOneColumn",
+    "component": "SectionIntro",
     "props": {
       "header": "Header 2",
       "background_image": "bg_brain.jpg",
@@ -44,15 +44,6 @@
           "description": "Accordion description"
         }
       ]
-    }
-  },
-  {
-    "component": "BottomNavigation",
-    "props": {
-      "previous_title": "Previous title",
-      "next_title": "Next title",
-      "previous_route": "/landing/carousel/second",
-      "next_route": "/landing/carousel/third"
     }
   }
  ]

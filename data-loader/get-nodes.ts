@@ -6,7 +6,7 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
-function findSlides(pages: Array<any>, nodes: Array<any>, actual: any) {
+function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:any, nextNode:any) {
     return pages.map(page => {
         const nodeFinded = nodes.find(node => page === node.id)
         return actual.id !== nodeFinded.id ? {
@@ -30,12 +30,15 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any) {
                     }
 
                 ].concat(nodeFinded.components)
+                .concat(
+                    prepareBottomMenu(lastNode, nextNode, nodes)
+                )
             }
         }
     })
 }
 
-function prepareMenu(nodes:Array<any>) {
+function prepareMenu(nodes: Array<any>) {
     const mainMenu = loadFilesAndParse('./data/menu', fs.readdirSync(path.join('./data/menu'))
         .filter(value => value.startsWith('main'))
         .filter(value => value.endsWith('.json')))
@@ -47,51 +50,63 @@ function prepareMenu(nodes:Array<any>) {
     return {
         component: "DynamicComponentMatcher",
         props: {
-          view: [
-              {
-                component: "MenuTop",
-                props: {
-                  title: "Schools and units",
-                  type:"schools-units",
-                  options_schools: schoolMenu[0].schools.map(value=> {
-                    const nodeFind = nodes.find(node => value.id ===node.id)
-                    return  {
-                        title: value.title ? value.title : nodeFind.page_props.title
-                    }
-                }),
-                  options_units: schoolMenu[0].units.map(value=> {
-                    const nodeFind = nodes.find(node => value.id ===node.id)
-                    return  {
-                        title: value.title ? value.title : nodeFind.page_props.title,
-                        link_to: nodeFind.path
-                    }
-                }),
+            view: [
+                {
+                    component: "MenuTop",
+                    props: {
+                        title: "Schools and units",
+                        type: "schools-units",
+                        options_schools: schoolMenu[0].schools.map(value => {
+                            const nodeFind = nodes.find(node => value.id === node.id)
+                            return {
+                                title: value.title ? value.title : nodeFind.page_props.title
+                            }
+                        }),
+                        options_units: schoolMenu[0].units.map(value => {
+                            const nodeFind = nodes.find(node => value.id === node.id)
+                            return {
+                                title: value.title ? value.title : nodeFind.page_props.title,
+                                link_to: nodeFind.path
+                            }
+                        }),
+                    },
                 },
-              },
-              {
-                component: "MenuTop",
-                props: {
-                  title: "Menu",
-                  options: mainMenu.flat().map(value=> {
-                      const nodeFind = nodes.find(node => value.id ===node.id)
-                      return  {
-                          title: value.title ? value.title : nodeFind.page_props.title,
-                          link_to: nodeFind.path
+                {
+                    component: "MenuTop",
+                    props: {
+                        title: "Menu",
+                        options: mainMenu.flat().map(value => {
+                            const nodeFind = nodes.find(node => value.id === node.id)
+                            return {
+                                title: value.title ? value.title : nodeFind.page_props.title,
+                                link_to: nodeFind.path
 
-                      }
-                  }),
-                },
-              }
-          ]
+                            }
+                        }),
+                    },
+                }
+            ]
         }
-    }   
+    }
 }
 
-function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus:any) {
+function prepareBottomMenu(lastNode:any, nextNode:any, nodes:Array<any>){
+    return                     {
+        "component": "BottomNavigation",
+        "props": {
+            "previous_title": lastNode ? lastNode?.page_props?.header : nodes[0]?.page_props?.header ,
+            "next_title": nextNode ? nextNode?.page_props?.header : nodes[0]?.page_props?.header,
+            "previous_route": lastNode ? lastNode.path : nodes[0],
+            "next_route": nextNode ? nextNode.path : nodes[0]
+        }
+    }
+}
+
+function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus: any) {
     return pages.map((page, i) => {
         const nodeFinded = nodes.find(node => page === node.id);
-        const prevPath = i === 0 ? null : nodes.find(node => node.id === pages[i - 1]).path;
-        const nextPath = i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]).path;
+        const prevNode = i === 0 ? null : nodes.find(node => node.id === pages[i - 1]);
+        const nextNode= i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
         return {
             path: nodeFinded.path,
             meta: Object.assign({}, nodeFinded.metatag),
@@ -100,7 +115,7 @@ function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus:
                 {
                     component: "CarouselNavigation",
                     props: {
-                        prev: prevPath,
+                        prev: prevNode ? prevNode.path : null,
                         actual: {
                             component: "DynamicComponentMatcher",
                             props: {
@@ -110,11 +125,11 @@ function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus:
                                         props: nodeFinded.page_props
                                     }
 
-                                ].concat(nodeFinded.components)
+                                ].concat(nodeFinded.components).concat(     prepareBottomMenu(prevNode, nextNode, nodes))
                             }
                         },
-                        next: nextPath,
-                        slides: findSlides(pages, nodes, nodeFinded)
+                        next: nextNode ? nextNode.path : null,
+                        slides: findSlides(pages, nodes, nodeFinded, prevNode, nextNode)
                     }
                 }
             ]
