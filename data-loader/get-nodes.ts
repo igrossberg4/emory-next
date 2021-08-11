@@ -56,13 +56,13 @@ function prepareMenu(nodes: Array<any>) {
                     props: {
                         title: "Schools and units",
                         type: "schools-units",
-                        options_schools: schoolMenu[0].schools.map(value => {
+                        options_schools: schoolMenu[0].schools.map((value:any) => {
                             const nodeFind = nodes.find(node => value.id === node.id)
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title
                             }
                         }),
-                        options_units: schoolMenu[0].units.map(value => {
+                        options_units: schoolMenu[0].units.map((value:any) => {
                             const nodeFind = nodes.find(node => value.id === node.id)
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,

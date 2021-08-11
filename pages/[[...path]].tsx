@@ -82,10 +82,12 @@ export default function Home(props: any) {
             key={router.asPath}
             // layout={true}
             transition={spring}
-            variants={variants}
+            // Need to type as any because not all variants have the same properties and brings errors on build.
+            variants={variants as any}
             initial={state.route !== "" && state.route === router.asPath ? "initialWithRoute" : false }
             animate={state.route !== "" && state.route === router.asPath ? "animateWithRoute" : "animate"}
-            exit={state.route !== "" ? "exit" : false }
+            // Need to type as any because types differs and brings errors on build.
+            exit={state.route !== "" ? "exit" as any : false }
           >
             <DynamicComponentMatcher
               key={state.route}
