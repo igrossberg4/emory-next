@@ -106,7 +106,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
             onTransitionEnd={(e) => {
               changeRoute(direction === 1 ? actual.next : actual.prev);
             }}
-            style={{ transform: `translateX(calc(${-page * 100}% - ${0}px))` }}
+            style={{ transform: `translateX(${-page * 100}vw)` }}
           >
             <AnimatePresence>
               {slides.map((value: any, i: number) => {
