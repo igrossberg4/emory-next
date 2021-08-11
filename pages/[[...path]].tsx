@@ -5,12 +5,9 @@ import Link from "next/link";
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
-import {
-  AnimatePresence,
-  motion,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Context } from "../state/Store";
-import {instantiateEmscriptenWasm} from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
+import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
 import { getNodes } from "../data-loader/get-nodes";
 
 export default function Home(props: any) {
@@ -51,8 +48,8 @@ export default function Home(props: any) {
       opacity: 0,
       zIndex: -1,
       position: "absolute",
-    }
-  }
+    },
+  };
 
   return (
     <Fragment>
@@ -60,20 +57,33 @@ export default function Home(props: any) {
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      {
-      props.skipTransitionAnimations !== true  ? (
+      {props.skipTransitionAnimations !== true ? (
         <AnimatePresence>
           <motion.div
             className="main-container"
-            id={state.route + ' --- ' + state.route}
+            id={state.route + " --- " + state.route}
             onAnimationComplete={() => {
               if (state.route !== "") {
                 dispatch({ type: "SET_NAV", payload: "" });
@@ -84,10 +94,18 @@ export default function Home(props: any) {
             transition={spring}
             // Need to type as any because not all variants have the same properties and brings errors on build.
             variants={variants as any}
-            initial={state.route !== "" && state.route === router.asPath ? "initialWithRoute" : false }
-            animate={state.route !== "" && state.route === router.asPath ? "animateWithRoute" : "animate"}
+            initial={
+              state.route !== "" && state.route === router.asPath
+                ? "initialWithRoute"
+                : false
+            }
+            animate={
+              state.route !== "" && state.route === router.asPath
+                ? "animateWithRoute"
+                : "animate"
+            }
             // Need to type as any because types differs and brings errors on build.
-            exit={state.route !== "" ? "exit" as any : false }
+            exit={state.route !== "" ? ("exit" as any) : false}
           >
             <DynamicComponentMatcher
               key={state.route}
@@ -147,17 +165,20 @@ const slide_1 = {
       {
         component: "SectionIntro",
         props: {
-          header: "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+          header:
+            "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
           background_image: "bg_brain.jpg",
 
           text: `<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p>
                  <p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>`,
           img_src: "/images/2036_brain_health_neurons_red.jpg",
           media_src: "/images/2036_brain_health_neurons.jpg",
-          media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+          media_alt:
+            "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
           media_type: "image",
-          media_header: 'Image title',
-          media_text: 'Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas.',
+          media_header: "Image title",
+          media_text:
+            "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas.",
         },
       },
 
@@ -247,7 +268,8 @@ const slide_2 = {
           imperdiet nec leo eu egestas.`,
           media_src: "/images/2036_brain_health_neurons_blue.jpg",
           media_type: "image",
-          media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+          media_alt:
+            "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
           image_expand_id: "image_expanded_test",
           button_close_text: "Close",
         },
@@ -284,7 +306,7 @@ const slide_2 = {
           tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin
           imperdiet nec leo eu egestas.`,
           image_expand_id: "image_expanded_test",
-          img_src:"/images/2036_cancer_cells_blue.jpg",
+          img_src: "/images/2036_cancer_cells_blue.jpg",
           button_close_text: "Close",
           media_src: "/video.mp4",
           media_type: "video",
@@ -325,7 +347,8 @@ const slide_2 = {
           button_close_text: "Close",
           media_src: "/images/2036_brain_health_smoke_blue.jpg",
           media_type: "image",
-          media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+          media_alt:
+            "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         },
       },
       {
@@ -364,7 +387,8 @@ const slide_2 = {
           button_close_text: "Close",
           media_src: "/images/2036_brain_health_smoke_blue_uncropped.jpg",
           media_type: "image",
-          media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+          media_alt:
+            "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         },
       },
 
@@ -415,7 +439,6 @@ const slide_3 = {
                 img_src: "/images/2036_data_science_code_yellow.jpg",
               },
             },
-           
           ],
         },
       },
@@ -455,7 +478,8 @@ const slide_3 = {
           button_close_text: "Close",
           media_src: "/images/2036_data_science_grid_yellow.jpg",
           media_type: "image",
-          media_alt: "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+          media_alt:
+            "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         },
       },
       {
@@ -472,11 +496,10 @@ const slide_3 = {
 };
 
 const slide_0 = {
-  
-    component: "DynamicComponentMatcher",
-    props:{
-      view:[
-        {
+  component: "DynamicComponentMatcher",
+  props: {
+    view: [
+      {
         component: "CircleContentWrapper",
         props: {
           view: [
@@ -488,13 +511,10 @@ const slide_0 = {
             },
           ],
         },
-      }
-      ]
-    }
-  }
-
-
-
+      },
+    ],
+  },
+};
 
 const carousel_0 = {
   path: "landing/carousel/zero",
@@ -531,7 +551,7 @@ const carousel_1 = {
         prev: null,
         actual: slide_1,
         next: "landing/carousel/second",
-        slides: [ slide_1, slide_2, slide_3],
+        slides: [slide_1, slide_2, slide_3],
       },
     },
   ],
@@ -602,26 +622,26 @@ export const pathJsonText = {
       skipTransitionAnimations: true,
       meta: { title: "Emory intro", description: "Some description for intro" },
       view: [
-{
-  component: "DynamicComponentMatcher",
-  props:{
-    view:[
-      {
-      component: "CircleContentWrapper",
-      props: {
-        view: [
-          {
-            component: "Video",
-            props: {
-              video_src: "video.mp4",
-            },
+        {
+          component: "DynamicComponentMatcher",
+          props: {
+            view: [
+              {
+                component: "CircleContentWrapper",
+                props: {
+                  view: [
+                    {
+                      component: "Video",
+                      props: {
+                        video_src: "video.mp4",
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
           },
-        ],
-      },
-    }
-    ]
-  }
-}
+        },
       ],
     },
     {
@@ -647,12 +667,31 @@ export const pathJsonText = {
   ],
 };
 
+const introComponent = {
+  path: "",
+  skipTransitionAnimations: true,
+  meta: { title: "Emory intro", description: "Some description for intro" },
+  view: [
+    {
+      component: "IntroPage",
+      props: {
+        video_src: "video.mp4",
+        text_play: "Begin\r\nyour\r\nexperience",
+        text_skip: "Skip video",
+        route_to: "/landing/carousel/first",
+      },
+    },
+  ],
+};
+
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
-  const findPath = getNodes().paths.find((value) => value.path === joinPath);
+  const findPath = getNodes()
+    .paths.concat(introComponent)
+    .find((value) => value.path === joinPath);
   return {
     props: findPath,
     // Next.js will attempt to re-generate the page:
@@ -673,9 +712,11 @@ export async function getStaticPaths() {
       params: { path: post.id.toString().split('/') },
     }))
   */
-  const paths = getNodes().paths.map((post) => ({
-    params: { path: post.path.toString().split("/") },
-  }));
+  const paths = getNodes()
+    .paths.concat(introComponent)
+    .map((post) => ({
+      params: { path: post.path.toString().split("/") },
+    }));
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
