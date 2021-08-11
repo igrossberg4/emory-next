@@ -9,7 +9,7 @@ import dynamic from 'next/dynamic'
 
 const IntroPage = dynamic(()=> import('./IntroPage'));
 const MenuTop = dynamic(()=> import('./MenuTop'));
-const ImageTextOneColumn = dynamic(()=> import('./ImageTextOneColumn'));
+const SectionIntro = dynamic(()=> import('./SectionIntro'));
 const LateralImageExpanded = dynamic(()=> import('./LateralImageExpanded'));
 const CarouselNavigation = dynamic(()=> import('./CarouselNavigation'));
 const CarouselItem = dynamic(()=> import('./CarouselItem'));
@@ -53,12 +53,12 @@ function DynamicComponentMatcher(props: any) {
                 ></DynamicComponentMatcher>
               </AnimateSharedLayout>
             );
-          case "ImageTextOneColumn":
+          case "SectionIntro":
             return (
-              <ImageTextOneColumn
+              <SectionIntro
                 key={i.toString()}
                 {...component.props}
-              ></ImageTextOneColumn>
+              ></SectionIntro>
             );
           case "LateralImageExpanded":
             return (

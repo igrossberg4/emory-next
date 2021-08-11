@@ -23,8 +23,11 @@ body {
 }
 
 .container {
+  width: 100%;
+  padding-right: var(--#{$variable-prefix}gutter-x, #{$container-padding-x});
+  padding-left: var(--#{$variable-prefix}gutter-x, #{$container-padding-x});
   margin: 0 auto;
-  max-width: map-get($container-max-widths, 'xxl');
+  max-width: map-get($container-max-widths, 'xl');
 }
 .container-fit {
   height: 100%;
@@ -36,18 +39,13 @@ body {
 }
 
 .row {
-  display: flex;
-  flex-direction: column;
-
-  @include media-breakpoint-up(md) {
-    flex-direction: row;
-    justify-content: center;
+  @include make-row();
+  > * {
+    @include make-col-ready();
   }
 }
 
-.column {
-  position: relative;
-}
+@include make-grid-columns();
 
 .content {
   max-width: 982px;

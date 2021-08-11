@@ -1,5 +1,10 @@
 // Variables
 
+// Prefix for :root CSS variables
+$variable-prefix: bs- !default;
+
+
+
 $spacer: 1rem !default;
 $spacers: (
         0: 0,
@@ -25,8 +30,8 @@ $container-max-widths: (
         sm: 576px,
         md: 778px,
         lg: 982px,
-        //xl: 1140px,
-        xxl: 1440px
+        xl: 1010px,
+        //xxl: 1440px
 ) !default;
 
 $font-family-sans-serif: 'Pangram', sans-serif !default;
@@ -64,9 +69,16 @@ $h3-font-size--desktop: $font-size-base * 2.889; // 52px
 //$h5-font-size: $font-size-base * 1.25;
 //$h6-font-size: $font-size-base !default;
 //
-//$grid-columns: 12 !default;
-//$grid-gutter-width: 1.5rem !default;
-//$grid-row-columns: 6 !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 32px !default;
+$grid-row-columns: 6 !default;
+$gutters: $spacers !default;
+// Container padding
+$container-padding-x: $grid-gutter-width * .5 !default;// Container padding
 
 
 // Colors
@@ -95,3 +107,6 @@ $default-section-padding: 30px;
 
 $round-image-size: 373px;
 $round-image-size-big: 580px;
+
+$icon-button-size: 64px;
+$icon-button-size--small: 48px;

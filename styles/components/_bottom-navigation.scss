@@ -1,16 +1,15 @@
 // Bottom navigation.
 .component-bottom-navigation {
-  .column {
-    text-align: center;
-    padding: $default-separation;
+  .col-md-6 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: $default-separation;
+    text-align: center;
 
     @include media-breakpoint-up(md) {
-      width: 50%;
-
       &:last-child {
         &:before {
           content: '';

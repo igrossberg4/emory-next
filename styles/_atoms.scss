@@ -26,21 +26,22 @@ a {
 }
 .icon-button {
   @extend %rounded-with-shadow;
-  width: 64px;
-  height: 64px;
+  width: $icon-button-size;
+  height: $icon-button-size;
+
   svg {
     width: 30px;
     height: auto;
   }
 
   &.small {
-    width: 48px;
-    height: 48px;
+    width: $icon-button-size--small;
+    height: $icon-button-size--small;
+
     svg {
       width: 20px;
     }
   }
-
 }
 
 .round-wp{

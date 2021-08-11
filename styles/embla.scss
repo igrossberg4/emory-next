@@ -1,6 +1,8 @@
+@import "_variables";
+
 .embla {
     position: relative;
-    background-color: #f7f7f7;
+    background-color: $body-bg;
     margin-left: auto;
     height: 100vh;
     margin-right: auto;
