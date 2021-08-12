@@ -9,50 +9,55 @@ import MenuTop from "./MenuTop";
 
 export default function SchoolsMenu(props: any) {
   const [state, dispatch] = useContext(Context) as any;
-  console.log(props);
   return (
-    <div style={{ position: "fixed", top: 0, zIndex: 10, left: 0 }}>
+    <div style={{ position: "fixed", top: 0, zIndex: 100, left: 0 }}>
       <MenuTop
-        menu_select={      <Menu>
-          <MenuButton
-            as={Button}
-            leftIcon={<IconButton icon="menu" />}
-          >
-            {props.title}
-          </MenuButton>
-
-        
-        </Menu>}
+        menu_select={
+          <Menu>
+            <MenuButton as={Button} rightIcon={<IconButton icon="chevron-down" />}>
+              {props.title}
+            </MenuButton>
+          </Menu>}
         menu_options=
           {
             <Fragment>
-              {props.options_schools.map((option: any) => (
-              <div
-                key={option.title}
-                onClick={() => {
-                  dispatch({ type: "SET_NAV", payload: props.link_to });
-                }}
-              >
-                <Link href={option.link_to}>{option.title}</Link>
+              <div className="menu-schools">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="menu-schools__col col-md-6">
+                      <h2 className="header-h2">Schools</h2>
+                      {props.options_schools.map((option: any) => (
+                      <div
+                        className="menu-schools__link text-label"
+                        key={option.title}
+                        onClick={() => {
+                          dispatch({ type: "SET_NAV", payload: props.link_to });
+                        }}
+                      >
+                        <Link href={option.link_to}>{option.title}</Link>
+                      </div>
+                      ))}
+                    </div>
+                    <div className="menu-schools__col col-md-6">
+                      <h2 className="header-h2">Units</h2>
+                      {props.options_units.map((option: any) => (
+                        <div
+                          className="menu-schools__link text-label"
+                          key={option.title}
+                          onClick={() => {
+                            dispatch({ type: "SET_NAV", payload: props.link_to });
+                          }}
+                        >
+                          <Link href={option.link_to}>{option.title}</Link>
+                        </div>
+                      ))}
+                  </div>
+                </div>
               </div>
-            ))}
-             {props.options_units.map((option: any) => (
-              <div
-                key={option.title}
-                onClick={() => {
-                  dispatch({ type: "SET_NAV", payload: props.link_to });
-                }}
-              >
-                <Link href={option.link_to}>{option.title}</Link>
-              </div>
-            ))}
+            </div>
             </Fragment>
-
           }
-        
-
       >
-        
       </MenuTop>
     </div>
   );

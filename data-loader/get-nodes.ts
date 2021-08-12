@@ -54,7 +54,7 @@ function prepareMenu(nodes: Array<any>) {
                 {
                     component: "SchoolsMenu",
                     props: {
-                        title: "Schools and units",
+                        title: "Select school",
                         options_schools: schoolMenu[0].schools.map((value:any) => {
                             const nodeFind = nodes.find(node => value.id === node.id)
                             return {

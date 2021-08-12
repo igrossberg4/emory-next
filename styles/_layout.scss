@@ -29,12 +29,18 @@ body {
   margin: 0 auto;
   max-width: map-get($container-max-widths, 'xl');
 }
+
 .container-fit {
   height: 100%;
   width: 100%;
 }
+
 .container-force-screen-fit-y {
   height: 100vh;
+  width: 100%;
+}
+
+.container-fluid {
   width: 100%;
 }
 

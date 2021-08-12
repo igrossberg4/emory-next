@@ -1,4 +1,23 @@
 {
-  "schools": [{ "title": "petero", "id": "page2" }],
-  "units": [{ "title": "petero", "id": "page2" }]
+  "schools": [
+    { "title": "Goizueta Business School", "id": "page2" },
+    { "title": "EMORY COLLEGE OF ARTS AND SCIENCES", "id": "page2" },
+    { "title": "LANEY GRADUATE SCHOOL", "id": "page2" },
+    { "title": "School of law", "id": "page2" },
+    { "title": "SCHOOL OF MEDICINE", "id": "page2" },
+    { "title": "Nell Hodgson woodruff school of nursing", "id": "page2" },
+    { "title": "OXFORD College", "id": "page2" },
+    { "title": "ROLLINS SCHOOL OF PUBLIC HEALTH", "id": "page2" },
+    { "title": "CANDLER SCHOOL OF THEOLOGY", "id": "page2" }
+  ],
+  "units": [
+    { "title": "CAMPUS LIFE", "id": "page2" },
+    { "title": "CARLOS MUSEUM", "id": "page2" },
+    { "title": "CENTER FOR ETHICS", "id": "page2" },
+    { "title": "GLOBAL HEALTH INSTITUTE", "id": "page2" },
+    { "title": "EMORY HEALTHCARE", "id": "page2" },
+    { "title": "UNIVERSITY LIBRARIES", "id": "page2" },
+    { "title": "YERKES NATIONAL PRIMATE RESEARCH CENTER", "id": "page2" },
+    { "title": "WINSHIP CANCER INSTITUTE", "id": "page2" }
+  ]
 }

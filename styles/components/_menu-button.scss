@@ -1,0 +1,13 @@
+.chakra-menu__menu-button {
+  @extend %text-label;
+  text-transform: uppercase;
+
+  .chakra-button__icon {
+    .icon-button {
+      background-color: transparent;
+      box-shadow: none;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

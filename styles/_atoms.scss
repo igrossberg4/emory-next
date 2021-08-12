@@ -69,6 +69,24 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding: $default-separation;
+  overflow-y: auto;
+}
+
+.close-popup {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 23px;
+  right: 37px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    outline: 1px solid red;
+    margin-left: $grid-gutter-width / 2;
+  }
 }
