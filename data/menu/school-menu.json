@@ -1,23 +1,23 @@
 {
   "schools": [
-    { "title": "Goizueta Business School", "id": "page2" },
-    { "title": "EMORY COLLEGE OF ARTS AND SCIENCES", "id": "page2" },
-    { "title": "LANEY GRADUATE SCHOOL", "id": "page2" },
-    { "title": "School of law", "id": "page2" },
-    { "title": "SCHOOL OF MEDICINE", "id": "page2" },
-    { "title": "Nell Hodgson woodruff school of nursing", "id": "page2" },
-    { "title": "OXFORD College", "id": "page2" },
-    { "title": "ROLLINS SCHOOL OF PUBLIC HEALTH", "id": "page2" },
-    { "title": "CANDLER SCHOOL OF THEOLOGY", "id": "page2" }
+    { "title": "Goizueta Business School", "id": "home-2036" },
+    { "title": "EMORY COLLEGE OF ARTS AND SCIENCES", "id": "home-2036" },
+    { "title": "LANEY GRADUATE SCHOOL", "id": "home-2036" },
+    { "title": "School of law", "id": "home-2036" },
+    { "title": "SCHOOL OF MEDICINE", "id": "home-2036" },
+    { "title": "Nell Hodgson woodruff school of nursing", "id": "home-2036" },
+    { "title": "OXFORD College", "id": "home-2036" },
+    { "title": "ROLLINS SCHOOL OF PUBLIC HEALTH", "id": "home-2036" },
+    { "title": "CANDLER SCHOOL OF THEOLOGY", "id": "home-2036" }
   ],
   "units": [
-    { "title": "CAMPUS LIFE", "id": "page2" },
-    { "title": "CARLOS MUSEUM", "id": "page2" },
-    { "title": "CENTER FOR ETHICS", "id": "page2" },
-    { "title": "GLOBAL HEALTH INSTITUTE", "id": "page2" },
-    { "title": "EMORY HEALTHCARE", "id": "page2" },
-    { "title": "UNIVERSITY LIBRARIES", "id": "page2" },
-    { "title": "YERKES NATIONAL PRIMATE RESEARCH CENTER", "id": "page2" },
-    { "title": "WINSHIP CANCER INSTITUTE", "id": "page2" }
+    { "title": "CAMPUS LIFE", "id": "home-2036" },
+    { "title": "CARLOS MUSEUM", "id": "home-2036" },
+    { "title": "CENTER FOR ETHICS", "id": "home-2036" },
+    { "title": "GLOBAL HEALTH INSTITUTE", "id": "home-2036" },
+    { "title": "EMORY HEALTHCARE", "id": "home-2036" },
+    { "title": "UNIVERSITY LIBRARIES", "id": "home-2036" },
+    { "title": "YERKES NATIONAL PRIMATE RESEARCH CENTER", "id": "home-2036" },
+    { "title": "WINSHIP CANCER INSTITUTE", "id": "home-2036" }
   ]
 }

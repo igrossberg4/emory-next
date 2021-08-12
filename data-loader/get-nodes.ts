@@ -38,7 +38,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
     })
 }
 
-function prepareMenu(nodes: Array<any>) {
+function prepareMenu(nodes: Array<any>, baseNode:any) {
     const mainMenu = loadFilesAndParse('./data/menu', fs.readdirSync(path.join('./data/menu'))
         .filter(value => value.startsWith('main'))
         .filter(value => value.endsWith('.json')))
@@ -56,17 +56,19 @@ function prepareMenu(nodes: Array<any>) {
                     props: {
                         title: "Select school",
                         options_schools: schoolMenu[0].schools.map((value:any) => {
-                            const nodeFind = nodes.find(node => value.id === node.id)
+                            const nodeFind = nodes.find(node => value.id === node.id);
+                            const link = baseNode.id === nodeFind.id ? `${baseNode.path}` :  `${baseNode.path}/${nodeFind.path}`
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: '/' + nodeFind.path
+                                link_to: '/' + link
                             }
                         }),
                         options_units: schoolMenu[0].units.map((value:any) => {
-                            const nodeFind = nodes.find(node => value.id === node.id)
+                            const nodeFind = nodes.find(node => value.id === node.id);
+                            const link = baseNode.id === nodeFind.id ? `${baseNode.path}` :  `${baseNode.path}/${nodeFind.path}`
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: '/' + nodeFind.path
+                                link_to: '/' + link
                             }
                         }),
                     },
@@ -77,9 +79,11 @@ function prepareMenu(nodes: Array<any>) {
                         title: "Menu",
                         options: mainMenu[0].links.map(link => {
                             const nodeFind = nodes.find(node =>  link.id  === node.id)
+                            const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` :  `${baseNode.path}/${nodeFind.path}`
+
                             return {
                                 title: link.title ? link.title : nodeFind.page_props.title,
-                                link_to: '/' + nodeFind.path,
+                                link_to: '/' + linkFound
                             }
                         }),
                         social: mainMenu[0].social
@@ -107,13 +111,16 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
     }
 }
 
-function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:any}, nodes: Array<any>, menus: any) {
+function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:any}, nodes: Array<any>) {
     const pages = pages_list.list;
+    console.log(pages_list)
     const nodesForCollection = pages.map(page => nodes.find(node=> node.id === page));
     return pages.map((page, i) => {
         const nodeFinded = nodes.find(node => page === node.id);
         const prevNode = i === 0 ? null : nodes.find(node => node.id === pages[i - 1]);
         const nextNode = i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
+        const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
+
         console.log("NODE BASE 1", pages_list.nodeBase)
         return {
             path: pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path}/${nodeFinded.path}`,
@@ -153,7 +160,7 @@ export function getNodes() {
         .filter(value => value.endsWith('.json')))
         ;
     //console.log(JSON.stringify(generatePageWithComponents(pages, nodes)));
-    const menus = prepareMenu(nodes);
     const pages = nodes.map(node => ({list:node.list, nodeBase:node})).filter(value=> value.list !== undefined);
-    return { paths: pages.map(pages_list=> generatePageWithComponents(pages_list, nodes, menus)).flat() };
+    console.log(pages);
+    return { paths: pages.map(pages_list=> generatePageWithComponents(pages_list, nodes)).flat() };
 }
