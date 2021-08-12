@@ -33,7 +33,8 @@ export default function Home(props: any) {
   const variants = {
     initialWithRoute: {
       // Load new route in overlay
-      y: scroll < innerHeight ? scroll : innerHeight,
+      //y: scroll < innerHeight ? scroll : innerHeight,
+      y:innerHeight,
     },
     animateWithRoute: {
       // End transition overlay (new section)
@@ -50,7 +51,7 @@ export default function Home(props: any) {
       position: "absolute",
     },
   };
-
+  console.log(state.route, router.asPath);
   return (
     <Fragment>
       <Head>
