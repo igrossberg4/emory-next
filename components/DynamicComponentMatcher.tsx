@@ -18,7 +18,8 @@ const AccordionComponent = dynamic(()=> import('./AccordionComponent'));
 const Video = dynamic(()=> import('./Video'));
 const CircleContentWrapper = dynamic(()=> import('./CircleContentWrapper'));
 const MediaWithExpantion = dynamic(()=> import('./MediaWithExpantion'));
-
+const MainMenu = dynamic(()=> import('./MainMenu'));
+const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -119,6 +120,11 @@ function DynamicComponentMatcher(props: any) {
                 key={i.toString()}>
                 </MediaWithExpantion>
               );
+
+          case 'MainMenu':
+            return <MainMenu {...component.props} key={i.toString()}></MainMenu>;
+          case 'SchoolsMenu':
+            return <SchoolsMenu {...component.props} key={i.toString()}></SchoolsMenu>
           default:
             return "";
         }

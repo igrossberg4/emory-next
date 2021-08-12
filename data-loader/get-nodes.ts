@@ -52,14 +52,14 @@ function prepareMenu(nodes: Array<any>) {
         props: {
             view: [
                 {
-                    component: "MenuTop",
+                    component: "SchoolsMenu",
                     props: {
                         title: "Schools and units",
-                        type: "schools-units",
                         options_schools: schoolMenu[0].schools.map((value:any) => {
                             const nodeFind = nodes.find(node => value.id === node.id)
                             return {
-                                title: value.title ? value.title : nodeFind.page_props.title
+                                title: value.title ? value.title : nodeFind.page_props.title,
+                                link_to: nodeFind.path
                             }
                         }),
                         options_units: schoolMenu[0].units.map((value:any) => {
@@ -72,17 +72,17 @@ function prepareMenu(nodes: Array<any>) {
                     },
                 },
                 {
-                    component: "MenuTop",
+                    component: "MainMenu",
                     props: {
                         title: "Menu",
-                        options: mainMenu.flat().map(value => {
-                            const nodeFind = nodes.find(node => value.id === node.id)
+                        options: mainMenu[0].links.map(link => {
+                            const nodeFind = nodes.find(node =>  link.id  === node.id)
                             return {
-                                title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: nodeFind.path
-
+                                title: link.title ? link.title : nodeFind.page_props.title,
+                                link_to: nodeFind.path,
                             }
                         }),
+                        social: mainMenu[0].social
                     },
                 }
             ]

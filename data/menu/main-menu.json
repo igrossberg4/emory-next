@@ -1,1 +1,21 @@
-[{ "title": "petero 2", "id": "page2" }]
+{
+  "links": [
+    {
+      "title": "ABOUT THE CAMPAIGN",
+      "id": "page1"
+    },
+    {
+      "title": "THEMES",
+      "id": "page1"
+    },
+    {
+      "title": "STUDENTS",
+      "id": "page1"
+    },
+    {
+      "title": "FACULTY",
+      "id": "page1"
+    }
+  ],
+  "social": [{}, {}]
+}
