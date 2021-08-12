@@ -8,7 +8,6 @@ import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import dynamic from 'next/dynamic'
 
 const IntroPage = dynamic(()=> import('./IntroPage'));
-const MenuTop = dynamic(()=> import('./MenuTop'));
 const SectionIntro = dynamic(()=> import('./SectionIntro'));
 const LateralImageExpanded = dynamic(()=> import('./LateralImageExpanded'));
 const CarouselNavigation = dynamic(()=> import('./CarouselNavigation'));

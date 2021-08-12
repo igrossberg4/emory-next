@@ -5,20 +5,20 @@ import { Context } from "../state/Store";
 import Link from "next/link";
 import IconButton from "./IconButton";
 import { motion } from "framer-motion";
-import MenuTop from "./MenuTop";
+import Overlay from "./Overlay";
 
 export default function SchoolsMenu(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   return (
     <div style={{ position: "fixed", top: 0, zIndex: 100, left: 0 }}>
-      <MenuTop
-        menu_select={
+      <Overlay
+        expand_action={
           <Menu>
             <MenuButton as={Button} rightIcon={<IconButton icon="chevron-down" />}>
               {props.title}
             </MenuButton>
           </Menu>}
-        menu_options=
+        expanded_content=
           {
             <Fragment>
               <div className="menu-schools">
@@ -58,7 +58,7 @@ export default function SchoolsMenu(props: any) {
             </Fragment>
           }
       >
-      </MenuTop>
+      </Overlay>
     </div>
   );
 }
