@@ -1,0 +1,16 @@
+.menu-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .menu-main__link {
+    margin-bottom: $grid-gutter-width * 2;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

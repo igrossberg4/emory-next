@@ -11,7 +11,7 @@ export default function MainMenu(props: any) {
   const [state, dispatch] = useContext(Context) as any;
 
   return (
-    <div style={{ position: "fixed", top: 0, zIndex: 10, right: 0 }}>
+    <div style={{ position: "fixed", top: 0, zIndex: 100, right: 0 }}>
       <Overlay
         expand_action={
           <Menu>
@@ -22,16 +22,19 @@ export default function MainMenu(props: any) {
         }
         expanded_content={
           <Fragment>
-            {props.options.map((option: any) => (
-              <div
-                key={option.title}
-                onClick={() => {
-                  dispatch({ type: "SET_NAV", payload: option.link_to });
-                }}
-              >
-                <Link href={option.link_to}>{option.title}</Link>
-              </div>
-            ))}
+            <div className="menu-main">
+              {props.options.map((option: any) => (
+                <div
+                  className="menu-main__link header-h2"
+                  key={option.title}
+                  onClick={() => {
+                    dispatch({ type: "SET_NAV", payload: option.link_to });
+                  }}
+                >
+                  <Link href={option.link_to}>{option.title}</Link>
+                </div>
+              ))}
+            </div>
           </Fragment>
         }
       ></Overlay>
