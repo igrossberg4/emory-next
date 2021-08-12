@@ -100,7 +100,30 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
   return (
     <div>
       <div className="embla" key="id-test">
-        <div className="embla__viewport" key={"viewPort"}>
+      <AnimatePresence>
+        <div  
+
+        className="embla__viewport" key={"viewPort"}>
+          <motion.div
+                  
+        drag="x"
+        layout
+        dragPropagation
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={1}
+        transition={{
+          x: { type: "spring", stiffness: 300, damping: 30 },
+        }}
+
+        onDrag={(e, { offset, velocity }) => {
+          const swipe = swipePower(offset.x, velocity.x);
+          if (swipe < -swipeConfidenceThreshold) {
+            scrollNext();
+          } else if (swipe > swipeConfidenceThreshold) {
+            scrollPrev();
+          }
+        }}
+          >
           <motion.div
             className="embla__container"
             onTransitionEnd={(e) => {
@@ -108,7 +131,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
             }}
             style={{ transform: `translateX(${-page * 100}vw)` }}
           >
-            <AnimatePresence>
+
               {slides.map((value: any, i: number) => {
                 //value.props.view[0].props.view[0].props.is_selected = i === page;
                 return (
@@ -117,24 +140,8 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                   key={MD5(value)}
                   //style={{transform:`translateX(${page === i ? 0 :(page > i ? 100 : -100)}px)`}}
                   >
-                  <motion.div
-                    drag="x"
-                    layout
-                    dragPropagation
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={1}
-                    transition={{
-                      x: { type: "spring", stiffness: 300, damping: 30 },
-                    }}
+                  <div
 
-                    onDrag={(e, { offset, velocity }) => {
-                      const swipe = swipePower(offset.x, velocity.x);
-                      if (swipe < -swipeConfidenceThreshold) {
-                        scrollNext();
-                      } else if (swipe > swipeConfidenceThreshold) {
-                        scrollPrev();
-                      }
-                    }}
                     //draggable={true}
                     className="embla__slide"
                   >
@@ -149,13 +156,14 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                         ]}
                       ></DynamicComponentMatcher>
                     </div>
-                  </motion.div>
+                  </div>
                   </div>
                 );
               })}
-            </AnimatePresence>
           </motion.div>
+        </motion.div>
         </div>
+        </AnimatePresence>
 
         <PrevButton
           href={actual.prev}
