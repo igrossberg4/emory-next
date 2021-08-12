@@ -17,7 +17,7 @@ export default function Overlay(props: any) {
       }}
     >
       {props.expand_action}
-      
+
     </div>
     {expanded ? (
       <motion.div
@@ -32,7 +32,6 @@ export default function Overlay(props: any) {
         <button
           className="close-popup text-label"
           onClick={() => {
-            console.log("EOOO")
             setExpanded(false);
           }}
         >

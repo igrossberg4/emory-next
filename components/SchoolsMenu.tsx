@@ -10,7 +10,7 @@ import Overlay from "./Overlay";
 export default function SchoolsMenu(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   return (
-    <div style={{ position: "fixed", top: 0, zIndex: 100, left: 0 }}>
+    <div className="header-menu header-menu--schools">
       <Overlay
         expand_action={
           <Menu>

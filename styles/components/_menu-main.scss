@@ -1,3 +1,12 @@
+.header-menu--main {
+  .chakra-menu__menu-button {
+    position: fixed;
+    top: 23px;
+    right: 37px;
+    z-index: 1;
+  }
+}
+
 .menu-main {
   display: flex;
   flex-direction: column;

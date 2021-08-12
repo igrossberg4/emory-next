@@ -66,13 +66,17 @@ addCollection({
 });
 
 function IconButton(props: any) {
-    return props.link ? 
-      <Link href={props.link}>
+    return props.link ?
+        props.target ?
+        <a href={props.link} className="icon-button" target={props.target} title={props.title}>
+            <Icon icon={'em:' + props.icon} />
+        </a>:
+        <Link href={props.link}>
         <a className="icon-button">
-          <Icon icon={'em:' + props.icon} />
+            <Icon icon={'em:' + props.icon} />
         </a>
-      </Link> : <button className="icon-button">
-          <Icon icon={'em:' + props.icon} />
+        </Link> : <button className="icon-button">
+            <Icon icon={'em:' + props.icon} />
         </button>
 }
 
