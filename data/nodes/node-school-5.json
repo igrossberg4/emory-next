@@ -1,19 +1,17 @@
 {
-  "id": "page2",
+  "id": "page5",
   "type": "collection",
   "page_props":{
-    "header": "Building on Emory's commitment to serve humanity 2",
+    "header": "Building on Emory's commitment to serve humanity 5",
     "button_scroll": "Scroll to explore",
     "img_src": "/images/2036_cancer_cells_blue.jpg"     
   },
-  "path": "page-path2",
+  "path": "article-1",
   "metatag": {
     "title": "Emory carousel",
     "description": "Some description for carousel page",
     "image":""
   },
-  "list": ["page2","page5"],
-
   "components": [
 
   {
@@ -49,6 +47,5 @@
       ]
     }
   }
-  
  ]
 }
