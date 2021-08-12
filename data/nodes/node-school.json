@@ -6,11 +6,13 @@
     "button_scroll": "Scroll to explore",
     "img_src": "/images/2036_cancer_cells_blue.jpg"
   },
-  "path": "page-path",
+  "path": "home",
   "metatag": {
     "title": "Emory carousel",
-    "description": "Some description for carousel page"
+    "description": "Some description for carousel page",
+    "image":""
   },
+  "list": ["page1","page2", "page3", "page4"],
   "components": [
     {
       "component": "SectionIntro",

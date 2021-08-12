@@ -6,7 +6,7 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
-function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any) {
+function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase:any) {
     return pages.map(page => {
         const nodeFinded = nodes.find(node => page === node.id)
         return actual.id !== nodeFinded.id ? {
@@ -31,7 +31,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
 
                 ].concat(nodeFinded.components)
                     .concat(
-                        prepareBottomMenu(lastNode, nextNode, nodes)
+                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase)
                     )
             }
         }
@@ -90,32 +90,37 @@ function prepareMenu(nodes: Array<any>) {
     }
 }
 
-function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>) {
+function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode:any) {
+    const basePath = baseNode ? `${baseNode.path}/` : '';
+    const previous_route = lastNode ? `${basePath}${lastNode.path}` : `${basePath}${nodes[0].path}`;
+    const next_route = nextNode ? `${basePath}${nextNode.path}` : `${basePath}${nodes[0].path}`;
     return {
         "component": "BottomNavigation",
         "props": {
             "previous_title": lastNode ? lastNode?.page_props?.header : nodes[0]?.page_props?.header,
             "next_title": nextNode ? nextNode?.page_props?.header : nodes[0]?.page_props?.header,
-            "previous_route": lastNode ? lastNode.path : nodes[0].path,
-            "next_route": nextNode ? nextNode.path : nodes[0].path
+            "previous_route": previous_route,
+            "next_route": next_route
         }
     }
 }
 
-function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus: any) {
+function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:any}, nodes: Array<any>, menus: any) {
+    const pages = pages_list.list;
     return pages.map((page, i) => {
         const nodeFinded = nodes.find(node => page === node.id);
         const prevNode = i === 0 ? null : nodes.find(node => node.id === pages[i - 1]);
         const nextNode = i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
+        console.log("NODE BASE 1", pages_list.nodeBase)
         return {
-            path: nodeFinded.path,
+            path: `${pages_list.nodeBase.path}/${nodeFinded.path}`,
             meta: Object.assign({}, nodeFinded.metatag),
             view: [
                 menus,
                 {
                     component: "CarouselNavigation",
                     props: {
-                        prev: prevNode ? prevNode.path : null,
+                        prev: prevNode ? `${pages_list.nodeBase.path}/${prevNode.path}` : null,
                         actual: {
                             component: "DynamicComponentMatcher",
                             props: {
@@ -125,11 +130,13 @@ function generatePageWithComponents(pages: Array<any>, nodes: Array<any>, menus:
                                         props: nodeFinded.page_props
                                     }
 
-                                ].concat(nodeFinded.components).concat(prepareBottomMenu(prevNode, nextNode, nodes))
+                                ].concat(nodeFinded.components).concat(
+                                    prepareBottomMenu(prevNode, nextNode, nodes, pages_list.nodeBase)
+                                    )
                             }
                         },
-                        next: nextNode ? nextNode.path : null,
-                        slides: findSlides(pages, nodes, nodeFinded, prevNode, nextNode)
+                        next: nextNode ? `${pages_list.nodeBase.path}/${nextNode.path}` : null,
+                        slides: findSlides(pages, nodes, nodeFinded, prevNode, nextNode, pages_list.nodeBase)
                     }
                 }
             ]
@@ -142,9 +149,8 @@ export function getNodes() {
     const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
         .filter(value => value.endsWith('.json')))
         ;
-    const pages = loadFilesAndParse('./data/list', fs.readdirSync(path.join('./data/list'))
-        .filter(value => value.endsWith('.json')));
     //console.log(JSON.stringify(generatePageWithComponents(pages, nodes)));
     const menus = prepareMenu(nodes);
-    return { paths: generatePageWithComponents(pages, nodes, menus) };
+    const pages = nodes.map(node => ({list:node.list, nodeBase:node})).filter(value=> value.list !== undefined);
+    return { paths: pages.map(pages_list=> generatePageWithComponents(pages_list, nodes, menus)).flat() };
 }
