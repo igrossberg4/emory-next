@@ -59,14 +59,14 @@ function prepareMenu(nodes: Array<any>) {
                             const nodeFind = nodes.find(node => value.id === node.id)
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: nodeFind.path
+                                link_to: '/' + nodeFind.path
                             }
                         }),
                         options_units: schoolMenu[0].units.map((value:any) => {
                             const nodeFind = nodes.find(node => value.id === node.id)
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: nodeFind.path
+                                link_to: '/' + nodeFind.path
                             }
                         }),
                     },
@@ -79,7 +79,7 @@ function prepareMenu(nodes: Array<any>) {
                             const nodeFind = nodes.find(node =>  link.id  === node.id)
                             return {
                                 title: link.title ? link.title : nodeFind.page_props.title,
-                                link_to: nodeFind.path,
+                                link_to: '/' + nodeFind.path,
                             }
                         }),
                         social: mainMenu[0].social
@@ -101,8 +101,8 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
         "props": {
             "previous_title": prevNodeSelect?.page_props.header,
             "next_title": nextNodeSelect?.page_props?.header,
-            "previous_route": previous_route,
-            "next_route": next_route
+            "previous_route": '/'+ previous_route,
+            "next_route": '/' + next_route
         }
     }
 }
