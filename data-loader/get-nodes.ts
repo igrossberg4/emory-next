@@ -77,7 +77,7 @@ function prepareMenu(nodes: Array<any>, baseNode:any) {
                     component: "MainMenu",
                     props: {
                         title: "Menu",
-                        options: mainMenu[0].links.map(link => {
+                        options: mainMenu[0].links.map((link:any) => {
                             const nodeFind = nodes.find(node =>  link.id  === node.id)
                             const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` :  `${baseNode.path}/${nodeFind.path}`
 

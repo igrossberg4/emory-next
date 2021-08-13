@@ -28,9 +28,6 @@ function DynamicComponentMatcher(props: any) {
           case "IntroPage":
 
             return <IntroPage key={i.toString()} {...component.props}></IntroPage>;
-            
-          case "MenuTop":
-            return <MenuTop key={i.toString()} {...component.props}></MenuTop>;
           case "HeaderTop":
             return (
               <HeaderTop key={i.toString()} {...component.props}></HeaderTop>

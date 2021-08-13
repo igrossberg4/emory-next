@@ -148,7 +148,7 @@ const introComponent = {
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
   const findPath = getNodes()
-    .paths.concat(introComponent)
+    .paths.concat(introComponent as any)
     .find((value) => value.path === joinPath);
   return {
     props: findPath,
@@ -171,7 +171,7 @@ export async function getStaticPaths() {
     }))
   */
   const paths = getNodes()
-    .paths.concat(introComponent)
+    .paths.concat(introComponent as any)
     .map((post) => ({
       params: { path: post.path.toString().split("/") },
     }));
