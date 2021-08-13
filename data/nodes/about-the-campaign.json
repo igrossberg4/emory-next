@@ -1,39 +1,32 @@
 {
-  "id": "home-2036",
+  "id": "about-the-campaign",
   "type": "collection",
   "page_props": {
-    "header": "Building on Emory's commitment to serve humanity",
+    "header": "ABOUT THE CAMPAIGN",
     "button_scroll": "Scroll to explore",
     "img_src": "/images/2036_cancer_cells_red_uncropped.jpg"
   },
-  "path": "home",
+  "path": "about-the-campaign",
   "metatag": {
-    "title": "Emory carousel",
+    "title": "ABOUT THE CAMPAIGN",
     "description": "Some description for carousel page",
-    "image":""
+    "image": ""
   },
-  "list": ["home-2036", "emory-college-of-arts-and-sciences", "data-science", "goizueta-business-school","laney-graduate-school","school-of-law","school-of-medicine","nell-hodgson-woodruff-school-of-nursing","oxford-college","rollins-school-of-public-health","candler-school-of-theology","campus-life","carlos-museum","center-for-ethics","global-health-institute","emory-healthcare","university-libraries","yerkes-national-primate-research-center","winship-cancer-institute","about-the-campaign","themes","students","faculty"],
   "components": [
-
     {
       "component": "SectionIntro",
       "props": {
-        "header":
-          "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
         "background_image": "bg_brain.jpg",
-
         "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
         "img_src": "/images/2036_brain_health_neurons_red.jpg",
         "media_src": "/images/2036_brain_health_neurons.jpg",
-        "media_alt":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
         "media_header": "Image title",
-        "media_text":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
       }
     },
-
     {
       "component": "AccordionComponent",
       "props": {

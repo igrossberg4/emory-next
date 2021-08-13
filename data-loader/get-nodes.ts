@@ -113,7 +113,6 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
 
 function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:any}, nodes: Array<any>) {
     const pages = pages_list.list;
-    console.log(pages_list)
     const nodesForCollection = pages.map(page => nodes.find(node=> node.id === page));
     return pages.map((page, i) => {
         const nodeFinded = nodes.find(node => page === node.id);
@@ -161,6 +160,5 @@ export function getNodes() {
         ;
     //console.log(JSON.stringify(generatePageWithComponents(pages, nodes)));
     const pages = nodes.map(node => ({list:node.list, nodeBase:node})).filter(value=> value.list !== undefined);
-    console.log(pages);
     return { paths: pages.map(pages_list=> generatePageWithComponents(pages_list, nodes)).flat() };
 }
