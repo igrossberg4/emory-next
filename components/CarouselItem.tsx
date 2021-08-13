@@ -25,7 +25,6 @@ export default function CarouselItem(props: any) {
   const prevScrollY = useRef(0);
 
   const [goingUp, setGoingUp] = useState(false);
-  console.log(props);
   const [variants, setVariants] = useState({
     mainImage_active: {
       opacity: 1,

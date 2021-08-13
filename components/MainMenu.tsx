@@ -9,7 +9,6 @@ import Overlay from "./Overlay";
 
 export default function MainMenu(props: any) {
   const [state, dispatch] = useContext(Context) as any;
-  console.log(props);
 
   return (
     <div className="header-menu header-menu--main">
