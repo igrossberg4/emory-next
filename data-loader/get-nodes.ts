@@ -26,7 +26,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                 view: [
                     {
                         component: "CarouselItem",
-                        props: nodeFinded.page_props
+                        props: Object.assign({...nodeFinded.page_props}, {active:true})
                     }
 
                 ].concat(nodeFinded.components)
@@ -121,7 +121,6 @@ function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:an
         const nextNode = i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
         const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
 
-        console.log("NODE BASE 1", pages_list.nodeBase)
         return {
             path: pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path}/${nodeFinded.path}`,
             meta: Object.assign({}, nodeFinded.metatag),
@@ -137,7 +136,8 @@ function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:an
                                 view: [
                                     {
                                         component: "CarouselItem",
-                                        props: nodeFinded.page_props
+                                        // We assign the active prop for scale only this element.
+                                        props: Object.assign({...nodeFinded.page_props}, {active: true})
                                     }
 
                                 ].concat(nodeFinded.components).concat(

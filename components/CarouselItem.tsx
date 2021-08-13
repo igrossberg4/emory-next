@@ -25,7 +25,7 @@ export default function CarouselItem(props: any) {
   const prevScrollY = useRef(0);
 
   const [goingUp, setGoingUp] = useState(false);
-
+  console.log(props);
   const [variants, setVariants] = useState({
     mainImage_active: {
       opacity: 1,
@@ -143,29 +143,36 @@ export default function CarouselItem(props: any) {
         <div className="header-inner-content">
           <motion.img
             className="image round-wp"
-            // variants={variants}
-            // style={{ originY: 1, height: scroll > 170 ? "1500px" : "530px" }}
-            // key={props.img_src}
-            // animate={animated ? 'mainImage_active' : false}
+            variants={props.active ? variants : {}}
+            style={props.active ? { originY: 1, height: scroll > 170 ? "1500px" : "530px" } : {}}
+            key={props.img_src}
+            animate={props.active && animated ? 'mainImage_active' : false}
             alt={props.header}
             src={props.img_src}
           ></motion.img>
           <motion.div
             className="pretitle text-label"
-            // variants={variants}
-            //initial="fadeIn_initial"
-            //animate="fadeIn_active"
+            variants={variants}
+            initial="fadeIn_initial"
+            animate="fadeIn_active"
           >
             {props.about}
           </motion.div>
-          <motion.h1
+          {
+          props.active ? 
+          (<motion.h1
             className="title header-h2"
-            // variants={variants}
-            // initial={false}
-            // animate={animated ? 'title_active' : false}
+            variants={props.active ? variants : {}}
+            initial={false}
+            animate={props.active && animated ? 'title_active' : false}
           >
             {props.header.toUpperCase()}
-          </motion.h1>
+          </motion.h1>) :           (<div
+            className="title header-h2"
+          >
+            {props.header.toUpperCase()}
+          </div>)
+          }
           <motion.div
             className="subtitle text-body--lg"
             /*variants={variants}
