@@ -14,7 +14,6 @@
   },
   "list": ["home-2036", "emory-college-of-arts-and-sciences", "data-science", "goizueta-business-school","laney-graduate-school","school-of-law","school-of-medicine","nell-hodgson-woodruff-school-of-nursing","oxford-college","rollins-school-of-public-health","candler-school-of-theology","campus-life","carlos-museum","center-for-ethics","global-health-institute","emory-healthcare","university-libraries","yerkes-national-primate-research-center","winship-cancer-institute","about-the-campaign","themes","students","faculty"],
   "components": [
-
     {
       "component": "SectionIntro",
       "props": {
@@ -33,7 +32,12 @@
           "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
       }
     },
-
+    {
+      "component": "Quote",
+      "props": {
+        "text": "I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August."
+      }
+    },
     {
       "component": "AccordionComponent",
       "props": {

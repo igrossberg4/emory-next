@@ -19,6 +19,7 @@ const CircleContentWrapper = dynamic(()=> import('./CircleContentWrapper'));
 const MediaWithExpantion = dynamic(()=> import('./MediaWithExpantion'));
 const MainMenu = dynamic(()=> import('./MainMenu'));
 const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
+const Quote = dynamic(()=> import('./Quote'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -26,12 +27,13 @@ function DynamicComponentMatcher(props: any) {
       {props.view.map((component: any, i: number) => {
         switch (component.component) {
           case "IntroPage":
-
             return <IntroPage key={i.toString()} {...component.props}></IntroPage>;
+
           case "HeaderTop":
             return (
               <HeaderTop key={i.toString()} {...component.props}></HeaderTop>
             );
+
           case "AnimatePresence":
             return (
               <AnimatePresence key={i.toString()} {...component.props}>
@@ -41,6 +43,7 @@ function DynamicComponentMatcher(props: any) {
                 ></DynamicComponentMatcher>
               </AnimatePresence>
             );
+
           case "AnimatedTransition":
             return (
               <AnimateSharedLayout key={i.toString()} {...component.props}>
@@ -50,6 +53,7 @@ function DynamicComponentMatcher(props: any) {
                 ></DynamicComponentMatcher>
               </AnimateSharedLayout>
             );
+
           case "SectionIntro":
             return (
               <SectionIntro
@@ -57,6 +61,7 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></SectionIntro>
             );
+
           case "LateralImageExpanded":
             return (
               <LateralImageExpanded
@@ -64,6 +69,7 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></LateralImageExpanded>
             );
+
           case "CarouselNavigation":
             return (
               <CarouselNavigation
@@ -71,6 +77,7 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></CarouselNavigation>
             );
+
           case "CarouselItem":
             return (
               <CarouselItem
@@ -78,6 +85,7 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></CarouselItem>
             );
+
           case "DynamicComponentMatcher":
             return (
               <DynamicComponentMatcher
@@ -85,6 +93,7 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></DynamicComponentMatcher>
             );
+
           case "BottomNavigation":
             return (
               <BottomNavigation
@@ -92,6 +101,7 @@ function DynamicComponentMatcher(props: any) {
                 {...component.props}
               ></BottomNavigation>
             );
+
           case "AccordionComponent":
             return (
               <AccordionComponent
@@ -101,6 +111,7 @@ function DynamicComponentMatcher(props: any) {
             );
           case "Video":
             return <Video key={i.toString()} {...component.props}></Video>;
+
           case "CircleContentWrapper":
             return (
               <CircleContentWrapper key={i.toString()}>
@@ -109,18 +120,24 @@ function DynamicComponentMatcher(props: any) {
                 ></DynamicComponentMatcher>
               </CircleContentWrapper>
             );
-            case "MediaWithExpantion":
-              return (
-                <MediaWithExpantion 
-                {...component.props}
-                key={i.toString()}>
-                </MediaWithExpantion>
-              );
+
+          case "MediaWithExpantion":
+            return (
+              <MediaWithExpantion
+              {...component.props}
+              key={i.toString()}>
+              </MediaWithExpantion>
+            );
 
           case 'MainMenu':
             return <MainMenu {...component.props} key={i.toString()}></MainMenu>;
+
           case 'SchoolsMenu':
             return <SchoolsMenu {...component.props} key={i.toString()}></SchoolsMenu>
+
+          case 'Quote':
+            return <Quote {...component.props} key={i.toString()}></Quote>
+
           default:
             return "";
         }
