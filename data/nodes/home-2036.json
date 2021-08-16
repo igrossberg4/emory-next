@@ -12,7 +12,7 @@
     "description": "Some description for carousel page",
     "image":""
   },
-  "list": ["home-2036", "goizueta-business-school", "emory-college-of-arts-and-sciences", "laney-graduate-school","school-of-law","school-of-medicine","nell-hodgson-woodruff-school-of-nursing","oxford-college","rollins-school-of-public-health","candler-school-of-theology","campus-life","carlos-museum","center-for-ethics","global-health-institute","emory-healthcare","university-libraries","yerkes-national-primate-research-center","winship-cancer-institute","about-the-campaign","themes","students","faculty"],
+  "list": ["home-2036", "goizueta-business-school", "emory-college-of-arts-and-sciences", "laney-graduate-school","school-of-law","school-of-medicine","nell-hodgson-woodruff-school-of-nursing","oxford-college","rollins-school-of-public-health","candler-school-of-theology","campus-life","carlos-museum","center-for-ethics","global-health-institute","emory-healthcare","university-libraries","yerkes-national-primate-research-center","winship-cancer-institute","themes","students","faculty"],
   "components": [
     {
       "component": "SectionIntro",
