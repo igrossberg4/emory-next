@@ -39,6 +39,13 @@
       }
     },
     {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire.",
+        "column2": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
+      }
+    },
+    {
       "component": "AccordionComponent",
       "props": {
         "title": "Additional priorities",

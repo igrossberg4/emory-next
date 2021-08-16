@@ -20,6 +20,7 @@ const MediaWithExpantion = dynamic(()=> import('./MediaWithExpantion'));
 const MainMenu = dynamic(()=> import('./MainMenu'));
 const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
 const Quote = dynamic(()=> import('./Quote'));
+const ColumnsText = dynamic(()=> import('./ColumnsText'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -137,6 +138,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'Quote':
             return <Quote {...component.props} key={i.toString()}></Quote>
+
+          case 'ColumnsText':
+            return <ColumnsText {...component.props} key={i.toString()}></ColumnsText>
 
           default:
             return "";
