@@ -37,7 +37,21 @@
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "Additional priorities",
+        "pretitle": "COLLEGE OF ARTS & SCIENCES",
         "items": [
+          {
+            "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
+            "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship"
+          },
+          {
+            "title": "Accordion title",
+            "description": "Accordion description"
+          },
+          {
+            "title": "Accordion title",
+            "description": "Accordion description"
+          },
           {
             "title": "Accordion title",
             "description": "Accordion description"

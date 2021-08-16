@@ -1,0 +1,53 @@
+.accordion {
+  .accordion__pretitle {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  .accordion__title {
+    margin-bottom: $spacer;
+  }
+
+  .chakra-accordion__item {
+    border-top: 1px solid $color_black;
+
+    &:last-child {
+      border-bottom: 1px solid $color_black;
+    }
+  }
+
+  .chakra-accordion__button {
+    justify-content: space-between;
+    padding: 1.438rem 0;
+    font-size: inherit;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 48px;
+      margin-left: $grid-gutter-width;
+      background: url("../../public/images/plus.svg") no-repeat center center $color_white;
+      border-radius: 50%;
+      box-shadow: $default-box-shadow;
+      transition: box-shadow .6s ease-in-out;
+
+      &:hover, &:focus {
+        box-shadow: $default-box-shadow--hover;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        background-image: url("../../public/images/minus.svg");
+      }
+    }
+
+    > div {
+      max-width: 780px;
+    }
+  }
+
+  .chakra-accordion__panel {
+    padding-bottom: 1.438rem;
+  }
+}
