@@ -21,6 +21,7 @@ const MainMenu = dynamic(()=> import('./MainMenu'));
 const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
 const Quote = dynamic(()=> import('./Quote'));
 const ColumnsText = dynamic(()=> import('./ColumnsText'));
+const QuoteParagraphColumn = dynamic(()=> import('./QuoteParagraphColumn'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -141,6 +142,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'ColumnsText':
             return <ColumnsText {...component.props} key={i.toString()}></ColumnsText>
+
+          case 'QuoteParagraphColumn':
+            return <QuoteParagraphColumn {...component.props} key={i.toString()}></QuoteParagraphColumn>
 
           default:
             return "";

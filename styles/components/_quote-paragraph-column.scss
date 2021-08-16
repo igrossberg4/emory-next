@@ -1,0 +1,39 @@
+.quote-paragraph-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: $spacer * 3;
+  padding-bottom: $spacer * 3;
+
+  &::after {
+    content: '';
+    display: block;
+    margin-top: $grid-gutter-width;
+    width: 2px;
+    height: 160px;
+    background: $color-white;
+    box-shadow: $default-box-shadow;
+  }
+
+  .column--quote {
+    position: relative;
+    margin-bottom: $spacer * 2;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: -27px;
+      left: -10px;
+      width: 68px;
+      height: 54px;
+    }
+
+    blockquote {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
