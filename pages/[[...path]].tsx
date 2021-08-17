@@ -136,7 +136,7 @@ const introComponent = {
         video_src: "video.mp4",
         text_play: "Begin\r\nyour\r\nexperience",
         text_skip: "Skip video",
-        route_to: "/about-the-campaign",
+        route_to: "/home",
       },
     },
   ],
