@@ -124,10 +124,10 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
           <motion.div
             className="embla__container"
             onTransitionEnd={(e) => {
-              if (e.target.className === 'header-inner-content') {
+              var target = e.target as Element;
+              if (target.className === 'header-inner-content') {
                 changeRoute(direction === 1 ? actual.next : actual.prev);
               }
-
             }}
             style={{ transform: `translateX(${-page * 100}vw)` }}
           >
