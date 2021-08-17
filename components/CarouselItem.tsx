@@ -138,68 +138,34 @@ export default function CarouselItem(props: any) {
   }, [goingUp, scroll, variants]); // @ts-ignore
   return (
     // <motion.div className="content-header">
-      <div className="content-header__container container-force-screen-fit-y">
-        <div className="header-inner-content">
-          <motion.img
-            className="image round-wp"
-            variants={props.active ? variants : {}}
-            style={props.active ? { originY: 1, height: scroll > 170 ? "1500px" : "530px" } : {}}
-            key={props.img_src}
-            animate={props.active && animated ? 'mainImage_active' : false}
-            alt={props.header}
-            src={props.img_src}
-          ></motion.img>
-          <motion.div
-            className="pretitle text-label"
-            variants={variants}
-            initial="fadeIn_initial"
-            animate="fadeIn_active"
-          >
-            {props.about}
-          </motion.div>
-          {
-          props.active ? 
-          (<motion.h1
-            className="title header-h2"
-            variants={props.active ? variants : {}}
-            initial={false}
-            animate={props.active && animated ? 'title_active' : false}
-          >
-            {props.header.toUpperCase()}
-          </motion.h1>) :           (<div
-            className="title header-h2"
-          >
-            {props.header.toUpperCase()}
-          </div>)
-          }
-          <motion.div
-            className="subtitle text-body--lg"
-            /*variants={variants}
-            initial="fadeIn_initial"
-            animate="fadeIn_active"*/
-          >
-            {props.text}
-          </motion.div>
-        </div>
-        <div className="actions">
-          <div
-            className="btn"
-            style={{ cursor: "pointer" }}
-            onClick={(e) => {
-              const contentElement = document.getElementById("carouselContent");
-              //contentElement?.scrollIntoView({behavior: 'smooth'});
-              window.scrollTo({
-                top: contentElement?.offsetTop,
-                behavior: "smooth",
-              });
-            }}
-          >
-            {" "}
-            {props.button_scroll}
-          </div>
-          <div className="line-separator line-separator--overflowed line-separator--half-height"></div>
+    <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
+      <div className="header-inner-content">
+        <img src={props.img_src} alt={props.header} className="image round-wp"></img>
+        <div className="header-inner-content__text">
+          <div className="pretitle text-label">{props.about}</div>
+          <h1 className="title header-h2">{props.header.toUpperCase()}</h1>
+          <div className="subtitle text-body--lg">{props.text}</div>
         </div>
       </div>
+      <div className="actions">
+        <div
+          className="btn"
+          style={{ cursor: "pointer" }}
+          onClick={(e) => {
+            const contentElement = document.getElementById("carouselContent");
+            //contentElement?.scrollIntoView({behavior: 'smooth'});
+            window.scrollTo({
+              top: contentElement?.offsetTop,
+              behavior: "smooth",
+            });
+          }}
+        >
+          {" "}
+          {props.button_scroll}
+        </div>
+        <div className="line-separator line-separator--overflowed line-separator--half-height"></div>
+      </div>
+    </div>
     // </motion.div>
   );
 }

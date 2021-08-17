@@ -101,33 +101,33 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
     <div>
       <div className="embla" key="id-test">
       <AnimatePresence>
-        <div  
-
-        className="embla__viewport" key={"viewPort"}>
+        <div className="embla__viewport" key={"viewPort"}>
           <motion.div
-                  
-        drag="x"
-        layout
-        dragPropagation
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={1}
-        transition={{
-          x: { type: "spring", stiffness: 300, damping: 30 },
-        }}
+            drag="x"
+            layout
+            dragPropagation
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+            }}
 
-        onDrag={(e, { offset, velocity }) => {
-          const swipe = swipePower(offset.x, velocity.x);
-          if (swipe < -swipeConfidenceThreshold) {
-            scrollNext();
-          } else if (swipe > swipeConfidenceThreshold) {
-            scrollPrev();
-          }
-        }}
+            onDrag={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+              if (swipe < -swipeConfidenceThreshold) {
+                scrollNext();
+              } else if (swipe > swipeConfidenceThreshold) {
+                scrollPrev();
+              }
+            }}
           >
           <motion.div
             className="embla__container"
             onTransitionEnd={(e) => {
-              changeRoute(direction === 1 ? actual.next : actual.prev);
+              if (e.target.className === 'header-inner-content') {
+                changeRoute(direction === 1 ? actual.next : actual.prev);
+              }
+
             }}
             style={{ transform: `translateX(${-page * 100}vw)` }}
           >
@@ -141,7 +141,6 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
                   //style={{transform:`translateX(${page === i ? 0 :(page > i ? 100 : -100)}px)`}}
                   >
                   <div
-
                     //draggable={true}
                     className="embla__slide"
                   >
@@ -176,7 +175,7 @@ const EmblaCarousel = ({ slides, actual }: { slides: any; actual: any }) => {
           enabled={nextBtnEnabled}
         />
       </div>
-      <motion.div 
+      <motion.div
       key={MD5(slides[page].props.view.slice(1))}
       layout layoutId={MD5(slides[page].props.view.slice(1))} id="carouselContent">
         <DynamicComponentMatcher
