@@ -74,7 +74,7 @@
     max-width: 530px;
     object-fit: cover;
     aspect-ratio: 1/1;
-    transition: all 1s ease-in-out;
+    transition: all .6s ease-out;
     will-change: transform;
   }
 
@@ -83,11 +83,11 @@
     margin: 0 auto;
     max-width: map-get($container-max-widths, 'md');
     z-index: 1;
-    transition: all 1s ease-in-out;
+    transition: all .6s ease-out;
   }
 
   .title {
-    transition: all 1s ease-in-out;
+    transition: all .6s ease-out;
   }
 
   &[data-animation="active"] {
