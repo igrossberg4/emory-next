@@ -23,6 +23,7 @@ const Quote = dynamic(()=> import('./Quote'));
 const ColumnsText = dynamic(()=> import('./ColumnsText'));
 const QuoteParagraphColumn = dynamic(()=> import('./QuoteParagraphColumn'));
 const TextBg = dynamic(()=> import('./TextBg'));
+const Footer = dynamic(()=> import('./Footer'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -149,6 +150,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'TextBg':
             return <TextBg {...component.props} key={i.toString()}></TextBg>
+
+          case 'Footer':
+            return <Footer {...component.props} key={i.toString()}></Footer>
 
           default:
             return "";
