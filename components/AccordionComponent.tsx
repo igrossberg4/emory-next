@@ -40,7 +40,10 @@ export default function AccordionComponent(props: any) {
                     </Box>
                   </AccordionButton>
                 </h3>
-                <AccordionPanel pb={4}>{item.description}</AccordionPanel>
+                <AccordionPanel pb={4}>
+                  {item.description}
+                  {item.read_more && <a href={item.read_more} className="readmore text-cta">Read more</a>}
+                </AccordionPanel>
               </AccordionItem>
             );
           })}

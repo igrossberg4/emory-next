@@ -40,7 +40,7 @@ p {
   line-height: $line-height-xs;
 }
 
-.header-xlarge{
+.header-xlarge {
   font-size: $h2-font-size;
   @include media-breakpoint-up(md){
     font-size: $display-font-size--desktop;
@@ -61,3 +61,9 @@ p {
   }
 }
 
+.text-cta {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
