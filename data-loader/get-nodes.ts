@@ -126,6 +126,20 @@ function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:an
         const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
         const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
         const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase);
+        nodeFinded.components.forEach((component:any) =>{
+            if(component.component === 'AccordionComponent'){
+                const re = new RegExp("^(http|https)://", "i");
+
+                component.props.items.forEach((item:any) =>{
+                    if(item.read_more && !re.test(item.read_more)){
+                        const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === node.id)>-1);
+                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                        item.read_more = path;
+                        item.internal_link = true;
+                    }
+                })
+            }
+        })
         if(i === 0 || i === pages.length - 1){
             if(i===0){
                 slides.unshift({

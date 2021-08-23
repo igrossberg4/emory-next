@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import {
@@ -21,9 +21,11 @@ import {
   AccordionItem,
   AccordionPanel,
 } from "@chakra-ui/react";
+import { Context } from "../state/Store";
 
 export default function AccordionComponent(props: any) {
   const router = useRouter();
+  const [state, dispatch] = useContext(Context) as any;
   return (
     <Fragment>
       <div className="container accordion">
@@ -42,7 +44,15 @@ export default function AccordionComponent(props: any) {
                 </h3>
                 <AccordionPanel pb={4}>
                   {item.description}
-                  {item.read_more && <a href={item.read_more} className="readmore text-cta">Read more</a>}
+                  {item.read_more && !item.internal_link && <a href={item.read_more} className="readmore text-cta">Read more</a>}
+                  {item.read_more && item.internal_link && <a 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    dispatch({ type: "SET_NAV", payload: `/${item.read_more}`});
+                    router.push(`/${item.read_more}`)
+                  }}
+                  href={item.read_more} className="readmore text-cta">Read more</a>}
+
                 </AccordionPanel>
               </AccordionItem>
             );

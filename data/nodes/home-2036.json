@@ -109,11 +109,13 @@
           {
             "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
             "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship",
-            "read_more": "https://example.com"
+            "read_more": "students"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "External link example",
+            "description": "Accordion description",
+            "read_more": "http://example.com"
+
           },
           {
             "title": "Accordion title",
