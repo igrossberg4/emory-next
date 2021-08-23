@@ -25,6 +25,7 @@ const QuoteParagraphColumn = dynamic(()=> import('./QuoteParagraphColumn'));
 const TextBg = dynamic(()=> import('./TextBg'));
 const Footer = dynamic(()=> import('./Footer'));
 const TextImageBg = dynamic(()=> import('./TextImageBg'));
+const Carousel = dynamic(()=> import('./Carousel'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -158,6 +159,8 @@ function DynamicComponentMatcher(props: any) {
           case 'TextImageBg':
             return <TextImageBg {...component.props} key={i.toString()}></TextImageBg>
 
+          case 'Carousel':
+            return <Carousel {...component.props} key={i.toString}></Carousel>
           default:
             return "";
         }

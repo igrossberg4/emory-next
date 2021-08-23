@@ -76,6 +76,34 @@
       }
     },
     {
+      "component": "Carousel",
+      "props": {
+        "title": "Additional priorities",
+        "pretitle": "COLLEGE OF ARTS & SCIENCES",
+        "slides": [
+          {
+            "component":"AccordionComponent",
+            "props":{
+            "items": [
+              {
+                "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
+                "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship",
+                "read_more": "https://example.com"
+              }
+            ]
+          }
+          },
+          {
+            "component": "QuoteParagraphColumn",
+            "props": {
+              "quote": "I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.",
+              "text": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
+            }
+          }
+        ]
+      }
+    },
+    {
       "component": "AccordionComponent",
       "props": {
         "title": "Additional priorities",
