@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "postbuild":"./script.sh",
     "start": "next start",
     "lint": "next lint"
   },
