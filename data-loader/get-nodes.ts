@@ -100,15 +100,21 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
     const nextNodeSelect = !nextNode ? nodes[0] : nextNode;
     const previous_route = prevNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path}/${prevNodeSelect.path}`;
     const next_route = nextNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path}/${nextNodeSelect.path}`;
-    return {
-        "component": "BottomNavigation",
-        "props": {
-            "previous_title": prevNodeSelect?.page_props.header,
-            "next_title": nextNodeSelect?.page_props?.header,
-            "previous_route": '/'+ previous_route,
-            "next_route": '/' + next_route
+    return [
+        {
+            "component": "BottomNavigation",
+            "props": {
+                "previous_title": prevNodeSelect?.page_props.header,
+                "next_title": nextNodeSelect?.page_props?.header,
+                "previous_route": '/'+ previous_route,
+                "next_route": '/' + next_route
+            }
+        },
+        {
+            "component": "Footer",
+            "props": {}
         }
-    }
+    ]
 }
 
 function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:any}, nodes: Array<any>) {

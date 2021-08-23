@@ -10,7 +10,7 @@ export default function Footer(props:any) {
   return (
     <footer role="contentinfo">
       <div className="container">
-      <div
+        <div
           className="footer__scrolltop btn text-label"
           style={{ cursor: "pointer" }}
           onClick={(e) => {

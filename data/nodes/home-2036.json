@@ -87,10 +87,6 @@
           }
         ]
       }
-    },
-    {
-      "component": "Footer",
-      "props": {}
     }
   ]
 }
