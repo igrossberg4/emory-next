@@ -15,7 +15,11 @@ footer[role="contentinfo"] {
     }
 
     @include media-breakpoint-up(md) {
-      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      margin: 0;
+      z-index: 1;
     }
   }
 
