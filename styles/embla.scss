@@ -6,7 +6,15 @@
     margin-left: auto;
     height: 100vh;
     margin-right: auto;
+    &.page-carousel{
+      //background-color:red;
+      min-width: 30vw;
+    .embla__slide {
+      min-width: 30vw;
+    }
+    }
   }
+  
   .embla__viewport {
     overflow: hidden;
     width: 100%;

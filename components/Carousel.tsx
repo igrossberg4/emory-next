@@ -99,7 +99,7 @@ interface ButtonEnabled {
     }, [paginate, page]);
     return (
       <div>
-      <div className="embla" key="id-test">
+      <div className={`embla ${!navigation ? 'page-carousel' : ''}`} key="id-test">
       <AnimatePresence>
         <div className="embla__viewport" key={"viewPort"}>
           <motion.div
