@@ -72,6 +72,10 @@ a {
   height: 100vh;
   padding: $default-separation;
   overflow-y: auto;
+
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background-color: rgba($color_white, .95);
+  }
 }
 
 .close-popup {

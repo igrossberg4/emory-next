@@ -52,5 +52,13 @@
 
   .menu-schools__link {
     margin-top: 20px;
+
+    a {
+      transition: opacity .25s ease-in-out;
+
+      &:hover, &:focus {
+        opacity: .6;
+      }
+    }
   }
 }

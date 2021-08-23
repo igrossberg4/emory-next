@@ -21,5 +21,13 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    a {
+      transition: opacity .25s ease-in-out;
+
+      &:hover, &:focus {
+        opacity: .6;
+      }
+    }
   }
 }
