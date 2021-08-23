@@ -122,9 +122,70 @@ function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:an
     const nodesForCollection = pages.map(page => nodes.find(node=> node.id === page));
     return pages.map((page, i) => {
         const nodeFinded = nodes.find(node => page === node.id);
-        const prevNode = i === 0 ? null : nodes.find(node => node.id === pages[i - 1]);
-        const nextNode = i === pages.length - 1 ? null : nodes.find(node => node.id === pages[i + 1]);
+        const prevNode = i === 0 ? nodes.find(node => node.id === pages[pages.length -1]) : nodes.find(node => node.id === pages[i - 1]);
+        const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
         const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
+        const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase);
+        if(i === 0 || i === pages.length - 1){
+            if(i===0){
+                slides.unshift({
+                    component: "DynamicComponentMatcher",
+                    props: {
+                        view: [
+                            {
+                                component: "CarouselItem",
+                                props: prevNode.page_props
+                            }
+        
+                        ]
+                    }
+                });
+                if(pages.length > 2){
+                    const previousNodeCloned = nodes.find(node => node.id === pages[pages.length -2]);
+                    slides.unshift({
+                        component: "DynamicComponentMatcher",
+                        props: {
+                            view: [
+                                {
+                                    component: "CarouselItem",
+                                    props: previousNodeCloned.page_props
+                                }
+            
+                            ]
+                        }
+                    });
+                }
+
+            }else{
+                slides.push({
+                    component: "DynamicComponentMatcher",
+                    props: {
+                        view: [
+                            {
+                                component: "CarouselItem",
+                                props: nextNode.page_props
+                            }
+        
+                        ]
+                    }
+                });
+                if(pages.length > 2){
+                    const nextNodeCloned = nodes.find(node => node.id === pages[0+1]);
+                    slides.push({
+                        component: "DynamicComponentMatcher",
+                        props: {
+                            view: [
+                                {
+                                    component: "CarouselItem",
+                                    props: nextNodeCloned.page_props
+                                }
+            
+                            ]
+                        }
+                    });
+                }
+            }
+        }
 
         return {
             path: pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path}/${nodeFinded.path}`,
@@ -151,7 +212,7 @@ function generatePageWithComponents(pages_list: {list:Array<string>, nodeBase:an
                             }
                         },
                         next: !nextNode ? null : (nextNode.id !== pages_list.nodeBase.id ? `${pages_list.nodeBase.path}/${nextNode.path}` : pages_list.nodeBase.path),
-                        slides: findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase)
+                        slides: slides
                     }
                 }
             ]
