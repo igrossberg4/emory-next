@@ -76,6 +76,14 @@
       }
     },
     {
+      "component": "Audio",
+      "props":{
+        "img_alt":"img_alt",
+        "img_src":"/images/background_image.jpg",
+        "audio_src":"/sounds/beethoven_12_variation.mp3"
+      }
+    },
+    {
       "component": "CampaignCarousel",
       "props": {
         "title": "Additional priorities",
