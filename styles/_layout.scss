@@ -60,5 +60,6 @@ body {
 }
 
 .section {
-  padding: $default-section-padding 0;
+  padding-top: $default-section-padding;
+  padding-bottom: $default-section-padding;
 }
