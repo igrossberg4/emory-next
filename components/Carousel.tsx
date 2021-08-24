@@ -105,7 +105,7 @@ export default function EmblaCarousel({
   return (
     <div>
       <div
-        className={`embla ${!navigation ? "page-carousel" : ""}`}
+        className={`embla embla--carousel-navigation ${!navigation ? "page-carousel" : ""}`}
         key="id-test"
       >
         <AnimatePresence>

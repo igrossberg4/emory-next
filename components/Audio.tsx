@@ -10,40 +10,33 @@ export default function Audio(props: any) {
   const audioRef = useRef<HTMLAudioElement>();
   const [isPlaying, setPlaying] = useState(false);
   return (
-    <div>
-      <img alt={props.img_alt} src={props.img_src}></img>
-      <audio
-        onPause={(e) => {
-          setPlaying(false);
-        }}
-        onPlay={(e) => {
-          setPlaying(true);
-        }}
-        ref={(ref) => {
-          if (ref) {
-            audioRef.current = ref;
-          }
-        }}
-        controls
-        src={props.audio_src}
-      ></audio>
-      {isPlaying ? (
-        <div
-          onClick={(e) => {
-            audioRef?.current?.pause();
-          }}
-        >
-          <IconButton icon="pause"></IconButton>
+    <div className="section audio">
+      <div className="container">
+        <div className="audio__image">
+          <img alt={props.img_alt} src={props.img_src}></img>
+          {isPlaying ? (
+            <div onClick={(e) => { audioRef?.current?.pause(); }}>
+              <IconButton icon="pause"></IconButton>
+            </div>
+          ) : (
+            <div onClick={(e) => { audioRef?.current?.play(); }}>
+              <IconButton icon="play"></IconButton>
+            </div>
+          )}
         </div>
-      ) : (
-        <div
-          onClick={(e) => {
-            audioRef?.current?.play();
+        <audio
+          onPause={(e) => { setPlaying(false); }}
+          onPlay={(e) => { setPlaying(true); }}
+          ref={(ref) => {
+            if (ref) {
+              audioRef.current = ref;
+            }
           }}
-        >
-          <IconButton icon="play"></IconButton>
-        </div>
-      )}
+          controls
+          controlsList="nodownload"
+          src={props.audio_src}
+        ></audio>
+      </div>
     </div>
   );
 }
