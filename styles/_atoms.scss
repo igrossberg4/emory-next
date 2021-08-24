@@ -54,6 +54,7 @@ a {
   max-width: $round-image-size;
   margin: 0 auto;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
 
   &.size--big {
     max-width: $round-image-size-big;

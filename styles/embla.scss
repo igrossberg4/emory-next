@@ -1,100 +1,162 @@
 @import "_variables";
+@import "mixins/_breakpoints";
 
-.embla {
-    position: relative;
-    background-color: $body-bg;
-    margin-left: auto;
-    height: 100vh;
-    margin-right: auto;
-    &.page-carousel{
-      //background-color:red;
-      min-width: 30vw;
+.embla--carousel-navigation.embla {
+  position: relative;
+  background-color: $body-bg;
+  margin-left: auto;
+  height: 100vh;
+  margin-right: auto;
+
+  &.page-carousel {
+    min-width: 30vw;
+
     .embla__slide {
       min-width: 30vw;
     }
-    }
   }
+}
 
-  .embla__viewport {
-    overflow: hidden;
-    width: 100%;
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  //cursor: move;
+  //cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  //cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 1s;
+
+  .no_selected {
+    z-index: -1;
   }
+}
 
-  .embla__viewport.is-draggable {
-    //cursor: move;
-    //cursor: grab;
-  }
+.embla--carousel-navigation .embla__slide {
+  position: relative;
+  min-width: 100vw;
+  z-index: 5;
+}
 
-  .embla__viewport.is-dragging {
-    //cursor: grabbing;
-  }
+.embla--carousel-navigation .embla__slide__inner {
+  position: relative;
+  //overflow: hidden;
+}
 
-  .embla__container {
-    display: flex;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: all 1s;
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: $color_white;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  fill: $color_black_soft;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: $default-box-shadow;
+}
 
-    .no_selected {
-      z-index: -1;
-    }
-  }
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
 
-  .embla__slide {
-    position: relative;
-    min-width: 100vw;
-    z-index: 5;
-  }
+.embla__button__svg {
+  width: 15px;
+  height: 15px;
+}
 
-  .embla__slide__inner {
-    position: relative;
-    //overflow: hidden;
-  }
+.embla__button--prev {
+  left: 10%;
+}
 
-  .embla__button {
-    outline: 0;
-    cursor: pointer;
-    background-color: $color_white;
-    touch-action: manipulation;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 0;
-    width: 64px;
-    height: 64px;
-    justify-content: center;
-    align-items: center;
-    fill: $color_black_soft;
-    padding: 0;
-    border-radius: 50%;
-    box-shadow: $default-box-shadow;
-  }
-
-  .embla__button:disabled {
-    cursor: default;
-    opacity: 0.3;
-  }
-
-  .embla__button__svg {
-    width: 15px;
-    height: 15px;
-  }
-
-  .embla__button--prev {
-    left: 10%;
-  }
-
-  .embla__button--next {
-    right: 10%;
-  }
+.embla__button--next {
+  right: 10%;
+}
 
 body.is-scrolled {
   .embla--carousel-navigation {
     .embla__button {
       display: none;
+    }
+  }
+}
+
+// CAMPAIGN CAROUSEL
+.campaign-carousel {
+  .campaign-carousel__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .embla {
+    position: relative;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 143px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $color_white;
+    }
+  }
+
+  .embla__container {
+    transition: none;
+  }
+
+  .embla__slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 272px;
+    padding: 0 40px;
+
+    @include media-breakpoint-up(md) {
+      min-width: 33.33%;
+      padding: 0;
+    }
+  }
+
+  .embla__button {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      top: 143px;
+
+      &.embla__button--prev {
+        left: 31%;
+      }
+
+      &.embla__button--next {
+        right: 31%;
+      }
     }
   }
 }

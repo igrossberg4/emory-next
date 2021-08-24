@@ -21,12 +21,13 @@ p {
   }
 }
 
-%text-label{
+%text-label {
   font-size: $font-size-xs;
   line-height: $line-height-lg;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
+
 .text-label {
   @extend %text-label;
 }
@@ -44,6 +45,13 @@ p {
   font-size: $h2-font-size;
   @include media-breakpoint-up(md){
     font-size: $display-font-size--desktop;
+  }
+}
+
+.header-h1 {
+  font-size: $h2-font-size;
+  @include media-breakpoint-up(md){
+    font-size: $h1-font-size--desktop;
   }
 }
 

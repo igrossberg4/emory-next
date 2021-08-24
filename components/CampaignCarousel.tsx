@@ -33,8 +33,9 @@ export default function CampaignCarousel(props:any) {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   const [viewportRef, embla] = useEmblaCarousel({
-    slidesToScroll: isMobile ? 1 : 3,
+    slidesToScroll: 1,
     skipSnaps: false,
+    align: isMobile ? 'center' : 'start'
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -53,39 +54,35 @@ export default function CampaignCarousel(props:any) {
     onSelect();
   }, [embla, onSelect]);
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={viewportRef}>
-        <div className="embla__container">
-          {props.slides.map((value: any, i: number) => {
-            return (
-              <div key={MD5(value) + i.toString()}>
-                <div
-                  //draggable={true}
-                  className="embla__slide"
-                >
-                  <div className="embla__slide__inner">
-                    <DynamicComponentMatcher
-                      key={MD5(value) + i.toString()}
-                      view={[
-                        {
-                          component: "DynamicComponentMatcher",
-                          props: {
-                            view: value?.props?.view
-                              ? [value.props.view[0]]
-                              : [value],
-                          },
+    <div className="section campaign-carousel">
+      <h2 className="campaign-carousel__title container header-h1">Campaign Themes</h2>
+      <div className="embla">
+        <div className="embla__viewport" ref={viewportRef}>
+          <div className="embla__container">
+            {props.slides.map((value: any, i: number) => {
+              return (
+                <div className="embla__slide" key={MD5(value) + i.toString()}>
+                  <DynamicComponentMatcher
+                    key={MD5(value) + i.toString()}
+                    view={[
+                      {
+                        component: "DynamicComponentMatcher",
+                        props: {
+                          view: value?.props?.view
+                            ? [value.props.view[0]]
+                            : [value],
                         },
-                      ]}
-                    ></DynamicComponentMatcher>
-                  </div>
+                      },
+                    ]}
+                  ></DynamicComponentMatcher>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
+        {prevBtnEnabled ? <PrevCampaignButton onClick={scrollPrev} enabled={prevBtnEnabled} /> : ''}
+        {nextBtnEnabled ? <NextCampaignButton onClick={scrollNext} enabled={nextBtnEnabled} /> : ''}
       </div>
-      {prevBtnEnabled ? <PrevCampaignButton onClick={scrollPrev} enabled={prevBtnEnabled} /> :''}
-      {nextBtnEnabled ? <NextCampaignButton onClick={scrollNext} enabled={nextBtnEnabled} /> : ''}
     </div>
   );
 }

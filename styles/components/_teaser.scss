@@ -1,0 +1,21 @@
+.teaser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 272px;
+  text-align: center;
+
+  .teaser__image {
+    margin-bottom: 40px;
+  }
+
+  .teaser__title {
+    margin-bottom: 20px;
+  }
+
+  .teaser__link {
+    padding-bottom: 2px;
+    border-bottom: 1px solid $color_black;
+  }
+}

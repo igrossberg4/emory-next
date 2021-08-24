@@ -1,0 +1,17 @@
+import Head from "next/head";
+import React, { Fragment, useContext, useState } from "react";
+import { useRouter } from "next/dist/client/router";
+import { Box } from "@chakra-ui/react";
+import { Context } from "../state/Store";
+import MediaWithExpantion from "./MediaWithExpantion";
+
+export default function Teaser(props:any) {
+  return (
+    <div className="teaser">
+      <img className="teaser__image round-wp" src={props.img_src}></img>
+      <h3 className="teaser__title">{props.title}</h3>
+      <p className="teaser__body">{props.body}</p>
+      <a href="#" className="teaser__link text-cta">Explore</a>
+    </div>
+  );
+}

@@ -90,19 +90,39 @@
         "pretitle": "COLLEGE OF ARTS & SCIENCES",
         "slides": [
           {
-            "component":"CarouselItem",
+            "component":"Teaser",
             "props":{
-              "header": "Building on Emory's commitment to serve humanity",
-              "button_scroll": "Scroll to explore",
-              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg"
-          }
+              "title": "Brain Health",
+              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "link_url": "http://example.com"
+            }
           },
           {
-            "component": "CarouselItem",
-            "props": {
-              "header": "Building on Emory's commitment to serve humanity",
-              "button_scroll": "Scroll to explore",
-              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg"
+            "component":"Teaser",
+            "props":{
+              "title": "Cancer",
+              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "link_url": "http://example.com"
+            }
+          },
+          {
+            "component":"Teaser",
+            "props":{
+              "title": "AI.Humanity",
+              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "link_url": "http://example.com"
+            }
+          },
+          {
+            "component":"Teaser",
+            "props":{
+              "title": "Brain Health",
+              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "link_url": "http://example.com"
             }
           }
         ]

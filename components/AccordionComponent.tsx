@@ -28,7 +28,7 @@ export default function AccordionComponent(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   return (
     <Fragment>
-      <div className="container accordion">
+      <div className="section container accordion">
         {props.pretitle && <p className="accordion__pretitle text-label">{props.pretitle}</p>}
         {props.title && <h2 className="accordion__title header-h2">{props.title}</h2>}
         <Accordion allowToggle>
@@ -45,7 +45,7 @@ export default function AccordionComponent(props: any) {
                 <AccordionPanel pb={4}>
                   {item.description}
                   {item.read_more && !item.internal_link && <a href={item.read_more} className="readmore text-cta">Read more</a>}
-                  {item.read_more && item.internal_link && <a 
+                  {item.read_more && item.internal_link && <a
                   onClick={(e) => {
                     e.preventDefault();
                     dispatch({ type: "SET_NAV", payload: `/${item.read_more}`});
