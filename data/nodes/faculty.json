@@ -4,7 +4,9 @@
   "page_props": {
     "header": "FACULTY",
     "button_scroll": "Scroll to explore",
-    "img_src": "/images/2036_cancer_cells_red_uncropped.jpg"
+    "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+    "about": "About text",
+    "text": "Example text"
   },
   "path": "faculty",
   "metatag": {
@@ -19,7 +21,6 @@
         "header": "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
         "background_image": "bg_brain.jpg",
         "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "about": "About text",
         "img_src": "/images/2036_brain_health_neurons_red.jpg",
         "media_src": "/images/2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
