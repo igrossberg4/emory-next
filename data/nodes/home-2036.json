@@ -95,7 +95,7 @@
               "title": "Brain Health",
               "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "link_url": "http://example.com"
+              "explore_link": "goizueta-business-school"
             }
           },
           {
@@ -104,7 +104,7 @@
               "title": "Cancer",
               "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "link_url": "http://example.com"
+              "explore_link": "school-of-law"
             }
           },
           {
@@ -113,7 +113,7 @@
               "title": "AI.Humanity",
               "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "link_url": "http://example.com"
+              "explore_link": "http://example.com"
             }
           },
           {
@@ -122,7 +122,7 @@
               "title": "Brain Health",
               "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "link_url": "http://example.com"
+              "explore_link": "http://example.com"
             }
           }
         ]
@@ -137,7 +137,7 @@
           {
             "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
             "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship",
-            "read_more": "students"
+            "read_more": "school-of-law"
           },
           {
             "title": "External link example",
