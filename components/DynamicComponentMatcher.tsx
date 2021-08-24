@@ -26,6 +26,7 @@ const TextBg = dynamic(()=> import('./TextBg'));
 const Footer = dynamic(()=> import('./Footer'));
 const TextImageBg = dynamic(()=> import('./TextImageBg'));
 const Carousel = dynamic(()=> import('./Carousel'));
+const CampaignCarousel = dynamic(()=> import('./CampaignCarousel'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -159,8 +160,8 @@ function DynamicComponentMatcher(props: any) {
           case 'TextImageBg':
             return <TextImageBg {...component.props} key={i.toString()}></TextImageBg>
 
-          case 'Carousel':
-            return <Carousel {...component.props} key={i.toString}></Carousel>
+          case 'CampaignCarousel':
+            return <CampaignCarousel {...component.props} key={i.toString}></CampaignCarousel>
           default:
             return "";
         }

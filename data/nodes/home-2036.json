@@ -76,7 +76,7 @@
       }
     },
     {
-      "component": "Carousel",
+      "component": "CampaignCarousel",
       "props": {
         "title": "Additional priorities",
         "pretitle": "COLLEGE OF ARTS & SCIENCES",
