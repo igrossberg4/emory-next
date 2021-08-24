@@ -42,8 +42,16 @@ export default function Video(props: any) {
           skip: {width:0, height:0}
         }}
         layout
+        onPlay={() => {
+          if(props.onPlay){
+            props.onPlay();
+          }
+        }}
         onEnded={(en) => {
-          dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src ? props.video_src : props.media_src}});
+          //dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src ? props.video_src : props.media_src}});
+          if(props.onVideoEnd){
+            props.onVideoEnd();
+          }
           //router.push(props.route_to)
           // Check if the video has ended.
           // TO DO define if we take some action on end.

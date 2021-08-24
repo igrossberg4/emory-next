@@ -12,6 +12,7 @@ import Video from "./Video";
 
 export default function IntroPage(props: any) {
   const [state, dispatch] = useContext(Context) as any;
+  const [playing, setPlaying] = useState(false);
   const router = useRouter();
   const controls = useAnimation();
 
@@ -23,15 +24,21 @@ export default function IntroPage(props: any) {
       animate={controls}
       className="container-fit container-video-intro"
     >
-      <Video {...props}></Video>
+      <Video {...props} onVideoEnd={()=>{
+        console.log("EOOOO")
+        //router.push(props.route_to)
+      }}
+      onPlay={()=> setPlaying(true)}
+      
+      ></Video>
       {actualVideo ? (
         <Fragment>
           <motion.button
-            className="btn-begin-experience"
+            className={`btn-begin-experience ${playing ? 'playing' : ''}` }
             animate={
               actualVideo.skipped
                 ? "skip"
-                : !actualVideo?.videoRef?.paused
+                : playing
                 ? "playing"
                 : "default"
             }

@@ -30,6 +30,12 @@
     &:hover {
       background-color: rgba($color-white, .8);
     }
+    &.playing{
+
+      &:hover{
+        cursor: default;
+      }
+    }
   }
 
   .btn-skip-intro {
