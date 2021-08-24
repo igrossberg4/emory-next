@@ -25,10 +25,10 @@ export default function Teaser(props: any) {
         <a
           onClick={(e) => {
             e.preventDefault();
-            dispatch({ type: "SET_NAV", payload: `/${props.read_more}` });
-            router.push(`/${props.read_more}`);
+            dispatch({ type: "SET_NAV", payload: `/${props.explore_link}` });
+            router.push(`/${props.explore_link}`);
           }}
-          href={props.explore_link}
+          href={'/'+props.explore_link}
           className="teaser__link text-cta"
         >
           Explore

@@ -51,7 +51,7 @@ export default function AccordionComponent(props: any) {
                     dispatch({ type: "SET_NAV", payload: `/${item.read_more}`});
                     router.push(`/${item.read_more}`)
                   }}
-                  href={item.read_more} className="readmore text-cta">Read more</a>}
+                  href={'/'+item.read_more} className="readmore text-cta">Read more</a>}
 
                 </AccordionPanel>
               </AccordionItem>
