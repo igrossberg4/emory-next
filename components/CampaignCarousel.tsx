@@ -84,8 +84,8 @@ export default function CampaignCarousel(props:any) {
           })}
         </div>
       </div>
-      <PrevCampaignButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-      <NextCampaignButton onClick={scrollNext} enabled={nextBtnEnabled} />
+      {prevBtnEnabled ? <PrevCampaignButton onClick={scrollPrev} enabled={prevBtnEnabled} /> :''}
+      {nextBtnEnabled ? <NextCampaignButton onClick={scrollNext} enabled={nextBtnEnabled} /> : ''}
     </div>
   );
 }
