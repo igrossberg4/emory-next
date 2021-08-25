@@ -24,8 +24,18 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
             component: "DynamicComponentMatcher",
             props: {
                 view: [
+                    nodeBase.id === nodeFinded.id ? {
+                        component:'IntroPage',
+                        props: Object.assign({
+                            video_src: "video.mp4",
+                            text_play: "Begin\r\nyour\r\nexperience",
+                            text_skip: "Skip video",
+                            route_to: "/home",
+                          }, nodeFinded.page_props),
+                    } : 
                     {
                         component: "CarouselItem",
+                        // We assign the active prop for scale only this element.
                         props: Object.assign({ ...nodeFinded.page_props }, { active: true })
                     }
 
@@ -212,9 +222,9 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 }
             }
         }
-
+        console.log(pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path}/${nodeFinded.path}`)
         return {
-            path: pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path}/${nodeFinded.path}`,
+            path: pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path ? '/' : ''}${nodeFinded.path}`,
             meta: Object.assign({}, nodeFinded.metatag),
             view: [
                 menus,
@@ -226,6 +236,15 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             component: "DynamicComponentMatcher",
                             props: {
                                 view: [
+                                    pages_list.nodeBase.id === nodeFinded.id ? {
+                                        component:'IntroPage',
+                                        props: Object.assign({
+                                            video_src: "video.mp4",
+                                            text_play: "Begin\r\nyour\r\nexperience",
+                                            text_skip: "Skip video",
+                                            route_to: "/home",
+                                          }, nodeFinded.page_props),
+                                    }  : 
                                     {
                                         component: "CarouselItem",
                                         // We assign the active prop for scale only this element.

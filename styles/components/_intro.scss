@@ -7,6 +7,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.2s;
+
+  }
+  .video-intro{
+    //transform:translateX(0%);
+    //border-radius: 0%;    transition: all 0.1s;
+
+
+  }
+  .video-skipped{
+    transition: all 0.1s;
+
+    //border-radius: 50%;
+    video{
+      //border-radius: 50%;
+    }
   }
   .btn-begin-experience {
     background-color: $color-white;

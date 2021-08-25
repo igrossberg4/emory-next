@@ -12,7 +12,7 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         ...state,
         // We must provide some unique id based on key property and their value.
         videoStore: Object.assign(state.videoStore, {
-          [action.payload.key]: action.payload.value,
+          [action.payload.key]: state.videoStore[action.payload.key] ? Object.assign(action.payload.value, state.videoStore[action.payload.key]) : action.payload.value ,
         }),
       };
     case "TOGGLE_VIDEO":
