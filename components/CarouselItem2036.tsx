@@ -54,10 +54,10 @@ export default function CarouselItem2036(props: any) {
           <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
           <div className="header-inner-content">
             <div className="wrapper">
-            <motion.h1>2</motion.h1>
-              <div ref={(ref) => props?.onRefGet(ref)}>{props.children}</div>
-              <motion.h1>3</motion.h1>
-              <motion.h1>6</motion.h1>
+            <h1>2</h1>
+              <div className="header-inner-content__img image" ref={(ref) => props?.onRefGet(ref)}>{props.children}</div>
+              <h1>3</h1>
+              <h1>6</h1>
 
               <div className="header-inner-content__text">
                 <div className="pretitle text-label">{props.about}</div>

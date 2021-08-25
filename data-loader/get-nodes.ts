@@ -13,6 +13,16 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
             component: "DynamicComponentMatcher",
             props: {
                 view: [
+                    nodeBase.id === nodeFinded.id ? {
+                        component:'IntroPage',
+                        props: Object.assign({
+                            active:false,
+                            video_src: "video.mp4",
+                            text_play: "Begin\r\nyour\r\nexperience",
+                            text_skip: "Skip video",
+                            route_to: "/home",
+                          }, nodeFinded.page_props),
+                    } :
                     {
                         component: "CarouselItem",
                         props: nodeFinded.page_props
@@ -27,6 +37,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component:'IntroPage',
                         props: Object.assign({
+                            active:true,
                             video_src: "video.mp4",
                             text_play: "Begin\r\nyour\r\nexperience",
                             text_skip: "Skip video",
@@ -239,6 +250,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                     pages_list.nodeBase.id === nodeFinded.id ? {
                                         component:'IntroPage',
                                         props: Object.assign({
+                                            active:true,
                                             video_src: "video.mp4",
                                             text_play: "Begin\r\nyour\r\nexperience",
                                             text_skip: "Skip video",

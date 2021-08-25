@@ -78,7 +78,7 @@ export default function EmblaCarousel({
   };
   const changeRoute = useCallback(
     (route) => {
-      if (!route) return;
+      if (route == undefined) return;
       router.push(
         {
           pathname: route,

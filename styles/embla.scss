@@ -105,7 +105,22 @@ body.is-scrolled {
     }
   }
 }
-
+body.hide-lateral{
+  .embla_slide_present.no_selected{
+    //display: none;
+  }
+  .embla--carousel-navigation {
+    .embla__button {
+      display: none;
+    }
+  }
+  .header-menu.header-menu--schools{
+    display: none;
+  }
+  .header-menu.header-menu--main{
+    display: none;
+  }
+}
 // CAMPAIGN CAROUSEL
 .campaign-carousel {
   .campaign-carousel__title {

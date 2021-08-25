@@ -28,21 +28,24 @@ export default function Video(props: any) {
   return (
     <Fragment>
       <video
+              
               onPlay={() => {
                 if(props.onPlay){
                   props.onPlay();
                 }
               }}
               ref={(ref) => {
-                if(!videoRef.current)
-                {videoRef.current = ref as any;
-                dispatch({
+                videoRef.current = ref as any;
+                /*dispatch({
                   type: "REGISTER_VIDEO",
                   payload: {
                     key: props.video_src ? props.video_src : props.media_src,
                     value: { paused: true, muted: true, videoRef: ref, controls:controls },
                   },
-                });}
+                });*/
+                if(props.onVideoRef){
+                  props.onVideoRef(ref);
+                }
                 //props.onVideoRef(controls)
                 
               }}
