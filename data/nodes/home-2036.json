@@ -49,6 +49,32 @@
       }
     },
     {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key priority",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "body": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "read_more": "https://example.com",
+        "tags": [
+          {
+            "label": "A&S",
+            "url": "https://example.com"
+          },
+          {
+            "label": "Brain Health",
+            "url": "https://example.com"
+          }
+        ],
+        "layout": "left",
+        "img_src": "/images/2036_brain_health_neurons_blue.jpg",
+        "media_src": "/images/2036_brain_health_neurons_blue.jpg",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "image",
+        "media_header": "Image title",
+        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
       "component": "Quote",
       "props": {
         "text": "I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August."

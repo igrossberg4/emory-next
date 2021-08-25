@@ -1,0 +1,47 @@
+.text-image-header {
+  overflow: hidden;
+
+  .row {
+    justify-content: space-between;
+  }
+
+  .column-media {
+    z-index: 1;
+  }
+
+  .column-text {
+    @include media-breakpoint-up(md) {
+      margin-top: 170px;
+    }
+  }
+
+  .pretitle,
+  .title {
+    margin-bottom: $default-separation-sm;
+  }
+
+  .readmore {
+    margin-top: $default-separation-sm;
+  }
+
+  .text-image-header__line {
+    @include media-breakpoint-up(md) {
+      position: relative;
+      width: 100%;
+      height: 1px;
+      margin: 30px 0 40px;
+      z-index: -1;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 140%;
+        height: 135px;
+        background: url("../../public/images/line-left.svg") no-repeat center left;
+      }
+    }
+  }
+}
