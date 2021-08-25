@@ -7,7 +7,11 @@
   margin-left: auto;
   height: 100vh;
   margin-right: auto;
-
+  &.transitioning{
+    .actions{
+      display: none !important;
+    }
+  }
   &.page-carousel {
     min-width: 30vw;
 
@@ -42,6 +46,7 @@
   .no_selected {
     z-index: -1;
   }
+
 }
 
 .embla--carousel-navigation .embla__slide {
