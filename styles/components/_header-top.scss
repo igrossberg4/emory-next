@@ -163,7 +163,7 @@
 
     .title {
       @extend .header-xlarge;
-      margin: $grid-gutter-width/2 0;
+      margin: math.div($grid-gutter-width, 2) 0;
       //transform: scale(2);
     }
 
