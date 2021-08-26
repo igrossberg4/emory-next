@@ -2,10 +2,13 @@ import { IVideoController } from "./Store";
 
 const Reducer = (state: any, action: { payload: any; type: string }) => {
   switch (action.type) {
+    case 'CAROUSEL_NAV':
+      return {...state, comesFromCarousel: true}
     case "SET_NAV":
       return {
         ...state,
         route: action.payload,
+        comesFromCarousel:true
       };
     case 'VIDEO_PLAYED':
       localStorage.setItem('video_played', action.payload)

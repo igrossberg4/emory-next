@@ -126,30 +126,16 @@ export default function Home(props: any) {
   );
 }
 
-const introComponent = {
-  path: "",
-  skipTransitionAnimations: true,
-  meta: { title: "Emory intro", description: "Some description for intro" },
-  view: [
-    {
-      component: "IntroPage",
-      props: {
-        video_src: "video.mp4",
-        text_play: "Begin\r\nyour\r\nexperience",
-        text_skip: "Skip video",
-        route_to: "/home",
-      },
-    },
-  ],
-};
+
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
-export async function getStaticProps({ params }: { params: { path: [] } }) {
+export async function getStaticProps({ params, req }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
   const findPath = getNodes()
-    .paths.concat(introComponent as any)
+    .paths
     .find((value) => value.path === joinPath);
+  //console.log(joinPath)
   return {
     props: findPath,
     // Next.js will attempt to re-generate the page:
@@ -171,7 +157,7 @@ export async function getStaticPaths() {
     }))
   */
   const paths = getNodes()
-    .paths.concat(introComponent as any)
+    .paths
     .map((post) => ({
       params: { path: post.path.toString().split("/") },
     }));

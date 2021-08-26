@@ -9,7 +9,7 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
 function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any) {
     return pages.map(page => {
         const nodeFinded = nodes.find(node => page === node.id);
-        const path = nodeFinded.id === nodeBase.id ? `${nodeFinded.path == '' ? '/' : nodeBase.path}` : `${nodeBase.path}/${nodeFinded.path}`;
+        const path = nodeFinded.id === nodeBase.id ? `${nodeFinded.path == '' ? '/' : nodeFinded.path}` : `${nodeBase.path}/${nodeFinded.path}`;
         return actual.id !== nodeFinded.id ? {
             component: "DynamicComponentMatcher",
             props: {
@@ -17,11 +17,12 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component:'IntroPage',
                         props: Object.assign({
-                            active:false,
+                            active:true,
                             video_src: "video.mp4",
                             text_play: "Begin\r\nyour\r\nexperience",
                             text_skip: "Skip video",
                             route_to: "/home",
+                            path:path
                           }, nodeFinded.page_props),
                     } :
                     {
@@ -45,6 +46,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                             text_play: "Begin\r\nyour\r\nexperience",
                             text_skip: "Skip video",
                             route_to: "/home",
+                            path: path
                           }, nodeFinded.page_props),
                     } : 
                     {
@@ -84,7 +86,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
                             const link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: '/' + link
+                                link_to: link
                             }
                         }),
                         options_units: schoolMenu[0].units.map((value: any) => {
@@ -92,7 +94,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
                             const link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: '/' + link
+                                link_to:  link
                             }
                         }),
                     },
@@ -107,7 +109,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
 
                             return {
                                 title: link.title ? link.title : nodeFind.page_props.title,
-                                link_to: '/' + linkFound
+                                link_to:  linkFound
                             }
                         }),
                         social: mainMenu[0].social
@@ -122,16 +124,16 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
     const basePath = baseNode ? `${baseNode.path}/` : '';
     const prevNodeSelect = !lastNode ? nodes[nodes.length - 1] : lastNode;
     const nextNodeSelect = !nextNode ? nodes[0] : nextNode;
-    const previous_route = prevNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path}/${prevNodeSelect.path}`;
-    const next_route = nextNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path}/${nextNodeSelect.path}`;
+    const previous_route = prevNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path === '' ? prevNodeSelect.path : baseNode.path+'/'+prevNodeSelect.path}`;
+    const next_route = nextNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path === '' ? nextNodeSelect.path : baseNode.path+'/'+nextNodeSelect.path}`;
     return [
         {
             "component": "BottomNavigation",
             "props": {
                 "previous_title": prevNodeSelect?.page_props.header,
                 "next_title": nextNodeSelect?.page_props?.header,
-                "previous_route": '/' + previous_route,
-                "next_route": '/' + next_route
+                "previous_route": previous_route,
+                "next_route": next_route
             }
         },
         {
@@ -156,6 +158,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
                 component.props.items.forEach((item: any) => {
                     if (item.read_more && !re.test(item.read_more)) {
+
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === item.read_more && node.id === page) > -1);
                         const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
                         item.read_more = path;
@@ -184,7 +187,9 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         view: [
                             {
                                 component: "CarouselItem",
-                                props: prevNode.page_props
+                                props: Object.assign(prevNode.page_props,{
+                                    
+                                    path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`})
                             }
 
                         ]
@@ -198,7 +203,9 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             view: [
                                 {
                                     component: "CarouselItem",
-                                    props: previousNodeCloned.page_props
+                                    props: Object.assign(previousNodeCloned.page_props,{
+                                    
+                                        path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`})
                                 }
 
                             ]
@@ -213,7 +220,9 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         view: [
                             {
                                 component: "CarouselItem",
-                                props: nextNode.page_props
+                                props: Object.assign(nextNode.page_props,{
+                                
+                                    path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`})
                             }
 
                         ]
@@ -227,7 +236,9 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             view: [
                                 {
                                     component: "CarouselItem",
-                                    props: nextNodeCloned.page_props
+                                    props: Object.assign(nextNodeCloned.page_props,{
+                                    
+                                        path: nextNodeCloned.id === pages_list.nodeBase.id ? `${nextNodeCloned.path == '' ? '/' : nextNodeCloned.path}` : `${pages_list.nodeBase.path}/${nextNodeCloned.path}`})
                                 }
 
                             ]
@@ -236,9 +247,9 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 }
             }
         }
-        console.log(pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path}/${nodeFinded.path}`)
+        const path = pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path == '' ? '' : nodeFinded.path }` : `${pages_list.nodeBase.path == '' ? nodeFinded.path : pages_list.nodeBase.path+'/'+nodeFinded.path}`;
         return {
-            path: pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path}` : `${pages_list.nodeBase.path ? '/' : ''}${nodeFinded.path}`,
+            path: path,
             meta: Object.assign({}, nodeFinded.metatag),
             view: [
                 menus,
@@ -258,6 +269,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                             text_play: "Begin\r\nyour\r\nexperience",
                                             text_skip: "Skip video",
                                             route_to: "/home",
+                                            path: path === '' ? '/' : path
                                           }, nodeFinded.page_props),
                                     }  : 
                                     {

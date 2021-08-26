@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo, useContext } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { AnimatePresence, motion } from "framer-motion";
@@ -65,6 +65,7 @@ export default function EmblaCarousel({
     ? slides.findIndex((slide: any) => MD5(slide) === MD5(actual.actual))
     : 0;
   const [[page, direction], setPage] = useState([index, 1]);
+  const [state, dispatch] = useContext(Context) as any;
   const [isTransitioning, setTransitioning] = useState(false);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(
     page === 0 ? false : true
@@ -138,6 +139,7 @@ export default function EmblaCarousel({
                       target.className === "embla__container" &&
                       navigation === true
                     ) {
+                      dispatch({ type: "CAROUSEL_NAV", payload:true})
                       changeRoute(slides[page].props.view[0].props.path);
                     } else {
                       setTransitioning(false);

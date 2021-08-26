@@ -20,12 +20,8 @@ const normalize = (val: number, max: number, min: number) => {
 };
 
 export default function CarouselItem2036(props: any) {
-  const [animated, setAnimated] = useState(true);
   const [scroll, setScroll] = useState(0);
-  const listInnerRef = useRef();
-
   const prevScrollY = useRef(0);
-
   const [goingUp, setGoingUp] = useState(false);
 
   useEffect(() => {
@@ -47,13 +43,12 @@ export default function CarouselItem2036(props: any) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [goingUp, scroll]); // @ts-ignore
-  console.log(props);
   return (
     <Fragment>
       {true ? 
           <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
           <div className="header-inner-content">
-            <div className="wrapper">
+      
             <h1>2</h1>
               <div className="header-inner-content__img image" ref={(ref) => {}}>{props.children}</div>
               <h1>3</h1>
@@ -65,7 +60,7 @@ export default function CarouselItem2036(props: any) {
                 <div className="subtitle text-body--lg">{props.text}</div>
               </div>
             </div>
-          </div>
+
           <div className="actions">
             <div
               className="btn"

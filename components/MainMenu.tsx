@@ -28,7 +28,8 @@ export default function MainMenu(props: any) {
                   className="menu-main__link header-h2"
                   key={option.title}
                   onClick={() => {
-                    dispatch({ type: "SET_NAV", payload: option.link_to });
+                    console.log("EOOO", option.link_to)
+                    dispatch({ type: "SET_NAV", payload: option.link_to ? option.link_to :'/'});
                   }}
                 >
                   <Link href={option.link_to}>{option.title}</Link>
@@ -39,7 +40,7 @@ export default function MainMenu(props: any) {
                   <div
                     key={option.type}
                     onClick={() => {
-                      dispatch({ type: "SET_NAV", payload: option.link_to });
+                      dispatch({ type: "SET_NAV", payload: option.link_to ? option.link_to : '/'});
                     }}
                   >
                     <IconButton

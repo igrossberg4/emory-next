@@ -34,29 +34,13 @@ export default function IntroPage(props: any) {
     dispatch({ type: "VIDEO_PLAYED", payload:true})
     //setVideoCookie("video_played", "played")
   ,[dispatch]) 
-  const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played'; 
-  useEffect(() => {
-    const handleChange = () => {
-      console.log("Change", "LOCAL")
-    }
-    window.addEventListener("storage",handleChange);
-
-    return () => {
-      // When the component unmounts remove the event listener
-      window.removeEventListener("storage", handleChange);
-    };
-}, []);
+  const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played';
   const [playing, setPlaying] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [videoRef, setVideoRef] = useState<HTMLVideoElement>(undefined as any);
-  const [refChildren, setRefChildren] = useState(undefined);
   const reftoAnimation = useRef();
-  const router = useRouter();
-  const controls = useAnimation();
-  const actualVideo = state.videoStore[props.video_src] as IVideoController;
-  const [animated, setAnimated] = useState(true);
+
   const [scroll, setScroll] = useState(0);
-  const listInnerRef = useRef();
   const prevScrollY = useRef(0);
   const [goingUp, setGoingUp] = useState(false);
   useEffect(() => {
@@ -93,11 +77,10 @@ export default function IntroPage(props: any) {
 
 
     <AnimateSharedLayout>
-      {true ? <div
+      {process.browser ? <div
         id="container-video"
-
-        onTransitionEnd={() => {}}
-        className={`container-fit container-video-intro ${classVideo}`}
+        className={`container-fit container-video-intro 
+        ${!state.comesFromCarousel && props.active ? classVideo : ''}`}
       >
         {false ? (
           ""
@@ -139,10 +122,25 @@ export default function IntroPage(props: any) {
                   <Video
                     {...props}
                     onPlay={() => setPlaying(true)}
+                    onVideoEnd={()=>{
+                      const element = document.getElementById('container-video');
+                      if(element){
+                        element.classList.remove('video-no-played')
+                      }
+                      setVideoPlayed();
+                    }}
                     onVideoRef={(ref: HTMLVideoElement) => {
-                      if (!videoPlayed) {
+                      if (!videoPlayed && !props.active) {
                         document.body.classList.add("hide-lateral");
                       }
+                        setTimeout(() => {
+                          if(videoPlayed && ref?.readyState != 0){
+                            const element = document.getElementById('container-video');
+                            if(element){
+                              element.classList.remove('video-no-played')
+                            }
+                          }
+                        }, 2000);
                       setVideoRef(ref);
                     }}
                   ></Video>
@@ -173,6 +171,10 @@ export default function IntroPage(props: any) {
                           onClick={(e) => {
                             e.stopPropagation();
                             setSkipped(true);
+                            const element = document.getElementById('container-video');
+                            if(element){
+                              element.classList.remove('video-no-played')
+                            }
                             setVideoPlayed();
                           }}
                           animate={
