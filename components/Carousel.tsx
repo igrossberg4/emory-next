@@ -135,7 +135,7 @@ export default function EmblaCarousel({
                   var target = e.target as Element;
                   if (inView) {
                     if (
-                      target.className === "header-inner-content" &&
+                      target.className === "embla__container" &&
                       navigation === true
                     ) {
                       changeRoute(direction === 1 ? actual.next : actual.prev);

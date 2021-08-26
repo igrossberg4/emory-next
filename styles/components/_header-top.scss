@@ -14,16 +14,16 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    transition: transform 1s ease-in-out, opacity 2s ease-in-out, max-width 1s ease-in-out, margin-left 1s ease-in-out;
+    transition:
+            transform math.div($main-carousel-transition-duration, 2) ease-in-out,
+            opacity $main-carousel-transition-duration ease-in-out,
+            max-width math.div($main-carousel-transition-duration, 2) ease-in-out,
+            margin-left math.div($main-carousel-transition-duration, 2) ease-in-out;
     margin-left: 0;
     transform: translateX(0);
-    max-width: map-get($container-max-widths, lg);
+    //max-width: map-get($container-max-widths, lg);
+    max-width: 100%;
     z-index: 2;
-
-    @include media-breakpoint-up(lg) {
-      margin-left: 50%;
-      transform: translateX(-50%);
-    }
 
     .no_selected & {
       opacity: .3;
@@ -75,22 +75,12 @@
   background: transparent;
   transition: background 1s ease-in-out;
 
-  .wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100vw;
-  }
-
   .header-inner-content__img {
     position: absolute;
     bottom: 31.56%;
     flex-shrink: 0;
-    width: 315px;
-    height: 315px;
+    width: $round-image-size;
+    height: $round-image-size;
     margin: 0 auto $default-separation;
     border: 12px solid $color_white;
     border-radius: 50%;
@@ -99,8 +89,8 @@
     transition: all .6s ease-out;
 
     @include media-breakpoint-up(lg) {
-      width: 530px;
-      height: 530px;
+      width: $round-image-size-big;
+      height: $round-image-size-big;
     }
 
     .image {
@@ -146,8 +136,10 @@
   // ANIMATION ACTIVE
   &[data-animation="active"] {
     background: $body-bg;
-    overflow: hidden;
 
+    .header-inner-content {
+      overflow: hidden;
+    }
 
     .header-inner-content__img {
       //left: -5.56%;
@@ -173,7 +165,7 @@
 
     .title {
       @extend .header-xlarge;
-      margin: $grid-gutter-width/2 0;
+      margin: math.div($grid-gutter-width, 2) 0;
       //transform: scale(2);
     }
 
