@@ -70,8 +70,10 @@ p {
 }
 
 .text-cta {
+  padding-bottom: 2px;
   font-size: $font-size-sm;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  border-bottom: 1px solid $color_black;
 }

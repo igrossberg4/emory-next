@@ -3,8 +3,6 @@
 // Prefix for :root CSS variables
 $variable-prefix: bs- !default;
 
-
-
 $spacer: 1rem !default;
 $spacers: (
         0: 0,
@@ -105,6 +103,7 @@ $default-box-shadow--hover: -6px -6px 3px rgba(255, 255, 255, 0.5),
 
 $default-separation: 30px;
 $default-section-padding: 60px;
+$default-separation-sm: 20px;
 
 $round-image-size: 373px;
 $round-image-size-big: 580px;
