@@ -75,22 +75,12 @@
   background: transparent;
   transition: background 1s ease-in-out;
 
-  .wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100vw;
-  }
-
   .header-inner-content__img {
     position: absolute;
     bottom: 31.56%;
     flex-shrink: 0;
-    width: 315px;
-    height: 315px;
+    width: $round-image-size;
+    height: $round-image-size;
     margin: 0 auto $default-separation;
     border: 12px solid $color_white;
     border-radius: 50%;
@@ -99,8 +89,8 @@
     transition: all .6s ease-out;
 
     @include media-breakpoint-up(lg) {
-      width: 530px;
-      height: 530px;
+      width: $round-image-size-big;
+      height: $round-image-size-big;
     }
 
     .image {
