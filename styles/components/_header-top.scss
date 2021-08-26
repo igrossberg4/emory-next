@@ -21,13 +21,9 @@
             margin-left math.div($main-carousel-transition-duration, 2) ease-in-out;
     margin-left: 0;
     transform: translateX(0);
-    max-width: map-get($container-max-widths, lg);
+    //max-width: map-get($container-max-widths, lg);
+    max-width: 100%;
     z-index: 2;
-
-    @include media-breakpoint-up(lg) {
-      margin-left: 50%;
-      transform: translateX(-50%);
-    }
 
     .no_selected & {
       opacity: .3;
@@ -140,8 +136,10 @@
   // ANIMATION ACTIVE
   &[data-animation="active"] {
     background: $body-bg;
-    overflow: hidden;
 
+    .header-inner-content {
+      overflow: hidden;
+    }
 
     .header-inner-content__img {
       //left: -5.56%;

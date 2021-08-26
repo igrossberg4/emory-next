@@ -56,7 +56,6 @@ export default function CarouselItem(props: any) {
     // <motion.div className="content-header">
     <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
       <div className="header-inner-content">
-        <div className="wrapper">
           <div className="header-inner-content__img">
             <img src={props.img_src} alt={props.header} className="image"></img>
           </div>
@@ -65,7 +64,6 @@ export default function CarouselItem(props: any) {
             <h1 className="title header-h2">{props.header.toUpperCase()}</h1>
             <div className="subtitle text-body--lg">{props.text}</div>
           </div>
-        </div>
       </div>
       <div className="actions">
         <div
