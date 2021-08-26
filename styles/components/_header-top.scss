@@ -14,7 +14,11 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    transition: transform 1s ease-in-out, opacity 2s ease-in-out, max-width 1s ease-in-out, margin-left 1s ease-in-out;
+    transition:
+            transform math.div($main-carousel-transition-duration, 2) ease-in-out,
+            opacity $main-carousel-transition-duration ease-in-out,
+            max-width math.div($main-carousel-transition-duration, 2) ease-in-out,
+            margin-left math.div($main-carousel-transition-duration, 2) ease-in-out;
     margin-left: 0;
     transform: translateX(0);
     max-width: map-get($container-max-widths, lg);
