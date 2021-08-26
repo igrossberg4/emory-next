@@ -1,5 +1,6 @@
 import { useAnimation } from "framer-motion";
 import React, {createContext, useReducer} from "react";
+import { CookiesProvider, useCookies } from "react-cookie";
 import Reducer from './Reducer'
 
 export interface IVideoController{
@@ -16,7 +17,8 @@ export interface IStore{
 
 const initialState = {
     route:'',
-    videoStore:{}
+    videoStore:{},
+    videoPlayed:process.browser ? localStorage.getItem('video_played') : 'not'
 }
 
 const Store = ({children}:{children:any}) => {

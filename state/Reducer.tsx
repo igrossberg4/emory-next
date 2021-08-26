@@ -7,6 +7,12 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         ...state,
         route: action.payload,
       };
+    case 'VIDEO_PLAYED':
+      localStorage.setItem('video_played', action.payload)
+      return {
+        ...state,
+        videoPlayed: action.payload,
+      }
     case "REGISTER_VIDEO":
       return {
         ...state,

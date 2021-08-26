@@ -24,46 +24,41 @@ import { Context, IVideoController } from "../state/Store";
 import Video from "./Video";
 import CarouselItem2036 from "./CarouselItem2036";
 import IconButton from "./IconButton";
+import { CookiesProvider, useCookies } from "react-cookie";
 
 export default function IntroPage(props: any) {
   const [state, dispatch] = useContext(Context) as any;
-  const [videoPlayed, setVideoPlayed] = useState(
-    process.browser ? window.localStorage?.getItem("video_played") : "server"
-  );
-  console.log("Video is played", videoPlayed);
+  const videoPlayed = state.videoPlayed;
+  
+  const setVideoPlayed = useCallback(()=> 
+    dispatch({ type: "VIDEO_PLAYED", payload:true})
+    //setVideoCookie("video_played", "played")
+  ,[dispatch]) 
+  const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played'; 
+  useEffect(() => {
+    const handleChange = () => {
+      console.log("Change", "LOCAL")
+    }
+    window.addEventListener("storage",handleChange);
+
+    return () => {
+      // When the component unmounts remove the event listener
+      window.removeEventListener("storage", handleChange);
+    };
+}, []);
   const [playing, setPlaying] = useState(false);
   const [skipped, setSkipped] = useState(false);
-  const [videoRef, setVideoRef] = useState<HTMLVideoElement>(undefined);
+  const [videoRef, setVideoRef] = useState<HTMLVideoElement>(undefined as any);
   const [refChildren, setRefChildren] = useState(undefined);
   const reftoAnimation = useRef();
   const router = useRouter();
   const controls = useAnimation();
-  const onRefGet = (ref: HTMLDivElement) => {
-    if (reftoAnimation.current && videoRef && skipped) {
-      const getRect = reftoAnimation?.current.getBoundingClientRect();
-      console.log(getRect);
-      const bodyRect = document.body.getBoundingClientRect();
-      //videoRef.style.width = `${getRect.width}px`;
-      //videoRef.style.position = "absolute";
-      console.log(getRect);
-      //videoRef.style.transform = `translateX(${
-      //  getRect.left
-      //}px) translateY(${getRect.top}px)`;
-      //videoRef.style.height = "500px";
-      //videoRef.style.borderRadius = "50%";
-    }
-  };
   const actualVideo = state.videoStore[props.video_src] as IVideoController;
   const [animated, setAnimated] = useState(true);
   const [scroll, setScroll] = useState(0);
   const listInnerRef = useRef();
   const prevScrollY = useRef(0);
   const [goingUp, setGoingUp] = useState(false);
-  const videoPlayedCallback = useCallback(() => {
-    localStorage.setItem("video_played", true);
-    setVideoPlayed(localStorage.getItem("video_played"));
-  }, [setVideoPlayed]);
-
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY);
@@ -84,7 +79,7 @@ export default function IntroPage(props: any) {
         document
           .getElementById("container-video")
           ?.classList.remove("video-no-played");
-        videoPlayedCallback();
+          setVideoPlayed();
       } else {
         document.body.classList.remove("is-scrolled");
       }
@@ -94,32 +89,16 @@ export default function IntroPage(props: any) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [goingUp, scroll]); // @ts-ignore
-  console.log("PROPS", props)
   return (
+
+
     <AnimateSharedLayout>
-      aaa
-      {videoPlayed}
-      <div
+      {true ? <div
         id="container-video"
+
         onTransitionEnd={() => {}}
-        className={`container-fit container-video-intro ${
-          !videoPlayed && !props.active ? "video-no-played" : ""
-        } ${skipped} ${videoPlayed}`}
+        className={`container-fit container-video-intro ${classVideo}`}
       >
-        {/*
-          <Fragment>
-            {!videoPlayed ? (
-              <Video
-                {...props}
-                onPlay={() => setPlaying(true)}
-                onVideoRef={(ref: HTMLVideoElement) => {
-                  setVideoRef(ref);
-                }}
-              ></Video>
-            ) : (
-              ""
-            )}
-          </Fragment>*/}
         {false ? (
           ""
         ) : (
@@ -141,7 +120,7 @@ export default function IntroPage(props: any) {
             ) : (
               ""
             )}
-            <CarouselItem2036 {...props} onRefGet={onRefGet}>
+            <CarouselItem2036 {...props}>
               {
                 <div
                   onClick={(e) => {
@@ -155,7 +134,7 @@ export default function IntroPage(props: any) {
                     }
                   }}
                   //className="video-circle"
-                  ref={(ref) => (reftoAnimation.current = ref)}
+                  ref={(ref) => (reftoAnimation.current = ref as any)}
                 >
                   <Video
                     {...props}
@@ -168,7 +147,7 @@ export default function IntroPage(props: any) {
                     }}
                   ></Video>
                   <Fragment>
-                    {videoRef && !videoPlayed ? (
+                    {videoRef && !videoPlayed? (
                       <Fragment>
                         <motion.button
                           className="btn-begin-experience"
@@ -193,13 +172,8 @@ export default function IntroPage(props: any) {
                           className="btn-skip-intro"
                           onClick={(e) => {
                             e.stopPropagation();
-
-                            //router.push(props.route_to);
                             setSkipped(true);
-                            localStorage.setItem("video_played", "true");
-                            videoPlayedCallback();
-
-                            console.log("seteado skip");
+                            setVideoPlayed();
                           }}
                           animate={
                             skipped
@@ -226,7 +200,9 @@ export default function IntroPage(props: any) {
             </CarouselItem2036>
           </Fragment>
         )}
-      </div>
+      </div> : ''
+}
     </AnimateSharedLayout>
+
   );
 }

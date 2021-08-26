@@ -34,7 +34,7 @@ export default function Home(props: any) {
     initialWithRoute: {
       // Load new route in overlay
       //y: scroll < innerHeight ? scroll : innerHeight,
-      y:innerHeight,
+      y: innerHeight,
     },
     animateWithRoute: {
       // End transition overlay (new section)
@@ -56,7 +56,7 @@ export default function Home(props: any) {
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
-        <meta property="og:image"   content={props.meta.image}></meta>
+        <meta property="og:image" content={props.meta.image}></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="apple-touch-icon"
@@ -142,7 +142,6 @@ const introComponent = {
     },
   ],
 };
-
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in

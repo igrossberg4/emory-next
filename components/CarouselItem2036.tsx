@@ -55,7 +55,7 @@ export default function CarouselItem2036(props: any) {
           <div className="header-inner-content">
             <div className="wrapper">
             <h1>2</h1>
-              <div className="header-inner-content__img image" ref={(ref) => props?.onRefGet(ref)}>{props.children}</div>
+              <div className="header-inner-content__img image" ref={(ref) => {}}>{props.children}</div>
               <h1>3</h1>
               <h1>6</h1>
 
