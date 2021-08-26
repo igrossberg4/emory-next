@@ -91,12 +91,12 @@ export default function EmblaCarousel({
   );
 
   const scrollPrev = useCallback(() => {
-    if (page > 0 && !isTransitioning) {
+    if (page > 0) {
       paginate(-1);
     }
   }, [paginate, page]);
   const scrollNext = useCallback(() => {
-    if (page < slides.length - 1 && !isTransitioning) {
+    if (page < slides.length - 1) {
       paginate(1);
     }
   }, [paginate, page]);
@@ -138,7 +138,7 @@ export default function EmblaCarousel({
                       target.className === "embla__container" &&
                       navigation === true
                     ) {
-                      changeRoute(direction === 1 ? actual.next : actual.prev);
+                      changeRoute(slides[page].props.view[0].props.path);
                     } else {
                       setTransitioning(false);
                     }
