@@ -8,14 +8,17 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
 
 function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any) {
     return pages.map(page => {
-        const nodeFinded = nodes.find(node => page === node.id)
+        const nodeFinded = nodes.find(node => page === node.id);
+        const path = nodeFinded.id === nodeBase.id ? `${nodeFinded.path == '' ? '/' : nodeBase.path}` : `${nodeBase.path}/${nodeFinded.path}`;
         return actual.id !== nodeFinded.id ? {
             component: "DynamicComponentMatcher",
             props: {
                 view: [
                     {
                         component: "CarouselItem",
-                        props: nodeFinded.page_props
+                        props: Object.assign(nodeFinded.page_props, {
+                            path: path
+                        })
                     }
 
                 ]
