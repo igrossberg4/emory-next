@@ -1,0 +1,49 @@
+.text-large-image {
+  background-repeat: no-repeat;
+  background-position: center 70px;
+  background-size: 65%;
+  background-blend-mode: multiply;
+
+  @include media-breakpoint-up(md) {
+    background-position: 0 0;
+    background-size: 50%;
+  }
+
+  .header-container,
+  .body-container {
+    padding-bottom: $default-separation;
+    padding-top: $default-separation;
+  }
+
+  .title {
+    position: relative;
+    margin-left: 32px;
+    padding: 32px 0 32px 32px;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: $color_white;
+      box-shadow: $default-box-shadow;
+    }
+  }
+
+  .image-container {
+    margin-bottom: $default-separation;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      margin-right: -16.66666667%;
+    }
+  }
+}

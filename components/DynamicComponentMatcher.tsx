@@ -30,6 +30,7 @@ const CampaignCarousel = dynamic(()=> import('./CampaignCarousel'));
 const Audio = dynamic(()=> import('./Audio'));
 const Teaser = dynamic(()=> import('./Teaser'));
 const TextImageHeader = dynamic(()=> import('./TextImageHeader'));
+const TextLargeImage = dynamic(()=> import('./TextLargeImage'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -174,6 +175,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'TextImageHeader':
             return <TextImageHeader {...component.props} key={i.toString}></TextImageHeader>
+
+          case 'TextLargeImage':
+            return <TextLargeImage {...component.props} key={i.toString}></TextLargeImage>
 
           default:
             return "";
