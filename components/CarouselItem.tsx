@@ -79,7 +79,6 @@ export default function CarouselItem(props: any) {
           {" "}
           {props.button_scroll}
         </div>
-        <div className="line-separator line-separator--overflowed line-separator--half-height"></div>
       </div>
     </div>
     // </motion.div>

@@ -16,7 +16,12 @@
 
   &.transitioning{
     .actions{
-      display: none !important;
+      opacity: 0;
+    }
+    + #carouselContent {
+      .line-separator {
+        opacity: 0;
+      }
     }
   }
 

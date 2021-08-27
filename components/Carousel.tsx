@@ -204,6 +204,7 @@ export default function EmblaCarousel({
           layoutId={MD5(slides[page].props.view.slice(1))}
           id="carouselContent"
         >
+          <div className="line-separator line-separator--overflowed-top-1-3"></div>
           <DynamicComponentMatcher
             view={[
               {
