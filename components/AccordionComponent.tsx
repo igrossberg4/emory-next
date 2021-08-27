@@ -22,6 +22,7 @@ import {
   AccordionPanel,
 } from "@chakra-ui/react";
 import { Context } from "../state/Store";
+import Tag from "./Tag";
 
 export default function AccordionComponent(props: any) {
   const router = useRouter();

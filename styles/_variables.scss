@@ -16,10 +16,10 @@ $spacers: (
 
 $grid-breakpoints: (
         xs: 0,
-        //sm: 576px,
+        sm: 576px,
         md: 768px,
         lg: 992px,
-        //xl: 1200px,
+        xl: 1200px,
         //xxl: 1400px
 ) !default;
 
@@ -35,6 +35,7 @@ $container-max-widths: (
 $font-family-sans-serif: 'Pangram', sans-serif !default;
 $font-family-serif: 'Ampersand', serif !default;
 
+$rem-in-px: 16px !default;
 $font-size-base: 1.125rem !default; // 18px
 $font-size-xs: $font-size-base * 0.667; // 12px
 $font-size-sm: $font-size-base * .875 !default;
@@ -105,10 +106,13 @@ $default-separation: 30px;
 $default-section-padding: 60px;
 $default-separation-sm: 20px;
 
+$round-image-size-small: 280px;
 $round-image-size: 373px;
+$round-image-size-medium: 420px;
 $round-image-size-big: 580px;
 
 $icon-button-size: 64px;
 $icon-button-size--small: 48px;
 
-$main-carousel-transition-duration: 1.5s
+$main-carousel-transition-duration: 1.5s;
+$scroll-down-transition-duration: .6s;

@@ -7,6 +7,9 @@
   text-align: center;
 
   .teaser__image {
+    width: 272px;
+    height: 272px;
+    object-fit: cover;
     margin-bottom: 40px;
   }
 

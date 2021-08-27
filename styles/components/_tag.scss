@@ -1,0 +1,16 @@
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: $color_white;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tag {
+    margin: 0 15px 15px 0;
+  }
+}

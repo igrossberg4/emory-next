@@ -7,11 +7,24 @@
   margin-left: auto;
   height: 100vh;
   margin-right: auto;
+
+  // Workaround to not lost the scroll bar on
+  // desktop devices during the horizontal transition.
+  @media (hover: hover) {
+    height: 101vh;
+  }
+
   &.transitioning{
     .actions{
-      display: none !important;
+      opacity: 0;
+    }
+    + #carouselContent {
+      .line-separator {
+        opacity: 0;
+      }
     }
   }
+
   &.page-carousel {
     min-width: 30vw;
 
