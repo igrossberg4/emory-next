@@ -22,17 +22,21 @@ export default function Teaser(props: any) {
         ""
       )}
       {props.explore_link && props.internal_link ? (
+        <div
+        onClick={(e) => {
+          e.preventDefault();
+          dispatch({ type: "SET_NAV", payload: `${props.explore_link}` });
+          router.push(`${props.explore_link}`);
+        }}
+        >
         <a
-          onClick={(e) => {
-            e.preventDefault();
-            dispatch({ type: "SET_NAV", payload: `/${props.explore_link}` });
-            router.push(`/${props.explore_link}`);
-          }}
-          href={'/'+props.explore_link}
+
+          href={props.explore_link ? props.explore_link : '/'}
           className="teaser__link text-cta"
         >
           Explore
         </a>
+        </div>
       ) : (
         ""
       )}

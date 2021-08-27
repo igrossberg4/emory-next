@@ -19,11 +19,11 @@ function BottomNavigation(props: any) {
         <div className="row">
           <div className="col-md-6"
             onClick={(e) => {
-              dispatch({ type: "SET_NAV", payload: props.previous_route });
+              dispatch({ type: "SET_NAV", payload: '/'+props.previous_route });
             }}
           >
             <div className="inner-wrapper">
-              <Link href={props.previous_route}>
+              <Link href={props.previous_route === '' ? '/' : props.previous_route } scroll={false}>
                 <a className="pre-title text-label">Previous</a>
               </Link>
               <h6 className="title header-h2"><Link href={props.previous_route}>{props.previous_title.toUpperCase()}</Link></h6>
@@ -32,7 +32,7 @@ function BottomNavigation(props: any) {
           </div>
           <div className="col-md-6"
             onClick={(e) => {
-              dispatch({ type: "SET_NAV", payload: props.next_route });
+              dispatch({ type: "SET_NAV", payload: '/'+ props.next_route });
             }}
           >
             <div className="inner-wrapper">
@@ -40,7 +40,7 @@ function BottomNavigation(props: any) {
                 <a className="pre-title text-label">Next</a>
               </Link>
               <h6 className="title header-h2"><Link href={props.next_route}>{props.next_title.toUpperCase()}</Link></h6>
-              <IconButton link={props.next_route} icon="chevron-right"></IconButton>
+              <IconButton link={props.next_route === '' ? '/' : props.next_route} icon="chevron-right"></IconButton>
             </div>
           </div>
         </div>

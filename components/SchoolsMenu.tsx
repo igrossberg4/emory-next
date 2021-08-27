@@ -31,7 +31,7 @@ export default function SchoolsMenu(props: any) {
                         className="menu-schools__link text-label"
                         key={option.title}
                         onClick={() => {
-                          dispatch({ type: "SET_NAV", payload: option.link_to });
+                          dispatch({ type: "SET_NAV", payload: option.link_to ? option.link_to : '/'});
                         }}
                       >
                         <Link href={option.link_to}>{option.title}</Link>
@@ -45,7 +45,7 @@ export default function SchoolsMenu(props: any) {
                           className="menu-schools__link text-label"
                           key={option.title}
                           onClick={() => {
-                            dispatch({ type: "SET_NAV", payload: option.link_to });
+                            dispatch({ type: "SET_NAV", payload:  option.link_to ? option.link_to : '/' });
                           }}
                         >
                           <Link href={option.link_to}>{option.title}</Link>

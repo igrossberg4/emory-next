@@ -32,14 +32,6 @@ export default function CircleContentWrapper(props:any) {
       className="circle-wrapper" style={{maxWidth: '400px',  margin:'0 auto', border:'1px solid', position:'absolute', top:'50%'}}>
         {props.children}
       </motion.div>
-      <motion.div
-                    //enter={{opacity:1}}
-                    animate={{opacity:1, width:'400px', height:'400px'}}
-                    layoutId="mainMedia"
-                    layout
-      >
-      {props.children}
-      </motion.div>
     </Fragment>
   );
 }

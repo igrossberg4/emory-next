@@ -126,6 +126,16 @@
       width: $round-image-size-big;
       padding-top: $round-image-size-big;
     }
+    video{
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index:20;
+    }
   }
 
   .header-inner-content__text {
