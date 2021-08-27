@@ -3,6 +3,7 @@
   background-position: center 70px;
   background-size: 65%;
   background-blend-mode: multiply;
+  overflow: hidden;
 
   @include media-breakpoint-up(md) {
     background-position: 0 0;

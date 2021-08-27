@@ -1,0 +1,248 @@
+.content-header__container.header-2036 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 40px 0 100px 0;
+  text-align: center;
+  background: url("../../public/images/2036-bg.jpg") no-repeat center bottom;
+  background-size: cover;
+
+  .header-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition:
+      transform math.div($main-carousel-transition-duration, 2) ease-in-out,
+      opacity $main-carousel-transition-duration ease-in-out,
+      max-width math.div($main-carousel-transition-duration, 2) ease-in-out,
+      margin-left math.div($main-carousel-transition-duration, 2) ease-in-out;
+    margin-left: 0;
+    transform: translateX(0);
+    //max-width: map-get($container-max-widths, lg);
+    max-width: 100%;
+    z-index: 2;
+
+    .no_selected & {
+      opacity: .3;
+      max-width: $round-image-size-big;
+    }
+
+    .first & {
+      margin-left: 0;
+      transform: translateX(50px);
+
+      @media (min-width: $round-image-size-big) {
+        margin-left: calc(100% - #{$round-image-size-big});
+        transform: translateX(100px);
+      }
+    }
+
+    .last & {
+      margin-left: 0;
+      transform: translateX(-50px);
+
+      @media (min-width: $round-image-size-big) {
+        transform: translateX(-100px);
+      }
+    }
+  }
+
+  .header-inner-content__img {
+    .image {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  .pretitle,
+  .subtitle {
+    &:empty {
+      display: none;
+    }
+  }
+
+  .actions {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all math.div($main-carousel-transition-duration, 3) ease-out;
+    padding-bottom: $default-separation;
+  }
+
+  .btn {
+    margin-bottom: math.div($default-separation, 2);
+  }
+}
+
+.header-2036__title {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+
+  > span {
+    margin: 0 45px;
+  }
+
+  .header-2036__title__3 {
+    margin-left: 300px;
+  }
+
+  svg {
+    overflow: visible;
+
+    path {
+      filter:
+        drop-shadow(-3px -3px 6px rgba(255, 255, 255, .5))
+        drop-shadow(2px 2px 6px rgba(95, 92, 89, .12))
+        drop-shadow(4px 4px 11px rgba(177, 167, 162, .4));
+    }
+  }
+}
+
+// Scroll Animation
+.header-2036.content-header__container {
+  transition: background $scroll-down-transition-duration ease-in-out;
+
+  .header-inner-content__img {
+    position: absolute;
+    bottom: 50%;
+    max-width: unset;
+    width: 268px;
+    padding-top: 268px;
+    margin-bottom:  $h2-font-size + math.div($default-separation, $rem-in-px);
+    transform: translate(0, 50%);
+    box-sizing: content-box;
+    z-index: 10;
+    will-change: width, padding;
+    transition:
+            width $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
+            padding-top $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
+            opacity math.div($scroll-down-transition-duration, 2) ease-out,
+            bottom math.div($scroll-down-transition-duration, 2) ease-out,
+            transform math.div($scroll-down-transition-duration, 2) ease-out,
+            margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;
+
+    @include media-breakpoint-up(sm) {
+      width: 268px;
+      padding-top: 268px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 268px;
+      padding-top: 268px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 268px;
+      padding-top: 268px;
+    }
+
+    video{
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index:20;
+    }
+  }
+
+  .header-inner-content__text {
+    position: relative;
+    z-index: 1;
+    padding-left: math.div($grid-gutter-width, 2);
+    padding-right: math.div($grid-gutter-width, 2);
+    padding-top: $round-image-size-small + $default-separation;
+    max-width: map-get($container-max-widths, 'lg');
+    transition: all $scroll-down-transition-duration ease-out;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: $round-image-size + $default-separation;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: $round-image-size-medium + $default-separation;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: $round-image-size-big + $default-separation;
+    }
+  }
+
+  .title {
+    transition: all math.div($scroll-down-transition-duration, 2) ease-out;
+  }
+
+  .pretitle,
+  .subtitle {
+    opacity: 0;
+    transition: all math.div($scroll-down-transition-duration, 2) ease-out;
+  }
+
+  // ANIMATION ACTIVE
+  &[data-animation="active"] {
+    background: $body-bg;
+
+    .header-inner-content {
+      overflow: hidden;
+    }
+
+    .header-inner-content__img {
+      bottom: math.div($default-separation, 3);
+      width: 110vw;
+      padding-top: 110vw;
+      transform: translate(0);
+      margin-bottom: 0;
+      opacity: .5;
+      transition:
+        width $scroll-down-transition-duration ease-out,
+        padding-top $scroll-down-transition-duration ease-out,
+        opacity math.div($scroll-down-transition-duration, 2) ease-out,
+        bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
+        transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
+        margin-bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-out;
+
+      @media (orientation: portrait) {
+        width: 110vh;
+        padding-top: 110vh;
+      }
+    }
+
+    .header-inner-content__text {
+      padding-top: math.div($round-image-size + $default-separation, 3);
+
+      @include media-breakpoint-up(lg) {
+        padding-top: math.div($round-image-size-big + $default-separation, 3);
+     }
+    }
+
+    .title {
+      @extend .header-xlarge;
+      margin: math.div($grid-gutter-width, 2) 0;
+    }
+
+    .pretitle,
+    .subtitle {
+      opacity: 1;
+    }
+  }
+}
