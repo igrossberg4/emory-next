@@ -6,7 +6,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import { Box, Container } from "@chakra-ui/react";
@@ -39,13 +38,12 @@ export default function CarouselItem(props: any) {
 
       prevScrollY.current = currentScrollY;
 
-      if (currentScrollY > 25) {
+      if (currentScrollY >= 25 && !document.body.classList.contains('is-scrolled')) {
         document.body.classList.add('is-scrolled');
       }
-      else {
+      else if (currentScrollY < 25 && document.body.classList.contains('is-scrolled')) {
         document.body.classList.remove('is-scrolled');
       }
-
     };
 
     window.addEventListener("scroll", handleScroll, { passive: false });
@@ -56,7 +54,7 @@ export default function CarouselItem(props: any) {
     // <motion.div className="content-header">
     <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
       <div className="header-inner-content">
-          <div className="header-inner-content__img">
+          <div className="header-inner-content__img round-wp">
             <img src={props.img_src} alt={props.header} className="image"></img>
           </div>
           <div className="header-inner-content__text">
