@@ -59,11 +59,12 @@ export default function AccordionComponent(props: any) {
                     <div
                       onClick={(e) => {
                         e.preventDefault();
+                        const linkPrepared = item.read_more[0] !== '/' ? `/${item.read_more}` : item.read_more 
                         dispatch({
                           type: "SET_NAV",
-                          payload: `/${item.read_more}`,
+                          payload: linkPrepared,
                         });
-                        router.push(`${item.read_more}`);
+                        router.push(`${item.read_more ? item.read_more : '/'}`);
                       }}
                     >
                       <a

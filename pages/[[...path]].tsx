@@ -13,13 +13,12 @@ import { getNodes } from "../data-loader/get-nodes";
 export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
-  const [innerHeight, setInnerHeight] = useState(0);
+  const [innerHeight, setInnerHeight] = useState(process.browser ? window.innerHeight : 0);
 
   // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
   const spring = {
     duration: 0.35,
   };
-
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY);
     setInnerHeight(window.innerHeight);
@@ -91,7 +90,6 @@ export default function Home(props: any) {
               }
             }}
             key={router.asPath}
-            // layout={true}
             transition={spring}
             // Need to type as any because not all variants have the same properties and brings errors on build.
             variants={variants as any}
@@ -130,7 +128,7 @@ export default function Home(props: any) {
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
-export async function getStaticProps({ params, req }: { params: { path: [] } }) {
+export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
   const findPath = getNodes()
     .paths
@@ -161,6 +159,7 @@ export async function getStaticPaths() {
     .map((post) => ({
       params: { path: post.path.toString().split("/") },
     }));
+  console.log(JSON.stringify(paths));
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.

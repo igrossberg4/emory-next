@@ -25,7 +25,8 @@ export default function Teaser(props: any) {
         <div
         onClick={(e) => {
           e.preventDefault();
-          dispatch({ type: "SET_NAV", payload: `${props.explore_link}` });
+          const linkPrepared =props.explore_link[0] !== '/' ? `/${props.explore_link}` : props.explore_link
+          dispatch({ type: "SET_NAV", payload: linkPrepared });
           router.push(`${props.explore_link}`);
         }}
         >

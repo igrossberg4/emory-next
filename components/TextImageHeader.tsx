@@ -7,6 +7,7 @@ import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 import Tag from "./Tag";
+import { MD5 } from "object-hash";
 
 export default function TextImageHeader(props:any) {
   return (
@@ -20,7 +21,7 @@ export default function TextImageHeader(props:any) {
               {props.tags &&
                 <div className="tags">
                   {props?.tags.map((tag: any, index: number) => {
-                    return <Tag label={tag.label} url={tag.url}></Tag>
+                    return <Tag key={MD5(tag) + index.toString()} label={tag.label} url={tag.url} {...tag}></Tag>
                   })}
                 </div>
               }

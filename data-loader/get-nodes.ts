@@ -156,6 +156,14 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         item.read_more = path;
                         item.internal_link = true;
                     }
+                    item?.tags?.forEach((tag:any) =>{
+                        if(tag.url && !re.test(tag.url)){
+                            const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            tag.url = path;
+                            tag.internal_link = true;
+                        }
+                    })
                 })
             }
             if (component.component === 'CampaignCarousel') {
@@ -170,7 +178,20 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     }
                 })
             }
+            if(component.component === 'TextImageHeader'){
+                const re = new RegExp("^(http|https)://", "i");
+                component.props?.tags?.forEach((tag:any) =>{
+                    if(tag.url && !re.test(tag.url)){
+                        const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
+                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                        tag.url = path;
+                        tag.internal_link = true;
+                    }
+                })
+
+            }
         });
+
         if (i === 0 || i === pages.length - 1) {
             if (i === 0) {
                 slides.unshift({
