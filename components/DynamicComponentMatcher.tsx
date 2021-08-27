@@ -31,6 +31,7 @@ const Audio = dynamic(()=> import('./Audio'));
 const Teaser = dynamic(()=> import('./Teaser'));
 const TextImageHeader = dynamic(()=> import('./TextImageHeader'));
 const TextLargeImage = dynamic(()=> import('./TextLargeImage'));
+const Tag = dynamic(()=> import('./Tag'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -178,6 +179,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'TextLargeImage':
             return <TextLargeImage {...component.props} key={i.toString}></TextLargeImage>
+
+          case 'Tag':
+            return <Tag {...component.props} key={i.toString}></Tag>
 
           default:
             return "";

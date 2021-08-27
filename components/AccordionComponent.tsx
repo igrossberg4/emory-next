@@ -22,6 +22,7 @@ import {
   AccordionPanel,
 } from "@chakra-ui/react";
 import { Context } from "../state/Store";
+import Tag from "./Tag";
 
 export default function AccordionComponent(props: any) {
   const router = useRouter();
@@ -52,7 +53,13 @@ export default function AccordionComponent(props: any) {
                     router.push(`/${item.read_more}`)
                   }}
                   href={'/'+item.read_more} className="readmore text-cta">Read more</a>}
-
+                  {item.tags &&
+                    <div className="tags">
+                      {item?.tags?.map((tag: any, index: number) => {
+                        return <Tag label={tag.label} url={tag.url}></Tag>
+                      })}
+                    </div>
+                  }
                 </AccordionPanel>
               </AccordionItem>
             );
