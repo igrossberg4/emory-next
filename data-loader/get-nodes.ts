@@ -17,11 +17,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component:'IntroPage',
                         props: Object.assign({
-                            active:true,
-                            video_src: "video.mp4",
-                            text_play: "Begin\r\nyour\r\nexperience",
-                            text_skip: "Skip video",
-                            route_to: "/home",
+                            active:false,
                             path:path
                           }, nodeFinded.page_props),
                     } :
@@ -42,10 +38,6 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                         component:'IntroPage',
                         props: Object.assign({
                             active:true,
-                            video_src: "video.mp4",
-                            text_play: "Begin\r\nyour\r\nexperience",
-                            text_skip: "Skip video",
-                            route_to: "/home",
                             path: path
                           }, nodeFinded.page_props),
                     } : 
@@ -185,6 +177,13 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     component: "DynamicComponentMatcher",
                     props: {
                         view: [
+                            pages_list.nodeBase.id === prevNode.id ? {
+                                component:'IntroPage',
+                                props: Object.assign({
+                                    active:false,
+                                    path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
+                                  }, prevNode.page_props),
+                            } :
                             {
                                 component: "CarouselItem",
                                 props: Object.assign(prevNode.page_props,{
@@ -201,6 +200,13 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         component: "DynamicComponentMatcher",
                         props: {
                             view: [
+                                pages_list.nodeBase.id === previousNodeCloned.id ? {
+                                    component:'IntroPage',
+                                    props: Object.assign({
+                                        active:false,
+                                        path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
+                                      }, previousNodeCloned.page_props),
+                                } :
                                 {
                                     component: "CarouselItem",
                                     props: Object.assign(previousNodeCloned.page_props,{
@@ -218,6 +224,13 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     component: "DynamicComponentMatcher",
                     props: {
                         view: [
+                            pages_list.nodeBase.id === nextNode.id ? {
+                                component:'IntroPage',
+                                props: Object.assign({
+                                    active:false,
+                                    path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
+                                  }, nextNode.page_props),
+                            } :
                             {
                                 component: "CarouselItem",
                                 props: Object.assign(nextNode.page_props,{
@@ -230,15 +243,23 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 });
                 if (pages.length > 2) {
                     const nextNodeCloned = nodes.find(node => node.id === pages[0 + 1]);
+                    const path = nextNodeCloned.id === pages_list.nodeBase.id ? `${nextNodeCloned.path == '' ? '/' : nextNodeCloned.path}` : `${pages_list.nodeBase.path}/${nextNodeCloned.path}`;
                     slides.push({
                         component: "DynamicComponentMatcher",
                         props: {
                             view: [
+                                pages_list.nodeBase.id === nextNodeCloned.id ? {
+                                    component:'IntroPage',
+                                    props: Object.assign({
+                                        active:true,
+                                        path: path === '' ? '/' : path
+                                      }, nextNodeCloned.page_props),
+                                } :
                                 {
                                     component: "CarouselItem",
                                     props: Object.assign(nextNodeCloned.page_props,{
                                     
-                                        path: nextNodeCloned.id === pages_list.nodeBase.id ? `${nextNodeCloned.path == '' ? '/' : nextNodeCloned.path}` : `${pages_list.nodeBase.path}/${nextNodeCloned.path}`})
+                                        path: path})
                                 }
 
                             ]
@@ -265,10 +286,6 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                         component:'IntroPage',
                                         props: Object.assign({
                                             active:true,
-                                            video_src: "video.mp4",
-                                            text_play: "Begin\r\nyour\r\nexperience",
-                                            text_skip: "Skip video",
-                                            route_to: "/home",
                                             path: path === '' ? '/' : path
                                           }, nodeFinded.page_props),
                                     }  : 
