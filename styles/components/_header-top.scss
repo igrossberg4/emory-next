@@ -15,10 +15,10 @@
     justify-content: center;
     height: 100%;
     transition:
-            opacity $main-carousel-transition-duration math.div($main-carousel-transition-duration, 3) ease-in-out,
-            transform math.div($main-carousel-transition-duration, 2) ease-in-out,
-            max-width $main-carousel-transition-duration linear,
-            margin-left $main-carousel-transition-duration linear;
+      opacity $main-carousel-transition-duration math.div($main-carousel-transition-duration, 3) ease-in-out,
+      transform math.div($main-carousel-transition-duration, 2) ease-in-out,
+      max-width $main-carousel-transition-duration linear,
+      margin-left $main-carousel-transition-duration linear;
     margin-left: 0;
     transform: translateX(0);
     //max-width: map-get($container-max-widths, lg);
@@ -118,14 +118,14 @@
     bottom: 50%;
     max-width: unset;
     width: $round-image-size-small;
-    padding-top: $round-image-size-small;
+    height: $round-image-size-small;
     margin-bottom:  $h2-font-size + math.div($default-separation, $rem-in-px);
     margin-bottom:  $h2-font-size;
     transform: translate(0, 50%);
     box-sizing: border-box;
     transition:
             width $scroll-down-transition-duration linear,
-            padding-top $scroll-down-transition-duration linear,
+            height $scroll-down-transition-duration linear,
             opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
             bottom $scroll-down-transition-duration linear,
             transform $scroll-down-transition-duration linear,
@@ -133,7 +133,7 @@
 
     @include media-breakpoint-up(sm) {
       width: $round-image-size;
-      padding-top: $round-image-size;
+      height: $round-image-size;
     }
     @include media-breakpoint-up(md){
       margin-bottom:  $h2-font-size--desktop + math.div($default-separation, $rem-in-px);
@@ -141,11 +141,11 @@
     }
     @include media-breakpoint-up(lg) {
       width: $round-image-size-medium;
-      padding-top: $round-image-size-medium;
+      height: $round-image-size-medium;
     }
     @include media-breakpoint-up(xl) {
       width: $round-image-size-big;
-      padding-top: $round-image-size-big;
+      height: $round-image-size-big;
     }
 
     //video{
@@ -201,14 +201,14 @@
     .header-inner-content__img {
       bottom: -73px;
       width: 110vw;
-      padding-top: 110vw;
+      height: 110vw;
       transform: translate(0);
       margin-bottom: 0;
       opacity: .5;
 
       @media (orientation: portrait) {
         width: 110vh;
-        padding-top: 110vh;
+        height: 110vh;
       }
     }
 

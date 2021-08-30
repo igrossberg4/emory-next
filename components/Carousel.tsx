@@ -106,7 +106,6 @@ export default function EmblaCarousel({
     <div>
       <div
         className={`embla embla--carousel-navigation ${!navigation ? "page-carousel" : ""} ${index !== page? 'transitioning' : ''}`}
-        key="id-test"
       >
         <AnimatePresence>
           <div ref={refViewport} className="embla__viewport" key={"viewPort"}>
