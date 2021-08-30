@@ -19,14 +19,22 @@ import {
 import { Context } from "../state/Store";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
+import ReactPlayer from "react-player"
 
 export default function Video(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
   const videoRef = useRef<HTMLVideoElement | undefined>(undefined);
   const controls = useAnimation();
+  const media_src = props.video_src ? props.video_src : props.media_src;
+  const re = new RegExp("^(http|https)://", "i");
+ 
+  <ReactPlayer
+  url="https://vimeo.com/3155182"
+/>
   return (
     <Fragment>
+      {!re.test(media_src)  ? 
       <video
               
               onPlay={() => {
@@ -77,8 +85,14 @@ export default function Video(props: any) {
 */
 
       >
-        <source src={props.video_src ? props.video_src : props.media_src} type="video/mp4"></source>
-      </video>
+        <source src={media_src} type="video/mp4"></source>
+      </video> 
+      :      <ReactPlayer
+      light={true}
+      controls
+      url={media_src}
+    />
+}
     </Fragment>
   );
 }

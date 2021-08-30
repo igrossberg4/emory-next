@@ -27,6 +27,7 @@
     "react-dom": "17.0.2",
     "react-draggable": "^4.4.3",
     "react-intersection-observer": "^8.32.0",
+    "react-player": "^2.9.0",
     "react-responsive": "^9.0.0-beta.3",
     "react-responsive-carousel": "^3.2.20",
     "sass": "^1.36.0",
