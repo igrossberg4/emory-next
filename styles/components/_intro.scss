@@ -1,23 +1,29 @@
-
 // Intro page.
 .container-video-intro {
-  &.video-no-played{
-    .header-inner-content__img{
-      width: 100%;
-      height: 100%;
+  &.video-no-played {
+
+    .header-inner-content__img {
+      width: 100% !important;
+      height: 100% !important;
       border-radius:0%;
+      z-index: 999 !important;
     }
+
     .header-inner-content__img.image{
       //position: relative;
     }
+
     .content-header__container{
       border-radius: 0%;
+
       &.wrapper{
         height: 100vh;
       }
     }
   }
+
   position: relative;
+
   .mute_button {
     margin-bottom: 5rem;
 

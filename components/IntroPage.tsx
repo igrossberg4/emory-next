@@ -29,11 +29,11 @@ import { CookiesProvider, useCookies } from "react-cookie";
 export default function IntroPage(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   const videoPlayed = state.videoPlayed;
-  
-  const setVideoPlayed = useCallback(()=> 
+
+  const setVideoPlayed = useCallback(()=>
     dispatch({ type: "VIDEO_PLAYED", payload:true})
     //setVideoCookie("video_played", "played")
-  ,[dispatch]) 
+  ,[dispatch])
   const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played';
   const [playing, setPlaying] = useState(false);
   const [skipped, setSkipped] = useState(false);
@@ -79,7 +79,7 @@ export default function IntroPage(props: any) {
     <AnimateSharedLayout>
       {process.browser ? <div
         id="container-video"
-        className={`container-fit container-video-intro 
+        className={`container-fit container-video-intro
         ${!state.comesFromCarousel && props.active ? classVideo : ''}`}
       >
         {false ? (

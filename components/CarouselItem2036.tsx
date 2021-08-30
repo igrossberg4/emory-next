@@ -71,7 +71,7 @@ export default function CarouselItem2036(props: any) {
 
             <div className="header-inner-content__text">
               <div className="pretitle text-label">{props.about}</div>
-              <h1 className="title header-h2">{props.header.toUpperCase()}</h1>
+              <h1 className="title">{props.header.toUpperCase()}</h1>
               <div className="subtitle text-body--lg">{props.text}</div>
             </div>
           </div>

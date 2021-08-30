@@ -2,12 +2,12 @@
   "id": "home-2036",
   "type": "collection",
   "page_props": {
-    "header": "Building on Emory's commitment to serve humanity",
+    "header": "The Future Starts Here",
     "button_scroll": "Scroll to explore",
     "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
     "video_src": "video.mp4",
-                                            "text_play": "Begin\r\nyour\r\nexperience",
-                                            "text_skip": "Skip video"
+    "text_play": "Begin\r\nyour\r\nexperience",
+    "text_skip": "Skip video"
   },
   "path": "",
   "metatag": {
