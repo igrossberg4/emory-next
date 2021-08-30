@@ -30,11 +30,17 @@ export default function IntroPage(props: any) {
   const [state, dispatch] = useContext(Context) as any;
   const videoPlayed = state.videoPlayed;
 
-  const setVideoPlayed = useCallback(()=>
+  const setVideoPlayed = useCallback(()=>{
     dispatch({ type: "VIDEO_PLAYED", payload:true})
+    document.body.classList.remove('full_video');
+
+  }    
     //setVideoCookie("video_played", "played")
   ,[dispatch])
   const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played';
+  if(!videoPlayed) {
+    document.body.classList.add('full_video');
+  }
   const [playing, setPlaying] = useState(false);
   const [skipped, setSkipped] = useState(false);
   const [videoRef, setVideoRef] = useState<HTMLVideoElement>(undefined as any);
@@ -126,6 +132,7 @@ export default function IntroPage(props: any) {
                       const element = document.getElementById('container-video');
                       if(element){
                         element.classList.remove('video-no-played')
+                        
                       }
                       setVideoPlayed();
                     }}
