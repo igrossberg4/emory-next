@@ -187,7 +187,13 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         tag.url = path;
                         tag.internal_link = true;
                     }
-                })
+                });
+                if(component.props.read_more && !re.test(component.props.read_more)){
+                    const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === component.props.read_more && node.id === page) > -1);
+                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                        component.props.read_more = path;
+                        component.props.internal_link = true;
+                }
 
             }
         });

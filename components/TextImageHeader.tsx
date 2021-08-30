@@ -10,6 +10,8 @@ import Tag from "./Tag";
 import { MD5 } from "object-hash";
 
 export default function TextImageHeader(props:any) {
+  const router = useRouter();
+  const [state, dispatch] = useContext(Context) as any;
   return (
     <div className={`section text-image-header ${props.layout === "left" ? "layout-left" : "layout-right"}`}>
         <div className="container">
@@ -28,7 +30,26 @@ export default function TextImageHeader(props:any) {
               <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text}></MediaWithExpantion>
               <div className="text-image-header__line"></div>
               <div className="body" dangerouslySetInnerHTML={{__html:props.body}}></div>
-              {props.read_more && <a href={props.read_more} className="readmore text-cta">Read more</a>}
+              {props.read_more && !props.internal_link && 
+              <div>
+              <a href={props.read_more} className="readmore text-cta">Read more</a>
+              </div>}
+              {props.read_more && !props.internal_link && 
+              <div
+              onClick={(e) => {
+
+                e.preventDefault();
+                const linkPrepared = props.read_more[0] !== '/' ? `/${props.read_more}` : props.read_more 
+                dispatch({
+                  type: "SET_NAV",
+                  payload: linkPrepared,
+                });
+                router.push(`${props.read_more ? props.read_more : '/'}`);
+              }}
+              >
+              <a href={props.read_more} className="readmore text-cta">Read more</a>
+              </div>}
+
             </div>
           </div>
         </div>
