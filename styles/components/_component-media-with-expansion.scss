@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  
+
     .close-popup {
       position: absolute;
       right: math.div($default-separation, 2);
@@ -26,15 +26,26 @@
 
     figure {
       max-height: 50vh;
+
       img {
         height: 100%;
         width: 100%;
         object-fit: contain;
       }
+
       video{
         max-width: 900px;
         width: 100%;
       }
+    }
+
+    .overlay__text {
+      margin: 20px auto;
+      max-width: map-get($container-max-widths, 'md');
+    }
+
+    .title {
+      margin: 20px auto;
     }
   }
 }

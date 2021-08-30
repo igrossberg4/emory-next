@@ -166,7 +166,7 @@
     padding-left: math.div($grid-gutter-width, 2);
     padding-right: math.div($grid-gutter-width, 2);
     padding-top: $round-image-size-small + $default-separation;
-    max-width: map-get($container-max-widths, 'lg');
+    max-width: map-get($container-max-widths, 'xs');
     transition: all $scroll-down-transition-duration ease-out;
 
     @include media-breakpoint-up(sm) {
@@ -213,6 +213,7 @@
     }
 
     .header-inner-content__text {
+      max-width: map-get($container-max-widths, 'lg');
       padding-top: math.div($round-image-size + $default-separation, 3);
 
       @include media-breakpoint-up(lg) {
