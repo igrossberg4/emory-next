@@ -43,6 +43,7 @@ export default function IntroPage(props: any) {
   }
   const [playing, setPlaying] = useState(false);
   const [skipped, setSkipped] = useState(false);
+  const [muted, setMuted] = useState(false);
   const [videoRef, setVideoRef] = useState<HTMLVideoElement>(undefined as any);
   const reftoAnimation = useRef();
 
@@ -99,11 +100,13 @@ export default function IntroPage(props: any) {
                 onClick={(e) => {
                   if (videoRef) {
                     videoRef.muted = !videoRef.muted;
+                    setMuted(videoRef.muted);
                   }
                 }}
               >
                 <IconButton
-                  icon={videoRef.muted ? "unmute" : "mute"}
+                  key={muted}
+                  icon={muted ? "unmute" : "mute"}
                 ></IconButton>
               </div>
             ) : (
@@ -135,6 +138,7 @@ export default function IntroPage(props: any) {
                         
                       }
                       setVideoPlayed();
+                      setPlaying(false);
                     }}
                     onVideoRef={(ref: HTMLVideoElement) => {
                       if (!videoPlayed && !props.active) {
