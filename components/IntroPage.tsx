@@ -38,7 +38,7 @@ export default function IntroPage(props: any) {
     //setVideoCookie("video_played", "played")
   ,[dispatch])
   const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played';
-  if(!videoPlayed) {
+  if(!videoPlayed && props.active) {
     document.body.classList.add('full_video');
   }
   const [playing, setPlaying] = useState(false);
@@ -141,7 +141,7 @@ export default function IntroPage(props: any) {
                       setPlaying(false);
                     }}
                     onVideoRef={(ref: HTMLVideoElement) => {
-                      if (!videoPlayed && !props.active) {
+                      if (!videoPlayed && props.active) {
                         document.body.classList.add("hide-lateral");
                       }
                         setTimeout(() => {
