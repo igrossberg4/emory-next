@@ -34,7 +34,7 @@ export default function TextImageHeader(props:any) {
               <div>
               <a href={props.read_more} className="readmore text-cta">Read more</a>
               </div>}
-              {props.read_more && !props.internal_link && 
+              {props.read_more && props.internal_link && 
               <div
               onClick={(e) => {
 
