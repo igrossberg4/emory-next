@@ -22,6 +22,7 @@ export default function CarouselItem(props: any) {
   const listInnerRef = useRef();
   const prevScrollY = useRef(0);
   const [goingUp, setGoingUp] = useState(false);
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +56,7 @@ export default function CarouselItem(props: any) {
     <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
       <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
-            <img src={props.img_src} alt={props.header} className="image"></img>
+            <img src={multipleSizesImgPrincipal.src} srcSet={multipleSizesImgPrincipal.srcSet} alt={props.header} className="image"></img>
           </div>
           <div className="header-inner-content__text">
             <div className="pretitle text-label">{props.about}</div>

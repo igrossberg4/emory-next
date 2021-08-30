@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { MD5 } from "object-hash";
-import { useBreakpointValue } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import { ButtonEnabled } from "./Carousel";
 export const PrevCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (

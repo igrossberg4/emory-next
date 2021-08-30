@@ -4,7 +4,7 @@
   "page_props": {
     "header": "The Future Starts Here",
     "button_scroll": "Scroll to explore",
-    "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+    "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "video_src": "video.mp4",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video"
@@ -13,7 +13,7 @@
   "metatag": {
     "title": "Emory carousel",
     "description": "Some description for carousel page",
-    "image":"/images/2036_cancer_cells_red_uncropped.jpg"
+    "image":"2036_cancer_cells_red_uncropped.jpg"
   },
   "list": ["home-2036", "goizueta-business-school", "emory-college-of-arts-and-sciences", "laney-graduate-school","school-of-law","school-of-medicine","nell-hodgson-woodruff-school-of-nursing","oxford-college","rollins-school-of-public-health","candler-school-of-theology","campus-life","carlos-museum","center-for-ethics","global-health-institute","emory-healthcare","university-libraries","yerkes-national-primate-research-center","winship-cancer-institute","themes","students","faculty"],
   "components": [
@@ -24,7 +24,7 @@
           "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
         "background_image": "bg_brain.jpg",
         "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "/images/2036_brain_health_neurons_red.jpg",
+        "img_src": "2036_cancer_cells_red_uncropped.jpg",
         "media_src": "/video.mp4",
         "media_alt":
           "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
@@ -39,8 +39,8 @@
         "header":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "background_image": "bg_brain.jpg",
         "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "/images/2036_brain_health_neurons_red.jpg",
-        "media_src": "/images/2036_brain_health_neurons_red.jpg",
+        "img_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
         "media_header": "Image title",
@@ -51,10 +51,10 @@
       "component": "TextImageBg",
       "props": {
         "header": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "background_image": "/images/background_image.jpg",
+        "background_image": "background_image.jpg",
         "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "/images/2036_brain_health_neurons_blue.jpg",
-        "media_src": "/images/2036_brain_health_neurons_blue.jpg",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
         "media_alt":
           "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
@@ -81,8 +81,8 @@
           }
         ],
         "layout": "left",
-        "img_src": "/images/2036_brain_health_neurons_blue.jpg",
-        "media_src": "/images/2036_brain_health_neurons_blue.jpg",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
         "media_header": "Image title",
@@ -107,8 +107,8 @@
           }
         ],
         "layout": "right",
-        "img_src": "/images/2036_brain_health_neurons_blue.jpg",
-        "media_src": "/images/2036_brain_health_neurons_blue.jpg",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
         "media_header": "Image title",
@@ -132,7 +132,7 @@
       "component": "TextBg",
       "props": {
         "text": "Emory College of Arts and Sciences has a range of priorities for 2O36.",
-        "image_src": "/images/background_image.jpg"
+        "image_src": "background_image.jpg"
       }
     },
     {
@@ -146,7 +146,7 @@
       "component": "Audio",
       "props":{
         "img_alt":"img_alt",
-        "img_src":"/images/background_image.jpg",
+        "img_src":"background_image.jpg",
         "audio_src":"/sounds/beethoven_12_variation.mp3"
       }
     },
@@ -160,7 +160,7 @@
             "component":"Teaser",
             "props":{
               "title": "Brain Health",
-              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "explore_link": "goizueta-business-school"
             }
@@ -169,7 +169,7 @@
             "component":"Teaser",
             "props":{
               "title": "Cancer",
-              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "explore_link": "school-of-law"
             }
@@ -178,7 +178,7 @@
             "component":"Teaser",
             "props":{
               "title": "AI.Humanity",
-              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "explore_link": "http://example.com"
             }
@@ -187,7 +187,7 @@
             "component":"Teaser",
             "props":{
               "title": "Brain Health",
-              "img_src": "/images/2036_cancer_cells_red_uncropped.jpg",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
               "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "explore_link": "http://example.com"
             }

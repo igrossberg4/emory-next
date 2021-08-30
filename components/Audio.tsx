@@ -9,11 +9,13 @@ import IconButton from "./IconButton";
 export default function Audio(props: any) {
   const audioRef = useRef<HTMLAudioElement>();
   const [isPlaying, setPlaying] = useState(false);
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+
   return (
     <div className="section audio">
       <div className="container">
         <div className="audio__image">
-          <img alt={props.img_alt} src={props.img_src}></img>
+          <img alt={props.img_alt} src={multipleSizesImgPrincipal.src} srcSet={multipleSizesImgPrincipal.srcSet} ></img>
           {isPlaying ? (
             <div onClick={(e) => { audioRef?.current?.pause(); }}>
               <IconButton icon="pause"></IconButton>

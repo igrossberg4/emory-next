@@ -17,7 +17,7 @@ export default function TextImageBg(props:any) {
               <div className="text-image-bg__image">
                 <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text}></MediaWithExpantion>
                 <div className="text-image-bg__bg">
-                  <Image src={props.background_image} layout="fill"></Image>
+                  <Image alt="" src={props.background_image} layout="fill"></Image>
                 </div>
               </div>
             </div>

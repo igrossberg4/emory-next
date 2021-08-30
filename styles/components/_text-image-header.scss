@@ -47,7 +47,7 @@
         right: 0;
         width: 140%;
         height: 135px;
-        background: url("../../public/images/line-left.svg") no-repeat center left;
+        background: url("../../public/svg/line-left.svg") no-repeat center left;
       }
     }
   }
@@ -74,7 +74,7 @@
         @include media-breakpoint-up(md) {
           right: auto;
           left: 0;
-          background: url("../../public/images/line-right.svg") no-repeat center right;
+          background: url("../../public/svg/line-right.svg") no-repeat center right;
         }
       }
     }

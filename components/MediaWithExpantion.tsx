@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 import Head from "next/head";
 import React, { Fragment, useContext, useState } from "react";
 import Image from "next/image";
@@ -9,11 +11,24 @@ import LateralImageExpanded from "./LateralImageExpanded";
 import Video from "./Video";
 import IconButton from "./IconButton";
 import Overlay from "./Overlay";
+import path from 'path';
+import dynamic from 'next/dynamic';
 
 export default function MediaWithExpantion(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
   const [layoutId, setLayoutID] = useState(Math.random().toString());
+  let multipleSizesImgPrincipal;
+  let multipleSizesImgExpanded;
+
+  multipleSizesImgPrincipal = require(`../public/images/${(props.img_src ? props.img_src : props.media_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  if(props.media_type != 'video'){
+    multipleSizesImgExpanded = require(`../public/images/${(props.media_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  }
+  
+  
+  //const files = fs.readdirSync(__dirname);
+  //const moduleName = path.join(__dirname, files[0]);
   return (
     <Fragment>
       <div
@@ -42,7 +57,8 @@ export default function MediaWithExpantion(props: any) {
           >
             <img
               alt={props.media_alt}
-              src={props.img_src ? props.img_src : props.media_src}
+              srcSet={multipleSizesImgPrincipal}
+              src={multipleSizesImgPrincipal }
             />
           </motion.figure>
         </motion.figure>
@@ -65,7 +81,7 @@ export default function MediaWithExpantion(props: any) {
               // animate={{ opacity: 1 }}
               >
                 {props.media_type === "image" ? (
-                  <img alt={props.media_alt} src={props.media_src}></img>
+                  <img alt={props.media_alt} src={multipleSizesImgExpanded.src} srcSet={multipleSizesImgExpanded.srcSet}></img>
                 ) : (
                   <Video {...props} controls={true}></Video>
                 )}

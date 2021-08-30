@@ -9,7 +9,7 @@ import MediaWithExpantion from "./MediaWithExpantion";
 export default function TextBg(props:any) {
   return (
     <div className="text-bg">
-      <Image src={props.image_src} layout="fill" className="textbg__bg"></Image>
+      <Image alt='' src={props.image_src} layout="fill" className="textbg__bg"></Image>
       <div className="text-bg__overlay"></div>
       <div className="container">
         <div className="row">
