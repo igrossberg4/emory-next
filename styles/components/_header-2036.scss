@@ -142,15 +142,16 @@
     bottom: 50%;
     max-width: unset;
     width: 130px;
-    padding-top: 130px;
+    height: 130px;
     margin-bottom: $h2-font-size + math.div($default-separation, $rem-in-px);
     transform: translate(0, 50%);
     box-sizing: content-box;
     z-index: 10;
-    will-change: width, padding;
+    padding: 0;
+    will-change: width, height;
     transition:
       width $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-      padding-top $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
+      height $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
       opacity math.div($scroll-down-transition-duration, 2) ease-out,
       bottom math.div($scroll-down-transition-duration, 2) ease-out,
       transform math.div($scroll-down-transition-duration, 2) ease-out,
@@ -158,18 +159,18 @@
 
     @include media-breakpoint-up(sm) {
       width: 130px;
-      padding-top: 130px;
+      height: 130px;
     }
 
     @include media-breakpoint-up(md) {
       width: 268px;
-      padding-top: 268px;
+      height: 268px;
       margin-left: -170px;
     }
 
     @include media-breakpoint-up(xl) {
       width: 268px;
-      padding-top: 268px;
+      height: 268px;
     }
 
     video {
@@ -186,7 +187,6 @@
 
   .header-inner-content__text {
     position: relative;
-    z-index: 100;
     padding-left: math.div($grid-gutter-width, 2);
     padding-right: math.div($grid-gutter-width, 2);
     padding-top: $round-image-size-small + $default-separation;
@@ -231,13 +231,14 @@
     .header-inner-content__img {
       bottom: math.div($default-separation, 3);
       width: 110vw;
-      padding-top: 110vw;
+      height: 110vw;
       transform: translate(0);
       margin-bottom: 0;
       opacity: .5;
+      z-index: -1;
       transition:
         width $scroll-down-transition-duration ease-out,
-        padding-top $scroll-down-transition-duration ease-out,
+        height $scroll-down-transition-duration ease-out,
         opacity math.div($scroll-down-transition-duration, 2) ease-out,
         bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
         transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,

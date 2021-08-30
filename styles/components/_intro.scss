@@ -1,45 +1,37 @@
 // Intro page.
 .container-video-intro {
+  position: relative;
+
   &.video-no-played {
 
     .header-inner-content__img {
-      width: 100% !important;
-      height: 100% !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      border: 0;
       border-radius:0%;
+      margin: 0 !important;
       z-index: 999 !important;
     }
 
-    .header-inner-content__img.image{
-      //position: relative;
-    }
-
-    .content-header__container{
+    .content-header__container {
       border-radius: 0%;
+      padding: 0;
 
-      &.wrapper{
+      &.wrapper {
         height: 100vh;
       }
     }
   }
 
-  position: relative;
-
   .mute_button {
-    margin-bottom: 5rem;
-
-    button {
-      margin-bottom: math.div($grid-gutter-width, 2);
-    }
-
-    @include media-breakpoint-up(md) {
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      margin: 0;
-      z-index: 4;
-    }
-
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    z-index: 101;
+    width: 64px;
+    height: 64px;
   }
+
   video {
     width: 100%;
     height: 100%;
@@ -47,28 +39,30 @@
     transition: all 0.2s;
 
   }
+
   .video-circle {
-    video{
+    video {
       border-radius: 50%;
       //position: absolute;
       width:400px;
       height: 400px;
     }
   }
+
   .video-intro{
     //transform:translateX(0%);
     //border-radius: 0%;    transition: all 0.1s;
-
-
   }
-  .video-skipped{
-    transition: all 0.1s;
 
+  .video-skipped {
+    transition: all 0.1s;
     //border-radius: 50%;
+
     video{
       //border-radius: 50%;
     }
   }
+
   .btn-begin-experience {
     background-color: $color-white;
     border-radius: 50%;
@@ -88,12 +82,13 @@
     left: 50%;
     transform: translate(-50%, 50%);
     z-index:60;
+
     &:hover {
       background-color: rgba($color-white, .8);
     }
-    &.playing{
 
-      &:hover{
+    &.playing {
+      &:hover {
         cursor: default;
       }
     }
@@ -119,5 +114,14 @@
     &:hover {
       background-color: rgba($color-white, 1);
     }
+  }
+}
+
+body.full_video {
+  .header-menu,
+  .embla__button,
+  .actions,
+  #carouselContent {
+    display: none;
   }
 }
