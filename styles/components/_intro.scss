@@ -22,7 +22,7 @@
     margin-bottom: 5rem;
 
     button {
-      margin-bottom: $grid-gutter-width / 2;
+      margin-bottom: math.div($grid-gutter-width, 2);
     }
 
     @include media-breakpoint-up(md) {

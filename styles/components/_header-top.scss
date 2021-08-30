@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 40px 0 100px 0;
+  padding: 60px 0 80px 0;
   text-align: center;
 
   .header-inner-content {
@@ -15,10 +15,10 @@
     justify-content: center;
     height: 100%;
     transition:
+            opacity $main-carousel-transition-duration math.div($main-carousel-transition-duration, 3) ease-in-out,
             transform math.div($main-carousel-transition-duration, 2) ease-in-out,
-            opacity $main-carousel-transition-duration ease-in-out,
-            max-width math.div($main-carousel-transition-duration, 2) ease-in-out,
-            margin-left math.div($main-carousel-transition-duration, 2) ease-in-out;
+            max-width $main-carousel-transition-duration linear,
+            margin-left $main-carousel-transition-duration linear;
     margin-left: 0;
     transform: translateX(0);
     //max-width: map-get($container-max-widths, lg);
@@ -27,14 +27,30 @@
 
     .no_selected & {
       opacity: .3;
-      max-width: $round-image-size-big;
+      max-width: $round-image-size-small;
+
+      @include media-breakpoint-up(sm) {
+        max-width: $round-image-size;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: $round-image-size-medium;
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: $round-image-size-big;
+      }
     }
 
     .first & {
       margin-left: 0;
-      transform: translateX(50px);
 
-      @media (min-width: $round-image-size-big) {
+      @include media-breakpoint-up(sm) {
+        transform: translateX(50px);
+        margin-left: calc(100% - #{$round-image-size});
+      }
+      @include media-breakpoint-up(lg) {
+        margin-left: calc(100% - #{$round-image-size-medium});
+      }
+      @include media-breakpoint-up(xl) {
         margin-left: calc(100% - #{$round-image-size-big});
         transform: translateX(100px);
       }
@@ -42,9 +58,11 @@
 
     .last & {
       margin-left: 0;
-      transform: translateX(-50px);
 
-      @media (min-width: $round-image-size-big) {
+      @include media-breakpoint-up(sm) {
+        transform: translateX(-50px);
+      }
+      @include media-breakpoint-up(xl) {
         transform: translateX(-100px);
       }
     }
@@ -81,7 +99,7 @@
     bottom: 0;
     width: 100%;
     z-index: 2;
-    transition: all math.div($main-carousel-transition-duration, 3) ease-out;
+    transition: all math.div($main-carousel-transition-duration, 3) ease-in-out;
     padding-bottom: $default-separation;
   }
 
@@ -102,40 +120,44 @@
     width: $round-image-size-small;
     padding-top: $round-image-size-small;
     margin-bottom:  $h2-font-size + math.div($default-separation, $rem-in-px);
+    margin-bottom:  $h2-font-size;
     transform: translate(0, 50%);
-    box-sizing: content-box;
+    box-sizing: border-box;
     transition:
-            width $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-            padding-top $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-            opacity math.div($scroll-down-transition-duration, 2) ease-out,
-            bottom math.div($scroll-down-transition-duration, 2) ease-out,
-            transform math.div($scroll-down-transition-duration, 2) ease-out,
-            margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;
+            width $scroll-down-transition-duration linear,
+            padding-top $scroll-down-transition-duration linear,
+            opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
+            bottom $scroll-down-transition-duration linear,
+            transform $scroll-down-transition-duration linear,
+            margin-bottom $scroll-down-transition-duration linear;
 
     @include media-breakpoint-up(sm) {
       width: $round-image-size;
       padding-top: $round-image-size;
     }
-
+    @include media-breakpoint-up(md){
+      margin-bottom:  $h2-font-size--desktop + math.div($default-separation, $rem-in-px);
+      margin-bottom:  $h2-font-size--desktop;
+    }
     @include media-breakpoint-up(lg) {
       width: $round-image-size-medium;
       padding-top: $round-image-size-medium;
     }
-
     @include media-breakpoint-up(xl) {
       width: $round-image-size-big;
       padding-top: $round-image-size-big;
     }
-    video{
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index:20;
-    }
+
+    //video{
+    //  position: absolute;
+    //  display: block;
+    //  top: 0;
+    //  left: 0;
+    //  width: 100%;
+    //  height: 100%;
+    //  object-fit: cover;
+    //  z-index:20;
+    //}
   }
 
   .header-inner-content__text {
@@ -162,6 +184,8 @@
 
   .title {
     transition: all math.div($scroll-down-transition-duration, 2) ease-out;
+    max-height: 2em;
+
   }
 
   .pretitle,
@@ -174,24 +198,13 @@
   &[data-animation="active"] {
     background: $body-bg;
 
-    .header-inner-content {
-      overflow: hidden;
-    }
-
     .header-inner-content__img {
-      bottom: math.div($default-separation, 3);
+      bottom: -73px;
       width: 110vw;
       padding-top: 110vw;
       transform: translate(0);
       margin-bottom: 0;
       opacity: .5;
-      transition:
-              width $scroll-down-transition-duration ease-out,
-              padding-top $scroll-down-transition-duration ease-out,
-              opacity math.div($scroll-down-transition-duration, 2) ease-out,
-              bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
-              transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
-              margin-bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-out;
 
       @media (orientation: portrait) {
         width: 110vh;
@@ -210,6 +223,7 @@
     .title {
       @extend .header-xlarge;
       margin: math.div($grid-gutter-width, 2) 0;
+      max-height: 100em;
     }
 
     .pretitle,
