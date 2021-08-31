@@ -1,0 +1,27 @@
+.video-vimeo {
+  margin: 0 auto;
+  width: 100%;
+  max-width: map-get($container-max-widths, 'lg');
+
+  > div {
+    position: relative;
+    width: 100% !important;
+    height: inherit !important;
+    padding-bottom: 56.25%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.overlay {
+  figure[data-media="video"] {
+    width: 100%;
+    max-height: inherit;
+  }
+}

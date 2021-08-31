@@ -28,15 +28,11 @@ export default function Video(props: any) {
   const controls = useAnimation();
   const media_src = props.video_src ? props.video_src : props.media_src;
   const re = new RegExp("^(http|https)://", "i");
- 
-  <ReactPlayer
-  url="https://vimeo.com/3155182"
-/>
+
   return (
     <Fragment>
-      {!re.test(media_src)  ? 
+      {!re.test(media_src)  ?
       <video
-              
               onPlay={() => {
                 if(props.onPlay){
                   props.onPlay();
@@ -55,7 +51,7 @@ export default function Video(props: any) {
                   props.onVideoRef(ref);
                 }
                 //props.onVideoRef(controls)
-                
+
               }}
               onEnded={(en) => {
                 //dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src ? props.video_src : props.media_src}});
@@ -71,27 +67,14 @@ export default function Video(props: any) {
         key={props.video_src ? props.video_src : props.media_src}
         //initial={!props.initial_animation ? { opacity: 0 } : props.initial_animation}
         //exit={!props.initial_animation ? { opacity: 1, height: "400px", width: "400px", borderRadius:'50%' } : props.initial_animation}
-/*
-        animate={
-          !props.initial_animation === false ? undefined : state.videoStore[props.video_src ? props.video_src : props.media_src]?.skip ? 'skip' : (!state.videoStore[props.video_src ? props.video_src : props.media_src]?.paused ? "playing" : "default")
-        }
-        variants={{
-          default: { opacity: 0.5 },
-          playing: { opacity: 1 },
-          skip: {width:0, height:0}
-        }}
-        layout
-
-*/
 
       >
         <source src={media_src} type="video/mp4"></source>
-      </video> 
-      :      <ReactPlayer
-      light={false}
-      controls
-      url={media_src}
-    />
+      </video>
+      :
+      <div className="video-vimeo">
+        <ReactPlayer light={false} controls url={media_src}/>
+      </div>
 }
     </Fragment>
   );

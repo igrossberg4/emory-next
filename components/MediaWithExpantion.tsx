@@ -25,8 +25,8 @@ export default function MediaWithExpantion(props: any) {
   if(props.media_type != 'video'){
     multipleSizesImgExpanded = require(`../public/images/${(props.media_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
   }
-  
-  
+
+
   //const files = fs.readdirSync(__dirname);
   //const moduleName = path.join(__dirname, files[0]);
   return (
@@ -74,7 +74,7 @@ export default function MediaWithExpantion(props: any) {
           }
           expanded_content={
               <Fragment>
-              <motion.figure
+              <motion.figure data-media={props.media_type}
               // layout
               // layoutId={layoutId}
               // initial={{ opacity: 1 }}
