@@ -6,8 +6,8 @@
   position: relative;
   padding: 40px 0 100px 0;
   text-align: center;
-  background: url("../../public/images/2036-bg.jpg") no-repeat center bottom;
-  background-size: cover;
+  //background: url("/public/images/2036-bg.jpg") no-repeat center bottom;
+  background-size: cover !important;
 
   .header-inner-content {
     display: flex;

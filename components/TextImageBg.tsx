@@ -8,6 +8,8 @@ import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function TextImageBg(props:any) {
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.background_image)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+
   return (
     <div className="section text-image-bg">
         <div className="container">
@@ -17,7 +19,7 @@ export default function TextImageBg(props:any) {
               <div className="text-image-bg__image">
                 <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text}></MediaWithExpantion>
                 <div className="text-image-bg__bg">
-                  <Image alt="" src={props.background_image} layout="fill"></Image>
+                  <Image alt="" src={multipleSizesImgPrincipal.src} layout="fill"></Image>
                 </div>
               </div>
             </div>

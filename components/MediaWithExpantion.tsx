@@ -57,8 +57,8 @@ export default function MediaWithExpantion(props: any) {
           >
             <img
               alt={props.media_alt}
-              srcSet={multipleSizesImgPrincipal}
-              src={multipleSizesImgPrincipal }
+              srcSet={multipleSizesImgPrincipal.srcSet}
+              src={multipleSizesImgPrincipal.src }
             />
           </motion.figure>
         </motion.figure>

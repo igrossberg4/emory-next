@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 export default function LateralImageExpanded(props: any) {
   const router = useRouter();
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.image_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+
   return (
     <Fragment>
       <motion.div
@@ -27,11 +29,11 @@ export default function LateralImageExpanded(props: any) {
 
         <motion.figure
           layout
-          layoutId={props.img_src}
+          layoutId={multipleSizesImgPrincipal.src}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
         >
-          <Image alt="" width={200} height={200} src={props.img_src}></Image>
+          <Image alt="" width={200} height={200} src={multipleSizesImgPrincipal.src}></Image>
         </motion.figure>
         <h2>{props.header}</h2>
         <p>{props.text}</p>

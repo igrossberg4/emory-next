@@ -46,7 +46,9 @@ export default function CarouselItem2036(props: any) {
   return (
     <Fragment>
       {true ?
-        <div className="content-header__container header-2036 container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
+        <div
+        style={{background:`url(${require(`../public/images/2036-bg.jpg`)}) no-repeat center bottom`}}
+        className="content-header__container header-2036 container-force-screen-fit-y" data-animation={props.active && scroll > 25 ? "active" : "not-active"}>
           <div className="header-inner-content">
 
             <div className="header-2036__title">

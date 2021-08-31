@@ -7,9 +7,11 @@ import Image from "next/image";
 import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function TextBg(props:any) {
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.image_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+
   return (
     <div className="text-bg">
-      <Image alt='' src={props.image_src} layout="fill" className="textbg__bg"></Image>
+      <Image alt='' src={multipleSizesImgPrincipal.src} layout="fill" className="textbg__bg"></Image>
       <div className="text-bg__overlay"></div>
       <div className="container">
         <div className="row">
