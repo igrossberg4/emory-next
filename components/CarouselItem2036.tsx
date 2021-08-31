@@ -39,7 +39,7 @@ export default function CarouselItem2036(props: any) {
       prevScrollY.current = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: false });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [goingUp, scroll]); // @ts-ignore

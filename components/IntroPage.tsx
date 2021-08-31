@@ -77,7 +77,7 @@ export default function IntroPage(props: any) {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: false });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [goingUp, scroll]); // @ts-ignore

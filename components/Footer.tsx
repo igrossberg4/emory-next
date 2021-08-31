@@ -17,7 +17,7 @@ export default function Footer(props:any) {
       prevScrollY.current = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: false });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scroll]); // @ts-ignore

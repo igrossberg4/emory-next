@@ -24,7 +24,7 @@ export default function Home(props: any) {
     setInnerHeight(window.innerHeight);
   }, [setScroll, setInnerHeight]);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {passive:true});
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
   const [state, dispatch] = useContext(Context) as any;
@@ -76,6 +76,9 @@ export default function Home(props: any) {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="preload" href="/fonts/pangram-regular.woff2"></link>
+        <link rel="preload" href="/fonts/pangram-bold.woff2"></link>
+
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
