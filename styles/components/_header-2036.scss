@@ -223,7 +223,7 @@
 
   // ANIMATION ACTIVE
   &[data-animation="active"] {
-    background: $body-bg;
+    background: $body-bg !important;
 
     .header-inner-content {
       overflow: hidden;
