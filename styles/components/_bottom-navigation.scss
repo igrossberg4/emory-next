@@ -32,5 +32,6 @@
   .pre-title,
   .title {
     margin-bottom: math.div($default-separation, 1.5);
+    text-transform: uppercase;
   }
 }

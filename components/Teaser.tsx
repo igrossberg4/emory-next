@@ -32,7 +32,6 @@ export default function Teaser(props: any) {
         }}
         >
         <a
-
           href={props.explore_link ? props.explore_link : '/'}
           className="teaser__link text-cta"
         >
