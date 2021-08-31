@@ -122,8 +122,8 @@
   }
 
   svg {
-    width: 62px;
-    height: 88px;
+    width: 32px;
+    height: 44px;
     overflow: visible;
 
     path {
@@ -135,7 +135,12 @@
   }
 
   @include media-breakpoint-up(sm) {
-    top: 100px
+    top: 100px;
+
+    svg {
+      width: 62px;
+      height: 88px;
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -164,10 +169,10 @@
 
   .header-inner-content__img {
     position: absolute;
-    bottom: 50%;
+    top: 100px;
     max-width: unset;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     margin-bottom: $h2-font-size + math.div($default-separation, $rem-in-px);
     transform: translate(0, 50%);
     box-sizing: content-box;
@@ -183,11 +188,14 @@
       margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;
 
     @include media-breakpoint-up(sm) {
+      top: 115px;
       width: 130px;
       height: 130px;
     }
 
     @include media-breakpoint-up(md) {
+      top: auto;
+      bottom: 50%;
       width: 268px;
       height: 268px;
       margin-left: -170px;
@@ -253,6 +261,8 @@
       bottom: math.div($default-separation, 3);
       width: 110vw;
       height: 110vw;
+      top: auto;
+      bottom: 0;
       transform: translate(0);
       margin-bottom: 0;
       opacity: .5;
