@@ -64,8 +64,16 @@ p {
 
 .header-h3 {
   font-size: $h3-font-size;
+  line-height: 56px;
   @include media-breakpoint-up(md){
     font-size: $h3-font-size--desktop;
+  }
+}
+
+.header-h4 {
+  font-size: $h4-font-size;
+  @include media-breakpoint-up(md){
+    font-size: $h4-font-size--desktop;
   }
 }
 

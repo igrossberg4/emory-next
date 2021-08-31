@@ -72,6 +72,11 @@
     letter-spacing: 15px;
   }
 
+  .title_expanded {
+    display: none;
+    margin-bottom: 15px;
+  }
+
   .pretitle,
   .subtitle {
     &:empty {
@@ -263,9 +268,11 @@
     }
 
     .title {
-      @extend .header-xlarge;
-      font-family: $font-family-sans-serif;
-      margin: math.div($grid-gutter-width, 2) 0;
+      display: none;
+    }
+
+    .title_expanded {
+      display: block;
     }
 
     .pretitle,

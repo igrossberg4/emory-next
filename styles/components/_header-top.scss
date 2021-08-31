@@ -93,6 +93,15 @@
     }
   }
 
+  .pretitle {
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    margin: 0 auto;
+    max-width: map-get($container-max-widths, 'sm');
+  }
+
   .actions {
     position: absolute;
     left: 0;

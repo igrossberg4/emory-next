@@ -3,6 +3,9 @@
   "type": "collection",
   "page_props": {
     "header": "The Future Starts Here",
+    "header_expanded": "Building on Emory’s commitment to serve humanity",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nascetur in lectus odio etiam sit.",
+    "about": "About the campaign",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "video_src": "video.mp4",
@@ -140,14 +143,6 @@
       "props": {
         "quote": "I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.",
         "text": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
-      }
-    },
-    {
-      "component": "Audio",
-      "props":{
-        "img_alt":"img_alt",
-        "img_src":"background_image.jpg",
-        "audio_src":"/sounds/beethoven_12_variation.mp3"
       }
     },
     {
