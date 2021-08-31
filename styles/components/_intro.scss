@@ -21,6 +21,12 @@
         height: 100vh;
       }
     }
+    .video-paused{
+      video{
+        opacity: 0.5;
+        transition: opacity 1s;
+      }
+    }
   }
 
   .mute_button {

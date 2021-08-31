@@ -115,6 +115,7 @@ export default function IntroPage(props: any) {
             <CarouselItem2036 {...props}>
               {
                 <div
+                  className={`${!videoPlayed && videoRef?.paused ? 'video-paused' : ''}`}
                   onClick={(e) => {
                     {
                       if (videoRef.paused) {
