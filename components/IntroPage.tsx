@@ -37,7 +37,7 @@ export default function IntroPage(props: any) {
   }    
     //setVideoCookie("video_played", "played")
   ,[dispatch])
-  const classVideo = videoPlayed== undefined ? "video-no-played"  : 'video-no-played';
+  const classVideo = videoPlayed== undefined ? "video-no-played"  : '';
   if(!videoPlayed && props.active) {
     document.body.classList.add('full_video');
   }
@@ -141,17 +141,17 @@ export default function IntroPage(props: any) {
                       setPlaying(false);
                     }}
                     onVideoRef={(ref: HTMLVideoElement) => {
-                      if (!videoPlayed && props.active) {
+                      /*if (!videoPlayed && props.active) {
                         document.body.classList.add("hide-lateral");
-                      }
-                        setTimeout(() => {
+                      }*/
+                        /*setTimeout(() => {
                           if(videoPlayed && ref?.readyState != 0){
                             const element = document.getElementById('container-video');
                             if(element){
                               element.classList.remove('video-no-played')
                             }
                           }
-                        }, 2000);
+                        }, 2000);*/
                       setVideoRef(ref);
                     }}
                   ></Video>
