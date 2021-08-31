@@ -88,7 +88,7 @@ export default function Video(props: any) {
         <source src={media_src} type="video/mp4"></source>
       </video> 
       :      <ReactPlayer
-      light={true}
+      light={false}
       controls
       url={media_src}
     />
