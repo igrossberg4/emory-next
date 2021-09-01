@@ -4,6 +4,7 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -48,187 +49,187 @@ export default function IntroPage(props: any) {
   const [videoRef, setVideoRef] = useState<HTMLVideoElement>(undefined as any);
   const reftoAnimation = useRef();
 
-  const [scroll, setScroll] = useState(0);
   const prevScrollY = useRef(0);
   const [goingUp, setGoingUp] = useState(false);
+  const memo = useMemo(() => {
+    return (
+      <AnimateSharedLayout>
+        <div style={{ background: "#e8e8e8", width: "100%", height: "100vh" }}>
+          {process.browser ? (
+            <div
+              id="container-video"
+              className={`container-fit container-video-intro
+      ${!state.comesFromCarousel && props.active ? classVideo : ""}`}
+            >
+              {false ? (
+                ""
+              ) : (
+                <Fragment>
+                  {playing ? (
+                    <div
+                      className="mute_button btn text-label"
+                      style={{ cursor: "pointer" }}
+                      onClick={(e) => {
+                        if (videoRef) {
+                          videoRef.muted = !videoRef.muted;
+                          setMuted(videoRef.muted);
+                        }
+                      }}
+                    >
+                      <IconButton
+                        key={muted}
+                        icon={muted ? "unmute" : "mute"}
+                      ></IconButton>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  <CarouselItem2036 {...props}>
+                    {true ? (
+                      <div
+                        className={`${
+                          !videoPlayed && videoRef?.paused ? "video-paused" : ""
+                        }`}
+                        onClick={(e) => {
+                          {
+                            if (videoRef.paused) {
+                              videoRef.play();
+                            } else {
+                              videoRef.pause();
+                            }
+                            setPlaying(!playing);
+                          }
+                        }}
+                        //className="video-circle"
+                        ref={(ref) => (reftoAnimation.current = ref as any)}
+                      >
+                        <Video
+                          {...props}
+                          onPlay={() => setPlaying(true)}
+                          onVideoEnd={() => {
+                            const element =
+                              document.getElementById("container-video");
+                            if (element) {
+                              element.classList.remove("video-no-played");
+                            }
+                            setVideoPlayed();
+                            setPlaying(false);
+                          }}
+                          onVideoRef={(ref: HTMLVideoElement) => {
+                            /*if (!videoPlayed && props.active) {
+                      document.body.classList.add("hide-lateral");
+                    }*/
+                            /*setTimeout(() => {
+                        if(videoPlayed && ref?.readyState != 0){
+                          const element = document.getElementById('container-video');
+                          if(element){
+                            element.classList.remove('video-no-played')
+                          }
+                        }
+                      }, 2000);*/
+                            setVideoRef(ref);
+                          }}
+                        ></Video>
+                        <Fragment>
+                          {videoRef && !videoPlayed ? (
+                            <Fragment>
+                              <motion.button
+                                className="btn-begin-experience"
+                                animate={
+                                  skipped
+                                    ? "skip"
+                                    : playing
+                                    ? "playing"
+                                    : "default"
+                                }
+                                variants={{
+                                  default: { opacity: 1 },
+                                  playing: { opacity: 0 },
+                                  skip: { opacity: 0 },
+                                }}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (videoRef) {
+                                    videoRef.play();
+                                  }
+                                }}
+                              >
+                                {props.text_play}
+                              </motion.button>
+                              <motion.button
+                                className="btn-skip-intro"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSkipped(true);
+                                  const element =
+                                    document.getElementById("container-video");
+                                  if (element) {
+                                    element.classList.remove("video-no-played");
+                                  }
+                                  setVideoPlayed();
+                                }}
+                                animate={
+                                  skipped
+                                    ? "skip"
+                                    : !videoRef?.paused
+                                    ? "playing"
+                                    : "default"
+                                }
+                                variants={{
+                                  default: { opacity: 0 },
+                                  playing: { opacity: 1 },
+                                  skip: { opacity: 0 },
+                                }}
+                              >
+                                {props.text_skip}
+                              </motion.button>{" "}
+                            </Fragment>
+                          ) : (
+                            ""
+                          )}
+                        </Fragment>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </CarouselItem2036>
+                </Fragment>
+              )}
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+      </AnimateSharedLayout>
+    );
+  }, [state, muted, videoRef, classVideo, playing, props, setVideoPlayed, skipped, videoPlayed]);
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY);
-      const currentScrollY = window.scrollY;
+      if (props.active) {
+        const currentScrollY = window.scrollY;
 
-      if (prevScrollY.current < currentScrollY && goingUp) {
-        setGoingUp(false);
-      }
+        if (currentScrollY > 25) {
+          setGoingUp(true);
+        } else {
+          setGoingUp(false);
+        }
+        prevScrollY.current = currentScrollY;
 
-      if (prevScrollY.current > currentScrollY && !goingUp) {
-        setGoingUp(true);
-      }
-
-      prevScrollY.current = currentScrollY;
-
-      if (currentScrollY > 25) {
-        document.body.classList.add("is-scrolled");
-        document
-          .getElementById("container-video")
-          ?.classList.remove("video-no-played");
-        setVideoPlayed();
-      } else {
-        document.body.classList.remove("is-scrolled");
+        if (currentScrollY > 25) {
+          document.body.classList.add("is-scrolled");
+          document
+            .getElementById("container-video")
+            ?.classList.remove("video-no-played");
+          setVideoPlayed();
+        } else {
+          document.body.classList.remove("is-scrolled");
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [goingUp, scroll]); // @ts-ignore
-  return (
-    <AnimateSharedLayout>
-      <div style={{ background: "#e8e8e8", width: "100%", height: "100vh" }}>
-        {process.browser ? (
-          <div
-            id="container-video"
-            className={`container-fit container-video-intro
-        ${!state.comesFromCarousel && props.active ? classVideo : ""}`}
-          >
-            {false ? (
-              ""
-            ) : (
-              <Fragment>
-                {playing ? (
-                  <div
-                    className="mute_button btn text-label"
-                    style={{ cursor: "pointer" }}
-                    onClick={(e) => {
-                      if (videoRef) {
-                        videoRef.muted = !videoRef.muted;
-                        setMuted(videoRef.muted);
-                      }
-                    }}
-                  >
-                    <IconButton
-                      key={muted}
-                      icon={muted ? "unmute" : "mute"}
-                    ></IconButton>
-                  </div>
-                ) : (
-                  ""
-                )}
-                <CarouselItem2036 {...props}>
-                  {true ? (
-                    <div
-                      className={`${
-                        !videoPlayed && videoRef?.paused ? "video-paused" : ""
-                      }`}
-                      onClick={(e) => {
-                        {
-                          if (videoRef.paused) {
-                            videoRef.play();
-                          } else {
-                            videoRef.pause();
-                          }
-                          setPlaying(!playing);
-                        }
-                      }}
-                      //className="video-circle"
-                      ref={(ref) => (reftoAnimation.current = ref as any)}
-                    >
-                      <Video
-                        {...props}
-                        onPlay={() => setPlaying(true)}
-                        onVideoEnd={() => {
-                          const element =
-                            document.getElementById("container-video");
-                          if (element) {
-                            element.classList.remove("video-no-played");
-                          }
-                          setVideoPlayed();
-                          setPlaying(false);
-                        }}
-                        onVideoRef={(ref: HTMLVideoElement) => {
-                          /*if (!videoPlayed && props.active) {
-                        document.body.classList.add("hide-lateral");
-                      }*/
-                          /*setTimeout(() => {
-                          if(videoPlayed && ref?.readyState != 0){
-                            const element = document.getElementById('container-video');
-                            if(element){
-                              element.classList.remove('video-no-played')
-                            }
-                          }
-                        }, 2000);*/
-                          setVideoRef(ref);
-                        }}
-                      ></Video>
-                      <Fragment>
-                        {videoRef && !videoPlayed ? (
-                          <Fragment>
-                            <motion.button
-                              className="btn-begin-experience"
-                              animate={
-                                skipped
-                                  ? "skip"
-                                  : playing
-                                  ? "playing"
-                                  : "default"
-                              }
-                              variants={{
-                                default: { opacity: 1 },
-                                playing: { opacity: 0 },
-                                skip: { opacity: 0 },
-                              }}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                if (videoRef) {
-                                  videoRef.play();
-                                }
-                              }}
-                            >
-                              {props.text_play}
-                            </motion.button>
-                            <motion.button
-                              className="btn-skip-intro"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setSkipped(true);
-                                const element =
-                                  document.getElementById("container-video");
-                                if (element) {
-                                  element.classList.remove("video-no-played");
-                                }
-                                setVideoPlayed();
-                              }}
-                              animate={
-                                skipped
-                                  ? "skip"
-                                  : !videoRef?.paused
-                                  ? "playing"
-                                  : "default"
-                              }
-                              variants={{
-                                default: { opacity: 0 },
-                                playing: { opacity: 1 },
-                                skip: { opacity: 0 },
-                              }}
-                            >
-                              {props.text_skip}
-                            </motion.button>{" "}
-                          </Fragment>
-                        ) : (
-                          ""
-                        )}
-                      </Fragment>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                </CarouselItem2036>
-              </Fragment>
-            )}
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-    </AnimateSharedLayout>
-  );
+  }, [goingUp, setVideoPlayed, props]); // @ts-ignore
+  return memo;
 }
