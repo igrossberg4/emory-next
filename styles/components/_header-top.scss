@@ -15,55 +15,59 @@
     justify-content: center;
     height: 100%;
     transition:
-      opacity $main-carousel-transition-duration math.div($main-carousel-transition-duration, 3) ease-in-out,
-      transform math.div($main-carousel-transition-duration, 2) ease-in-out,
-      max-width $main-carousel-transition-duration linear,
-      margin-left $main-carousel-transition-duration linear;
+      opacity $main-carousel-transition-duration ease-in-out,
+      //transform $main-carousel-transition-duration ease-in-out;
+      margin-left $main-carousel-transition-duration ease-in-out;
+    width: 100%;
     margin-left: 0;
-    transform: translateX(0);
-    //max-width: map-get($container-max-widths, lg);
-    max-width: 100%;
     z-index: 2;
 
     .no_selected & {
       opacity: .3;
-      max-width: $round-image-size-small;
 
-      @include media-breakpoint-up(sm) {
-        max-width: $round-image-size;
-      }
-      @include media-breakpoint-up(lg) {
-        max-width: $round-image-size-medium;
-      }
-      @include media-breakpoint-up(xl) {
-        max-width: $round-image-size-big;
+      .header-inner-content__text {
+        padding-left: 0;
+        padding-right: 0;
+
+        @include media-breakpoint-up(sm) {
+          max-width: $round-image-size;
+        }
+        @include media-breakpoint-up(lg) {
+          max-width: $round-image-size-medium;
+        }
+        @include media-breakpoint-up(xl) {
+          max-width: $round-image-size-big;
+        }
       }
     }
 
     .first & {
-      margin-left: 0;
-
       @include media-breakpoint-up(sm) {
-        transform: translateX(50px);
-        margin-left: calc(100% - #{$round-image-size});
+        //transform: translateX(calc(50% - #{math.div($round-image-size, 2) - 50px}));
+        margin-left: calc(50% - #{math.div($round-image-size, 2) - 50px});
       }
       @include media-breakpoint-up(lg) {
-        margin-left: calc(100% - #{$round-image-size-medium});
+        //transform: translateX(calc(50% - #{math.div($round-image-size-medium, 2) - 50px}));
+        margin-left: calc(50% - #{math.div($round-image-size-medium, 2) - 50px});
       }
       @include media-breakpoint-up(xl) {
-        margin-left: calc(100% - #{$round-image-size-big});
-        transform: translateX(100px);
+        //transform: translateX(calc(50% - #{math.div($round-image-size-big, 2) - 100px}));
+        margin-left: calc(50% - #{math.div($round-image-size-big, 2) - 100px});
       }
     }
 
     .last & {
-      margin-left: 0;
-
       @include media-breakpoint-up(sm) {
-        transform: translateX(-50px);
+        //transform: translateX(calc(-50% + #{math.div($round-image-size, 2) - 50px}));
+        margin-left: calc(-50% + #{math.div($round-image-size, 2) - 50px});
+      }
+      @include media-breakpoint-up(lg) {
+        //transform: translateX(calc(-50% + #{math.div($round-image-size-medium, 2) - 50px}));
+        margin-left: calc(-50% + #{math.div($round-image-size-medium, 2) - 50px});
       }
       @include media-breakpoint-up(xl) {
-        transform: translateX(-100px);
+        //transform: translateX(calc(-50% + #{math.div($round-image-size-big, 2) - 100px}));
+        margin-left: calc(-50% + #{math.div($round-image-size-big, 2) - 100px});
       }
     }
   }
@@ -128,7 +132,6 @@
     max-width: unset;
     width: $round-image-size-small;
     height: $round-image-size-small;
-    margin-bottom:  $h2-font-size + math.div($default-separation, $rem-in-px);
     margin-bottom:  $h2-font-size;
     transform: translate(0, 50%);
     box-sizing: border-box;
