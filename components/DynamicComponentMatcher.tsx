@@ -170,10 +170,10 @@ function DynamicComponentMatcher(props: any) {
             return <CampaignCarousel {...component.props} key={i.toString}></CampaignCarousel>
 
           case 'Audio':
-            return <Audio {...component.props} key={i.toString}></Audio>
+            return <Audio {...component.props} key={i.toString()}></Audio>
 
           case 'Teaser':
-            return <Teaser {...component.props} key={i.toString}></Teaser>
+            return <Teaser {...component.props} key={i.toString()}></Teaser>
 
             case "MediaWithExpantion":
               return (
@@ -186,13 +186,13 @@ function DynamicComponentMatcher(props: any) {
             return (<CarouselItem2036 key={i.toString()} 
               {...component.props}></CarouselItem2036>)
           case 'TextImageHeader':
-            return <TextImageHeader {...component.props} key={i.toString}></TextImageHeader>
+            return <TextImageHeader {...component.props} key={i.toString()}></TextImageHeader>
 
           case 'TextLargeImage':
-            return <TextLargeImage {...component.props} key={i.toString}></TextLargeImage>
+            return <TextLargeImage {...component.props} key={i.toString()}></TextLargeImage>
 
           case 'Tag':
-            return <Tag {...component.props} key={i.toString}></Tag>
+            return <Tag {...component.props} key={i.toString()}></Tag>
 
           default:
             return "";
