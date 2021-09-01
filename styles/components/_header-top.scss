@@ -132,6 +132,7 @@
     margin-bottom:  $h2-font-size;
     transform: translate(0, 50%);
     box-sizing: border-box;
+    will-change: width,height, opacity, bottom, transform, margin-bottom;
     transition:
       width $scroll-down-transition-duration linear,
       height $scroll-down-transition-duration linear,
@@ -156,17 +157,6 @@
       width: $round-image-size-big;
       height: $round-image-size-big;
     }
-
-    //video{
-    //  position: absolute;
-    //  display: block;
-    //  top: 0;
-    //  left: 0;
-    //  width: 100%;
-    //  height: 100%;
-    //  object-fit: cover;
-    //  z-index:20;
-    //}
   }
 
   .header-inner-content__text {
