@@ -1,17 +1,10 @@
-import Head from "next/head";
 import React, {
-  Fragment,
-  useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
-import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
-import { Box, Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import HeaderTop from "./HeaderTop";
 import Image from "next/image";
 

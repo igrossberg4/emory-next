@@ -1,15 +1,10 @@
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
-import { Box } from "@chakra-ui/react";
-import { useState, useEffect, useCallback, useRef, useMemo, useContext } from "react";
-import { useEmblaCarousel } from "embla-carousel/react";
+import { useState, useCallback, useMemo, useContext } from "react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { AnimatePresence, motion } from "framer-motion";
 import { MD5 } from "object-hash";
-import Link from "next/link";
-import { route } from "next/dist/next-server/server/router";
 import { Context } from "../state/Store";
-import { wrap } from "popmotion";
 import { useInView } from "react-intersection-observer";
 export interface ButtonEnabled {
   enabled: boolean;
