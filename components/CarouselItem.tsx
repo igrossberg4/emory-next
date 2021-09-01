@@ -13,18 +13,22 @@ import { Box, Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import HeaderTop from "./HeaderTop";
+import Image from "next/image";
+
 const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
 };
 
 export default function CarouselItem(props: any) {
   const [goingUp, setGoingUp] = useState(false);
-  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=1024,sizes[]=2048&format=webp&lqip`);
   const memo = useMemo(() => {
     return  <div className="content-header__container container-force-screen-fit-y" data-animation={props.active && goingUp ? "active" : "not-active"}>
     <div className="header-inner-content">
         <div className="header-inner-content__img round-wp">
-          <img src={multipleSizesImgPrincipal.src} srcSet={multipleSizesImgPrincipal.srcSet} alt={props.header} className="image"></img>
+          <Image priority={true} src={multipleSizesImgPrincipal.src}  alt={props.header} layout={'fill'}
+
+         ></Image>
         </div>
         <div className="header-inner-content__text">
           <div className="pretitle text-label">{props.about}</div>
