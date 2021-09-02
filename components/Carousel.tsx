@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
-import { useState, useCallback, useMemo, useContext } from "react";
+import { useState, useCallback, useMemo, useContext, useEffect } from "react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { AnimatePresence, motion } from "framer-motion";
 import { MD5 } from "object-hash";
@@ -99,9 +99,30 @@ export default function EmblaCarousel({
     }
   }, [paginate, page]);
   const [refViewport, inView, entry] = useInView({});
+  useEffect(() => {
+    const handleKey = (e) => {
+      if(inView) {
+        switch(e.key) {
+          case 'ArrowLeft':
+            scrollPrev();
+            return;
+          case 'ArrowRight':
+            scrollNext();
+            return;
+        }
+      }
+      
+    };
+    document.body.addEventListener("keydown", handleKey, { passive: false });
+    return () =>  document.body.removeEventListener("keydown", handleKey);
+  }, [inView]); // @ts-ignore
+
   const memo = useMemo(() => {
     return <AnimatePresence>
     <div
+      onKeyPress={(e) =>{
+        console.log(e)
+      }}
       className={`embla embla--carousel-navigation 
       ${!navigation ? "page-carousel" : ""} 
       ${index !== page? 'transitioning' : ''}`}

@@ -4,6 +4,7 @@ import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 import { ButtonEnabled } from "./Carousel";
+import { useInView } from "react-intersection-observer";
 export const PrevCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
   <button
     className="embla__button embla__button--prev"
@@ -52,8 +53,27 @@ export default function CampaignCarousel(props:any) {
     embla.on("select", onSelect);
     onSelect();
   }, [embla, onSelect]);
+  const [refViewport, inView, entry] = useInView({});
+  useEffect(() => {
+    const handleKey = (e) => {
+      e.preventDefault();
+      if(inView) {
+        switch(e.key) {
+          case 'ArrowLeft':
+            scrollPrev();
+            return;
+          case 'ArrowRight':
+            scrollNext();
+            return;
+        }
+      }
+      
+    };
+    document.body.addEventListener("keydown", handleKey, { passive: false });
+    return () =>  document.body.removeEventListener("keydown", handleKey);
+  }, [inView, scrollNext, scrollPrev]); // @ts-ignore
   return (
-    <div className="section campaign-carousel">
+    <div ref={refViewport} className="section campaign-carousel">
       <h2 className="campaign-carousel__title container header-h1">Campaign Themes</h2>
       <div className="embla">
         <div className="embla__viewport" ref={viewportRef}>
