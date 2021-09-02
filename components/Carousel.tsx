@@ -132,7 +132,7 @@ export default function EmblaCarousel({
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             transition={{
-              x: { type: "spring", stiffness: 0, damping: 0 },
+              x: { type: "spring", stiffness: 300, damping: 20 },
             }}
             onDrag={(e, { offset, velocity }) => {
               if (inView) {
@@ -232,7 +232,7 @@ export default function EmblaCarousel({
       ""
     )}
   </AnimatePresence>
-  }, [page])
+  }, [page, inView])
   return (
     memo
 
