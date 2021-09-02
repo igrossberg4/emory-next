@@ -37,7 +37,6 @@
 .embla__viewport {
   overflow: hidden;
   width: 100%;
-  will-change: contents;
 }
 
 .embla__viewport.is-draggable {
@@ -55,12 +54,12 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
+  will-change: transform;
   transition: all $main-carousel-transition-duration ease-in-out;
 
   .no_selected {
     z-index: -1;
   }
-
 }
 
 .embla--carousel-navigation .embla__slide {

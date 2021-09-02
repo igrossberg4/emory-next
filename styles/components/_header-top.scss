@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    will-change: opacity, margin-left;
     transition:
       opacity $main-carousel-transition-duration ease-in-out,
       //transform $main-carousel-transition-duration ease-in-out;
@@ -199,7 +200,7 @@
     margin-bottom:  $h2-font-size;
     transform: translate(0, 50%);
     box-sizing: border-box;
-    will-change: width,height, opacity, bottom, transform, margin-bottom;
+    will-change: width, height, opacity, bottom, transform, margin-bottom;
     transition:
       width $scroll-down-transition-duration linear,
       height $scroll-down-transition-duration linear,
@@ -264,7 +265,7 @@
     background: $body-bg;
 
     .header-inner-content__img {
-      bottom: -73px;
+      bottom: -70px;
       width: 110vw;
       height: 110vw;
       transform: translate(0);
