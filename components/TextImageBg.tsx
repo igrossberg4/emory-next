@@ -1,10 +1,5 @@
-import Head from "next/head";
-import React, { Fragment, useContext, useState } from "react";
+import React, {useContext } from "react";
 import Image from "next/image";
-import { useRouter } from "next/dist/client/router";
-import { Box } from "@chakra-ui/react";
-import { AnimateSharedLayout, motion } from "framer-motion";
-import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function TextImageBg(props:any) {

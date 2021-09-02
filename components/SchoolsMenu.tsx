@@ -1,10 +1,8 @@
-import React, { Fragment, useContext, useState } from "react";
-import { useRouter } from "next/dist/client/router";
-import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
+import React, { Fragment, useContext } from "react";
+import { Menu, MenuButton, Button } from "@chakra-ui/react";
 import { Context } from "../state/Store";
 import Link from "next/link";
 import IconButton from "./IconButton";
-import { motion } from "framer-motion";
 import Overlay from "./Overlay";
 
 export default function SchoolsMenu(props: any) {
@@ -14,7 +12,7 @@ export default function SchoolsMenu(props: any) {
       <Overlay
         expand_action={
           <Menu>
-            <MenuButton as={Button} rightIcon={<IconButton icon="chevron-down" />}>
+            <MenuButton as={Button} rightIcon={<Icons icon="chevron-down" />}>
               {props.title}
             </MenuButton>
           </Menu>}

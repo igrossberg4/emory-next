@@ -1,8 +1,6 @@
 import Head from "next/head";
 import React, { Fragment } from "react";
 import Image from "next/image";
-import { useRouter } from "next/dist/client/router";
-import { Box } from "@chakra-ui/react";
 import HeaderTop from "./HeaderTop";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import dynamic from 'next/dynamic'

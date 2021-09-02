@@ -1,10 +1,8 @@
-import React, { Fragment, useContext, useState } from "react";
-import { useRouter } from "next/dist/client/router";
-import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
+import React, { Fragment, useContext } from "react";
+import { Menu, MenuButton, Button } from "@chakra-ui/react";
 import { Context } from "../state/Store";
 import Link from "next/link";
 import IconButton from "./IconButton";
-import { motion } from "framer-motion";
 import Overlay from "./Overlay";
 
 export default function MainMenu(props: any) {

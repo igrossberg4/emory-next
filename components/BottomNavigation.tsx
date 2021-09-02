@@ -1,11 +1,5 @@
-import Head from "next/head";
-import React, { Fragment, useContext, useRef, useState } from "react";
-import styles from "../../styles/Home.module.css";
-import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import React, { useContext } from "react";
 import { useRouter } from "next/dist/client/router";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Context } from "../state/Store";
 import IconButton from "./IconButton";
