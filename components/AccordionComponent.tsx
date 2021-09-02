@@ -75,6 +75,11 @@ export default function AccordionComponent(props: any) {
                       </a>
                     </div>
                   )}
+                  <div className="tags">
+                  {item?.tags?.map((tag:any)=>{
+
+                    return <Tag key={JSON.stringify(tag)} {...props} {...tag}></Tag>
+                  })}</div>
                 </AccordionPanel>
               </AccordionItem>
             );
