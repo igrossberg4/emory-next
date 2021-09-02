@@ -197,7 +197,7 @@
     max-width: unset;
     width: $round-image-size-small;
     height: $round-image-size-small;
-    margin-bottom:  $h2-font-size;
+    margin-bottom: 2em;
     transform: translate(0, 50%);
     box-sizing: border-box;
     will-change: width, height, opacity, bottom, transform, margin-bottom;
@@ -206,16 +206,12 @@
       height $scroll-down-transition-duration linear,
       opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
       bottom $scroll-down-transition-duration linear,
-      transform $scroll-down-transition-duration linear,
+      transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) linear,
       margin-bottom $scroll-down-transition-duration linear;
 
     @include media-breakpoint-up(sm) {
       width: $round-image-size;
       height: $round-image-size;
-    }
-    @include media-breakpoint-up(md){
-      margin-bottom:  $h2-font-size--desktop + math.div($default-separation, $rem-in-px);
-      margin-bottom:  $h2-font-size--desktop;
     }
     @include media-breakpoint-up(lg) {
       width: $round-image-size-medium;
@@ -271,6 +267,13 @@
       transform: translate(0);
       margin-bottom: 0;
       opacity: .5;
+      transition:
+              width $scroll-down-transition-duration linear,
+              height $scroll-down-transition-duration linear,
+              opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
+              bottom $scroll-down-transition-duration linear,
+              transform math.div($scroll-down-transition-duration, 2) linear,
+              margin-bottom $scroll-down-transition-duration linear;
 
       @media (orientation: portrait) {
         width: 110vh;
