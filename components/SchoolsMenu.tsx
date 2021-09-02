@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from "react";
 import { Menu, MenuButton, Button } from "@chakra-ui/react";
 import { Context } from "../state/Store";
 import Link from "next/link";
+import Icons from "./Icons";
 import IconButton from "./IconButton";
 import Overlay from "./Overlay";
 

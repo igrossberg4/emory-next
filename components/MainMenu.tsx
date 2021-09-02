@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from "react";
 import { Menu, MenuButton, Button } from "@chakra-ui/react";
 import { Context } from "../state/Store";
 import Link from "next/link";
+import Icons from "./Icons";
 import IconButton from "./IconButton";
 import Overlay from "./Overlay";
 
@@ -13,7 +14,7 @@ export default function MainMenu(props: any) {
       <Overlay
         expand_action={
           <Menu>
-            <MenuButton as={Button} rightIcon={<IconButton icon="menu" />}>
+            <MenuButton as={Button} rightIcon={<Icons icon="menu" />}>
               {props.title}
             </MenuButton>
           </Menu>
