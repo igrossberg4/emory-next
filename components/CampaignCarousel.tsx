@@ -55,7 +55,7 @@ export default function CampaignCarousel(props:any) {
   }, [embla, onSelect]);
   const [refViewport, inView, entry] = useInView({});
   useEffect(() => {
-    const handleKey = (e) => {
+    const handleKey = (e: KeyboardEvent) => {
       e.preventDefault();
       if(inView) {
         switch(e.key) {
@@ -74,7 +74,7 @@ export default function CampaignCarousel(props:any) {
   }, [inView, scrollNext, scrollPrev]); // @ts-ignore
   return (
     <div ref={refViewport} className="section campaign-carousel">
-      <h2 className="campaign-carousel__title container header-h1">Campaign Themes</h2>
+      <h2 className="campaign-carousel__title container header-h1">{props.title}</h2>
       <div className="embla">
         <div className="embla__viewport" ref={viewportRef}>
           <div className="embla__container">

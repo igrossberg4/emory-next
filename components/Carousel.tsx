@@ -100,7 +100,7 @@ export default function EmblaCarousel({
   }, [paginate, page]);
   const [refViewport, inView, entry] = useInView({});
   useEffect(() => {
-    const handleKey = (e) => {
+    const handleKey = (e: KeyboardEvent) => {
       if(inView) {
         switch(e.key) {
           case 'ArrowLeft':
@@ -120,9 +120,6 @@ export default function EmblaCarousel({
   const memo = useMemo(() => {
     return <AnimatePresence>
     <div
-      onKeyPress={(e) =>{
-        console.log(e)
-      }}
       className={`embla embla--carousel-navigation 
       ${!navigation ? "page-carousel" : ""} 
       ${index !== page? 'transitioning' : ''}`}
