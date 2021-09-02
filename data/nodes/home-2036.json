@@ -148,8 +148,7 @@
     {
       "component": "CampaignCarousel",
       "props": {
-        "title": "Additional priorities",
-        "pretitle": "COLLEGE OF ARTS & SCIENCES",
+        "title": "Campaign themes",
         "slides": [
           {
             "component":"Teaser",
@@ -203,7 +202,7 @@
             "tags": [
               {
                 "label": "A&S",
-                "url": "https://example.com"
+                "url": "goizueta-business-school"
               },
               {
                 "label": "Brain Health",
