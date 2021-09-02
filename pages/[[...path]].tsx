@@ -50,8 +50,7 @@ export default function Home(props: any) {
       position: "absolute",
     },
   };
-  return (
-    <Fragment>
+  return ( !router.isFallback ? <Fragment>
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
@@ -123,7 +122,7 @@ export default function Home(props: any) {
           ></DynamicComponentMatcher>
         </AnimatePresence>
       )}
-    </Fragment>
+    </Fragment> : ''
   );
 }
 
@@ -142,7 +141,7 @@ export async function getStaticProps({ params }: { params: { path: [] } }) {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 seconds
-    revalidate: 10, // In seconds
+    revalidate: 60, // In seconds
   };
 }
 
@@ -162,9 +161,8 @@ export async function getStaticPaths() {
     .map((post) => ({
       params: { path: post.path.toString().split("/") },
     }));
-  console.log(JSON.stringify(paths));
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
