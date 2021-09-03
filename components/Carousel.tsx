@@ -117,8 +117,8 @@ export default function EmblaCarousel({
     return () =>  document.body.removeEventListener("keydown", handleKey);
   }, [inView]); // @ts-ignore
 
-  const memo = useMemo(() => {
-    return <AnimatePresence>
+  return (
+    <AnimatePresence>
     <div
       className={`embla embla--carousel-navigation 
       ${!navigation ? "page-carousel" : ""} 
@@ -232,9 +232,6 @@ export default function EmblaCarousel({
       ""
     )}
   </AnimatePresence>
-  }, [page, inView])
-  return (
-    memo
 
   );
 }
