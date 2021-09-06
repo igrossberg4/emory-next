@@ -2,7 +2,9 @@
   "id": "emory-college-of-arts-and-sciences",
   "type": "collection",
   "page_props": {
+    "about": "school spotlight",
     "header": "College of Arts & Sciences",
+    "text": "Logline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nascetur in lectus odio.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_brain_health_smoke_blue.jpg"
   },
@@ -17,10 +19,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Header 2",
+        "header": "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
         "background_image": "bg_brain.jpg",
-
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done \r\n        convallis dictum elit at feugiat. Vestibulum ante ipsum primis in \r\n        faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu \r\n        leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu \r\n        justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a, \r\n        porttitor pretium est. Aenean sed mi semper, sodales urna rutrum, \r\n        consequat risus. Integer at nulla purus. In finibus, nulla ac viverra \r\n        aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget \r\n        enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non \r\n        laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit\r\n        urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget \r\n        nulla eu nibh condimentum pellentesque. Duis id neque tincidunt, \r\n        ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum \r\n        odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt \r\n        erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a \r\n        turpis et nisi malesuada scelerisque nec in lectus. Cras molestie, \r\n        eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus \r\n        libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante. \r\n        Class aptent taciti sociosqu ad litora torquent per conubia nostra, \r\n        per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus \r\n        sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi  \r\n        ac posuere rutrum, elit odio faucibus dui, commodo posuere libero \r\n        tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed \r\n        tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin \r\n        imperdiet nec leo eu egestas.",
+        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply into their own interests and our research priorities. Post-doctoral researchers play an important role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships, undergraduate research, entrepreneurial experiences, and study abroad.</p>",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_type": "image",
         "media_alt":"Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
@@ -29,59 +30,146 @@
       }
     },
     {
-      "component": "SectionIntro",
+      "component": "Quote",
       "props": {
-        "header": "Header 2",
-        "background_image": "bg_brain.jpg",
-
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done \r\n        convallis dictum elit at feugiat. Vestibulum ante ipsum primis in \r\n        faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu \r\n        leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu \r\n        justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a, \r\n        porttitor pretium est. Aenean sed mi semper, sodales urna rutrum, \r\n        consequat risus. Integer at nulla purus. In finibus, nulla ac viverra \r\n        aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget \r\n        enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non \r\n        laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit\r\n        urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget \r\n        nulla eu nibh condimentum pellentesque. Duis id neque tincidunt, \r\n        ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum \r\n        odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt \r\n        erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a \r\n        turpis et nisi malesuada scelerisque nec in lectus. Cras molestie, \r\n        eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus \r\n        libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante. \r\n        Class aptent taciti sociosqu ad litora torquent per conubia nostra, \r\n        per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus \r\n        sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi  \r\n        ac posuere rutrum, elit odio faucibus dui, commodo posuere libero \r\n        tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed \r\n        tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin \r\n        imperdiet nec leo eu egestas.",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor, purus lacus porttitor. Euismod ante aliquam consequat, vulputate elementum viverra enim. Lacinia vel scelerisque mi auctor."
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "Emory College of Arts and Sciences has a range of priorities for 2O36.",
+        "image_src": "background_image.jpg"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key priority",
+        "title": "Professorships in key departments and retention chairs for early to mid-career faculty members, as well as graduate student and start-up support",
+        "body": "<p>We seek to endow nine new distinguished professorships and to provide those  professorships with support for graduate students. We also seek to create ten endowed  professorships for mid-career faculty that will allow us to retain rising stars — recruited  faculty who are in danger of considering other universities. This effort will result in more Emory faculty serving as international commentators on the most important issues of our  times in forums that define public scholarship and increase the number of faculty who are  members of international academies.</p>",
+        "read_more": "goizueta-business-school",
+        "tags": [
+          {
+            "label": "A&S",
+            "url": "goizueta-business-school"
+          },
+          {
+            "label": "Brain Health",
+            "url": "goizueta-business-school"
+          }
+        ],
+        "layout": "right",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
         "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_alt":"Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "image_expand_id": "image_expanded_test",
-        "button_close_text": "Close"
+        "media_header": "Image title",
+        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
       }
-    },    {
-      "component": "SectionIntro",
+    },
+    {
+      "component": "TextImageHeader",
       "props": {
-        "header": "Header 2",
-        "background_image": "bg_brain.jpg",
-
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done \r\n        convallis dictum elit at feugiat. Vestibulum ante ipsum primis in \r\n        faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu \r\n        leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu \r\n        justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a, \r\n        porttitor pretium est. Aenean sed mi semper, sodales urna rutrum, \r\n        consequat risus. Integer at nulla purus. In finibus, nulla ac viverra \r\n        aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget \r\n        enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non \r\n        laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit\r\n        urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget \r\n        nulla eu nibh condimentum pellentesque. Duis id neque tincidunt, \r\n        ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum \r\n        odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt \r\n        erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a \r\n        turpis et nisi malesuada scelerisque nec in lectus. Cras molestie, \r\n        eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus \r\n        libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante. \r\n        Class aptent taciti sociosqu ad litora torquent per conubia nostra, \r\n        per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus \r\n        sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi  \r\n        ac posuere rutrum, elit odio faucibus dui, commodo posuere libero \r\n        tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed \r\n        tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin \r\n        imperdiet nec leo eu egestas.",
-        "img_src": "2036_cancer_cells_blue.jpg",
-        "button_close_text": "Close",
-        "media_src": "/video.mp4",
-        "media_type": "video"
-        
-      }
-    },    {
-      "component": "SectionIntro",
-      "props": {
-        "header": "Header 2",
-        "background_image": "bg_brain.jpg",
-
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done \r\n        convallis dictum elit at feugiat. Vestibulum ante ipsum primis in \r\n        faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu \r\n        leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu \r\n        justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a, \r\n        porttitor pretium est. Aenean sed mi semper, sodales urna rutrum, \r\n        consequat risus. Integer at nulla purus. In finibus, nulla ac viverra \r\n        aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget \r\n        enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non \r\n        laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit\r\n        urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget \r\n        nulla eu nibh condimentum pellentesque. Duis id neque tincidunt, \r\n        ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum \r\n        odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt \r\n        erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a \r\n        turpis et nisi malesuada scelerisque nec in lectus. Cras molestie, \r\n        eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus \r\n        libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante. \r\n        Class aptent taciti sociosqu ad litora torquent per conubia nostra, \r\n        per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus \r\n        sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi  \r\n        ac posuere rutrum, elit odio faucibus dui, commodo posuere libero \r\n        tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed \r\n        tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin \r\n        imperdiet nec leo eu egestas.",
-        "image_expand_id": "image_expanded_test",
-        "button_close_text": "Close",
-        "media_src": "2036_brain_health_smoke_blue.jpg",
+        "pretitle": "Key priority",
+        "title": "Faculty fellowships and residencies in the arts, including creative writing, and film",
+        "body": "<p>We will build upon existing teaching and research strengths in the arts and a variety of  disciplines and create meaningful collaborations with Atlanta by investing in visiting artists,  fellows, teaching, and experiences that bring art into the classroom and community. The  effort will enhance the undergraduate experience, expand opportunities for collaboration  from the health sciences to business, and create meaningful collaboration. We will lead the  national creative conversation through the work of our students, faculty, graduates, and  those who choose to come here to perform and teach for a day or for a year.</p>",
+        "read_more": "goizueta-business-school",
+        "tags": [
+          {
+            "label": "A&S",
+            "url": "goizueta-business-school"
+          },
+          {
+            "label": "Brain Health",
+            "url": "goizueta-business-school"
+          }
+        ],
+        "layout": "left",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_alt":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+        "media_header": "Image title",
+        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
       }
-    },    {
-      "component": "SectionIntro",
+    },
+    {
+      "component": "TextImageHeader",
       "props": {
-        "header": "Header 2",
-        "background_image": "bg_brain.jpg",
-
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Done \r\n        convallis dictum elit at feugiat. Vestibulum ante ipsum primis in \r\n        faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eu \r\n        leo viverra, ornare mauris vitae, scelerisque leo. Sed at tortor eu \r\n        justo feugiat porttitor. Quisque tortor nibh, interdum vitae purus a, \r\n        porttitor pretium est. Aenean sed mi semper, sodales urna rutrum, \r\n        consequat risus. Integer at nulla purus. In finibus, nulla ac viverra \r\n        aliquam, sem velit elementum erat, eget lacinia ipsum sapien eget \r\n        enim. Sed congue vitae nisl ut porta. Sed placerat ante nibh, non \r\n        laoreet massa eleifend sed. Praesent non pulvinar leo, at hendrerit\r\n        urna. Quisque ac laoreet libero, at ullamcorper orci. Suspendisse eget \r\n        nulla eu nibh condimentum pellentesque. Duis id neque tincidunt, \r\n        ultricies lacus id, egestas erat. Donec non rutrum augue. Etiam ipsum \r\n        odio, facilisis at molestie in, cursus in lacus. Etiam ut tincidunt \r\n        erat. Sed vel volutpat lectus, tincidunt scelerisque erat. Donec a \r\n        turpis et nisi malesuada scelerisque nec in lectus. Cras molestie, \r\n        eros non auctor rutrum, sapien nunc tincidunt mauris, vitae rhoncus \r\n        libero sapien eu elit. Phasellus vitae feugiat velit, ut iaculis ante. \r\n        Class aptent taciti sociosqu ad litora torquent per conubia nostra, \r\n        per inceptos himenaeos. Vestibulum non urna nibh. Nunc laoreet lectus \r\n        sit amet erat sagittis, at laoreet lectus interdum. Duis rutrum, nisi  \r\n        ac posuere rutrum, elit odio faucibus dui, commodo posuere libero \r\n        tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed \r\n        tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin \r\n        imperdiet nec leo eu egestas.",
-        "img_src": "2036_data_science_code_yellow.jpg",
-        "image_expand_id": "image_expanded_test",
-        "button_close_text": "Close",
-        "media_src": "2036_data_science_code_yellow.jpg",
+        "pretitle": "Key priority",
+        "title": "Naming gifts and undergraduate fellowships at Institute for the Liberal Arts",
+        "body": "<p>Emory College has several leading programs that could extend their reach with an  endowment that would carry with it a naming opportunity, specifically for the Department  of Quantitative Theory and Methods, Center for the Study of Human Health, Department of African American Studies, and the Creative Writing Program. These are educational  programs that are rooted in the work of top research faculty, and all are destinations for  undergraduate students throughout the nation.</p>",
+        "read_more": "goizueta-business-school",
+        "tags": [
+          {
+            "label": "A&S",
+            "url": "goizueta-business-school"
+          },
+          {
+            "label": "Brain Health",
+            "url": "goizueta-business-school"
+          }
+        ],
+        "layout": "right",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_alt":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+        "media_header": "Image title",
+        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed velit tempor nulla sagittis, eget suspendisse. Porta quisque luctus interdum nisl suspendisse arcu senectus. Mauris, aliquet ultricies ac sit tristique purus accumsan varius. Laoreet ac massa nulla eget. Vitae, feugiat malesuada scelerisque quam leo arcu scelerisque. Condimentum volutpat at habitant id malesuada. Quam amet pellentesque sed ut quis feugiat suscipit mattis vitae. Lacus imperdiet mauris enim nullam faucibus consectetur pulvinar congue augue. Massa in maecenas pulvinar augue quis leo. Sed nulla ultrices vitae ipsum. Hac in purus diam lorem nibh libero elementum. Sapien, augue consequat odio diam. Vitae fermentum aenean id enim et mi ut. Vel vel lorem vel, sit. Id sagittis consectetur egestas ultricies amet, ut dui. Ac imperdiet congue sit odio nisi.",
+        "column2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed velit tempor nulla sagittis, eget suspendisse. Porta quisque luctus interdum nisl suspendisse arcu senectus. Mauris, aliquet ultricies ac sit tristique purus accumsan varius. Laoreet ac massa nulla eget. Vitae, feugiat malesuada scelerisque quam leo arcu scelerisque. Condimentum volutpat at habitant id malesuada. Quam amet pellentesque sed ut quis feugiat suscipit mattis vitae. Lacus imperdiet mauris enim nullam faucibus consectetur pulvinar congue augue. Massa in maecenas pulvinar augue quis leo. Sed nulla ultrices vitae ipsum. Hac in purus diam lorem nibh libero elementum. Sapien, augue consequat odio diam. Vitae fermentum aenean id enim et mi ut. Vel vel lorem vel, sit. Id sagittis consectetur egestas ultricies amet, ut dui. Ac imperdiet congue sit odio nisi."
+      }
+    },
+    {
+      "component": "TextLargeImage",
+      "props": {
+        "background_image": "bg_brain.jpg",
+        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "img_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "image",
+        "media_header": "Image title",
+        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "AccordionComponent",
+      "props": {
+        "title": "Additional priorities",
+        "pretitle": "COLLEGE OF ARTS & SCIENCES",
+        "items": [
+          {
+            "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
+            "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship",
+            "read_more": "school-of-law",
+            "tags": [
+              {
+                "label": "A&S",
+                "url": "goizueta-business-school"
+              },
+              {
+                "label": "Brain Health",
+                "url": "school-of-law"
+              }
+            ]
+          },
+          {
+            "title": "Postdoctoral research program in interdisciplinary natural sciences",
+            "description": "Accordion description"
+          },
+          {
+            "title": "Emory Edge: funding for summer experiences including undergraduate research,  internships, entrepreneurial experiences, and study abroad",
+            "description": "Accordion description"
+          }
+        ]
       }
     }
   ]
