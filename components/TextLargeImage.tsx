@@ -11,7 +11,7 @@ export default function TextLargeImage(props:any) {
   return (
     <div className="section text-large-image" style={{backgroundImage:props.background_image ? `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(/${props.background_image})` : ''}}>
         <div className="container">
-        {props.header && 
+        {props.header &&
           <div className="row header-container">
             <div className="col-md-6"></div>
             <div className="col-md-6">
