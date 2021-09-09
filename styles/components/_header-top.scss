@@ -177,7 +177,7 @@
     bottom: 0;
     width: 100%;
     z-index: 2;
-    transition: all math.div($main-carousel-transition-duration, 3) ease-in-out;
+    //transition: all math.div($main-carousel-transition-duration, 3) ease-in-out;
     padding-bottom: $default-separation;
   }
 
