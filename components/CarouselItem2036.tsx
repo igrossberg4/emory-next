@@ -44,9 +44,6 @@ export default function CarouselItem2036(props: any) {
   return       <Fragment>
   {true ? (
     <div
-      style={{
-        background: `url(${require(`../public/images/2036-bg.jpg`)}) no-repeat center bottom`,
-      }}
       className="content-header__container header-2036 container-force-screen-fit-y"
       data-animation={props.active && goingUp ? "active" : "not-active"}
     >

@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MD5 } from "object-hash";
 import { Context } from "../state/Store";
 import { useInView } from "react-intersection-observer";
+import { css, cx } from '@emotion/css'
+
 export interface ButtonEnabled {
   enabled: boolean;
   onClick: () => void;
@@ -124,7 +126,24 @@ export default function EmblaCarousel({
       ${!navigation ? "page-carousel" : ""} 
       ${index !== page? 'transitioning' : ''}`}
     >
-        <div ref={refViewport} className="embla__viewport" key={"viewPort"}>
+        <div className={`${ css`
+      &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: ${slides[page].props.view[0].props.isMain ? 1 : 0};
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background: url(${require(`../public/images/2036-bg.jpg`)}) no-repeat center bottom;
+      }
+    `} embla__viewport`}
+
+        ref={refViewport} key={"viewPort"}>
           <div
           
           >

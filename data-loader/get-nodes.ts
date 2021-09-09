@@ -17,6 +17,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component:'IntroPage',
                         props: Object.assign({
+                            isMain:true,
                             active:false,
                             path:path
                           }, nodeFinded.page_props),
@@ -37,6 +38,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component:'IntroPage',
                         props: Object.assign({
+                            isMain:true,
                             active:true,
                             path: path
                           }, nodeFinded.page_props),
@@ -207,6 +209,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             pages_list.nodeBase.id === prevNode.id ? {
                                 component:'IntroPage',
                                 props: Object.assign({
+                                    isMain:true,
                                     active:false,
                                     path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
                                   }, prevNode.page_props),
@@ -230,6 +233,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                 pages_list.nodeBase.id === previousNodeCloned.id ? {
                                     component:'IntroPage',
                                     props: Object.assign({
+                                        isMain:true,
                                         active:false,
                                         path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
                                       }, previousNodeCloned.page_props),
@@ -254,6 +258,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             pages_list.nodeBase.id === nextNode.id ? {
                                 component:'IntroPage',
                                 props: Object.assign({
+                                    isMain:true,
                                     active:false,
                                     path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
                                   }, nextNode.page_props),
@@ -278,6 +283,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                 pages_list.nodeBase.id === nextNodeCloned.id ? {
                                     component:'IntroPage',
                                     props: Object.assign({
+                                        isMain:true,
                                         active:true,
                                         path: path === '' ? '/' : path
                                       }, nextNodeCloned.page_props),
@@ -312,6 +318,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                     pages_list.nodeBase.id === nodeFinded.id ? {
                                         component:'IntroPage',
                                         props: Object.assign({
+                                            isMain:true,
                                             active:true,
                                             path: path === '' ? '/' : path
                                           }, nodeFinded.page_props),
