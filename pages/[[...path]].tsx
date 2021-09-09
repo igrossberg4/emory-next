@@ -17,7 +17,7 @@ export default function Home(props: any) {
 
   // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
   const spring = {
-    duration: 0.35,
+    duration: 0.65,
   };
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY);
