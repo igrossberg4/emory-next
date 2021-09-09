@@ -17,7 +17,9 @@ export default function Home(props: any) {
 
   // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
   const spring = {
+    type:"tween",
     duration: 0.65,
+    ease:"easeInOut"
   };
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY);
@@ -50,7 +52,7 @@ export default function Home(props: any) {
       position: "absolute",
     },
   };
-  return ( !router.isFallback ? <Fragment>
+  return ( <Fragment>
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
@@ -82,7 +84,9 @@ export default function Home(props: any) {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
       {props.skipTransitionAnimations !== true ? (
-        <AnimatePresence>
+        <AnimatePresence
+        
+        >
           <motion.div
             className="main-container"
             id={state.route + " --- " + state.route}
@@ -115,14 +119,9 @@ export default function Home(props: any) {
           </motion.div>
         </AnimatePresence>
       ) : (
-        <AnimatePresence>
-          <DynamicComponentMatcher
-            key={state.route}
-            view={props.view}
-          ></DynamicComponentMatcher>
-        </AnimatePresence>
+        ''
       )}
-    </Fragment> : ''
+    </Fragment>
   );
 }
 

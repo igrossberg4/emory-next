@@ -118,32 +118,15 @@ export default function EmblaCarousel({
   }, [inView]); // @ts-ignore
 
   return (
-    <AnimatePresence>
+    <>
     <div
       className={`embla embla--carousel-navigation 
       ${!navigation ? "page-carousel" : ""} 
       ${index !== page? 'transitioning' : ''}`}
     >
         <div ref={refViewport} className="embla__viewport" key={"viewPort"}>
-          <motion.div
-            //drag={inView ? "x" : undefined}
-            layout
-            dragPropagation
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 20 },
-            }}
-            onDrag={(e, { offset, velocity }) => {
-              if (inView) {
-                const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
-                  scrollNext();
-                } else if (swipe > swipeConfidenceThreshold) {
-                  scrollPrev();
-                }
-              }
-            }}
+          <div
+          
           >
               <div
                 className="embla__container"
@@ -197,7 +180,7 @@ export default function EmblaCarousel({
                   );
                 })}
             </div>
-          </motion.div>
+          </div>
         </div>
 
       <PrevButton
@@ -231,7 +214,7 @@ export default function EmblaCarousel({
     ) : (
       ""
     )}
-  </AnimatePresence>
+  </>
 
   );
 }
