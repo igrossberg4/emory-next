@@ -28,8 +28,10 @@ export default function CarouselItem2036(props: any) {
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > 25) {
+          document.body.classList.add('is-scrolled');
           setGoingUp(true);
         } else {
+          document.body.classList.remove('is-scrolled');
           setGoingUp(false);
         }
       }
