@@ -58,6 +58,9 @@ a {
   &.size--big {
     max-width: $round-image-size-big;
   }
+  img{
+    transform: scale(1.05);
+  }
 
   @include media-breakpoint-up(md){
     border-width: 12px;
