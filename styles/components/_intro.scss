@@ -123,8 +123,10 @@
 }
 
 body.full_video {
+  overflow: hidden;
   .header-menu,
   .embla__button,
+  .line-separator,
   .actions {
     display: none;
   }
