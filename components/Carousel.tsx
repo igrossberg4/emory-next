@@ -126,7 +126,7 @@ export default function EmblaCarousel({
     >
         <div ref={refViewport} className="embla__viewport" key={"viewPort"}>
           <motion.div
-            drag={inView ? "x" : undefined}
+            //drag={inView ? "x" : undefined}
             layout
             dragPropagation
             dragConstraints={{ left: 0, right: 0 }}
