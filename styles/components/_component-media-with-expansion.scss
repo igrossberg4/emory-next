@@ -42,6 +42,11 @@
     .overlay__text {
       margin: 20px auto;
       max-width: map-get($container-max-widths, 'md');
+      .text-body{
+        &:before{
+          content: unset;
+        }
+      }
     }
 
     .title {
