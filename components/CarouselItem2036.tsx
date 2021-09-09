@@ -129,7 +129,7 @@ export default function CarouselItem2036(props: any) {
           }}
         >
           {" "}
-          {props.button_scroll}
+          {!goingUp ? props.about_before_scroll : props.button_scroll }
         </div>
       </div>
     </div>
