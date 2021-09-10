@@ -33,14 +33,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                         props: Object.assign(nodeFinded.page_props, {
                             path: path
                         }, nodeFinded.page_props),
-                    } :
-                        {
-                            component: "CarouselItem",
-                            props: Object.assign(nodeFinded.page_props, {
-                                path: path
-                            })
-                        }
-
+                    } 
                 ]
             }
         } : {
