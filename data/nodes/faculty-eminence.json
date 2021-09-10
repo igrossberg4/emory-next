@@ -1,16 +1,16 @@
 {
-  "id": "faculty",
+  "id": "faculty-eminence",
   "type": "collection",
   "page_props": {
-    "header": "FACULTY",
+    "header": "FACULTY EMINENCE",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "about": "About text",
     "text": "Example text"
   },
-  "path": "faculty",
+  "path": "faculty-eminence",
   "metatag": {
-    "title": "FACULTY",
+    "title": "FACULTY EMINENCE",
     "description": "Some description for carousel page",
     "image": ""
   },
