@@ -26,13 +26,25 @@ export default function CarouselItem2036(props: any) {
     const handleScroll = () => {
       if (props.active) {
         const currentScrollY = window.scrollY;
-
-        if (currentScrollY > 25) {
-          document.body.classList.add('is-scrolled');
+        if (currentScrollY > 25 && goingUp == false) {
           setGoingUp(true);
         } else {
-          document.body.classList.remove('is-scrolled');
-          setGoingUp(false);
+          if(currentScrollY < 25 && goingUp != false){
+            setGoingUp(false);
+
+          }
+        }
+
+        if (
+          currentScrollY >= 25 &&
+          !document.body.classList.contains("is-scrolled")
+        ) {
+          document.body.classList.add("is-scrolled");
+        } else if (
+          currentScrollY < 25 &&
+          document.body.classList.contains("is-scrolled")
+        ) {
+          document.body.classList.remove("is-scrolled");
         }
       }
     };
