@@ -221,6 +221,10 @@
       width: $round-image-size-big;
       height: $round-image-size-big;
     }
+
+    img {
+      object-fit: cover;
+    }
   }
 
   .header-inner-content__text {
