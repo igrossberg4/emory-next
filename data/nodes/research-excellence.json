@@ -1,14 +1,16 @@
 {
-  "id": "students",
+  "id": "research-excellence",
   "type": "collection",
   "page_props": {
-    "header": "STUDENTS",
+    "header": "RESEARCH EXCELLENCE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_code_yellow.jpg"
+    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "about": "About text",
+    "text": "Example text"
   },
-  "path": "students",
+  "path": "research-excellence",
   "metatag": {
-    "title": "STUDENTS",
+    "title": "RESEARCH EXCELLENCE",
     "description": "Some description for carousel page",
     "image": ""
   },

@@ -3,6 +3,8 @@
   "type": "collection",
   "page_props": {
     "header": "Goizueta<br>Business School",
+    "about":"School spotlight",
+    "text":"A description of the school",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_grid_yellow.jpg"
   },

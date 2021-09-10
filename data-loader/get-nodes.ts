@@ -8,25 +8,31 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
 
 function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any) {
     return pages.map(page => {
-        const nodeFinded = nodes.find(node => page === node.id);
+        let nodeFinded;
+        try{
+            nodeFinded = nodes.find(node => page === node.id);
+
+        }catch(e){
+            throw "Slide with id " + page + ` from base collection '${nodeBase.id}' ` + " not found in pages"
+        }
         const path = nodeFinded.id === nodeBase.id ? `${nodeFinded.path == '' ? '/' : nodeFinded.path}` : `${nodeBase.path}/${nodeFinded.path}`;
         return actual.id !== nodeFinded.id ? {
             component: "DynamicComponentMatcher",
             props: {
                 view: [
                     nodeBase.id === nodeFinded.id ? {
-                        component:'IntroPage',
+                        component: 'IntroPage',
                         props: Object.assign({
-                            active:false,
-                            path:path
-                          }, nodeFinded.page_props),
-                    } :
-                    {
-                        component: "CarouselItem",
-                        props: Object.assign(nodeFinded.page_props, {
+                            active: false,
                             path: path
-                        })
-                    }
+                        }, nodeFinded.page_props),
+                    } :
+                        {
+                            component: "CarouselItem",
+                            props: Object.assign(nodeFinded.page_props, {
+                                path: path
+                            })
+                        }
 
                 ]
             }
@@ -35,17 +41,17 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
             props: {
                 view: [
                     nodeBase.id === nodeFinded.id ? {
-                        component:'IntroPage',
+                        component: 'IntroPage',
                         props: Object.assign({
-                            active:true,
+                            active: true,
                             path: path
-                          }, nodeFinded.page_props),
-                    } : 
-                    {
-                        component: "CarouselItem",
-                        // We assign the active prop for scale only this element.
-                        props: Object.assign({ ...nodeFinded.page_props }, { active: true })
-                    }
+                        }, nodeFinded.page_props),
+                    } :
+                        {
+                            component: "CarouselItem",
+                            // We assign the active prop for scale only this element.
+                            props: Object.assign({ ...nodeFinded.page_props }, { active: true })
+                        }
 
                 ].concat(nodeFinded.components)
                     .concat(
@@ -86,7 +92,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
                             const link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
                             return {
                                 title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to:  link
+                                link_to: link
                             }
                         }),
                     },
@@ -96,12 +102,18 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
                     props: {
                         title: "Menu",
                         options: mainMenu[0].links.map((link: any) => {
-                            const nodeFind = nodes.find(node => link.id === node.id)
-                            const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
+                            try {
+                                const nodeFind = nodes.find(node => link.id === node.id)
+                                const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
 
-                            return {
-                                title: link.title ? link.title : nodeFind.page_props.title,
-                                link_to:  linkFound
+
+
+                                return {
+                                    title: link.title ? link.title : nodeFind.page_props.title,
+                                    link_to: linkFound
+                                }
+                            } catch (e) {
+                                throw "Link page with id " +link.id + " at menu school not found in pages with base collection " + baseNode.id;
                             }
                         }),
                         social: mainMenu[0].social
@@ -116,8 +128,8 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
     const basePath = baseNode ? `${baseNode.path}/` : '';
     const prevNodeSelect = !lastNode ? nodes[nodes.length - 1] : lastNode;
     const nextNodeSelect = !nextNode ? nodes[0] : nextNode;
-    const previous_route = prevNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path === '' ? prevNodeSelect.path : baseNode.path+'/'+prevNodeSelect.path}`;
-    const next_route = nextNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path === '' ? nextNodeSelect.path : baseNode.path+'/'+nextNodeSelect.path}`;
+    const previous_route = prevNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path === '' ? prevNodeSelect.path : baseNode.path + '/' + prevNodeSelect.path}`;
+    const next_route = nextNodeSelect.id === baseNode.id ? `${baseNode.path}` : `${baseNode.path === '' ? nextNodeSelect.path : baseNode.path + '/' + nextNodeSelect.path}`;
     return [
         {
             "component": "BottomNavigation",
@@ -139,7 +151,13 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
     const pages = pages_list.list;
     const nodesForCollection = pages.map(page => nodes.find(node => node.id === page));
     return pages.map((page, i) => {
-        const nodeFinded = nodes.find(node => page === node.id);
+        let nodeFinded;
+        try{
+            nodeFinded = nodes.find(node => page === node.id);
+
+        }catch(e){
+            console.log("Node with id " + page + " not found in pages");
+        }
         const prevNode = i === 0 ? nodes.find(node => node.id === pages[pages.length - 1]) : nodes.find(node => node.id === pages[i - 1]);
         const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
         const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
@@ -156,8 +174,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         item.read_more = path;
                         item.internal_link = true;
                     }
-                    item?.tags?.forEach((tag:any) =>{
-                        if(tag.url && !re.test(tag.url)){
+                    item?.tags?.forEach((tag: any) => {
+                        if (tag.url && !re.test(tag.url)) {
                             const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
                             const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
                             tag.url = path;
@@ -178,21 +196,21 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     }
                 })
             }
-            if(component.component === 'TextImageHeader'){
+            if (component.component === 'TextImageHeader') {
                 const re = new RegExp("^(http|https)://", "i");
-                component.props?.tags?.forEach((tag:any) =>{
-                    if(tag.url && !re.test(tag.url)){
+                component.props?.tags?.forEach((tag: any) => {
+                    if (tag.url && !re.test(tag.url)) {
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
                         const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
                         tag.url = path;
                         tag.internal_link = true;
                     }
                 });
-                if(component.props.read_more && !re.test(component.props.read_more)){
+                if (component.props.read_more && !re.test(component.props.read_more)) {
                     const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === component.props.read_more && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        component.props.read_more = path;
-                        component.props.internal_link = true;
+                    const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                    component.props.read_more = path;
+                    component.props.internal_link = true;
                 }
 
             }
@@ -205,18 +223,19 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     props: {
                         view: [
                             pages_list.nodeBase.id === prevNode.id ? {
-                                component:'IntroPage',
+                                component: 'IntroPage',
                                 props: Object.assign({
-                                    active:false,
+                                    active: false,
                                     path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
-                                  }, prevNode.page_props),
+                                }, prevNode.page_props),
                             } :
-                            {
-                                component: "CarouselItem",
-                                props: Object.assign(prevNode.page_props,{
-                                    
-                                    path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`})
-                            }
+                                {
+                                    component: "CarouselItem",
+                                    props: Object.assign(prevNode.page_props, {
+
+                                        path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
+                                    })
+                                }
 
                         ]
                     }
@@ -228,18 +247,19 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         props: {
                             view: [
                                 pages_list.nodeBase.id === previousNodeCloned.id ? {
-                                    component:'IntroPage',
+                                    component: 'IntroPage',
                                     props: Object.assign({
-                                        active:false,
+                                        active: false,
                                         path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
-                                      }, previousNodeCloned.page_props),
+                                    }, previousNodeCloned.page_props),
                                 } :
-                                {
-                                    component: "CarouselItem",
-                                    props: Object.assign(previousNodeCloned.page_props,{
-                                    
-                                        path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`})
-                                }
+                                    {
+                                        component: "CarouselItem",
+                                        props: Object.assign(previousNodeCloned.page_props, {
+
+                                            path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
+                                        })
+                                    }
 
                             ]
                         }
@@ -252,18 +272,19 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     props: {
                         view: [
                             pages_list.nodeBase.id === nextNode.id ? {
-                                component:'IntroPage',
+                                component: 'IntroPage',
                                 props: Object.assign({
-                                    active:false,
+                                    active: false,
                                     path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
-                                  }, nextNode.page_props),
+                                }, nextNode.page_props),
                             } :
-                            {
-                                component: "CarouselItem",
-                                props: Object.assign(nextNode.page_props,{
-                                
-                                    path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`})
-                            }
+                                {
+                                    component: "CarouselItem",
+                                    props: Object.assign(nextNode.page_props, {
+
+                                        path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
+                                    })
+                                }
 
                         ]
                     }
@@ -276,18 +297,19 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                         props: {
                             view: [
                                 pages_list.nodeBase.id === nextNodeCloned.id ? {
-                                    component:'IntroPage',
+                                    component: 'IntroPage',
                                     props: Object.assign({
-                                        active:true,
+                                        active: true,
                                         path: path === '' ? '/' : path
-                                      }, nextNodeCloned.page_props),
+                                    }, nextNodeCloned.page_props),
                                 } :
-                                {
-                                    component: "CarouselItem",
-                                    props: Object.assign(nextNodeCloned.page_props,{
-                                    
-                                        path: path})
-                                }
+                                    {
+                                        component: "CarouselItem",
+                                        props: Object.assign(nextNodeCloned.page_props, {
+
+                                            path: path
+                                        })
+                                    }
 
                             ]
                         }
@@ -295,7 +317,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 }
             }
         }
-        const path = pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path == '' ? '' : nodeFinded.path }` : `${pages_list.nodeBase.path == '' ? nodeFinded.path : pages_list.nodeBase.path+'/'+nodeFinded.path}`;
+        const path = pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path == '' ? '' : nodeFinded.path}` : `${pages_list.nodeBase.path == '' ? nodeFinded.path : pages_list.nodeBase.path + '/' + nodeFinded.path}`;
         return {
             path: path,
             meta: Object.assign({}, nodeFinded.metatag),
@@ -310,17 +332,17 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             props: {
                                 view: [
                                     pages_list.nodeBase.id === nodeFinded.id ? {
-                                        component:'IntroPage',
+                                        component: 'IntroPage',
                                         props: Object.assign({
-                                            active:true,
+                                            active: true,
                                             path: path === '' ? '/' : path
-                                          }, nodeFinded.page_props),
-                                    }  : 
-                                    {
-                                        component: "CarouselItem",
-                                        // We assign the active prop for scale only this element.
-                                        props: Object.assign({ ...nodeFinded.page_props }, { active: true })
-                                    }
+                                        }, nodeFinded.page_props),
+                                    } :
+                                        {
+                                            component: "CarouselItem",
+                                            // We assign the active prop for scale only this element.
+                                            props: Object.assign({ ...nodeFinded.page_props }, { active: true })
+                                        }
 
                                 ].concat(nodeFinded.components).concat(
                                     prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase)

@@ -5,17 +5,17 @@
           "id":"home-2036"
        },
        {
-          "title":"THEMES",
-          "id":"themes"
+          "title":"STUDENTS SUCCESS",
+          "id":"students-success"
        },
        {
-          "title":"STUDENTS",
-          "id":"students"
+          "title":"FACULTY EMINENCE",
+          "id":"faculty-eminence"
        },
        {
-          "title":"FACULTY",
-          "id":"faculty"
-       }
+         "title":"RESEARCH EXCELLENCE",
+         "id":"research-excellence"
+      }
     ],
     "social":[
        {
