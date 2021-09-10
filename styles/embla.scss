@@ -37,6 +37,11 @@
 .embla__viewport {
   overflow: hidden;
   width: 100%;
+  &:before{
+    transition: background $scroll-down-transition-duration ease-in-out;
+    transition: opacity 2s ease-in-out;
+
+  }
 }
 
 .embla__viewport.is-draggable {
