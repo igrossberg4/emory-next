@@ -74,6 +74,10 @@
 }
 
 .embla__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   outline: 0;
   cursor: pointer;
   background-color: $color_white;
@@ -85,8 +89,6 @@
   border: 0;
   width: 64px;
   height: 64px;
-  justify-content: center;
-  align-items: center;
   fill: $color_black_soft;
   padding: 0;
   border-radius: 50%;
@@ -105,10 +107,18 @@
 
 .embla__button--prev {
   left: 10%;
+
+  svg {
+    margin-right: 4px;
+  }
 }
 
 .embla__button--next {
   right: 10%;
+
+  svg {
+    margin-left: 4px;
+  }
 }
 
 body.is-scrolled {
