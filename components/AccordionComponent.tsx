@@ -56,10 +56,10 @@ export default function AccordionComponent(props: any) {
                     </a>
                   )}
                   {item.read_more && item.internal_link && (
-                    <div
+                    <div className="accordion__readmore"
                       onClick={(e) => {
                         e.preventDefault();
-                        const linkPrepared = item.read_more[0] !== '/' ? `/${item.read_more}` : item.read_more 
+                        const linkPrepared = item.read_more[0] !== '/' ? `/${item.read_more}` : item.read_more
                         dispatch({
                           type: "SET_NAV",
                           payload: linkPrepared,
@@ -77,7 +77,6 @@ export default function AccordionComponent(props: any) {
                   )}
                   <div className="tags">
                   {item?.tags?.map((tag:any)=>{
-
                     return <Tag key={JSON.stringify(tag)} {...props} {...tag}></Tag>
                   })}</div>
                 </AccordionPanel>
