@@ -6,7 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MD5 } from "object-hash";
 import { Context } from "../state/Store";
 import { useInView } from "react-intersection-observer";
-import { css, cx } from '@emotion/css'
+import { css, cx } from "@emotion/css";
+import { animated, useSpring } from "react-spring";
 
 export interface ButtonEnabled {
   enabled: boolean;
@@ -71,25 +72,26 @@ export default function EmblaCarousel({
     page < slides.length - 1 ? false : true
   );
 
-
   const changeRoute = useCallback(
     (route, newDirection) => {
-
       if (route == undefined) return;
       router.push(
         {
           pathname: route,
         },
         route,
-        { scroll: false, shallow:false }
+        { scroll: false, shallow: false }
       );
     },
     [router]
   );
-  const paginate = useCallback((newDirection: number) => {
-    setTransitioning(true);
-    setPage([page + newDirection, newDirection]);
-  }, [changeRoute, page, slides]);
+  const paginate = useCallback(
+    (newDirection: number) => {
+      setTransitioning(true);
+      setPage([page + newDirection, newDirection]);
+    },
+    [changeRoute, page, slides]
+  );
   const scrollPrev = useCallback(() => {
     if (page > 0) {
       paginate(-1);
@@ -103,81 +105,75 @@ export default function EmblaCarousel({
   const [refViewport, inView, entry] = useInView({});
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if(inView) {
-        switch(e.key) {
-          case 'ArrowLeft':
+      if (inView) {
+        switch (e.key) {
+          case "ArrowLeft":
             scrollPrev();
             return;
-          case 'ArrowRight':
+          case "ArrowRight":
             scrollNext();
             return;
         }
       }
-      
     };
     document.body.addEventListener("keydown", handleKey, { passive: false });
-    return () =>  document.body.removeEventListener("keydown", handleKey);
+    return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView]); // @ts-ignore
+  const props = useSpring({
+    to: { transform: `translateX(${-page * 100}vw)`, opacity: 1.0 },
+    from: { transform: `translateX(${-page * 100}vw)`, opacity: 0.99 },
+    reset: true,
+    delay: 200,
+    onRest: () => {
+      if(inView){
+        changeRoute(slides[page].props.view[0].props.path, 0)
+      }
+},
+  });
 
   return (
     <>
-    <div
-      className={`embla embla--carousel-navigation 
+      <div
+        className={`embla embla--carousel-navigation 
       ${!navigation ? "page-carousel" : ""} 
-      ${index !== page? 'transitioning' : ''}`}
-    >
-        <div className={`${ css`
-      &:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: ${slides[page].props.view[0].props.isMain ? 1 : 0};
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-size: cover;
-        background: url(${require(`../public/images/2036-bg.jpg`)}) no-repeat center bottom;
-      }
-    `} embla__viewport`}
-
-        ref={refViewport} key={"viewPort"}>
-          <div
-          
-          >
-              <div
-                className="embla__container"
-                onTransitionEnd={(e) => {
-                  var target = e.target as Element;
-                  if (inView) {
-                    if (
-                      target.className === "embla__container" &&
-                      navigation === true
-                    ) {
-                      dispatch({ type: "CAROUSEL_NAV", payload:true})
-                      changeRoute(slides[page].props.view[0].props.path, 0);
-                    } else {
-                      setTransitioning(false);
-                    }
-                  }
-                }}
-                style={{ transform: `translateX(${-page * 100}vw)` }}
-              >
-                {slides.map((value: any, i: number) => {
-                  //value.props.view[0].props.view[0].props.is_selected = i === page;
-                  return (<AnimatePresence  key={MD5(value) + i.toString()}>
+      ${index !== page ? "transitioning" : ""}`}
+      >
+        <div
+          className={`${css`
+            &:before {
+              content: " ";
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              opacity: ${slides[page].props.view[0].props.isMain ? 1 : 0};
+              background-repeat: no-repeat;
+              background-position: 50% 0;
+              background-size: cover;
+              background: url(${require(`../public/images/2036-bg.jpg`)})
+                no-repeat center bottom;
+            }
+          `} embla__viewport`}
+          ref={refViewport}
+          key={"viewPort"}
+        >
+          <div>
+            <animated.div
+              className="embla__container"
+              style={props}s
+            >
+              {slides.map((value: any, i: number) => {
+                //value.props.view[0].props.view[0].props.is_selected = i === page;
+                return (
+                  <AnimatePresence key={MD5(value) + i.toString()}>
                     <div
                       className={`embla_slide_present ${
                         page === i ? "selected" : "no_selected"
                       } ${i < page ? "first" : ""} ${i > page ? "last" : ""} `}
-                     
-                      //style={{transform:`translateX(${page === i ? 0 :(page > i ? 100 : -100)}px)`}}
                     >
-                      <div
-                        className="embla__slide"
-                      >
+                      <div className="embla__slide">
                         <div className="embla__slide__inner">
                           <DynamicComponentMatcher
                             key={MD5(value) + i.toString()}
@@ -195,45 +191,41 @@ export default function EmblaCarousel({
                         </div>
                       </div>
                     </div>
-                    </AnimatePresence>
-                  );
-                })}
-            </div>
+                  </AnimatePresence>
+                );
+              })}
+            </animated.div>
           </div>
         </div>
 
-      <PrevButton
-        href={actual ? actual.prev : page === 0 ? "" : "active"}
-        onClick={scrollPrev}
-        enabled={prevBtnEnabled && !isTransitioning}
-      />
-      <NextButton
-        href={
-          actual ? actual.next : page === slides.length - 1 ? "" : "active"
-        }
-        onClick={scrollNext}
-        enabled={nextBtnEnabled && !isTransitioning}
-      />
-    </div>
-    {navigation ? (
-      <div
-        key={MD5(slides[page].props.view.slice(1))}
-        id="carouselContent"
-      >
-        <div className="line-separator line-separator--overflowed-top-1-3"></div>
-        <DynamicComponentMatcher
-          view={[
-            {
-              component: "DynamicComponentMatcher",
-              props: { view: slides[page].props.view.slice(1) },
-            },
-          ]}
-        ></DynamicComponentMatcher>
+        <PrevButton
+          href={actual ? actual.prev : page === 0 ? "" : "active"}
+          onClick={scrollPrev}
+          enabled={prevBtnEnabled && !isTransitioning}
+        />
+        <NextButton
+          href={
+            actual ? actual.next : page === slides.length - 1 ? "" : "active"
+          }
+          onClick={scrollNext}
+          enabled={nextBtnEnabled && !isTransitioning}
+        />
       </div>
-    ) : (
-      ""
-    )}
-  </>
-
+      {navigation ? (
+        <div key={MD5(slides[page].props.view.slice(1))} id="carouselContent">
+          <div className="line-separator line-separator--overflowed-top-1-3"></div>
+          <DynamicComponentMatcher
+            view={[
+              {
+                component: "DynamicComponentMatcher",
+                props: { view: slides[page].props.view.slice(1) },
+              },
+            ]}
+          ></DynamicComponentMatcher>
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 }
