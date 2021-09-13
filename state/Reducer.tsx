@@ -11,7 +11,12 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         comesFromCarousel:true
       };
     case 'VIDEO_PLAYED':
-      localStorage.setItem('video_played', action.payload)
+      if(!action.payload){
+        localStorage.removeItem('video_played');
+      }else{
+        localStorage.setItem('video_played', action.payload)
+
+      }
       return {
         ...state,
         videoPlayed: action.payload,
