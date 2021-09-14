@@ -24,7 +24,7 @@ const normalize = (val: number, max: number, min: number) => {
 };
 
 export default function CarouselItem2036(props: any) {
-  const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context) as any;
   const memo = useMemo(() => {
     return  <Fragment>
     {true ? (
