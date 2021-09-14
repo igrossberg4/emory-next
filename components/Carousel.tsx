@@ -154,7 +154,7 @@ export default function EmblaCarousel({
             className="embla__container"
           >
             {slides.map((value: any, i: number) => {
-              const valueMore = slides[i].props.view[0].props.isMain ? (i > page ? 40 : 30) : 0
+              const valueMore = slides[i].props.view[0].props.isMain ? (i > page ? 40 : 30) : 0;
               //value.props.view[0].props.view[0].props.is_selected = i === page;
               return (
                   
@@ -168,7 +168,7 @@ export default function EmblaCarousel({
                         }, 1000)
                       }
                     }}
-                    style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 62 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 62 : 100) + valueMore)}vw`})`}}
+                    style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 50 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 50 : 100) + valueMore)}vw`})`}}
                     className={`embla_slide_present ${
                       page === i ? "selected" : "no_selected"
                     } ${i < page ? "first" : ""} ${i > page ? "last" : ""} `}
