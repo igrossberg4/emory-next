@@ -120,17 +120,6 @@ export default function EmblaCarousel({
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView]); // @ts-ignore
-  const props = useSpring({
-    reset: true,
-    delay: 200,
-    onRest: () => {
-      if(inView){
-        setTimeout(() =>{
-          changeRoute(slides[page].props.view[0].props.path, 0);
-        }, 1500)
-      }
-},
-  });
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   return (
@@ -162,9 +151,8 @@ export default function EmblaCarousel({
           key={"viewPort"}
         >
           <div>
-            <animated.div
+            <div
               className="embla__container"
-              style={props}
             >
               {slides.map((value: any, i: number) => {
                 //value.props.view[0].props.view[0].props.is_selected = i === page;
@@ -172,9 +160,11 @@ export default function EmblaCarousel({
                   <AnimatePresence key={MD5(value) + i.toString()}>
                     <div
                       onTransitionEnd={(e)=>{
-                        if(page === i){
-                          changeRoute(slides[page].props.view[0].props.path, 0);
+                        if(page === i && isTransitioning){
+                          setTimeout(()=>{
+                            changeRoute(slides[page].props.view[0].props.path, 0);
 
+                          }, 1000)
                         }
                       }}
                       style={{transform:`translateX(${i < page ? `${(i-page) * (!isMobile ? 62 : 100)}vw` : page === i ? `0` : `${(i-page) * (!isMobile ? 62 : 100)}vw`})`}}
@@ -203,20 +193,20 @@ export default function EmblaCarousel({
                   </AnimatePresence>
                 );
               })}
-            </animated.div>
+            </div>
           </div>
         </div>
 
         <PrevButton
           href={actual ? actual.prev : page === 0 ? "" : "active"}
-          onClick={scrollPrev}
+          onClick={!isTransitioning ? scrollPrev : ()=>{}}
           enabled={prevBtnEnabled && !isTransitioning}
         />
         <NextButton
           href={
             actual ? actual.next : page === slides.length - 1 ? "" : "active"
           }
-          onClick={scrollNext}
+          onClick={!isTransitioning ? scrollNext : ()=>{}}
           enabled={nextBtnEnabled && !isTransitioning}
         />
       </div>
