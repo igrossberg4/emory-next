@@ -16,9 +16,9 @@
     height: 100%;
     will-change: opacity, margin-left;
     transition:
-      opacity $main-carousel-transition-duration ease-in-out,
+      opacity $main-carousel-transition-duration ease-in-out;
       //transform $main-carousel-transition-duration ease-in-out;
-      margin-left $main-carousel-transition-duration ease-in-out;
+      //margin-left $main-carousel-transition-duration ease-in-out;
     width: 100%;
     margin-left: 0;
     transform: translate(0, 0);
@@ -43,99 +43,7 @@
         }
       }
     }
-/*
-    .first & {
-      @include media-breakpoint-up(sm) {
-        // Animation version 1
-        margin-left: calc(20% - #{math.div($round-image-size, 2) - 50px});
-
-        // Animation version 2
-        //transform: translate(calc(50% - #{math.div($round-image-size, 2) - 50px}), 0);
-
-        // Animation version 3
-        //transform: translateX(- math.div($round-image-size, 2) + 50px);
-        //margin-left: 50%;
-
-        // Animation version 4
-        //transform: translate(50%, 0);
-        //margin-left: - math.div($round-image-size, 2) + 50px;
-      }
-      @include media-breakpoint-up(lg) {
-        // Animation version 1
-        margin-left: calc(20% - #{math.div($round-image-size-medium, 2) - 50px});
-
-        // Animation version 2
-        //transform: translate(calc(50% - #{math.div($round-image-size-medium, 2) - 50px}), 0);
-
-        // Animation version 3
-        //transform: translateX(- math.div($round-image-size-medium, 2) + 50px);
-        //margin-left: 50%;
-
-        // Animation version 4
-        //margin-left: - math.div($round-image-size-medium, 2) + 50px;
-      }
-      @include media-breakpoint-up(xl) {
-        // Animation version 1
-        margin-left: calc(20% - #{math.div($round-image-size-big, 2) - 100px});
-
-        // Animation version 2
-        //transform: translate(calc(50% - #{math.div($round-image-size-big, 2) - 100px}), 0);
-
-        // Animation version 3
-        //transform: translateX(- math.div($round-image-size-big, 2) + 100px);
-        //margin-left: 50%;
-
-        // Animation version 4
-        //margin-left: - math.div($round-image-size-big, 2) + 100px;
-      }
-    }
-
-    .last & {
-      @include media-breakpoint-up(sm) {
-        // Animation version 1
-        margin-left: calc(-20% + #{math.div($round-image-size, 2) - 50px});
-
-        // Animation version 2
-        //transform: translate(calc(-50% + #{math.div($round-image-size, 2) - 50px}), 0);
-
-        // Animation version 3
-        //transform: translateX(math.div($round-image-size, 2) - 50px);
-        //margin-left: -50%;
-
-        // Animation version 4
-        //transform: translate(-50%, 0);
-        //margin-left: math.div($round-image-size, 2) - 50px;
-      }
-      @include media-breakpoint-up(lg) {
-        // Animation version 1
-        margin-left: calc(-20% + #{math.div($round-image-size-medium, 2) - 50px});
-
-        // Animation version 2
-        //transform: translate(calc(-50% + #{math.div($round-image-size-medium, 2) - 50px}), 0);
-
-        // Animation version 3
-        //transform: translateX(math.div($round-image-size-medium, 2) - 50px);
-        //margin-left: -50%;
-
-        // Animation version 4
-        //margin-left: math.div($round-image-size-medium, 2) - 50px;
-      }
-      @include media-breakpoint-up(xl) {
-        // Animation version 1
-        margin-left: calc(-20% + #{math.div($round-image-size-big, 2) - 100px});
-
-        // Animation version 2
-        //transform: translate(calc(-50% + #{math.div($round-image-size-big, 2) - 100px}), 0);
-
-        // Animation version 3
-        //transform: translateX(math.div($round-image-size-big, 2) - 100px);
-        //margin-left: -50%;
-
-        // Animation version 4
-        //margin-left: math.div($round-image-size-big, 2) - 100px;
-      }
-    }
-    */
+    
   }
   
 

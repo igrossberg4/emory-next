@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "_variables";
 @import "mixins/_breakpoints";
 
@@ -132,6 +133,106 @@ body.is-scrolled {
 .embla_slide_present{
   position: absolute;
   transition: all $main-carousel-transition-duration ease-in-out;
+  &.first {
+    margin-left: calc(60% - #{math.div($round-image-size, 2) - 0px});
+
+    @include media-breakpoint-up(sm) {
+
+      // Animation version 1
+      margin-left: calc(50% - #{math.div($round-image-size, 2) - 0px});
+
+      // Animation version 2
+      //transform: translate(calc(50% - #{math.div($round-image-size, 2) - 50px}), 0);
+
+      // Animation version 3
+      //transform: translateX(- math.div($round-image-size, 2) + 50px);
+      //margin-left: 50%;
+
+      // Animation version 4
+      //transform: translate(50%, 0);
+      //margin-left: - math.div($round-image-size, 2) + 50px;
+    }
+    @include media-breakpoint-up(lg) {
+
+      // Animation version 1
+      margin-left: calc(50% - #{math.div($round-image-size-medium, 2) - 50px});
+
+      // Animation version 2
+      //transform: translate(calc(50% - #{math.div($round-image-size-medium, 2) - 50px}), 0);
+
+      // Animation version 3
+      //transform: translateX(- math.div($round-image-size-medium, 2) + 50px);
+      //margin-left: 50%;
+
+      // Animation version 4
+      //margin-left: - math.div($round-image-size-medium, 2) + 50px;
+    }
+    @include media-breakpoint-up(xl) {
+
+      // Animation version 1
+      margin-left: calc(50% - #{math.div($round-image-size-big, 2) - 100px});
+
+      // Animation version 2
+      //transform: translate(calc(50% - #{math.div($round-image-size-big, 2) - 100px}), 0);
+
+      // Animation version 3
+      //transform: translateX(- math.div($round-image-size-big, 2) + 100px);
+      //margin-left: 50%;
+
+      // Animation version 4
+      //margin-left: - math.div($round-image-size-big, 2) + 100px;
+    }
+  }
+
+  &.last {
+    margin-left: calc(-60% + #{math.div($round-image-size, 2) - 0px});
+
+    @include media-breakpoint-up(sm) {
+
+      // Animation version 1
+      margin-left: calc(-50% + #{math.div($round-image-size, 2) - 0px});
+
+      // Animation version 2
+      //transform: translate(calc(-50% + #{math.div($round-image-size, 2) - 50px}), 0);
+
+      // Animation version 3
+      //transform: translateX(math.div($round-image-size, 2) - 50px);
+      //margin-left: -50%;
+
+      // Animation version 4
+      //transform: translate(-50%, 0);
+      //margin-left: math.div($round-image-size, 2) - 50px;
+    }
+    @include media-breakpoint-up(lg) {
+
+      // Animation version 1
+      margin-left: calc(-50% + #{math.div($round-image-size-medium, 2) - 50px});
+
+      // Animation version 2
+      //transform: translate(calc(-50% + #{math.div($round-image-size-medium, 2) - 50px}), 0);
+
+      // Animation version 3
+      //transform: translateX(math.div($round-image-size-medium, 2) - 50px);
+      //margin-left: -50%;
+
+      // Animation version 4
+      //margin-left: math.div($round-image-size-medium, 2) - 50px;
+    }
+    @include media-breakpoint-up(xl) {
+      // Animation version 1
+      margin-left: calc(-50% + #{math.div($round-image-size-big, 2) - 100px});
+
+      // Animation version 2
+      //transform: translate(calc(-50% + #{math.div($round-image-size-big, 2) - 100px}), 0);
+
+      // Animation version 3
+      //transform: translateX(math.div($round-image-size-big, 2) - 100px);
+      //margin-left: -50%;
+
+      // Animation version 4
+      //margin-left: math.div($round-image-size-big, 2) - 100px;
+    }
+  }
   
 }
 body.hide-lateral{
