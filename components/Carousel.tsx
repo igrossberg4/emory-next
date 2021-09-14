@@ -8,6 +8,7 @@ import { Context } from "../state/Store";
 import { useInView } from "react-intersection-observer";
 import { css, cx } from "@emotion/css";
 import { animated, useSpring } from "react-spring";
+import { useMediaQuery } from "react-responsive";
 
 export interface ButtonEnabled {
   enabled: boolean;
@@ -120,16 +121,17 @@ export default function EmblaCarousel({
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView]); // @ts-ignore
   const props = useSpring({
-    to: { transform: `translateX(${-page * 100}vw)`, opacity: 1.0 },
-    from: { transform: `translateX(${-page * 100}vw)`, opacity: 0.99 },
     reset: true,
     delay: 200,
     onRest: () => {
       if(inView){
-        changeRoute(slides[page].props.view[0].props.path, 0)
+        setTimeout(() =>{
+          changeRoute(slides[page].props.view[0].props.path, 0);
+        }, 1500)
       }
 },
   });
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   return (
     <>
@@ -162,13 +164,20 @@ export default function EmblaCarousel({
           <div>
             <animated.div
               className="embla__container"
-              style={props}s
+              style={props}
             >
               {slides.map((value: any, i: number) => {
                 //value.props.view[0].props.view[0].props.is_selected = i === page;
                 return (
                   <AnimatePresence key={MD5(value) + i.toString()}>
                     <div
+                      onTransitionEnd={(e)=>{
+                        if(page === i){
+                          changeRoute(slides[page].props.view[0].props.path, 0);
+
+                        }
+                      }}
+                      style={{transform:`translateX(${i < page ? `${(i-page) * (!isMobile ? 62 : 100)}vw` : page === i ? `0` : `${(i-page) * (!isMobile ? 62 : 100)}vw`})`}}
                       className={`embla_slide_present ${
                         page === i ? "selected" : "no_selected"
                       } ${i < page ? "first" : ""} ${i > page ? "last" : ""} `}

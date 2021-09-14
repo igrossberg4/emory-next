@@ -55,6 +55,7 @@
 
 .embla__container {
   display: flex;
+  position: absolute;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
@@ -133,7 +134,13 @@ body.is-scrolled {
     }
   }
 }
+.embla_slide_present{
+  position: absolute;
+  transition: all $main-carousel-transition-duration ease-in-out;
+  
+}
 body.hide-lateral{
+  
   .embla_slide_present.no_selected{
     //display: none;
   }
