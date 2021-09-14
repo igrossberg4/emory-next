@@ -298,7 +298,7 @@ body.hide-lateral{
     display: none;
 
     @include media-breakpoint-up(md) {
-      display: block;
+      display: flex;
       top: 143px;
 
       &.embla__button--prev {
