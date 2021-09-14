@@ -154,7 +154,7 @@ export default function EmblaCarousel({
             className="embla__container"
           >
             {slides.map((value: any, i: number) => {
-              console.log(slides);
+
               //value.props.view[0].props.view[0].props.is_selected = i === page;
               return (
                 

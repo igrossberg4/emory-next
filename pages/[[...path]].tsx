@@ -2,13 +2,14 @@ import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
 import { getNodes } from "../data-loader/get-nodes";
+import { MD5 } from "object-hash";
 
 export default function Home(props: any) {
   const router = useRouter();
@@ -82,6 +83,46 @@ export default function Home(props: any) {
       position: "absolute",
     },
   };
+  const memo = useMemo(() => {
+    return props.skipTransitionAnimations !== true ? (
+      <AnimatePresence
+      
+      >
+        <motion.div
+          className="main-container"
+          id={state.route + " --- " + state.route}
+          onAnimationComplete={() => {
+            if (state.route !== "") {
+              dispatch({ type: "SET_NAV", payload: "" });
+            }
+          }}
+          key={router.asPath}
+          transition={spring}
+          // Need to type as any because not all variants have the same properties and brings errors on build.
+          variants={variants as any}
+          initial={
+            state.route !== "" && state.route === router.asPath
+              ? "initialWithRoute"
+              : false
+          }
+          animate={
+            state.route !== "" && state.route === router.asPath
+              ? "animateWithRoute"
+              : "animate"
+          }
+          // Need to type as any because types differs and brings errors on build.
+          exit={state.route !== "" ? ("exit" as any) : false}
+        >
+          <DynamicComponentMatcher
+            key={state.route}
+            view={props.view}
+          ></DynamicComponentMatcher>
+        </motion.div>
+      </AnimatePresence>
+    ) : (
+      ''
+    )
+  }, [router.asPath, state.route, MD5(props.view)])
   return ( <Fragment>
       <Head>
         <title>{props.meta.title}</title>
@@ -113,44 +154,7 @@ export default function Home(props: any) {
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      {props.skipTransitionAnimations !== true ? (
-        <AnimatePresence
-        
-        >
-          <motion.div
-            className="main-container"
-            id={state.route + " --- " + state.route}
-            onAnimationComplete={() => {
-              if (state.route !== "") {
-                dispatch({ type: "SET_NAV", payload: "" });
-              }
-            }}
-            key={router.asPath}
-            transition={spring}
-            // Need to type as any because not all variants have the same properties and brings errors on build.
-            variants={variants as any}
-            initial={
-              state.route !== "" && state.route === router.asPath
-                ? "initialWithRoute"
-                : false
-            }
-            animate={
-              state.route !== "" && state.route === router.asPath
-                ? "animateWithRoute"
-                : "animate"
-            }
-            // Need to type as any because types differs and brings errors on build.
-            exit={state.route !== "" ? ("exit" as any) : false}
-          >
-            <DynamicComponentMatcher
-              key={state.route}
-              view={props.view}
-            ></DynamicComponentMatcher>
-          </motion.div>
-        </AnimatePresence>
-      ) : (
-        ''
-      )}
+    {memo}
     </Fragment>
   );
 }
