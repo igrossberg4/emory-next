@@ -17,7 +17,7 @@ export default function CarouselItem(props: any) {
     return (
       <div
         className="content-header__container container-force-screen-fit-y"
-        data-animation={props.active && goingUp ? "active" : "not-active"}
+        id={`${props.active ? 'active' : ''}`}
       >
         <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
@@ -54,41 +54,6 @@ export default function CarouselItem(props: any) {
       </div>
     );
   }, [goingUp, multipleSizesImgPrincipal, props]);
-   useEffect(() => {
-    const handleScroll = () => {
-      if(process.browser){
-          if (props.active) {
-          //setScroll(window.scrollY);
-          const currentScrollY = window.scrollY;
-          if (currentScrollY > 25 && goingUp == false) {
-            setGoingUp(true);
-          } else {
-            if(currentScrollY < 25 && goingUp != false){
-              setGoingUp(false);
-
-            }
-          }
-  
-          if (
-            currentScrollY >= 25 &&
-            !document.body.classList.contains("is-scrolled")
-          ) {
-            document.body.classList.add("is-scrolled");
-          } else if (
-            currentScrollY < 25 &&
-            document.body.classList.contains("is-scrolled")
-          ) {
-            document.body.classList.remove("is-scrolled");
-          }
-        }
-      };
-      }
-      
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [goingUp]); // @ts-ignore
 
   return memo;
   // <motion.div className="content-header">

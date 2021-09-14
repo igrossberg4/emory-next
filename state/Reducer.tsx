@@ -21,6 +21,15 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         ...state,
         videoPlayed: action.payload,
       }
+    case 'GOING_UP':
+      if(action.payload != state.goingUp) {
+        return {
+          ...state,
+          goingUp: action.payload,
+        }
+      }
+      return state;
+
     case "REGISTER_VIDEO":
       return {
         ...state,

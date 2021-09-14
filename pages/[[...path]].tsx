@@ -24,6 +24,36 @@ export default function Home(props: any) {
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY);
     setInnerHeight(window.innerHeight);
+    const element =   document.getElementById('active');
+    if(element){
+      if(window.scrollY > 25){
+        element.setAttribute('data-animation', 'active')
+
+      }else{
+        element.setAttribute('data-animation', 'no-active')
+
+      }
+    }
+    if (
+      window.scrollY >= 25 &&
+      !document.body.classList.contains("is-scrolled")
+    ) {
+      document.body.classList.add("is-scrolled");
+      dispatch({
+        type: 'GOING_UP',
+        payload: true
+      })
+    } else if (
+      window.scrollY < 25 &&
+      document.body.classList.contains("is-scrolled")
+    ) {
+      document.body.classList.remove("is-scrolled");
+      dispatch({
+        type: 'GOING_UP',
+        payload: false
+      })
+    }
+
   }, [setScroll, setInnerHeight]);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, {passive:true});
