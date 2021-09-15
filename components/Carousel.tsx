@@ -74,17 +74,23 @@ export default function EmblaCarousel({
   const [nextBtnEnabled, setNextBtnEnabled] = useState(
     page < slides.length - 1 ? false : true
   );
-
   const changeRoute = useCallback(
     (route, newDirection) => {
       if (route == undefined) return;
-      router.push(
-        {
-          pathname: route,
-        },
-        route,
-        { scroll: false, shallow: false }
-      );
+      if(route != router.asPath){
+        router.push(
+          {
+            pathname: route,
+          },
+          route,
+          { scroll: false, shallow: false }
+        );
+      }else{
+        router.replace(route)
+      }
+
+      //setTransitioning(false);
+      //setPerformTransition(false);
     },
     [router]
   );
