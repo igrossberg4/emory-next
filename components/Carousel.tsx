@@ -66,7 +66,6 @@ export default function EmblaCarousel({
   const [[page, direction], setPage] = useState([index, 1]);
   const [queue, setQueue] = useState([]);
   const [performTransition, setPerformTransition] = useState(false);
-  const [state, dispatch] = useContext(Context) as any;
   const [isTransitioning, setTransitioning] = useState(false);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(
     page === 0 ? false : true
@@ -86,11 +85,11 @@ export default function EmblaCarousel({
           { scroll: false, shallow: false }
         );
       }else{
-        router.replace(route)
+        setTransitioning(false);
+        setPerformTransition(false);
       }
 
-      //setTransitioning(false);
-      //setPerformTransition(false);
+
     },
     [router]
   );
