@@ -23,7 +23,7 @@ export default function Header(props:any) {
   }, [scroll]); // @ts-ignore
 
   return (
-    <header role="banner">
+    <header id="header" role="banner">
       <SchoolsMenu {...props.menu_school}></SchoolsMenu>
       <svg className="header__logo" width="106" height="36" viewBox="0 0 106 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2.2304 28.8558C4.11229 28.7164 5.99419 28.6815 7.87609 28.6815H17.181V30.0755H0.17425L0 28.8558C3.51984 25.7193 7.03969 22.5131 10.5595 19.3417C12.6854 17.4598 14.4279 15.4734 14.4279 12.546C14.4279 9.02613 11.8141 6.93513 7.84124 6.93513C3.48499 6.93513 1.98645 9.13068 1.7425 11.1171H0.0696999C0.0696999 8.60793 2.3698 5.47144 7.91094 5.47144C12.8248 5.47144 16.1007 7.98063 16.1007 12.4763C16.1007 15.9613 14.1491 18.1917 11.6747 20.4221L2.2304 28.8558Z" fill="#212322"/>
