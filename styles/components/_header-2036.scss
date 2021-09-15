@@ -274,6 +274,7 @@
         opacity math.div($scroll-down-transition-duration, 2) ease-out,
         bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
         transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
+        margin-left math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-out,
         margin-bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-out;
 
       @media (orientation: portrait) {
