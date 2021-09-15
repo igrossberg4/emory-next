@@ -20,12 +20,13 @@
   }
 
   .title {
-    margin: 0 auto math.div($default-separation, 1.5);
     max-width: map-get($container-max-widths, 'md');
+    margin: 0 auto 60px;
     text-align: center;
   }
 
   .body {
+    margin: 0 auto;
     max-width: map-get($container-max-widths, 'sm');
   }
 
@@ -36,8 +37,8 @@
       float: left;
       padding: 2em;
       margin: 0;
-      margin-left: -85%;
-      margin-top: calc(100% - #{$round-image-size-big} + 4em);
+      margin-left: -30%;
+      margin-top: 120px;
       shape-outside: circle(50% at 50% 50%) padding-box;
     }
   }
