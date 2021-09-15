@@ -94,7 +94,7 @@ $body-color: $color-text;
 //$color-gray: #212121;
 
 // Other
-$default-transition: all .6s ease-in-out;
+$default-transition: all .3s ease-in-out;
 $default-box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.5),
     2px 2px 6px rgba(95, 92, 89, 0.12),
     4px 4px 11px rgba(177, 167, 162, 0.4);
@@ -114,5 +114,5 @@ $round-image-size-big: 580px;
 $icon-button-size: 64px;
 $icon-button-size--small: 48px;
 
-$main-carousel-transition-duration: 1.5s;
+$main-carousel-transition-duration: 0.6s;
 $scroll-down-transition-duration: .6s;

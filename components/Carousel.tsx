@@ -165,7 +165,7 @@ export default function EmblaCarousel({
                         setTimeout(()=>{
                           changeRoute(slides[page].props.view[0].props.path, 0);
 
-                        }, 1000)
+                        }, 300)
                       }
                     }}
                     style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 50 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 50 : 100) + valueMore)}vw`})`}}
