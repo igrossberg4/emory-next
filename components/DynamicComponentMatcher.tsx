@@ -31,6 +31,7 @@ const CarouselItem2036 = dynamic(()=> import('./CarouselItem2036'));
 const TextImageHeader = dynamic(()=> import('./TextImageHeader'));
 const TextLargeImage = dynamic(()=> import('./TextLargeImage'));
 const Tag = dynamic(()=> import('./Tag'));
+const Header = dynamic(()=> import('./Header'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -175,14 +176,16 @@ function DynamicComponentMatcher(props: any) {
 
             case "MediaWithExpantion":
               return (
-                <MediaWithExpantion 
+                <MediaWithExpantion
                 {...component.props}
                 key={i.toString()}>
                 </MediaWithExpantion>
               );
+
           case 'CarouselItem2036':
-            return (<CarouselItem2036 key={i.toString()} 
+            return (<CarouselItem2036 key={i.toString()}
               {...component.props}></CarouselItem2036>)
+
           case 'TextImageHeader':
             return <TextImageHeader {...component.props} key={i.toString()}></TextImageHeader>
 
@@ -191,6 +194,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'Tag':
             return <Tag {...component.props} key={i.toString()}></Tag>
+
+          case 'Header':
+            return <Header {...component.props} key={i.toString()}></Header>
 
           default:
             return "";
