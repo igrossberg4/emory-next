@@ -116,12 +116,12 @@
     box-sizing: border-box;
     will-change: width, height, opacity, bottom, transform, margin-bottom;
     transition:
-      width $scroll-down-transition-duration linear,
-      height $scroll-down-transition-duration linear,
+      width $scroll-down-transition-duration ease-in-out,
+      height $scroll-down-transition-duration ease-in-out,
       opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
-      bottom $scroll-down-transition-duration linear,
-      transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) linear,
-      margin-bottom $scroll-down-transition-duration linear;
+      bottom $scroll-down-transition-duration ease-in-out,
+      transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-in-out,
+      margin-bottom $scroll-down-transition-duration ease-in-out;
 
     @include media-breakpoint-up(sm) {
       width: $round-image-size;
@@ -187,12 +187,12 @@
       margin-bottom: 0;
       opacity: .5;
       transition:
-              width $scroll-down-transition-duration linear,
-              height $scroll-down-transition-duration linear,
+              width $scroll-down-transition-duration ease-in-out,
+              height $scroll-down-transition-duration ease-in-out,
               opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
-              bottom $scroll-down-transition-duration linear,
-              transform math.div($scroll-down-transition-duration, 2) linear,
-              margin-bottom $scroll-down-transition-duration linear;
+              bottom $scroll-down-transition-duration ease-in-out,
+              transform math.div($scroll-down-transition-duration, 2) ease-in-out,
+              margin-bottom $scroll-down-transition-duration ease-in-out;
 
       @media (orientation: portrait) {
         width: 110vh;
