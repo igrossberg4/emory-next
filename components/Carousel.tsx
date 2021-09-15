@@ -64,6 +64,7 @@ export default function EmblaCarousel({
     ? slides.findIndex((slide: any) => MD5(slide) === MD5(actual.actual))
     : 0;
   const [[page, direction], setPage] = useState([index, 1]);
+  const [queue, setQueue] = useState([]);
   const [state, dispatch] = useContext(Context) as any;
   const [isTransitioning, setTransitioning] = useState(false);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(
@@ -90,36 +91,38 @@ export default function EmblaCarousel({
     (newDirection: number) => {
       setTransitioning(true);
       setPage([page + newDirection, newDirection]);
+      setQueue(queue.concat(slides[page + newDirection].props.view[0].props.path));
     },
-    [changeRoute, page, slides]
+    [changeRoute, page, slides, queue, setQueue ]
   );
   const scrollPrev = useCallback(() => {
     if (page > 0) {
       paginate(-1);
     }
-  }, [paginate, page]);
+  }, [paginate, page, queue]);
   const scrollNext = useCallback(() => {
     if (page < slides.length - 1) {
       paginate(1);
     }
-  }, [paginate, page]);
+  }, [paginate, page, queue]);
   const [refViewport, inView, entry] = useInView({});
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (inView) {
-        switch (e.key) {
-          case "ArrowLeft":
-            scrollPrev();
-            return;
-          case "ArrowRight":
-            scrollNext();
-            return;
-        }
+  const handleKey = useCallback((e:KeyboardEvent) => {
+    if (inView) {
+      switch (e.key) {
+        case "ArrowLeft":
+          scrollPrev();
+          return;
+        case "ArrowRight":
+          scrollNext();
+          return;
       }
-    };
+    }
+  }, [page, inView, scrollNext, scrollPrev])
+  useEffect(() => {
+
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
-  }, [inView]); // @ts-ignore
+  }, [inView, page, queue]); // @ts-ignore
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const memo = useMemo(() => {
     return     <>
@@ -163,7 +166,7 @@ export default function EmblaCarousel({
                     onTransitionEnd={(e)=>{
                       if(page === i && isTransitioning){
                         setTimeout(()=>{
-                          changeRoute(slides[page].props.view[0].props.path, 0);
+                          changeRoute(queue[queue.length - 1], 0);
 
                         }, 300)
                       }
@@ -200,15 +203,15 @@ export default function EmblaCarousel({
 
       <PrevButton
         href={actual ? actual.prev : page === 0 ? "" : "active"}
-        onClick={!isTransitioning ? scrollPrev : ()=>{}}
-        enabled={prevBtnEnabled && !isTransitioning}
+        onClick={true ? scrollPrev : ()=>{}}
+        enabled={prevBtnEnabled }
       />
       <NextButton
         href={
           actual ? actual.next : page === slides.length - 1 ? "" : "active"
         }
-        onClick={!isTransitioning ? scrollNext : ()=>{}}
-        enabled={nextBtnEnabled && !isTransitioning}
+        onClick={true ? scrollNext : ()=>{}}
+        enabled={nextBtnEnabled }
       />
     </div>
     {navigation ? (
@@ -227,7 +230,7 @@ export default function EmblaCarousel({
       ""
     )}
   </>
-   }, [page, isMobile])
+   }, [page, isMobile, handleKey])
   return (
     memo
   );
