@@ -119,8 +119,6 @@ export default function IntroPage(props: any) {
                         setPlaying(!playing);
                         if (videoRef.paused && !videoPlayed) {
                           videoRef.play();
-                        } else {
-                          videoRef.pause();
                         }
                       }
                     }}
