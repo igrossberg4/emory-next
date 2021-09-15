@@ -100,3 +100,9 @@ a {
     background: url("../public/svg/close.svg") no-repeat center center;
   }
 }
+
+.hide-sm {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}

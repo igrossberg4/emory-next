@@ -6,7 +6,29 @@ header[role="banner"] {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 23px 30px;
-  outline: 1px solid red;
-  z-index: 1;
+  padding: 23px 24px;
+  z-index: 9;
+  transition: all .25s ease-in-out;
+
+  @include media-breakpoint-up(sm) {
+    padding: 23px 30px;
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .is-scrolled & {
+    background: $color_white;
+  }
+
+  .header__logo {
+    display: block;
+    margin: 0 15px;
+
+    svg {
+      display: block;
+    }
+  }
+
 }
