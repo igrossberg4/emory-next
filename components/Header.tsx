@@ -9,13 +9,21 @@ import MainMenu from "./MainMenu";
 import SchoolsMenu from "./SchoolsMenu";
 
 export default function Header(props:any) {
-
   const [scroll, setScroll] = useState(0);
-  const prevScrollY = useRef(0);
   const handleScroll = useCallback(() => {
-    setScroll(window.scrollY);
     const currentScrollY = window.scrollY;
-    prevScrollY.current = currentScrollY;
+    const element =  document.getElementById('header');
+    if(element){
+      if(currentScrollY > scroll){
+        element.classList.add('hide');
+      }else{
+        if(currentScrollY < scroll){
+          element.classList.remove('hide');
+        }
+      }
+    }
+
+    setScroll(window.scrollY);
   }, [scroll])
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
