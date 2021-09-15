@@ -88,14 +88,19 @@
       display: none;
     }
   }
-
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
   .actions {
     position: absolute;
     left: 0;
     bottom: 0;
+    animation: fadeIn math.div($main-carousel-transition-duration, 6) ease-in-out;
+
     width: 100%;
     z-index: 2;
-    transition: all math.div($main-carousel-transition-duration, 3) ease-out;
+    //transition: opacity math.div($main-carousel-transition-duration, 3) ease-out;
     padding-bottom: $default-separation;
   }
 
@@ -181,9 +186,9 @@
     padding: 0;
     will-change: width, height;
     transition:
-      width $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-      height $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-      opacity math.div($scroll-down-transition-duration, 2) ease-out,
+    width $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
+    height $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
+    opacity math.div($scroll-down-transition-duration, 2) ease-out,
       bottom math.div($scroll-down-transition-duration, 2) ease-out,
       transform math.div($scroll-down-transition-duration, 2) ease-out,
       margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;

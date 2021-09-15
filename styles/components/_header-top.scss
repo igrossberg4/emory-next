@@ -80,14 +80,18 @@
     margin: 0 auto;
     max-width: map-get($container-max-widths, 'sm');
   }
-
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
   .actions {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    animation: fadeIn math.div($main-carousel-transition-duration, 2) ease-in-out;
     z-index: 2;
-    //transition: all math.div($main-carousel-transition-duration, 3) ease-in-out;
+    //transition: opacity math.div($main-carousel-transition-duration, 3) ease-in-out;
     padding-bottom: $default-separation;
   }
 
