@@ -237,9 +237,10 @@ body.is-scrolled {
 
 .embla--carousel-navigation{
 
-  &.transitioning{
+  &.transitioning.blocked{
     .embla__button{
-      //cursor: not-allowed;
+      opacity: 0.4;
+      cursor: not-allowed;
     }
   }
 }
