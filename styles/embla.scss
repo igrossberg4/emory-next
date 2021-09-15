@@ -235,6 +235,15 @@ body.is-scrolled {
   }
 
 }
+
+.embla--carousel-navigation{
+  &.transitioning{
+    .embla__button{
+      cursor: not-allowed;
+    }
+  }
+}
+
 body.hide-lateral{
 
   .embla_slide_present.no_selected{
