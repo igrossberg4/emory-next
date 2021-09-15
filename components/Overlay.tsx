@@ -9,6 +9,7 @@ export default function Overlay(props: any) {
       <div
         onClick={() => {
           setExpanded(true);
+          document.body.style.overflow='hidden';
         }}
       >
         {props.expand_action}
@@ -28,6 +29,7 @@ export default function Overlay(props: any) {
               className="close-popup text-label"
               onClick={() => {
                 setExpanded(false);
+                document.body.style.overflow='';
               }}
             >
               Close
