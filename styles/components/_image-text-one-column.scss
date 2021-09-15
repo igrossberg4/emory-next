@@ -1,0 +1,44 @@
+// Text in one column with floating media.
+.component-image-text-one-column {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 85%;
+  background-blend-mode: multiply;
+
+  @include media-breakpoint-up(md) {
+    background-size: 50%;
+  }
+
+  .column {
+    padding: $default-separation;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .title {
+    margin: 0 auto math.div($default-separation, 1.5);
+    max-width: map-get($container-max-widths, 'md');
+    text-align: center;
+  }
+
+  .body {
+    max-width: map-get($container-max-widths, 'sm');
+  }
+
+  .floating-media {
+    margin: $default-separation * 2 auto ;
+
+    @include media-breakpoint-up(md) {
+      float: left;
+      padding: 2em;
+      margin: 0;
+      margin-left: -85%;
+      margin-top: calc(100% - #{$round-image-size-big} + 4em);
+      shape-outside: circle(50% at 50% 50%) padding-box;
+    }
+  }
+}

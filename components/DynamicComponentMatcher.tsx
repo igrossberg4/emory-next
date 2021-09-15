@@ -32,6 +32,7 @@ const TextImageHeader = dynamic(()=> import('./TextImageHeader'));
 const TextLargeImage = dynamic(()=> import('./TextLargeImage'));
 const Tag = dynamic(()=> import('./Tag'));
 const Header = dynamic(()=> import('./Header'));
+const ImageTextOneColumn = dynamic(()=> import('./ImageTextOneColumn'));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -197,6 +198,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'Header':
             return <Header {...component.props} key={i.toString()}></Header>
+
+          case 'ImageTextOneColumn':
+            return <ImageTextOneColumn {...component.props} key={i.toString()}></ImageTextOneColumn>
 
           default:
             return "";
