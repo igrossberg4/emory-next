@@ -22,6 +22,9 @@ export default function Home(props: any) {
     duration: 0.65,
     ease:"easeInOut"
   };
+  if(process.browser && document.body.style.overflow === 'hidden'){
+    document.body.style.overflow = '';
+  }
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY);
     setInnerHeight(window.innerHeight);
