@@ -72,54 +72,63 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
         .filter(value => value.startsWith('school'))
         .filter(value => value.endsWith('.json')))
         ;
+    const optionsSchoolsMenu = schoolMenu[0].schools.map((value: any) => {
+        let link
+        try {
+
+        const nodeFind = nodes.find(node => value.id === node.id);
+        link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
+        return {
+            title: value.title ? value.title : nodeFind.page_props.title,
+            link_to: link
+        }
+        }catch (e) {
+            throw "Link page with id " + link?.id + " at menu school not found in pages with base collection " + baseNode.id;
+        }
+    });
+    const optionsMenuUnits = schoolMenu[0].units.map((value: any) => {
+        const nodeFind = nodes.find(node => value.id === node.id);
+        const link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
+        return {
+            title: value.title ? value.title : nodeFind.page_props.title,
+            link_to: link
+        }
+    });
+    const optionsMenu =  mainMenu[0].links.map((link: any) => {
+        try {
+            const nodeFind = nodes.find(node => link.id === node.id)
+            const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
+
+
+
+            return {
+                title: link.title ? link.title : nodeFind.page_props.title,
+                link_to: linkFound
+            }
+        } catch (e) {
+            throw "Link page with id " +link.id + " at menu not found in pages with base collection " + baseNode.id;
+        }
+    });
+
     return {
         component: "DynamicComponentMatcher",
         props: {
             view: [
                 {
-                    component: "SchoolsMenu",
+                    component: "Header",
                     props: {
-                        title: "Select school",
-                        options_schools: schoolMenu[0].schools.map((value: any) => {
-                            const nodeFind = nodes.find(node => value.id === node.id);
-                            const link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
-                            return {
-                                title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: link
-                            }
-                        }),
-                        options_units: schoolMenu[0].units.map((value: any) => {
-                            const nodeFind = nodes.find(node => value.id === node.id);
-                            const link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
-                            return {
-                                title: value.title ? value.title : nodeFind.page_props.title,
-                                link_to: link
-                            }
-                        }),
+                        menu_school:{
+                            title: "Select school",
+                            options_schools: optionsSchoolsMenu,
+                            options_units: optionsMenuUnits,
+                        },
+                        main_menu:{
+                            title: "Menu",
+                            options:optionsMenu,
+                            social: mainMenu[0].social
+                        }
                     },
                 },
-                {
-                    component: "MainMenu",
-                    props: {
-                        title: "Menu",
-                        options: mainMenu[0].links.map((link: any) => {
-                            try {
-                                const nodeFind = nodes.find(node => link.id === node.id)
-                                const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
-
-
-
-                                return {
-                                    title: link.title ? link.title : nodeFind.page_props.title,
-                                    link_to: linkFound
-                                }
-                            } catch (e) {
-                                throw "Link page with id " +link.id + " at menu school not found in pages with base collection " + baseNode.id;
-                            }
-                        }),
-                        social: mainMenu[0].social
-                    },
-                }
             ]
         }
     }
