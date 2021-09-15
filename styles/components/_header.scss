@@ -22,6 +22,10 @@ header[role="banner"] {
     background: $color_white;
   }
 
+  .full_video & {
+    display: none;
+  }
+
   > * {
     flex: 1;
 
