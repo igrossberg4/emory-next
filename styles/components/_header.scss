@@ -1,0 +1,12 @@
+header[role="banner"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 23px 30px;
+  outline: 1px solid red;
+  z-index: 1;
+}
