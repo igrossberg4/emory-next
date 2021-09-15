@@ -133,22 +133,23 @@ export default function EmblaCarousel({
     >
       <div
         className={`${css`
-          &:before {
-            content: " ";
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: ${slides[page].props.view[0].props.isMain ? 1 : 0};
-            background-repeat: no-repeat;
-            background-position: 50% 0;
-            background-size: cover;
-            background: url(${require(`../public/images/2036-bg.jpg`)})
-              no-repeat center bottom;
-          }
-        `} embla__viewport`}
+        &:before {
+          content: " ";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          opacity: ${slides[page].props.view[0].props.isMain ? 1 : 0};
+          background-repeat: no-repeat;
+          background-position: 50% 0;
+          filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(${slides[page].props.view[0].props.isMain ? '10px' : '3px'});
+          background: url(${require(`../public/images/2036-bg.png`)})
+            no-repeat center bottom;
+            background-size: 1800px;
+        }`} embla__viewport`}
         ref={refViewport}
         key={"viewPort"}
       >
@@ -164,7 +165,7 @@ export default function EmblaCarousel({
                   <div
                   key={MD5(value) + i.toString()}
                     onTransitionEnd={(e)=>{
-                      if(page === i && isTransitioning){
+                      if(page === i){
                         setTimeout(()=>{
                           changeRoute(queue[queue.length - 1], 0);
 

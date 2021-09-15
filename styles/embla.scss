@@ -34,14 +34,13 @@
     }
   }
 }
-
 .embla__viewport {
   overflow: hidden;
   width: 100%;
   &:before{
-    transition: background $scroll-down-transition-duration ease-in-out;
-    transition: opacity 2s ease-in-out;
-
+    //transition: background $scroll-down-transition-duration ease-in-out;
+    transition: opacity 0.8s ease-in-out, 
+                filter 0.3s linear;
   }
 }
 
@@ -237,6 +236,7 @@ body.is-scrolled {
 }
 
 .embla--carousel-navigation{
+
   &.transitioning{
     .embla__button{
       //cursor: not-allowed;

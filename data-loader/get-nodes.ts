@@ -83,7 +83,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
             link_to: link
         }
         }catch (e) {
-            throw "Link page with id " + link?.id + " at menu school not found in pages with base collection " + baseNode.id;
+            throw "Link page with id " + value?.id + " at menu school not found in pages with base collection " + baseNode.id;
         }
     });
     const optionsMenuUnits = schoolMenu[0].units.map((value: any) => {
