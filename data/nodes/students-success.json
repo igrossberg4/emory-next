@@ -1,14 +1,14 @@
 {
-  "id": "students-success",
+  "id": "student-success",
   "type": "collection",
   "page_props": {
-    "header": "STUDENTS SUCCESS",
+    "header": "STUDENT SUCCESS",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_code_yellow.jpg"
   },
-  "path": "students-success",
+  "path": "student-success",
   "metatag": {
-    "title": "STUDENTS SUCCESS",
+    "title": "STUDENT SUCCESS",
     "description": "Some description for carousel page",
     "image": ""
   },
