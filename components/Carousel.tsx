@@ -169,7 +169,7 @@ export default function EmblaCarousel({
                         setTimeout(()=>{
                           changeRoute(queue[queue.length - 1], 0);
 
-                        }, 300)
+                        }, 800)
                       }
                     }}
                     style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 50 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 50 : 100) + valueMore)}vw`})`}}
