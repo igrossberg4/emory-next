@@ -4,12 +4,12 @@
   "page_props": {
     "header": "STUDENT SUCCESS",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_code_yellow.jpg"
+    "img_src": "about_priority_1_popup.jpg"
   },
   "path": "student-success",
   "metatag": {
     "title": "STUDENT SUCCESS",
-    "description": "Some description for carousel page",
+    "description": "TODO: Some description for carousel page",
     "image": ""
   },
   "components": [
