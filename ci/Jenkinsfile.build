@@ -8,28 +8,16 @@ pipeline {
 
   stages {
 
-    stage('Warm up') {
-      steps {
-        echo "Building artifact"
-      }
-    }
-
-    stage('Build') {
-      steps {
-        echo "Building artifact on branch ${env.BRANCH_NAME}"
-        sh "make build"
-      }
-    }
-
     stage('Artifact generation') {
       steps {
-        echo "Generating artifact"
+        sh "make artifact"
       }
     }
 
     stage('Artifact push') {
       steps {
         echo "Pushing artifact code"
+        sh "cd artifact && git push"
       }
     }
 
@@ -37,9 +25,10 @@ pipeline {
       steps {
         echo "Deploying artifact code"
         script {
-          switch (env.BRANCH_NAME) { 
-            case "dev":
+          switch (env.BRANCH_NAME) {
+            case "dev-preview":
               echo "Deploying on dev environment";
+              sh "ssh emory-dev@metadrop.pro -A 'cd project/docroot && git pull --ff-only && ls -la'"
               break
 
             case "master":
@@ -47,7 +36,7 @@ pipeline {
               break
           }
         }
-        
+
       }
     }
   }
