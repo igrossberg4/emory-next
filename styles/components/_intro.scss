@@ -7,9 +7,19 @@
       width: 100vw !important;
       height: 100vh !important;
       border: 0;
-      border-radius:0%;
+      border-radius:50%;
       margin: 0 !important;
       z-index: 999 !important;
+
+      @media (orientation: portrait) {
+        width: 140vh !important;
+        height: 140vh !important;
+      }
+
+      @media (orientation: landscape) {
+        width: 121vw !important;
+        height: 121vw !important;
+      }
     }
 
     .content-header__container {
@@ -100,9 +110,10 @@
     text-transform: uppercase;
     background-color: rgba($color-white, .9);
     transition: $default-transition;
-    position: absolute;
-    bottom: 5%;
+    position: fixed;
+    top: 50%;
     left: 50%;
+    margin-top: 40vh;
     transform: translate(-50%, 50%);
     opacity: 0;
     z-index:60;
