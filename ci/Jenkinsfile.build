@@ -33,7 +33,7 @@ pipeline {
           switch (env.BRANCH_NAME) {
             case "dev-preview":
               echo "Deploying on dev environment";
-              sh "ssh emory-dev@metadrop.pro -A 'cd project/docroot && git pull --ff-only && ls -la'"
+              sh "scripts/remote_deploy.sh"
               break
 
             case "master":
