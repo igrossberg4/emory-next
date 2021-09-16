@@ -9,7 +9,11 @@ pipeline {
   stages {
 
     stage('Artifact generation') {
+      environment {
+        EMORY_ARTIFACT_BRANCH=env.BRANCH_NAME
+      }
       steps {
+        echo "Branch $EMORY_ARTIFACT_BRANCH"
         sh "make artifact"
       }
     }
