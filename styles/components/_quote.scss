@@ -4,7 +4,12 @@
   align-items: center;
   padding-top: $spacer * 3;
   padding-bottom: $spacer * 3;
-
+  .attribution{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 10px;
+    font-size: 15px;
+  }
   &::after {
     content: '';
     display: block;
