@@ -33,7 +33,7 @@ function useWindowSize() {
 }
 
 
-const SmoothScroll = ({ active,  children }) => {
+const SmoothScroll = ({ active,  children } : any) => {
   // 1.
   const windowSize = useWindowSize();
 
@@ -55,7 +55,7 @@ const SmoothScroll = ({ active,  children }) => {
 
   const setBodyHeight = () => {
     document.body.style.height = `${
-      scrollingContainerRef?.current?.getBoundingClientRect()?.height
+      (scrollingContainerRef?.current as any)?.getBoundingClientRect()?.height
     }px`;
   };
 
@@ -74,7 +74,7 @@ const SmoothScroll = ({ active,  children }) => {
     
             const element = scrollingContainerRef.current;
             if(element){
-              element.style.transform = `translateY(-${data.previous}px)`;
+              (element as any).style.transform = `translateY(-${data.previous}px)`;
               requestAnimationFrame(() => smoothScrollingHandler(active));
             }
 
@@ -93,7 +93,7 @@ const SmoothScroll = ({ active,  children }) => {
     <div style={{
 
     }} className="parent">
-      <div ref={(ref) => scrollingContainerRef.current = ref}>{children}</div>
+      <div ref={(ref) => scrollingContainerRef.current = ref as any}>{children}</div>
     </div>
   );
 };
@@ -242,16 +242,16 @@ export default function EmblaCarousel({
               position: absolute;
               left: 0;
               top: 0;
-              width: ${!state.goingUp ? '100%' : '0%'};
-              height: ${!state.goingUp ? '100%' : '0%'};
+              width: ${!state.goingUp ? '100%' : '95%'};
+              height: ${!state.goingUp ? '100%' : '95%'};
     
               opacity: ${slides[page].props.view[0].props.isMain && !state.goingUp ? 1 : 0};
               background-repeat: no-repeat;
               background-position: 50% 0;
               filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(${slides[page].props.view[0].props.isMain ? '10px' : '3px'});
-              background:  ${!state.goingUp ? `url(${require(`../public/images/2036-bg.png`)})
+              background:  ${true? `url(${require(`../public/images/2036-bg.png`)})
                 no-repeat center bottom`: ''};
-                background-size:  ${!state.goingUp ? "1800px" : ''};
+                background-size:  ${true ? "1800px" : ''};
             }`} embla__viewport`}
             ref={refViewport}
             key={"viewPort"}
