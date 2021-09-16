@@ -6,7 +6,7 @@ WORKDIR /usr/app
 COPY package.json .
 RUN npm install --quiet
 # Prepare for production if required.
-# COPY . .
+COPY . .
 RUN npm run build
 RUN npm install -g http-server
 
