@@ -66,6 +66,14 @@ docker-compose exec next_prod npm run build
 docker-compose logs next_prod
 ```
 
+## Development using docker and docker compose
+* Deployment:
+It's required to run the command ```npm run build```. We have two ways of doing it:
+- Using node v12 and using bash.
+- Using docker-compose (the next_prod service) and stopping the process when it's done
+  
+After the production build is done, it would be present at the out/ directory into the root of the project. This folder contains the artifact ready to be used as a static site.
+
 ## Project Resources
 
 * [Creative Brief][creative-brief] (PDF)
