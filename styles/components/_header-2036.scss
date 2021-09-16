@@ -258,7 +258,7 @@
     background: $body-bg !important;
 
     .header-inner-content {
-      overflow: hidden;
+      //overflow: hidden;
     }
 
     .header-2036__title {
@@ -270,7 +270,7 @@
       width: 110vw;
       height: 110vw;
       top: auto;
-      bottom: 0;
+      bottom: -100px;
       transform: translate(0);
       margin-bottom: 0;
       opacity: .5;
