@@ -34,10 +34,10 @@ export default function CarouselItem(props: any) {
             <div className="pretitle text-label">{props.about}</div>
             <h1
              onTransitionEnd={(e) => {
-               
-                 if(state.goingUp){
+                 const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+                 if(state.goingUp && element){
                   
-                    const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+                    
                     window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
                  
 

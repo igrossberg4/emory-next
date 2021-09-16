@@ -9,11 +9,9 @@ export default function ColumnsText(props:any) {
   return (
     <div className="columns-text container">
       <div className="row">
-        <div className="columns-text__column col-md-6">
-          <p>{props.column1}</p>
+        <div dangerouslySetInnerHTML={{__html:props.columns1}} className="columns-text__column col-md-6">
         </div>
-        <div className="columns-text__column col-md-6">
-          <p>{props.column2}</p>
+        <div  dangerouslySetInnerHTML={{__html:props.column2}} className="columns-text__column col-md-6">
         </div>
       </div>
     </div>
