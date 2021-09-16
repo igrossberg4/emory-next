@@ -1,0 +1,63 @@
+pipeline {
+  agent any
+
+  options {
+    disableConcurrentBuilds()
+    ansiColor('xterm')
+  }
+
+  stages {
+
+    stage('Warm up') {
+      steps {
+        echo "Building artifact"
+      }
+    }
+
+    stage('Build') {
+      steps {
+        echo "Building artifact on branch ${env.BRANCH_NAME}"
+        sh "make build"
+      }
+    }
+
+    stage('Artifact generation') {
+      steps {
+        echo "Generating artifact"
+      }
+    }
+
+    stage('Artifact push') {
+      steps {
+        echo "Pushing artifact code"
+      }
+    }
+
+    stage('Artifact deploy') {
+      steps {
+        echo "Deploying artifact code"
+        script {
+          switch (env.BRANCH_NAME) { 
+            case "dev":
+              echo "Deploying on dev environment";
+              break
+
+            case "master":
+              echo "Deploying on stg environment";
+              break
+          }
+        }
+        
+      }
+    }
+  }
+
+  post {
+    cleanup {
+      // Remove Docker instalation.
+      sh "docker-compose down"
+      cleanWs disableDeferredWipeout: true, deleteDirs: true, cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanWhenNotBuilt: true
+    }
+  }
+
+}
