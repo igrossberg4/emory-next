@@ -7,5 +7,5 @@ USER=${2:-$(id -u)}
 GROUP=${3:-$(id -g)}
 
 # Execute command as root in docker to prevent access denied when trying to chown.
-docker-compose run -u root $CONTAINER chown $USER:$GROUP . -R
+docker-compose run -u root $CONTAINER chown 111:120 . -R
 
