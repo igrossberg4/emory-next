@@ -8,7 +8,7 @@
     "about": "About the campaign",
     "button_scroll": "Scroll to explore",
     "about_before_scroll":"ABOUT THE CAMPAIGN",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "img_src": "about_lede.jpg",
     "video_src": "EU1901_02k_Intro_YM_v17.mp4",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video"
@@ -47,28 +47,28 @@
       "component": "SectionIntro",
       "props": {
         "header": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
-        "background_image": "bg_brain.jpg",
+        "background_image": "about_isolated_bg.png",
         "text": "<p>It’s our firm belief that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to prepare students for careers with the potential to change hearts, minds, and the world.</p><p>Together, we can bring to life an open and promising future.</p>",
         "img_src": "about_intro.jpg",
         "media_src": "https://vimeo.com/605963807/295678c674",
         "media_alt": "",
         "media_type": "video",
         "media_header": "Gregory L. Fenves",
-        "media_text": "President of Emory University"
+        "media_text": "President, Emory University"
       }
     },
     {
       "component": "Quote",
       "props": {
         "text": "When there is an important issue, a tough question, I want them to think, “I wonder what’s going on at Emory? I wonder how they’re solving this? I wonder what research is addressing this question?”",
-        "byline": "—Gregory L. Fenves, President, Emory University"
+        "attribution": "—Gregory L. Fenves, President, Emory University"
       }
     },
     {
       "component": "TextBg",
       "props": {
         "text": "EMORY IS FOCUSING ON THREE CORE AREAS FOR 2O36.",
-        "image_src": "about_lede.jpg"
+        "image_src": "about_divider_bg.jpg"
       }
     },
     {
