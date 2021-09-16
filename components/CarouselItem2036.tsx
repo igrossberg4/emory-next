@@ -34,12 +34,14 @@ export default function CarouselItem2036(props: any) {
       className="btn"
       style={{ cursor: "pointer" }}
       onClick={(e) => {
-        const contentElement =
-          document.getElementById("carouselContent");
-        //contentElement?.scrollIntoView({behavior: 'smooth'});
-        window.scrollTo({
-          top: 200, //contentElement?.offsetTop,
-          behavior: "smooth",
+        const element = document.getElementById("selected")?.querySelector('.title');
+        if(element){
+          window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
+
+        }
+        dispatch({
+          type: "GOING_UP",
+          payload: true,
         });
       }}
     >
@@ -111,6 +113,18 @@ export default function CarouselItem2036(props: any) {
         <div className="header-inner-content__text">
           <div className="pretitle text-label">{props.about}</div>
           <h1
+            onTransitionEnd={(e) => { 
+              if(state.goingUp){
+                const element = document.getElementById("selected")?.querySelector('.title');
+                if(element){
+                  window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
+                }
+                dispatch({
+                  type: "GOING_UP",
+                  payload: true,
+                });
+              }
+            }}
             className="title"
             dangerouslySetInnerHTML={{ __html: props.header }}
           ></h1>

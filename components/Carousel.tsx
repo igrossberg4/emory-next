@@ -9,7 +9,6 @@ import { useInView } from "react-intersection-observer";
 import { css, cx } from "@emotion/css";
 import { animated, useSpring } from "react-spring";
 import { useMediaQuery } from "react-responsive";
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 function useWindowSize() {
   const getSize = () => {
     return {
@@ -230,6 +229,7 @@ export default function EmblaCarousel({
     return        <>
 
         <div
+        id="carousel"
           className={`embla embla--carousel-navigation 
         ${!navigation ? "page-carousel" : ""} 
         ${index !== page ? `transitioning ${performTransition ? 'blocked' : ''}` : ""}`}

@@ -1,17 +1,21 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
+import { useMemo, useContext } from "react";
+
 import { useRouter } from "next/dist/client/router";
 import { motion } from "framer-motion";
 import HeaderTop from "./HeaderTop";
 import Image from "next/image";
 import { animateScroll } from "react-scroll";
 import SmoothScroll from "smooth-scroll";
+import { Context } from "../state/Store";
 
 const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
 };
 
 export default function CarouselItem(props: any) {
-  const [goingUp, setGoingUp] = useState(false);
+  const [state, dispatch] = useContext(Context) as any;
+
   const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=1024,sizes[]=2048&format=webp`);
   const memo = useMemo(() => {
     return <div
@@ -29,6 +33,20 @@ export default function CarouselItem(props: any) {
           <div className="header-inner-content__text">
             <div className="pretitle text-label">{props.about}</div>
             <h1
+             onTransitionEnd={(e) => {
+               
+                 if(state.goingUp){
+                  
+                    const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+                    window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
+                 
+
+                 }
+
+     
+
+            
+            }}
               className="title header-h2"
               dangerouslySetInnerHTML={{ __html: props.header }}
             ></h1>
@@ -40,9 +58,15 @@ export default function CarouselItem(props: any) {
             className="btn"
             style={{ cursor: "pointer" }}
             onClick={async (e) => {
-              const contentElement = document.getElementById("carouselContent");
-              //contentElement?.scrollIntoView({behavior: 'smooth'});
-              window.scrollTo({top:200, behavior:'smooth'})
+              const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+              if(element){
+                window.scrollTo({top: element.clientHeight + 80, behavior:'smooth'})
+
+              }
+              dispatch({
+                type: "GOING_UP",
+                payload: true,
+              });
           }}
           >
             {" "}
@@ -51,7 +75,7 @@ export default function CarouselItem(props: any) {
         </div>
       </div>
     
-  }, [goingUp, multipleSizesImgPrincipal, props]);
+  }, [multipleSizesImgPrincipal, props]);
 
   return memo;
   // <motion.div className="content-header">

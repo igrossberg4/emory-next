@@ -2,7 +2,13 @@ import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -10,62 +16,88 @@ import { Context } from "../state/Store";
 import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
 import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
-  const [innerHeight, setInnerHeight] = useState(process.browser ? window.innerHeight : 0);
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const [innerHeight, setInnerHeight] = useState(
+    process.browser ? window.innerHeight : 0
+  );
+  const [state, dispatch] = useContext(Context) as any;
 
   // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
   const spring = {
-    type:"tween",
+    type: "tween",
     duration: 0.65,
-    ease:"easeInOut"
+    ease: "easeInOut",
   };
-  if(process.browser && document.body.style.overflow === 'hidden'){
-    document.body.style.overflow = '';
+  if (process.browser && document.body.style.overflow === "hidden") {
+    document.body.style.overflow = "";
   }
   const handleScroll = useCallback(() => {
-    setScroll(window.scrollY);
     setInnerHeight(window.innerHeight);
-    const element =   document.getElementById('selected');
-    if(element){
-      const activeElement = element.querySelector('.content-header__container');
-      
-      if(window.scrollY > 120){
-        activeElement?.setAttribute('data-animation', 'active')
+    const element = document.getElementById("selected");
+    if (element) {
+      const activeElement = element.querySelector(".content-header__container");
 
-      }else{
-        activeElement?.setAttribute('data-animation', 'no-active')
-
+      if (window.scrollY > 5) {
+        activeElement?.setAttribute("data-animation", "active");
+      } else {
+        activeElement?.setAttribute("data-animation", "no-active");
       }
     }
+    console.log(isMobile)
+
     if (
-      window.scrollY >= 120 &&
+      window.scrollY >= 5 &&
       !document.body.classList.contains("is-scrolled")
     ) {
       document.body.classList.add("is-scrolled");
+
       dispatch({
-        type: 'GOING_UP',
-        payload: true
-      })
+        type: "GOING_UP",
+        payload: true,
+      });
+      /*
+      const carouselContent = document.getElementById("selected")?.querySelector('.round-wp');
+
+      if(isMobile) {
+        window.scrollTo({
+          top: (carouselContent?.clientHeight as any) / (0.9),
+          behavior: "smooth",
+        });
+      }else{
+        if(window.scrollY <  ((carouselContent?.clientHeight as any) /  (!isMobile ? 1.6 : 1)) || isMobile){
+          window.scrollTo({
+            top: (carouselContent?.clientHeight as any) / (!isMobile ? 1.6 : 1),
+            behavior: "smooth",
+          });
+        }
+      }
+
+*/
+
+
     } else if (
-      window.scrollY < 120 &&
+      window.scrollY < 5 &&
       document.body.classList.contains("is-scrolled")
     ) {
       document.body.classList.remove("is-scrolled");
+
       dispatch({
-        type: 'GOING_UP',
-        payload: false
-      })
+        type: "GOING_UP",
+        payload: false,
+      });
     }
 
-  }, [setScroll, setInnerHeight]);
+    setScroll(window.scrollY);
+  }, [setScroll, setInnerHeight, scroll, state.goingUp]);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, {passive:true});
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
-  const [state, dispatch] = useContext(Context) as any;
 
   const variants = {
     initialWithRoute: {
@@ -84,16 +116,14 @@ export default function Home(props: any) {
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0},
+      transition: { duration: 0 },
       zIndex: -1,
       position: "absolute",
     },
   };
   const memo = useMemo(() => {
     return props.skipTransitionAnimations !== true ? (
-      <AnimatePresence
-      
-      >
+      <AnimatePresence>
         <motion.div
           className="main-container"
           id={state.route + " --- " + state.route}
@@ -126,10 +156,11 @@ export default function Home(props: any) {
         </motion.div>
       </AnimatePresence>
     ) : (
-      ''
-    )
-  }, [router.asPath, state.route, MD5(props.view)])
-  return ( <Fragment>
+      ""
+    );
+  }, [router.asPath, state.route, MD5(props.view)]);
+  return (
+    <Fragment>
       <Head>
         <title>{props.meta.title}</title>
         <meta name="description" content={props.meta.description} />
@@ -160,20 +191,17 @@ export default function Home(props: any) {
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-    {memo}
+      {memo}
     </Fragment>
   );
 }
-
 
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
-  const findPath = getNodes()
-    .paths
-    .find((value) => value.path === joinPath);
+  const findPath = getNodes().paths.find((value) => value.path === joinPath);
   //console.log(joinPath)
   return {
     props: findPath,
@@ -195,11 +223,9 @@ export async function getStaticPaths() {
       params: { path: post.id.toString().split('/') },
     }))
   */
-  const paths = getNodes()
-    .paths
-    .map((post) => ({
-      params: { path: post.path.toString().split("/") },
-    }));
+  const paths = getNodes().paths.map((post) => ({
+    params: { path: post.path.toString().split("/") },
+  }));
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
