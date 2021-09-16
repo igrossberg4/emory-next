@@ -14,10 +14,8 @@ export default function CarouselItem(props: any) {
   const [goingUp, setGoingUp] = useState(false);
   const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=1024,sizes[]=2048&format=webp`);
   const memo = useMemo(() => {
-    return (
-      <div
+    return <div
         className="content-header__container container-force-screen-fit-y"
-        id={`${props.active ? 'active' : ''}`}
       >
         <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
@@ -52,7 +50,7 @@ export default function CarouselItem(props: any) {
           </div>
         </div>
       </div>
-    );
+    
   }, [goingUp, multipleSizesImgPrincipal, props]);
 
   return memo;

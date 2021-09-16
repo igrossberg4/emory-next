@@ -182,11 +182,12 @@ export default function EmblaCarousel({
                       if(page === i && isTransitioning){
                         setTimeout(() => {
                           setPerformTransition(true);
-                        }, 1500)
+                        }, 0)
 
                         setTransitioning(false);
                       }
                     }}
+                    id={page === i && !performTransition ? 'selected' : ''}
                     style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 50 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 50 : 100) + valueMore)}vw`})`}}
                     className={`embla_slide_present ${
                       page === i ? "selected" : "no_selected"

@@ -28,18 +28,20 @@ export default function Home(props: any) {
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY);
     setInnerHeight(window.innerHeight);
-    const element =   document.getElementById('active');
+    const element =   document.getElementById('selected');
     if(element){
-      if(window.scrollY > 25){
-        element.setAttribute('data-animation', 'active')
+      const activeElement = element.querySelector('.content-header__container');
+      
+      if(window.scrollY > 120){
+        activeElement?.setAttribute('data-animation', 'active')
 
       }else{
-        element.setAttribute('data-animation', 'no-active')
+        activeElement?.setAttribute('data-animation', 'no-active')
 
       }
     }
     if (
-      window.scrollY >= 25 &&
+      window.scrollY >= 120 &&
       !document.body.classList.contains("is-scrolled")
     ) {
       document.body.classList.add("is-scrolled");
@@ -48,7 +50,7 @@ export default function Home(props: any) {
         payload: true
       })
     } else if (
-      window.scrollY < 25 &&
+      window.scrollY < 120 &&
       document.body.classList.contains("is-scrolled")
     ) {
       document.body.classList.remove("is-scrolled");
@@ -82,6 +84,7 @@ export default function Home(props: any) {
     },
     exit: {
       opacity: 0,
+      transition: { duration: 0},
       zIndex: -1,
       position: "absolute",
     },
