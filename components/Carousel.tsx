@@ -271,7 +271,7 @@ export default function EmblaCarousel({
                           if(page === i && isTransitioning){
                             setTimeout(() => {
                               setPerformTransition(true);
-                            }, 0)
+                            }, 200)
     
                             setTransitioning(false);
                           }
