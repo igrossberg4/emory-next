@@ -5,6 +5,7 @@ set -e
 
 ARTIFACT_FOLDER=artifact
 
+
 if [[ ! -d scripts ]] && [[ ! -f Makefile ]]
 then
   echo "This scripts should be run from the root folder of the repository"
@@ -19,6 +20,7 @@ fi
 
 # Update artifact repo.
 cd $ARTIFACT_FOLDER
+git checkout ${EMORY_ARTIFACT_BRANCH:-dev}
 git pull --ff-only
 cd -
 
