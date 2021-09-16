@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
-import { useState, useCallback, useMemo, useContext, useEffect } from "react";
+import { useState, useCallback, useMemo, useContext, useEffect, useRef } from "react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { AnimatePresence, motion } from "framer-motion";
 import { MD5 } from "object-hash";
@@ -9,6 +9,94 @@ import { useInView } from "react-intersection-observer";
 import { css, cx } from "@emotion/css";
 import { animated, useSpring } from "react-spring";
 import { useMediaQuery } from "react-responsive";
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+function useWindowSize() {
+  const getSize = () => {
+    return {
+      width: process.browser ? window.innerWidth : 0,
+      height: process.browser ? window.innerHeight : 0,
+    };
+  };
+
+  const [windowSize, setWindowSize] = useState(getSize);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(getSize());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+}
+
+
+const SmoothScroll = ({ active,  children }) => {
+  // 1.
+  const windowSize = useWindowSize();
+
+  //2.
+  const scrollingContainerRef = useRef();
+
+  // 3.
+  const data = {
+    ease: 0.04,
+    current: 0,
+    previous: 0,
+    rounded: 0,
+  };
+
+  // 4.
+  useEffect(() => {
+    setBodyHeight();
+  }, [windowSize.height]);
+
+  const setBodyHeight = () => {
+    document.body.style.height = `${
+      scrollingContainerRef?.current?.getBoundingClientRect()?.height
+    }px`;
+  };
+
+  // 5.
+  useEffect(() => {
+
+      requestAnimationFrame(() => smoothScrollingHandler(active));
+    
+  }, [active]);
+
+  const smoothScrollingHandler = useCallback((active) => {
+        if(active){
+          data.current = window.scrollY;
+          data.previous += (data.current - data.previous) * data.ease;
+          data.rounded = Math.round(data.previous * 100) / 100;
+    
+            const element = scrollingContainerRef.current;
+            if(element){
+              element.style.transform = `translateY(-${data.previous}px)`;
+              requestAnimationFrame(() => smoothScrollingHandler(active));
+            }
+
+        }
+
+    
+  
+  
+      // Recursive call
+
+    
+
+  }, [active, scrollingContainerRef.current, data]);
+
+  return (
+    <div style={{
+
+    }} className="parent">
+      <div ref={(ref) => scrollingContainerRef.current = ref}>{children}</div>
+    </div>
+  );
+};
 
 export interface ButtonEnabled {
   enabled: boolean;
@@ -63,6 +151,7 @@ export default function EmblaCarousel({
   const index = actual
     ? slides.findIndex((slide: any) => MD5(slide) === MD5(actual.actual))
     : 0;
+  const [state, dispatch] = useContext(Context) as any;
   const [[page, direction], setPage] = useState([index, 1]);
   const [queue, setQueue] = useState([]);
   const [performTransition, setPerformTransition] = useState(false);
@@ -120,7 +209,6 @@ export default function EmblaCarousel({
 
   }, [isTransitioning, performTransition, page, changeRoute]);
   const handleKey = useCallback((e:KeyboardEvent) => {
-    e.preventDefault()
     if (inView) {
       switch (e.key) {
         case "ArrowLeft":
@@ -139,115 +227,119 @@ export default function EmblaCarousel({
   }, [inView, page, queue]); // @ts-ignore
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const memo = useMemo(() => {
-    return     <>
-    <div
-      className={`embla embla--carousel-navigation 
-    ${!navigation ? "page-carousel" : ""} 
-    ${index !== page ? `transitioning ${performTransition ? 'blocked' : ''}` : ""}`}
-    >
-      <div
-        className={`${css`
-        &:before {
-          content: " ";
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
+    return        <>
 
-          opacity: ${slides[page].props.view[0].props.isMain ? 1 : 0};
-          background-repeat: no-repeat;
-          background-position: 50% 0;
-          filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(${slides[page].props.view[0].props.isMain ? '10px' : '3px'});
-          background: url(${require(`../public/images/2036-bg.png`)})
-            no-repeat center bottom;
-            background-size: 1800px;
-        }`} embla__viewport`}
-        ref={refViewport}
-        key={"viewPort"}
-      >
-        <div>
+        <div
+          className={`embla embla--carousel-navigation 
+        ${!navigation ? "page-carousel" : ""} 
+        ${index !== page ? `transitioning ${performTransition ? 'blocked' : ''}` : ""}`}
+        >
           <div
-            className="embla__container"
+            className={`${css`
+            &:before {
+              content:  " ";
+              display: ${!state.goingUp ? 'block' : 'none'};
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: ${!state.goingUp ? '100%' : '0%'};
+              height: ${!state.goingUp ? '100%' : '0%'};
+    
+              opacity: ${slides[page].props.view[0].props.isMain && !state.goingUp ? 1 : 0};
+              background-repeat: no-repeat;
+              background-position: 50% 0;
+              filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(${slides[page].props.view[0].props.isMain ? '10px' : '3px'});
+              background:  ${!state.goingUp ? `url(${require(`../public/images/2036-bg.png`)})
+                no-repeat center bottom`: ''};
+                background-size:  ${!state.goingUp ? "1800px" : ''};
+            }`} embla__viewport`}
+            ref={refViewport}
+            key={"viewPort"}
           >
-            {slides.map((value: any, i: number) => {
-              const valueMore = slides[i].props.view[0].props.isMain ? (i > page ? 40 : 30) : 0;
-              //value.props.view[0].props.view[0].props.is_selected = i === page;
-              return (
-                  
-                  <div
-                  key={MD5(value) + i.toString()}
-                    onTransitionEnd={(e)=>{
-                      if(page === i && isTransitioning){
-                        setTimeout(() => {
-                          setPerformTransition(true);
-                        }, 0)
-
-                        setTransitioning(false);
-                      }
-                    }}
-                    id={page === i && !performTransition ? 'selected' : ''}
-                    style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 50 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 50 : 100) + valueMore)}vw`})`}}
-                    className={`embla_slide_present ${
-                      page === i ? "selected" : "no_selected"
-                    } ${i < page ? "first" : ""} ${i > page ? "last" : ""} `}
-                  >
-                    <div className="embla__slide">
-                      <div className="embla__slide__inner">
-                        <DynamicComponentMatcher
-                          key={MD5(value) + i.toString()}
-                          view={[
-                            {
-                              component: "DynamicComponentMatcher",
-                              props: {
-                                view: value?.props?.view
-                                  ? [value.props.view[0]]
-                                  : [value],
-                              },
-                            },
-                          ]}
-                        ></DynamicComponentMatcher>
+            <div>
+              <div
+                className="embla__container"
+              >
+                {slides.map((value: any, i: number) => {
+                  const valueMore = slides[i].props.view[0].props.isMain ? (i > page ? 40 : 30) : 0;
+                  //value.props.view[0].props.view[0].props.is_selected = i === page;
+                  return (
+                      
+                      <div
+                      key={MD5(value) + i.toString()}
+                        onTransitionEnd={(e)=>{
+                          if(page === i && isTransitioning){
+                            setTimeout(() => {
+                              setPerformTransition(true);
+                            }, 0)
+    
+                            setTransitioning(false);
+                          }
+                        }}
+                        id={page === i && !performTransition ? 'selected' : ''}
+                        style={{transform:`translateX(${i < page ? `${(i-page) * ((!isMobile ? 50 : 100) +valueMore)}vw` : page === i ? `0` : `${(i-page) * ((!isMobile ? 50 : 100) + valueMore)}vw`})`}}
+                        className={`embla_slide_present ${
+                          page === i ? "selected" : "no_selected"
+                        } ${i < page ? "first" : ""} ${i > page ? "last" : ""} `}
+                      >
+                        <div className="embla__slide">
+                          <div className="embla__slide__inner">
+                            <DynamicComponentMatcher
+                              key={MD5(value) + i.toString()}
+                              view={[
+                                {
+                                  component: "DynamicComponentMatcher",
+                                  props: {
+                                    view: value?.props?.view
+                                      ? [value.props.view[0]]
+                                      : [value],
+                                  },
+                                },
+                              ]}
+                            ></DynamicComponentMatcher>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-              );
-            })}
+    
+                  );
+                })}
+              </div>
+            </div>
           </div>
+    
+          <PrevButton
+            href={actual ? actual.prev : page === 0 ? "" : "active"}
+            onClick={!performTransition ? scrollPrev : ()=>{}}
+            enabled={prevBtnEnabled }
+          />
+          <NextButton
+            href={
+              actual ? actual.next : page === slides.length - 1 ? "" : "active"
+            }
+            onClick={!performTransition ? scrollNext : ()=>{}}
+            enabled={nextBtnEnabled }
+          />
         </div>
-      </div>
+        {navigation ? (
+    
+          <div key={MD5(slides[page].props.view.slice(1))} id="carouselContent">
+            <div className="line-separator line-separator--overflowed-top-1-3"></div>
+            <DynamicComponentMatcher
+              view={[
+                {
+                  component: "DynamicComponentMatcher",
+                  props: { view: slides[page].props.view.slice(1) },
+                },
+              ]}
+            ></DynamicComponentMatcher>
+          </div>
+          
+        ) : (
+          ""
+        )}
 
-      <PrevButton
-        href={actual ? actual.prev : page === 0 ? "" : "active"}
-        onClick={!performTransition ? scrollPrev : ()=>{}}
-        enabled={prevBtnEnabled }
-      />
-      <NextButton
-        href={
-          actual ? actual.next : page === slides.length - 1 ? "" : "active"
-        }
-        onClick={!performTransition ? scrollNext : ()=>{}}
-        enabled={nextBtnEnabled }
-      />
-    </div>
-    {navigation ? (
-      <div key={MD5(slides[page].props.view.slice(1))} id="carouselContent">
-        <div className="line-separator line-separator--overflowed-top-1-3"></div>
-        <DynamicComponentMatcher
-          view={[
-            {
-              component: "DynamicComponentMatcher",
-              props: { view: slides[page].props.view.slice(1) },
-            },
-          ]}
-        ></DynamicComponentMatcher>
-      </div>
-    ) : (
-      ""
-    )}
-  </>
-   }, [page, isMobile, handleKey, performTransition, setPerformTransition])
+      </>
+   }, [page, isMobile, handleKey, performTransition, setPerformTransition, state.goingUp])
   return (
     memo
   );
