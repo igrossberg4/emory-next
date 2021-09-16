@@ -99,7 +99,6 @@
     left: 0;
     bottom: 0;
     animation: fadeIn math.div($main-carousel-transition-duration, 6) ease-in-out;
-
     width: 100%;
     z-index: 2;
     //transition: opacity math.div($main-carousel-transition-duration, 3) ease-out;
@@ -182,7 +181,7 @@
     max-width: unset;
     width: 100px;
     height: 100px;
-    margin-bottom: $h2-font-size + math.div($default-separation, $rem-in-px);
+    margin-bottom: 130px; //$h2-font-size + math.div($default-separation, $rem-in-px);
     transform: translate(0, 50%);
     box-sizing: content-box;
     z-index: 10;
