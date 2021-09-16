@@ -116,10 +116,7 @@ export default function IntroPage(props: any) {
                           document.body.classList.add("full_video");
                           return
                         }
-                        setPlaying(!playing);
-                        if (videoRef.paused && !videoPlayed) {
-                          videoRef.play();
-                        }
+
                       }
                     }}
                     //className="video-circle"
