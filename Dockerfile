@@ -8,7 +8,7 @@ RUN npm install --quiet
 # Prepare for production if required.
 RUN npm run build 
 RUN npm install -g http-server
-COPY . .
+# COPY . .
 EXPOSE 3000
 # Default to dev command  
 CMD ['npm', 'run', 'dev']
