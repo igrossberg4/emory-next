@@ -15,7 +15,7 @@ pipeline {
       steps {
         echo "Branch $EMORY_ARTIFACT_BRANCH"
         sh "make artifact"
-        sh "./scripts/docker-chown.sh next_prod ${envvars.DOCKER_USER}  ${envvars.DOCKER_USER_GROUP}"
+        sh "./scripts/docker-chown.sh next_prod wodby www-data
       }
     }
 
