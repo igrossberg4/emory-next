@@ -66,7 +66,7 @@ docker-compose exec next_prod npm run build
 docker-compose logs next_prod
 ```
 
-## Development using docker and docker compose
+## Deployment using docker and npm
 * Deployment:
 It's required to run the command ```npm run build```. We have two ways of doing it:
 - Using node v12 and using bash.
