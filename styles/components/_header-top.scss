@@ -201,11 +201,7 @@
 
     .header-inner-content__text {
       //max-width: map-get($container-max-widths, 'lg');
-      padding-top: math.div($round-image-size + $default-separation, 3);
-
-      @include media-breakpoint-up(lg) {
-        padding-top: math.div($round-image-size-big + $default-separation, 3);
-     }
+      padding-top: math.div($round-image-size + $default-separation, 5);
     }
 
     .title {
