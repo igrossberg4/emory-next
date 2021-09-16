@@ -61,7 +61,7 @@
       "component": "Quote",
       "props": {
         "text": "When there is an important issue, a tough question, I want them to think, “I wonder what’s going on at Emory? I wonder how they’re solving this? I wonder what research is addressing this question?”",
-        "byline": "—Gregory L. Fenves, President, EMory University"
+        "byline": "—Gregory L. Fenves, President, Emory University"
       }
     },
     {
@@ -91,7 +91,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Emory Uniiversity",
+        "pretitle": "Emory University",
         "title": "Faculty Eminence",
         "body": "<p>2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.  With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future.</p>",
         "read_more": "faculty-eminence",
