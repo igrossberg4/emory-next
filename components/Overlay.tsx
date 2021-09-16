@@ -21,7 +21,7 @@ export default function Overlay(props: any) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            transition={{ duration: 0.25}}
             className="container-force-screen-fit-y overlay"
             style={{ pointerEvents: "auto" }}
           >
