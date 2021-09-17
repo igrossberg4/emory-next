@@ -27,7 +27,6 @@ export default function MainMenu(props: any) {
                   className="menu-main__link header-h2"
                   key={option.title}
                   onClick={() => {
-                    console.log("EOOO", option.link_to)
                     dispatch({ type: "SET_NAV", payload: option.link_to ? option.link_to :'/'});
                   }}
                 >
