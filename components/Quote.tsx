@@ -14,6 +14,9 @@ export default function Quote(props:any) {
       <blockquote>
         <p className="text-body--lg">{props.text}</p>
       </blockquote>
+      {props.attribution && (
+        <div className="quote__attribution text-label">{props.attribution}</div>
+      )}
     </div>
   );
 }

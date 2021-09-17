@@ -23,4 +23,8 @@
     max-width: map-get($container-max-widths, 'md');
     text-align: center;
   }
+
+  .quote__attribution {
+    margin-top: 15px;
+  }
 }
