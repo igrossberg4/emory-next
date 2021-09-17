@@ -40,7 +40,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "Emory College of Arts & Sciences has a range of priorities for 2O36.",
+        "text": "EMORY COLLEGE OF ARTS & SCIENCES HAS A RANGE OF PRIORITIES FOR 2O36",
         "image_src": "ecas_divider_bg.jpg"
       }
     },
@@ -53,7 +53,7 @@
         "layout": "right",
         "img_src": "ecas_priority_1.jpg",
         "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally",
+        "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Student Access",
         "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
