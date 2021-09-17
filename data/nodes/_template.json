@@ -1,0 +1,325 @@
+{
+  "id": "_template",
+  "type": "collection",
+  "page_props": {
+    "header": "Page Props: Header",
+    "header_expanded": "Page Props: Header Expanded",
+    "text": "Page props: text",
+    "about": "Page props: About the campaign",
+    "button_scroll": "Scroll to explore",
+    "about_before_scroll": "ABOUT THE CAMPAIGN",
+    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "video_src": "videos/EU1901_02k_Intro-ALT-1080_YM_v02.mp4",
+    "text_play": "Begin\r\nyour\r\nexperience",
+    "text_skip": "Skip video"
+  },
+  "path": "styleguide",
+  "metatag": {
+    "title": "Style guide - Emory 2036",
+    "description": "",
+    "image": "2036_cancer_cells_red_uncropped.jpg"
+  },
+  "components": [
+    {
+      "component": "ImageTextOneColumn",
+      "props": {
+        "header": "ImageTextOneColumn: 'header'",
+        "background_image": "about_isolated_bg.png",
+        "text": "ImageTextOneColumn: 'text' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,",
+        "img_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/592305375/614518672f",
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "video",
+        "media_header": "ImageTextOneColumn: 'media_header'",
+        "media_text": "ImageTextOneColumn: 'media_text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "SectionIntro",
+      "props": {
+        "header": "SectionIntro 'header' voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+        "background_image": "about_isolated_bg.png",
+        "text": "<p>SectionIntro 'text' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,</p>",
+        "img_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/592305375/614518672f",
+        "media_alt": "SectionIntro 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "video",
+        "media_header": "SectionIntro 'media_title'",
+        "media_text": "SectionIntro 'media_text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "TextLargeImage",
+      "props": {
+        "header": "TextLargeImage 'header'",
+        "background_image": "bg_brain.jpg",
+        "text": "<p>TextLargeImage 'text' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend.</p>",
+        "img_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_alt": "TextLargeImage 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "image",
+        "media_header": "TextLargeImage 'media_header' Image title",
+        "media_text": "TextLargeImage 'media_text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "TextImageBg",
+      "props": {
+        "header": "TextImageBg 'header' Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "background_image": "background_image.jpg",
+        "text": "<p>TextImageBg 'text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,</p>",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "image",
+        "media_header": "TextImageBg 'media_header' Image title",
+        "media_text": "TextImageBg 'media_text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "TextImageHeader: 'pretitle'",
+        "title": "TextImageHeader: 'title' Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "body": "<p>TextImageHeader: 'body' <em>(Supports html)</em> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,</p><p>Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas.</p>",
+        "read_more": "goizueta-business-school",
+        "tags": [
+          {
+            "label": "A&S",
+            "url": "https://example.com"
+          },
+          {
+            "label": "Brain Health",
+            "url": "goizueta-business-school"
+          }
+        ],
+        "layout": "left",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_alt": "TextImageHeader: 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "image",
+        "media_header": "TextImageHeader: 'media_header' Image title",
+        "media_text": "TextImageHeader: 'media_text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "TextImageHeader: 'pretitle' Key Priority",
+        "title": "TextImageHeader: 'title' Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "body": "<p>TextImageHeader: 'body' <em>(Supports html)</em> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus,</p>",
+        "read_more": "https://example.com",
+        "tags": [
+          {
+            "label": "A&S",
+            "url": "https://example.com"
+          },
+          {
+            "label": "Brain Health",
+            "url": "https://example.com"
+          }
+        ],
+        "layout": "right",
+        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_alt": "TextImageHeader 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "image",
+        "media_header": "TextImageHeader 'media_header' Image title",
+        "media_text": "TextImageHeader 'media_text' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "(Quote component) <em>(Supports html)</em> I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.",
+        "attribution": "—Some person, job title (attribution)<br><em>(Supports html)</em>"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "VideoQuote: 'pretitle'",
+        "title": "VideoQuote: 'title'",
+        "layout": "left",
+        "subtitle": "VideoQuote: 'subtitle'",
+        "img_src": "styleguide-headshot-front.png",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "VideoQuote: 'media_alt'",
+        "media_header": "VideoQuote: 'media_header'",
+        "media_text": "VideoQuote: 'media_text'<br><em>(Supports html)</em>",
+        "button_close_text": "VideoQuote: 'button_close_text'"
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "ColumnsText: 'column1' <em>(Supports html)</em> It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire.",
+        "column2": "ColumnsText: 'column2' <em>(Supports html)</em> It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "TextBg 'text' Emory College of Arts and Sciences has a range of priorities for 2O36.",
+        "image_src": "background_image.jpg"
+      }
+    },
+    {
+      "component": "QuoteParagraphColumn",
+      "props": {
+        "quote": "QuoteParagraphColumn: 'quote' <em>(Supports html)</em> I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.",
+        "text": "QuoteParagraphColumn: 'text' <em>(Supports html)</em> It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
+      }
+    },
+    {
+      "component": "CampaignCarousel",
+      "props": {
+        "title": "CampaignCarousel 'title' Campaign themes",
+        "slides": [
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "explore_link": "goizueta-business-school"
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Cancer",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "explore_link": "school-of-law"
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' AI.Humanity",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "explore_link": "https://example.com"
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "2036_cancer_cells_red_uncropped.jpg",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "explore_link": "https://example.com"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "component": "ProfileGrid",
+      "props": {
+        "header": "ProfileGrid header (large)",
+        "items": [
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          },
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          },
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          },
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          }
+        ]
+      }
+    },
+    {
+      "component": "ProfileGrid",
+      "props": {
+        "header": "ProfileGrid header (small)",
+        "size": "small",
+        "items": [
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          },
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          },
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          },
+          {
+            "name": "Firstname Lastname",
+            "description": "Description text",
+            "img_src": "styleguide-headshot-right.png",
+            "media_alt": "Portrait of Firstname Lastname"
+          }
+        ]
+      }
+    },
+    {
+      "component": "AccordionComponent",
+      "props": {
+        "pretitle": "AccordionComponent 'pretitle'",
+        "title": "AccordionComponent 'title'",
+        "items": [
+          {
+            "title": "AccordionComponent 'item title' Example 1",
+            "description": "<p>AccordionComponent 'item description' Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship</p>",
+            "read_more": "school-of-law",
+            "tags": [
+              {
+                "label": "A&S",
+                "url": "goizueta-business-school"
+              },
+              {
+                "label": "Brain Health",
+                "url": "https://example.com"
+              }
+            ]
+          },
+          {
+            "title": "External link example",
+            "description": "Accordion description",
+            "read_more": "https://example.com"
+          },
+          {
+            "title": "Accordion title",
+            "description": "Accordion description"
+          },
+          {
+            "title": "Accordion title",
+            "description": "Accordion description"
+          },
+          {
+            "title": "Accordion title",
+            "description": "Accordion description"
+          }
+        ]
+      }
+    }
+  ]
+}
