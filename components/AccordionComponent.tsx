@@ -49,7 +49,7 @@ export default function AccordionComponent(props: any) {
                   </AccordionButton>
                 </h3>
                 <AccordionPanel pb={4}>
-                  {<div dangerouslySetInnerHTML={{___html:item.description}}></div>}
+                  {<div dangerouslySetInnerHTML={{__html:item.description}}></div>}
                   {item.read_more && !item.internal_link && (
                     <a href={item.read_more} className="readmore text-cta">
                       Read more
