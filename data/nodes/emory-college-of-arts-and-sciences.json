@@ -31,17 +31,10 @@
       }
     },
     {
-      "component": "TextLargeImage",
+      "component": "Quote",
       "props": {
-        "header": "CAROL ANDERSON",
-        "background_image": "",
-        "text": "<p>When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.</p>",
-        "img_src": "carol-anderson-600x600.jpg",
-        "media_src": "https://vimeo.com/605964499/11bc1aedda",
-        "media_alt": "A video of a quote by Carol Anderson",
-        "media_type": "video",
-        "media_header": "Carol Anderson",
-        "media_text": "Charles Howard Candler Professor and Chair, African American Studies"
+        "text": "When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.",
+        "attribution": "— Carol Anderson, Charles Howard Candler Professor and Chair, African American Studies"
       }
     },
     {
