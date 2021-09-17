@@ -85,14 +85,14 @@ export default function MediaWithExpantion(props: any) {
                 ) : (
                   <Video {...props} controls={true}></Video>
                 )}
+                <figcaption className="overlay__text">
+                  <h6 className="title text-body">{props.header}</h6>
+                  <div
+                    className="body"
+                    dangerouslySetInnerHTML={{ __html: props.text }}
+                  ></div>
+                </figcaption>
               </motion.figure>
-              <div className="overlay__text">
-                <h6 className="title text-body">{props.header}</h6>
-                <div
-                  className="body"
-                  dangerouslySetInnerHTML={{ __html: props.text }}
-                ></div>
-              </div>
               </Fragment>
           }
         ></Overlay>
