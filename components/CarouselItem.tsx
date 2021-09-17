@@ -35,12 +35,8 @@ export default function CarouselItem(props: any) {
             <h1
              onTransitionEnd={(e) => {
                  const element = document.getElementById("selected")?.querySelector('.title.header-h2');
-                 if(state.goingUp && element){
-                  
-                    
+                 if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
                     window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
-                 
-
                  }
 
      

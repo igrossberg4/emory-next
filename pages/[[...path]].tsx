@@ -33,8 +33,28 @@ export default function Home(props: any) {
     duration: 0.65,
     ease: "easeInOut",
   };
+  const handleKey = useCallback((e:KeyboardEvent) => {
+
+      switch (e.key) {
+        case " ":
+          if(window.scrollY < 5 && document.activeElement?.tagName != "BUTTON"){
+            e.preventDefault();
+            window.scrollTo({top:20, behavior:'smooth'});
+          }
+          return;
+        case "ArrowRight":
+          return;
+      }
+    
+  }, [])
+  useEffect(() => {
+
+    document.body.addEventListener("keydown", handleKey, { passive: false });
+    return () => document.body.removeEventListener("keydown", handleKey);
+  }, [handleKey]); // @ts-ignore
   if (process.browser && document.body.style.overflow === "hidden") {
     document.body.style.overflow = "";
+
   }
   const handleScroll = useCallback(() => {
     setInnerHeight(window.innerHeight);
