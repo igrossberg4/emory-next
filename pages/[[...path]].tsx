@@ -48,7 +48,6 @@ export default function Home(props: any) {
         activeElement?.setAttribute("data-animation", "no-active");
       }
     }
-    console.log(isMobile)
 
     if (
       window.scrollY >= 5 &&
@@ -60,26 +59,6 @@ export default function Home(props: any) {
         type: "GOING_UP",
         payload: true,
       });
-      /*
-      const carouselContent = document.getElementById("selected")?.querySelector('.round-wp');
-
-      if(isMobile) {
-        window.scrollTo({
-          top: (carouselContent?.clientHeight as any) / (0.9),
-          behavior: "smooth",
-        });
-      }else{
-        if(window.scrollY <  ((carouselContent?.clientHeight as any) /  (!isMobile ? 1.6 : 1)) || isMobile){
-          window.scrollTo({
-            top: (carouselContent?.clientHeight as any) / (!isMobile ? 1.6 : 1),
-            behavior: "smooth",
-          });
-        }
-      }
-
-*/
-
-
     } else if (
       window.scrollY < 5 &&
       document.body.classList.contains("is-scrolled")
@@ -202,7 +181,6 @@ export default function Home(props: any) {
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
   const findPath = getNodes().paths.find((value) => value.path === joinPath);
-  //console.log(joinPath)
   return {
     props: findPath,
     // Next.js will attempt to re-generate the page:
