@@ -31,10 +31,17 @@
       }
     },
     {
-      "component": "Quote",
+      "component": "TextLargeImage",
       "props": {
-        "text": "When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.",
-        "attribution": "—Carol Anderson, Charles Howard Candler Professor and Chair, African American Studies"
+        "header": "CAROL ANDERSON",
+        "background_image": "",
+        "text": "<p>When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.</p>",
+        "img_src": "carol-anderson-600x600.jpg",
+        "media_src": "https://vimeo.com/605964499/11bc1aedda",
+        "media_alt": "A video of a quote by Carol Anderson",
+        "media_type": "video",
+        "media_header": "Carol Anderson",
+        "media_text": "Charles Howard Candler Professor and Chair, African American Studies"
       }
     },
     {
@@ -53,7 +60,7 @@
         "layout": "right",
         "img_src": "ecas_priority_1.jpg",
         "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "TODO media alt text for ECAS priority 1 (student access).",
+        "media_alt": "Three students at a pep rally",
         "media_type": "image",
         "media_header": "Student Access",
         "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
@@ -75,7 +82,7 @@
         "layout": "left",
         "img_src": "ecas_priority_2.jpg",
         "media_src": "ecas_priority_2_popup.jpg",
-        "media_alt": "TODO media alt text for ECAS priority 2 (faculty lead)",
+        "media_alt": "A professor guides students through a large book.",
         "media_type": "image",
         "media_header": "Emory Faculty Lead the Discussion",
         "media_text": "In 2O36, funding will allow Emory College professors to focus on strategic scholarship that tackles growing global challenges."
@@ -89,10 +96,17 @@
       }
     },
     {
-      "component": "Quote",
+      "component": "TextLargeImage",
       "props": {
-        "text": "I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.",
-        "attribution": "—Jericho Brown, Charles Howard Candler Professor of English and Creative Writing; Director, Creative Writing Program"
+        "header":"JERICHO BROWN",
+        "background_image": "",
+        "text": "<p>I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.</p>",
+        "img_src": "jericho-brown-600x600.jpg",
+        "media_src": "https://vimeo.com/605964280/949e734bc8",
+        "media_alt": "A video of a quote by Jericho Brown",
+        "media_type": "video",
+        "media_header": "Jericho Brown",
+        "media_text": "Charles Howard Candler Professor of English and Creative Writing; Director, Creative Writing Program"
       }
     },
     {
@@ -104,24 +118,31 @@
         "layout": "right",
         "img_src": "ecas_priority_3.jpg",
         "media_src": "ecas_priority_3_popup.jpg",
-        "media_alt": "TODO media alt text for ECAS priority 3 (values the arts).",
+        "media_alt": "A gentleman admires student works on a light box.",
         "media_type": "image",
-        "media_header": "Emory Values the Arts",
+        "media_header": "Value the Arts",
         "media_text": "Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach."
       }
     },
     {
-      "component": "Quote",
+      "component": "TextLargeImage",
       "props": {
-        "text": "Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.",
-        "attribution": "—Cliff Carrubba, Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods"
+        "header":"CLIFF CARRUBBA",
+        "background_image": "",
+        "text": "<p>Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.</p>",
+        "img_src": "cliff-carrubba-600x600.jpg",
+        "media_src": "https://vimeo.com/606052349/761757ff45",
+        "media_alt": "Audio quote from Cliff Carrubba",
+        "media_type": "video",
+        "media_header": "Cliff Carrubba",
+        "media_text": "Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
         "pretitle": "COLLEGE OF ARTS & SCIENCES",
-        "title": "ADDITIONAL PRIORITIES",
+        "title": "MORE PRIORITIES",
         "items": [
           {
             "title": "2O36 Builds on Strength",
