@@ -91,7 +91,7 @@
     {
       "component": "TextLargeImage",
       "props": {
-        "header":"JERICHO BROWN",
+        "header": "JERICHO BROWN",
         "background_image": "",
         "text": "<p>I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.</p>",
         "layout": "left",
@@ -121,7 +121,7 @@
     {
       "component": "TextLargeImage",
       "props": {
-        "header":"CLIFF CARRUBBA",
+        "header": "CLIFF CARRUBBA",
         "background_image": "",
         "text": "<p>Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.</p>",
         "img_src": "cliff-carrubba-600x600.jpg",
