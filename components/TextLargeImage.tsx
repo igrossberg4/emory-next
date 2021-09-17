@@ -9,7 +9,7 @@ import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function TextLargeImage(props:any) {
   return (
-    <div className="section text-large-image" style={{backgroundImage:props.background_image ? `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(/${props.background_image})` : ''}}>
+    <div className={`section text-large-image ${props.layout === "left" ? "layout-left" : "layout-right"}`} style={{backgroundImage:props.background_image ? `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(/${props.background_image})` : ''}}>
         <div className="container">
         {props.header &&
           <div className="row header-container">

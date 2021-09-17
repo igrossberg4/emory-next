@@ -13,7 +13,7 @@ export default function SchoolsMenu(props: any) {
       <Overlay
         expand_action={
           <Menu>
-            <MenuButton as={Button} rightIcon={<Icons icon="chevron-down" />}>
+            <MenuButton tabIndex={0} as={Button} rightIcon={<Icons icon="chevron-down" />}>
               <span className="hide-sm">select</span> School
             </MenuButton>
           </Menu>}

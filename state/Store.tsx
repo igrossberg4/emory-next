@@ -17,11 +17,13 @@ export interface IStore{
 
 const initialState = {
     route:'',
+    activeFocusXPATH:'',
     videoStore:{},
     videoPlayed:process.browser ? localStorage.getItem('video_played') : 'not',
     // This properties indicates that the navigation is coming from carousel and is required for avoid video animation.
     comesFromCarousel:false,
-    goingUp: process.browser ? window.scrollY > 25 : false
+    goingUp: process.browser ? window.scrollY > 25 : false,
+    scrollComesFromUser: false,
 }
 
 const Store = ({children}:{children:any}) => {

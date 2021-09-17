@@ -36,13 +36,16 @@ header[role="banner"] {
   }
 
   .header__logo {
-    display: flex;
+    display: none;
     justify-content: center;
     margin: 0 15px;
 
     svg {
       display: block;
     }
-  }
 
+    .is-scrolled & {
+      display: flex;
+    }
+  }
 }

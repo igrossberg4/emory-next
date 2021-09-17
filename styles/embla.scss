@@ -39,7 +39,7 @@
   width: 100%;
   &:before{
     //transition: background $scroll-down-transition-duration ease-in-out;
-    transition: opacity $main-carousel-transition-duration ease-in-out, 
+    transition: opacity $main-carousel-transition-duration ease-in-out,
                 filter $main-carousel-transition-duration/2 linear;
   }
 }
@@ -102,6 +102,11 @@
   padding: 0;
   border-radius: 50%;
   box-shadow: $default-box-shadow;
+  transition: box-shadow .25s ease-in-out;
+
+  &:hover, &:focus {
+    box-shadow: $default-box-shadow--hover;
+  }
 }
 
 .embla__button:disabled {

@@ -16,6 +16,9 @@ export default function QuoteParagraphColumn(props:any) {
           <blockquote>
             <p className="text-body--lg">{props.quote}</p>
           </blockquote>
+          {props.attribution && (
+            <div className="quote-paragraph-column__attribution text-label">{props.attribution}</div>
+          )}
         </div>
         <div className="column col-md-6">
           <p>{props.text}</p>

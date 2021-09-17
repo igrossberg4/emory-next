@@ -4,6 +4,16 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
   switch (action.type) {
     case 'CAROUSEL_NAV':
       return {...state, comesFromCarousel: true}
+    case 'SCROLL_COMES_FROM_USER':
+      if(action.payload !== state.scrollComesFromUser){
+        return {...state, scrollComesFromUser:action.payload}
+      }
+      return state;
+      case 'ACTIVE_FOCUS_KEY_PATH':
+        if(action.payload !== state.activeFocusXPATH){
+          return {...state, activeFocusXPATH:action.payload}
+        }
+        return state;
     case "SET_NAV":
       return {
         ...state,

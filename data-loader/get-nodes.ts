@@ -33,7 +33,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                         props: Object.assign(nodeFinded.page_props, {
                             path: path
                         }, nodeFinded.page_props),
-                    } 
+                    }
                 ]
             }
         } : {
@@ -376,9 +376,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
 export function getNodes() {
     const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
-        .filter(value => value.endsWith('.json')))
-        ;
-    //console.log(JSON.stringify(generatePageWithComponents(pages, nodes)));
+        .filter(value => value.endsWith('.json')));
     const pages = nodes.map(node => ({ list: node.list, nodeBase: node })).filter(value => value.list !== undefined);
     return { paths: pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat() };
 }

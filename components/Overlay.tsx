@@ -1,9 +1,31 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useCallback, useEffect, useState, forwardRef, useImperativeHandle} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Overlay(props: any) {
+// eslint-disable-next-line react/display-name
+export const Overlay = forwardRef((props: any, ref:any) => {
   const [expanded, setExpanded] = useState(false);
+  const handleKey = useCallback((e:KeyboardEvent) => {
+    if (expanded) {
+      switch (e.key) {
+        case "Escape":
+          setExpanded(false);
+          return;
+      }
+    }
 
+  }, [expanded]);
+  useImperativeHandle(ref, () => ({
+
+    expand(value:boolean) {
+      setExpanded(!expanded);
+    }
+
+  }), [expanded, setExpanded]);
+  useEffect(() => {
+
+    document.body.addEventListener("keydown", handleKey, { passive: false });
+    return () => document.body.removeEventListener("keydown", handleKey);
+  }, [expanded]); // @ts-ignore
   return (
     <Fragment>
       <div
@@ -40,4 +62,5 @@ export default function Overlay(props: any) {
       </AnimatePresence>
     </Fragment>
   );
-}
+})
+export default Overlay;
