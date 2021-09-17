@@ -17,7 +17,7 @@ function BottomNavigation(props: any) {
             }}
           >
             <div className="inner-wrapper">
-              <Link href={props.previous_route === '' ? '/' : props.previous_route } scroll={false}>
+              <Link href={props.previous_route === '' ? '/' : props.previous_route }>
                 <a className="pre-title text-label">Previous</a>
               </Link>
               <h6 className="title header-h2"><Link href={props.previous_route === '' ? '/' : props.previous_route }><span dangerouslySetInnerHTML={{ __html: props.previous_title }}></span></Link></h6>
