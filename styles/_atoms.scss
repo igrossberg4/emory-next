@@ -14,6 +14,11 @@
   }
 }
 
+button{
+  &:focus-visible{
+    outline: auto 1px;
+  }
+}
 a {
   color: inherit;
   text-decoration: none;

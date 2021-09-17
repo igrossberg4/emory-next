@@ -14,7 +14,7 @@ export default function MainMenu(props: any) {
       <Overlay
         expand_action={
           <Menu>
-            <MenuButton as={Button} rightIcon={<Icons icon="menu" />}>
+            <MenuButton tabIndex={0} as={Button} rightIcon={<Icons icon="menu" />}>
               {props.title}
             </MenuButton>
           </Menu>
