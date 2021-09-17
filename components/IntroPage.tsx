@@ -95,7 +95,7 @@ export default function IntroPage(props: any) {
                 >
                   <IconButton
                     key={muted}
-                    icon={muted ? "unmute" : "mute"}
+                    icon={muted ? "mute" : "unmute"}
                   ></IconButton>
                 </div>
               ) : (
