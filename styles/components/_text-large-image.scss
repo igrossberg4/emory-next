@@ -49,4 +49,21 @@
       margin-right: -16.66666667%;
     }
   }
+
+  // Left column.
+  &.layout-left {
+    .header-container,
+    .row.body-container {
+      @include media-breakpoint-up(md) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .image-container {
+      @include media-breakpoint-up(md) {
+        margin-right: 0;
+        margin-left: -16.66666667%;
+      }
+    }
+  }
 }
