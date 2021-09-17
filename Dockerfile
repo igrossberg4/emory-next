@@ -6,9 +6,10 @@ WORKDIR /usr/app
 COPY package.json .
 RUN npm install --quiet
 # Prepare for production if required.
-RUN npm run build 
+COPY . .
+#RUN npm run build
 RUN npm install -g http-server
-# COPY . .
+
 EXPOSE 3000
-# Default to dev command  
+# Default to dev command
 CMD ['npm', 'run', 'dev']

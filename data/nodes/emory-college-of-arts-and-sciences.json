@@ -3,171 +3,158 @@
   "type": "collection",
   "page_props": {
     "about": "school spotlight",
-    "header": "College of <br>Arts & Sciences",
-    "text": "Logline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nascetur in lectus odio.",
+    "header": "COLLEGE OF <br>ARTS & SCIENCES",
+    "text": "By 2036, we will be measuring higher education by its impact on the world.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_smoke_blue.jpg"
+    "img_src": "ecas_lede.jpg"
   },
   "path": "college-of-arts-and-sciences",
   "metatag": {
-    "title": "College of Arts & Sciences",
-    "description": "Some description for carousel page",
+    "title": "College of Arts & Sciences - Emory 2036",
+    "description": "In service of humanity, Emory College is reimagining the liberal arts and sciences and revolutionizing the student experience, bridging the disciplines to address global challenges.",
     "image":""
   },
   "components": [
-
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "bg_brain.jpg",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply into their own interests and our research priorities. Post-doctoral researchers play an important role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships, undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_type": "image",
-        "media_alt":"Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "image_expand_id": "image_expanded_test",
+        "header": "In service of humanity, Emory College is reimagining the liberal arts and sciences and revolutionizing the student experience, bridging the disciplines to address global challenges.",
+        "background_image": "ecas_isolated_bg.png",
+        "text": "<p>In an economy where disruption and rapid change are constants, the liberal arts and sciences are more essential than ever. They draw students out of their individual experiences into the wide world of ideas, provide ethical understanding, and teach both critical and creative thinking. Students emerge from Emory College more human and more humane, with the moral imagination to address larger issues with clarity and compassion.</p><p>Emory does an artful job of educating students by harnessing both the strengths of a liberal arts college and the expertise of a research university. This powerful combination creates purpose-driven alumni who approach the world as problem-solvers, communicators, and leaders for a lifetime.</p>",
+        "img_src": "ecas_intro.jpg",
+        "media_src": "https://vimeo.com/605815186/07c32d9054",
+        "media_type": "video",
+        "media_alt": "Dean Michael A. Elliott, Emory College of Arts and Sciences",
+        "media_header": "Emory College of Arts and Sciences",
+        "media_text": "",
         "button_close_text": "Close"
       }
     },
     {
-      "component": "Quote",
+      "component": "TextLargeImage",
       "props": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor, purus lacus porttitor. Euismod ante aliquam consequat, vulputate elementum viverra enim. Lacinia vel scelerisque mi auctor."
+        "header": "CAROL ANDERSON",
+        "background_image": "",
+        "text": "<p>When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.</p>",
+        "img_src": "carol-anderson-600x600.jpg",
+        "media_src": "https://vimeo.com/605964499/11bc1aedda",
+        "media_alt": "A video of a quote by Carol Anderson",
+        "media_type": "video",
+        "media_header": "Carol Anderson",
+        "media_text": "Charles Howard Candler Professor and Chair, African American Studies"
       }
     },
     {
       "component": "TextBg",
       "props": {
         "text": "Emory College of Arts and Sciences has a range of priorities for 2O36.",
-        "image_src": "background_image.jpg"
+        "image_src": "ecas_divider_bg.jpg"
       }
     },
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key priority",
-        "title": "Professorships in key departments and retention chairs for early to mid-career faculty members, as well as graduate student and start-up support",
-        "body": "<p>We seek to endow nine new distinguished professorships and to provide those  professorships with support for graduate students. We also seek to create ten endowed  professorships for mid-career faculty that will allow us to retain rising stars — recruited  faculty who are in danger of considering other universities. This effort will result in more Emory faculty serving as international commentators on the most important issues of our  times in forums that define public scholarship and increase the number of faculty who are  members of international academies.</p>",
-        "read_more": "goizueta-business-school",
-        "tags": [
-          {
-            "label": "A&S",
-            "url": "goizueta-business-school"
-          },
-          {
-            "label": "Brain Health",
-            "url": "goizueta-business-school"
-          }
-        ],
+        "pretitle": "2036 Priority",
+        "title": "In 2O36, Student Access is Everything",
+        "body": "<p>Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society.</p>",
         "layout": "right",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key priority",
-        "title": "Faculty fellowships and residencies in the arts, including creative writing, and film",
-        "body": "<p>We will build upon existing teaching and research strengths in the arts and a variety of  disciplines and create meaningful collaborations with Atlanta by investing in visiting artists,  fellows, teaching, and experiences that bring art into the classroom and community. The  effort will enhance the undergraduate experience, expand opportunities for collaboration  from the health sciences to business, and create meaningful collaboration. We will lead the  national creative conversation through the work of our students, faculty, graduates, and  those who choose to come here to perform and teach for a day or for a year.</p>",
-        "read_more": "goizueta-business-school",
-        "tags": [
-          {
-            "label": "A&S",
-            "url": "goizueta-business-school"
-          },
-          {
-            "label": "Brain Health",
-            "url": "goizueta-business-school"
-          }
-        ],
-        "layout": "left",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key priority",
-        "title": "Naming gifts and undergraduate fellowships at Institute for the Liberal Arts",
-        "body": "<p>Emory College has several leading programs that could extend their reach with an  endowment that would carry with it a naming opportunity, specifically for the Department  of Quantitative Theory and Methods, Center for the Study of Human Health, Department of African American Studies, and the Creative Writing Program. These are educational  programs that are rooted in the work of top research faculty, and all are destinations for  undergraduate students throughout the nation.</p>",
-        "read_more": "goizueta-business-school",
-        "tags": [
-          {
-            "label": "A&S",
-            "url": "goizueta-business-school"
-          },
-          {
-            "label": "Brain Health",
-            "url": "goizueta-business-school"
-          }
-        ],
-        "layout": "right",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Student Access",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
       }
     },
     {
       "component": "ColumnsText",
       "props": {
-        "column1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed velit tempor nulla sagittis, eget suspendisse. Porta quisque luctus interdum nisl suspendisse arcu senectus. Mauris, aliquet ultricies ac sit tristique purus accumsan varius. Laoreet ac massa nulla eget. Vitae, feugiat malesuada scelerisque quam leo arcu scelerisque. Condimentum volutpat at habitant id malesuada. Quam amet pellentesque sed ut quis feugiat suscipit mattis vitae. Lacus imperdiet mauris enim nullam faucibus consectetur pulvinar congue augue. Massa in maecenas pulvinar augue quis leo. Sed nulla ultrices vitae ipsum. Hac in purus diam lorem nibh libero elementum. Sapien, augue consequat odio diam. Vitae fermentum aenean id enim et mi ut. Vel vel lorem vel, sit. Id sagittis consectetur egestas ultricies amet, ut dui. Ac imperdiet congue sit odio nisi.",
-        "column2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed velit tempor nulla sagittis, eget suspendisse. Porta quisque luctus interdum nisl suspendisse arcu senectus. Mauris, aliquet ultricies ac sit tristique purus accumsan varius. Laoreet ac massa nulla eget. Vitae, feugiat malesuada scelerisque quam leo arcu scelerisque. Condimentum volutpat at habitant id malesuada. Quam amet pellentesque sed ut quis feugiat suscipit mattis vitae. Lacus imperdiet mauris enim nullam faucibus consectetur pulvinar congue augue. Massa in maecenas pulvinar augue quis leo. Sed nulla ultrices vitae ipsum. Hac in purus diam lorem nibh libero elementum. Sapien, augue consequat odio diam. Vitae fermentum aenean id enim et mi ut. Vel vel lorem vel, sit. Id sagittis consectetur egestas ultricies amet, ut dui. Ac imperdiet congue sit odio nisi."
+        "column1": "Emory College provides experiences that foster growth and community engagement, so the best students find Emory irresistible. The generous scholarship support that 2O36 inspires will ensure that every student who meets the college’s high standards will be able to attend. Without the burden of education debt, students can explore the career paths that mean the most, which aren’t always the ones that pay the most.",
+        "column2": "Emory College has been chipping away at financial obstacles to education for years. Partnering with alumni and other donors since 2007, for example, the Emory Advantage program offers students with family incomes under $100,000 the ability to graduate with little or no debt. Several merit-based programs reward top students, and our Scholarship Endowment Initiative has set the stage for a healthy endowment to grow. <strong>2O36 will generate need-based scholarships for many more students and create sustainable funding for the long term.</strong>"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "2036 Priority",
+        "title": "In 2O36, Faculty Lead the Discussion",
+        "body": "<p>Preeminent in their fields and devoted to their craft, more than 550 Emory College professors reach across 50 departments and programs to equip students with the tools to explore lifelong passions. <strong>In 2O36, funding will allow Emory College professors to focus on strategic scholarship that tackles growing global challenges.</strong></p>",
+        "layout": "left",
+        "img_src": "ecas_priority_2.jpg",
+        "media_src": "ecas_priority_2_popup.jpg",
+        "media_alt": "A professor guides students through a large book.",
+        "media_type": "image",
+        "media_header": "Emory Faculty Lead the Discussion",
+        "media_text": "In 2O36, funding will allow Emory College professors to focus on strategic scholarship that tackles growing global challenges."
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "Through generous endowment support, Emory will be a destination, rather than a stepping stone, for faculty who shape the most important discussions of our time. Nine new distinguished professorships, each with support for a graduate student, will attract and retain faculty leaders who are moving their disciplines forward. Ten new professorships will retain rising-star faculty, who, as they gain prominence at Emory, may consider taking their talents to other universities.",
+        "column2": "These faculty leaders strengthen the research and teaching profiles of key departments, driving discovery in the natural sciences and quantitative methods and producing knowledge about history, culture, society, and many other areas."
       }
     },
     {
       "component": "TextLargeImage",
       "props": {
-        "background_image": "bg_brain.jpg",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "header":"JERICHO BROWN",
+        "background_image": "",
+        "text": "<p>I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.</p>",
+        "img_src": "jericho-brown-600x600.jpg",
+        "media_src": "https://vimeo.com/605964280/949e734bc8",
+        "media_alt": "A video of a quote by Jericho Brown",
+        "media_type": "video",
+        "media_header": "Jericho Brown",
+        "media_text": "Charles Howard Candler Professor of English and Creative Writing; Director, Creative Writing Program"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "2036 Priority",
+        "title": "2O36 Values the Arts",
+        "body": "<p>The seat of so much American history and culture, Atlanta is fast becoming a mecca for artists. With remarkable stories around every corner, Atlanta inspires a spectrum of creative experiences and anchors much of the action inspired by Emory professors. For a campus without Division 1 athletics, the arts take Emory into Atlanta and bring the city to our students—through performances, collaborations, and engagement with local visiting artists, fellows, and teachers.</p><p>Cultivating the arts expands the undergraduate experience, improves access, and creates lasting, productive partnerships across creative disciplines. Funding fellowships and residencies in film, music, dance, theater, and creative writing and hosting internationally respected artists offer students ways to take big risks, pursue careers that align with their passions, and change the world by changing hearts. Investing in the arts gives voice to those unheard, canvas to those unseen, and shape to the way we understand humanity through creative expression. <strong>Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach.</strong></p>",
+        "layout": "right",
+        "img_src": "ecas_priority_3.jpg",
+        "media_src": "ecas_priority_3_popup.jpg",
+        "media_alt": "A gentleman admires student works on a light box.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Value the Arts",
+        "media_text": "Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach."
+      }
+    },
+    {
+      "component": "TextLargeImage",
+      "props": {
+        "header":"CLIFF CARRUBBA",
+        "background_image": "",
+        "text": "<p>Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.</p>",
+        "img_src": "cliff-carrubba-600x600.jpg",
+        "media_src": "https://vimeo.com/606052349/761757ff45",
+        "media_alt": "Audio quote from Cliff Carrubba",
+        "media_type": "video",
+        "media_header": "Cliff Carrubba",
+        "media_text": "Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "Additional priorities",
         "pretitle": "COLLEGE OF ARTS & SCIENCES",
+        "title": "MORE PRIORITIES",
         "items": [
           {
-            "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
-            "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship",
-            "read_more": "school-of-law",
-            "tags": [
-              {
-                "label": "A&S",
-                "url": "goizueta-business-school"
-              },
-              {
-                "label": "Brain Health",
-                "url": "school-of-law"
-              }
-            ]
+            "title": "2O36 Builds on Strength",
+            "description": "<p>Rooted in the work of top research faculty, Emory College has educational programs that are destinations for undergraduate students throughout the nation. Named endowments extend the reach of these leading programs and build additional strength, and they link the donors’ names to Emory’s excellence long term. These areas of strength have the power to transform how undergraduate students learn, preparing them to carry new perspectives into careers in every field.</p><p>For our nationally recognized <strong>Creative Writing Program, an endowed fellowship</strong> would attract and assist emerging writers, enhance the curriculum, and further build the program’s reputation. 2O36 will support an environment for writers to produce work that will be read, awarded, and widely taught. <strong>An endowment for the Department of African American Studies</strong> will help redefine understanding of race, inequality, and justice. This endowment could launch a PhD program in antiracism and the study of racial inequality, for example, or fund a research center to study contemporary and historical slavery or address health inequities.</p><p><strong>An endowment for the Center for Human Health,</strong> which brings Emory’s top researchers into the classroom, would allow visiting scholars to spend a year working with undergraduates on new developments in health. <strong>Endowed funding for the Department of Quantitative Theory and Methods</strong> (QTM) could create new research clusters in forward-focused areas such as data justice—bringing the data sciences into collaborations with scholars of race and racism—or biomedical sciences. Emory undergraduates will gain a unique skill set, and QTM-focused faculty will reinvent the approach to research.</p>"
           },
           {
-            "title": "Postdoctoral research program in interdisciplinary natural sciences",
-            "description": "Accordion description"
+            "title": "2O36 Shares Knowledge",
+            "description": "<p>Imagine developing a cancer vaccine from a plant or finding new subatomic particles that produce cleaner energy. These types of unexpected discoveries come from sharing knowledge between disciplines and departments. <strong>In 2O36, an interdisciplinary postdoctoral fellowship in natural sciences will quickly become a destination for emerging scientists.</strong></p><p>Encompassing every discipline, these postdoctoral fellows can be free-floating conduits between departments and schools. Not tied to one lab or research program, they can draw inspiration, leverage knowledge, and share research more widely. By collaborating with some of the greatest scientific minds in the fields of biology, chemistry, anthropology and more, Emory College postdoctoral fellows will explore the boundless potential for world-changing discoveries in the natural sciences.</p>"
           },
           {
-            "title": "Emory Edge: funding for summer experiences including undergraduate research,  internships, entrepreneurial experiences, and study abroad",
-            "description": "Accordion description"
+            "title": "In 2O36, Experience Matters",
+            "description": "<p>The Emory experience includes anything that allows our students to apply the lessons they learn from our 86 majors and 63 minors. Outfitted with rigorous critical thinking skills, Emory College students can venture into a constellation of transformative experiences, including undergraduate research, entrepreneurship, internships, and study abroad. The Emory Edge program helps students choose which opportunities to participate in and makes sure those opportunities are available to all students, regardless of finances.</p><p><strong>In 2O36, every Emory College student will participate in experiential learning.</strong> Endowing the Emory Edge program will fulfill the promise of an Emory experience that serves students for a lifetime. As our students navigate the larger world, they will carry with them Emory’s defining ethos: a sense of community brimming with opportunity.</p>"
           }
         ]
       }

@@ -8,28 +8,21 @@ pipeline {
 
   stages {
 
-    stage('Warm up') {
-      steps {
-        echo "Building artifact"
-      }
-    }
-
-    stage('Build') {
-      steps {
-        echo "Building artifact on branch ${env.BRANCH_NAME}"
-        sh "make build"
-      }
-    }
-
     stage('Artifact generation') {
+      environment {
+        EMORY_ARTIFACT_BRANCH="${env.BRANCH_NAME}"
+      }
       steps {
-        echo "Generating artifact"
+        echo "Branch $EMORY_ARTIFACT_BRANCH"
+        sh "make artifact"
+        sh "./scripts/docker-chown.sh next_prod wodby www-data"
       }
     }
 
     stage('Artifact push') {
       steps {
         echo "Pushing artifact code"
+        sh "cd artifact && git push"
       }
     }
 
@@ -37,9 +30,10 @@ pipeline {
       steps {
         echo "Deploying artifact code"
         script {
-          switch (env.BRANCH_NAME) { 
-            case "dev":
+          switch (env.BRANCH_NAME) {
+            case "dev-preview":
               echo "Deploying on dev environment";
+              sh "scripts/remote_deploy.sh"
               break
 
             case "master":
@@ -47,7 +41,7 @@ pipeline {
               break
           }
         }
-        
+
       }
     }
   }

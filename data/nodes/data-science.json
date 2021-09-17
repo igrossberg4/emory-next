@@ -2,14 +2,14 @@
   "id": "data-science",
   "type": "collection",
   "page_props": {
-    "header": "Data science",
+    "header": "DATA SCIENCE",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_code_yellow.jpg"
   },
   "path": "data-science",
   "metatag": {
-    "title": "Data science",
-    "description": "Some description for carousel page",
+    "title": "Data Science - Emory 2036",
+    "description": "",
     "image":""
   },
   "components": [

@@ -2,249 +2,124 @@
   "id": "home-2036",
   "type": "collection",
   "page_props": {
-    "header": "The Future Starts Here",
+    "header": "About The Campaign",
     "header_expanded": "Building on Emory’s commitment to serve humanity",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nascetur in lectus odio etiam sit.",
+    "text": "",
     "about": "About the campaign",
     "button_scroll": "Scroll to explore",
     "about_before_scroll":"ABOUT THE CAMPAIGN",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg",
-    "video_src": "video.mp4",
+    "img_src": "about_lede.jpg",
+    "video_src": "videos/EU1901_02k_Intro-ALT-1080_YM_v02.mp4",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video"
   },
   "path": "",
   "metatag": {
-    "title": "Emory carousel",
-    "description": "Some description for carousel page",
+    "title": "Emory 2036 - About the Campaign",
+    "description": "",
     "image":"2036_cancer_cells_red_uncropped.jpg"
   },
-  "list": ["home-2036", "goizueta-business-school", "emory-college-of-arts-and-sciences", "laney-graduate-school","school-of-law","school-of-medicine","nell-hodgson-woodruff-school-of-nursing","oxford-college","rollins-school-of-public-health","candler-school-of-theology","campus-life","carlos-museum","center-for-ethics","global-health-institute","emory-healthcare","university-libraries","yerkes-national-primate-research-center","winship-cancer-institute","research-excellence","student-success","faculty-eminence"],
+  "list": [
+    "home-2036",
+    "emory-college-of-arts-and-sciences",
+    "goizueta-business-school",
+    "laney-graduate-school",
+    "school-of-law",
+    "school-of-medicine",
+    "nell-hodgson-woodruff-school-of-nursing",
+    "oxford-college",
+    "rollins-school-of-public-health",
+    "candler-school-of-theology",
+    "campus-life",
+    "carlos-museum",
+    "center-for-ethics",
+    "global-health-institute",
+    "emory-healthcare",
+    "university-libraries",
+    "yerkes-national-primate-research-center",
+    "winship-cancer-institute",
+    "research-excellence",
+    "student-success",
+    "faculty-eminence"
+  ],
   "components": [
-    {
-      "component": "ImageTextOneColumn",
-      "props": {
-        "header":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "background_image": "bg_brain.jpg",
-        "text": "In early 2020, just as the scope and scale of the coronavirus pandemic was revealing itself, historian Verena Krebs went to spend a few months at her parents’ house in the German countryside. There, “next to fields of rapeseed and barley and dense old woods,” in her words, the Ruhr-University Bochum professor would wait out Germany’s lockdown. She wasn’t terribly worried about not having things to do though, since she had her book on the history of late medieval Ethiopia to finish up. The good news was that she had already completed the full manuscript and had secured a contract with a major academic publisher. The bad news was more existential: She didn’t like the book she had written. Krebs knew her sources ran against the dominant narrative that placed Europe as aiding a needy Ethiopia, the African kingdom desperately in search of military technology from its more sophisticated counterparts to the north. But her writing didn’t fully match her research; it still followed the prevailing scholarship. Krebs worried that her interpretation of the original medieval sources was, in her own words, too “out there’” So, she hedged, and she struggled, and she doubted, and wrote the book she thought she was supposed to write. And then, she told us, she did something radical. Instead of tweaking what was already written, she decided to do what good historians do and follow the sources. “I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.”",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "https://vimeo.com/592305375/614518672f",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "video",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
     {
       "component": "SectionIntro",
       "props": {
-        "header":
-          "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "bg_brain.jpg",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "https://vimeo.com/592305375/614518672f",
-        "media_alt":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "header": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
+        "background_image": "about_isolated_bg.png",
+        "text": "<p>It’s our firm belief that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to prepare students for careers with the potential to change hearts, minds, and the world.</p><p>Together, we can bring to life an open and promising future.</p>",
+        "img_src": "about_intro.jpg",
+        "media_src": "https://vimeo.com/605963807/295678c674",
+        "media_alt": "",
         "media_type": "video",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
-    {
-      "component": "TextLargeImage",
-      "props": {
-        "header":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "background_image": "bg_brain.jpg",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
-    {
-      "component": "TextImageBg",
-      "props": {
-        "header": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "background_image": "background_image.jpg",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key priority",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "body": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "read_more": "goizueta-business-school",
-        "tags": [
-          {
-            "label": "A&S",
-            "url": "https://example.com"
-          },
-          {
-            "label": "Brain Health",
-            "url": "goizueta-business-school"
-          }
-        ],
-        "layout": "left",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key priority",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "body": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "read_more": "https://example.com",
-        "tags": [
-          {
-            "label": "A&S",
-            "url": "https://example.com"
-          },
-          {
-            "label": "Brain Health",
-            "url": "https://example.com"
-          }
-        ],
-        "layout": "right",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Gregory L. Fenves",
+        "media_text": "President, Emory University"
       }
     },
     {
       "component": "Quote",
       "props": {
-        "text": "I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.",
-        "attribution": "Attribution"
-      }
-    },
-    {
-      "component": "ColumnsText",
-      "props": {
-        "column1": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire.",
-        "column2": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
+        "text": "When there is an important issue, a tough question, I want them to think, “I wonder what’s going on at Emory? I wonder how they’re solving this? I wonder what research is addressing this question?”",
+        "attribution": "—Gregory L. Fenves, President, Emory University"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "Emory College of Arts and Sciences has a range of priorities for 2O36.",
-        "image_src": "background_image.jpg"
+        "text": "EMORY IS FOCUSING ON THREE CORE AREAS FOR 2O36.",
+        "image_src": "about_divider_bg.jpg"
       }
     },
     {
-      "component": "QuoteParagraphColumn",
+      "component": "TextImageHeader",
       "props": {
-        "quote": "I basically deleted the manuscript that I had submitted. And I just wrote the whole thing anew. I started writing in April, and I finished the whole thing by, I think, August.",
-        "attribution": "Attribution",
-        "text": "It’s at this time, Krebs says, that the Ethopian rulers looked back to Aksum with nostalgia, “It's its own little Renaissance, if you will, where Ethiopian Christian kings are actively going back to Late Antiquity and even reviving Late Antique models in art and literature, to make it their own.” So, in addition to investing in a shared culture of art and literature, they followed a well-worn model used by rulers across the Mediterranean, and throughout Europe, Asia, and Africa, by turning to religion. They build churches.They reach out to the Coptic Christians living in Egypt under the Islamic Mamluks to present themselves as a kind of (theoretical) protector. The Solomonic kings of Ethiopia consolidated a huge “multilingual, multi-ethnic, multi-faith kingdom” under their rule, really a kind of empire."
+        "pretitle": "Emory University",
+        "title": "Student Success",
+        "body": "<p>Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service. In this context, supporting student success means helping them learn to be thinkers and doers, strengthen values, develop skills, learn about teamwork, and prepare them for careers as well as advanced and professional studies. Their success empowers them to contribute to the world around them in valuable and enriching ways. Emory’s top priority is helping students realize their potential, and enabling the citizens of the future to excel.</p>",
+        "read_more": "student-success",
+        "tags": [],
+        "layout": "left",
+        "img_src": "about_priority_1.jpg",
+        "media_src": "about_priority_1_popup.jpg",
+        "media_alt": "Three students walk across the Quad.",
+        "media_type": "image",
+        "media_header": "Student Success",
+        "media_text": "Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service. "
       }
     },
     {
-      "component": "CampaignCarousel",
+      "component": "TextImageHeader",
       "props": {
-        "title": "Campaign themes",
-        "slides": [
-          {
-            "component":"Teaser",
-            "props":{
-              "title": "Brain Health",
-              "img_src": "2036_cancer_cells_red_uncropped.jpg",
-              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "explore_link": "goizueta-business-school"
-            }
-          },
-          {
-            "component":"Teaser",
-            "props":{
-              "title": "Cancer",
-              "img_src": "2036_cancer_cells_red_uncropped.jpg",
-              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "explore_link": "school-of-law"
-            }
-          },
-          {
-            "component":"Teaser",
-            "props":{
-              "title": "AI.Humanity",
-              "img_src": "2036_cancer_cells_red_uncropped.jpg",
-              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "explore_link": "http://example.com"
-            }
-          },
-          {
-            "component":"Teaser",
-            "props":{
-              "title": "Brain Health",
-              "img_src": "2036_cancer_cells_red_uncropped.jpg",
-              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
-              "explore_link": "http://example.com"
-            }
-          }
-        ]
+        "pretitle": "Emory University",
+        "title": "Faculty Eminence",
+        "body": "<p>2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.  With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future.</p>",
+        "read_more": "faculty-eminence",
+        "tags": [],
+        "layout": "right",
+        "img_src": "about_priority_2.jpg",
+        "media_src": "about_priority_2_popup.jpg",
+        "media_alt": "A professor stands in front of a data projection.",
+        "media_type": "image",
+        "media_header": "Faculty Eminence",
+        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge."
       }
     },
     {
-      "component": "AccordionComponent",
+      "component": "TextImageHeader",
       "props": {
-        "title": "Additional priorities",
-        "pretitle": "COLLEGE OF ARTS & SCIENCES",
-        "items": [
-          {
-            "title": "Student scholarships, designed to offer all need-based financial aid recipients a package without loans",
-            "description": "Emory College remains need-blind, funding nearly 90 percent of financial aid through its operational budget. Since 2007, Emory Advantage has offered students with family incomes of $100,000 or less the opportunity to graduate with little or no debt, and the recently completed Scholarship",
-            "read_more": "school-of-law",
-            "tags": [
-              {
-                "label": "A&S",
-                "url": "goizueta-business-school"
-              },
-              {
-                "label": "Brain Health",
-                "url": "https://example.com"
-              }
-            ]
-          },
-          {
-            "title": "External link example",
-            "description": "Accordion description",
-            "read_more": "http://example.com"
-          },
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          },
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          },
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          }
-        ]
+        "pretitle": "Emory University",
+        "title": "Research Excellence",
+        "body": "<p>2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.  With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future.</p>",
+        "read_more": "research-excellence",
+        "tags": [],
+        "layout": "left",
+        "img_src": "about_priority_3.jpg",
+        "media_src": "about_priority_3_popup.jpg",
+        "media_alt": "A student looks at a specimen in the lab with their professor.",
+        "media_type": "image",
+        "media_header": "Research Excellence",
+        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge."
       }
     }
   ]

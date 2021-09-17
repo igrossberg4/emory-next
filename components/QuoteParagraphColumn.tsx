@@ -22,6 +22,7 @@ export default function QuoteParagraphColumn(props:any) {
         </div>
         <div className="column col-md-6">
           <p>{props.text}</p>
+          <div className="attribution">{props.attribution}</div>
         </div>
       </div>
     </div>
