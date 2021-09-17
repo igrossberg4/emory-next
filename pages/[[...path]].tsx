@@ -18,6 +18,26 @@ import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 
+function getElementXPath(element: any): string {
+  if (element.id) {
+    return `//*[@id=${element.id}]`;
+  } else if (element.tagName === "BODY") {
+    return "/html/body";
+  } else {
+    const sameTagSiblings = Array.from(element.parentNode.childNodes).filter(
+      (e) => (e as any).nodeName === element.nodeName
+    );
+    const idx = sameTagSiblings.indexOf(element);
+
+    return (
+      getElementXPath(element.parentNode) +
+      "/" +
+      element.tagName.toLowerCase() +
+      (sameTagSiblings.length > 1 ? `[${idx + 1}]` : "")
+    );
+  }
+}
+
 export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
@@ -33,28 +53,72 @@ export default function Home(props: any) {
     duration: 0.65,
     ease: "easeInOut",
   };
-  const handleKey = useCallback((e:KeyboardEvent) => {
+  useEffect(() => {
+    const handleFocus = () => {
+      if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
+          const element = document.evaluate(
+            "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+          ).singleNodeValue;
 
+          if(element != null){
+            let elementFocusable = document.querySelector(
+              (element as any).className
+                .split(" ")
+                .map((value : string) => `.${value}`)
+                .join("")
+            );
+            elementFocusable.focus();
+          }
+
+      }
+    };
+    router.events.on("routeChangeComplete", handleFocus);
+    return () => {
+      router.events.off("routeChangeComplete", handleFocus);
+    };
+  }, [router.events, state.activeFocusXPATH]);
+  const handleKey = useCallback(
+    (e: KeyboardEvent) => {
+      const path = getElementXPath(document.activeElement);
+      if (path.includes("*[@id=carousel]")) {
+        dispatch({
+          type: "ACTIVE_FOCUS_KEY_PATH",
+          payload: getElementXPath(document.activeElement),
+        });
+      }
       switch (e.key) {
         case " ":
-          if(window.scrollY < 5 && document.activeElement?.tagName != "BUTTON"){
+          if (
+            window.scrollY < 5 &&
+            document.activeElement?.tagName != "BUTTON"
+          ) {
             e.preventDefault();
-            window.scrollTo({top:20, behavior:'smooth'});
+            window.scrollTo({ top: 20, behavior: "smooth" });
           }
           return;
         case "ArrowRight":
           return;
       }
-    
-  }, [])
+    },
+    [dispatch]
+  );
   useEffect(() => {
-
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [handleKey]); // @ts-ignore
+  const handleFocus = useCallback((e: FocusEvent) => {
+  }, []);
+  useEffect(() => {
+    document.addEventListener("focusin", handleFocus, { passive: false });
+    return () => document.removeEventListener("focusin", handleFocus);
+  }, [handleFocus]); // @ts-ignore
+
   if (process.browser && document.body.style.overflow === "hidden") {
     document.body.style.overflow = "";
-
   }
   const handleScroll = useCallback(() => {
     setInnerHeight(window.innerHeight);
