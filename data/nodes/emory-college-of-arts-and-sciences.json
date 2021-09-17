@@ -24,8 +24,8 @@
         "img_src": "ecas_intro.jpg",
         "media_src": "https://vimeo.com/605815186/07c32d9054",
         "media_type": "video",
-        "media_alt": "Dean Michael A. Elliott, Emory College of Arts and Sciences",
-        "media_header": "Emory College of Arts and Sciences",
+        "media_alt": "Dean Michael A. Elliott, Emory College of Arts & Sciences",
+        "media_header": "Emory College of Arts & Sciences",
         "media_text": "",
         "button_close_text": "Close"
       }
@@ -47,7 +47,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "Emory College of Arts and Sciences has a range of priorities for 2O36.",
+        "text": "Emory College of Arts & Sciences has a range of priorities for 2O36.",
         "image_src": "ecas_divider_bg.jpg"
       }
     },
