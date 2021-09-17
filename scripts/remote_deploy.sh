@@ -3,6 +3,8 @@
 # Change owner of the container's main folder files.
 set -ex
 
+echo EMORY_ARTIFACT_BRANCH=$EMORY_ARTIFACT_BRANCH
+
 # Ssh credentials.
 eval `ssh-agent -s`
 ssh-add -k
