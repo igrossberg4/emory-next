@@ -39,10 +39,12 @@
   }
 
   .image-container {
+    margin-top: $default-separation;
     margin-bottom: $default-separation;
     text-align: center;
 
     @include media-breakpoint-up(md) {
+      margin-top: 0;
       margin-bottom: 0;
       margin-right: -16.66666667%;
     }
