@@ -37,10 +37,30 @@
 .embla__viewport {
   overflow: hidden;
   width: 100%;
+
   &:before{
+
+    filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(10px);
+    opacity:0;
+    content: ' ';
     //transition: background $scroll-down-transition-duration ease-in-out;
     transition: opacity $main-carousel-transition-duration ease-in-out,
                 filter $main-carousel-transition-duration/2 linear;
+    background-position-x: 41% !important;
+    background-position-y:  calc(-100vh / 7) !important;
+    top:30px;
+    background-size: calc(75vh * 2) !important;
+    @include media-breakpoint-up(md) {
+      background-position-x: 50% !important;
+      top:30px;
+      background-position-y:  calc(-100vh / 3.7) !important;
+      background-size: calc(100vh * 2) !important;
+    }
+  }
+  &.background-visible{
+    &:before{
+      opacity: 1;
+    }
   }
 }
 

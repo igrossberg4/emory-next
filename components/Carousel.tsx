@@ -235,7 +235,9 @@ export default function EmblaCarousel({
         ${index !== page ? `transitioning ${performTransition ? 'blocked' : ''}` : ""}`}
         >
           <div
-            className={`${css`
+            className={`
+            ${slides[page].props.view[0].props.isMain && !state.goingUp ? 'background-visible' : ''}
+            ${css`
             &:before {
               content:  " ";
               display: ${!state.goingUp ? 'block' : 'none'};
@@ -244,14 +246,12 @@ export default function EmblaCarousel({
               top: 0;
               width: ${!state.goingUp ? '100%' : '95%'};
               height: ${!state.goingUp ? '100%' : '95%'};
-    
-              opacity: ${slides[page].props.view[0].props.isMain && !state.goingUp ? 1 : 0};
               background-repeat: no-repeat;
               background-position: 50% 0;
               filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(${slides[page].props.view[0].props.isMain ? '10px' : '3px'});
-              background:  ${true? `url(${require(`../public/images/2036-bg.png`)})
-                no-repeat center bottom`: ''};
-                background-size:  ${true ? "calc(100vh * 2)" : ''};
+              background:  ${`url(${require(`../public/images/2036-bg.png`)})
+                no-repeat`};
+                
             }`} embla__viewport`}
             ref={refViewport}
             key={"viewPort"}
