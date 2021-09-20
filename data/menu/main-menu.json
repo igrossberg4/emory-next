@@ -23,31 +23,31 @@
 	],
 	"social":[
 		{
-			"link_to":"https://facebook.com",
+			"link_to":"https://www.facebook.com/EmoryAlumniAssociation/",
 			"type":"facebook",
 			"target":"_blank",
 			"title":"facebook"
 		},
 		{
-			"link_to":"https://linkedin.com",
+			"link_to":"https://www.linkedin.com/company/emory-alumni-association/",
 			"type":"linkedin",
 			"target":"_blank",
 			"title":"linkedin"
 		},
 		{
-			"link_to":"https://twitter.com",
+			"link_to":"https://twitter.com/EmoryAlumni",
 			"type":"twitter",
 			"target":"_blank",
 			"title":"twitter"
 		},
 		{
-			"link_to":"https://youtube.com",
+			"link_to":"https://www.youtube.com/user/EmoryUniversity",
 			"type":"youtube",
 			"target":"_blank",
 			"title":"youtube"
 		},
 		{
-			"link_to":"https://instagram.com",
+			"link_to":"https://www.instagram.com/emoryalumni/",
 			"type":"instagram",
 			"target":"_blank",
 			"title":"instagram"
