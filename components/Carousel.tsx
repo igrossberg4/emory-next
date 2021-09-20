@@ -251,7 +251,7 @@ export default function EmblaCarousel({
               filter: drop-shadow(0.1px 0.1px 0.1px grey) blur(${slides[page].props.view[0].props.isMain ? '10px' : '3px'});
               background:  ${true? `url(${require(`../public/images/2036-bg.png`)})
                 no-repeat center bottom`: ''};
-                background-size:  ${true ? "1800px" : ''};
+                background-size:  ${true ? "calc(100vh * 2)" : ''};
             }`} embla__viewport`}
             ref={refViewport}
             key={"viewPort"}
@@ -261,7 +261,7 @@ export default function EmblaCarousel({
                 className="embla__container"
               >
                 {slides.map((value: any, i: number) => {
-                  const valueMore = slides[i].props.view[0].props.isMain ? (i > page ? 40 : 30) : 0;
+                  const valueMore = slides[i].props.view[0].props.isMain ? (i > page ? 60 : 40) : 0;
                   //value.props.view[0].props.view[0].props.is_selected = i === page;
                   return (
                       
