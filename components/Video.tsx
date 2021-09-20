@@ -64,7 +64,6 @@ export default function Video(props: any) {
                 // Check if the video has ended.
                 // TO DO define if we take some action on end.
               }}
-        loop={props.loop}
         controls={props.controls}
         key={props.video_src ? props.video_src : props.media_src}
         //initial={!props.initial_animation ? { opacity: 0 } : props.initial_animation}
