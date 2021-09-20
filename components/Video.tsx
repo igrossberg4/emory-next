@@ -74,7 +74,7 @@ export default function Video(props: any) {
       </video>
       :
       <div className="video-vimeo">
-        <ReactPlayer light={false} controls url={media_src}/>
+        <ReactPlayer playing={true} light={false} controls url={media_src}/>
       </div>
 }
     </Fragment>
