@@ -28,11 +28,13 @@ export default function Video(props: any) {
   const controls = useAnimation();
   const media_src = props.video_src ? props.video_src : props.media_src;
   const re = new RegExp("^(http|https)://", "i");
-
   return (
     <Fragment>
       {!re.test(media_src)  ?
       <video
+              muted={props.muted}
+              autoPlay={props.autoPlay}
+              loop={props.loop}
               onPlay={() => {
                 if(props.onPlay){
                   props.onPlay();
