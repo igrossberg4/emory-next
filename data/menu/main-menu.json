@@ -1,56 +1,56 @@
 {
-    "links":[
-       {
-          "title":"ABOUT THE CAMPAIGN",
-          "id":"home-2036"
-       },
-       {
-          "title":"STUDENT SUCCESS",
-          "id":"student-success"
-       },
-       {
-          "title":"FACULTY EMINENCE",
-          "id":"faculty-eminence"
-       },
-       {
-         "title":"RESEARCH EXCELLENCE",
-         "id":"research-excellence"
-      },
-      {
-         "title":"SIGNATURE THEMES",
-         "id":"research-excellence"
-      }
-    ],
-    "social":[
-       {
-          "link_to":"https://facebook.com",
-          "type":"facebook",
-          "target":"_blank",
-          "title":"facebook"
-       },
-       {
-          "link_to":"https://linkedin.com",
-          "type":"linkedin",
-          "target":"_blank",
-          "title":"linkedin"
-       },
-       {
-          "link_to":"https://twitter.com",
-          "type":"twitter",
-          "target":"_blank",
-          "title":"twitter"
-       },
-       {
-          "link_to":"https://youtube.com",
-          "type":"youtube",
-          "target":"_blank",
-          "title":"youtube"
-       },
-       {
-          "link_to":"https://instagram.com",
-          "type":"instagram",
-          "target":"_blank",
-          "title":"instagram"
-       }
-    ]
- }
+	"links": [
+		{
+			"title":"ABOUT THE CAMPAIGN",
+			"id":"home-2036"
+		},
+		{
+			"title":"STUDENT SUCCESS",
+			"id":"student-success"
+		},
+		{
+			"title":"FACULTY EMINENCE",
+			"id":"faculty-eminence"
+		},
+		{
+			"title":"RESEARCH EXCELLENCE",
+			"id":"research-excellence"
+		},
+		{
+			"title":"SIGNATURE THEMES",
+			"id":"research-excellence"
+		}
+	],
+	"social":[
+		{
+			"link_to":"https://facebook.com",
+			"type":"facebook",
+			"target":"_blank",
+			"title":"facebook"
+		},
+		{
+			"link_to":"https://linkedin.com",
+			"type":"linkedin",
+			"target":"_blank",
+			"title":"linkedin"
+		},
+		{
+			"link_to":"https://twitter.com",
+			"type":"twitter",
+			"target":"_blank",
+			"title":"twitter"
+		},
+		{
+			"link_to":"https://youtube.com",
+			"type":"youtube",
+			"target":"_blank",
+			"title":"youtube"
+		},
+		{
+			"link_to":"https://instagram.com",
+			"type":"instagram",
+			"target":"_blank",
+			"title":"instagram"
+		}
+	]
+}
