@@ -24,30 +24,23 @@
         "img_src": "ecas_intro.jpg",
         "media_src": "https://vimeo.com/605815186/07c32d9054",
         "media_type": "video",
-        "media_alt": "Dean Michael A. Elliott, Emory College of Arts and Sciences",
-        "media_header": "Emory College of Arts and Sciences",
+        "media_alt": "Portrait of Dean Michael A. Elliott.",
+        "media_header": "Emory College of Arts & Sciences",
         "media_text": "",
         "button_close_text": "Close"
       }
     },
     {
-      "component": "TextLargeImage",
+      "component": "Quote",
       "props": {
-        "header": "CAROL ANDERSON",
-        "background_image": "",
-        "text": "<p>When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.</p>",
-        "img_src": "carol-anderson-600x600.jpg",
-        "media_src": "https://vimeo.com/605964499/11bc1aedda",
-        "media_alt": "A video of a quote by Carol Anderson",
-        "media_type": "video",
-        "media_header": "Carol Anderson",
-        "media_text": "Charles Howard Candler Professor and Chair, African American Studies"
+        "text": "When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.",
+        "attribution": "— Carol Anderson, Charles Howard Candler Professor and Chair, African American Studies"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "Emory College of Arts and Sciences has a range of priorities for 2O36.",
+        "text": "EMORY COLLEGE OF ARTS & SCIENCES HAS A RANGE OF PRIORITIES FOR 2O36",
         "image_src": "ecas_divider_bg.jpg"
       }
     },
@@ -60,7 +53,7 @@
         "layout": "right",
         "img_src": "ecas_priority_1.jpg",
         "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally",
+        "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Student Access",
         "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
@@ -98,10 +91,11 @@
     {
       "component": "TextLargeImage",
       "props": {
-        "header":"JERICHO BROWN",
+        "header": "JERICHO BROWN",
         "background_image": "",
-        "text": "<p>I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.</p>",
-        "img_src": "jericho-brown-600x600.jpg",
+        "text": "<p>“I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.”</p>",
+        "layout": "left",
+        "img_src": "ecas_quote_2.jpg",
         "media_src": "https://vimeo.com/605964280/949e734bc8",
         "media_alt": "A video of a quote by Jericho Brown",
         "media_type": "video",
@@ -127,10 +121,10 @@
     {
       "component": "TextLargeImage",
       "props": {
-        "header":"CLIFF CARRUBBA",
+        "header": "CLIFF CARRUBBA",
         "background_image": "",
-        "text": "<p>Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.</p>",
-        "img_src": "cliff-carrubba-600x600.jpg",
+        "text": "<p>“Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.”</p>",
+        "img_src": "ecas_quote_3.jpg",
         "media_src": "https://vimeo.com/606052349/761757ff45",
         "media_alt": "Audio quote from Cliff Carrubba",
         "media_type": "video",
