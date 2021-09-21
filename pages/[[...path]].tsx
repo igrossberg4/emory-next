@@ -57,7 +57,7 @@ export default function Home(props: any) {
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
       document.querySelectorAll('.container-force-screen-fit-y').forEach((item) => {
-        item.style.height = `${newHeight}px`;
+        (item as HTMLElement).style.height = `${newHeight}px`;
       })
     };
 
