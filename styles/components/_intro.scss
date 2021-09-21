@@ -4,13 +4,16 @@
 
   &.video-no-played {
     .header-inner-content__img {
-      width: 100vw !important;
-      height: 100vh !important;
-      top: auto !important;
+      width: 80vw !important;
+      height: 80vh !important;
       border-radius: 50%;
-      margin: 0 !important;
-      transform: translate(0, 50%) !important;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
       z-index: 999 !important;
+      bottom: auto !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
 
       @media (orientation: portrait) {
         width: 140vh !important;
