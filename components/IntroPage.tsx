@@ -35,6 +35,8 @@ export default function IntroPage(props: any) {
     () => {
       dispatch({ type: "VIDEO_PLAYED", payload: true });
       document.body.classList.remove("full_video");
+
+      document.body.querySelector('.main-container')?.classList.remove("full_video");
     },
     //setVideoCookie("video_played", "played")
     [dispatch]
@@ -54,6 +56,12 @@ export default function IntroPage(props: any) {
   useEffect(() => {
     if (!videoPlayed && props.active) {
       document.body.classList.add("full_video");
+      document.body.querySelector('.main-container')?.classList.add("full_video");
+    }else{
+      if(props.active){
+        document.body.classList.remove("full_video");
+        document.body.querySelector('.main-container')?.classList.remove("full_video");
+      }
     }
 
     if (props.active) {
@@ -122,6 +130,7 @@ export default function IntroPage(props: any) {
                               });
                               setSkipped(false);
                               document.body.classList.add("full_video");
+                              document.body.querySelector('.main-container')?.classList.add("full_video");
                               return;
                             }else{
                               dispatch({
@@ -130,6 +139,7 @@ export default function IntroPage(props: any) {
                               });
                               setSkipped(false);
                               document.body.classList.remove("full_video");
+                              document.body.querySelector('.main-container')?.classList.remove('full_video')
                             }
                           }
                         }}

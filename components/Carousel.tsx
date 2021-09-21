@@ -164,6 +164,7 @@ export default function EmblaCarousel({
   const changeRoute = useCallback(
     (route, newDirection) => {
       if (route == undefined) return;
+      dispatch({type:'CAROUSEL_NAV', payload:true});
       if(route != router.asPath){
         router.push(
           {
