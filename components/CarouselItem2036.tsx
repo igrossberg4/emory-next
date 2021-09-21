@@ -54,7 +54,7 @@ export default function CarouselItem2036(props: any) {
     return  <Fragment>
   {true ? (
     <div
-      className="content-header__container header-2036 container-force-screen-fit-y"
+      className="content-header__container header-2036"
       id={`${props.active ? 'active' : ''}`}
     >
       <div className="header-inner-content">
@@ -113,7 +113,7 @@ export default function CarouselItem2036(props: any) {
         <div className="header-inner-content__text">
           <div className="pretitle text-label">{props.about}</div>
           <h1
-            onTransitionEnd={(e) => { 
+            onTransitionEnd={(e) => {
               if(state.goingUp){
                 const element = document.getElementById("selected")?.querySelector('.title');
                 if(element && window.scrollY < (element as any).clientHeight + 80){
@@ -142,6 +142,6 @@ export default function CarouselItem2036(props: any) {
   )}
 </Fragment>
   }, [props.active, state.goingUp, props.children])
-  
+
   return memo ;
 }

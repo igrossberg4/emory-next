@@ -54,6 +54,19 @@ export default function Home(props: any) {
     ease: "easeInOut",
   };
   useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newHeight = window.innerHeight;
+      document.querySelectorAll('.container-force-screen-fit-y').forEach((item) => {
+        item.style.height = `${newHeight}px`;
+      })
+    };
+
+    updateWindowDimensions();
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions)
+  }, [router.asPath])
+  useEffect(() => {
     const handleFocus = () => {
       if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
           const element = document.evaluate(

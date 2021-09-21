@@ -85,7 +85,7 @@ export default function IntroPage(props: any) {
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
-        <div style={{ width: "100%", height: "100vh" }}>
+        <div className="container-force-screen-fit-y">
           {process.browser ? (
             <div
               id="container-video"
