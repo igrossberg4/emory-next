@@ -36,7 +36,9 @@ export default function IntroPage(props: any) {
       dispatch({ type: "VIDEO_PLAYED", payload: true });
       document.body.classList.remove("full_video");
 
-      document.body.querySelector('.main-container')?.classList.remove("full_video");
+      document.body
+        .querySelector(".main-container")
+        ?.classList.remove("full_video");
     },
     //setVideoCookie("video_played", "played")
     [dispatch]
@@ -56,11 +58,15 @@ export default function IntroPage(props: any) {
   useEffect(() => {
     if (!videoPlayed && props.active) {
       document.body.classList.add("full_video");
-      document.body.querySelector('.main-container')?.classList.add("full_video");
-    }else{
-      if(props.active){
+      document.body
+        .querySelector(".main-container")
+        ?.classList.add("full_video");
+    } else {
+      if (props.active) {
         document.body.classList.remove("full_video");
-        document.body.querySelector('.main-container')?.classList.remove("full_video");
+        document.body
+          .querySelector(".main-container")
+          ?.classList.remove("full_video");
       }
     }
 
@@ -130,16 +136,20 @@ export default function IntroPage(props: any) {
                               });
                               setSkipped(false);
                               document.body.classList.add("full_video");
-                              document.body.querySelector('.main-container')?.classList.add("full_video");
+                              document.body
+                                .querySelector(".main-container")
+                                ?.classList.add("full_video");
                               return;
-                            }else{
+                            } else {
                               dispatch({
                                 type: "VIDEO_PLAYED",
                                 payload: true,
                               });
-                              setSkipped(false);
+                              setSkipped(true);
                               document.body.classList.remove("full_video");
-                              document.body.querySelector('.main-container')?.classList.remove('full_video')
+                              document.body
+                                .querySelector(".main-container")
+                                ?.classList.remove("full_video");
                             }
                           }
                         }}
@@ -177,32 +187,26 @@ export default function IntroPage(props: any) {
                           }}
                         ></Video>
                         <Fragment>
-                          {videoRef && !videoPlayed ? (
+                          {videoRef && !state.videoPlayed ? (
                             <Fragment>
-                              <motion.button
-                                className="btn-begin-experience"
-                                animate={
-                                  skipped
-                                    ? "skip"
-                                    : playing
-                                    ? "playing"
-                                    : "default"
-                                }
-                                variants={{
-                                  default: { opacity: 1 },
-                                  playing: { opacity: 0 },
-                                  skip: { opacity: 0 },
-                                }}
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  if (videoRef) {
-                                    videoRef.play();
-                                    setMuted(false);
-                                  }
-                                }}
-                              >
-                                {props.text_play}
-                              </motion.button>
+                              {true? (
+                                <button
+                                  className={`btn-begin-experience ${
+                                    videoRef.paused ? "paused" : ""
+                                  }`}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    if (videoRef) {
+                                      videoRef.play();
+                                      setMuted(false);
+                                    }
+                                  }}
+                                >
+                                  {props.text_play}
+                                </button>
+                              ) : (
+                                ""
+                              )}
                               <motion.button
                                 className="btn-skip-intro"
                                 onClick={(e) => {
