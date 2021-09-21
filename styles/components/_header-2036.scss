@@ -192,7 +192,7 @@
     height $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
     opacity math.div($scroll-down-transition-duration, 2) ease-out,
       bottom math.div($scroll-down-transition-duration, 2) ease-out,
-      transform math.div($scroll-down-transition-duration, 2) ease-out,
+      transform $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
       margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;
 
     @include media-breakpoint-up(sm) {
