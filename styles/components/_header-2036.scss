@@ -177,12 +177,12 @@
 
   .header-inner-content__img {
     position: absolute;
-    top: 100px;
+    top: 110px;
     max-width: unset;
     width: 100px;
     height: 100px;
     margin-bottom: 50px; //$h2-font-size + math.div($default-separation, $rem-in-px);
-    transform: translate(0, 50%);
+    transform: translate(0%, 50%);
     box-sizing: content-box;
     z-index: 10;
     padding: 0;
@@ -196,17 +196,17 @@
       margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;
 
     @include media-breakpoint-up(sm) {
-      top: 70px;
+      top: 78px;
       width: 130px;
       height: 130px;
     }
 
     @include media-breakpoint-up(md) {
+      transform: translate(-25%, 50%);
       top: auto;
       bottom: 50%;
       width: 268px;
       height: 268px;
-      margin-left: -170px;
     }
 
     @include media-breakpoint-up(xl) {
