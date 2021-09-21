@@ -94,8 +94,13 @@ a {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 23px;
-  right: 37px;
+  top: 5px;
+  right: 5px;
+
+  @include media-breakpoint-up(sm) {
+    top: 23px;
+    right: 37px;
+  }
 
   &::after {
     content: '';

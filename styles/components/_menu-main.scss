@@ -6,8 +6,12 @@
   height: 100%;
 
   .menu-main__link {
-    margin-bottom: $grid-gutter-width * 2;
+    margin-bottom: $grid-gutter-width;
     text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: $grid-gutter-width * 2;
+    }
 
     &:last-child {
       margin-bottom: 0;
