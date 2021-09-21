@@ -9,6 +9,7 @@
       top: auto !important;
       border-radius: 50%;
       margin: 0 !important;
+      transform: translate(0, 50%) !important;
       z-index: 999 !important;
 
       @media (orientation: portrait) {
@@ -89,7 +90,7 @@
     left: 50%;
     transform: translate(-50%, 50%);
     z-index:60;
-    opacity:0; 
+    opacity:0;
     transition: opacity 1s;
     &.paused{
       opacity: 1;
