@@ -172,28 +172,34 @@
 }
 
 // Scroll Animation
+
+$pre-animation-delay: math.div($scroll-down-transition-duration, 2);
+
 .header-2036.content-header__container {
   transition: background $scroll-down-transition-duration ease-in-out;
 
   .header-inner-content__img {
     position: absolute;
     top: 110px;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, 50%);
     max-width: unset;
     width: 100px;
     height: 100px;
-    margin-bottom: 50px; //$h2-font-size + math.div($default-separation, $rem-in-px);
-    transform: translate(0%, 50%);
     box-sizing: content-box;
     z-index: 10;
     padding: 0;
+    margin-bottom: 0;
     will-change: width, height;
     transition:
-    width $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-    height $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-    opacity math.div($scroll-down-transition-duration, 2) ease-out,
-      bottom math.div($scroll-down-transition-duration, 2) ease-out,
-      transform $scroll-down-transition-duration math.div($scroll-down-transition-duration, 3) ease-out,
-      margin-bottom math.div($scroll-down-transition-duration, 2) ease-out;
+      width $scroll-down-transition-duration $pre-animation-delay ease-out,
+      height $scroll-down-transition-duration $pre-animation-delay ease-out,
+      top $scroll-down-transition-duration $pre-animation-delay ease-out,
+      opacity $scroll-down-transition-duration $pre-animation-delay ease-out,
+      transform $scroll-down-transition-duration $pre-animation-delay ease-out,
+      margin-left $scroll-down-transition-duration $pre-animation-delay ease-out,
+      margin-top $scroll-down-transition-duration $pre-animation-delay ease-out;
 
     @include media-breakpoint-up(sm) {
       top: 78px;
@@ -202,16 +208,13 @@
     }
 
     @include media-breakpoint-up(md) {
-      transform: translate(-25%, 50%);
-      top: auto;
-      bottom: 50%;
+      top: 50%;
+      bottom: auto;
+      margin-left: -80px;
+      margin-top: -35px;
       width: 268px;
       height: 268px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      width: 268px;
-      height: 268px;
+      transform: translate(-50%, -50%);
     }
 
     video {
@@ -266,23 +269,13 @@
     }
 
     .header-inner-content__img {
-      bottom: math.div($default-separation, 3);
       width: 110vw;
       height: 110vw;
-      top: auto;
-      bottom: -100px;
-      transform: translate(0);
-      margin-bottom: 0;
+      top: calc(100% + 125px);
+      margin: 0;
+      transform: translate(-50%, -100%);
       opacity: .5;
       z-index: -1;
-      transition:
-        width $scroll-down-transition-duration ease-out,
-        height $scroll-down-transition-duration ease-out,
-        opacity math.div($scroll-down-transition-duration, 2) ease-out,
-        bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
-        transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 3) ease-out,
-        margin-left math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-out,
-        margin-bottom math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-out;
 
       @media (orientation: portrait) {
         width: 110vh;
