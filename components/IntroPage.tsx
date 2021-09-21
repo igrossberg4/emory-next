@@ -43,7 +43,6 @@ export default function IntroPage(props: any) {
     //setVideoCookie("video_played", "played")
     [dispatch]
   );
-  const classVideo = videoPlayed == undefined ? "video-no-played" : "";
   const [userPlayVideo, setuserPlayVideo] = useState(false);
 
   const [playing, setPlaying] = useState(false);
@@ -67,6 +66,7 @@ export default function IntroPage(props: any) {
         document.body
           .querySelector(".main-container")
           ?.classList.remove("full_video");
+
       }
     }
 
@@ -90,7 +90,7 @@ export default function IntroPage(props: any) {
             <div
               id="container-video"
               className={`container-fit container-video-intro
-  ${!state.comesFromCarousel && props.active ? classVideo : ""}`}
+  ${props.active && videoPlayed == undefined ? "video-no-played" : ""}`}
             >
               {false ? (
                 ""
@@ -140,6 +140,8 @@ export default function IntroPage(props: any) {
                               document.body
                                 .querySelector(".main-container")
                                 ?.classList.add("full_video");
+                                document.body.querySelector('container-video-intro')?.classList.add('video-no-played')
+
                               return;
                             } else {
                               dispatch({
@@ -153,6 +155,8 @@ export default function IntroPage(props: any) {
                               document.body
                                 .querySelector(".main-container")
                                 ?.classList.remove("full_video");
+                                document.body.querySelector('container-video-intro')?.classList.remove('video-no-played')
+
                             }
                           }
                         }}
@@ -257,6 +261,6 @@ export default function IntroPage(props: any) {
         </div>
       </AnimateSharedLayout>
     );
-  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted]);
+  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.goingUp]);
   return memo;
 }
