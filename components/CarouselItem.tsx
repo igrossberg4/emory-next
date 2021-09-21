@@ -16,7 +16,7 @@ const normalize = (val: number, max: number, min: number) => {
 export default function CarouselItem(props: any) {
   const [state, dispatch] = useContext(Context) as any;
 
-  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=1024,sizes[]=2048&format=webp`);
+  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=1024,sizes[]=2048&format=png`);
   const memo = useMemo(() => {
     return <div
         className="content-header__container container-force-screen-fit-y"
@@ -35,13 +35,9 @@ export default function CarouselItem(props: any) {
             <h1
              onTransitionEnd={(e) => {
                  const element = document.getElementById("selected")?.querySelector('.title.header-h2');
-                 if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
+                  if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
                     window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
-                 }
-
-     
-
-            
+                  }
             }}
               className="title header-h2"
               dangerouslySetInnerHTML={{ __html: props.header }}
