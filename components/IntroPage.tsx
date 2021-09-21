@@ -108,8 +108,8 @@ export default function IntroPage(props: any) {
                       }}
                     >
                       <IconButton
-                        key={videoRef.muted && muted}
-                        icon={videoRef.muted && muted ? "mute" : "unmute"}
+                        key={muted}
+                        icon={muted ? "mute" : "unmute"}
                       ></IconButton>
                     </div>
                   ) : (
@@ -134,6 +134,7 @@ export default function IntroPage(props: any) {
                                 type: "VIDEO_PLAYED",
                                 payload: undefined,
                               });
+                              setMuted(false);
                               setSkipped(false);
                               document.body.classList.add("full_video");
                               document.body
@@ -146,6 +147,8 @@ export default function IntroPage(props: any) {
                                 payload: true,
                               });
                               setSkipped(true);
+                              setMuted(true);
+
                               document.body.classList.remove("full_video");
                               document.body
                                 .querySelector(".main-container")
@@ -212,6 +215,7 @@ export default function IntroPage(props: any) {
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setSkipped(true);
+                                  setMuted(true);
                                   const element =
                                     document.getElementById("container-video");
                                   if (element) {
