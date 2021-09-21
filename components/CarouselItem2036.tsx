@@ -107,7 +107,7 @@ export default function CarouselItem2036(props: any) {
           className="header-inner-content__img image round-wp"
           ref={(ref) => {}}
         >
-          {memoVideo}
+          {props.children}
         </div>
 
         <div className="header-inner-content__text">
@@ -135,7 +135,26 @@ export default function CarouselItem2036(props: any) {
         </div>
       </div>
 
-      {memoActions}
+      <div className="actions">
+    <div
+      className="btn"
+      style={{ cursor: "pointer" }}
+      onClick={(e) => {
+        const element = document.getElementById("selected")?.querySelector('.title');
+        if(element){
+          window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
+
+        }
+        dispatch({
+          type: "GOING_UP",
+          payload: true,
+        });
+      }}
+    >
+      {" "}
+      {!state.goingUp ? props.about_before_scroll : props.button_scroll }
+    </div>
+  </div>
     </div>
   ) : (
     ""
