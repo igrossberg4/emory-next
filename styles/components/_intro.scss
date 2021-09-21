@@ -127,10 +127,16 @@
 
 body.full_video {
   overflow: hidden;
+}
+
+.main-container.full_video{
   .header-menu,
   .embla__button,
   .line-separator,
-  .actions {
-    display: none;
+  .actions{
+    display:none;
+  }
+  .embla_slide_present.no_selected{
+    display:none;
   }
 }

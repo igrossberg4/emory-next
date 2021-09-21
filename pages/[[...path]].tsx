@@ -188,7 +188,7 @@ export default function Home(props: any) {
     return props.skipTransitionAnimations !== true ? (
       <AnimatePresence>
         <motion.div
-          className="main-container"
+          className={`main-container ${props.view[1].props.isMain && !state.comesFromCarousel ? 'full_video' : ''}`}
           id={state.route + " --- " + state.route}
           onAnimationComplete={() => {
             if (state.route !== "") {
@@ -221,7 +221,7 @@ export default function Home(props: any) {
     ) : (
       ""
     );
-  }, [router.asPath, state.route, MD5(props.view)]);
+  }, [router.asPath, state.route, MD5(props.view), state.comesFromCarousel]);
   return (
     <Fragment>
       <Head>
