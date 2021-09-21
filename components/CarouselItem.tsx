@@ -67,7 +67,7 @@ export default function CarouselItem(props: any) {
         </div>
       </div>
     
-  }, [multipleSizesImgPrincipal, props]);
+  }, []);
 
   return memo;
   // <motion.div className="content-header">

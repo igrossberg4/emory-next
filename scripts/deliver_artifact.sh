@@ -12,6 +12,7 @@ then
   exit -1
 fi
 
+current_hash=$(git rev-parse HEAD)
 
 if [[ ! -d $ARTIFACT_FOLDER ]]
 then
@@ -33,6 +34,9 @@ cp out $ARTIFACT_FOLDER/docroot -r
 
 # Copy htaccess file
 cp config/htaccess $ARTIFACT_FOLDER/docroot/.htaccess
+
+# Add current hash.
+echo $current_hash > $ARTIFACT_FOLDER/docroot/hash.txt
 
 # Commit
 cd $ARTIFACT_FOLDER

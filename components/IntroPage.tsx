@@ -36,12 +36,13 @@ export default function IntroPage(props: any) {
       dispatch({ type: "VIDEO_PLAYED", payload: true });
       document.body.classList.remove("full_video");
 
-      document.body.querySelector('.main-container')?.classList.remove("full_video");
+      document.body
+        .querySelector(".main-container")
+        ?.classList.remove("full_video");
     },
     //setVideoCookie("video_played", "played")
     [dispatch]
   );
-  const classVideo = videoPlayed == undefined ? "video-no-played" : "";
   const [userPlayVideo, setuserPlayVideo] = useState(false);
 
   const [playing, setPlaying] = useState(false);
@@ -56,11 +57,16 @@ export default function IntroPage(props: any) {
   useEffect(() => {
     if (!videoPlayed && props.active) {
       document.body.classList.add("full_video");
-      document.body.querySelector('.main-container')?.classList.add("full_video");
-    }else{
-      if(props.active){
+      document.body
+        .querySelector(".main-container")
+        ?.classList.add("full_video");
+    } else {
+      if (props.active) {
         document.body.classList.remove("full_video");
-        document.body.querySelector('.main-container')?.classList.remove("full_video");
+        document.body
+          .querySelector(".main-container")
+          ?.classList.remove("full_video");
+
       }
     }
 
@@ -79,12 +85,12 @@ export default function IntroPage(props: any) {
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
-        <div style={{ width: "100%", height: "100vh" }}>
+        <div className="container-force-screen-fit-y">
           {process.browser ? (
             <div
               id="container-video"
               className={`container-fit container-video-intro
-  ${!state.comesFromCarousel && props.active ? classVideo : ""}`}
+  ${props.active && videoPlayed == undefined ? "video-no-played" : ""}`}
             >
               {false ? (
                 ""
@@ -102,8 +108,8 @@ export default function IntroPage(props: any) {
                       }}
                     >
                       <IconButton
-                        key={videoRef.muted && muted}
-                        icon={videoRef.muted && muted ? "mute" : "unmute"}
+                        key={muted}
+                        icon={muted ? "mute" : "unmute"}
                       ></IconButton>
                     </div>
                   ) : (
@@ -128,18 +134,29 @@ export default function IntroPage(props: any) {
                                 type: "VIDEO_PLAYED",
                                 payload: undefined,
                               });
+                              setMuted(false);
                               setSkipped(false);
                               document.body.classList.add("full_video");
-                              document.body.querySelector('.main-container')?.classList.add("full_video");
+                              document.body
+                                .querySelector(".main-container")
+                                ?.classList.add("full_video");
+                                document.body.querySelector('container-video-intro')?.classList.add('video-no-played')
+
                               return;
-                            }else{
+                            } else {
                               dispatch({
                                 type: "VIDEO_PLAYED",
                                 payload: true,
                               });
-                              setSkipped(false);
+                              setSkipped(true);
+                              setMuted(true);
+
                               document.body.classList.remove("full_video");
-                              document.body.querySelector('.main-container')?.classList.remove('full_video')
+                              document.body
+                                .querySelector(".main-container")
+                                ?.classList.remove("full_video");
+                                document.body.querySelector('container-video-intro')?.classList.remove('video-no-played')
+
                             }
                           }
                         }}
@@ -148,7 +165,7 @@ export default function IntroPage(props: any) {
                       >
                         <Video
                           muted={muted}
-                          autoPlay={videoPlayed != undefined && !userPlayVideo}
+                          autoPlay={videoPlayed != undefined && !userPlayVideo &&  props.active}
                           loop={true}
                           {...props}
                           onPlay={() => setPlaying(true)}
@@ -177,37 +194,32 @@ export default function IntroPage(props: any) {
                           }}
                         ></Video>
                         <Fragment>
-                          {videoRef && !videoPlayed ? (
+                          {videoRef && !state.videoPlayed ? (
                             <Fragment>
-                              <motion.button
-                                className="btn-begin-experience"
-                                animate={
-                                  skipped
-                                    ? "skip"
-                                    : playing
-                                    ? "playing"
-                                    : "default"
-                                }
-                                variants={{
-                                  default: { opacity: 1 },
-                                  playing: { opacity: 0 },
-                                  skip: { opacity: 0 },
-                                }}
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  if (videoRef) {
-                                    videoRef.play();
-                                    setMuted(false);
-                                  }
-                                }}
-                              >
-                                {props.text_play}
-                              </motion.button>
+                              {true? (
+                                <button
+                                  className={`btn-begin-experience ${
+                                    videoRef.paused ? "paused" : ""
+                                  }`}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    if (videoRef) {
+                                      videoRef.play();
+                                      setMuted(false);
+                                    }
+                                  }}
+                                >
+                                  {props.text_play}
+                                </button>
+                              ) : (
+                                ""
+                              )}
                               <motion.button
                                 className="btn-skip-intro"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setSkipped(true);
+                                  setMuted(true);
                                   const element =
                                     document.getElementById("container-video");
                                   if (element) {
@@ -249,6 +261,6 @@ export default function IntroPage(props: any) {
         </div>
       </AnimateSharedLayout>
     );
-  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted]);
+  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.goingUp]);
   return memo;
 }

@@ -54,7 +54,7 @@ export default function CarouselItem2036(props: any) {
     return  <Fragment>
   {true ? (
     <div
-      className="content-header__container header-2036 container-force-screen-fit-y"
+      className="content-header__container header-2036"
       id={`${props.active ? 'active' : ''}`}
     >
       <div className="header-inner-content">
@@ -107,13 +107,13 @@ export default function CarouselItem2036(props: any) {
           className="header-inner-content__img image round-wp"
           ref={(ref) => {}}
         >
-          {memoVideo}
+          {props.children}
         </div>
 
         <div className="header-inner-content__text">
           <div className="pretitle text-label">{props.about}</div>
           <h1
-            onTransitionEnd={(e) => { 
+            onTransitionEnd={(e) => {
               if(state.goingUp){
                 const element = document.getElementById("selected")?.querySelector('.title');
                 if(element && window.scrollY < (element as any).clientHeight + 80){
@@ -135,13 +135,32 @@ export default function CarouselItem2036(props: any) {
         </div>
       </div>
 
-      {memoActions}
+      <div className="actions">
+    <div
+      className="btn"
+      style={{ cursor: "pointer" }}
+      onClick={(e) => {
+        const element = document.getElementById("selected")?.querySelector('.title');
+        if(element){
+          window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
+
+        }
+        dispatch({
+          type: "GOING_UP",
+          payload: true,
+        });
+      }}
+    >
+      {" "}
+      {!state.goingUp ? props.about_before_scroll : props.button_scroll }
+    </div>
+  </div>
     </div>
   ) : (
     ""
   )}
 </Fragment>
   }, [props.active, state.goingUp, props.children])
-  
+
   return memo ;
 }
