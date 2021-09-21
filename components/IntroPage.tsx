@@ -161,7 +161,7 @@ export default function IntroPage(props: any) {
                       >
                         <Video
                           muted={muted}
-                          autoPlay={videoPlayed != undefined && !userPlayVideo}
+                          autoPlay={videoPlayed != undefined && !userPlayVideo &&  props.active}
                           loop={true}
                           {...props}
                           onPlay={() => setPlaying(true)}
