@@ -23,7 +23,7 @@ parents, community members.
 
 ## Tech Stack
 
-[Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Next.js](https://nextjs.org/) open-source Javascript web framework, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
 ## Development using local environment
@@ -85,8 +85,24 @@ docker-compose logs next_prod
 It's required to run the command ```npm run build```. We have two ways of doing it:
 - Using node v12 and using bash.
 - Using docker-compose (the next_prod service) and stopping the process when it's done
-  
+
 After the production build is done, it would be present at the out/ directory into the root of the project. This folder contains the artifact ready to be used as a static site.
+
+## Platform.sh Integration
+
+**Features include:**
+
+* Node.js 14
+* Automatic TLS certificates
+* yarn-based build
+
+**Customizations include:**
+
+The following files and additions make the Next.js framework work on Platform.sh, modified from the `npx` command [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+* The `.platform.app.yaml`, `.platform/services.yaml`, and `.platform/routes.yaml` files provide Platform.sh-specific configuration.
+* An additional module, [`config-reader-nodejs`](https://github.com/platformsh/config-reader-nodejs), provides convenience wrappers for accessing the Platform.sh environment variables.
+* A `handle_mounts.sh` script leverages Platform build and deploy phases to add special handling for committed files pushed to directories also defined as mounts points via `.platform.app.yaml`.
 
 ## Project Resources
 
