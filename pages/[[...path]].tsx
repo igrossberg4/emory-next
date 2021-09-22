@@ -139,8 +139,8 @@ export default function Home(props: any) {
     console.log(e);
     e.preventDefault();
   }, []);
-  var supportsPassive = false;
-  try {
+  var supportsPassive = true;
+  /*try {
     window.addEventListener(
       "test",
       null,
@@ -149,16 +149,16 @@ export default function Home(props: any) {
           supportsPassive = true;
         },
       })
-    );
-  } catch (e) {}
+    as any);
+  } catch (e) {}*/
   const wheelOpt = supportsPassive ? { passive: false } : false;
   const wheelEvent = process.browser ?
     "onwheel" in document.createElement("div") ? "wheel" : "mousewheel" : 'mousewheel';
 
   const preventDefaultForScrollKeys = useCallback((e) => {
-    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 } as any;
 
-    if (keys[e.keyCode]) {
+    if (keys[(e as any).keyCode]) {
       preventDefault(e);
       return false;
     }
@@ -167,8 +167,8 @@ export default function Home(props: any) {
     if (state.isTransitionEnd) {
 
       window.removeEventListener("DOMMouseScroll", preventDefault, false);
-      window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-      window.removeEventListener("touchmove", preventDefault, wheelOpt);
+      window.removeEventListener(wheelEvent, preventDefault, wheelOpt as any);
+      window.removeEventListener("touchmove", preventDefault, wheelOpt as any);
       window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
     } else {
       if(state.goingUp){
