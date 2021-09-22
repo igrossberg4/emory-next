@@ -116,9 +116,9 @@ export default function CarouselItem2036(props: any) {
             onTransitionEnd={(e) => {
               if(state.goingUp){
                 const element = document.getElementById("selected")?.querySelector('.title');
-                if(element && window.scrollY < (element as any).clientHeight + 80){
+                /*if(element && window.scrollY < (element as any).clientHeight + 80){
                   window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
-                }
+                }*/
                 dispatch({
                   type: "GOING_UP",
                   payload: true,

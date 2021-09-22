@@ -42,6 +42,7 @@ export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const scrollVar = 5;
   const [innerHeight, setInnerHeight] = useState(
     process.browser ? window.innerHeight : 0
   );
@@ -56,37 +57,38 @@ export default function Home(props: any) {
   useEffect(() => {
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
-      document.querySelectorAll('.container-force-screen-fit-y').forEach((item) => {
-        (item as HTMLElement).style.height = `${newHeight}px`;
-      })
+      document
+        .querySelectorAll(".container-force-screen-fit-y")
+        .forEach((item) => {
+          (item as HTMLElement).style.height = `${newHeight}px`;
+        });
     };
 
     updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
 
-    return () => window.removeEventListener("resize", updateWindowDimensions)
-  }, [router.asPath])
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, [router.asPath]);
   useEffect(() => {
     const handleFocus = () => {
       if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
-          const element = document.evaluate(
-            "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
-            document,
-            null,
-            XPathResult.FIRST_ORDERED_NODE_TYPE,
-            null
-          ).singleNodeValue;
+        const element = document.evaluate(
+          "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
+          document,
+          null,
+          XPathResult.FIRST_ORDERED_NODE_TYPE,
+          null
+        ).singleNodeValue;
 
-          if(element != null){
-            let elementFocusable = document.querySelector(
-              (element as any).className
-                .split(" ")
-                .map((value : string) => `.${value}`)
-                .join("")
-            );
-            elementFocusable.focus();
-          }
-
+        if (element != null) {
+          let elementFocusable = document.querySelector(
+            (element as any).className
+              .split(" ")
+              .map((value: string) => `.${value}`)
+              .join("")
+          );
+          elementFocusable.focus();
+        }
       }
     };
     router.events.on("routeChangeComplete", handleFocus);
@@ -106,7 +108,7 @@ export default function Home(props: any) {
       switch (e.key) {
         case " ":
           if (
-            window.scrollY < 5 &&
+            window.scrollY < scrollVar &&
             document.activeElement?.tagName != "BUTTON"
           ) {
             e.preventDefault();
@@ -123,8 +125,7 @@ export default function Home(props: any) {
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [handleKey]); // @ts-ignore
-  const handleFocus = useCallback((e: FocusEvent) => {
-  }, []);
+  const handleFocus = useCallback((e: FocusEvent) => {}, []);
   useEffect(() => {
     document.addEventListener("focusin", handleFocus, { passive: false });
     return () => document.removeEventListener("focusin", handleFocus);
@@ -133,34 +134,81 @@ export default function Home(props: any) {
   if (process.browser && document.body.style.overflow === "hidden") {
     document.body.style.overflow = "";
   }
-  const handleScroll = useCallback(() => {
-    setInnerHeight(window.innerHeight);
+
+  const preventDefault = useCallback((e) => {
+    console.log(e);
+    e.preventDefault();
+  }, []);
+  var supportsPassive = false;
+  try {
+    window.addEventListener(
+      "test",
+      null,
+      Object.defineProperty({}, "passive", {
+        get: function () {
+          supportsPassive = true;
+        },
+      })
+    );
+  } catch (e) {}
+  const wheelOpt = supportsPassive ? { passive: false } : false;
+  const wheelEvent = process.browser ?
+    "onwheel" in document.createElement("div") ? "wheel" : "mousewheel" : 'mousewheel';
+
+  const preventDefaultForScrollKeys = useCallback((e) => {
+    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+    if (keys[e.keyCode]) {
+      preventDefault(e);
+      return false;
+    }
+  }, []);
+  useEffect(() => {
+    if (state.isTransitionEnd) {
+
+      window.removeEventListener("DOMMouseScroll", preventDefault, false);
+      window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+      window.removeEventListener("touchmove", preventDefault, wheelOpt);
+      window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
+    } else {
+      if(state.goingUp){
+        window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+        window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+        window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+        window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+
+      }
+
+    }
     const element = document.getElementById("selected");
     if (element) {
       const activeElement = element.querySelector(".content-header__container");
 
-      if (window.scrollY > 5) {
+      if (window.scrollY > scrollVar) {
         activeElement?.setAttribute("data-animation", "active");
       } else {
         activeElement?.setAttribute("data-animation", "no-active");
       }
     }
-
+  }, [state.isTransitionEnd, state.goingUp]);
+  const handleScroll = useCallback(() => {
+    setInnerHeight(window.innerHeight);
     if (
-      window.scrollY >= 5 &&
+      window.scrollY >= scrollVar &&
       !document.body.classList.contains("is-scrolled")
     ) {
       document.body.classList.add("is-scrolled");
-
+      dispatch({type:'IS_TRANSITION_END', payload:false})
       dispatch({
         type: "GOING_UP",
         payload: true,
       });
     } else if (
-      window.scrollY < 5 &&
+      window.scrollY < scrollVar &&
       document.body.classList.contains("is-scrolled")
     ) {
       document.body.classList.remove("is-scrolled");
+      dispatch({type:'IS_TRANSITION_END', payload:false})
 
       dispatch({
         type: "GOING_UP",
@@ -201,7 +249,11 @@ export default function Home(props: any) {
     return props.skipTransitionAnimations !== true ? (
       <AnimatePresence>
         <motion.div
-          className={`main-container ${props.view[1].props.isMain && !state.comesFromCarousel ? 'full_video' : ''}`}
+          className={`main-container ${
+            props.view[1].props.isMain && !state.comesFromCarousel
+              ? "full_video"
+              : ""
+          }`}
           id={state.route + " --- " + state.route}
           onAnimationComplete={() => {
             if (state.route !== "") {

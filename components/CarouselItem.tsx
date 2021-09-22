@@ -34,7 +34,20 @@ export default function CarouselItem(props: any) {
             <div className="pretitle text-label">{props.about}</div>
             <h1
              onTransitionEnd={(e) => {
-                 const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+               if(e.propertyName === 'max-height'){
+                 setTimeout(() => {
+                  dispatch({type:'IS_TRANSITION_END', payload:true})
+
+                 }, 1000);
+                 /*setTimeout(() => {
+                  const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+                  if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
+                   window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
+                 }
+                 }, 1000)*/
+
+                 
+               }
                   /*if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
                     window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
                   }*/
@@ -67,7 +80,7 @@ export default function CarouselItem(props: any) {
         </div>
       </div>
     
-  }, []);
+  }, [state.goingUp]);
 
   return memo;
   // <motion.div className="content-header">
