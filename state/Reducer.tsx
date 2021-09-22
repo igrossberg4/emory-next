@@ -14,10 +14,14 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
           return {...state, activeFocusXPATH:action.payload}
         }
         return state;
+    case 'IS_TRANSITION_END':
+      if(action.payload !== state.isTransitionEnd){
+        return {...state, isTransitionEnd:action.payload}
+      }
       return state;
       case 'IS_TRANSITIONING':
         if(action.payload !== state.isCircleOnAnimation){
-          return {...state, isCircleOnAnimation:action.payload.isCircleOnAnimation, }
+          return {...state, isCircleOnAnimation:action.payload}
         }
         return state;
     case "SET_NAV":
