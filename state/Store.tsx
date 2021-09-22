@@ -24,7 +24,7 @@ const initialState = {
     comesFromCarousel:false,
     goingUp: process.browser ? window.scrollY > 1 : false,
     scrollComesFromUser: false,
-    isTransitionEnd: false,
+    isTransitionEnd: true,
 }
 
 const Store = ({children}:{children:any}) => {

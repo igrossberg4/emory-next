@@ -21,9 +21,8 @@ export default function CarouselItem(props: any) {
     return <div
         className="content-header__container container-force-screen-fit-y"
         onTransitionEnd={(e) => {
-          if(e.propertyName === 'padding-top'){
+          /*if(e.propertyName === 'padding-top'){
             
-             dispatch({type:'IS_TRANSITION_END', payload:true})
 
 
             /*setTimeout(() => {
@@ -32,9 +31,9 @@ export default function CarouselItem(props: any) {
               window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
             }
             }, 1000)*/
-
             
-          }
+            
+          
              /*if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
                window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
              }*/

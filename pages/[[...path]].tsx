@@ -151,9 +151,7 @@ export default function Home(props: any) {
     document.body.style.overflow = "";
   }
 
-  const preventDefault = useCallback((e) => {
-    e.preventDefault();
-  }, []);
+ 
   var supportsPassive = true;
   /*try {
     window.addEventListener(
@@ -170,73 +168,80 @@ export default function Home(props: any) {
   const wheelEvent = process.browser ?
     "onwheel" in document.createElement("div") ? "wheel" : "mousewheel" : 'mousewheel';
 
-  const preventDefaultForScrollKeys = useCallback((e) => {
-    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 } as any;
 
-    if (keys[(e as any).keyCode]) {
-      preventDefault(e);
-      return false;
-    }
-  }, []);
   useEffect(() => {
-    if (state.isTransitionEnd) {
-
-      window.removeEventListener("DOMMouseScroll", preventDefault, false);
-      window.removeEventListener(wheelEvent, preventDefault, wheelOpt as any);
-      window.removeEventListener("touchmove", preventDefault, wheelOpt as any);
-      window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
-    } else {
-      if(state.goingUp){
-        window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-        window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-        window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+    const preventDefault = (e:WheelEvent) => {
+ 
+      if(!state.isTransitionEnd){
+        e.preventDefault(); 
+        return;
+      }
+      if(e.deltaY> 0 && !document.body.classList.contains("is-scrolled") && window.scrollY === 0 && !state.goingUp && state.isTransitionEnd){
+        const element = document.getElementById("selected");
+        document.body.classList.add("is-scrolled");
+        dispatch({type:'IS_TRANSITION_END', payload:false})
+        dispatch({
+          type: "GOING_UP",
+          payload: true,
+        });
+  
+        if (element) {
+          const activeElement = element.querySelector(".content-header__container");
+            activeElement?.setAttribute("data-animation", "active");
+          
+        }
+        setTimeout(()=>{
+          dispatch({type:'IS_TRANSITION_END', payload:true})
+  
+        }, 800)
+      }else if (
+        window.scrollY < 1 && e.deltaY <= 0 &&
+        document.body.classList.contains("is-scrolled") && 
+        state.goingUp && state.isTransitionEnd
+      ) {
+        document.body.classList.remove("is-scrolled");
+        dispatch({type:'IS_TRANSITION_END', payload:false})
+  
+        dispatch({
+          type: "GOING_UP",
+          payload: false,
+        });
+        setTimeout(()=>{
+          dispatch({type:'IS_TRANSITION_END', payload:true})
+  
+        }, 800);
+        const element = document.getElementById("selected");
+        if (element) {
+          const activeElement = element.querySelector(".content-header__container");
+            activeElement?.setAttribute("data-animation", "no-active");
+        }
+      }
+  
+    };
+    const preventDefaultForScrollKeys = (e:KeyboardEvent) => {
+      const keys = { 37: 1, 38: 1, 39: 1, 40: 1 } as any;
+  
+      if (keys[(e as any).keyCode]) {
+        preventDefault(e as any);
+        return false;
+      }
+    };
+      
+        window.addEventListener("DOMMouseScroll", preventDefault as any, false); // older FF
+        window.addEventListener(wheelEvent, preventDefault as any, wheelOpt); // modern desktop
+        window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
         window.addEventListener("keydown", preventDefaultForScrollKeys, false);
 
+      return () => {
+        window.removeEventListener("DOMMouseScroll", preventDefault);
+        window.removeEventListener(wheelEvent, preventDefault)
+        window.removeEventListener("touchmove", preventDefault)
+        window.removeEventListener("keydown", preventDefaultForScrollKeys)
+
       }
 
-    }
-    const element = document.getElementById("selected");
-    if (element) {
-      const activeElement = element.querySelector(".content-header__container");
-
-      if (window.scrollY > scrollVar) {
-        activeElement?.setAttribute("data-animation", "active");
-      } else {
-        activeElement?.setAttribute("data-animation", "no-active");
-      }
-    }
-  }, [state.isTransitionEnd, state.goingUp]);
-  const handleScroll = useCallback(() => {
-    setInnerHeight(window.innerHeight);
-    if (
-      window.scrollY >= scrollVar &&
-      !document.body.classList.contains("is-scrolled")
-    ) {
-      document.body.classList.add("is-scrolled");
-      dispatch({type:'IS_TRANSITION_END', payload:false})
-      dispatch({
-        type: "GOING_UP",
-        payload: true,
-      });
-    } else if (
-      window.scrollY < scrollVar &&
-      document.body.classList.contains("is-scrolled")
-    ) {
-      document.body.classList.remove("is-scrolled");
-      dispatch({type:'IS_TRANSITION_END', payload:false})
-
-      dispatch({
-        type: "GOING_UP",
-        payload: false,
-      });
-    }
-
-    setScroll(window.scrollY);
-  }, [setScroll, setInnerHeight, scroll, state.goingUp]);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+    
+  }, [state.goingUp, state.isTransitionEnd]);
 
   const variants = {
     initialWithRoute: {
