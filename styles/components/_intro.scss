@@ -10,20 +10,30 @@
       margin-left: 0 !important;
       margin-top: 0 !important;
       z-index: 999 !important;
-      bottom: auto !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
+      bottom: calc(50% - (100px / 2)) !important;
+      margin-bottom: calc(-40vh + 6px) !important;
+      position: relative;
 
       @media (orientation: portrait) {
         width: 140vh !important;
         height: 140vh !important;
+        margin-bottom: calc(-70vh + 6px) !important;
+      }
+
+      @media (orientation: portrait) and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: calc(-20vh - 12px) !important;
       }
 
       @media (orientation: landscape) {
-        width: 121vw !important;
-        height: 121vw !important;
+        width: 122vw !important;
+        height: 122vw !important;
+        margin-bottom: calc(-61vw + 6px) !important;
       }
+
+      @media (orientation: landscape) and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: calc(-10.5vw - 12px) !important;
+      }
+
     }
 
     .content-header__container {
