@@ -115,7 +115,23 @@ export default function Home(props: any) {
             window.scrollTo({ top: 20, behavior: "smooth" });
           }
           return;
-        case "ArrowRight":
+          case "ArrowDown":
+            if (
+              window.scrollY < scrollVar &&
+              document.activeElement?.tagName != "BUTTON"
+            ) {
+              e.preventDefault();
+              window.scrollTo({ top: 20, behavior: "smooth" });
+            }
+            return;
+        case "PageDown":
+          if (
+            window.scrollY < scrollVar &&
+            document.activeElement?.tagName != "BUTTON"
+          ) {
+            e.preventDefault();
+            window.scrollTo({ top: 20, behavior: "smooth" });
+          }
           return;
       }
     },
