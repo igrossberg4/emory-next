@@ -115,7 +115,7 @@ export default function Home(props: any) {
 
     setTimeout(() => {
       dispatch({ type: "IS_TRANSITIONING", payload: false });
-    }, 5000);
+    }, 600);
   }, []);
 
   const circleAnimateCollapse = useCallback(() => {
@@ -128,7 +128,7 @@ export default function Home(props: any) {
     console.log("circleAnimateCollapse")
     setTimeout(() => {
       dispatch({ type: "IS_TRANSITIONING", payload: false });
-    }, 5000);
+    }, 600);
     const element = document.getElementById("selected");
     if (element) {
       const activeElement = element.querySelector(".content-header__container");
@@ -136,7 +136,7 @@ export default function Home(props: any) {
     }
   }, []);
 
-  const circleAnimateMinimunScroll = 200;
+  const circleAnimateMinimunScroll = 50;
 
   const circleAnimateExpandLaunch = useCallback((isCircleOnAnimation:boolean, isCircleExpanded:boolean) => {
     if (window.scrollY < circleAnimateMinimunScroll && !isCircleOnAnimation && !isCircleExpanded) {
