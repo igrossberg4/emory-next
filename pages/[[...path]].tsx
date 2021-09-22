@@ -136,6 +136,8 @@ export default function Home(props: any) {
 
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
+      const carouselContentElement = document.getElementById('carouselContent');
+      const carouselContentHeight = carouselContentElement?.offsetHeight ? carouselContentElement.offsetHeight : 0
       const path = getElementXPath(document.activeElement);
       if (path.includes("*[@id=carousel]")) {
         dispatch({
@@ -163,7 +165,7 @@ export default function Home(props: any) {
       }     
       if(['ArrowUp'].indexOf(e.key) > -1){
         if (
-          window.scrollY > scrollVar && (window.scrollY - 150) <= (document.getElementById('carouselContent')?.offsetTop) &&
+          window.scrollY > scrollVar && (window.scrollY - 150) <= (carouselContentHeight) &&
           document.activeElement?.tagName != "BUTTON"
         ) {
           e.preventDefault();
