@@ -46,10 +46,10 @@ export default function CarouselItem2036(props: any) {
       }}
     >
       {" "}
-      {!state.goingUp ? props.about_before_scroll : props.button_scroll }
+      {!state.isCircleExpanded ? props.about_before_scroll : props.button_scroll }
     </div>
   </div>
-  }, [state.goingUp])
+  }, [state.isCircleExpanded])
   const memo = useMemo(() => {
     return  <Fragment>
   {true ? (
@@ -114,7 +114,7 @@ export default function CarouselItem2036(props: any) {
           <div className="pretitle text-label">{props.about}</div>
           <h1
             onTransitionEnd={(e) => {
-              if(state.goingUp){
+              if(state.isCircleExpanded){
                 const element = document.getElementById("selected")?.querySelector('.title');
                 /*if(element && window.scrollY < (element as any).clientHeight + 80){
                   window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
@@ -152,7 +152,7 @@ export default function CarouselItem2036(props: any) {
       }}
     >
       {" "}
-      {!state.goingUp ? props.about_before_scroll : props.button_scroll }
+      {!state.isCircleExpanded ? props.about_before_scroll : props.button_scroll }
     </div>
   </div>
     </div>
@@ -160,7 +160,7 @@ export default function CarouselItem2036(props: any) {
     ""
   )}
 </Fragment>
-  }, [props.active, state.goingUp, props.children])
+  }, [props.active, state.isCircleExpanded, props.children])
 
   return memo ;
 }

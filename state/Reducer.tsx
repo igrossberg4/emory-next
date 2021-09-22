@@ -14,11 +14,12 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
           return {...state, activeFocusXPATH:action.payload}
         }
         return state;
-    case 'IS_TRANSITION_END':
-      if(action.payload !== state.isTransitionEnd){
-        return {...state, isTransitionEnd:action.payload}
-      }
       return state;
+      case 'IS_TRANSITIONING':
+        if(action.payload !== state.isCircleOnAnimation){
+          return {...state, isCircleOnAnimation:action.payload.isCircleOnAnimation, }
+        }
+        return state;
     case "SET_NAV":
       return {
         ...state,
@@ -37,10 +38,10 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         videoPlayed: action.payload,
       }
     case 'GOING_UP':
-      if(action.payload != state.goingUp) {
+      if(action.payload != state.isCircleExpanded) {
         return {
           ...state,
-          goingUp: action.payload,
+          isCircleExpanded: action.payload,
         }
       }
       return state;

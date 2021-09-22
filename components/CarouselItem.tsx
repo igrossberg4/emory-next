@@ -27,14 +27,14 @@ export default function CarouselItem(props: any) {
 
             /*setTimeout(() => {
              const element = document.getElementById("selected")?.querySelector('.title.header-h2');
-             if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
+             if(state.isCircleExpanded && element && window.scrollY < (element as any).clientHeight + 80){
               window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
             }
             }, 1000)*/
             
             
           
-             /*if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
+             /*if(state.isCircleExpanded && element && window.scrollY < (element as any).clientHeight + 80){
                window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
              }*/
        }}
@@ -80,7 +80,7 @@ export default function CarouselItem(props: any) {
         </div>
       </div>
     
-  }, [state.goingUp]);
+  }, [state.isCircleExpanded]);
 
   return memo;
   // <motion.div className="content-header">

@@ -174,7 +174,7 @@ export default function EmblaCarousel({
   const [[page, direction], setPage] = useState([index, 1]);
   const [queue, setQueue] = useState([]);
   const [performTransition, setPerformTransition] = useState(false);
-  const [isTransitioning, setTransitioning] = useState(false);
+  const [isCircleOnAnimation, setTransitioning] = useState(false);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(
     page === 0 ? false : true
   );
@@ -222,10 +222,10 @@ export default function EmblaCarousel({
   }, [paginate, page, queue]);
   const [refViewport, inView, entry] = useInView({});
   useEffect(() => {
-    if (!isTransitioning && performTransition) {
+    if (!isCircleOnAnimation && performTransition) {
       changeRoute(slides[page].props.view[0].props.path, 0);
     }
-  }, [isTransitioning, performTransition, page, changeRoute]);
+  }, [isCircleOnAnimation, performTransition, page, changeRoute]);
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
       if (inView) {
@@ -262,19 +262,19 @@ export default function EmblaCarousel({
           <div
             className={`
             ${
-              slides[page].props.view[0].props.isMain && !state.goingUp
+              slides[page].props.view[0].props.isMain && !state.isCircleExpanded
                 ? "background-visible"
                 : ""
             }
             ${css`
               &:before {
                 content: " ";
-                display: ${!state.goingUp ? "block" : "none"};
+                display: ${!state.isCircleExpanded ? "block" : "none"};
                 position: absolute;
                 left: 0;
                 top: 0;
-                width: ${!state.goingUp ? "100%" : "95%"};
-                height: ${!state.goingUp ? "100%" : "95%"};
+                width: ${!state.isCircleExpanded ? "100%" : "95%"};
+                height: ${!state.isCircleExpanded ? "100%" : "95%"};
                 background-repeat: no-repeat;
                 background-position: 50% 0;
                 filter: drop-shadow(0.1px 0.1px 0.1px grey)
@@ -292,12 +292,12 @@ export default function EmblaCarousel({
               <div
                 className="embla__container"
                 data-route={`${slides[page].props.view[0].props.path}`}
-                onTransitionEnd={isTransitioning ? (e) => {
+                onTransitionEnd={isCircleOnAnimation ? (e) => {
                   if (
                     e.propertyName === "transform" &&
                     !(e.target as HTMLElement)?.className.includes("no_selected") &&
                     (e.target as HTMLElement)?.className.includes("selected")
-                    && isTransitioning
+                    && isCircleOnAnimation
                   ) {
                     //e.stopPropagation();
 
@@ -393,6 +393,6 @@ export default function EmblaCarousel({
         )}
       </>
     );
-  }, [page, isMobile, handleKey, state.goingUp, performTransition, setPerformTransition,]);
+  }, [page, isMobile, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);
   return memo;
 }
