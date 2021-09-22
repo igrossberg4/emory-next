@@ -233,9 +233,9 @@ export default function Home(props: any) {
         window.addEventListener("keydown", preventDefaultForScrollKeys, false);
 
       return () => {
-        window.removeEventListener("DOMMouseScroll", preventDefault);
-        window.removeEventListener(wheelEvent, preventDefault)
-        window.removeEventListener("touchmove", preventDefault)
+        window.removeEventListener("DOMMouseScroll", preventDefault as any);
+        window.removeEventListener(wheelEvent, preventDefault as any)
+        window.removeEventListener("touchmove", preventDefault as any)
         window.removeEventListener("keydown", preventDefaultForScrollKeys)
 
       }
