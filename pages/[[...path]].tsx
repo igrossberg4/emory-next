@@ -175,18 +175,15 @@ export default function Home(props: any) {
           payload: getElementXPath(document.activeElement),
         });
       }
-      if ([" ", "ArrowDown", "PageDown",].indexOf(e.key) > -1) {
+      if ([" ", "ArrowDown", "PageDown", "End"].indexOf(e.key) > -1) {
         preventScrollDefaultConditional(e, state.isCircleOnAnimation, state.isCircleExpanded, window.scrollY, true);
         circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
       }
       if (["ArrowUp", "PageUp", "Home"].indexOf(e.key) > -1) {
 
-        if(e.key === 'Home'){
-          window.scroll({ top: 0, behavior: "smooth" });
-        }
         preventScrollDefaultConditional(e, state.isCircleOnAnimation, state.isCircleExpanded, window.scrollY, false);
         circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
-        
+
       }
       // Case End
       /*
