@@ -96,6 +96,44 @@ export default function Home(props: any) {
       router.events.off("routeChangeComplete", handleFocus);
     };
   }, [router.events, state.activeFocusXPATH]);
+  const animationActive = useCallback(() =>{
+    const element = document.getElementById("selected");
+    document.body.classList.add("is-scrolled");
+    dispatch({type:'IS_TRANSITION_END', payload:false})
+    dispatch({
+      type: "GOING_UP",
+      payload: true,
+    });
+
+    if (element) {
+      const activeElement = element.querySelector(".content-header__container");
+        activeElement?.setAttribute("data-animation", "active");
+      
+    }
+    setTimeout(()=>{
+      dispatch({type:'IS_TRANSITION_END', payload:true})
+
+    }, 1200)
+  }, [])
+  const animationInactive = useCallback(() => {
+    document.body.classList.remove("is-scrolled");
+        dispatch({type:'IS_TRANSITION_END', payload:false})
+  
+        dispatch({
+          type: "GOING_UP",
+          payload: false,
+        });
+        setTimeout(()=>{
+          dispatch({type:'IS_TRANSITION_END', payload:true})
+  
+        }, 1200);
+        const element = document.getElementById("selected");
+        if (element) {
+          const activeElement = element.querySelector(".content-header__container");
+            activeElement?.setAttribute("data-animation", "no-active");
+        }
+  },[])
+
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
       const path = getElementXPath(document.activeElement);
@@ -105,34 +143,33 @@ export default function Home(props: any) {
           payload: getElementXPath(document.activeElement),
         });
       }
-      switch (e.key) {
-        case " ":
-          if (
-            window.scrollY < scrollVar &&
-            document.activeElement?.tagName != "BUTTON"
-          ) {
-            e.preventDefault();
-            window.scrollTo({ top: 20, behavior: "smooth" });
-          }
-          return;
-          case "ArrowDown":
-            if (
-              window.scrollY < scrollVar &&
-              document.activeElement?.tagName != "BUTTON"
-            ) {
-              e.preventDefault();
-              window.scrollTo({ top: 20, behavior: "smooth" });
-            }
-            return;
-        case "PageDown":
-          if (
-            window.scrollY < scrollVar &&
-            document.activeElement?.tagName != "BUTTON"
-          ) {
-            e.preventDefault();
-            window.scrollTo({ top: 20, behavior: "smooth" });
-          }
-          return;
+      if([' ', 'ArrowDown', 'PageDown'].indexOf(e.key) > -1){
+        if (
+          window.scrollY < scrollVar &&
+          document.activeElement?.tagName != "BUTTON"
+        ) {
+          e.preventDefault();
+          window.scrollTo({ top: 20, behavior: "smooth" });
+          animationActive();
+        }
+      }
+      if(e.key === 'End'){
+        window.scroll({top:document.body.scrollHeight, behavior: "smooth" });
+        animationActive();
+      }
+      if(e.key=== 'Home'){
+        window.scroll({top:0, behavior: "smooth" });
+        animationInactive();
+      }     
+      if(['ArrowUp'].indexOf(e.key) > -1){
+        if (
+          window.scrollY > scrollVar && (window.scrollY - 150) <= (document.getElementById('carouselContent')?.offsetTop) &&
+          document.activeElement?.tagName != "BUTTON"
+        ) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          animationInactive();
+        }
       }
     },
     [dispatch]
@@ -168,7 +205,6 @@ export default function Home(props: any) {
   const wheelEvent = process.browser ?
     "onwheel" in document.createElement("div") ? "wheel" : "mousewheel" : 'mousewheel';
 
-
   useEffect(() => {
     const preventDefault = (e:WheelEvent) => {
  
@@ -176,45 +212,14 @@ export default function Home(props: any) {
         e.preventDefault(); 
         return;
       }
-      if(e.deltaY> 0 && !document.body.classList.contains("is-scrolled") && window.scrollY === 0 && !state.goingUp && state.isTransitionEnd){
-        const element = document.getElementById("selected");
-        document.body.classList.add("is-scrolled");
-        dispatch({type:'IS_TRANSITION_END', payload:false})
-        dispatch({
-          type: "GOING_UP",
-          payload: true,
-        });
-  
-        if (element) {
-          const activeElement = element.querySelector(".content-header__container");
-            activeElement?.setAttribute("data-animation", "active");
-          
-        }
-        setTimeout(()=>{
-          dispatch({type:'IS_TRANSITION_END', payload:true})
-  
-        }, 800)
+      if(e.deltaY> 0 && !document.body.classList.contains("is-scrolled") && window.scrollY > scrollVar  && !state.goingUp && state.isTransitionEnd){
+        animationActive();
       }else if (
-        window.scrollY < 1 && e.deltaY <= 0 &&
+        window.scrollY < scrollVar && e.deltaY <= 0 &&
         document.body.classList.contains("is-scrolled") && 
         state.goingUp && state.isTransitionEnd
       ) {
-        document.body.classList.remove("is-scrolled");
-        dispatch({type:'IS_TRANSITION_END', payload:false})
-  
-        dispatch({
-          type: "GOING_UP",
-          payload: false,
-        });
-        setTimeout(()=>{
-          dispatch({type:'IS_TRANSITION_END', payload:true})
-  
-        }, 800);
-        const element = document.getElementById("selected");
-        if (element) {
-          const activeElement = element.querySelector(".content-header__container");
-            activeElement?.setAttribute("data-animation", "no-active");
-        }
+        animationInactive();
       }
   
     };
