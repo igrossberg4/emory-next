@@ -136,7 +136,6 @@ export default function Home(props: any) {
   }
 
   const preventDefault = useCallback((e) => {
-    console.log(e);
     e.preventDefault();
   }, []);
   var supportsPassive = true;

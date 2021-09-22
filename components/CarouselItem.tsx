@@ -20,6 +20,25 @@ export default function CarouselItem(props: any) {
   const memo = useMemo(() => {
     return <div
         className="content-header__container container-force-screen-fit-y"
+        onTransitionEnd={(e) => {
+          if(e.propertyName === 'padding-top'){
+            
+             dispatch({type:'IS_TRANSITION_END', payload:true})
+
+
+            /*setTimeout(() => {
+             const element = document.getElementById("selected")?.querySelector('.title.header-h2');
+             if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
+              window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
+            }
+            }, 1000)*/
+
+            
+          }
+             /*if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
+               window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
+             }*/
+       }}
       >
         <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
@@ -33,25 +52,7 @@ export default function CarouselItem(props: any) {
           <div className="header-inner-content__text">
             <div className="pretitle text-label">{props.about}</div>
             <h1
-             onTransitionEnd={(e) => {
-               if(e.propertyName === 'max-height'){
-                 setTimeout(() => {
-                  dispatch({type:'IS_TRANSITION_END', payload:true})
 
-                 }, 1000);
-                 /*setTimeout(() => {
-                  const element = document.getElementById("selected")?.querySelector('.title.header-h2');
-                  if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
-                   window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
-                 }
-                 }, 1000)*/
-
-                 
-               }
-                  /*if(state.goingUp && element && window.scrollY < (element as any).clientHeight + 80){
-                    window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
-                  }*/
-            }}
               className="title header-h2"
               dangerouslySetInnerHTML={{ __html: props.header }}
             ></h1>
