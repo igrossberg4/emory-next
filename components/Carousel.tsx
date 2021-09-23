@@ -193,6 +193,7 @@ export default function EmblaCarousel({
           route,
           { scroll: false, shallow: false }
         );
+        
       } else {
         setTransitioning(false);
         setPerformTransition(false);
@@ -207,6 +208,8 @@ export default function EmblaCarousel({
       setQueue(
         queue.concat(slides[page + newDirection].props.view[0].props.path)
       );
+      dispatch({ type: "IS_TRANSITIONING", payload: true });
+      document.body.style.overflowY='hidden';
     },
     [changeRoute, page, slides, queue, setQueue]
   );
