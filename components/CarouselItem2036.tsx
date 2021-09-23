@@ -31,28 +31,6 @@ export default function CarouselItem2036(props: any) {
   const memoVideo = useMemo(() =>{
     return props.children
   }, [props.children]);
-  const memoActions = useMemo(() => {
-    return       <div className="actions">
-    <div
-      className="btn"
-      style={{ cursor: "pointer" }}
-      onClick={(e) => {
-        const element = document.getElementById("selected")?.querySelector('.title');
-        if(element){
-          window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
-
-        }
-        dispatch({
-          type: "GOING_UP",
-          payload: true,
-        });
-      }}
-    >
-      {" "}
-      {!state.isCircleExpanded ? props.about_before_scroll : props.button_scroll }
-    </div>
-  </div>
-  }, [state.isCircleExpanded])
   const memo = useMemo(() => {
     return  <Fragment>
   {true ? (
@@ -131,7 +109,7 @@ export default function CarouselItem2036(props: any) {
 
       <div className="actions">
     <div
-      className="btn"
+      className="btn before-expand"
       style={{ cursor: "pointer" }}
       onClick={(e) => {
         const element = document.getElementById("selected");
@@ -156,7 +134,35 @@ export default function CarouselItem2036(props: any) {
       }}
     >
       {" "}
-      {!state.isCircleExpanded ? props.about_before_scroll : props.button_scroll }
+      {props.about_before_scroll}
+    </div>
+    <div
+      className="btn after-expand"
+      style={{ cursor: "pointer" }}
+      onClick={(e) => {
+        const element = document.getElementById("selected");
+        document.body.classList.add("is-scrolled");
+
+        dispatch({ type: "IS_TRANSITIONING", payload: true });
+        if (element) {
+          const activeElement = element.querySelector(".content-header__container");
+          activeElement?.setAttribute("data-animation", "active");
+        }
+        dispatch({
+          type: "GOING_UP",
+          payload: true,
+        });
+        setTimeout(() => {
+          dispatch({ type: "IS_TRANSITIONING", payload: false });
+        }, 600);
+        const elementHeader =  document.getElementById('header');
+        if(elementHeader){
+          elementHeader.classList.add('hide');
+        }
+      }}
+    >
+      {" "}
+      {props.button_scroll }
     </div>
   </div>
     </div>
@@ -164,7 +170,7 @@ export default function CarouselItem2036(props: any) {
     ""
   )}
 </Fragment>
-  }, [props.active, state.isCircleExpanded, props.children, isMobile])
+  }, [props.active, props.children, isMobile])
 
   return memo ;
 }

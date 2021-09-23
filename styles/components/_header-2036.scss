@@ -120,6 +120,17 @@
 
   .btn {
     margin-bottom: math.div($default-separation, 2);
+    &.after-expand{
+      display: none;
+      .is-scrolled &{
+        display: block;
+      }
+    }
+    &.before-expand{
+      .is-scrolled &{
+        display: none;
+      }
+    }
   }
 }
 
