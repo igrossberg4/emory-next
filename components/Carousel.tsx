@@ -251,8 +251,8 @@ export default function EmblaCarousel({
       <>
         <div
           id="carousel"
-          className={`embla embla--carousel-navigation 
-        ${!navigation ? "page-carousel" : ""} 
+          className={`embla embla--carousel-navigation
+        ${!navigation ? "page-carousel" : ""}
         ${
           index !== page
             ? `transitioning ${performTransition ? "blocked" : ""}`
@@ -338,7 +338,7 @@ export default function EmblaCarousel({
                       className={`embla_slide_present ${
                         page === i ? "selected" : "no_selected"
                       } ${i < page ? "first" : ""} ${i > page ? "last" : ""} ${
-                        isTransitioning ? "is-transitioning" : ""
+                        isCircleOnAnimation ? "is-transitioning" : ""
                       }`}
                     >
                       <div className="embla__slide">
