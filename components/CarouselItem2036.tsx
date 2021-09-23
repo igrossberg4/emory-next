@@ -85,6 +85,7 @@ export default function CarouselItem2036(props: any) {
         </div>
 
         <div
+          id="video-container"
           className="header-inner-content__img image round-wp"
           style={{
             bottom:isMobile && process.browser ? `${window.innerHeight - 430}px` : undefined

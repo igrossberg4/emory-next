@@ -62,13 +62,18 @@ export default function Home(props: any) {
         .forEach((item) => {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
+
+      const videoElement = document.getElementById('video-container');
+      if(videoElement) {
+        videoElement.style.bottom = isMobile ? `${newHeight - 430}px` : undefined as any;
+      }
     };
 
     updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
 
     return () => window.removeEventListener("resize", updateWindowDimensions);
-  }, [router.asPath]);
+  }, [router.asPath, isMobile]);
   useEffect(() => {
     const handleFocus = () => {
       if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
