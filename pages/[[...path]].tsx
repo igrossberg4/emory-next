@@ -48,60 +48,6 @@ export default function Home(props: any) {
   );
   const [state, dispatch] = useContext(Context) as any;
 
-  // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
-  const spring = {
-    type: "tween",
-    duration: 0.65,
-    ease: "easeInOut",
-  };
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      const newHeight = window.innerHeight;
-      document
-        .querySelectorAll(".container-force-screen-fit-y")
-        .forEach((item) => {
-          (item as HTMLElement).style.height = `${newHeight}px`;
-        });
-
-      const videoElement = document.getElementById('video-container');
-      if(videoElement) {
-        videoElement.style.bottom = isMobile ? `${newHeight - (window.innerWidth > 560 ? 430 : 410)}px` : undefined as any;
-      }
-    };
-
-    updateWindowDimensions();
-    window.addEventListener("resize", updateWindowDimensions);
-
-    return () => window.removeEventListener("resize", updateWindowDimensions);
-  }, [router.asPath, isMobile]);
-  useEffect(() => {
-    const handleFocus = () => {
-      if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
-        const element = document.evaluate(
-          "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
-          document,
-          null,
-          XPathResult.FIRST_ORDERED_NODE_TYPE,
-          null
-        ).singleNodeValue;
-
-        if (element != null) {
-          let elementFocusable = document.querySelector(
-            (element as any).className
-              .split(" ")
-              .map((value: string) => `.${value}`)
-              .join("")
-          );
-          elementFocusable.focus();
-        }
-      }
-    };
-    router.events.on("routeChangeComplete", handleFocus);
-    return () => {
-      router.events.off("routeChangeComplete", handleFocus);
-    };
-  }, [router.events, state.activeFocusXPATH]);
-
   const circleAnimateExpand = useCallback(() => {
     const element = document.getElementById("selected");
     document.body.classList.add("is-scrolled");
@@ -170,6 +116,88 @@ export default function Home(props: any) {
     },
     []
   );
+  // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
+  const spring = {
+    type: "tween",
+    duration: 0.65,
+    ease: "easeInOut",
+  };
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newHeight = window.innerHeight;
+      document
+        .querySelectorAll(".container-force-screen-fit-y")
+        .forEach((item) => {
+          (item as HTMLElement).style.height = `${newHeight}px`;
+        });
+
+      const videoElement = document.getElementById('video-container');
+      if(videoElement) {
+        videoElement.style.bottom = isMobile ? `${newHeight - (window.innerWidth > 560 ? 430 : 410)}px` : undefined as any;
+      }
+    };
+
+    updateWindowDimensions();
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, [router.asPath, isMobile]);
+  useEffect(() => {
+    const handleFocus = () => {
+      if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
+        const element = document.evaluate(
+          "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
+          document,
+          null,
+          XPathResult.FIRST_ORDERED_NODE_TYPE,
+          null
+        ).singleNodeValue;
+
+        if (element != null) {
+          let elementFocusable = document.querySelector(
+            (element as any).className
+              .split(" ")
+              .map((value: string) => `.${value}`)
+              .join("")
+          );
+          elementFocusable.focus();
+        }
+      }
+      setTimeout(()=>{
+        document.body.style.overflowY='visible';
+        if(window.scrollY > 0){
+          circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
+        }
+        dispatch({ type: "IS_TRANSITIONING", payload: false });
+      },300)
+    };
+
+    router.events.on("routeChangeComplete", handleFocus);
+    return () => {
+      router.events.off("routeChangeComplete", handleFocus);
+    };
+  }, [router.events, state.activeFocusXPATH, state.isCircleOnAnimation, state.isCircleExpanded]);
+  useEffect(() => {
+    const handleScroll = () =>{
+      if(window.scrollY > 0 && !state.isCircleExpanded){
+        circleAnimateExpand();
+        const element =  document.getElementById('header');
+        if(element){
+          element.classList.add('hide');
+        }
+        
+        //circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
+
+      }else{
+        if(state.isCircleExpanded){
+          //circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
+        }
+      }
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [state.isCircleExpanded, state.isCircleOnAnimation, router.asPath]); // @ts-ignore
 
   const preventScrollDefaultConditional = useCallback(
     (
@@ -275,7 +303,7 @@ export default function Home(props: any) {
     : "mousewheel";
 
   useEffect(() => {
-    const preventDefault = (e: WheelEvent) => {
+    const preventDefault = (e: WheelEvent) => {  
 
       // Prevent is scroll:
       preventScrollDefaultConditional(
@@ -285,7 +313,7 @@ export default function Home(props: any) {
         window.scrollY,
         e.deltaY > 0
       );
-
+ if(router.isReady){
       // Launch circle animation:
       if (e.deltaY > 0) {
         circleAnimateExpandLaunch(
@@ -297,6 +325,8 @@ export default function Home(props: any) {
           state.isCircleOnAnimation,
           state.isCircleExpanded
         );
+      }
+    
       }
     };
     const preventDefaultForScrollKeys = (e: KeyboardEvent) => {
@@ -322,40 +352,45 @@ export default function Home(props: any) {
       //window.removeEventListener('touchstart', preventDefault as any, wheelOpt);
       // window.removeEventListener("keydown", preventDefaultForScrollKeys);
     };
-  }, [state.isCircleExpanded, state.isCircleOnAnimation]);
+  }, [state.isCircleExpanded, state.isCircleOnAnimation, router.isReady]);
   const [touchScrollPosition, setTouchScrollPosition] = useState(0);
 
   useEffect(() => {
     const preventDefault = (e: TouchEvent) => {
-      if (e.type === "touchstart") {
-        setTouchScrollPosition(e.touches[0].clientY);
-      }
-      if (e.type === "touchmove") {
-
-        const te = e.changedTouches[0].clientY;
-        const isUp = touchScrollPosition > te;
-        preventScrollDefaultConditional(
-          e,
-          state.isCircleOnAnimation,
-          state.isCircleExpanded,
-          window.scrollY,
-          isUp
-        );
-        if (isUp) {
-          circleAnimateExpandLaunch(
-            state.isCircleOnAnimation,
-            state.isCircleExpanded
-          );
-        } else {
-
-          circleAnimateCollapseLaunch(
-            state.isCircleOnAnimation,
-            state.isCircleExpanded
-          );
-
+        if (e.type === "touchstart") {
+          setTouchScrollPosition(e.touches[0].clientY);
         }
-        //setTouchScrollPosition(e.touches[0].clientY);
+        if (e.type === "touchmove") {
+  
+          const te = e.changedTouches[0].clientY;
+          const isUp = touchScrollPosition > te;
+          preventScrollDefaultConditional(
+            e,
+            state.isCircleOnAnimation,
+            state.isCircleExpanded,
+            window.scrollY,
+            isUp
+          );
+          if(router.isReady){
+            if (isUp) {
+              circleAnimateExpandLaunch(
+                state.isCircleOnAnimation,
+                state.isCircleExpanded
+              );
+            } else {
+              
+              circleAnimateCollapseLaunch(
+                state.isCircleOnAnimation,
+                state.isCircleExpanded
+              );
+    
+            }
+          }
+
+          //setTouchScrollPosition(e.touches[0].clientY);
+        
       }
+
     };
 
     window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
@@ -365,7 +400,7 @@ export default function Home(props: any) {
       window.removeEventListener("touchmove", preventDefault as any);
       window.removeEventListener("touchstart", preventDefault as any);
     };
-  }, [touchScrollPosition, state.isCircleOnAnimation, state.isCircleExpanded]);
+  }, [touchScrollPosition, state.isCircleOnAnimation, state.isCircleExpanded, router.isReady]);
 
   const variants = {
     initialWithRoute: {
@@ -431,6 +466,7 @@ export default function Home(props: any) {
       ""
     );
   }, [router.asPath, state.route, MD5(props.view), state.comesFromCarousel]);
+
   return (
     <Fragment>
       <Head>
