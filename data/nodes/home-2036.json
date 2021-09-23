@@ -86,7 +86,8 @@
         "media_alt": "Three students walk across the Quad.",
         "media_type": "image",
         "media_header": "Student Success",
-        "media_text": "Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service. "
+        "media_text": "Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service.",
+        "media_byline": "Featured: Emory University School of Law students"
       }
     },
     {
@@ -103,7 +104,8 @@
         "media_alt": "A professor stands in front of a data projection.",
         "media_type": "image",
         "media_header": "Faculty Eminence",
-        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge."
+        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
+        "media_byline": "Featured: Professor Yang Liu"
       }
     },
     {
@@ -120,7 +122,8 @@
         "media_alt": "A student looks at a specimen in the lab with their professor.",
         "media_type": "image",
         "media_header": "Research Excellence",
-        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge."
+        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
+        "media_byline": "Featured: Biomedical researchers Dr. Keira Davis and Dr. Winfield Sale"
       }
     }
   ]
