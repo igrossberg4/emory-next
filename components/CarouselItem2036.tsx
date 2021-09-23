@@ -101,9 +101,9 @@ export default function CarouselItem2036(props: any) {
             className="title"
             dangerouslySetInnerHTML={{ __html: props.header }}
           ></h1>
-          <h1 className="title_expanded header-h4">
+          <div className="title_expanded">
             {props.header_expanded}
-          </h1>
+          </div>
           <div className="subtitle text-body--lg">{props.text}</div>
         </div>
       </div>

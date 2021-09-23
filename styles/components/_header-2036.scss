@@ -93,11 +93,10 @@
   }
 
   .title_expanded {
-    display: none;
+    height: 0;
     opacity:0;
-    margin-bottom: 20px;
-    line-height: 60px;
-    transition: opacity math.div($scroll-down-transition-duration, 2) ease;
+    font-size: $font-size-xlg;
+    line-height: 1.1;
   }
 
   .pretitle,
@@ -204,6 +203,15 @@
 
 $pre-animation-delay: math.div($scroll-down-transition-duration, 2);
 
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 $curve: cubic-bezier(.63,.72,.79,.98);
 
 .header-2036.content-header__container {
@@ -274,13 +282,18 @@ $curve: cubic-bezier(.63,.72,.79,.98);
   }
 
   .title {
-    transition: opacity math.div($scroll-down-transition-duration, 2) ease-out;
+    transition: none;
   }
 
   .pretitle,
-  .subtitle {
+  .subtitle,
+  .title_expanded {
+    margin-bottom: 0;
+    max-height: 0;
     opacity: 0;
-    transition: opacity math.div($scroll-down-transition-duration, 2) ease-out;
+    transition: opacity $scroll-down-transition-duration ease-out,
+                max-height $scroll-down-transition-duration ease-out,
+                margin $scroll-down-transition-duration ease-out;
   }
 
   // ANIMATION ACTIVE
@@ -320,17 +333,27 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     .title {
-      display: none;
+      animation: flash $scroll-down-transition-duration * 2;
+      @extend .header-xlarge;
+      line-height: 0.9em;
+      letter-spacing: 0;
     }
 
     .title_expanded {
+      max-height: 999px;
       opacity: 1;
+      margin-bottom: 20px;
       display: block;
     }
 
     .pretitle,
     .subtitle {
+      max-height: 999px;
       opacity: 1;
+    }
+
+    .pretitle {
+      margin-bottom: 15px;
     }
   }
 }
