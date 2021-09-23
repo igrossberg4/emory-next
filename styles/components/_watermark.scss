@@ -1,16 +1,11 @@
 .watermark {
   opacity: 0.35;
   position: fixed;
-  bottom: 5px;
-  left: 10px;
+  bottom: 24px;
+  left: 24px;
 
-  @include media-breakpoint-up(md) {
-    bottom: 16px;
-    left: 16px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    bottom: 28px;
-    left: 32px;
+  @include media-breakpoint-up(lg) {
+    bottom: 30px;
+    left: 30px;
   }
 }
