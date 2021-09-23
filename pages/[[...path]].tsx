@@ -111,7 +111,7 @@ export default function Home(props: any) {
       const activeElement = element.querySelector(".content-header__container");
       activeElement?.setAttribute("data-animation", "active");
     }
-    console.log("circleAnimateExpand ")
+    console.log("circleAnimateExpand ");
 
     setTimeout(() => {
       dispatch({ type: "IS_TRANSITIONING", payload: false });
@@ -125,7 +125,7 @@ export default function Home(props: any) {
       type: "GOING_UP",
       payload: false,
     });
-    console.log("circleAnimateCollapse")
+    console.log("circleAnimateCollapse");
     setTimeout(() => {
       dispatch({ type: "IS_TRANSITIONING", payload: false });
     }, 600);
@@ -138,29 +138,63 @@ export default function Home(props: any) {
 
   const circleAnimateMinimunScroll = 50;
 
-  const circleAnimateExpandLaunch = useCallback((isCircleOnAnimation:boolean, isCircleExpanded:boolean) => {
-    if (window.scrollY < circleAnimateMinimunScroll && !isCircleOnAnimation && !isCircleExpanded) {
-      console.log("Launch: circleAnimateExpand")
-      circleAnimateExpand();
-    }
-  }, []);
+  const circleAnimateExpandLaunch = useCallback(
+    (isCircleOnAnimation: boolean, isCircleExpanded: boolean) => {
+      if (
+        window.scrollY < circleAnimateMinimunScroll &&
+        !isCircleOnAnimation &&
+        !isCircleExpanded
+      ) {
+        circleAnimateExpand();
+        const element =  document.getElementById('header');
+        if(element){
+          element.classList.add('hide');
+        }
+      }
+    },
+    []
+  );
 
-  const circleAnimateCollapseLaunch = useCallback((isCircleOnAnimation:boolean, isCircleExpanded:boolean) => {
-    if (window.scrollY < circleAnimateMinimunScroll && !isCircleOnAnimation && isCircleExpanded) {
-      console.log("Launch: circleAnimateCollapse")
-      circleAnimateCollapse();
-    }
-  }, []);
+  const circleAnimateCollapseLaunch = useCallback(
+    (isCircleOnAnimation: boolean, isCircleExpanded: boolean) => {
+      if (
+        window.scrollY < circleAnimateMinimunScroll &&
+        !isCircleOnAnimation &&
+        isCircleExpanded
+      ) {
+        console.log("Launch: circleAnimateCollapse");
+        circleAnimateCollapse();
+        const element =  document.getElementById('header');
+        if(element){
+          element.classList.remove('hide');
+        }
+      }
+    },
+    []
+  );
 
-  const preventScrollDefaultConditional = useCallback((e:Event, isCircleOnAnimation:boolean, isCircleExpanded:boolean, scrollY:number, isGoingDown:boolean)=> {
-
-    if(((scrollY < circleAnimateMinimunScroll) && 
-      ((!isCircleExpanded && isGoingDown || isCircleExpanded && !isGoingDown ) || isCircleOnAnimation))) {
-      console.log("Scrolling blocked")
-      e.preventDefault();
-      return true;
-    }
-  }, [])
+  const preventScrollDefaultConditional = useCallback(
+    (
+      e: Event,
+      isCircleOnAnimation: boolean,
+      isCircleExpanded: boolean,
+      scrollY: number,
+      isGoingDown: boolean
+    ) => {
+      console.log(e);
+      if (
+        scrollY < circleAnimateMinimunScroll &&
+        ((!isCircleExpanded && isGoingDown) ||
+          (isCircleExpanded && !isGoingDown) ||
+          isCircleOnAnimation)
+      ) {
+        console.log("Scrolling blocked");
+        e.preventDefault();
+        return true;
+      }
+    },
+    []
+  );
 
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
@@ -176,14 +210,30 @@ export default function Home(props: any) {
         });
       }
       if ([" ", "ArrowDown", "PageDown", "End"].indexOf(e.key) > -1) {
-        preventScrollDefaultConditional(e, state.isCircleOnAnimation, state.isCircleExpanded, window.scrollY, true);
-        circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
+        preventScrollDefaultConditional(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          true
+        );
+        circleAnimateExpandLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
       }
       if (["ArrowUp", "PageUp", "Home"].indexOf(e.key) > -1) {
-
-        preventScrollDefaultConditional(e, state.isCircleOnAnimation, state.isCircleExpanded, window.scrollY, false);
-        circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
-
+        preventScrollDefaultConditional(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          false
+        );
+        circleAnimateCollapseLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
       }
       // Case End
       /*
@@ -229,20 +279,30 @@ export default function Home(props: any) {
     : "mousewheel";
 
   useEffect(() => {
-    console.log("Create effect")
+    console.log("Create effect");
     const preventDefault = (e: WheelEvent) => {
-
-      console.log("Scroolling... (trying!)")
+      console.log("Scroolling... (trying!)");
       // Prevent is scroll:
-      preventScrollDefaultConditional(e, state.isCircleOnAnimation, state.isCircleExpanded, window.scrollY, e.deltaY > 0);
+      preventScrollDefaultConditional(
+        e,
+        state.isCircleOnAnimation,
+        state.isCircleExpanded,
+        window.scrollY,
+        e.deltaY > 0
+      );
 
       // Launch circle animation:
-      if(e.deltaY > 0){
-        circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
-      }else{
-        circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded);
+      if (e.deltaY > 0) {
+        circleAnimateExpandLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
+      } else {
+        circleAnimateCollapseLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
       }
-
     };
     const preventDefaultForScrollKeys = (e: KeyboardEvent) => {
       const keys = { 37: 1, 38: 1, 39: 1, 40: 1 } as any;
@@ -255,16 +315,62 @@ export default function Home(props: any) {
 
     window.addEventListener("DOMMouseScroll", preventDefault as any, false); // older FF
     window.addEventListener(wheelEvent, preventDefault as any, wheelOpt); // modern desktop
-    window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    //window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    //window.addEventListener('touchstart', preventDefault as any, wheelOpt);
+
     //window.addEventListener("keydown", preventDefaultForScrollKeys, false);
 
     return () => {
       window.removeEventListener("DOMMouseScroll", preventDefault as any);
       window.removeEventListener(wheelEvent, preventDefault as any);
-      window.removeEventListener("touchmove", preventDefault as any);
-     // window.removeEventListener("keydown", preventDefaultForScrollKeys);
+      //window.removeEventListener("touchmove", preventDefault as any);
+      //window.removeEventListener('touchstart', preventDefault as any, wheelOpt);
+      // window.removeEventListener("keydown", preventDefaultForScrollKeys);
     };
   }, [state.isCircleExpanded, state.isCircleOnAnimation]);
+  const [touchScrollPosition, setTouchScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const preventDefault = (e: TouchEvent) => {
+      if (e.type === "touchstart") {
+        console.log("touchstart", e.touches[0].clientY);
+        setTouchScrollPosition(e.touches[0].clientY);
+      }
+      if (e.type === "touchmove") {
+        console.log("touchmove",e.touches[0].clientY);
+
+        const te = e.changedTouches[0].clientY;
+        const isUp = touchScrollPosition <= te;
+        preventScrollDefaultConditional(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          isUp
+        );
+        if (touchScrollPosition > te) {
+          circleAnimateExpandLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded
+          );
+        } else {
+          circleAnimateCollapseLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded
+          );
+        }
+        //setTouchScrollPosition(e.touches[0].clientY);
+      }
+    };
+
+    window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    window.addEventListener("touchstart", preventDefault as any, wheelOpt);
+
+    return () => {
+      window.removeEventListener("touchmove", preventDefault as any);
+      window.removeEventListener("touchstart", preventDefault as any);
+    };
+  }, [touchScrollPosition, state.isCircleOnAnimation, state.isCircleExpanded]);
 
   const variants = {
     initialWithRoute: {

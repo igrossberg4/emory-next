@@ -63,15 +63,26 @@ export default function CarouselItem(props: any) {
             className="btn"
             style={{ cursor: "pointer" }}
             onClick={async (e) => {
-              const element = document.getElementById("selected")?.querySelector('.title.header-h2');
-              if(element){
-                window.scrollTo({top: element.clientHeight + 80, behavior:'smooth'})
+              const element = document.getElementById("selected");
+              document.body.classList.add("is-scrolled");
 
+              dispatch({ type: "IS_TRANSITIONING", payload: true });
+              if (element) {
+                const activeElement = element.querySelector(".content-header__container");
+                activeElement?.setAttribute("data-animation", "active");
               }
               dispatch({
                 type: "GOING_UP",
                 payload: true,
               });
+              setTimeout(() => {
+                dispatch({ type: "IS_TRANSITIONING", payload: false });
+              }, 600);
+              const elementHeader =  document.getElementById('header');
+              if(elementHeader){
+                elementHeader.classList.add('hide');
+              }
+
           }}
           >
             {" "}
