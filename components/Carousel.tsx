@@ -337,7 +337,9 @@ export default function EmblaCarousel({
                       }}
                       className={`embla_slide_present ${
                         page === i ? "selected" : "no_selected"
-                      } ${i < page ? "first" : ""} ${i > page ? "last" : ""} `}
+                      } ${i < page ? "first" : ""} ${i > page ? "last" : ""} ${
+                        isTransitioning ? "is-transitioning" : ""
+                      }`}
                     >
                       <div className="embla__slide">
                         <div className="embla__slide__inner">
