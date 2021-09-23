@@ -11,7 +11,7 @@ export default function SectionIntro(props:any) {
   const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`) : undefined;
 
   return (
-    <div className="section component-intro-text" style={{backgroundImage:props.background_image ?  `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(/${multipleSizesImgPrincipal.src})` : ''}}>
+    <div className="section component-intro-text" style={{backgroundImage:props.background_image ?  `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(${multipleSizesImgPrincipal.src})` : ''}}>
         <div className="container">
           <div className="row header-container">
             <div className="col-md-6">
