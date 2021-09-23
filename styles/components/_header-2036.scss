@@ -210,6 +210,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       width $scroll-down-transition-duration $pre-animation-delay $curve,
       height $scroll-down-transition-duration $pre-animation-delay $curve,
       $scroll-down-transition-duration $pre-animation-delay $curve,
+      left $scroll-down-transition-duration $pre-animation-delay $curve,
       bottom $scroll-down-transition-duration $pre-animation-delay $curve,
       margin-bottom $scroll-down-transition-duration $pre-animation-delay $curve,
       transform $scroll-down-transition-duration $pre-animation-delay $curve,
