@@ -10,7 +10,7 @@
     text-align: center;
 
     @include media-breakpoint-up(sm) {
-      margin-bottom: $grid-gutter-width * 2;
+      margin-bottom: 60px;
     }
 
     &:last-child {
