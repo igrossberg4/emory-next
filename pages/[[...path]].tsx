@@ -65,7 +65,7 @@ export default function Home(props: any) {
 
       const videoElement = document.getElementById('video-container');
       if(videoElement) {
-        videoElement.style.bottom = isMobile ? `${newHeight - 410}px` : undefined as any;
+        videoElement.style.bottom = isMobile ? `${newHeight - (window.innerWidth > 560 ? 430 : 410)}px` : undefined as any;
       }
     };
 
