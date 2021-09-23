@@ -20,7 +20,7 @@ export default function ImageTextOneColumn(props:any) {
           <div className="column">
             <h2 className="title header-h3">{props.header}</h2>
             <div className="floating-media">
-              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} ></MediaWithExpantion>
+              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} byline={props.media_byline}  ></MediaWithExpantion>
             </div>
             <div className="body" dangerouslySetInnerHTML={{__html:props.text}}></div>
           </div>

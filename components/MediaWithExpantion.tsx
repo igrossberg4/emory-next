@@ -91,6 +91,12 @@ export default function MediaWithExpantion(props: any) {
                     className="body"
                     dangerouslySetInnerHTML={{ __html: props.text }}
                   ></div>
+                  {
+                    props.byline ? <div
+                      className="byline"
+                      dangerouslySetInnerHTML={{ __html: props.byline }}
+                    ></div> : ''
+                  }
                 </figcaption>
               </motion.figure>
               </Fragment>
