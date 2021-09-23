@@ -14,12 +14,19 @@ export default function Header(props:any) {
     const currentScrollY = window.scrollY;
     const element =  document.getElementById('header');
     if (element) {
-      if (currentScrollY > scroll && currentScrollY < 200) {
+      if (currentScrollY > scroll) {
         element.classList.add('hide');
       } else {
-        if (currentScrollY < scroll && currentScrollY < 200) {
+        if (currentScrollY < scroll) {
           element.classList.remove('hide');
         }
+      }
+
+      // Hide the background color only on the latest pixels from top.
+      if (currentScrollY < 400) {
+        element.style.backgroundColor = 'transparent';
+      } else {
+        element.style.backgroundColor = '';
       }
     }
     setScroll(window.scrollY);
