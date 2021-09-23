@@ -111,7 +111,6 @@ export default function Home(props: any) {
       const activeElement = element.querySelector(".content-header__container");
       activeElement?.setAttribute("data-animation", "active");
     }
-    console.log("circleAnimateExpand ");
 
     setTimeout(() => {
       dispatch({ type: "IS_TRANSITIONING", payload: false });
@@ -125,7 +124,6 @@ export default function Home(props: any) {
       type: "GOING_UP",
       payload: false,
     });
-    console.log("circleAnimateCollapse");
     setTimeout(() => {
       dispatch({ type: "IS_TRANSITIONING", payload: false });
     }, 600);
@@ -162,7 +160,6 @@ export default function Home(props: any) {
         !isCircleOnAnimation &&
         isCircleExpanded
       ) {
-        console.log("Launch: circleAnimateCollapse");
         circleAnimateCollapse();
         const element =  document.getElementById('header');
         if(element){
@@ -181,14 +178,12 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
-      console.log(e);
       if (
         scrollY < circleAnimateMinimunScroll &&
         ((!isCircleExpanded && isGoingDown) ||
           (isCircleExpanded && !isGoingDown) ||
           isCircleOnAnimation)
       ) {
-        console.log("Scrolling blocked");
         e.preventDefault();
         return true;
       }
@@ -279,9 +274,8 @@ export default function Home(props: any) {
     : "mousewheel";
 
   useEffect(() => {
-    console.log("Create effect");
     const preventDefault = (e: WheelEvent) => {
-      console.log("Scroolling... (trying!)");
+
       // Prevent is scroll:
       preventScrollDefaultConditional(
         e,
@@ -333,14 +327,12 @@ export default function Home(props: any) {
   useEffect(() => {
     const preventDefault = (e: TouchEvent) => {
       if (e.type === "touchstart") {
-        console.log("touchstart", e.touches[0].clientY);
         setTouchScrollPosition(e.touches[0].clientY);
       }
       if (e.type === "touchmove") {
-        console.log("touchmove",e.touches[0].clientY);
 
         const te = e.changedTouches[0].clientY;
-        const isUp = touchScrollPosition <= te;
+        const isUp = touchScrollPosition > te;
         preventScrollDefaultConditional(
           e,
           state.isCircleOnAnimation,
@@ -348,16 +340,18 @@ export default function Home(props: any) {
           window.scrollY,
           isUp
         );
-        if (touchScrollPosition > te) {
+        if (isUp) {
           circleAnimateExpandLaunch(
             state.isCircleOnAnimation,
             state.isCircleExpanded
           );
         } else {
+          
           circleAnimateCollapseLaunch(
             state.isCircleOnAnimation,
             state.isCircleExpanded
           );
+
         }
         //setTouchScrollPosition(e.touches[0].clientY);
       }
