@@ -119,17 +119,18 @@
       }
     },
     {
-      "component": "TextLargeImage",
+      "component": "VideoQuote",
       "props": {
-        "header": "CLIFF CARRUBBA",
-        "background_image": "",
-        "text": "<p>“Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.”</p>",
+        "pretitle": "A MESSAGE FROM",
+        "title": "Cliff Carrubba",
+        "layout": "right",
+        "subtitle": "Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods",
         "img_src": "ecas_quote_3.jpg",
         "media_src": "https://vimeo.com/606052349/761757ff45",
         "media_alt": "Audio quote from Cliff Carrubba",
-        "media_type": "video",
         "media_header": "Cliff Carrubba",
-        "media_text": "Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods"
+        "media_text": "Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods",
+        "button_close_text": "Exit"
       }
     },
     {
