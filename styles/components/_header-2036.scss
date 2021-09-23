@@ -30,15 +30,20 @@
       opacity: .3;
       max-width: $round-image-size-big;
 
-      .header-inner-content__img {
-        left: 60px;
+      @include media-breakpoint-up('md') {
+        .header-inner-content__img {
+          left: 60px;
+        }
       }
+
     }
 
     // Ensure the transition of the O geos along with the slide transition speed.
     .is-transitioning & {
-      .header-inner-content__img {
-        transition: left math.div($main-carousel-transition-duration, 2) ease-in-out;
+      @include media-breakpoint-up('md') {
+        .header-inner-content__img {
+          transition: left math.div($main-carousel-transition-duration, 2) ease-in-out;
+        }
       }
     }
 
