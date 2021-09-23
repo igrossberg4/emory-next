@@ -294,7 +294,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       top: auto;
       width:110vw;
       height:110vw;
-      bottom: -100px;
+      bottom: -100px !important;
       z-index: -1;
       opacity: .5;
 
