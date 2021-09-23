@@ -251,8 +251,8 @@ export default function EmblaCarousel({
       <>
         <div
           id="carousel"
-          className={`embla embla--carousel-navigation 
-        ${!navigation ? "page-carousel" : ""} 
+          className={`embla embla--carousel-navigation
+        ${!navigation ? "page-carousel" : ""}
         ${
           index !== page
             ? `transitioning ${performTransition ? "blocked" : ""}`
@@ -393,6 +393,10 @@ export default function EmblaCarousel({
         ) : (
           ""
         )}
+        {/* Watermark is here to prevent disapperance when scrolling carousel */}
+        <div className="watermark">
+          <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="70px" height="15px"></Image>
+        </div>
       </>
     );
   }, [page, isMobile, handleKey, state.goingUp, performTransition, setPerformTransition,]);
