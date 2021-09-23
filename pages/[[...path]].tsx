@@ -149,10 +149,6 @@ export default function Home(props: any) {
         !isCircleExpanded
       ) {
         circleAnimateExpand();
-        const element =  document.getElementById('header');
-        if(element){
-          element.classList.add('hide');
-        }
       }
     },
     []
@@ -351,7 +347,7 @@ export default function Home(props: any) {
             state.isCircleExpanded
           );
         } else {
-          
+
           circleAnimateCollapseLaunch(
             state.isCircleOnAnimation,
             state.isCircleExpanded
