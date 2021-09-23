@@ -89,18 +89,18 @@
       }
     },
     {
-      "component": "TextLargeImage",
+      "component": "VideoQuote",
       "props": {
-        "header": "JERICHO BROWN",
-        "background_image": "",
-        "text": "<p>“I always feel like if the art is well done, then I'll survive. And I know I'll survive because I've made a beautiful thing.”</p>",
+        "pretitle": "A MESSAGE FROM",
+        "title": "Jericho Brown",
         "layout": "left",
+        "subtitle": "Charles Howard Candler Professor of English and Creative Writing; Director, Creative Writing Program",
         "img_src": "ecas_quote_2.jpg",
         "media_src": "https://vimeo.com/605964280/949e734bc8",
         "media_alt": "A video of a quote by Jericho Brown",
-        "media_type": "video",
         "media_header": "Jericho Brown",
-        "media_text": "Charles Howard Candler Professor of English and Creative Writing; Director, Creative Writing Program"
+        "media_text": "Charles Howard Candler Professor of English and Creative Writing; Director, Creative Writing Program",
+        "button_close_text": "Exit"
       }
     },
     {
