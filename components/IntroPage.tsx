@@ -71,7 +71,7 @@ export default function IntroPage(props: any) {
     }
 
     if (props.active) {
-      if (state.goingUp) {
+      if (state.isCircleExpanded) {
         document.body.classList.add("is-scrolled");
         document
           .getElementById("container-video")
@@ -81,7 +81,7 @@ export default function IntroPage(props: any) {
         document.body.classList.remove("is-scrolled");
       }
     }
-  }, [props.active, state.goingUp, videoPlayed]); // @ts-ignore
+  }, [props.active, state.isCircleExpanded, videoPlayed]); // @ts-ignore
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
@@ -261,6 +261,6 @@ export default function IntroPage(props: any) {
         </div>
       </AnimateSharedLayout>
     );
-  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.goingUp]);
+  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.isCircleExpanded]);
   return memo;
 }

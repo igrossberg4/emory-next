@@ -42,6 +42,7 @@ export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const scrollVar = 5;
   const [innerHeight, setInnerHeight] = useState(
     process.browser ? window.innerHeight : 0
   );
@@ -56,37 +57,38 @@ export default function Home(props: any) {
   useEffect(() => {
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
-      document.querySelectorAll('.container-force-screen-fit-y').forEach((item) => {
-        (item as HTMLElement).style.height = `${newHeight}px`;
-      })
+      document
+        .querySelectorAll(".container-force-screen-fit-y")
+        .forEach((item) => {
+          (item as HTMLElement).style.height = `${newHeight}px`;
+        });
     };
 
     updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
 
-    return () => window.removeEventListener("resize", updateWindowDimensions)
-  }, [router.asPath])
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, [router.asPath]);
   useEffect(() => {
     const handleFocus = () => {
       if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
-          const element = document.evaluate(
-            "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
-            document,
-            null,
-            XPathResult.FIRST_ORDERED_NODE_TYPE,
-            null
-          ).singleNodeValue;
+        const element = document.evaluate(
+          "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
+          document,
+          null,
+          XPathResult.FIRST_ORDERED_NODE_TYPE,
+          null
+        ).singleNodeValue;
 
-          if(element != null){
-            let elementFocusable = document.querySelector(
-              (element as any).className
-                .split(" ")
-                .map((value : string) => `.${value}`)
-                .join("")
-            );
-            elementFocusable.focus();
-          }
-
+        if (element != null) {
+          let elementFocusable = document.querySelector(
+            (element as any).className
+              .split(" ")
+              .map((value: string) => `.${value}`)
+              .join("")
+          );
+          elementFocusable.focus();
+        }
       }
     };
     router.events.on("routeChangeComplete", handleFocus);
@@ -94,8 +96,107 @@ export default function Home(props: any) {
       router.events.off("routeChangeComplete", handleFocus);
     };
   }, [router.events, state.activeFocusXPATH]);
+
+  const circleAnimateExpand = useCallback(() => {
+    const element = document.getElementById("selected");
+    document.body.classList.add("is-scrolled");
+    dispatch({ type: "IS_TRANSITIONING", payload: true });
+
+    dispatch({
+      type: "GOING_UP",
+      payload: true,
+    });
+
+    if (element) {
+      const activeElement = element.querySelector(".content-header__container");
+      activeElement?.setAttribute("data-animation", "active");
+    }
+
+    setTimeout(() => {
+      dispatch({ type: "IS_TRANSITIONING", payload: false });
+    }, 600);
+  }, []);
+
+  const circleAnimateCollapse = useCallback(() => {
+    document.body.classList.remove("is-scrolled");
+    dispatch({ type: "IS_TRANSITIONING", payload: true });
+    dispatch({
+      type: "GOING_UP",
+      payload: false,
+    });
+    setTimeout(() => {
+      dispatch({ type: "IS_TRANSITIONING", payload: false });
+    }, 600);
+    const element = document.getElementById("selected");
+    if (element) {
+      const activeElement = element.querySelector(".content-header__container");
+      activeElement?.setAttribute("data-animation", "no-active");
+    }
+  }, []);
+
+  const circleAnimateMinimunScroll = 50;
+
+  const circleAnimateExpandLaunch = useCallback(
+    (isCircleOnAnimation: boolean, isCircleExpanded: boolean) => {
+      if (
+        window.scrollY < circleAnimateMinimunScroll &&
+        !isCircleOnAnimation &&
+        !isCircleExpanded
+      ) {
+        circleAnimateExpand();
+        const element =  document.getElementById('header');
+        if(element){
+          element.classList.add('hide');
+        }
+      }
+    },
+    []
+  );
+
+  const circleAnimateCollapseLaunch = useCallback(
+    (isCircleOnAnimation: boolean, isCircleExpanded: boolean) => {
+      if (
+        window.scrollY < circleAnimateMinimunScroll &&
+        !isCircleOnAnimation &&
+        isCircleExpanded
+      ) {
+        circleAnimateCollapse();
+        const element =  document.getElementById('header');
+        if(element){
+          element.classList.remove('hide');
+        }
+      }
+    },
+    []
+  );
+
+  const preventScrollDefaultConditional = useCallback(
+    (
+      e: Event,
+      isCircleOnAnimation: boolean,
+      isCircleExpanded: boolean,
+      scrollY: number,
+      isGoingDown: boolean
+    ) => {
+      if (
+        scrollY < circleAnimateMinimunScroll &&
+        ((!isCircleExpanded && isGoingDown) ||
+          (isCircleExpanded && !isGoingDown) ||
+          isCircleOnAnimation)
+      ) {
+        e.preventDefault();
+        return true;
+      }
+    },
+    []
+  );
+
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
+      const carouselContentElement = document.getElementById("carouselContent");
+      const carouselContentHeight = carouselContentElement?.offsetHeight
+        ? carouselContentElement.offsetHeight
+        : 0;
       const path = getElementXPath(document.activeElement);
       if (path.includes("*[@id=carousel]")) {
         dispatch({
@@ -103,28 +204,47 @@ export default function Home(props: any) {
           payload: getElementXPath(document.activeElement),
         });
       }
-      switch (e.key) {
-        case " ":
-          if (
-            window.scrollY < 5 &&
-            document.activeElement?.tagName != "BUTTON"
-          ) {
-            e.preventDefault();
-            window.scrollTo({ top: 20, behavior: "smooth" });
-          }
-          return;
-        case "ArrowRight":
-          return;
+      if ([" ", "ArrowDown", "PageDown", "End"].indexOf(e.key) > -1) {
+        preventScrollDefaultConditional(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          true
+        );
+        circleAnimateExpandLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
       }
+      if (["ArrowUp", "PageUp", "Home"].indexOf(e.key) > -1) {
+        preventScrollDefaultConditional(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          false
+        );
+        circleAnimateCollapseLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
+      }
+      // Case End
+      /*
+      if (e.key === "Home") {
+        window.scroll({ top: 0, behavior: "smooth" });
+        circleAnimateCollapse();
+      }
+*/
     },
-    [dispatch]
+    [dispatch, state.isCircleExpanded, state.isCircleOnAnimation]
   );
   useEffect(() => {
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [handleKey]); // @ts-ignore
-  const handleFocus = useCallback((e: FocusEvent) => {
-  }, []);
+  const handleFocus = useCallback((e: FocusEvent) => {}, []);
   useEffect(() => {
     document.addEventListener("focusin", handleFocus, { passive: false });
     return () => document.removeEventListener("focusin", handleFocus);
@@ -133,47 +253,118 @@ export default function Home(props: any) {
   if (process.browser && document.body.style.overflow === "hidden") {
     document.body.style.overflow = "";
   }
-  const handleScroll = useCallback(() => {
-    setInnerHeight(window.innerHeight);
-    const element = document.getElementById("selected");
-    if (element) {
-      const activeElement = element.querySelector(".content-header__container");
 
-      if (window.scrollY > 5) {
-        activeElement?.setAttribute("data-animation", "active");
-      } else {
-        activeElement?.setAttribute("data-animation", "no-active");
-      }
-    }
+  var supportsPassive = true;
+  /*try {
+    window.addEventListener(
+      "test",
+      null,
+      Object.defineProperty({}, "passive", {
+        get: function () {
+          supportsPassive = true;
+        },
+      })
+    as any);
+  } catch (e) {}*/
+  const wheelOpt = supportsPassive ? { passive: false } : false;
+  const wheelEvent = process.browser
+    ? "onwheel" in document.createElement("div")
+      ? "wheel"
+      : "mousewheel"
+    : "mousewheel";
 
-    if (
-      window.scrollY >= 5 &&
-      !document.body.classList.contains("is-scrolled")
-    ) {
-      document.body.classList.add("is-scrolled");
-
-      dispatch({
-        type: "GOING_UP",
-        payload: true,
-      });
-    } else if (
-      window.scrollY < 5 &&
-      document.body.classList.contains("is-scrolled")
-    ) {
-      document.body.classList.remove("is-scrolled");
-
-      dispatch({
-        type: "GOING_UP",
-        payload: false,
-      });
-    }
-
-    setScroll(window.scrollY);
-  }, [setScroll, setInnerHeight, scroll, state.goingUp]);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+    const preventDefault = (e: WheelEvent) => {
+
+      // Prevent is scroll:
+      preventScrollDefaultConditional(
+        e,
+        state.isCircleOnAnimation,
+        state.isCircleExpanded,
+        window.scrollY,
+        e.deltaY > 0
+      );
+
+      // Launch circle animation:
+      if (e.deltaY > 0) {
+        circleAnimateExpandLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
+      } else {
+        circleAnimateCollapseLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded
+        );
+      }
+    };
+    const preventDefaultForScrollKeys = (e: KeyboardEvent) => {
+      const keys = { 37: 1, 38: 1, 39: 1, 40: 1 } as any;
+
+      if (keys[(e as any).keyCode]) {
+        preventDefault(e as any);
+        return false;
+      }
+    };
+
+    window.addEventListener("DOMMouseScroll", preventDefault as any, false); // older FF
+    window.addEventListener(wheelEvent, preventDefault as any, wheelOpt); // modern desktop
+    //window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    //window.addEventListener('touchstart', preventDefault as any, wheelOpt);
+
+    //window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+
+    return () => {
+      window.removeEventListener("DOMMouseScroll", preventDefault as any);
+      window.removeEventListener(wheelEvent, preventDefault as any);
+      //window.removeEventListener("touchmove", preventDefault as any);
+      //window.removeEventListener('touchstart', preventDefault as any, wheelOpt);
+      // window.removeEventListener("keydown", preventDefaultForScrollKeys);
+    };
+  }, [state.isCircleExpanded, state.isCircleOnAnimation]);
+  const [touchScrollPosition, setTouchScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const preventDefault = (e: TouchEvent) => {
+      if (e.type === "touchstart") {
+        setTouchScrollPosition(e.touches[0].clientY);
+      }
+      if (e.type === "touchmove") {
+
+        const te = e.changedTouches[0].clientY;
+        const isUp = touchScrollPosition > te;
+        preventScrollDefaultConditional(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          isUp
+        );
+        if (isUp) {
+          circleAnimateExpandLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded
+          );
+        } else {
+          
+          circleAnimateCollapseLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded
+          );
+
+        }
+        //setTouchScrollPosition(e.touches[0].clientY);
+      }
+    };
+
+    window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    window.addEventListener("touchstart", preventDefault as any, wheelOpt);
+
+    return () => {
+      window.removeEventListener("touchmove", preventDefault as any);
+      window.removeEventListener("touchstart", preventDefault as any);
+    };
+  }, [touchScrollPosition, state.isCircleOnAnimation, state.isCircleExpanded]);
 
   const variants = {
     initialWithRoute: {
@@ -201,7 +392,11 @@ export default function Home(props: any) {
     return props.skipTransitionAnimations !== true ? (
       <AnimatePresence>
         <motion.div
-          className={`main-container ${props.view[1].props.isMain && !state.comesFromCarousel ? 'full_video' : ''}`}
+          className={`main-container ${
+            props.view[1].props.isMain && !state.comesFromCarousel
+              ? "full_video"
+              : ""
+          }`}
           id={state.route + " --- " + state.route}
           onAnimationComplete={() => {
             if (state.route !== "") {

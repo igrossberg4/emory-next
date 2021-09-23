@@ -8,6 +8,7 @@ import IconButton from "./IconButton";
 
 export default function Footer(props:any) {
   const [scroll, setScroll] = useState(0);
+  const [state, dispatch] = useContext(Context) as any;
 
   const prevScrollY = useRef(0);
   useEffect(() => {
@@ -33,6 +34,27 @@ export default function Footer(props:any) {
               top: 0,
               behavior: "smooth",
             });
+            setTimeout(() => {
+              document.body.classList.remove("is-scrolled");
+              dispatch({ type: "IS_TRANSITIONING", payload: true });
+              dispatch({
+                type: "GOING_UP",
+                payload: false,
+              });
+              console.log("circleAnimateCollapse");
+              setTimeout(() => {
+                dispatch({ type: "IS_TRANSITIONING", payload: false });
+              }, 600);
+              const element = document.getElementById("selected");
+              if (element) {
+                const activeElement = element.querySelector(".content-header__container");
+                activeElement?.setAttribute("data-animation", "no-active");
+              }
+              const elementHeader =  document.getElementById('header');
+              if(element){
+                element.classList.remove('hide');
+              }
+            }, 400)
           }}
         >
           <IconButton icon="chevron-up"></IconButton>
