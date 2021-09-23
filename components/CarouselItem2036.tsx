@@ -19,12 +19,15 @@ import Video from "./Video";
 import CarouselItem from "./CarouselItem";
 import { MD5 } from "object-hash";
 import { Context } from "../state/Store";
+import { useMediaQuery } from "react-responsive";
 const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
 };
 
 export default function CarouselItem2036(props: any) {
   const [state, dispatch] = useContext(Context) as any;
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+
   const memoVideo = useMemo(() =>{
     return props.children
   }, [props.children]);
@@ -105,6 +108,9 @@ export default function CarouselItem2036(props: any) {
 
         <div
           className="header-inner-content__img image round-wp"
+          style={{
+            bottom:isMobile && process.browser ? `${window.innerHeight - 430}px` : undefined
+           }}
           ref={(ref) => {}}
         >
           {props.children}
@@ -158,7 +164,7 @@ export default function CarouselItem2036(props: any) {
     ""
   )}
 </Fragment>
-  }, [props.active, state.isCircleExpanded, props.children])
+  }, [props.active, state.isCircleExpanded, props.children, isMobile])
 
   return memo ;
 }
