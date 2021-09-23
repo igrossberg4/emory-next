@@ -179,7 +179,7 @@ export default function Home(props: any) {
   }, [router.events, state.activeFocusXPATH, state.isCircleOnAnimation, state.isCircleExpanded]);
   useEffect(() => {
     const handleScroll = () =>{
-      if(window.scrollY > 0 && !state.isCircleExpanded){
+      if(window.scrollY > 0 && !document.body.classList.contains('is-scrolled')){
         circleAnimateExpand();
         const element =  document.getElementById('header');
         if(element){
