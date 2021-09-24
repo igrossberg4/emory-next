@@ -62,28 +62,31 @@ export default function CarouselItem(props: any) {
         </div>
         <div className="actions">
           <div
-            className="btn"
-            style={{ cursor: "pointer" }}
+            className="btn expand"
+            style={{ cursor:  state.isCircleExpanded ? 'auto' : "pointer" }}
             onClick={async (e) => {
-              const element = document.getElementById("selected");
-              document.body.classList.add("is-scrolled");
+              if(!state.isCircleExpanded){
+                const element = document.getElementById("selected");
+                document.body.classList.add("is-scrolled");
+  
+                dispatch({ type: "IS_TRANSITIONING", payload: true });
+                if (element) {
+                  const activeElement = element.querySelector(".content-header__container");
+                  activeElement?.setAttribute("data-animation", "active");
+                }
+                dispatch({
+                  type: "GOING_UP",
+                  payload: true,
+                });
+                setTimeout(() => {
+                  dispatch({ type: "IS_TRANSITIONING", payload: false });
+                }, 600);
+                const elementHeader =  document.getElementById('header');
+                if(elementHeader){
+                  elementHeader.classList.add('hide');
+                }
+              }
 
-              dispatch({ type: "IS_TRANSITIONING", payload: true });
-              if (element) {
-                const activeElement = element.querySelector(".content-header__container");
-                activeElement?.setAttribute("data-animation", "active");
-              }
-              dispatch({
-                type: "GOING_UP",
-                payload: true,
-              });
-              setTimeout(() => {
-                dispatch({ type: "IS_TRANSITIONING", payload: false });
-              }, 600);
-              const elementHeader =  document.getElementById('header');
-              if(elementHeader){
-                elementHeader.classList.add('hide');
-              }
 
           }}
           >
