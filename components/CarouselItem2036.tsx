@@ -133,6 +133,7 @@ export default function CarouselItem2036(props: any) {
           if(elementHeader){
             elementHeader.classList.add('hide');
           }
+          window.scrollTo({top:window.innerHeight / 4 ,behavior:'smooth'})
         }}
         }
 
