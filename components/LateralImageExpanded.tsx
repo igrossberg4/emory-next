@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 
 export default function LateralImageExpanded(props: any) {
   const router = useRouter();
-  const multipleSizesImgPrincipal = require(`../public/images/${(props.image_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  // @todo: Recover 300, 600, 1240 sizes when loaders are implemented
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.image_src)}?resize&sizes[]=2048&format=png`);
 
   return (
     <Fragment>

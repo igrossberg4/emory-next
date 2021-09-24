@@ -11,10 +11,10 @@ export default function ImageTextOneColumn(props:any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
   const [expanded, setExpanded] = useState(false);
-  const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`) : undefined;
+  const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`) : undefined;
 
   return (
-    <div className="section component-image-text-one-column" style={{backgroundImage:props.background_image ? `linear-gradient(0deg, #F5F4F5, #F5F4F5), url(/${multipleSizesImgPrincipal.src})` : ''}}>
+    <div className="section component-image-text-one-column" style={{backgroundImage:props.background_image ? `url(/${multipleSizesImgPrincipal.src})` : ''}}>
       <div className="container">
         <div className="row">
           <div className="column">

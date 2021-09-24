@@ -45,7 +45,7 @@
     content: ' ';
     //transition: background $scroll-down-transition-duration ease-in-out;
     transition: opacity $main-carousel-transition-duration ease-in-out,
-                filter $main-carousel-transition-duration/2 linear;
+                filter math.div($main-carousel-transition-duration , 2) linear;
     background-position-x: 41% !important;
     background-position-y:  calc(-100vh / 7) !important;
     top:30px;
