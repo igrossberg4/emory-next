@@ -8,6 +8,7 @@ import Image from "next/image";
 import { animateScroll } from "react-scroll";
 import SmoothScroll from "smooth-scroll";
 import { Context } from "../state/Store";
+import { imageLoader } from "./utils/imageLoader";
 
 const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
@@ -22,7 +23,7 @@ export default function CarouselItem(props: any) {
         className="content-header__container container-force-screen-fit-y"
         onTransitionEnd={(e) => {
           /*if(e.propertyName === 'padding-top'){
-            
+
 
 
             /*setTimeout(() => {
@@ -31,9 +32,9 @@ export default function CarouselItem(props: any) {
               window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
             }
             }, 1000)*/
-            
-            
-          
+
+
+
              /*if(state.isCircleExpanded && element && window.scrollY < (element as any).clientHeight + 80){
                window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
              }*/
@@ -42,6 +43,7 @@ export default function CarouselItem(props: any) {
         <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
             <Image
+              loader={imageLoader(multipleSizesImgPrincipal) as any}
               priority={true}
               src={multipleSizesImgPrincipal.src}
               alt={props.header}
@@ -90,7 +92,7 @@ export default function CarouselItem(props: any) {
           </div>
         </div>
       </div>
-    
+
   }, [state.isCircleExpanded]);
 
   return memo;
