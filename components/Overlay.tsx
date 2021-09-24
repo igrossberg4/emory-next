@@ -1,14 +1,18 @@
-import React, {Fragment, useCallback, useEffect, useState, forwardRef, useImperativeHandle} from "react";
+import React, {Fragment, useCallback, useEffect, useState, forwardRef, useImperativeHandle, useContext} from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Context } from '../state/Store';
 
 // eslint-disable-next-line react/display-name
 export const Overlay = forwardRef((props: any, ref:any) => {
   const [expanded, setExpanded] = useState(false);
+  const [state, dispatch] = useContext(Context) as any;
+
   const handleKey = useCallback((e:KeyboardEvent) => {
     if (expanded) {
       switch (e.key) {
         case "Escape":
           setExpanded(false);
+          dispatch({type:'IS_OVERLAY_EXPANDED', payload:false})
           document.body.style.overflow='';
           return;
       }
@@ -33,6 +37,7 @@ export const Overlay = forwardRef((props: any, ref:any) => {
         onClick={() => {
           setExpanded(true);
           document.body.style.overflow='hidden';
+          dispatch({type:'IS_OVERLAY_EXPANDED', payload:true})
         }}
       >
         {props.expand_action}
@@ -52,6 +57,7 @@ export const Overlay = forwardRef((props: any, ref:any) => {
               className="close-popup text-label"
               onClick={() => {
                 setExpanded(false);
+                dispatch({type:'IS_OVERLAY_EXPANDED', payload:false})
                 document.body.style.overflow='';
               }}
             >
