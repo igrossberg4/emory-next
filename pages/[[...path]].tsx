@@ -232,9 +232,9 @@ export default function Home(props: any) {
         if(document.body.classList.contains("is-scrolled") && window.scrollY < 20){
         // We need to bypass the handler for avoid a race condition and to many events to be fired.
         circleAnimateCollapse();
-        
+
         const element = document.getElementById("header");
-        
+
         if (element) {
           element.classList.add("hide");
         }
@@ -249,15 +249,15 @@ export default function Home(props: any) {
   useEffect(() => {
     const handleScroll = (e: MouseEvent) => {
       // We need to check if the mouse is in the scroll bar.
-      if(e.clientX <= window.outerWidth){
+      if(e.clientX > document.body.offsetWidth){
         // This is the calculated scroll.
         const calculatedScroll = e.offsetY- e.clientY;
         // When mouse is going down,
         if (
-          (window.scrollY > 30 || 
+          (window.scrollY > 30 ||
           calculatedScroll > 30) &&
           !document.body.classList.contains("is-scrolled")
-          
+
         ) {
           // We need to bypass the handler for avoid a race condition and to many events to be fired.
           circleAnimateExpand();
@@ -271,9 +271,9 @@ export default function Home(props: any) {
            (window.scrollY < 20 || calculatedScroll < 20)){
           // We need to bypass the handler for avoid a race condition and to many events to be fired.
           circleAnimateCollapse();
-          
+
           const element = document.getElementById("header");
-          
+
           if (element) {
             element.classList.remove("hide");
           }
@@ -325,7 +325,7 @@ export default function Home(props: any) {
         ? carouselContentElement.offsetHeight
         : 0;
       const path = getElementXPath(document.activeElement);
-      
+
       if (path.includes("*[@id=carousel]")) {
         dispatch({
           type: "ACTIVE_FOCUS_KEY_PATH",
