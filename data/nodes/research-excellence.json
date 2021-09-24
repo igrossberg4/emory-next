@@ -19,7 +19,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we need to accelerate research excellence and impact.",
-        "background_image": "bg_brain.jpg",
+        "background_image": "ecas_isolated_bg.png",
         "text": "<p>For example, the COVID-19 crisis has required our faculty to step into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",

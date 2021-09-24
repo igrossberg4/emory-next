@@ -19,7 +19,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "Faculty are the heart of Emory University.",
-        "background_image": "bg_brain.jpg",
+        "background_image": "ecas_isolated_bg.png",
         "text": "<p>Everything we accomplish—from world-changing research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. That means National Academy members but also extraordinary early and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
