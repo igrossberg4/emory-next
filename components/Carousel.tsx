@@ -396,10 +396,6 @@ export default function EmblaCarousel({
         ) : (
           ""
         )}
-        {/* Watermark is here to prevent disapperance when scrolling carousel */}
-        <div className="watermark">
-          <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="70px" height="15px"></Image>
-        </div>
       </>
     );
   }, [page, isMobile, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);

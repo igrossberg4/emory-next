@@ -185,7 +185,7 @@ export default function Home(props: any) {
         if(element){
           element.classList.add('hide');
         }
-        
+
         //circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
 
       }else{
@@ -303,7 +303,7 @@ export default function Home(props: any) {
     : "mousewheel";
 
   useEffect(() => {
-    const preventDefault = (e: WheelEvent) => {  
+    const preventDefault = (e: WheelEvent) => {
 
       // Prevent is scroll:
       preventScrollDefaultConditional(
@@ -326,7 +326,7 @@ export default function Home(props: any) {
           state.isCircleExpanded
         );
       }
-    
+
       }
     };
     const preventDefaultForScrollKeys = (e: KeyboardEvent) => {
@@ -361,7 +361,7 @@ export default function Home(props: any) {
           setTouchScrollPosition(e.touches[0].clientY);
         }
         if (e.type === "touchmove") {
-  
+
           const te = e.changedTouches[0].clientY;
           const isUp = touchScrollPosition > te;
           preventScrollDefaultConditional(
@@ -378,17 +378,17 @@ export default function Home(props: any) {
                 state.isCircleExpanded
               );
             } else {
-              
+
               circleAnimateCollapseLaunch(
                 state.isCircleOnAnimation,
                 state.isCircleExpanded
               );
-    
+
             }
           }
 
           //setTouchScrollPosition(e.touches[0].clientY);
-        
+
       }
 
     };
@@ -461,6 +461,10 @@ export default function Home(props: any) {
             view={props.view}
           ></DynamicComponentMatcher>
         </motion.div>
+        {/* Watermark is here to prevent disapperance when scrolling carousel and flickering */}
+        <div className="watermark">
+          <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="70px" height="15px"></Image>
+        </div>
       </AnimatePresence>
     ) : (
       ""
