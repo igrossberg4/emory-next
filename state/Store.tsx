@@ -26,6 +26,7 @@ const initialState = {
     scrollComesFromUser: false,
     isTransitionEnd: true,
     isCircleOnAnimation: false,
+    isOverlayExpanded: false
 }
 
 const Store = ({children}:{children:any}) => {

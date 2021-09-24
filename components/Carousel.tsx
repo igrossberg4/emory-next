@@ -209,6 +209,7 @@ export default function EmblaCarousel({
         queue.concat(slides[page + newDirection].props.view[0].props.path)
       );
       dispatch({ type: "IS_TRANSITIONING", payload: true });
+      window.scroll({ top: 0 , behavior: "smooth" });
       document.body.style.overflowY='hidden';
     },
     [changeRoute, page, slides, queue, setQueue]
@@ -231,7 +232,7 @@ export default function EmblaCarousel({
   }, [isCircleOnAnimation, performTransition, page, changeRoute]);
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
-      if (inView) {
+      if (inView && !state.isCircleExpanded) {
         switch (e.key) {
           case "ArrowLeft":
             scrollPrev();
@@ -242,12 +243,12 @@ export default function EmblaCarousel({
         }
       }
     },
-    [page, inView, scrollNext, scrollPrev]
+    [page, inView, scrollNext, scrollPrev,  state.isCircleExpanded]
   );
   useEffect(() => {
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
-  }, [inView, page, queue]); // @ts-ignore
+  }, [inView, page, queue, state.isCircleExpanded]); // @ts-ignore
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const memo = useMemo(() => {
     return (
@@ -288,7 +289,6 @@ export default function EmblaCarousel({
                 no-repeat`};
               }
             `} embla__viewport`}
-            ref={refViewport}
             key={"viewPort"}
           >
             <div>
@@ -321,7 +321,7 @@ export default function EmblaCarousel({
                   return (
                     <div
                       key={MD5(value) + i.toString()}
-
+                      ref={page === i ? refViewport : undefined}
                       id={page === i && !performTransition ? "selected" : ""}
                       style={{
                         transform: `translateX(${
