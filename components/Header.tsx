@@ -14,7 +14,7 @@ export default function Header(props:any) {
     const currentScrollY = window.scrollY;
     const element =  document.getElementById('header');
     // Offset from top (in pixels) where the header will be always visible.
-    const scrollOffset = 200;
+    const scrollOffset = 400;
 
     if (element) {
       if (currentScrollY > scrollOffset) {
