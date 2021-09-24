@@ -9,6 +9,7 @@ export const Overlay = forwardRef((props: any, ref:any) => {
       switch (e.key) {
         case "Escape":
           setExpanded(false);
+          document.body.style.overflow='';
           return;
       }
     }
