@@ -1,6 +1,7 @@
 import React, {useContext } from "react";
 import Image from "next/image";
 import MediaWithExpantion from "./MediaWithExpantion";
+import { imageLoader } from "./utils/imageLoader";
 
 export default function TextImageBg(props:any) {
   const multipleSizesImgPrincipal = require(`../public/images/${(props.background_image)}?resiz&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
