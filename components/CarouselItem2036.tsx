@@ -143,6 +143,10 @@ export default function CarouselItem2036(props: any) {
     </div>
     <div
       className="btn after-expand"
+      style={{cursor:'pointer'}}
+      onClick={() =>{
+        window.scrollTo({top:window.innerHeight / 4 ,behavior:'smooth'});
+      }}
 
     >
       {" "}
