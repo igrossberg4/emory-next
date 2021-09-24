@@ -337,9 +337,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       @extend .header-xlarge;
       line-height: 0.9em;
       letter-spacing: 0;
-      // The typography is not properly centered on its own axis.
-      // 0.17em is the correction needed to make it optically centered.
-      margin: 12px 0 calc(32px - 0.17em) 0;
     }
 
     .title_expanded {
