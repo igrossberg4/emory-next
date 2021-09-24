@@ -101,7 +101,7 @@ export default function Home(props: any) {
         // If we are on ~top
         if (window.scrollY < circleAnimateMinimunScroll && circleAnimatePreventScrollEnabled) {
           // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled):
-          // window.scroll({ top: window.innerHeight/4 , behavior: "smooth" });
+          window.scroll({ top: window.innerHeight/4 , behavior: "smooth" });
         }
       }
     },
@@ -128,7 +128,7 @@ export default function Home(props: any) {
         // If we are on ~top:
         if (window.scrollY < 200 && circleAnimatePreventScrollEnabled) {
           // Scroll automatically to top bit as the human scroll is frozen (to behave similar but controlled):
-          // window.scroll({ top: 0 , behavior: "smooth" });
+           // window.scroll({ top: 0 , behavior: "smooth" });
         }
       }
     },
