@@ -10,11 +10,6 @@ export default function TextBg(props:any) {
   // @todo: Recover 300, 600, 1240 sizes when loaders are implemented
   const multipleSizesImgPrincipal = require(`../public/images/${(props.image_src)}?resize&sizes[]=2048&format=png`);
 
-  // Sample loader
-  const imageLoader = ({ src, width }) => {
-    return `/implement-loader/${src}${width}`;
-  };
-
   return (
     <div className="text-bg">
       <Image alt='' src={ multipleSizesImgPrincipal.src } layout="fill" className="textbg__bg"></Image>
