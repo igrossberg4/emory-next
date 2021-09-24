@@ -89,12 +89,21 @@ export default function Home(props: any) {
 
   const circleAnimateExpandLaunch = useCallback(
     (isCircleOnAnimation: boolean, isCircleExpanded: boolean) => {
+
+      const circleAnimateMinimunScroll = 50;
+
       if (
         window.scrollY < circleAnimateMinimunScroll &&
         !isCircleOnAnimation &&
         !isCircleExpanded
       ) {
         circleAnimateExpand();
+
+        // If we are on ~top
+        if (window.scrollY < circleAnimateMinimunScroll && circleAnimatePreventScrollEnabled) {
+          // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled):
+          window.scroll({ top: window.innerHeight/5 , behavior: "smooth" });
+        }
       }
     },
     []
@@ -102,20 +111,31 @@ export default function Home(props: any) {
 
   const circleAnimateCollapseLaunch = useCallback(
     (isCircleOnAnimation: boolean, isCircleExpanded: boolean) => {
+
+      const circleAnimateMinimunScroll = 200;
+
       if (
         window.scrollY < circleAnimateMinimunScroll &&
         !isCircleOnAnimation &&
         isCircleExpanded
       ) {
+
         circleAnimateCollapse();
         const element =  document.getElementById('header');
         if(element){
           element.classList.remove('hide');
         }
+
+        // If we are on ~top:
+        if (window.scrollY < 200 && circleAnimatePreventScrollEnabled) {
+          // Scroll automatically to top bit as the human scroll is frozen (to behave similar but controlled):
+          window.scroll({ top: 0 , behavior: "smooth" });
+        }
       }
     },
     []
   );
+
   // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
   const spring = {
     type: "tween",
@@ -199,7 +219,12 @@ export default function Home(props: any) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [state.isCircleExpanded, state.isCircleOnAnimation, router.asPath]); // @ts-ignore
 
-  const preventScrollDefaultConditional = useCallback(
+  const circleAnimatePreventScrollEnabled = true;
+
+  /**
+   * Prevent scroll on circle animation.
+   */
+  const circleAnimatePreventScroll = useCallback(
     (
       e: Event,
       isCircleOnAnimation: boolean,
@@ -207,7 +232,9 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
+
       if (
+        circleAnimatePreventScrollEnabled &&
         scrollY < circleAnimateMinimunScroll &&
         ((!isCircleExpanded && isGoingDown) ||
           (isCircleExpanded && !isGoingDown) ||
@@ -234,7 +261,7 @@ export default function Home(props: any) {
         });
       }
       if ([" ", "ArrowDown", "PageDown", "End"].indexOf(e.key) > -1) {
-        preventScrollDefaultConditional(
+        circleAnimatePreventScroll(
           e,
           state.isCircleOnAnimation,
           state.isCircleExpanded,
@@ -247,7 +274,7 @@ export default function Home(props: any) {
         );
       }
       if (["ArrowUp", "PageUp", "Home"].indexOf(e.key) > -1) {
-        preventScrollDefaultConditional(
+        circleAnimatePreventScroll(
           e,
           state.isCircleOnAnimation,
           state.isCircleExpanded,
@@ -306,7 +333,7 @@ export default function Home(props: any) {
     const preventDefault = (e: WheelEvent) => {  
 
       // Prevent is scroll:
-      preventScrollDefaultConditional(
+      circleAnimatePreventScroll(
         e,
         state.isCircleOnAnimation,
         state.isCircleExpanded,
@@ -364,7 +391,7 @@ export default function Home(props: any) {
   
           const te = e.changedTouches[0].clientY;
           const isUp = touchScrollPosition > te;
-          preventScrollDefaultConditional(
+          circleAnimatePreventScroll(
             e,
             state.isCircleOnAnimation,
             state.isCircleExpanded,
