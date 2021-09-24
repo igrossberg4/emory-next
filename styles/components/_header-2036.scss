@@ -291,9 +291,9 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     margin-bottom: 0;
     max-height: 0;
     opacity: 0;
-    transition: opacity $scroll-down-transition-duration ease-out,
-                max-height $scroll-down-transition-duration ease-out,
-                margin $scroll-down-transition-duration ease-out;
+    transition: opacity math.div($scroll-down-transition-duration, 2) ease-out,
+                max-height math.div($scroll-down-transition-duration, 2) ease-out,
+                margin math.div($scroll-down-transition-duration, 2) ease-out;
   }
 
   // ANIMATION ACTIVE
