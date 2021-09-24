@@ -200,6 +200,8 @@ export default function Home(props: any) {
           );
         }
         dispatch({ type: "IS_TRANSITIONING", payload: false });
+        dispatch({type: 'IS_OVERLAY_EXPANDED', payload:false});
+
       }, 300);
     };
 
@@ -443,15 +445,6 @@ export default function Home(props: any) {
         }
       }
     };
-    const preventDefaultForScrollKeys = (e: KeyboardEvent) => {
-      const keys = { 37: 1, 38: 1, 39: 1, 40: 1 } as any;
-
-      if (keys[(e as any).keyCode]) {
-        preventDefault(e as any);
-        return false;
-      }
-    };
-
     window.addEventListener("DOMMouseScroll", preventDefault as any, false); // older FF
     window.addEventListener(wheelEvent, preventDefault as any, wheelOpt); // modern desktop
     //window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile

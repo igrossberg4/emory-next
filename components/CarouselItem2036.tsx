@@ -113,54 +113,41 @@ export default function CarouselItem2036(props: any) {
       className="btn before-expand"
       style={{ cursor: "pointer" }}
       onClick={(e) => {
-        const element = document.getElementById("selected");
-        document.body.classList.add("is-scrolled");
+        if(!state.isCircleExpanded){
+          const element = document.getElementById("selected");
+          document.body.classList.add("is-scrolled");
+  
+          dispatch({ type: "IS_TRANSITIONING", payload: true });
+          if (element) {
+            const activeElement = element.querySelector(".content-header__container");
+            activeElement?.setAttribute("data-animation", "active");
+          }
+          dispatch({
+            type: "GOING_UP",
+            payload: true,
+          });
+          setTimeout(() => {
+            dispatch({ type: "IS_TRANSITIONING", payload: false });
+          }, 600);
+          const elementHeader =  document.getElementById('header');
+          if(elementHeader){
+            elementHeader.classList.add('hide');
+          }
+          window.scrollTo({top:window.innerHeight / 4 ,behavior:'smooth'})
+        }}
+        }
 
-        dispatch({ type: "IS_TRANSITIONING", payload: true });
-        if (element) {
-          const activeElement = element.querySelector(".content-header__container");
-          activeElement?.setAttribute("data-animation", "active");
-        }
-        dispatch({
-          type: "GOING_UP",
-          payload: true,
-        });
-        setTimeout(() => {
-          dispatch({ type: "IS_TRANSITIONING", payload: false });
-        }, 600);
-        const elementHeader =  document.getElementById('header');
-        if(elementHeader){
-          elementHeader.classList.add('hide');
-        }
-      }}
     >
       {" "}
       {props.about_before_scroll}
     </div>
     <div
       className="btn after-expand"
-      style={{ cursor: "pointer" }}
-      onClick={(e) => {
-        const element = document.getElementById("selected");
-        document.body.classList.add("is-scrolled");
-
-        dispatch({ type: "IS_TRANSITIONING", payload: true });
-        if (element) {
-          const activeElement = element.querySelector(".content-header__container");
-          activeElement?.setAttribute("data-animation", "active");
-        }
-        dispatch({
-          type: "GOING_UP",
-          payload: true,
-        });
-        setTimeout(() => {
-          dispatch({ type: "IS_TRANSITIONING", payload: false });
-        }, 600);
-        const elementHeader =  document.getElementById('header');
-        if(elementHeader){
-          elementHeader.classList.add('hide');
-        }
+      style={{cursor:'pointer'}}
+      onClick={() =>{
+        window.scrollTo({top:window.innerHeight / 4 ,behavior:'smooth'});
       }}
+
     >
       {" "}
       {props.button_scroll }
@@ -171,7 +158,7 @@ export default function CarouselItem2036(props: any) {
     ""
   )}
 </Fragment>
-  }, [props.active, props.children, isMobile])
+  }, [props.active, props.children, isMobile, state.isCircleExpanded])
 
   return memo ;
 }
