@@ -13,20 +13,22 @@ export default function Header(props:any) {
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
     const element =  document.getElementById('header');
-    if (element) {
-      if (currentScrollY > scroll) {
-        element.classList.add('hide');
-      } else {
-        if (currentScrollY < scroll) {
-          element.classList.remove('hide');
-        }
-      }
+    // Offset from top (in pixels) where the header will be always visible.
+    const scrollOffset = 200;
 
-      // Hide the background color only on the latest pixels from top.
-      if (currentScrollY < 400) {
-        element.style.backgroundColor = 'transparent';
+    if (element) {
+      if (currentScrollY > scrollOffset) {
+        if (currentScrollY > scroll) {
+          element.classList.add('hide');
+        } else {
+          if (currentScrollY < scroll) {
+            element.classList.remove('hide');
+            element.style.backgroundColor = 'white';
+          }
+        }
       } else {
-        element.style.backgroundColor = '';
+        element.classList.remove('hide');
+        element.style.backgroundColor = 'transparent';
       }
     }
     setScroll(window.scrollY);
