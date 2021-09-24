@@ -229,8 +229,8 @@ export default function Home(props: any) {
         //circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
 
       }else{
-        if(state.isCircleExpanded){
-          //circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
+        if(state.isCircleExpanded && window.scrollY < 30){
+          circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded, state.isOverlayExpanded)
         const element = document.getElementById("header");
         if (element) {
           element.classList.add("hide");
@@ -239,7 +239,7 @@ export default function Home(props: any) {
     }
     };
     handleScroll();
-    //window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [router.asPath]); // @ts-ignore
 
