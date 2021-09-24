@@ -9,7 +9,7 @@ import IconButton from "./IconButton";
 export default function Audio(props: any) {
   const audioRef = useRef<HTMLAudioElement>();
   const [isPlaying, setPlaying] = useState(false);
-  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
 
   return (
     <div className="section audio">
