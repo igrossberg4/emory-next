@@ -220,18 +220,19 @@ export default function Home(props: any) {
         window.scrollY > 49 &&
         !document.body.classList.contains("is-scrolled")
       ) {
+        // We need to bypass the handler for avoid a race condition and to many events to be fired.
         circleAnimateExpand();
         const element =  document.getElementById('header');
         if(element){
           element.classList.add('hide');
         }
-
-        //circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
-
       }else{
-        if(state.isCircleExpanded && window.scrollY < 30){
-          circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded, state.isOverlayExpanded)
+        if(document.body.classList.contains("is-scrolled") && window.scrollY < 20){
+        // We need to bypass the handler for avoid a race condition and to many events to be fired.
+        circleAnimateCollapse();
+        
         const element = document.getElementById("header");
+        
         if (element) {
           element.classList.add("hide");
         }
@@ -239,9 +240,54 @@ export default function Home(props: any) {
     }
     };
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    //window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [router.asPath]); // @ts-ignore
+  // The effect for compute mousedown and mouseup event for using scroll bar.
+  useEffect(() => {
+    const handleScroll = (e: MouseEvent) => {
+      // We need to check if the mouse is in the scroll bar.
+      if(e.clientX <= window.outerWidth){
+        // This is the calculated scroll.
+        const calculatedScroll = e.offsetY- e.clientY;
+        // When mouse is going down,
+        if (
+          (window.scrollY > 30 || 
+          calculatedScroll > 30) &&
+          !document.body.classList.contains("is-scrolled")
+          
+        ) {
+          // We need to bypass the handler for avoid a race condition and to many events to be fired.
+          circleAnimateExpand();
+          const element =  document.getElementById('header');
+          if(element){
+            element.classList.add('hide');
+          }
+        }else{
+          // If mouse is going up.
+          if(document.body.classList.contains("is-scrolled") &&
+           (window.scrollY < 20 || calculatedScroll < 20)){
+          // We need to bypass the handler for avoid a race condition and to many events to be fired.
+          circleAnimateCollapse();
+          
+          const element = document.getElementById("header");
+          
+          if (element) {
+            element.classList.remove("hide");
+          }
+        }
+      }
+      }
+      /**/
+    };
+    window.addEventListener("mousedown", handleScroll, { passive: true });
+    window.addEventListener("mouseup", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("mouseup", handleScroll);
+      window.removeEventListener("mousedown", handleScroll)
+    };
+  }, [router.asPath]);
 
   const circleAnimatePreventScrollEnabled = true;
 
