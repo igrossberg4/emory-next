@@ -199,25 +199,18 @@ export default function Home(props: any) {
   }, [router.events, state.activeFocusXPATH, state.isCircleOnAnimation, state.isCircleExpanded]);
   useEffect(() => {
     const handleScroll = () =>{
-      if(window.scrollY > 0 && !document.body.classList.contains('is-scrolled')){
+      if(window.scrollY > 49 && !document.body.classList.contains('is-scrolled')){
         circleAnimateExpand();
         const element =  document.getElementById('header');
         if(element){
           element.classList.add('hide');
         }
-        
-        //circleAnimateExpandLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
-
-      }else{
-        if(state.isCircleExpanded){
-          //circleAnimateCollapseLaunch(state.isCircleOnAnimation, state.isCircleExpanded)
-        }
       }
     }
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    //window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [state.isCircleExpanded, state.isCircleOnAnimation, router.asPath]); // @ts-ignore
+  }, [router.asPath]); // @ts-ignore
 
   const circleAnimatePreventScrollEnabled = true;
 
