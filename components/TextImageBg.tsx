@@ -3,7 +3,8 @@ import Image from "next/image";
 import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function TextImageBg(props:any) {
-  const multipleSizesImgPrincipal = require(`../public/images/${(props.background_image)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  // @todo: Recover 300, 600, 1240 sizes when loaders are implemented
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`);
 
   return (
     <div className="section text-image-bg">
