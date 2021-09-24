@@ -85,6 +85,7 @@ export default function CarouselItem(props: any) {
                 if(elementHeader){
                   elementHeader.classList.add('hide');
                 }
+                window.scrollTo({top:window.innerHeight / 4 ,behavior:'smooth'})
               }
 
 
