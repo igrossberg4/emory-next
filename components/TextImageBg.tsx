@@ -1,10 +1,10 @@
 import React, {useContext } from "react";
 import Image from "next/image";
 import MediaWithExpantion from "./MediaWithExpantion";
+import { imageLoader } from "./utils/imageLoader";
 
 export default function TextImageBg(props:any) {
-  // @todo: Recover 300, 600, 1240 sizes when loaders are implemented
-  const multipleSizesImgPrincipal = require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`);
+  const multipleSizesImgPrincipal = require(`../public/images/${(props.background_image)}?resiz&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
 
   return (
     <div className="section text-image-bg">
@@ -15,7 +15,7 @@ export default function TextImageBg(props:any) {
               <div className="text-image-bg__image">
                 <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} byline={props.media_byline} ></MediaWithExpantion>
                 <div className="text-image-bg__bg">
-                  <Image alt="" src={multipleSizesImgPrincipal.src} layout="fill"></Image>
+                  <Image loader={imageLoader(multipleSizesImgPrincipal) as any} alt="" src={multipleSizesImgPrincipal.src} layout="fill"></Image>
                 </div>
               </div>
             </div>
