@@ -13,7 +13,7 @@ export default function TextBg(props:any) {
 
   return (
     <div className="text-bg">
-      <Image alt='' loader={imageLoader} src={ multipleSizesImgPrincipal.src } layout="fill" className="textbg__bg"></Image>
+      <Image alt='' loader={imageLoader(multipleSizesImgPrincipal) as any} src={ multipleSizesImgPrincipal.src } layout="fill" className="textbg__bg"></Image>
       <div className="text-bg__overlay"></div>
       <div className="container">
         <div className="row">
