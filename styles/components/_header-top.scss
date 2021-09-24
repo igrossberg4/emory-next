@@ -201,7 +201,9 @@
 
     .title {
       @extend .header-xlarge;
-      margin: 24px 0 0 0;
+      // The typography is not properly centered on its own axis.
+      // 0.17em is the correction needed to make it optically centered.
+      margin: 24px 0 calc(24px - 0.17em) 0;
       max-height: 100em;
     }
 
