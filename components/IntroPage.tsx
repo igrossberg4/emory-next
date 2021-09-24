@@ -96,7 +96,7 @@ export default function IntroPage(props: any) {
                 ""
               ) : (
                 <Fragment>
-                  {videoRef?.played && playing ? (
+                  {videoRef?.played && playing && !state.isCircleExpanded ? (
                     <div
                       className="mute_button btn text-label"
                       style={{ cursor: "pointer" }}
@@ -164,7 +164,7 @@ export default function IntroPage(props: any) {
                         ref={(ref) => (reftoAnimation.current = ref as any)}
                       >
                         <Video
-                          muted={muted}
+                          muted={muted || state.isCircleExpanded}
                           autoPlay={videoPlayed != undefined && !userPlayVideo &&  props.active}
                           loop={true}
                           {...props}
