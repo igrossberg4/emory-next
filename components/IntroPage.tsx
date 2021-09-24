@@ -129,35 +129,38 @@ export default function IntroPage(props: any) {
                         }`}
                         onClick={(e) => {
                           {
-                            if (videoPlayed) {
-                              dispatch({
-                                type: "VIDEO_PLAYED",
-                                payload: undefined,
-                              });
-                              setMuted(false);
-                              setSkipped(false);
-                              document.body.classList.add("full_video");
-                              document.body
-                                .querySelector(".main-container")
-                                ?.classList.add("full_video");
-                                document.body.querySelector('container-video-intro')?.classList.add('video-no-played')
-
-                              return;
-                            } else {
-                              dispatch({
-                                type: "VIDEO_PLAYED",
-                                payload: true,
-                              });
-                              setSkipped(true);
-                              setMuted(true);
-
-                              document.body.classList.remove("full_video");
-                              document.body
-                                .querySelector(".main-container")
-                                ?.classList.remove("full_video");
-                                document.body.querySelector('container-video-intro')?.classList.remove('video-no-played')
-
+                            if(!state.isCircleExpanded){
+                              if (videoPlayed) {
+                                dispatch({
+                                  type: "VIDEO_PLAYED",
+                                  payload: undefined,
+                                });
+                                setMuted(false);
+                                setSkipped(false);
+                                document.body.classList.add("full_video");
+                                document.body
+                                  .querySelector(".main-container")
+                                  ?.classList.add("full_video");
+                                  document.body.querySelector('container-video-intro')?.classList.add('video-no-played')
+  
+                                return;
+                              } else {
+                                dispatch({
+                                  type: "VIDEO_PLAYED",
+                                  payload: true,
+                                });
+                                setSkipped(true);
+                                setMuted(true);
+  
+                                document.body.classList.remove("full_video");
+                                document.body
+                                  .querySelector(".main-container")
+                                  ?.classList.remove("full_video");
+                                  document.body.querySelector('container-video-intro')?.classList.remove('video-no-played')
+  
+                              }
                             }
+
                           }
                         }}
                         //className="video-circle"
