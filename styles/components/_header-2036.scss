@@ -355,5 +355,9 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     .pretitle {
       margin-bottom: 15px;
     }
+
+    video {
+      pointer-events: none;
+    }
   }
 }
