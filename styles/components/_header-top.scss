@@ -201,7 +201,7 @@
 
     .title {
       @extend .header-xlarge;
-      margin: math.div($grid-gutter-width, 2) 0;
+      margin: 24px 0 0 0;
       max-height: 100em;
     }
 
