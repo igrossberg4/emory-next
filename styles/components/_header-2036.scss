@@ -298,8 +298,9 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     // Rotated mobile devices!!!
     @media (max-width: map-get($grid-breakpoints, 'md')) and (orientation: landscape) {
-      margin-left: -100px !important;
-      margin-bottom: 70px !important;
+      margin-left: -100px;
+      margin-bottom: 0px;
+      bottom: calc(50% - 60px);
     }
 
     video {

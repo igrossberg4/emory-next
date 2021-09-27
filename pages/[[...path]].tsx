@@ -17,6 +17,7 @@ import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squo
 import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
+import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
 
 function getElementXPath(element: any): string {
   if (element.id) {
@@ -159,7 +160,7 @@ export default function Home(props: any) {
       const videoElement = document.getElementById("video-container");
       if (videoElement) {
         videoElement.style.bottom = isMobile
-          ? `${newHeight - (window.innerWidth > 560 ? 430 : 410)}px`
+          ? videoContainerBottomCalculator(window, document)
           : (undefined as any);
       }
     };
