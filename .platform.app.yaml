@@ -11,30 +11,48 @@ hooks:
     # The build hook runs after container dependencies are available.
     # No services are available but the disk is writeable.
     build: |
+        set -x
         npm install
         npm run build
         # Move committed files in soon-to-be mounts into temp directory.
         chmod +x handle_mounts.sh
         ./handle_mounts.sh
+        ls -al /app/out
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
     # The site is not accepting requests while this script runs so keep it
     # fast.
     deploy: |
+        set -x
         # Move committed files from temp directory back into mounts.
         ./handle_mounts.sh
+        ls -al /app/out
 
-# The configuration of the application when it is exposed to the web.
+# Configure the web server to serve our static site.
 web:
     commands:
-        start: npx next start -p $PORT
+        # Run a no-op process that uses no CPU resources, since this is a static site.
+        start: sleep infinity
+    locations:
+        "/":
+            root: "out"
+            index:
+                - "index.html"
+            rules:
+                # Add ".html" to URLs without any file extension.
+                # This is required for links and routes inside the next static
+                # app to work properly.
+                '^([^.]+)$':
+                    passthru: '/$1.html'
+
 
 # The size of the persistent disk of the application (in MB).
 disk: 5120
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    # Next.js will try to cache files, so it must be writeable.
-    '/.next':
+    # `npm run build` internally leverages `next export` which outputs a static
+    # build artifact to the "out" folder.
+    "/out":
         source: local
-        source_path: 'next'
+        source_path: "out"
