@@ -43,24 +43,35 @@ npm run dev
 * Open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
 ## Development using docker and docker compose
-
+* Requirements.
+Make it's required for run the steps using the Makefile
 * Setup build:
 ```bash
-docker-compose up -d
+make setup
 ```
-* Check the development server at http://localhost:3000/
-  
-* Check the production server at http://localhost:8080/
-  
-* Regenerate production build:
-```bash
-docker-compose up -d --build
-```
-or
-```bash
-docker-compose exec next_prod npm run build
-```
+This command allows the development server to be up
 
+Check the development server at http://localhost:3000/
+* Setup production build and serve it:
+```bash
+make setup-prod
+```
+This command performs a static build of the project and serves it with a basic http server.
+
+Check the production server at http://localhost:8080/
+* Make artifact
+```bash
+make setup-prod
+```
+This command builds the production artifact but doesn't serve it into any server. 
+
+* Regenerate development build:
+If the command make setup-prod was run while the development one is in use, it's required to run ```make setup`` again for serve the development server.
+
+* Stop process:
+```bash
+make stop
+```
 * If not server or process is present at port 8080, check the logs with:
 ```bash
 docker-compose logs next_prod
