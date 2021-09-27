@@ -193,6 +193,7 @@ export default function Home(props: any) {
       }
       setTimeout(() => {
         document.body.style.overflowY = "visible";
+        document.body.style.paddingRight = "";
         if (window.scrollY > 0) {
           circleAnimateExpandLaunch(
             state.isCircleOnAnimation,
