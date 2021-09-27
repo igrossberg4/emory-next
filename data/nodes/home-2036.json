@@ -69,7 +69,9 @@
       "component": "TextBg",
       "props": {
         "text": "EMORY IS FOCUSING ON THREE CORE AREAS FOR 2O36.",
-        "image_src": "about_divider_bg.jpg"
+        "image_src": "about_divider_bg.jpg",
+        "cta_link": "http://placeholder.link",
+        "cta_text": "Custom link"
       }
     },
     {

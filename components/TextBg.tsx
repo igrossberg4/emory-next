@@ -19,11 +19,15 @@ export default function TextBg(props:any) {
         <div className="row">
           <div className=" col-md-9">
             <h2 className="header-h2">{props.text}</h2>
-            <div className="text-bg__cta">
-              <Link  href="http://placeholder-link.com">
-                <a className="link-button">Support the campaign</a>
-              </Link>
-            </div>
+            {
+              props.cta_link && props.cta_text ?
+              <div className="text-bg__cta">
+                <Link  href={ props.cta_link }>
+                  <a className="link-button">{props.cta_text}</a>
+                </Link>
+              </div>
+              : ''
+            }
           </div>
         </div>
       </div>
