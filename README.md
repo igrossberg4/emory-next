@@ -66,7 +66,10 @@ make artifact
 This command builds the production artifact but doesn't serve it into any server. 
 
 * Regenerate development build:
-If the command make setup-prod was run while the development one is in use, it's required to run ```make setup`` again for serve the development server.
+```bash
+make setup
+```
+If the command make setup-prod was run while the development one is in use, it's required to run again for serve the development server.
 
 * Stop process:
 ```bash
