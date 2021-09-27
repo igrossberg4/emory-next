@@ -49,6 +49,25 @@ a {
   }
 }
 
+.link-button {
+  border-radius: 20px/50%;
+  background-color: $color_white;
+  box-shadow: $default-box-shadow;
+  transition: $default-transition;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: $font-size-xsm;
+  letter-spacing: 0.15em;
+
+  &:hover {
+    box-shadow: $default-box-shadow--hover;
+  }
+  
+  @include media-breakpoint-up(sm) {
+    padding: 12px 30px;
+  }
+}
+
 .round-wp{
   display: inline-block;
   overflow: hidden;
