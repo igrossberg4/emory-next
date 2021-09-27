@@ -105,6 +105,11 @@ export default function CarouselItem2036(props: any) {
             {props.header_expanded}
           </div>
           <div className="subtitle text-body--lg">{props.text}</div>
+          <div className="title_cta">
+            <Link  href="http://placeholder-link.com">
+              <a className="link-button">Support the campaign</a>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -116,7 +121,7 @@ export default function CarouselItem2036(props: any) {
         if(!state.isCircleExpanded){
           const element = document.getElementById("selected");
           document.body.classList.add("is-scrolled");
-  
+
           dispatch({ type: "IS_TRANSITIONING", payload: true });
           if (element) {
             const activeElement = element.querySelector(".content-header__container");

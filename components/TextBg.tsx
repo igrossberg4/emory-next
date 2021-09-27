@@ -6,6 +6,7 @@ import { Context } from "../state/Store";
 import Image from "next/image";
 import MediaWithExpantion from "./MediaWithExpantion";
 import { imageLoader } from "./utils/imageLoader";
+import Link from "next/link";
 
 export default function TextBg(props:any) {
   const multipleSizesImgPrincipal = require(`../public/images/${(props.image_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
@@ -18,6 +19,11 @@ export default function TextBg(props:any) {
         <div className="row">
           <div className=" col-md-9">
             <h2 className="header-h2">{props.text}</h2>
+            <div className="text-bg__cta">
+              <Link  href="http://placeholder-link.com">
+                <a className="link-button">Support the campaign</a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -142,7 +142,7 @@ export default function IntroPage(props: any) {
                                   .querySelector(".main-container")
                                   ?.classList.add("full_video");
                                   document.body.querySelector('container-video-intro')?.classList.add('video-no-played')
-  
+
                                 return;
                               } else {
                                 dispatch({
@@ -151,13 +151,13 @@ export default function IntroPage(props: any) {
                                 });
                                 setSkipped(true);
                                 setMuted(true);
-  
+
                                 document.body.classList.remove("full_video");
                                 document.body
                                   .querySelector(".main-container")
                                   ?.classList.remove("full_video");
                                   document.body.querySelector('container-video-intro')?.classList.remove('video-no-played')
-  
+
                               }
                             }
 
