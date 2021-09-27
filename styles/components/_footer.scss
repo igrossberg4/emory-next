@@ -29,10 +29,14 @@ footer[role="contentinfo"] {
     font-size: $font-size-xxlg;
     letter-spacing: .556rem;
     text-transform: uppercase;
-
+    margin-bottom: 1.5rem;
   }
 
   .footer__copyright {
     margin-top: 1.25rem;
+  }
+
+  .footer__cta {
+    margin-bottom: 4rem;
   }
 }
