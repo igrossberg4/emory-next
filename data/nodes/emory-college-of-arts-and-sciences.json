@@ -42,7 +42,7 @@
       "props": {
         "text": "EMORY COLLEGE OF ARTS AND SCIENCE IS EAGER TO PURSUE THE FOLLOWING PRIORITIES FOR 2O36.",
         "image_src": "ecas_divider_bg.jpg",
-        "cta_link": "http://placeholder.link",
+        "cta_link": "https://example.com/#placeholder",
         "cta_text": "Support College"
       }
     },
