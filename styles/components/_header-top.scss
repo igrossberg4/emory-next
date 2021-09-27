@@ -91,7 +91,11 @@
     animation: fadeIn math.div($main-carousel-transition-duration, 2) ease-in-out;
     z-index: 2;
     //transition: opacity math.div($main-carousel-transition-duration, 3) ease-in-out;
-    padding-bottom: $default-separation;
+    padding-bottom: $default-separation * 1.5;
+
+    @include media-breakpoint-up(sm) {
+      padding-bottom: $default-separation;
+    }
   }
 
   .btn {

@@ -88,8 +88,9 @@ export default function CarouselItem2036(props: any) {
           id="video-container"
           className="header-inner-content__img image round-wp"
           style={{
-            bottom:isMobile && process.browser ? `${window.innerHeight - (window.innerWidth > 560 ? 430 : 410)}px` : undefined
-           }}
+            bottom:isMobile && process.browser ? `${window.innerHeight > window.innerWidth ?
+              (window.innerHeight - 420) : (window.innerHeight - 372)}px` : undefined
+          }}
           ref={(ref) => {}}
         >
           {props.children}
