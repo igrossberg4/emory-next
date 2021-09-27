@@ -1,0 +1,58 @@
+# .platform.app.yaml
+
+# The name of this application, which must be unique within a project.
+name: app
+
+# The type key specifies the language and version for your application.
+type: 'nodejs:15'
+
+# The hooks that will be triggered when the package is deployed.
+hooks:
+    # The build hook runs after container dependencies are available.
+    # No services are available but the disk is writeable.
+    build: |
+        set -x
+        npm install
+        npm run build
+        # Move committed files in soon-to-be mounts into temp directory.
+        chmod +x handle_mounts.sh
+        ./handle_mounts.sh
+        ls -al /app/out
+    # The deploy hook runs after your application has been deployed and started.
+    # Code cannot be modified at this point but the database is available.
+    # The site is not accepting requests while this script runs so keep it
+    # fast.
+    deploy: |
+        set -x
+        # Move committed files from temp directory back into mounts.
+        ./handle_mounts.sh
+        ls -al /app/out
+
+# Configure the web server to serve our static site.
+web:
+    commands:
+        # Run a no-op process that uses no CPU resources, since this is a static site.
+        start: sleep infinity
+    locations:
+        "/":
+            root: "out"
+            index:
+                - "index.html"
+            rules:
+                # Add ".html" to URLs without any file extension.
+                # This is required for links and routes inside the next static
+                # app to work properly.
+                '^([^.]+)$':
+                    passthru: '/$1.html'
+
+
+# The size of the persistent disk of the application (in MB).
+disk: 5120
+
+# The mounts that will be performed when the package is deployed.
+mounts:
+    # `npm run build` internally leverages `next export` which outputs a static
+    # build artifact to the "out" folder.
+    "/out":
+        source: local
+        source_path: "out"
