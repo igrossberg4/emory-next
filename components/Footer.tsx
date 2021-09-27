@@ -5,6 +5,7 @@ import { Box } from "@chakra-ui/react";
 import { Context } from "../state/Store";
 import Image from "next/image";
 import IconButton from "./IconButton";
+import Link from "next/link";
 
 export default function Footer(props:any) {
   const [scroll, setScroll] = useState(0);
@@ -25,7 +26,7 @@ export default function Footer(props:any) {
   return (
     <footer role="contentinfo">
       <div className="container">
-        {scroll > 170 ? 
+        {scroll > 170 ?
         <div
           className="footer__scrolltop btn text-label"
           style={{ cursor: "pointer" }}
@@ -62,8 +63,12 @@ export default function Footer(props:any) {
         </div> : ''
 }
         <p className="footer__title">The future starts here</p>
+        <div className="footer__cta">
+          <Link  href="http://placeholder-link.com">
+            <a className="link-button">Support the campaign</a>
+          </Link>
+        </div>
         <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="95px" height="20px"></Image>
-        <p className="footer__copyright text-label">© {new Date().getFullYear()} EMORY UNIVERSITY</p>
       </div>
     </footer>
   );
