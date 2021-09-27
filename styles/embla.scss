@@ -46,10 +46,17 @@
     //transition: background $scroll-down-transition-duration ease-in-out;
     transition: opacity $main-carousel-transition-duration ease-in-out,
                 filter math.div($main-carousel-transition-duration , 2) linear;
-    background-position-x: 41% !important;
-    background-position-y:  calc(-100vh / 7) !important;
+
+    background-position-x: 38% !important;
+    background-position-y:  calc(100vh / 40) !important;
     top:30px;
-    background-size: calc(75vh * 2) !important;
+    background-size: calc(55vh * 2) !important;
+    @include media-breakpoint-up(sm) {
+      top:30px;
+      background-position-x: 41% !important;
+      background-position-y:  calc(-100vh / 7) !important;
+      background-size: calc(75vh * 2) !important;
+    }
     @include media-breakpoint-up(md) {
       background-position-x: 50% !important;
       top:30px;
@@ -140,11 +147,19 @@
 }
 
 .embla__button--prev {
-  left: 10%;
+  left: 10px;
+
+  @include media-breakpoint-up(sm) {
+    left: 10%;
+  }
 }
 
 .embla__button--next {
-  right: 10%;
+  right: 10px;
+
+  @include media-breakpoint-up(sm) {
+    right: 10%;
+  }
 }
 
 body.is-scrolled {
