@@ -24,8 +24,13 @@
 
   &.line-separator--overflowed-top-1-3 {
     &:before {
-      height: 150%;
-      top: -50%;
+      height: 170%;
+      top: -60%;
+
+      @include media-breakpoint-up(sm) {
+        height: 150%;
+        top: -50%;
+      }
     }
   }
 

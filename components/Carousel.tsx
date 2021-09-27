@@ -193,7 +193,7 @@ export default function EmblaCarousel({
           route,
           { scroll: false, shallow: false }
         );
-        
+
       } else {
         setTransitioning(false);
         setPerformTransition(false);
@@ -210,7 +210,10 @@ export default function EmblaCarousel({
       );
       dispatch({ type: "IS_TRANSITIONING", payload: true });
       window.scroll({ top: 0 , behavior: "smooth" });
+
+      const scrollbarWidth = window.innerWidth - document.body.scrollWidth;
       document.body.style.overflowY='hidden';
+      document.body.style.paddingRight=`${scrollbarWidth}px`;
     },
     [changeRoute, page, slides, queue, setQueue]
   );

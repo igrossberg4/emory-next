@@ -54,16 +54,17 @@ a {
   background-color: $color_white;
   box-shadow: $default-box-shadow;
   transition: $default-transition;
-  padding: 10px 15px;
+  padding: 8px 15px;
   text-transform: uppercase;
-  font-size: $font-size-xsm;
+  font-size: $font-size-xs;
   letter-spacing: 0.15em;
 
   &:hover {
     box-shadow: $default-box-shadow--hover;
   }
-  
+
   @include media-breakpoint-up(sm) {
+    font-size: $font-size-xsm;
     padding: 12px 30px;
   }
 }

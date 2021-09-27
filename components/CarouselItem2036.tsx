@@ -20,6 +20,7 @@ import CarouselItem from "./CarouselItem";
 import { MD5 } from "object-hash";
 import { Context } from "../state/Store";
 import { useMediaQuery } from "react-responsive";
+import { videoContainerBottomCalculator } from "./utils/videoContainerBottomCalculator";
 const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
 };
@@ -88,8 +89,8 @@ export default function CarouselItem2036(props: any) {
           id="video-container"
           className="header-inner-content__img image round-wp"
           style={{
-            bottom:isMobile && process.browser ? `${window.innerHeight - (window.innerWidth > 560 ? 430 : 410)}px` : undefined
-           }}
+            bottom: isMobile && process.browser ? videoContainerBottomCalculator(window, document) : undefined
+          }}
           ref={(ref) => {}}
         >
           {props.children}
