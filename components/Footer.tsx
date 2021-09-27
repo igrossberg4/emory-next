@@ -63,7 +63,6 @@ export default function Footer(props:any) {
 }
         <p className="footer__title">The future starts here</p>
         <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="95px" height="20px"></Image>
-        <p className="footer__copyright text-label">© {new Date().getFullYear()} EMORY UNIVERSITY</p>
       </div>
     </footer>
   );
