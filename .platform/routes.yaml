@@ -1,0 +1,20 @@
+# The routes of the project.
+#
+# Each route describes how an incoming URL is going
+# to be processed by Platform.sh.
+
+"https://{default}/":
+    type: upstream
+    upstream: "app:http"
+    redirects:
+        expires: 1d
+        paths:
+            # Remove trailing slash from routes. Combine this with rule in
+            # .platform.app.yaml to add ".html" to the URLs internally.
+            '^/([^.]+)/$':
+                to: 'https://{default}/$1'
+                regexp: true
+
+"https://www.{default}/":
+    type: redirect
+    to: "https://{default}/"
