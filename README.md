@@ -61,7 +61,7 @@ This command performs a static build of the project and serves it with a basic h
 Check the production server at http://localhost:8080/
 * Make artifact
 ```bash
-make setup-prod
+make artifact
 ```
 This command builds the production artifact but doesn't serve it into any server. 
 
