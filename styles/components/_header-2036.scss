@@ -344,6 +344,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     .title_expanded {
+      height: auto;
       max-height: 999px;
       opacity: 1;
       margin-bottom: 20px;
@@ -352,6 +353,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     .pretitle,
     .subtitle {
+      height: auto;
       max-height: 999px;
       opacity: 1;
     }
