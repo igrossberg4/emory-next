@@ -78,16 +78,16 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Emory University",
-        "title": "Student Success",
+        "title": "Student Flourishing",
         "body": "<p>Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service. In this context, supporting student success means helping them learn to be thinkers and doers, strengthen values, develop skills, learn about teamwork, and prepare them for careers as well as advanced and professional studies. Their success empowers them to contribute to the world around them in valuable and enriching ways. Emory’s top priority is helping students realize their potential, and enabling the citizens of the future to excel.</p>",
-        "read_more": "student-success",
+        "read_more": "student-flourishing",
         "tags": [],
         "layout": "left",
         "img_src": "about_priority_1.jpg",
         "media_src": "about_priority_1_popup.jpg",
         "media_alt": "Three students walk across the Quad.",
         "media_type": "image",
-        "media_header": "Student Success",
+        "media_header": "Student Flourishing",
         "media_text": "Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service.",
         "media_byline": ""
       }
