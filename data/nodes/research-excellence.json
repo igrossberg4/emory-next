@@ -18,9 +18,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts and Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "bg_brain.jpg",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "header": "In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we need to accelerate research excellence and impact.",
+        "background_image": "ecas_isolated_bg.png",
+        "text": "<p>For example, the COVID-19 crisis has required our faculty to step into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",

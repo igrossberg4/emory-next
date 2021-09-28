@@ -27,19 +27,19 @@ export default function TextImageHeader(props:any) {
                   })}
                 </div>
               }
-              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text}></MediaWithExpantion>
+              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} byline={props.media_byline} ></MediaWithExpantion>
               <div className="text-image-header__line"></div>
               <div className="body" dangerouslySetInnerHTML={{__html:props.body}}></div>
-              {props.read_more && !props.internal_link && 
+              {props.read_more && !props.internal_link &&
               <div>
               <a href={props.read_more} className="readmore text-cta">Read more</a>
               </div>}
-              {props.read_more && props.internal_link && 
+              {props.read_more && props.internal_link &&
               <div
               onClick={(e) => {
 
                 e.preventDefault();
-                const linkPrepared = props.read_more[0] !== '/' ? `/${props.read_more}` : props.read_more 
+                const linkPrepared = props.read_more[0] !== '/' ? `/${props.read_more}` : props.read_more
                 dispatch({
                   type: "SET_NAV",
                   payload: linkPrepared,

@@ -18,10 +18,6 @@ header[role="banner"] {
     transform: translateY(-100%);
   }
 
-  .is-scrolled & {
-    background: $color_white;
-  }
-
   .full_video & {
     display: none;
   }

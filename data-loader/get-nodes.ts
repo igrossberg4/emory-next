@@ -340,6 +340,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 {
                     component: "CarouselNavigation",
                     props: {
+                        isMain: nodeFinded.id === pages_list.nodeBase.id,
                         prev: !prevNode ? null : (prevNode.id !== pages_list.nodeBase.id ? `${pages_list.nodeBase.path}/${prevNode.path}` : pages_list.nodeBase.path),
                         actual: {
                             component: "DynamicComponentMatcher",

@@ -14,7 +14,8 @@ module.exports = withPlugins([
   images: {
     disableStaticImages: true,
     loader: 'imgix',
-    path: '/',
+    path: "/",
+    deviceSizes: [300, 600, 1024, 2048]
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],

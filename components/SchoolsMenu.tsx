@@ -14,7 +14,7 @@ export default function SchoolsMenu(props: any) {
         expand_action={
           <Menu>
             <MenuButton tabIndex={0} as={Button} rightIcon={<Icons icon="chevron-down" />}>
-              <span className="hide-sm">select</span> School
+              <span className="hide-sm"></span> School/Unit
             </MenuButton>
           </Menu>}
         expanded_content=

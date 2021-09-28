@@ -1,0 +1,12 @@
+.watermark {
+  opacity: 0.35;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9;
+
+  @include media-breakpoint-up(lg) {
+    bottom: 30px;
+    left: 30px;
+  }
+}

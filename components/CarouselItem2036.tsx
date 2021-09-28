@@ -19,42 +19,24 @@ import Video from "./Video";
 import CarouselItem from "./CarouselItem";
 import { MD5 } from "object-hash";
 import { Context } from "../state/Store";
+import { useMediaQuery } from "react-responsive";
+import { videoContainerBottomCalculator } from "./utils/videoContainerBottomCalculator";
 const normalize = (val: number, max: number, min: number) => {
   return (val - min) / (max - min);
 };
 
 export default function CarouselItem2036(props: any) {
   const [state, dispatch] = useContext(Context) as any;
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+
   const memoVideo = useMemo(() =>{
     return props.children
   }, [props.children]);
-  const memoActions = useMemo(() => {
-    return       <div className="actions">
-    <div
-      className="btn"
-      style={{ cursor: "pointer" }}
-      onClick={(e) => {
-        const element = document.getElementById("selected")?.querySelector('.title');
-        if(element){
-          window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
-
-        }
-        dispatch({
-          type: "GOING_UP",
-          payload: true,
-        });
-      }}
-    >
-      {" "}
-      {!state.goingUp ? props.about_before_scroll : props.button_scroll }
-    </div>
-  </div>
-  }, [state.goingUp])
   const memo = useMemo(() => {
     return  <Fragment>
   {true ? (
     <div
-      className="content-header__container header-2036 container-force-screen-fit-y"
+      className="content-header__container header-2036"
       id={`${props.active ? 'active' : ''}`}
     >
       <div className="header-inner-content">
@@ -104,44 +86,81 @@ export default function CarouselItem2036(props: any) {
         </div>
 
         <div
+          id="video-container"
           className="header-inner-content__img image round-wp"
+          style={{
+            bottom: isMobile && process.browser ? videoContainerBottomCalculator(window, document) : undefined
+          }}
           ref={(ref) => {}}
         >
-          {memoVideo}
+          {props.children}
         </div>
 
         <div className="header-inner-content__text">
           <div className="pretitle text-label">{props.about}</div>
           <h1
-            onTransitionEnd={(e) => { 
-              if(state.goingUp){
-                const element = document.getElementById("selected")?.querySelector('.title');
-                if(element && window.scrollY < (element as any).clientHeight + 80){
-                  window.scrollTo({top: element?.clientHeight + 80, behavior:'smooth'})
-                }
-                dispatch({
-                  type: "GOING_UP",
-                  payload: true,
-                });
-              }
-            }}
             className="title"
             dangerouslySetInnerHTML={{ __html: props.header }}
           ></h1>
-          <h1 className="title_expanded header-h4">
+          <div className="title_expanded">
             {props.header_expanded}
-          </h1>
+          </div>
           <div className="subtitle text-body--lg">{props.text}</div>
+          <div className="title_cta">
+            <Link  href="http://placeholder-link.com">
+              <a className="link-button">Support the campaign</a>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {memoActions}
+      <div className="actions">
+    <div
+      className="btn before-expand"
+      style={{ cursor: "pointer" }}
+      onClick={(e) => {
+        if(!state.isCircleExpanded){
+          const element = document.getElementById("selected");
+          document.body.classList.add("is-scrolled");
+
+          dispatch({ type: "IS_TRANSITIONING", payload: true });
+          if (element) {
+            const activeElement = element.querySelector(".content-header__container");
+            activeElement?.setAttribute("data-animation", "active");
+          }
+          dispatch({
+            type: "GOING_UP",
+            payload: true,
+          });
+          setTimeout(() => {
+            dispatch({ type: "IS_TRANSITIONING", payload: false });
+          }, 600);
+          const elementHeader =  document.getElementById('header');
+          if(elementHeader){
+            elementHeader.classList.add('hide');
+          }
+          window.scrollTo({top:window.innerHeight / 4 ,behavior:'smooth'})
+        }}
+        }
+
+    >
+      {" "}
+      {props.about_before_scroll}
+    </div>
+    <div
+      className="btn after-expand"
+
+    >
+      {" "}
+      {props.button_scroll }
+    </div>
+  </div>
     </div>
   ) : (
     ""
   )}
 </Fragment>
-  }, [props.active, state.goingUp, props.children])
-  
+  }, [props.active, props.children, isMobile, state.isCircleExpanded])
+
   return memo ;
 }

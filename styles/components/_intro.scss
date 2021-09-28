@@ -4,27 +4,41 @@
 
   &.video-no-played {
     .header-inner-content__img {
-      width: 100vw !important;
-      height: 100vh !important;
-      top: auto !important;
+      width: 80vw !important;
+      height: 80vh !important;
       border-radius: 50%;
-      margin: 0 !important;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
       z-index: 999 !important;
+      bottom: calc(50% - (100px / 2)) !important;
+      margin-bottom: calc(-40vh + 6px) !important;
+      position: relative;
 
       @media (orientation: portrait) {
         width: 140vh !important;
         height: 140vh !important;
+        margin-bottom: calc(-70vh + 6px) !important;
+      }
+
+      @media (orientation: portrait) and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: calc(-20vh - 12px) !important;
       }
 
       @media (orientation: landscape) {
-        width: 121vw !important;
-        height: 121vw !important;
+        width: 122vw !important;
+        height: 122vw !important;
+        margin-bottom: calc(-61vw + 6px) !important;
       }
+
+      @media (orientation: landscape) and (min-width: map-get($grid-breakpoints, 'md')) {
+        left: calc(-10.5vw - 12px) !important;
+      }
+
     }
 
     .content-header__container {
       border-radius: 0%;
-      padding: 0;
+      // padding: 0;
 
       &.wrapper {
         height: 100vh;
@@ -41,11 +55,25 @@
 
   .mute_button {
     position: absolute;
-    bottom: 50px;
-    right: 30px;
+    bottom: 18px;
+    right: 24px;
     z-index: 101;
-    width: 64px;
-    height: 64px;
+
+    .icon-button {
+      width: 48px;
+      height: 48px;
+    }
+
+
+    @include media-breakpoint-up(sm) {
+      bottom: 50px;
+      right: 30px;
+
+      .icon-button {
+        width: 64px;
+        height: 64px;
+      }
+    }
   }
 
   video {
@@ -89,7 +117,11 @@
     left: 50%;
     transform: translate(-50%, 50%);
     z-index:60;
-
+    opacity:0;
+    transition: opacity 1s;
+    &.paused{
+      opacity: 1;
+    }
     &:hover {
       background-color: rgba($color-white, .8);
     }
@@ -127,10 +159,16 @@
 
 body.full_video {
   overflow: hidden;
+}
+
+.main-container.full_video{
   .header-menu,
   .embla__button,
   .line-separator,
-  .actions {
-    display: none;
+  .actions{
+    display:none;
+  }
+  .embla_slide_present.no_selected{
+    display:none;
   }
 }

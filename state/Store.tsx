@@ -22,8 +22,11 @@ const initialState = {
     videoPlayed:process.browser ? localStorage.getItem('video_played') : 'not',
     // This properties indicates that the navigation is coming from carousel and is required for avoid video animation.
     comesFromCarousel:false,
-    goingUp: process.browser ? window.scrollY > 25 : false,
+    isCircleExpanded: process.browser ? window.scrollY > 1 : false,
     scrollComesFromUser: false,
+    isTransitionEnd: true,
+    isCircleOnAnimation: false,
+    isOverlayExpanded: false
 }
 
 const Store = ({children}:{children:any}) => {

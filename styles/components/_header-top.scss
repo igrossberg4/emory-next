@@ -91,7 +91,11 @@
     animation: fadeIn math.div($main-carousel-transition-duration, 2) ease-in-out;
     z-index: 2;
     //transition: opacity math.div($main-carousel-transition-duration, 3) ease-in-out;
-    padding-bottom: $default-separation;
+    padding-bottom: $default-separation * 1.5;
+
+    @include media-breakpoint-up(sm) {
+      padding-bottom: $default-separation;
+    }
   }
 
   .btn {
@@ -100,6 +104,7 @@
 }
 
 // Scroll Animation
+
 .content-header__container {
   background: transparent;
   transition: background $scroll-down-transition-duration ease-in-out;
@@ -110,8 +115,7 @@
     max-width: unset;
     width: $round-image-size-small;
     height: $round-image-size-small;
-    margin-bottom: 5em;
-    transform: translate(0, 50%);
+    margin-bottom: calc(-1 * ((#{$round-image-size-small} / 2) - 5em));
     box-sizing: border-box;
     will-change: width, height, opacity, bottom, transform, margin-bottom;
     transition:
@@ -119,20 +123,22 @@
       height $scroll-down-transition-duration ease-in-out,
       opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
       bottom $scroll-down-transition-duration ease-in-out,
-      transform math.div($scroll-down-transition-duration, 2) math.div($scroll-down-transition-duration, 2) ease-in-out,
-      margin-bottom $scroll-down-transition-duration ease-in-out;
+      margin-bottom math.div($scroll-down-transition-duration, 2) ease-in-out;
 
     @include media-breakpoint-up(sm) {
       width: $round-image-size;
       height: $round-image-size;
+      margin-bottom: calc(-1 * ((#{$round-image-size} / 2) - 5em));
     }
     @include media-breakpoint-up(lg) {
       width: $round-image-size-medium;
       height: $round-image-size-medium;
+      margin-bottom: calc(-1 * ((#{$round-image-size-medium} / 2) - 5em));
     }
     @include media-breakpoint-up(xl) {
       width: $round-image-size-big;
       height: $round-image-size-big;
+      margin-bottom: calc(-1 * ((#{$round-image-size-big} / 2) - 5em));
     }
 
     img {
@@ -182,16 +188,9 @@
       bottom: -100px;
       width: 110vw;
       height: 110vw;
-      transform: translate(0);
+      // transform: translate(0, 0);
       margin-bottom: 0;
       opacity: .5;
-      transition:
-              width $scroll-down-transition-duration ease-in-out,
-              height $scroll-down-transition-duration ease-in-out,
-              opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
-              bottom $scroll-down-transition-duration ease-in-out,
-              transform math.div($scroll-down-transition-duration, 2) ease-in-out,
-              margin-bottom $scroll-down-transition-duration ease-in-out;
 
       @media (orientation: portrait) {
         width: 110vh;
@@ -206,7 +205,9 @@
 
     .title {
       @extend .header-xlarge;
-      margin: math.div($grid-gutter-width, 2) 0;
+      // The typography is not properly centered on its own axis.
+      // 0.17em is the correction needed to make it optically centered.
+      margin: 12px 0 calc(32px - 0.17em) 0;
       max-height: 100em;
     }
 
