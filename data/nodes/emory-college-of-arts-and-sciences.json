@@ -20,8 +20,7 @@
       "props": {
         "header": "Emory College is reimagining the liberal arts and sciences to help students address challenges around the world.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>In an economy where disruption and rapid change are constants, the liberal arts and sciences are more essential than ever. Students emerge from Emory College more human and more humane, with the moral imagination to face larger issues with clarity and compassion.</p><p>Combining the strengths of a liberal arts college and the expertise of a research university, Emory creates purpose-driven alumni who approach the world as problem-solvers, communicators, and leaders.
-        </p>",
+        "text": "<p>In an economy where disruption and rapid change are constants, the liberal arts and sciences are more essential than ever. Students emerge from Emory College more human and more humane, with the moral imagination to face larger issues with clarity and compassion.</p><p>Combining the strengths of a liberal arts college and the expertise of a research university, Emory creates purpose-driven alumni who approach the world as problem-solvers, communicators, and leaders.</p>",
         "img_src": "ecas_intro.jpg",
         "media_src": "https://vimeo.com/612950498/1cdf19ace2",
         "media_type": "video",
