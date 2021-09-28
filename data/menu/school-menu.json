@@ -1,74 +1,74 @@
 {
-  "schools":[
-     {
-        "title":"Goizueta Business School",
-        "id":"goizueta-business-school"
-     },
-     {
-        "title":"EMORY COLLEGE OF ARTS AND SCIENCES",
-        "id":"emory-college-of-arts-and-sciences"
-     },
-     {
-        "title":"LANEY GRADUATE SCHOOL",
-        "id":"laney-graduate-school"
-     },
-     {
-        "title":"School of law",
-        "id":"school-of-law"
-     },
-     {
-        "title":"SCHOOL OF MEDICINE",
-        "id":"school-of-medicine"
-     },
-     {
-        "title":"Nell Hodgson woodruff school of nursing",
-        "id":"nell-hodgson-woodruff-school-of-nursing"
-     },
-     {
-        "title":"OXFORD College",
-        "id":"oxford-college"
-     },
-     {
-        "title":"ROLLINS SCHOOL OF PUBLIC HEALTH",
-        "id":"rollins-school-of-public-health"
-     },
-     {
-        "title":"CANDLER SCHOOL OF THEOLOGY",
-        "id":"candler-school-of-theology"
-     }
+  "schools": [
+    {
+      "title": "Goizueta Business School",
+      "id": "goizueta-business-school"
+    },
+    {
+      "title": "EMORY COLLEGE OF ARTS & SCIENCES",
+      "id": "emory-college-of-arts-and-sciences"
+    },
+    {
+      "title": "LANEY GRADUATE SCHOOL",
+      "id": "laney-graduate-school"
+    },
+    {
+      "title": "School of law",
+      "id": "school-of-law"
+    },
+    {
+      "title": "SCHOOL OF MEDICINE",
+      "id": "school-of-medicine"
+    },
+    {
+      "title": "Nell Hodgson woodruff school of nursing",
+      "id": "nell-hodgson-woodruff-school-of-nursing"
+    },
+    {
+      "title": "OXFORD College",
+      "id": "oxford-college"
+    },
+    {
+      "title": "ROLLINS SCHOOL OF PUBLIC HEALTH",
+      "id": "rollins-school-of-public-health"
+    },
+    {
+      "title": "CANDLER SCHOOL OF THEOLOGY",
+      "id": "candler-school-of-theology"
+    }
   ],
-  "units":[
-     {
-        "title":"CAMPUS LIFE",
-        "id":"campus-life"
-     },
-     {
-        "title":"CARLOS MUSEUM",
-        "id":"carlos-museum"
-     },
-     {
-        "title":"CENTER FOR ETHICS",
-        "id":"center-for-ethics"
-     },
-     {
-        "title":"GLOBAL HEALTH INSTITUTE",
-        "id":"global-health-institute"
-     },
-     {
-        "title":"EMORY HEALTHCARE",
-        "id":"emory-healthcare"
-     },
-     {
-        "title":"UNIVERSITY LIBRARIES",
-        "id":"university-libraries"
-     },
-     {
-        "title":"YERKES NATIONAL PRIMATE RESEARCH CENTER",
-        "id":"yerkes-national-primate-research-center"
-     },
-     {
-        "title":"WINSHIP CANCER INSTITUTE",
-        "id":"winship-cancer-institute"
-     }
+  "units": [
+    {
+      "title": "CAMPUS LIFE",
+      "id": "campus-life"
+    },
+    {
+      "title": "CARLOS MUSEUM",
+      "id": "carlos-museum"
+    },
+    {
+      "title": "CENTER FOR ETHICS",
+      "id": "center-for-ethics"
+    },
+    {
+      "title": "GLOBAL HEALTH INSTITUTE",
+      "id": "global-health-institute"
+    },
+    {
+      "title": "EMORY HEALTHCARE",
+      "id": "emory-healthcare"
+    },
+    {
+      "title": "UNIVERSITY LIBRARIES",
+      "id": "university-libraries"
+    },
+    {
+      "title": "YERKES NATIONAL PRIMATE RESEARCH CENTER",
+      "id": "yerkes-national-primate-research-center"
+    },
+    {
+      "title": "WINSHIP CANCER INSTITUTE",
+      "id": "winship-cancer-institute"
+    }
   ]
 }

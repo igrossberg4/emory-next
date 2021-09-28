@@ -1,0 +1,64 @@
+.component-video-quote {
+  .main-container {
+    align-items: center;
+  }
+
+  .text-container {
+    text-align: center;
+    position: relative;
+
+    margin-bottom: 32px;
+    @include media-breakpoint-up('lg') {
+      margin-bottom: 0;
+    }
+  }
+
+  .pretitle,
+  .subtitle {
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 1.1;
+  }
+
+  .image-container {
+    text-align: center;
+  }
+
+  .title {
+    margin: 10px 0 20px 0;
+  }
+
+  .svg-quote {
+    margin-bottom: 30px;
+    @include media-breakpoint-up('lg') {
+      margin: 0 !important;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--bottom {
+      margin-top: 30px;
+      margin-bottom: 0px;
+      @include media-breakpoint-up('lg') {
+        position: absolute;
+        bottom: auto;
+        top: 100%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+
+  &.layout-left {
+    @include media-breakpoint-up('lg') {
+      .image-container {
+        order: -1;
+      }
+      .text-container {
+        order: 1;
+      }
+    }
+  }
+}

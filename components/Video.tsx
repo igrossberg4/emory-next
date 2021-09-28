@@ -28,11 +28,13 @@ export default function Video(props: any) {
   const controls = useAnimation();
   const media_src = props.video_src ? props.video_src : props.media_src;
   const re = new RegExp("^(http|https)://", "i");
-
   return (
     <Fragment>
       {!re.test(media_src)  ?
       <video
+              muted={props.muted}
+              autoPlay={props.autoPlay}
+              loop={props.loop}
               onPlay={() => {
                 if(props.onPlay){
                   props.onPlay();
@@ -62,7 +64,6 @@ export default function Video(props: any) {
                 // Check if the video has ended.
                 // TO DO define if we take some action on end.
               }}
-        loop={props.loop}
         controls={props.controls}
         key={props.video_src ? props.video_src : props.media_src}
         //initial={!props.initial_animation ? { opacity: 0 } : props.initial_animation}
@@ -73,7 +74,7 @@ export default function Video(props: any) {
       </video>
       :
       <div className="video-vimeo">
-        <ReactPlayer light={false} controls url={media_src}/>
+        <ReactPlayer playing={true} light={false} controls url={media_src}/>
       </div>
 }
     </Fragment>

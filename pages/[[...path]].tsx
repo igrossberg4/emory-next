@@ -17,6 +17,7 @@ import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squo
 import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
+import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
 
 function getElementXPath(element: any): string {
   if (element.id) {
@@ -42,10 +43,104 @@ export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const scrollVar = 5;
   const [innerHeight, setInnerHeight] = useState(
     process.browser ? window.innerHeight : 0
   );
   const [state, dispatch] = useContext(Context) as any;
+
+  const circleAnimateExpand = useCallback(() => {
+    const element = document.getElementById("selected");
+    document.body.classList.add("is-scrolled");
+    dispatch({ type: "IS_TRANSITIONING", payload: true });
+
+    dispatch({
+      type: "GOING_UP",
+      payload: true,
+    });
+
+    if (element) {
+      const activeElement = element.querySelector(".content-header__container");
+      activeElement?.setAttribute("data-animation", "active");
+    }
+
+    setTimeout(() => {
+      dispatch({ type: "IS_TRANSITIONING", payload: false });
+    }, 600);
+  }, []);
+
+  const circleAnimateCollapse = useCallback(() => {
+    document.body.classList.remove("is-scrolled");
+    dispatch({ type: "IS_TRANSITIONING", payload: true });
+    dispatch({
+      type: "GOING_UP",
+      payload: false,
+    });
+    setTimeout(() => {
+      dispatch({ type: "IS_TRANSITIONING", payload: false });
+    }, 600);
+    const element = document.getElementById("selected");
+    if (element) {
+      const activeElement = element.querySelector(".content-header__container");
+      activeElement?.setAttribute("data-animation", "no-active");
+    }
+  }, []);
+
+  const circleAnimateMinimunScroll = 50;
+
+  const circleAnimateExpandLaunch = useCallback(
+    (
+      isCircleOnAnimation: boolean,
+      isCircleExpanded: boolean,
+      isOverlayExpanded: boolean
+    ) => {
+      const circleAnimateMinimunScroll = 50;
+
+      if (!isCircleOnAnimation && !isCircleExpanded && !isOverlayExpanded) {
+        circleAnimateExpand();
+
+        // If we are on ~top
+        if (
+          window.scrollY < circleAnimateMinimunScroll &&
+          circleAnimatePreventScrollEnabled
+        ) {
+          // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled):
+          window.scroll({ top: window.innerHeight / 4, behavior: "smooth" });
+        }
+      }
+    },
+    []
+  );
+
+  const circleAnimateCollapseLaunch = useCallback(
+    (
+      isCircleOnAnimation: boolean,
+      isCircleExpanded: boolean,
+      isOverlayExpanded: boolean
+    ) => {
+      const circleAnimateMinimunScroll = 150;
+
+      if (
+        window.scrollY < circleAnimateMinimunScroll &&
+        !isCircleOnAnimation &&
+        isCircleExpanded &&
+        !isOverlayExpanded
+      ) {
+        circleAnimateCollapse();
+        const element = document.getElementById("header");
+        if (element) {
+          element.classList.remove("hide");
+        }
+
+        // If we are on ~top:
+        if (window.scrollY < 200 && circleAnimatePreventScrollEnabled) {
+          // Scroll automatically to top bit as the human scroll is frozen (to behave similar but controlled):
+          // window.scroll({ top: 0 , behavior: "smooth" });
+        }
+      }
+    },
+    []
+  );
 
   // https://codesandbox.io/s/framer-motion-nextjs-page-transitions-d7fwk?file=/pages/about.js:871-877
   const spring = {
@@ -54,64 +149,249 @@ export default function Home(props: any) {
     ease: "easeInOut",
   };
   useEffect(() => {
-    const handleFocus = () => {
-      if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
-          const element = document.evaluate(
-            "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
-            document,
-            null,
-            XPathResult.FIRST_ORDERED_NODE_TYPE,
-            null
-          ).singleNodeValue;
+    const updateWindowDimensions = () => {
+      const newHeight = window.innerHeight;
+      document
+        .querySelectorAll(".container-force-screen-fit-y")
+        .forEach((item) => {
+          (item as HTMLElement).style.height = `${newHeight}px`;
+        });
 
-          if(element != null){
-            let elementFocusable = document.querySelector(
-              (element as any).className
-                .split(" ")
-                .map((value : string) => `.${value}`)
-                .join("")
-            );
-            elementFocusable.focus();
-          }
-
+      const videoElement = document.getElementById("video-container");
+      if (videoElement) {
+        videoElement.style.bottom = isMobile
+          ? videoContainerBottomCalculator(window, document)
+          : (undefined as any);
       }
     };
+
+    updateWindowDimensions();
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, [router.asPath, isMobile]);
+  useEffect(() => {
+    const handleFocus = () => {
+      if (state.activeFocusXPATH.includes("*[@id=carousel]")) {
+        const element = document.evaluate(
+          "//html" + state.activeFocusXPATH.replace("carousel", '"carousel"'),
+          document,
+          null,
+          XPathResult.FIRST_ORDERED_NODE_TYPE,
+          null
+        ).singleNodeValue;
+
+        if (element != null) {
+          let elementFocusable = document.querySelector(
+            (element as any).className
+              .split(" ")
+              .map((value: string) => `.${value}`)
+              .join("")
+          );
+          elementFocusable.focus();
+        }
+      }
+      setTimeout(() => {
+        document.body.style.overflowY = "visible";
+        document.body.style.paddingRight = "";
+        if (window.scrollY > 0) {
+          circleAnimateExpandLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded,
+            state.isOverlayExpanded
+          );
+        }
+        dispatch({ type: "IS_TRANSITIONING", payload: false });
+        dispatch({type: 'IS_OVERLAY_EXPANDED', payload:false});
+
+      }, 300);
+    };
+
     router.events.on("routeChangeComplete", handleFocus);
     return () => {
       router.events.off("routeChangeComplete", handleFocus);
     };
-  }, [router.events, state.activeFocusXPATH]);
+  }, [
+    router.events,
+    state.activeFocusXPATH,
+    state.isCircleOnAnimation,
+    state.isCircleExpanded,
+    state.isOverlayExpanded,
+  ]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.scrollY > 49 &&
+        !document.body.classList.contains("is-scrolled")
+      ) {
+        // We need to bypass the handler for avoid a race condition and to many events to be fired.
+        circleAnimateExpand();
+        const element =  document.getElementById('header');
+        if(element){
+          element.classList.add('hide');
+        }
+      }else{
+        if(document.body.classList.contains("is-scrolled") && window.scrollY < 20){
+        // We need to bypass the handler for avoid a race condition and to many events to be fired.
+        circleAnimateCollapse();
+
+        const element = document.getElementById("header");
+
+        if (element) {
+          element.classList.add("hide");
+        }
+      }
+    }
+    };
+    handleScroll();
+    //window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [router.asPath]); // @ts-ignore
+  // The effect for compute mousedown and mouseup event for using scroll bar.
+  useEffect(() => {
+    const handleScroll = (e: MouseEvent) => {
+      // We need to check if the mouse is in the scroll bar.
+      if(e.clientX > document.body.offsetWidth){
+        // This is the calculated scroll.
+        const calculatedScroll = e.offsetY- e.clientY;
+        // When mouse is going down,
+        if (
+          (window.scrollY > 30 ||
+          calculatedScroll > 30) &&
+          !document.body.classList.contains("is-scrolled")
+
+        ) {
+          // We need to bypass the handler for avoid a race condition and to many events to be fired.
+          circleAnimateExpand();
+          const element =  document.getElementById('header');
+          if(element){
+            element.classList.add('hide');
+          }
+        }else{
+          // If mouse is going up.
+          if(document.body.classList.contains("is-scrolled") &&
+           (window.scrollY < 20 || calculatedScroll < 20)){
+          // We need to bypass the handler for avoid a race condition and to many events to be fired.
+          circleAnimateCollapse();
+
+          const element = document.getElementById("header");
+
+          if (element) {
+            element.classList.remove("hide");
+          }
+        }
+      }
+      }
+      /**/
+    };
+    window.addEventListener("mousedown", handleScroll, { passive: true });
+    window.addEventListener("mouseup", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("mouseup", handleScroll);
+      window.removeEventListener("mousedown", handleScroll)
+    };
+  }, [router.asPath]);
+
+  const circleAnimatePreventScrollEnabled = true;
+
+  /**
+   * Prevent scroll on circle animation.
+   */
+  const circleAnimatePreventScroll = useCallback(
+    (
+      e: Event,
+      isCircleOnAnimation: boolean,
+      isCircleExpanded: boolean,
+      scrollY: number,
+      isGoingDown: boolean
+    ) => {
+      if (
+        circleAnimatePreventScrollEnabled &&
+        scrollY < circleAnimateMinimunScroll &&
+        ((!isCircleExpanded && isGoingDown) ||
+          (isCircleExpanded && !isGoingDown) ||
+          isCircleOnAnimation)
+      ) {
+        e.preventDefault();
+        return true;
+      }
+    },
+    []
+  );
+
   const handleKey = useCallback(
     (e: KeyboardEvent) => {
+      const carouselContentElement = document.getElementById("carouselContent");
+      const carouselContentHeight = carouselContentElement?.offsetHeight
+        ? carouselContentElement.offsetHeight
+        : 0;
       const path = getElementXPath(document.activeElement);
+
       if (path.includes("*[@id=carousel]")) {
         dispatch({
           type: "ACTIVE_FOCUS_KEY_PATH",
           payload: getElementXPath(document.activeElement),
         });
       }
-      switch (e.key) {
-        case " ":
-          if (
-            window.scrollY < 5 &&
-            document.activeElement?.tagName != "BUTTON"
-          ) {
-            e.preventDefault();
-            window.scrollTo({ top: 20, behavior: "smooth" });
-          }
+
+      if ([" ", "ArrowDown", "PageDown", "End"].indexOf(e.key) > -1) {
+        // Handler for accesibility in menu and carousel arrows. We must guarantee that space works when these elements are focused.
+        if (
+          e.key === " " &&
+          (path.includes("menu-button") || path.includes("@id=carousel"))
+        ) {
           return;
-        case "ArrowRight":
-          return;
+        }
+        circleAnimatePreventScroll(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          true
+        );
+        circleAnimateExpandLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          state.isOverlayExpanded
+        );
       }
+
+      if (["ArrowUp", "PageUp", "Home"].indexOf(e.key) > -1) {
+        circleAnimatePreventScroll(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          false
+        );
+        circleAnimateCollapseLaunch(
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          state.isOverlayExpanded
+        );
+      }
+
+      // Case End
+      /*
+      if (e.key === "Home") {
+        window.scroll({ top: 0, behavior: "smooth" });
+        circleAnimateCollapse();
+      }
+*/
     },
-    [dispatch]
+    [
+      dispatch,
+      state.isCircleExpanded,
+      state.isCircleOnAnimation,
+      state.isOverlayExpanded,
+    ]
   );
   useEffect(() => {
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [handleKey]); // @ts-ignore
-  const handleFocus = useCallback((e: FocusEvent) => {
-  }, []);
+  const handleFocus = useCallback((e: FocusEvent) => {}, []);
   useEffect(() => {
     document.addEventListener("focusin", handleFocus, { passive: false });
     return () => document.removeEventListener("focusin", handleFocus);
@@ -120,47 +400,124 @@ export default function Home(props: any) {
   if (process.browser && document.body.style.overflow === "hidden") {
     document.body.style.overflow = "";
   }
-  const handleScroll = useCallback(() => {
-    setInnerHeight(window.innerHeight);
-    const element = document.getElementById("selected");
-    if (element) {
-      const activeElement = element.querySelector(".content-header__container");
 
-      if (window.scrollY > 5) {
-        activeElement?.setAttribute("data-animation", "active");
-      } else {
-        activeElement?.setAttribute("data-animation", "no-active");
-      }
-    }
+  var supportsPassive = true;
+  /*try {
+    window.addEventListener(
+      "test",
+      null,
+      Object.defineProperty({}, "passive", {
+        get: function () {
+          supportsPassive = true;
+        },
+      })
+    as any);
+  } catch (e) {}*/
+  const wheelOpt = supportsPassive ? { passive: false } : false;
+  const wheelEvent = process.browser
+    ? "onwheel" in document.createElement("div")
+      ? "wheel"
+      : "mousewheel"
+    : "mousewheel";
 
-    if (
-      window.scrollY >= 5 &&
-      !document.body.classList.contains("is-scrolled")
-    ) {
-      document.body.classList.add("is-scrolled");
-
-      dispatch({
-        type: "GOING_UP",
-        payload: true,
-      });
-    } else if (
-      window.scrollY < 5 &&
-      document.body.classList.contains("is-scrolled")
-    ) {
-      document.body.classList.remove("is-scrolled");
-
-      dispatch({
-        type: "GOING_UP",
-        payload: false,
-      });
-    }
-
-    setScroll(window.scrollY);
-  }, [setScroll, setInnerHeight, scroll, state.goingUp]);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+    const preventDefault = (e: WheelEvent) => {
+      // Prevent is scroll:
+      circleAnimatePreventScroll(
+        e,
+        state.isCircleOnAnimation,
+        state.isCircleExpanded,
+        window.scrollY,
+        e.deltaY > 0
+      );
+      if (router.isReady) {
+        // Launch circle animation:
+        if (e.deltaY > 0) {
+          circleAnimateExpandLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded,
+            state.isOverlayExpanded
+          );
+        } else {
+          circleAnimateCollapseLaunch(
+            state.isCircleOnAnimation,
+            state.isCircleExpanded,
+            state.isOverlayExpanded
+          );
+        }
+      }
+    };
+    window.addEventListener("DOMMouseScroll", preventDefault as any, false); // older FF
+    window.addEventListener(wheelEvent, preventDefault as any, wheelOpt); // modern desktop
+    //window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    //window.addEventListener('touchstart', preventDefault as any, wheelOpt);
+
+    //window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+
+    return () => {
+      window.removeEventListener("DOMMouseScroll", preventDefault as any);
+      window.removeEventListener(wheelEvent, preventDefault as any);
+      //window.removeEventListener("touchmove", preventDefault as any);
+      //window.removeEventListener('touchstart', preventDefault as any, wheelOpt);
+      // window.removeEventListener("keydown", preventDefaultForScrollKeys);
+    };
+  }, [
+    state.isCircleExpanded,
+    state.isCircleOnAnimation,
+    router.isReady,
+    state.isOverlayExpanded,
+  ]);
+  const [touchScrollPosition, setTouchScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const preventDefault = (e: TouchEvent) => {
+      if (e.type === "touchstart") {
+        setTouchScrollPosition(e.touches[0].clientY);
+      }
+      if (e.type === "touchmove") {
+        const te = e.changedTouches[0].clientY;
+        const isUp = touchScrollPosition > te;
+        circleAnimatePreventScroll(
+          e,
+          state.isCircleOnAnimation,
+          state.isCircleExpanded,
+          window.scrollY,
+          isUp
+        );
+        if (router.isReady) {
+          if (isUp) {
+            circleAnimateExpandLaunch(
+              state.isCircleOnAnimation,
+              state.isCircleExpanded,
+              state.isOverlayExpanded
+            );
+          } else {
+            circleAnimateCollapseLaunch(
+              state.isCircleOnAnimation,
+              state.isCircleExpanded,
+              state.isOverlayExpanded
+            );
+          }
+        }
+
+        //setTouchScrollPosition(e.touches[0].clientY);
+      }
+    };
+
+    window.addEventListener("touchmove", preventDefault as any, wheelOpt); // mobile
+    window.addEventListener("touchstart", preventDefault as any, wheelOpt);
+
+    return () => {
+      window.removeEventListener("touchmove", preventDefault as any);
+      window.removeEventListener("touchstart", preventDefault as any);
+    };
+  }, [
+    touchScrollPosition,
+    state.isCircleOnAnimation,
+    state.isCircleExpanded,
+    router.isReady,
+    state.isOverlayExpanded,
+  ]);
 
   const variants = {
     initialWithRoute: {
@@ -188,7 +545,11 @@ export default function Home(props: any) {
     return props.skipTransitionAnimations !== true ? (
       <AnimatePresence>
         <motion.div
-          className="main-container"
+          className={`main-container ${
+            props.view[1].props.isMain && !state.comesFromCarousel
+              ? "full_video"
+              : ""
+          }`}
           id={state.route + " --- " + state.route}
           onAnimationComplete={() => {
             if (state.route !== "") {
@@ -217,11 +578,16 @@ export default function Home(props: any) {
             view={props.view}
           ></DynamicComponentMatcher>
         </motion.div>
+        {/* Watermark is here to prevent disapperance when scrolling carousel and flickering */}
+        <div className="watermark">
+          <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="70px" height="15px"></Image>
+        </div>
       </AnimatePresence>
     ) : (
       ""
     );
-  }, [router.asPath, state.route, MD5(props.view)]);
+  }, [router.asPath, state.route, MD5(props.view), state.comesFromCarousel]);
+
   return (
     <Fragment>
       <Head>

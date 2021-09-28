@@ -33,6 +33,11 @@ export default function MainMenu(props: any) {
                   <Link href={option.link_to}>{option.title}</Link>
                 </div>
               ))}
+              <div className="menu-main__cta">
+                <Link  href="http://placeholder-link.com">
+                  <a className="link-button">Support the campaign</a>
+                </Link>
+              </div>
               <div className="socials">
                 {props.social.map((option: any) => (
                   <div

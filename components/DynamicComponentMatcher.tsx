@@ -18,6 +18,7 @@ const MediaWithExpantion = dynamic(()=> import('./MediaWithExpantion'));
 const MainMenu = dynamic(()=> import('./MainMenu'));
 const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
 const Quote = dynamic(()=> import('./Quote'));
+const VideoQuote = dynamic(()=> import('./VideoQuote'));
 const ColumnsText = dynamic(()=> import('./ColumnsText'));
 const QuoteParagraphColumn = dynamic(()=> import('./QuoteParagraphColumn'));
 const TextBg = dynamic(()=> import('./TextBg'));
@@ -150,6 +151,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'Quote':
             return <Quote {...component.props} key={i.toString()}></Quote>
+
+          case 'VideoQuote':
+            return <VideoQuote {...component.props} key={i.toString()}></VideoQuote>
 
           case 'ColumnsText':
             return <ColumnsText {...component.props} key={i.toString()}></ColumnsText>

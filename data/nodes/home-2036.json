@@ -2,14 +2,14 @@
   "id": "home-2036",
   "type": "collection",
   "page_props": {
-    "header": "About The Campaign",
-    "header_expanded": "Building on Emory’s commitment to serve humanity",
+    "header": "THE FUTURE STARTS HERE",
+    "header_expanded": "Building on Emory’s commitment to serve humanity.",
     "text": "",
-    "about": "About the campaign",
+    "about": "ABOUT THE CAMPAIGN",
     "button_scroll": "Scroll to explore",
     "about_before_scroll":"ABOUT THE CAMPAIGN",
     "img_src": "about_lede.jpg",
-    "video_src": "videos/EU1901_02k_Intro-ALT-1080_YM_v02.mp4",
+    "video_src": "videos/intro_video_v03.mp4",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video"
   },
@@ -38,9 +38,10 @@
     "university-libraries",
     "yerkes-national-primate-research-center",
     "winship-cancer-institute",
+    "signature-themes",
     "research-excellence",
-    "student-success",
-    "faculty-eminence"
+    "faculty-eminence",
+    "student-flourishing"
   ],
   "components": [
     {
@@ -51,7 +52,7 @@
         "text": "<p>It’s our firm belief that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to prepare students for careers with the potential to change hearts, minds, and the world.</p><p>Together, we can bring to life an open and promising future.</p>",
         "img_src": "about_intro.jpg",
         "media_src": "https://vimeo.com/605963807/295678c674",
-        "media_alt": "",
+        "media_alt": "Portrait of President Greg L. Fenves",
         "media_type": "video",
         "media_header": "Gregory L. Fenves",
         "media_text": "President, Emory University"
@@ -68,24 +69,27 @@
       "component": "TextBg",
       "props": {
         "text": "EMORY IS FOCUSING ON THREE CORE AREAS FOR 2O36.",
-        "image_src": "about_divider_bg.jpg"
+        "image_src": "about_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support the Campaign"
       }
     },
     {
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Emory University",
-        "title": "Student Success",
+        "title": "Student Flourishing",
         "body": "<p>Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service. In this context, supporting student success means helping them learn to be thinkers and doers, strengthen values, develop skills, learn about teamwork, and prepare them for careers as well as advanced and professional studies. Their success empowers them to contribute to the world around them in valuable and enriching ways. Emory’s top priority is helping students realize their potential, and enabling the citizens of the future to excel.</p>",
-        "read_more": "student-success",
+        "read_more": "student-flourishing",
         "tags": [],
         "layout": "left",
         "img_src": "about_priority_1.jpg",
         "media_src": "about_priority_1_popup.jpg",
         "media_alt": "Three students walk across the Quad.",
         "media_type": "image",
-        "media_header": "Student Success",
-        "media_text": "Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service. "
+        "media_header": "Student Flourishing",
+        "media_text": "Our students are our future. Their Emory education and experiences prepare them for a lifelong journey of impact, contribution, and service.",
+        "media_byline": ""
       }
     },
     {
@@ -93,7 +97,7 @@
       "props": {
         "pretitle": "Emory University",
         "title": "Faculty Eminence",
-        "body": "<p>2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.  With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future.</p>",
+        "body": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-changing research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. That means National Academy members but also extraordinary early and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
         "read_more": "faculty-eminence",
         "tags": [],
         "layout": "right",
@@ -102,7 +106,8 @@
         "media_alt": "A professor stands in front of a data projection.",
         "media_type": "image",
         "media_header": "Faculty Eminence",
-        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge."
+        "media_text": "Faculty are the heart of Emory University. Everything we accomplish—from world-changing research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors.",
+        "media_byline": "Featured: Dr. Yang Liu,  Chair and Gangarosa Distinguished Professor in the Gangarosa Department of Environment Health, Rollins School of Public Health"
       }
     },
     {
@@ -110,7 +115,7 @@
       "props": {
         "pretitle": "Emory University",
         "title": "Research Excellence",
-        "body": "<p>2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.  With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to radically rethink and reshape the future.</p>",
+        "body": "<p>In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we need to accelerate research excellence and impact. For example, the COVID-19 crisis has required our faculty to step into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p>",
         "read_more": "research-excellence",
         "tags": [],
         "layout": "left",
@@ -119,7 +124,8 @@
         "media_alt": "A student looks at a specimen in the lab with their professor.",
         "media_type": "image",
         "media_header": "Research Excellence",
-        "media_text": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge."
+        "media_text": "In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse.",
+        "media_byline": "Featured: Biomedical researchers Dr. Keira Davis and Dr. Winfield Sale, Professor and Deputy Chair in the Department of Cell Biology, Emory University School of Medicine"
       }
     }
   ]
