@@ -1,14 +1,14 @@
 {
-  "id": "student-success",
+  "id": "student-flourishing",
   "type": "collection",
   "page_props": {
-    "header": "STUDENT SUCCESS",
+    "header": "STUDENT FLOURISHING",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_code_yellow.jpg"
   },
-  "path": "student-success",
+  "path": "student-flourishing",
   "metatag": {
-    "title": "Student Success - Emory 2036",
+    "title": "Student Flourishing - Emory 2036",
     "description": "",
     "image": ""
   },
