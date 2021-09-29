@@ -4,7 +4,9 @@
   "page_props": {
     "header": "LANEY GRADUATE<br>SCHOOL",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg"
+    "img_src": "laney_lede.jpg",
+    "about": "school spotlight",
+    "text": "Creating an environment where doctoral students will be trained to go out into their areas of expertise and impact the human experience."
   },
   "path": "laney-graduate-school",
   "metatag": {
@@ -16,28 +18,110 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
+        "header": "Shaping leaders in service to the global good, the James T. Laney School of Graduate Studies at Emory University prepares a diverse, inclusive student body for success through scholarship, research, teaching, and programming.",
+        "background_image": "laney_isolated_bg.png",
+        "text": "<p>As society faces constant and escalating challenges, the Laney Graduate School leads the charge in training the leaders across more than 40 disciplines, including the social sciences, public health, nursing, and business. Students work with faculty researchers to uncover solutions to complex problems. They enter the professional world armed with deep knowledge and experience in their fields and a desire to upend norms in academia, business, health care, and government.</p>",
+        "img_src": "laney_intro.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "Two researchers work in a lab.",
+        "media_type": "video",
+        "media_header": "Laney Graduate School",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "We are trying to develop a chatbot that actually will bring people closer together.",
+        "attribution": "— Jinho Choi, Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "LANEY GRADUATE SCHOOL HAS SEVERAL PRIORITIES FOR 2O36.",
+        "image_src": "laney_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support College"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Broaden Career Opportunities",
+        "body": "<p>What good is a graduate degree—to students, their communities, or the world—without understanding how to do the most good with it? That's the thinking behind the Graduate Institute for Professional Development and Career Planning. <strong>A named endowment would allow this institute to develop new ways to prepare students for a competitive, ever-changing job market and open their eyes to a wider range of career paths.</strong></p><p>This endowment opportunity would support additional training and workshops around ethics, pedagogy, grant writing, and diverse career exploration. It would connect students with research and training opportunities through partnerships with the Centers for Disease Control and Prevention, the High Museum of Art, Fortune 500 companies, and other organizations. All the while, students will develop professional skills that enhance their abilities to thrive in both academic and nonacademic careers.</p>",
+        "layout": "right",
+        "img_src": "laney_priority_1.jpg",
+        "media_src": "laney_priority_1_popup.jpg",
+        "media_alt": "Three students discuss at a table.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Broaden Career Opportunities",
+        "media_text": "What good is a graduate degree—to students, their communities, or the world—without understanding how to do the most good with it?"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Remove Barriers",
+        "body": "<p>Since its initial pilot in 2016-2018, Communities of Practice has brought together doctoral and master’s students, faculty, and practitioners from across the humanities and social sciences. Together, they break down the boundaries between the university and the world, combining utilitarian approaches to international development—which stress efficiency, rationality, and personal gain—and those that recognize the importance of culture and meaning in understanding behavior.</p><p>Endowing our Communities of Practice program allows us to expand and diversify our student population by engaging Atlanta’s diverse international communities. <strong>Providing much-needed tuition support and alleviating program-related expenses will make Emory the top choice for students from across the United States and around the world, allowing them to graduate with little or no debt</strong> as they enter service-related careers in global sustainable development.</p>",
+        "layout": "left",
+        "img_src": "laney_priority_2.jpg",
+        "media_src": "laney_priority_2_popup.jpg",
+        "media_alt": "A group of students pose for a photo.",
+        "media_type": "image",
+        "media_header": "Remove Barriers",
+        "media_text": "Since its initial pilot in 2016-2018, Communities of Practice has brought together doctoral and master’s students, faculty, and practitioners from across the humanities and social sciences."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Kimberly Jacob Arriola 01PH",
+        "layout": "left",
+        "subtitle": "Dean of Laney Graduate School, Vice Provost for Academic Affairs, Graduate Studies",
+        "img_src": "laney_quote_1.jpg",
+        "media_src": "https://vimeo.com/616255678/2627789f95",
+        "media_alt": "A video quote of Kimberly Jacob Arriola 01PH",
+        "media_header": "Kimberly Jacob Arriola 01PH",
+        "media_text": "Dean, Laney Graduate School, Emory University Vice Provost for Graduate Affairs, Emory University Charles Howard Candler Professor of Behavioral, Social, and Health Education Sciences, Rollins School of Public Health",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2O36, Connections are Vital",
+        "body": "<p>Emory graduate students are harnessing the power of artificial intelligence and natural language processing to remedy depression, loneliness, and symptoms of Alzheimer’s disease. In developing a chatbot for Amazon Alexa that makes logical inferences, rather than functioning as a search engine, they’re teaching bots to ask questions that lead people to seek much-needed human companionship and treatment. Without the mentorship of faculty researchers and connections to organizations outside of Emory, this kind of groundbreaking work wouldn’t be possible.</p><p><strong2O36 will generate support for the Laney Fund for Professional Gateway Fellowships, which offer graduate students supplemental income during professional internships.</strong> These real-world experiences are a gateway into new industries, positions, and uses for their degrees. By helping students form deep connections within organizations in Atlanta and around the world, we give them a competitive edge.</p>",
+        "layout": "right",
+        "img_src": "laney_priority_3.jpg",
+        "media_src": "laney_priority_3_popup.jpg",
+        "media_alt": "Three students celebrate their project.",
+        "media_type": "image",
+        "media_header": "Connections are Vital",
+        "media_text": "In developing a chatbot for Amazon Alexa that makes logical inferences, rather than functioning as a search engine, students are teaching bots to ask questions that lead people to seek much-needed human companionship and treatment."
       }
     },
     {
       "component": "AccordionComponent",
+      "pretitle": "KEY PRIORITIES",
+      "title": "LANEY GRADUATE SCHOOL",
       "props": {
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Support Courage",
+            "description": "<p>The Laney Graduate School of 2O36 is an inclusive, respectful, and intellectually challenging environment that embraces individual differences. Building a diverse, collaborative community is a priority for both Emory and Laney Graduate School because it creates opportunities for open dialogue, cooperation, and a sense of shared responsibility and mutual respect. It’s the driving force that encourages students to cross disciplinary boundaries and devise creative approaches to global challenges, strengthening research and scholarship.</p><p><strong>Supporting the Laney Fellowship Fund for Student Excellence increases the financial support we can provide to underrepresented graduate students</strong>, such as women in STEM fields, so they can pursue full-time studies without filling a teaching requirement. By reducing barriers to graduate school and creating a more inclusive educational setting for women, racial minorities, and other underrepresented students, Laney can be the destination for graduate students seeking deep expertise in their chosen fields.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "2O36 is a Launchpad",
+            "description": "<p>Recruiting and retaining faculty is central to everything we do at Emory University, and Laney’s graduate education program is a cornerstone of our academic excellence. The Emory Society of Postdoctoral Fellows is a pipeline for recent PhDs to become full-time faculty in a supportive, rigorous intellectual community with guidance from senior leadership. It provides time at a pivotal stage, as they develop their dissertations into monographs or other foundational scholarly products.</p><p><strong>2O36 will support this fellowship in attracting diverse, recent PhDs at the leading edge of their fields.</strong> Members of the Emory Society of Fellows will be recruited through regular assistant professor searches, with deferred appointments that provide two years of support as they develop professionally. After completing the two-year fellowship, the scholars transition to the tenure track as assistant professors. In their fifth year of teaching at Emory (third as regular faculty), we begin to assess fellows’ readiness for the journey toward tenure.</p>"
+          },
+          {
+            "title": "Address Inequities",
+            "description": "<p>Education, health care, STEM. Jobs in these high-demand fields often require at least a master’s degree. By launching a “4+1” dual-degree program in partnership with Atlanta University Center (AUC) institutions, students can complete their foundational bachelor’s studies at Morehouse, Spellman, or Clark Atlanta, and spend their “+1” year at Laney Graduate School to receive a master’s degree.</p><p><strong>2O36 will allow us to make higher education more accessible so students from diverse backgrounds have opportunities to create meaningful change in their professions.</strong> Partnering with AUC institutions to offer this 4+1 degree helps create equitable change in the Atlanta area and across Georgia, today. Graduate programs develop tomorrow’s faculty and prepare leaders for business and society, so addressing inequities in graduate education will have ripple effects for generations.</p>"
           }
         ]
       }
