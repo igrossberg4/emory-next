@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from "fs";
 
 import Head from "next/head";
 import React, { Fragment, useContext, useState } from "react";
@@ -11,8 +11,9 @@ import LateralImageExpanded from "./LateralImageExpanded";
 import Video from "./Video";
 import IconButton from "./IconButton";
 import Overlay from "./Overlay";
-import path from 'path';
-import dynamic from 'next/dynamic';
+import path from "path";
+import dynamic from "next/dynamic";
+import { imageLoader } from "./utils/imageLoader";
 
 export default function MediaWithExpantion(props: any) {
   const router = useRouter();
@@ -21,11 +22,12 @@ export default function MediaWithExpantion(props: any) {
   let multipleSizesImgPrincipal;
   let multipleSizesImgExpanded;
 
-  multipleSizesImgPrincipal = require(`../public/images/${(props.img_src ? props.img_src : props.media_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  if(props.media_type != 'video'){
-    multipleSizesImgExpanded = require(`../public/images/${(props.media_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  multipleSizesImgPrincipal = require(`../public/images/${
+    props.img_src ? props.img_src : props.media_src
+  }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  if (props.media_type != "video") {
+    multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
   }
-
 
   //const files = fs.readdirSync(__dirname);
   //const moduleName = path.join(__dirname, files[0]);
@@ -58,7 +60,7 @@ export default function MediaWithExpantion(props: any) {
             <img
               alt={props.media_alt}
               srcSet={multipleSizesImgPrincipal.srcSet}
-              src={multipleSizesImgPrincipal.src }
+              src={multipleSizesImgPrincipal.src}
             />
           </motion.figure>
         </motion.figure>
@@ -73,15 +75,22 @@ export default function MediaWithExpantion(props: any) {
             </div>
           }
           expanded_content={
-              <Fragment>
-              <motion.figure data-media={props.media_type}
-              // layout
-              // layoutId={layoutId}
-              // initial={{ opacity: 1 }}
-              // animate={{ opacity: 1 }}
+            <Fragment>
+              <motion.figure
+                data-media={props.media_type}
+                // layout
+                // layoutId={layoutId}
+                // initial={{ opacity: 1 }}
+                // animate={{ opacity: 1 }}
               >
                 {props.media_type === "image" ? (
-                  <img alt={props.media_alt} src={multipleSizesImgExpanded.src} srcSet={multipleSizesImgExpanded.srcSet}></img>
+                  <Image
+                    loader={imageLoader(multipleSizesImgPrincipal) as any}
+                    priority={true}
+                    alt={props.media_alt}
+                    src={multipleSizesImgExpanded.src}
+                    layout={"fill"}
+                  ></Image>
                 ) : (
                   <Video {...props} controls={true}></Video>
                 )}
@@ -91,15 +100,17 @@ export default function MediaWithExpantion(props: any) {
                     className="body"
                     dangerouslySetInnerHTML={{ __html: props.text }}
                   ></div>
-                  {
-                    props.byline ? <div
+                  {props.byline ? (
+                    <div
                       className="byline"
                       dangerouslySetInnerHTML={{ __html: props.byline }}
-                    ></div> : ''
-                  }
+                    ></div>
+                  ) : (
+                    ""
+                  )}
                 </figcaption>
               </motion.figure>
-              </Fragment>
+            </Fragment>
           }
         ></Overlay>
       </div>
