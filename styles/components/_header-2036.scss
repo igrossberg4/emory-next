@@ -233,11 +233,11 @@
     }
 
     .header-2036__title__3 {
-      margin: 0 0 0 300px;
+      margin: 0 0 0 330px;
     }
 
     svg {
-      width: 130px;
+      width: 135px;
       height: inherit;
     }
   }
@@ -290,10 +290,10 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     @include media-breakpoint-up(md) {
-      left: calc((100vw / 2) - 220px);
-      bottom: 36%;
-      width: 268px;
-      height: 268px;
+      left: calc((100vw / 2) - 230px);
+      bottom: 36.9%;
+      width: 258px;
+      height: 258px;
     }
 
     // Rotated mobile devices!!!
