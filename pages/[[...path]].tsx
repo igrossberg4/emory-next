@@ -396,10 +396,12 @@ export default function Home(props: any) {
     document.addEventListener("focusin", handleFocus, { passive: false });
     return () => document.removeEventListener("focusin", handleFocus);
   }, [handleFocus]); // @ts-ignore
+  useEffect(() => {
+    if (process.browser && document.body.style.overflow === "hidden") {
+      document.body.style.overflow = "";
+    }
+  }, [])
 
-  if (process.browser && document.body.style.overflow === "hidden") {
-    document.body.style.overflow = "";
-  }
 
   var supportsPassive = true;
   /*try {
