@@ -107,9 +107,9 @@
     },
     {
       "component": "AccordionComponent",
-      "pretitle": "KEY PRIORITIES",
-      "title": "LANEY GRADUATE SCHOOL",
       "props": {
+        "pretitle": "LANEY GRADUATE SCHOOL",
+        "title": "KEY PRIORITIES",
         "items": [
           {
             "title": "Support Courage",
