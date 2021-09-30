@@ -318,7 +318,7 @@ export default function EmblaCarousel({
                 {slides.map((value: any, i: number) => {
                   const valueMore = slides[i].props.view[0].props.isMain
                     ? i > page
-                      ? 60
+                      ? 40
                       : 40
                     : 0;
                   return (
