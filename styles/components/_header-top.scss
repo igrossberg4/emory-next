@@ -172,6 +172,7 @@
   .title {
     transition: all math.div($scroll-down-transition-duration, 2) ease-out;
     max-height: 2em;
+    white-space: nowrap;
   }
 
   .pretitle,

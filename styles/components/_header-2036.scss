@@ -38,7 +38,7 @@
 
     }
 
-    // Ensure the transition of the O geos along with the slide transition speed.
+    // Ensure the transition of the O goes along with the slide transition speed.
     .is-transitioning & {
       @include media-breakpoint-up('md') {
         .header-inner-content__img {
@@ -98,6 +98,7 @@
 
     @include media-breakpoint-up(md) {
       font-size: $font-size-xxlg;
+      white-space: nowrap;
     }
 
     @include media-breakpoint-up(lg) {
