@@ -85,11 +85,13 @@ export default function MediaWithExpantion(props: any) {
               >
                 {props.media_type === "image" ? (
                   <Image
-                    loader={imageLoader(multipleSizesImgPrincipal) as any}
+                    loader={imageLoader(multipleSizesImgExpanded) as any}
                     priority={true}
                     alt={props.media_alt}
                     src={multipleSizesImgExpanded.src}
-                    layout={"fill"}
+                    layout={"intrinsic"}
+                    width={multipleSizesImgExpanded.width}
+                    height={multipleSizesImgExpanded.height}
                   ></Image>
                 ) : (
                   <Video {...props} controls={true}></Video>
