@@ -40,7 +40,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR THE NELL HODGSON WOODRUFF SCHOOL OF NURSING.",
-        "image_src": "",
+        "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://example.com/#placeholder",
         "cta_text": "Support Nursing"
       }

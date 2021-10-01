@@ -40,7 +40,7 @@
       "component": "TextBg",
       "props": {
         "text": "CANDLER SCHOOL OF THEOLOGY HAS 2O36 PRIORITIES FOR THE COMMON GOOD.",
-        "image_src": "",
+        "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://example.com/#placeholder",
         "cta_text": "Support Candler"
       }
