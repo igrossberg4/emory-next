@@ -401,6 +401,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       @extend .header-xlarge;
       line-height: 0.9em;
       letter-spacing: 0;
+      white-space: normal;
     }
 
     .title_expanded {
