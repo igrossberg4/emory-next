@@ -3,6 +3,8 @@
   "type": "collection",
   "page_props": {
     "header": "Campaign Leadership",
+    "header_expanded": "Logline: Lorem Ipsum.",
+    "about": "Special thanks to our",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_blue.jpg"
   },
