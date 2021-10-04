@@ -44,8 +44,8 @@
     opacity:0;
     content: ' ';
     //transition: background $scroll-down-transition-duration ease-in-out;
-    transition: opacity $main-carousel-transition-duration ease-in-out,
-                filter math.div($main-carousel-transition-duration , 2) linear;
+    transition: opacity $main-carousel-transition-duration ease-in-out;
+                // filter math.div($main-carousel-transition-duration , 2) linear;
 
     background-position-x: 38% !important;
     background-position-y:  calc(100vh / 40) !important;
@@ -171,7 +171,8 @@ body.is-scrolled {
 }
 .embla_slide_present{
   position: absolute;
-  transition: all $main-carousel-transition-duration ease-in-out;
+  transition: transform $main-carousel-transition-duration ease-in-out,
+              margin-left $main-carousel-transition-duration ease-in-out;
   &.first {
     margin-left: calc(60% - #{math.div($round-image-size, 2) - 0px});
 
