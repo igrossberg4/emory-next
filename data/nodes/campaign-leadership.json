@@ -3,7 +3,7 @@
   "type": "collection",
   "page_props": {
     "header": "Campaign Leadership",
-    "header_expanded": "Logline: Lorem Ipsum.",
+    "text": "Logline: Lorem Ipsum.",
     "about": "Special thanks to our",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_blue.jpg"
@@ -27,6 +27,119 @@
         "media_type": "image",
         "media_header": "Image title",
         "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "ProfileGrid",
+      "props": {
+        "header": "Campaign Cabinet",
+        "items": [
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          }
+        ]
+      }
+    },
+    {
+      "component": "ProfileGrid",
+      "props": {
+        "header": "School & Unit Volunteer Leaders",
+        "size" : "small",
+        "items": [
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          },
+          {
+            "name" : "Susan Cahoon 68C",
+            "description" : "Campaign Focus Area",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+          }
+        ]
       }
     },
     {
