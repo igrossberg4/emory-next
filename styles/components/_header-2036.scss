@@ -85,6 +85,8 @@
     font-size: $font-size-xsm;
     letter-spacing: 0.2em;
     line-height: 1em;
+    font-weight: bold;
+    font-family: $font-family-sans-serif;
 
     @include media-breakpoint-up(xsm) {
       font-size: $font-size-sm;
