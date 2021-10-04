@@ -18,6 +18,15 @@ header[role="banner"] {
     transform: translateY(-100%);
   }
 
+  &.in-offset {
+    background-color: transparent !important;
+
+    .header__logo {
+      opacity: 0;
+    }
+  }
+
+
   .full_video & {
     display: none;
   }
@@ -35,13 +44,17 @@ header[role="banner"] {
     display: none;
     justify-content: center;
     margin: 0 15px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 
     svg {
       display: block;
     }
 
-    .is-scrolled & {
-      display: flex;
+    @include media-breakpoint-up('lg') {
+      .is-scrolled & {
+        display: flex;
+      }
     }
   }
 }
