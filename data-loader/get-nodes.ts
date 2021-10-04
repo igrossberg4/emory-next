@@ -63,7 +63,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
     })
 }
 
-function prepareMenu(nodes: Array<any>, baseNode: any) {
+function prepareMenu(nodes: Array<any>, baseNode: any, allNodes:Array<any>) {
     const mainMenu = loadFilesAndParse('./data/menu', fs.readdirSync(path.join('./data/menu'))
         .filter(value => value.startsWith('main'))
         .filter(value => value.endsWith('.json')))
@@ -75,7 +75,6 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
     const optionsSchoolsMenu = schoolMenu[0].schools.map((value: any) => {
         let link
         try {
-
         const nodeFind = nodes.find(node => value.id === node.id);
         link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
         return {
@@ -96,7 +95,8 @@ function prepareMenu(nodes: Array<any>, baseNode: any) {
     });
     const optionsMenu =  mainMenu[0].links.map((link: any) => {
         try {
-            const nodeFind = nodes.find(node => link.id === node.id)
+            const nodeArraySelect = link.standalone ? allNodes : nodes;
+            const nodeFind = nodeArraySelect.find(node => link.id === node.id)
             const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
 
 
@@ -157,9 +157,30 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
     ]
 }
 
+function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndependentNodes:Array<any>){
+    const menus = prepareMenu(nodes, baseNode, nodes);
+    return allIndependentNodes.map(node=> {
+        return {
+            path: node.path,
+            meta: Object.assign({}, node.metatag),
+            view: [
+                menus,
+                {
+                    component: "CarouselItem",
+                    // We assign the active prop for scale only this element.
+                    props: Object.assign({ ...node.page_props }, { active: true })
+                }
+            ].concat(node.components)
+        }
+    }).filter(Boolean);
+   
+}
+
 function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase: any }, nodes: Array<any>) {
     const pages = pages_list.list;
     const nodesForCollection = pages.map(page => nodes.find(node => node.id === page));
+    const independentNodes =  nodes.filter(nodeIndependents => pages_list.list.findIndex(list=> list === nodeIndependents.id) === -1);
+    const independentNodesComponents = generatePagesWithoutParent(nodes, pages_list.nodeBase, independentNodes);
     return pages.map((page, i) => {
         let nodeFinded;
         try{
@@ -170,7 +191,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
         }
         const prevNode = i === 0 ? nodes.find(node => node.id === pages[pages.length - 1]) : nodes.find(node => node.id === pages[i - 1]);
         const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
-        const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
+        const menus = prepareMenu(nodesForCollection, pages_list.nodeBase, nodes);
         const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase);
         nodeFinded.components.forEach((component: any) => {
             if (component.component === 'AccordionComponent') {
@@ -371,7 +392,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 }
             ]
         }
-    }).filter(Boolean);
+    }).concat(independentNodesComponents as any).filter(Boolean);
 
 }
 
