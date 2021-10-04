@@ -32,15 +32,15 @@
         padding-left: 0;
         padding-right: 0;
 
-        @include media-breakpoint-up(sm) {
-          max-width: $round-image-size;
-        }
-        @include media-breakpoint-up(lg) {
-          max-width: $round-image-size-medium;
-        }
-        @include media-breakpoint-up(xl) {
-          max-width: $round-image-size-big;
-        }
+        // @include media-breakpoint-up(sm) {
+        //   max-width: $round-image-size;
+        // }
+        // @include media-breakpoint-up(lg) {
+        //   max-width: $round-image-size-medium;
+        // }
+        // @include media-breakpoint-up(xl) {
+        //   max-width: $round-image-size-big;
+        // }
       }
     }
   }
@@ -58,8 +58,14 @@
   }
 
   .title {
-    //font-size: 2em;
-    //line-height: 1em;
+    font-family: $font-family-serif;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-xs;
+    text-transform: uppercase;
+    font-size: $h2-font-size;
+    @include media-breakpoint-up(xl){
+      font-size: $h2-font-size--desktop;
+    }
   }
 
   .pretitle,
@@ -67,10 +73,6 @@
     &:empty {
       display: none;
     }
-  }
-
-  .pretitle {
-    margin-bottom: 15px;
   }
 
   .subtitle {
@@ -180,6 +182,8 @@
   .pretitle,
   .subtitle {
     opacity: 0;
+    margin-bottom: 0;
+    max-height: 0;
     transition: all math.div($scroll-down-transition-duration, 2) ease-out;
   }
 
@@ -212,11 +216,17 @@
       // 0.17em is the correction needed to make it optically centered.
       margin: 12px 0 calc(32px - 0.17em) 0;
       max-height: 100em;
+      white-space: normal;
+    }
+
+    .pretitle {
+      margin-bottom: 15px;
     }
 
     .pretitle,
     .subtitle {
       opacity: 1;
+      max-height: 100%;
     }
   }
 }
