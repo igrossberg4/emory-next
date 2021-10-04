@@ -1,0 +1,48 @@
+.component-profile-grid {
+  text-align:center;
+
+  .header-container {
+    margin-bottom: 2rem;
+  }
+
+  .profile-grid-item {
+    margin-bottom: 5rem;
+
+    &__image {
+      overflow:hidden;
+      border-radius: 50%;
+      box-shadow: $default-box-shadow;
+      border: 8px solid #fff;
+      margin-bottom: 1rem;
+      display: inline-block;
+
+      > div {
+        vertical-align: bottom;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    &__name {
+      font-weight: bold;
+    }
+
+    &__description {
+      text-transform: uppercase;
+      font-size: $font-size-xs;
+      letter-spacing: 0.15em;
+    }
+
+    &--small {
+      margin-bottom: 3rem;
+
+      .profile-grid-item__image {
+        width: 60px;
+        height: 60px;
+        border: none;
+      }
+    }
+  }
+}
