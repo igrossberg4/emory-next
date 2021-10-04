@@ -6,7 +6,7 @@
     "header": "NELL HODGSON WOODRUFF<br>SCHOOL OF NURSING",
     "text": "We prepare visionary nurse leaders who improve bedside care, transform care delivery through research, and educate the next wave of leaders in nursing",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_neurons_blue.jpg"
+    "img_src": "nursing_lede.jpg"
   },
   "path": "nell-hodgson-woodruff-school-of-nursing",
   "metatag": {
@@ -19,7 +19,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "A rising star for future health care champions, the Nell Hodgson Woodruff School of Nursing is consistently named one of the best nursing schools for master’s degrees by <u>U.S. News & World Report Why? Because our faculty, training, research, and students are unequaled.</u>",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "nursing_isolated_bg.png",
         "text": "<p>In the diverse, thriving health care hub of Atlanta, standing out isn’t easy. But, the clinicians, instructors, and nursing students of Emory Nursing do just that. Blurring the lines between classroom and career across a wide range of tech-focused, patient-centered specialties, Emory students and practicing nurses are working to transform lives not only for today, but for many days ahead.</p>",
         "img_src": "nursing_intro.jpg",
         "media_src": "https://vimeo.com/619171116/a27db6e5c4",
@@ -40,7 +40,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR THE NELL HODGSON WOODRUFF SCHOOL OF NURSING.",
-        "image_src": "ecas_divider_bg.jpg",
+        "image_src": "nursing_divider_bg.jpg",
         "cta_link": "https://example.com/#placeholder",
         "cta_text": "Support Nursing"
       }
@@ -52,8 +52,8 @@
         "title": "In 2O36, Innovation is Elemental",
         "body": "<p>Boundless opportunities. Ultramodern facilities. Visionary thinking. Expected to serve  the community by summer 2022, the Emory Nursing Learning Center will lead the way in nursing education. With new technologies and advanced teaching methods, including an advanced simulation and skills lab, the facility will support experiential and immersive learning for students. It also will be home to the Emory Nursing Experience continuing professional education program, in partnership with Emory Healthcare Nursing.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "nursing_priority_1.jpg",
+        "media_src": "nursing_priority_1.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Innovation is Elemental",
@@ -74,8 +74,8 @@
         "title": "Cultivating Leadership",
         "body": "<p>To retain and develop widely respected faculty at a nursing school of our ranking, access to flexible development funds is crucial. <strong>Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.</strong></p><p>Expected to improve both retention and productivity of nursing faculty members, these funds may support academic leaves for faculty to participate in fellowships opportunities that enhance their professional development.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "nursing_priority_2.jpg",
+        "media_src": "nursing_priority_2_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Cultivating Leadership",
@@ -89,10 +89,10 @@
         "title": "Carolyn Clevenger 02N 04N 14N P23",
         "layout": "left",
         "subtitle": "Associate Dean for Transformative Clinical Practice<br/>Professor, Clinical Track",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "nursing_quote_1.jpg",
         "media_src": "https://vimeo.com/618390601/85517d1c4a",
-        "media_alt": "A video quote of Carolyn Clevenge 02N 04N 14N P23",
-        "media_header": "Carolyn Clevenge 02N 04N 14N P23",
+        "media_alt": "A video quote of Carolyn Clevenger 02N 04N 14N P23",
+        "media_header": "Carolyn Clevenger 02N 04N 14N P23",
         "media_text": "Associate Dean for Transformative Clinical Practice<br/>Professor, Clinical Track",
         "button_close_text": "Exit"
       }
@@ -104,8 +104,8 @@
         "title": "In 2O36, Data Leads Decisions",
         "body": "<p>A hub for research and the education of future nursing and health care leaders, the Data Science Center is among a growing number of data science resources across Emory University. Signature initiatives Project NeLL and Project CONQUER use artificial intelligence to guide work and learnings.</p><p>From better clinical decision support, to discovery of metabolic bases of disease, to population health management, the Data Science Center’s goal is to use data-driven thinking to address nursing and health care challenges. <strong>With the help of 2O36, this immersive initiative will highlight the role of nursing science in solving complex problems and prepare nursing students to accelerate the future of patient care through data analytics.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "nursing_priority_3.jpg",
+        "media_src": "nursing_priority_3_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Data Leads Decisions",
