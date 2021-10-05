@@ -9,10 +9,10 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
 function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any) {
     return pages.map(page => {
         let nodeFinded;
-        try{
+        try {
             nodeFinded = nodes.find(node => page === node.id);
 
-        }catch(e){
+        } catch (e) {
             throw "Slide with id " + page + ` from base collection '${nodeBase.id}' ` + " not found in pages"
         }
         const path = nodeFinded.id === nodeBase.id ? `${nodeFinded.path == '' ? '/' : nodeFinded.path}` : `${nodeBase.path}/${nodeFinded.path}`;
@@ -23,17 +23,17 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component: 'IntroPage',
                         props: Object.assign({
-                            isMain:true,
-                            active:false,
-                            path:path
-                          }, nodeFinded.page_props),
-                    } :
-                    {
-                        component: "CarouselItem",
-                        props: Object.assign(nodeFinded.page_props, {
+                            isMain: true,
+                            active: false,
                             path: path
                         }, nodeFinded.page_props),
-                    }
+                    } :
+                        {
+                            component: "CarouselItem",
+                            props: Object.assign(nodeFinded.page_props, {
+                                path: path
+                            }, nodeFinded.page_props),
+                        }
                 ]
             }
         } : {
@@ -43,8 +43,8 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     nodeBase.id === nodeFinded.id ? {
                         component: 'IntroPage',
                         props: Object.assign({
-                            isMain:true,
-                            active:true,
+                            isMain: true,
+                            active: true,
                             path: path
                         }, nodeFinded.page_props),
                     } :
@@ -63,7 +63,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
     })
 }
 
-function prepareMenu(nodes: Array<any>, baseNode: any, allNodes:Array<any>) {
+function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
     const mainMenu = loadFilesAndParse('./data/menu', fs.readdirSync(path.join('./data/menu'))
         .filter(value => value.startsWith('main'))
         .filter(value => value.endsWith('.json')))
@@ -75,13 +75,13 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes:Array<any>) {
     const optionsSchoolsMenu = schoolMenu[0].schools.map((value: any) => {
         let link
         try {
-        const nodeFind = nodes.find(node => value.id === node.id);
-        link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
-        return {
-            title: value.title ? value.title : nodeFind.page_props.title,
-            link_to: link
-        }
-        }catch (e) {
+            const nodeFind = nodes.find(node => value.id === node.id);
+            link = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
+            return {
+                title: value.title ? value.title : nodeFind.page_props.title,
+                link_to: link
+            }
+        } catch (e) {
             throw "Link page with id " + value?.id + " at menu school not found in pages with base collection " + baseNode.id;
         }
     });
@@ -93,7 +93,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes:Array<any>) {
             link_to: link
         }
     });
-    const optionsMenu =  mainMenu[0].links.map((link: any) => {
+    const optionsMenu = mainMenu[0].links.map((link: any) => {
         try {
             const nodeArraySelect = link.standalone ? allNodes : nodes;
             const nodeFind = nodeArraySelect.find(node => link.id === node.id)
@@ -106,7 +106,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes:Array<any>) {
                 link_to: linkFound
             }
         } catch (e) {
-            throw "Link page with id " +link.id + " at menu not found in pages with base collection " + baseNode.id;
+            throw "Link page with id " + link.id + " at menu not found in pages with base collection " + baseNode.id;
         }
     });
 
@@ -117,14 +117,14 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes:Array<any>) {
                 {
                     component: "Header",
                     props: {
-                        menu_school:{
+                        menu_school: {
                             title: "Select school",
                             options_schools: optionsSchoolsMenu,
                             options_units: optionsMenuUnits,
                         },
-                        main_menu:{
+                        main_menu: {
                             title: "Menu",
-                            options:optionsMenu,
+                            options: optionsMenu,
                             social: mainMenu[0].social
                         }
                     },
@@ -157,9 +157,9 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
     ]
 }
 
-function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndependentNodes:Array<any>){
+function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndependentNodes: Array<any>) {
     const menus = prepareMenu(nodes, baseNode, nodes);
-    return allIndependentNodes.map(node=> {
+    return allIndependentNodes.map(node => {
         return {
             path: node.path,
             meta: Object.assign({}, node.metatag),
@@ -170,23 +170,26 @@ function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndepen
                     // We assign the active prop for scale only this element.
                     props: Object.assign({ ...node.page_props }, { active: true })
                 }
-            ].concat(node.components)
+            ].concat(node.components).concat({
+                "component": "Footer",
+                "props": {}
+            })
         }
     }).filter(Boolean);
-   
+
 }
 
 function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase: any }, nodes: Array<any>) {
     const pages = pages_list.list;
     const nodesForCollection = pages.map(page => nodes.find(node => node.id === page));
-    const independentNodes =  nodes.filter(nodeIndependents => pages_list.list.findIndex(list=> list === nodeIndependents.id) === -1);
+    const independentNodes = nodes.filter(nodeIndependents => pages_list.list.findIndex(list => list === nodeIndependents.id) === -1);
     const independentNodesComponents = generatePagesWithoutParent(nodes, pages_list.nodeBase, independentNodes);
     return pages.map((page, i) => {
         let nodeFinded;
-        try{
+        try {
             nodeFinded = nodes.find(node => page === node.id);
 
-        }catch(e){
+        } catch (e) {
             console.log("Node with id " + page + " not found in pages");
         }
         const prevNode = i === 0 ? nodes.find(node => node.id === pages[pages.length - 1]) : nodes.find(node => node.id === pages[i - 1]);
@@ -256,8 +259,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             pages_list.nodeBase.id === prevNode.id ? {
                                 component: 'IntroPage',
                                 props: Object.assign({
-                                    isMain:true,
-                                    active:false,
+                                    isMain: true,
+                                    active: false,
                                     path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
                                 }, prevNode.page_props),
                             } :
@@ -281,8 +284,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                 pages_list.nodeBase.id === previousNodeCloned.id ? {
                                     component: 'IntroPage',
                                     props: Object.assign({
-                                        isMain:true,
-                                        active:false,
+                                        isMain: true,
+                                        active: false,
                                         path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
                                     }, previousNodeCloned.page_props),
                                 } :
@@ -307,8 +310,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                             pages_list.nodeBase.id === nextNode.id ? {
                                 component: 'IntroPage',
                                 props: Object.assign({
-                                    isMain:true,
-                                    active:false,
+                                    isMain: true,
+                                    active: false,
                                     path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
                                 }, nextNode.page_props),
                             } :
@@ -333,8 +336,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                 pages_list.nodeBase.id === nextNodeCloned.id ? {
                                     component: 'IntroPage',
                                     props: Object.assign({
-                                        isMain:true,
-                                        active:true,
+                                        isMain: true,
+                                        active: true,
                                         path: path === '' ? '/' : path
                                     }, nextNodeCloned.page_props),
                                 } :
@@ -370,8 +373,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                     pages_list.nodeBase.id === nodeFinded.id ? {
                                         component: 'IntroPage',
                                         props: Object.assign({
-                                            isMain:true,
-                                            active:true,
+                                            isMain: true,
+                                            active: true,
                                             path: path === '' ? '/' : path
                                         }, nodeFinded.page_props),
                                     } :
