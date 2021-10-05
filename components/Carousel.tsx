@@ -317,10 +317,12 @@ export default function EmblaCarousel({
                 } : undefined}
               >
                 {slides.map((value: any, i: number) => {
+                  // No offset used right now, left here in case it is needed
+                  // to be recovered.
                   const valueMore = slides[i].props.view[0].props.isMain
                     ? i > page
-                      ? 60
-                      : 40
+                      ? 0
+                      : 0
                     : 0;
                   return (
                     <div

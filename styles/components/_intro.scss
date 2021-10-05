@@ -59,6 +59,11 @@
     right: 24px;
     z-index: 101;
 
+    .is-transitioning &,
+    .blocked & {
+      display: none;
+    }
+
     .icon-button {
       width: 48px;
       height: 48px;
