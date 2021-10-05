@@ -54,7 +54,7 @@ export default function CarouselItem(props: any) {
             <div className="pretitle text-label">{props.about}</div>
             <h1
 
-              className="title header-h2"
+              className="title"
               dangerouslySetInnerHTML={{ __html: props.header }}
             ></h1>
             <div className="subtitle text-body--lg">{props.text}</div>
@@ -68,7 +68,7 @@ export default function CarouselItem(props: any) {
               if(!state.isCircleExpanded){
                 const element = document.getElementById("selected");
                 document.body.classList.add("is-scrolled");
-  
+
                 dispatch({ type: "IS_TRANSITIONING", payload: true });
                 if (element) {
                   const activeElement = element.querySelector(".content-header__container");

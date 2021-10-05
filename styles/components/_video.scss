@@ -1,6 +1,36 @@
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(6turn);
+  }
+}
+
+
+
 .video-vimeo {
   margin: 0 auto;
   width: 100%;
+  background-color: rgba(30,30,30,.9);
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-bottom-color: transparent;
+    animation: spin 3s ease-in-out infinite alternate;
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
 
   > div {
     position: relative;
@@ -15,6 +45,7 @@
     left: 0;
     width: 100% !important;
     height: 100% !important;
+    z-index: 2;
   }
 }
 

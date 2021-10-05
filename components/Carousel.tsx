@@ -252,7 +252,8 @@ export default function EmblaCarousel({
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView, page, queue, state.isCircleExpanded]); // @ts-ignore
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const isSmall = useMediaQuery({ query: `(max-width: 800px)` });
+  const isMedium = useMediaQuery({ query: `(max-width: 1000px)` });
   const memo = useMemo(() => {
     return (
       <>
@@ -316,10 +317,12 @@ export default function EmblaCarousel({
                 } : undefined}
               >
                 {slides.map((value: any, i: number) => {
+                  // No offset used right now, left here in case it is needed
+                  // to be recovered.
                   const valueMore = slides[i].props.view[0].props.isMain
                     ? i > page
-                      ? 60
-                      : 40
+                      ? 0
+                      : 0
                     : 0;
                   return (
                     <div
@@ -331,13 +334,13 @@ export default function EmblaCarousel({
                           i < page
                             ? `${
                                 (i - page) *
-                                ((!isMobile ? 50 : 100) + valueMore)
+                                ((!isSmall ? (isMedium ? 60 : 50) : 100) + valueMore)
                               }vw`
                             : page === i
                             ? `0`
                             : `${
                                 (i - page) *
-                                ((!isMobile ? 50 : 100) + valueMore)
+                                ((!isSmall ? (isMedium ? 60 : 50) : 100) + valueMore)
                               }vw`
                         })`,
                       }}
@@ -401,6 +404,6 @@ export default function EmblaCarousel({
         )}
       </>
     );
-  }, [page, isMobile, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);
+  }, [page, isSmall, isMedium, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);
   return memo;
 }
