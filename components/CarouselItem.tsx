@@ -73,6 +73,14 @@ export default function CarouselItem(props: any) {
                 if (element) {
                   const activeElement = element.querySelector(".content-header__container");
                   activeElement?.setAttribute("data-animation", "active");
+                }else {
+                  // Handler for independent pages. The use the same name class, but there's not selected id.
+                  const activeElement = document.querySelector(
+                    ".content-header__container"
+                  );
+                  if (activeElement) {
+                    activeElement?.setAttribute("data-animation", "active");
+                  }
                 }
                 dispatch({
                   type: "GOING_UP",
