@@ -22,8 +22,8 @@
         "background_image": "candler_isolated_bg.png",
         "text": "<p>Since our founding in 1914, Candler has remained true to our mission to educate faithful and creative leaders for the church’s ministries throughout the world. Our faculty’s devotion to teaching, mentoring, and driving positive transformation in the church and society endures across generations.</p>",
         "img_src": "candler_intro.jpg",
-        "media_src": "candler_intro.jpg",
-        "media_alt": "",
+        "media_src": "https://vimeo.com/620160994/a45a0f5f17",
+        "media_alt": "Two students perform ceremony.",
         "media_type": "image",
         "media_header": "Candler School of Theolog",
         "media_text": ""
@@ -54,10 +54,10 @@
         "layout": "right",
         "img_src": "candler_priority_1.jpg",
         "media_src": "candler_priority_1.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Two students light a candle.",
         "media_type": "image",
         "media_header": "Scholarship is Free",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "By supporting 2O36, you will help us reach our ultimate goal of making the master of divinity program tuition-free for all students."
       }
     },
     {
@@ -76,10 +76,10 @@
         "layout": "right",
         "img_src": "candler_priority_2.jpg",
         "media_src": "candler_priority_2.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "A religious leader sings while holding a book.",
         "media_type": "image",
         "media_header": "Nurture Leaders",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Current and former faculty members with a passion for teaching, research, and service are the foundation of Candler’s international reputation. They lead their fields in scholarly productivity while laying the groundwork for Christian communities and churches to thrive."
       }
     },
     {
@@ -113,10 +113,10 @@
         "layout": "right",
         "img_src": "candler_priority_3.jpg",
         "media_src": "candler_priority_3.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Several students have a conversation at a table.",
         "media_type": "image",
         "media_header": "Connect Communities",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Candler School of Theology is at the forefront of curricular innovations in a number of areas, including interfaith relations, and faculty specializing in this work help the school’s overwhelmingly Christian student body learn from leaders of other faith communities."
       }
     },
     {
