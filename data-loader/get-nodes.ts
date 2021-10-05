@@ -124,7 +124,6 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
             const linkFound = baseNode.id === nodeFind.id ? `${baseNode.path}` : `${baseNode.path}/${nodeFind.path}`
 
 
-
             return {
                 title: link.title ? link.title : nodeFind.page_props.title,
                 link_to: linkFound
@@ -218,7 +217,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
         }
         const prevNode = i === 0 ? nodes.find(node => node.id === pages[pages.length - 1]) : nodes.find(node => node.id === pages[i - 1]);
         const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
-        const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
+        const menus = prepareMenu(nodesForCollection, pages_list.nodeBase, independentNodes);
         const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase, i);
         nodeFinded.components.forEach((component: any) => {
             if (component.component === 'AccordionComponent') {
