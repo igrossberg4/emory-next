@@ -22,7 +22,7 @@
         "background_image": "laney_isolated_bg.png",
         "text": "<p>As society faces constant and escalating challenges, the Laney Graduate School leads the charge in training the leaders across more than 40 disciplines, including the social sciences, public health, nursing, and business. Students work with faculty researchers to uncover solutions to complex problems. They enter the professional world armed with deep knowledge and experience in their fields and a desire to upend norms in academia, business, health care, and government.</p>",
         "img_src": "laney_intro.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/618335404/36d97a683a",
         "media_alt": "Two researchers work in a lab.",
         "media_type": "video",
         "media_header": "Laney Graduate School",
@@ -42,7 +42,7 @@
         "text": "LANEY GRADUATE SCHOOL HAS SEVERAL PRIORITIES FOR 2O36.",
         "image_src": "laney_divider_bg.jpg",
         "cta_link": "https://example.com/#placeholder",
-        "cta_text": "Support College"
+        "cta_text": "Support Laney"
       }
     },
     {
@@ -86,7 +86,7 @@
         "media_src": "https://vimeo.com/616255678/2627789f95",
         "media_alt": "A video quote of Kimberly Jacob Arriola 01PH",
         "media_header": "Kimberly Jacob Arriola 01PH",
-        "media_text": "Dean, Laney Graduate School, Emory University Vice Provost for Graduate Affairs, Emory University Charles Howard Candler Professor of Behavioral, Social, and Health Education Sciences, Rollins School of Public Health",
+        "media_text": "Dean, Laney Graduate School, Emory University<br/>Vice Provost for Graduate Affairs, Emory University<br/>Charles Howard Candler Professor of Behavioral, Social, and Health Education Sciences, Rollins School of Public Health",
         "button_close_text": "Exit"
       }
     },
@@ -102,14 +102,15 @@
         "media_alt": "Three students celebrate their project.",
         "media_type": "image",
         "media_header": "Connections are Vital",
-        "media_text": "In developing a chatbot for Amazon Alexa that makes logical inferences, rather than functioning as a search engine, students are teaching bots to ask questions that lead people to seek much-needed human companionship and treatment."
+        "media_text": "In developing a chatbot for Amazon Alexa that makes logical inferences, rather than functioning as a search engine, students are teaching bots to ask questions that lead people to seek much-needed human companionship and treatment.",
+        "media_byline": "Featured: James Finch 24G, Jinho Choi, Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics, Sarah Finch 24G"
       }
     },
     {
       "component": "AccordionComponent",
-      "pretitle": "KEY PRIORITIES",
-      "title": "LANEY GRADUATE SCHOOL",
       "props": {
+        "pretitle": "LANEY GRADUATE SCHOOL",
+        "title": "KEY PRIORITIES",
         "items": [
           {
             "title": "Support Courage",

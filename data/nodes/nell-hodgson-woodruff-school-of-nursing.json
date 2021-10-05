@@ -2,9 +2,11 @@
   "id": "nell-hodgson-woodruff-school-of-nursing",
   "type": "collection",
   "page_props": {
+    "about": "school spotlight",
     "header": "NELL HODGSON WOODRUFF<br>SCHOOL OF NURSING",
+    "text": "We prepare visionary nurse leaders who improve bedside care, transform care delivery through research, and educate the next wave of leaders in nursing",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_neurons_blue.jpg"
+    "img_src": "nursing_lede.jpg"
   },
   "path": "nell-hodgson-woodruff-school-of-nursing",
   "metatag": {
@@ -16,28 +18,148 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_cancer_cells_blue.jpg",
-        "media_src": "2036_cancer_cells_blue.jpg",
+        "header": "A rising star for future health care champions, the Nell Hodgson Woodruff School of Nursing is consistently named one of the best nursing schools for master’s degrees by <u>U.S. News & World Report Why? Because our faculty, training, research, and students are unequaled.</u>",
+        "background_image": "nursing_isolated_bg.png",
+        "text": "<p>In the diverse, thriving health care hub of Atlanta, standing out isn’t easy. But, the clinicians, instructors, and nursing students of Emory Nursing do just that. Blurring the lines between classroom and career across a wide range of tech-focused, patient-centered specialties, Emory students and practicing nurses are working to transform lives not only for today, but for many days ahead.</p>",
+        "img_src": "nursing_intro.jpg",
+        "media_src": "https://vimeo.com/619171116/a27db6e5c4",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "video",
+        "media_header": "Nell Hodgson Woodruff School of Nursing",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "Our innovation model really revolves around computational health sciences, digital health technology, simulation, virtual reality, and augmented reality.",
+        "attribution": "— Beth Anne Swan, Associate Dean and Vice President for Academic Practice Partnerships<br/>Professor, Clinical Track"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR THE NELL HODGSON WOODRUFF SCHOOL OF NURSING.",
+        "image_src": "nursing_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Nursing"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2O36, Innovation is Elemental",
+        "body": "<p>Boundless opportunities. Ultramodern facilities. Visionary thinking. Expected to serve  the community by summer 2022, the Emory Nursing Learning Center will lead the way in nursing education. With new technologies and advanced teaching methods, including an advanced simulation and skills lab, the facility will support experiential and immersive learning for students. It also will be home to the Emory Nursing Experience continuing professional education program, in partnership with Emory Healthcare Nursing.</p>",
+        "layout": "right",
+        "img_src": "nursing_priority_1.jpg",
+        "media_src": "nursing_priority_1.jpg",
+        "media_alt": "Three students at a pep rally.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Innovation is Elemental",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "The stunning new simulation center, where new classes of nurse leaders will train in world-class care, will be the largest of its kind in Georgia. And by sharing our facilities, equipment, and programs with others across the state who need advanced training, Emory will solidly plant a flag as the health care leader in Georgia.",
+        "column2": "<strong>Supporting 2O36 helps provide a unique opportunity for collaboration and growth between the School of Nursing and Emory Healthcare and keeps Emory at the forefront of health care innovations.</strong>"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Cultivating Leadership",
+        "body": "<p>To retain and develop widely respected faculty at a nursing school of our ranking, access to flexible development funds is crucial. <strong>Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.</strong></p><p>Expected to improve both retention and productivity of nursing faculty members, these funds may support academic leaves for faculty to participate in fellowships opportunities that enhance their professional development.</p>",
+        "layout": "right",
+        "img_src": "nursing_priority_2.jpg",
+        "media_src": "nursing_priority_2_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Cultivating Leadership",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Carolyn Clevenger 02N 04N 14N P23",
+        "layout": "left",
+        "subtitle": "Associate Dean for Transformative Clinical Practice<br/>Professor, Clinical Track",
+        "img_src": "nursing_quote_1.jpg",
+        "media_src": "https://vimeo.com/618390601/85517d1c4a",
+        "media_alt": "A video quote of Carolyn Clevenger 02N 04N 14N P23",
+        "media_header": "Carolyn Clevenger 02N 04N 14N P23",
+        "media_text": "Associate Dean for Transformative Clinical Practice<br/>Professor, Clinical Track",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2O36, Data Leads Decisions",
+        "body": "<p>A hub for research and the education of future nursing and health care leaders, the Data Science Center is among a growing number of data science resources across Emory University. Signature initiatives Project NeLL and Project CONQUER use artificial intelligence to guide work and learnings.</p><p>From better clinical decision support, to discovery of metabolic bases of disease, to population health management, the Data Science Center’s goal is to use data-driven thinking to address nursing and health care challenges. <strong>With the help of 2O36, this immersive initiative will highlight the role of nursing science in solving complex problems and prepare nursing students to accelerate the future of patient care through data analytics.</strong></p>",
+        "layout": "right",
+        "img_src": "nursing_priority_3.jpg",
+        "media_src": "nursing_priority_3_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Data Leads Decisions",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Linda McCauley 79N P11",
+        "layout": "right",
+        "subtitle": "Dean and Professor, Nell Hodgson Woodruff School of Nursing",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/619038358/0eeb98940b",
+        "media_alt": "A video quote of Linda McCauley 79N P11",
+        "media_header": "Linda McCauley 79N P11",
+        "media_text": "Dean and Professor, Nell Hodgson Woodruff School of Nursing",
+        "button_close_text": "Exit"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "pretitle": "NELL HODGSON WOODRUFF SCHOOL OF NURSING",
+        "title": "KEY PRIORITIES",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Revolutionizing Approaches for 2O36",
+            "description": "<p>More than 6 million Americans live with Alzheimer’s and dementia, and the numbers are growing. Massive financial and emotional burdens are expected to reach new heights in the coming years. On average, care for people living with dementia exceeds insurance reimbursement by $500 to $1,000 per year, per patient. <strong>Philanthropic support through 2O36 is key for the Integrated Memory Care Clinic, and will allow Emory School of Nursing to expand this model across the United States, improving care and quality of life for millions of families.</strong></p><p>A partnership of Emory University’s Nell Hodgson Woodruff School of Nursing, Department of Neurology, and Department of Psychiatry, the Integrated Memory Care Clinic (IMCC) is a nurse-led medical home, addressing primary care needs, treatment of other chronic conditions, and unique challenges that dementia patients and their care partners face. This celebrated clinic has been honored for six continuous years as a Patient-Centered Medical Home, recognized as an Age-Friendly Health System by the Institute for Healthcare Improvement, and chosen as a Best Practice exemplar by the Institute for Patient- and Family-Centered Care.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "In 2O36, Access Matters",
+            "description": "<p>Scholarships open the world to students. For working nurses pursuing advanced degrees. For those future-proofing their careers by grounding in data science. And for those traditionally underrepresented in nursing. </p><p>The average debt burden for a student graduating with a bachelor of science in nursing (BSN) is close to $60,000. Depending on the area of study, our master of science in nursing (MSN) graduates typically carry $60,000 to $95,000 in debt. These substantial costs keep many new nurses from pursuing rewarding career opportunities. We want to change that.</p><p><strong>With your generous support of 2O36, the School of Nursing can establish an endowed scholarship fund to ensure student financial assistance in perpetuity, making a nursing education at the undergraduate, graduate, and professional levels more accessible.</strong> That access strengthens and diversifies the field of nursing, health care overall, and Emory’s standing as a leading educational institution.</p>"
+          },
+          {
+            "title": "Attracting Brilliance Through 2O36",
+            "description": "<p>Having doubled in size in the last decade and now ranked No. 2 in graduate nursing schools by U.S. News World and Report, the School of Nursing is a beacon for health care educators and students alike. Despite this significant growth in size and research excellence, endowed professorships for the school have not been funded in more than two decades.</p><p><strong>Through the support of caring donors, we can endow two new distinguished professorships.</strong> With this sustainable funding, the School of Nursing can continue to attract talented researchers and teachers, achieve top rankings, and strengthen our academic curriculum across pediatrics, caregiving, elder care, cancer nursing, public health nursing, and social determinants of health.</p>"
+          },
+          {
+            "title": "Recruit The Next Generation",
+            "description": "<p>To lead innovations in care and advance their careers, nursing faculty need the freedom to focus on their development as scholars, educators, and clinicians. <strong>Establishing a faculty recruitment pipeline will enable Emory to attract teachers and researchers emerging as leaders in nursing simulation and digital learning as technologies advance.</strong></p><p>A faculty recruitment pipeline for the School of Nursing wouldn’t just focus on established educators, it would support postdoctoral fellows from underrepresented groups and strong clinicians in transitioning to academic roles. Bringing new talents and fresh perspectives into our nursing program will further strengthen Emory’s curriculum and better prepare our students for emerging priorities and trends in the field of nursing. And the ripple effect will strengthen our surrounding community and health care at large.</p>"
+          },
+          {
+            "title": "In 2O36, Students Learn By Doing",
+            "description": "<p>Through simulation-based training, students learn to manage rapidly changing situations in real time. By putting them into complex simulated situations, they learn critical thinking and how to communicate effectively with patients, their loved ones, and health care teams. It’s a unique opportunity to practice and master clinical skills, techniques, and procedures while enhancing patient safety. The repetition of these real-world scenarios allows students to strengthen their skills in a safe, controlled environment without risk to actual patients. That translates into better patient outcomes in the real world.</p><p><strong>Your support for 2O36 will expand access to simulation-based learning for nursing, interprofessional, and transdisciplinary education and collaborative practice.</strong> This intentional integration of education, research, and clinical care in an academic setting will advance the science and shape the structure and quality of health care.</p>"
+          },
+          {
+            "title": "Flexibility Keeps Us Relevant",
+            "description": "<p>Unexpected challenges are the norm in health care, medical research, and education. Funds for the School of Nursing that aren’t earmarked for specific programs allow us to respond to changing demands. The Nursing Fund for Excellence provides this flexibility. Directed by the dean, this fund is the key to sustaining a nimble, top-ranked institution that provides the highest quality education.</p><p><strong>Gifts to the Fund for Excellence enable us to focus on shifting priorities and areas of greatest need.</strong> In the past, this has meant seeding new projects and programs, attracting high-caliber faculty, and initiating new research areas for the School of Nursing. The fund’s inherent flexibility allows Emory to remain at the forefront in health care education and innovation.</p>"
+          },
+          {
+            "title": "In 2O36, Nurses are Doctors",
+            "description": "<p>America’s complex, changing health care environment requires the highest level of scientific knowledge and practical expertise. Emory’s two doctoral degree tracks—doctor of nursing practice (DNP) and doctor of philosophy (PhD) in nursing—prepare nurse scientists and clinical leaders.</p><p>Students in our nursing doctoral program typically carry a debt burden of nearly $155,000, and scholarship opportunities for graduate-level students are traditionally limited compared to those for undergraduates. <strong>Your generosity allows us to establish scholarships and grants for students pursuing DNP and PhD degrees.</strong> Doctoral-level nursing education becomes more accessible, and tomorrow’s expert researchers and practitioners are prepared to spearhead improvements in patient care and health care policy across the nursing sciences.</p>"
           }
         ]
       }
