@@ -40,7 +40,7 @@ export default function Header(props:any) {
   }, [scroll]); // @ts-ignore
 
   return (
-    <header id="header" role="banner">
+    <header id="header" className={"in-offset"} role="banner">
       <SchoolsMenu {...props.menu_school}></SchoolsMenu>
       <div className="header__logo">
         <a href="/" >
