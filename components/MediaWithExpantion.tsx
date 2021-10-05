@@ -78,6 +78,7 @@ export default function MediaWithExpantion(props: any) {
             <Fragment>
               <motion.figure
                 data-media={props.media_type}
+                style={{ maxWidth: multipleSizesImgExpanded ? ( multipleSizesImgExpanded.width / multipleSizesImgExpanded.height ) * 50 + 'vh' : 'auto' }}
                 // layout
                 // layoutId={layoutId}
                 // initial={{ opacity: 1 }}
