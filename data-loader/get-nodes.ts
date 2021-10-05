@@ -6,8 +6,8 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
-function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any) {
-    return pages.map(page => {
+function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any, index) {
+    const slides = pages.map(page => {
         let nodeFinded;
         try{
             nodeFinded = nodes.find(node => page === node.id);
@@ -60,7 +60,28 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
                     )
             }
         }
-    })
+    });
+    const slidesCloned = [];
+    for (let i = slides.length / 2; i < slides.length; i++){
+        if(i+index > slides.length -1){
+          slidesCloned.push(slides[index+i-slides.length]);
+        }
+        else{
+          slidesCloned.push(slides[index+i]);
+    
+        }
+      }
+      slidesCloned.push(slides[index])
+      for (let i = 1; i < slides.length / 2; i++){
+        if(i+index > slides.length -1){
+          slidesCloned.push(slides[index+i-slides.length]);
+        }
+        else{
+          slidesCloned.push(slides[index+i]);
+    
+        }
+      }
+    return slidesCloned;
 }
 
 function prepareMenu(nodes: Array<any>, baseNode: any) {
@@ -171,7 +192,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
         const prevNode = i === 0 ? nodes.find(node => node.id === pages[pages.length - 1]) : nodes.find(node => node.id === pages[i - 1]);
         const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
         const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
-        const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase);
+        const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase, i);
         nodeFinded.components.forEach((component: any) => {
             if (component.component === 'AccordionComponent') {
                 const re = new RegExp("^(http|https)://", "i");
@@ -225,112 +246,6 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
             }
         });
-
-        if (i === 0 || i === pages.length - 1) {
-            if (i === 0) {
-                slides.unshift({
-                    component: "DynamicComponentMatcher",
-                    props: {
-                        view: [
-                            pages_list.nodeBase.id === prevNode.id ? {
-                                component: 'IntroPage',
-                                props: Object.assign({
-                                    isMain:true,
-                                    active:false,
-                                    path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
-                                }, prevNode.page_props),
-                            } :
-                                {
-                                    component: "CarouselItem",
-                                    props: Object.assign(prevNode.page_props, {
-
-                                        path: prevNode.id === pages_list.nodeBase.id ? `${prevNode.path == '' ? '/' : prevNode.path}` : `${pages_list.nodeBase.path}/${prevNode.path}`
-                                    })
-                                }
-
-                        ]
-                    }
-                });
-                if (pages.length > 2) {
-                    const previousNodeCloned = nodes.find(node => node.id === pages[pages.length - 2]);
-                    slides.unshift({
-                        component: "DynamicComponentMatcher",
-                        props: {
-                            view: [
-                                pages_list.nodeBase.id === previousNodeCloned.id ? {
-                                    component: 'IntroPage',
-                                    props: Object.assign({
-                                        isMain:true,
-                                        active:false,
-                                        path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
-                                    }, previousNodeCloned.page_props),
-                                } :
-                                    {
-                                        component: "CarouselItem",
-                                        props: Object.assign(previousNodeCloned.page_props, {
-
-                                            path: previousNodeCloned.id === pages_list.nodeBase.id ? `${previousNodeCloned.path == '' ? '/' : previousNodeCloned.path}` : `${pages_list.nodeBase.path}/${previousNodeCloned.path}`
-                                        })
-                                    }
-
-                            ]
-                        }
-                    });
-                }
-
-            } else {
-                slides.push({
-                    component: "DynamicComponentMatcher",
-                    props: {
-                        view: [
-                            pages_list.nodeBase.id === nextNode.id ? {
-                                component: 'IntroPage',
-                                props: Object.assign({
-                                    isMain:true,
-                                    active:false,
-                                    path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
-                                }, nextNode.page_props),
-                            } :
-                                {
-                                    component: "CarouselItem",
-                                    props: Object.assign(nextNode.page_props, {
-
-                                        path: nextNode.id === pages_list.nodeBase.id ? `${nextNode.path == '' ? '/' : nextNode.path}` : `${pages_list.nodeBase.path}/${nextNode.path}`
-                                    })
-                                }
-
-                        ]
-                    }
-                });
-                if (pages.length > 2) {
-                    const nextNodeCloned = nodes.find(node => node.id === pages[0 + 1]);
-                    const path = nextNodeCloned.id === pages_list.nodeBase.id ? `${nextNodeCloned.path == '' ? '/' : nextNodeCloned.path}` : `${pages_list.nodeBase.path}/${nextNodeCloned.path}`;
-                    slides.push({
-                        component: "DynamicComponentMatcher",
-                        props: {
-                            view: [
-                                pages_list.nodeBase.id === nextNodeCloned.id ? {
-                                    component: 'IntroPage',
-                                    props: Object.assign({
-                                        isMain:true,
-                                        active:true,
-                                        path: path === '' ? '/' : path
-                                    }, nextNodeCloned.page_props),
-                                } :
-                                    {
-                                        component: "CarouselItem",
-                                        props: Object.assign(nextNodeCloned.page_props, {
-
-                                            path: path
-                                        })
-                                    }
-
-                            ]
-                        }
-                    });
-                }
-            }
-        }
         const path = pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path == '' ? '' : nodeFinded.path}` : `${pages_list.nodeBase.path == '' ? nodeFinded.path : pages_list.nodeBase.path + '/' + nodeFinded.path}`;
         return {
             path: path,
