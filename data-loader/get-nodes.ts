@@ -62,7 +62,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
         }
     });
     const slidesCloned = [];
-    for (let i = slides.length / 2; i < slides.length; i++){
+    for (let i = Math.round(slides.length / 2); i < slides.length; i++){
         if(i+index > slides.length -1){
           slidesCloned.push(slides[index+i-slides.length]);
         }
@@ -72,7 +72,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
         }
       }
       slidesCloned.push(slides[index])
-      for (let i = 1; i < slides.length / 2; i++){
+      for (let i = 1; i < Math.round(slides.length / 2); i++){
         if(i+index > slides.length -1){
           slidesCloned.push(slides[index+i-slides.length]);
         }
@@ -81,6 +81,9 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
     
         }
       }
+    //slidesCloned.push(...slidesCloned.slice(0, 2));
+    //slidesCloned.unshift(...slidesCloned.slice(slidesCloned.length-2, slidesCloned.length-1))
+
     return slidesCloned;
 }
 
@@ -193,7 +196,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
         const nextNode = i === pages.length - 1 ? nodes.find(node => node.id === pages[0]) : nodes.find(node => node.id === pages[i + 1]);
         const menus = prepareMenu(nodesForCollection, pages_list.nodeBase);
         const slides = findSlides(pages, nodesForCollection, nodeFinded, prevNode, nextNode, pages_list.nodeBase, i);
-        nodeFinded.components.forEach((component: any) => {
+        /*nodeFinded.components.forEach((component: any) => {
             if (component.component === 'AccordionComponent') {
                 const re = new RegExp("^(http|https)://", "i");
 
@@ -245,7 +248,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 }
 
             }
-        });
+        });*/
         const path = pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path == '' ? '' : nodeFinded.path}` : `${pages_list.nodeBase.path == '' ? nodeFinded.path : pages_list.nodeBase.path + '/' + nodeFinded.path}`;
         return {
             path: path,
