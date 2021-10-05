@@ -6,7 +6,7 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
-function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any, index) {
+function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any, index: number) {
     const slides = pages.map(page => {
         let nodeFinded;
         try{
