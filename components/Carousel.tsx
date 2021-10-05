@@ -276,20 +276,10 @@ export default function EmblaCarousel({
             }
             ${css`
               &:before {
-                content: " ";
                 display: ${!state.isCircleExpanded ? "block" : "none"};
-                position: absolute;
-                left: 0;
-                top: 0;
                 width: ${!state.isCircleExpanded ? "100%" : "95%"};
                 height: ${!state.isCircleExpanded ? "100%" : "95%"};
-                background-repeat: no-repeat;
-                background-position: 50% 0;
-                filter: drop-shadow(0.1px 0.1px 0.1px grey)
-                  blur(
-                    ${slides[page].props.view[0].props.isMain ? "10px" : "3px"}
-                  );
-                background: ${`url(${require(`../public/images/2036-bg.png`)})
+                background: ${`url(${require(`../public/images/2036-bg-blur.png`)})
                 no-repeat`};
               }
             `} embla__viewport`}
