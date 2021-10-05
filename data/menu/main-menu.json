@@ -19,6 +19,11 @@
 		{
 			"title":"SIGNATURE THEMES",
 			"id":"signature-themes"
+		},
+		{
+			"title":"CAMPAIGN LEADERSHIP",
+			"id":"campaign-leadership",
+			"standalone": true
 		}
 	],
 	"social":[

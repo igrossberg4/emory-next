@@ -62,6 +62,14 @@ export default function Home(props: any) {
     if (element) {
       const activeElement = element.querySelector(".content-header__container");
       activeElement?.setAttribute("data-animation", "active");
+    } else {
+      // Handler for independent pages. The use the same name class, but there's not selected id.
+      const activeElement = document.querySelector(
+        ".content-header__container"
+      );
+      if (activeElement) {
+        activeElement?.setAttribute("data-animation", "active");
+      }
     }
 
     setTimeout(() => {
@@ -83,6 +91,14 @@ export default function Home(props: any) {
     if (element) {
       const activeElement = element.querySelector(".content-header__container");
       activeElement?.setAttribute("data-animation", "no-active");
+    } else {
+      // Handler for independent pages. The use the same name class, but there's not selected id.
+      const activeElement = document.querySelector(
+        ".content-header__container"
+      );
+      if (activeElement) {
+        activeElement?.setAttribute("data-animation", "no-active");
+      }
     }
   }, []);
 
@@ -202,8 +218,7 @@ export default function Home(props: any) {
           );
         }
         dispatch({ type: "IS_TRANSITIONING", payload: false });
-        dispatch({type: 'IS_OVERLAY_EXPANDED', payload:false});
-
+        dispatch({ type: "IS_OVERLAY_EXPANDED", payload: false });
       }, 300);
     };
 
@@ -226,22 +241,25 @@ export default function Home(props: any) {
       ) {
         // We need to bypass the handler for avoid a race condition and to many events to be fired.
         circleAnimateExpand();
-        const element =  document.getElementById('header');
-        if(element){
-          element.classList.add('hide');
-        }
-      }else{
-        if(document.body.classList.contains("is-scrolled") && window.scrollY < 20){
-        // We need to bypass the handler for avoid a race condition and to many events to be fired.
-        circleAnimateCollapse();
-
         const element = document.getElementById("header");
-
         if (element) {
           element.classList.add("hide");
         }
+      } else {
+        if (
+          document.body.classList.contains("is-scrolled") &&
+          window.scrollY < 20
+        ) {
+          // We need to bypass the handler for avoid a race condition and to many events to be fired.
+          circleAnimateCollapse();
+
+          const element = document.getElementById("header");
+
+          if (element) {
+            element.classList.add("hide");
+          }
+        }
       }
-    }
     };
     handleScroll();
     //window.addEventListener("scroll", handleScroll, { passive: true });
@@ -251,36 +269,36 @@ export default function Home(props: any) {
   useEffect(() => {
     const handleScroll = (e: MouseEvent) => {
       // We need to check if the mouse is in the scroll bar.
-      if(e.clientX > document.body.offsetWidth){
+      if (e.clientX > document.body.offsetWidth) {
         // This is the calculated scroll.
-        const calculatedScroll = e.offsetY- e.clientY;
+        const calculatedScroll = e.offsetY - e.clientY;
         // When mouse is going down,
         if (
-          (window.scrollY > 30 ||
-          calculatedScroll > 30) &&
+          (window.scrollY > 30 || calculatedScroll > 30) &&
           !document.body.classList.contains("is-scrolled")
-
         ) {
           // We need to bypass the handler for avoid a race condition and to many events to be fired.
           circleAnimateExpand();
-          const element =  document.getElementById('header');
-          if(element){
-            element.classList.add('hide');
-          }
-        }else{
-          // If mouse is going up.
-          if(document.body.classList.contains("is-scrolled") &&
-           (window.scrollY < 20 || calculatedScroll < 20)){
-          // We need to bypass the handler for avoid a race condition and to many events to be fired.
-          circleAnimateCollapse();
-
           const element = document.getElementById("header");
-
           if (element) {
-            element.classList.remove("hide");
+            element.classList.add("hide");
+          }
+        } else {
+          // If mouse is going up.
+          if (
+            document.body.classList.contains("is-scrolled") &&
+            (window.scrollY < 20 || calculatedScroll < 20)
+          ) {
+            // We need to bypass the handler for avoid a race condition and to many events to be fired.
+            circleAnimateCollapse();
+
+            const element = document.getElementById("header");
+
+            if (element) {
+              element.classList.remove("hide");
+            }
           }
         }
-      }
       }
       /**/
     };
@@ -289,7 +307,7 @@ export default function Home(props: any) {
 
     return () => {
       window.removeEventListener("mouseup", handleScroll);
-      window.removeEventListener("mousedown", handleScroll)
+      window.removeEventListener("mousedown", handleScroll);
     };
   }, [router.asPath]);
 
@@ -400,8 +418,7 @@ export default function Home(props: any) {
     if (process.browser && document.body.style.overflow === "hidden") {
       document.body.style.overflow = "";
     }
-  }, [])
-
+  }, []);
 
   var supportsPassive = true;
   /*try {
@@ -582,7 +599,12 @@ export default function Home(props: any) {
         </motion.div>
         {/* Watermark is here to prevent disapperance when scrolling carousel and flickering */}
         <div className="watermark">
-          <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="70px" height="15px"></Image>
+          <Image
+            src="/logos/emory-university-logo.svg"
+            alt="EMORY"
+            width="70px"
+            height="15px"
+          ></Image>
         </div>
       </AnimatePresence>
     ) : (
