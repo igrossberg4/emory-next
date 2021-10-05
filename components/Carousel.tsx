@@ -310,7 +310,7 @@ export default function EmblaCarousel({
 
                     setTimeout(() => {
                       setPerformTransition(true);
-                    }, 200);
+                    }, 0);
 
                     setTransitioning(false);
                   }
