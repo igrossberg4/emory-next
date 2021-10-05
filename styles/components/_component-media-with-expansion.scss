@@ -27,14 +27,7 @@
 
     figure {
       display: table;
-
-
-      > div:not(.video-vimeo) {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        max-height: 50vh;
-      }
+      max-height: 50vh;
 
       video{
         max-width: 900px;
