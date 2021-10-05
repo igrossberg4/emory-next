@@ -18,7 +18,7 @@ export default function ProfileGrid(props:any) {
               const multipleSizesImgPrincipal = item.img_src ? require(`../public/images/${(item.img_src)}?resize&sizes[]=300&format=png`) : undefined;
 
               return (
-                <div key={index} className={`profile-grid-item col-sm-6 col-lg-4 col-xl-3 ${ props.size == 'small' ? 'profile-grid-item--small' : '' }`}>
+                <div key={index} className={`profile-grid-item col-sm-6 col-md-4 col-lg-3 ${ props.size == 'small' ? 'profile-grid-item--small' : '' }`}>
                   <div className="profile-grid-item__image">
                     <Image loader={imageLoader(multipleSizesImgPrincipal) as any} alt={item.media_alt} width={300} height={300} src={multipleSizesImgPrincipal.src}></Image>
                   </div>
