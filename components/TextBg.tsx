@@ -18,12 +18,12 @@ export default function TextBg(props:any) {
       <div className="container">
         <div className="row">
           <div className=" col-md-9">
-            <h2 className="header-h2">{props.text}</h2>
+            <h2 className="header-h2" dangerouslySetInnerHTML={{__html:props.text}}></h2>
             {
               props.cta_link && props.cta_text ?
               <div className="text-bg__cta">
                 <Link  href={ props.cta_link }>
-                  <a className="link-button">{props.cta_text}</a>
+                  <a className="link-button" >{props.cta_text}</a>
                 </Link>
               </div>
               : ''
