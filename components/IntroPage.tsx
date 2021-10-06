@@ -218,6 +218,7 @@ export default function IntroPage(props: any) {
                             <Fragment>
                               {true? (
                                 <button
+                                  type="button"
                                   className={`btn-begin-experience ${
                                     videoRef.paused ? "paused" : ""
                                   }`}

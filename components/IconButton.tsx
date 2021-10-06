@@ -11,7 +11,7 @@ function IconButton(props: any) {
         <a className="icon-button">
             <Icons icon={props.icon} />
         </a>
-        </Link> : <button className="icon-button">
+        </Link> : <button type="button" className="icon-button">
             <Icons icon={props.icon} />
         </button>
 }
