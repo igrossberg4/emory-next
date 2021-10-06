@@ -2,7 +2,9 @@
   "id": "campus-life",
   "type": "collection",
   "page_props": {
+    "about": "unit spotlight",
     "header": "CAMPUS LIFE",
+    "text": "Embrace your passion. Unleash your potential.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_blue.jpg"
   },
@@ -16,9 +18,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "Guided by Emory’s mission and values, Campus Life works closely with our students, faculty, and the entire Emory community to foster a nurturing, respectful, and rewarding campus environment.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "text": "<p>Emory Campus Life is based on the belief that every member of our community deserves the highest standard of care and support. Through an array of programs and resources, we promote a healthy and sustainable environment where students live what they learn and discover what they live for. While the classroom will always have a fundamental role in shaping strong and empowered individuals, some of the most transformative learning experiences take place outside the classroom, from events and activities around campus to real-world opportunities.</p>",
         "img_src": "2036_data_science_code_yellow.jpg",
         "media_src": "2036_data_science_code_yellow.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
@@ -28,16 +30,120 @@
       }
     },
     {
+      "component": "Quote",
+      "props": {
+        "text": "We can play a significant role in cultivating an experience in Atlanta and beyond, that is about bringing those different perspectives to the forefront to solve our difficult issues.",
+        "attribution": "—Ed Lee 21T"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "CAMPUS LIFE IS LOOKING FORWARD TO THESE PRIORITIES IN 2O36.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support College"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2O36, Community Counts",
+        "body": "<p>At Emory, education has always extended beyond the classroom. Let’s take it to the next level. By promoting faculty engagement within residence life—including immersive health, wellness, and diversity programs—we will support a more intimate and fully integrated academic experience in which students and faculty work, play, and live together daily. <strong>In an era often associated with isolation and alienation, Emory will stand for community, first and foremost.</strong></p><p>Faculty will be able to mentor students on a more personal level, and students will have the opportunity to develop lifelong, transformative relationships. Still, stronger student-faculty dynamics are just the beginning. We expect to see retention rates increase across the board and among undergraduate students, in particular.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Community Counts",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Rewarding Student-Athletes in 2O36",
+        "body": "<p>It’s time for Emory Athletics to get its due. In the same way that the arts are an essential part of Emory’s culture, sports make an invaluable contribution to campus life for participants and fans alike. <strong>2O36 will endow all 19 varsity sports, enhancing the student-athlete experience and reinvigorating school spirit and pride across the Emory community.</strong></p><p>Armed with sustainable funding, coaches for every sport will be able to meet the changing needs of our student-athletes. Endowments will support customized nutrition plans and wellness programs and address the inherent challenges that are part and parcel of all college athletics, from transportation and equipment costs to stipends for assistant coaches. If we are serious about supporting the entire Emory community—and we are—student-athletes must be recognized as essential members and leaders of our community.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Student-Athletes",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "",
+        "column2": ""
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Eddy Cabrera 22C",
+        "layout": "left",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Eddy Cabrera 22C",
+        "media_header": "Eddy Cabrera 22C",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2O36, Students Are Global Citizens",
+        "body": "<p>While our physical campuses will always remain the heart and soul of our community, Emory’s off-campus presence is more important than ever: across Atlanta, throughout the country, and around the world. Preparing students to become community leaders will be a key part of our future, but how can we accomplish this in an engaging way? How do we encourage Emory graduates to become agents of change? <strong>2O36 will invest in global citizenship experiences designed to provide students with life-changing, real-world learning opportunities.</strong></p><p>Tutoring K-12 students at an Atlanta public school. Registering voters in historically marginalized communities. Whatever piques our students' interests. We want them to engage with the world around them firsthand—to be ambitious but open-minded; eager for change but realistic about what it takes. With your support, students can make a direct link between the classroom and the community while learning how to listen, act, collaborate, and grow.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Global Citizens",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Enku Gelaya",
+        "layout": "right",
+        "subtitle": "Senior Vice President and Dean of Campus Life",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Enku Gelaya",
+        "media_header": "Enku Gelaya",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "AccordionComponent",
       "props": {
+        "pretitle": "CAMPUS LIFE",
+        "title": "KEY PRIORITIES",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Removing Roadblocks in 2O36",
+            "description": "Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness."
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "In 2O36, Support is Everywhere",
+            "description": "<strong>2036 will allow Campus Life to expand program options, especially for students from disadvantaged populations, both on an ongoing basis and in times of crisis.</strong> This includes  meeting academic, medical, financial, and social challenges. Your help will allow every student, regardless of background, to flourish at Emory and beyond."
+          },
+          {
+            "title": "With 2O36, Deepened Student Engagement",
+            "description": "Emory students deserve an experience that’s vibrant and fulfilling—one that they will cherish and want to continue as alumni. <strong>Investing in 2O36 will facilitate a range of community-building and class-year-based rites of passage, with a specific focus on campus activities.</strong> Thursday movie nights. Friday concerts. Saturday food truck festivals. Sunday field trips to Atlanta landmarks. All these activities and more will preserve and expand Emory’s beloved traditions, leading to higher retention, graduation rates, student satisfaction, and alumni engagement."
           }
         ]
       }

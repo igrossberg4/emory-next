@@ -15,7 +15,7 @@ export default function SectionIntro(props:any) {
         <div className="container">
           <div className="row header-container">
             <div className="col-md-6">
-                <h2 className="text-body--lg">{props.header}</h2>
+                <h2 className="text-body--lg"  dangerouslySetInnerHTML={{__html:props.header}} ></h2>
             </div>
           </div>
           <div className="row body-container">

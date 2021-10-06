@@ -21,6 +21,7 @@ export default function LateralImageExpanded(props: any) {
         style={{ background: props.background, pointerEvents: "auto" }}
       >
         <button
+          type="button"
           onClick={() => {
             props.setExpanded(false);
           }}

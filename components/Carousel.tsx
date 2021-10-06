@@ -116,6 +116,7 @@ const swipePower = (offset: number, velocity: number) => {
 
 export const PrevButton = ({ enabled, onClick, href }: ButtonEnabled) => (
   <button
+    type="button"
     className="embla__button embla__button--prev"
     onClick={onClick}
     disabled={href != undefined ? false : true}
@@ -138,6 +139,7 @@ export const PrevButton = ({ enabled, onClick, href }: ButtonEnabled) => (
 
 export const NextButton = ({ enabled, onClick, href }: ButtonEnabled) => (
   <button
+    type="button"
     className="embla__button embla__button--next"
     onClick={onClick}
     disabled={href != undefined ? false : true}
@@ -252,7 +254,8 @@ export default function EmblaCarousel({
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView, page, queue, state.isCircleExpanded]); // @ts-ignore
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const isSmall = useMediaQuery({ query: `(max-width: 800px)` });
+  const isMedium = useMediaQuery({ query: `(max-width: 1000px)` });
   const memo = useMemo(() => {
     return (
       <>
@@ -275,20 +278,10 @@ export default function EmblaCarousel({
             }
             ${css`
               &:before {
-                content: " ";
                 display: ${!state.isCircleExpanded ? "block" : "none"};
-                position: absolute;
-                left: 0;
-                top: 0;
                 width: ${!state.isCircleExpanded ? "100%" : "95%"};
                 height: ${!state.isCircleExpanded ? "100%" : "95%"};
-                background-repeat: no-repeat;
-                background-position: 50% 0;
-                filter: drop-shadow(0.1px 0.1px 0.1px grey)
-                  blur(
-                    ${slides[page].props.view[0].props.isMain ? "10px" : "3px"}
-                  );
-                background: ${`url(${require(`../public/images/2036-bg.png`)})
+                background: ${`url(${require(`../public/images/2036-bg-blur.png`)})
                 no-repeat`};
               }
             `} embla__viewport`}
@@ -309,17 +302,19 @@ export default function EmblaCarousel({
 
                     setTimeout(() => {
                       setPerformTransition(true);
-                    }, 200);
+                    }, 0);
 
                     setTransitioning(false);
                   }
                 } : undefined}
               >
                 {slides.map((value: any, i: number) => {
+                  // No offset used right now, left here in case it is needed
+                  // to be recovered.
                   const valueMore = slides[i].props.view[0].props.isMain
                     ? i > page
-                      ? 60
-                      : 40
+                      ? 0
+                      : 0
                     : 0;
                   return (
                     <div
@@ -331,13 +326,13 @@ export default function EmblaCarousel({
                           i < page
                             ? `${
                                 (i - page) *
-                                ((!isMobile ? 50 : 100) + valueMore)
+                                ((!isSmall ? (isMedium ? 60 : 50) : 100) + valueMore)
                               }vw`
                             : page === i
                             ? `0`
                             : `${
                                 (i - page) *
-                                ((!isMobile ? 50 : 100) + valueMore)
+                                ((!isSmall ? (isMedium ? 60 : 50) : 100) + valueMore)
                               }vw`
                         })`,
                       }}
@@ -401,6 +396,6 @@ export default function EmblaCarousel({
         )}
       </>
     );
-  }, [page, isMobile, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);
+  }, [page, isSmall, isMedium, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);
   return memo;
 }

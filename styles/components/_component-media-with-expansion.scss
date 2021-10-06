@@ -21,20 +21,13 @@
 
     .close-popup {
       position: absolute;
-      right: math.div($default-separation, 2);
-      top: math.div($default-separation, 2);
+      top: 18px;
+      right: 28px;
     }
 
     figure {
       display: table;
-
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        max-height: 50vh;
-      }
+      max-height: 50vh;
 
       video{
         max-width: 900px;
