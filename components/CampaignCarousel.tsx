@@ -7,6 +7,7 @@ import { ButtonEnabled } from "./Carousel";
 import { useInView } from "react-intersection-observer";
 export const PrevCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
   <button
+    type="button"
     className="embla__button embla__button--prev"
     onClick={onClick}
     disabled={!enabled}
@@ -19,6 +20,7 @@ export const PrevCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
 
 export const NextCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
   <button
+    type="button"
     className="embla__button embla__button--next"
     onClick={onClick}
     disabled={!enabled}

@@ -116,6 +116,7 @@ const swipePower = (offset: number, velocity: number) => {
 
 export const PrevButton = ({ enabled, onClick, href }: ButtonEnabled) => (
   <button
+    type="button"
     className="embla__button embla__button--prev"
     onClick={onClick}
     disabled={href != undefined ? false : true}
@@ -138,6 +139,7 @@ export const PrevButton = ({ enabled, onClick, href }: ButtonEnabled) => (
 
 export const NextButton = ({ enabled, onClick, href }: ButtonEnabled) => (
   <button
+    type="button"
     className="embla__button embla__button--next"
     onClick={onClick}
     disabled={href != undefined ? false : true}
