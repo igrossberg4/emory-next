@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items:center;
   padding: 40px 0 100px 0;
   text-align: center;
   //background: url("/public/images/2036-bg.jpg") no-repeat center bottom;
@@ -28,43 +29,41 @@
 
     .no_selected & {
       opacity: .3;
-      max-width: $round-image-size-big;
+      max-width: 100%;
 
-      @include media-breakpoint-up('md') {
-        .header-inner-content__img {
-          left: 60px;
-        }
+      .header-inner-content__text {
+        max-width: 100%;
       }
 
     }
 
-    // Ensure the transition of the O geos along with the slide transition speed.
+    // Ensure the transition of the O goes along with the slide transition speed.
     .is-transitioning & {
       @include media-breakpoint-up('md') {
         .header-inner-content__img {
-          transition: left math.div($main-carousel-transition-duration, 2) ease-in-out;
+          transition: left $main-carousel-transition-duration ease-in-out;
         }
       }
     }
 
-    .first & {
-      margin-left: 0;
-      transform: translateX(50px);
+    // .first & {
+    //   margin-left: 0;
+    //   transform: translateX(50px);
 
-      @media (min-width: $round-image-size-big) {
-        margin-left: calc(100% - #{$round-image-size-big});
-        transform: translateX(100px);
-      }
-    }
+    //   @media (min-width: $round-image-size-big) {
+    //     margin-left: calc(100% - #{$round-image-size-big});
+    //     transform: translateX(100px);
+    //   }
+    // }
 
-    .last & {
-      margin-left: 0;
-      transform: translateX(-50px);
+    // .last & {
+    //   margin-left: 0;
+    //   transform: translateX(-50px);
 
-      @media (min-width: $round-image-size-big) {
-        transform: translateX(-100px);
-      }
-    }
+    //   @media (min-width: $round-image-size-big) {
+    //     transform: translateX(-100px);
+    //   }
+    // }
   }
 
   .header-inner-content__img {
@@ -86,6 +85,8 @@
     font-size: $font-size-xsm;
     letter-spacing: 0.2em;
     line-height: 1em;
+    font-weight: bold;
+    font-family: $font-family-sans-serif;
 
     @include media-breakpoint-up(xsm) {
       font-size: $font-size-sm;
@@ -98,6 +99,7 @@
 
     @include media-breakpoint-up(md) {
       font-size: $font-size-xxlg;
+      white-space: nowrap;
     }
 
     @include media-breakpoint-up(lg) {
@@ -233,11 +235,11 @@
     }
 
     .header-2036__title__3 {
-      margin: 0 0 0 300px;
+      margin: 0 0 0 330px;
     }
 
     svg {
-      width: 130px;
+      width: 135px;
       height: inherit;
     }
   }
@@ -290,10 +292,10 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     @include media-breakpoint-up(md) {
-      left: calc((100vw / 2) - 220px);
-      bottom: 36%;
-      width: 268px;
-      height: 268px;
+      left: calc((100vw / 2) - 230px);
+      bottom: 36.9%;
+      width: 258px;
+      height: 258px;
     }
 
     // Rotated mobile devices!!!
@@ -399,6 +401,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       @extend .header-xlarge;
       line-height: 0.9em;
       letter-spacing: 0;
+      white-space: normal;
     }
 
     .title_expanded {

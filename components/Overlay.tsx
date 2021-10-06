@@ -54,6 +54,7 @@ export const Overlay = forwardRef((props: any, ref:any) => {
             style={{ pointerEvents: "auto" }}
           >
             <button
+              type="button"
               className="close-popup text-label"
               onClick={() => {
                 setExpanded(false);

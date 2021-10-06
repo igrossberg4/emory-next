@@ -82,6 +82,23 @@ export default function IntroPage(props: any) {
       }
     }
   }, [props.active, state.isCircleExpanded, videoPlayed]); // @ts-ignore
+
+  useEffect(() => {
+    if(videoRef){
+      if( state.isCircleOnAnimation && !state.isTransitionEnd && state.comesFromCarousel) {
+        videoRef.pause();
+      }else{
+        if(state.isCircleExpanded){
+          videoRef.pause();
+        }
+        if(!state.isCircleExpanded && props.active && !document.body.classList.contains('full_video')) {
+          videoRef.play();
+        }
+      }
+    }
+
+
+  }, [state.isCircleOnAnimation, videoRef, state.comesFromCarousel, videoPlayed])
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
@@ -201,6 +218,7 @@ export default function IntroPage(props: any) {
                             <Fragment>
                               {true? (
                                 <button
+                                  type="button"
                                   className={`btn-begin-experience ${
                                     videoRef.paused ? "paused" : ""
                                   }`}
@@ -264,6 +282,6 @@ export default function IntroPage(props: any) {
         </div>
       </AnimateSharedLayout>
     );
-  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.isCircleExpanded]);
+  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.isCircleExpanded, state.isCircleOnAnimation]);
   return memo;
 }

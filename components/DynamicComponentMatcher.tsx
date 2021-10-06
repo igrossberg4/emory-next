@@ -19,6 +19,7 @@ const MainMenu = dynamic(()=> import('./MainMenu'));
 const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
 const Quote = dynamic(()=> import('./Quote'));
 const VideoQuote = dynamic(()=> import('./VideoQuote'));
+const ProfileGrid = dynamic(()=> import('./ProfileGrid'));
 const ColumnsText = dynamic(()=> import('./ColumnsText'));
 const QuoteParagraphColumn = dynamic(()=> import('./QuoteParagraphColumn'));
 const TextBg = dynamic(()=> import('./TextBg'));
@@ -205,6 +206,9 @@ function DynamicComponentMatcher(props: any) {
 
           case 'ImageTextOneColumn':
             return <ImageTextOneColumn {...component.props} key={i.toString()}></ImageTextOneColumn>
+
+          case 'ProfileGrid':
+            return <ProfileGrid {...component.props} key={i.toString()}></ProfileGrid>
 
           default:
             return "";
