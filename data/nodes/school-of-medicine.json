@@ -4,11 +4,13 @@
   "page_props": {
     "header": "SCHOOL OF MEDICINE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg"
+    "img_src": "2036_cancer_cells_blue.jpg",
+    "text": "2O36 will foster excellence in health care and medicine, transform students’ educational experiences, and create opportunities for groundbreaking research.",
+    "about": "school spotlight"
   },
   "path": "school-of-medicine",
   "metatag": {
-    "title": "School of Medecine - Emory 2036",
+    "title": "School of Medicine - Emory 2036",
     "description": "",
     "image": ""
   },
@@ -16,28 +18,122 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "During extraordinary times, Emory School of Medicine is changing the way we think of medicine.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "text": "<p>Throughout the School of Medicine’s remarkable history, our objectives have remained the same: provide outstanding educational programs; develop excellent clinicians and investigators; conduct breakthrough collaborative research across disciplines; advance the detection, treatment, and prevention of disease; and ensure the highest ethical and professional standards.</p><p>By balancing each of these goals, Emory prepares students to challenge the conventions of traditional care, reshape how medicine is practiced, and promote the health of their patients and communities.</p>",
         "img_src": "2036_data_science_code_yellow.jpg",
         "media_src": "2036_data_science_code_yellow.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "School of Law",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "Emory's uniquely positioned to support a better future in that we prize this teamwork and this collegiality—science and medicine no longer are individual sports.",
+        "attribution": "— Carey Jansen 19M 23G"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "THE SCHOOL OF MEDICINE IS ADVANCING AMBITIOUS PRIORITIES FOR 2O36.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Medicine"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Create a Hub for Scientific Discoveries",
+        "body": "<p>Emory University’s latest beacon of biomedical research, the Health Sciences Research Building II (HSRBII) will be a hub for scientific discoveries and entrepreneurial research. <strong>Investment in 2O36 will support this facility, providing laboratories for 130 principal investigators in many specialties.</strong> With a state-of-the-art building that reflects the school’s ambitious vision, we can dramatically increase our recruitment capabilities, bringing in the world’s leading scientists and scholars to help us transform patient care.</p><p>HSRBII will inspire connectivity, cross-disciplinary research, and collaboration, fostering innovation across a wide range of areas, from biomedical engineering and informatics to imaging sciences, brain health, cardiovascular medicine, child health, cancer, inflammation, and immunotherapy.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Cross-disciplinary Education",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Mastering the Art and Science of Medicine",
+        "body": "<p>In an era of artificial intelligence and other automated processes, physicians who understand both the art and science of medicine are increasingly rare. This is why they’re so important in medical education. With endowment funding, Emory School of Medicine will attract master clinicians to guide students with expertise and empathy. By teaching our students the art of medicine and the latest science, these master clinicians will ensure that new Emory physicians will provide effective, compassionate care.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Starting with Educators",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Gari Clifford",
+        "layout": "left",
+        "subtitle": "Chair and Professor, Department of Biomedical Informatics",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Gari Clifford",
+        "media_header": "Gari Clifford",
+        "media_text": "Chair and Professor, Department of Biomedical Informatics",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Access for More Students",
+        "body": "<p>Health care—both in practice and accessibility—must become more equitable. To that end, the Emory School of Medicine is committed to offering scholarships to students and trainees across all backgrounds, regardless of their financial situation.</p><p>By providing more scholarship opportunities, students will be able to pursue fulfilling and meaningful careers without having to prioritize specialties that promise the highest potential earnings. <strong>Thanks to 2O36, Emory School of Medicine will continue to be a leader in education, increasing access for talented aspiring physicians eager to keep our communities healthy.</strong></p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "More Access, More Students",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "SCHOOL OF MEDICINE",        
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Faculty to Fight Heart Disease",
+            "description": "<p><strong>Emory School of Medicine will recruit 15 faculty members across multiple academic departments to tackle heart disease and heart-related chronic conditions through 2O36.</strong> Life-saving results will be achieved through collaboration between the Emory Clinical Cardiovascular Research Institute, the School of Nursing, and the Rollins School of Public Health—finding novel solutions, refining minimally invasive therapies, and leading clinical trials for promising new treatments.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Faculty to Take on Brain Health",
+            "description": "<p><strong>With your support of 2O36, Emory School of Medicine will be able to recruit 15 top scientists and physicians to collaborate with the Emory Brain Health Center and Goizueta Alzheimer's Disease Research Center.</strong> Together they will pursue cures for Alzheimer’s disease, Parkinson’s, and other conditions that can accompany aging and affect the brain.</p>"
+          },
+          {
+            "title": "Faculty to Pursue New Cancer Breakthroughs",
+            "description": "<p>Winship Cancer Institute is Georgia’s only National Cancer Institute-designated comprehensive cancer center. <strong>2O36 will allow Winship to add 23 faculty members who will create new ways of thinking about every type of cancer and translate that knowledge into new discoveries for patients.</strong> Together, we can increase access to the most advanced treatments available, transforming the care experience.</p>"
+          },
+          {
+            "title": "The Power of Collaboration in 2036",
+            "description": "<p><strong>With your support of 2O36, we can recruit three distinguished professors and seven professors for the Wallace H. Coulter Department of Biomedical Engineering.</strong> These faculty leaders will develop new strategies for improving health, curing disease, and creating practical solutions to complex problems.</p>"
+          },
+          {
+            "title": "Advancing the Study of Infectious Diseases and Immunology",
+            "description": "<p><strong>2O36 will support the recruitment of 10 faculty members to teach and conduct research in infectious diseases and immunology—further cementing Emory’s reputation in the field.</strong> Tangible outcomes include the creation of vaccines that eliminate disease, along with cancer treatments that allow the body to fight back and heal.</p>"
+          },
+          {
+            "title": "Funding for Now",
+            "description": "<p>Transform Education Models<br/><strong>2O36 will support a focus on entrepreneurial teaching, transforming existing education models into methods that consider infrastructure, space, and technology in order to dramatically improve clinical practice and health care, and attract top students, trainees, and contributors to our communities.</strong></p><p>Bringing Simulation Learning to 2036<br/><strong>Emory will incorporate simulation programs into our methodology, improving patient safety and lowering health care costs.</strong></p><p>Serving Communities in 2036<br/><strong>Investment in 2O36 will expand our community medical service and educational programs in order to advance disease prevention, create more accessible care and education, and foster excellent experiential learning opportunities.</strong></p><p>Promoting Innovation in Teaching<br/><strong>2O36 will strengthen the Imagine/Innovate/Impact (I3) teaching awards to continue supporting researchers’ development of novel approaches that enhance the undergraduate and graduate medical education experience.</strong></p><p>2O36 Awards Research<br/><strong>The I3 Research Awards program will provide opportunities for talented and creative physician scientists to create life-changing knowledge.</strong></p><p>Pursuing Health Care Innovations<br/><strong>2O36 will create the space and ability to pursue health care innovations, recruit a diverse group of problem solvers, and focus on transformation in key areas.</strong></p><p>Leading in Pilots, Initiatives, and Programs<br/><strong>2O36 will support promising research and accelerate the rate of medical discoveries that race against time for patients living with illness.</strong></p><p>Putting Data to Work<br/><strong>2O36 will help us leverage the power of data to advance the quality of entire health systems, improve patient outcomes, and reduce costs.</strong></p><p>Recruiting the Best in 2036<br/>Supporting recruitment of world-renowned physician scientists through 2O36 will enhance the student experience and create an environment for these scientists to begin work immediately.</strong></p><p>With 2O36, Research Initiatives Can Flourish<br/>2O36 will increase immediate funding for projects, like medical breakthroughs, that could change the world.</strong></p><p>Industry-Funded Research in 2O36<br/>Increasing funding opportunities from industry partners through 2O36 will attract leading physicians and scientists to Emory School of Medicine and allow for more discoveries in health care.</strong></p>"
           }
         ]
       }
