@@ -4,7 +4,9 @@
   "page_props": {
     "header": "EMORY HEALTHCARE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg"
+    "img_src": "2036_cancer_cells_blue.jpg",
+    "text": "We aspire to change what is possible in ways not yet imagined.",
+    "about": "unit spotlight"
   },
   "path": "emory-healthcare",
   "metatag": {
@@ -16,28 +18,145 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "The health and wellness of our communities drives us to find new ways to understand, manage, and overcome every medical condition.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "text": "<p>Emory Healthcare, part of Emory University, is the most extensive health care system in Georgia. Made up of 11 hospitals, the Emory Clinic, and more than 250 provider locations, the Emory Healthcare Network is the largest clinically integrated network in Georgia, with more than 2,800 physicians concentrating in 70 different subspecialties. Patients are always our priority, and we work every day to improve the health of individuals and communities at home and throughout the world.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
+        "media_header": "Emory Healthcare",
         "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "Emory's people really make the difference by being kind and being committed to benefiting the communities they serve.",
+        "attribution": "— Jonathan S. Lewin, Executive Vice President for Health Affairs, Emory University<br/>Executive Director, Woodruff Health Sciences Center<br/>CEO and Chairman of the Board, Emory Healthcare"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "EMORY HEALTHCARE’S PRIORITIES FOR 2O36 ARE COMMUNITY PRIORITIES.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Healthcare"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Building Rehab’s Future",
+        "body": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. 2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "The Future of Rehab",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "The Best Cancer Care in Midtown",
+        "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Winship Emory Midtown",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Madeleine Hackney",
+        "layout": "left",
+        "subtitle": "Associate Professor of Medicine, Division of General Medicine and Geriatrics",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Madeleine Hackney",
+        "media_header": "Madeleine Hackney",
+        "media_text": "Associate Professor of Medicine, Division of General Medicine and Geriatrics",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "A Better Surgical Pavilion",
+        "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. Anew leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Space for Innovation",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Karen Law 11MR",
+        "layout": "left",
+        "subtitle": "Program Director, J Willis Hurst Internal Medicine Residency Program<br/>Associate Vice Chair of Education<br/>Associate Professor, Emory School of Medicine",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Karen Law 11MR",
+        "media_header": "Karen Law 11MR",
+        "media_text": "Program Director, J Willis Hurst Internal Medicine Residency Program<br/>Associate Vice Chair of Education<br/>Associate Professor, Emory School of Medicine",
+        "button_close_text": "Exit"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "EMORY HEALTHCARE",        
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Elevating Heart Care and Research",
+            "description": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatments interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies."
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Improving Access to Care",
+            "description": "<p>The health of our community depends on providing care for all. An inability to pay keeps people from seeking health care, leading to more disease and escalating costs that can put a family's entire financial health at risk. This is why Emory Healthcare strives to serve every patient in need. 2O36 will help us provide financial assistance and outreach services that improve access to care, advance medical knowledge, and create healthier, more productive communities.</p>"
+          },
+          {
+            "title": "Increased Support for Wesley Woods Residents",
+            "description": "<p>Wesley Woods serves more than 1,800 older adults annually in north Georgia. Forty percent live below the poverty line, and 75 percent receive financial assistance to remain in their homes. Our 11 residential communities provide all levels of care, from independent living, to assisted living with personal care, home health care, and skilled nursing. 2O36 will help us ensure that older adults, regardless of income or circumstance, can live with grace, dignity, and purpose.</p>"
+          },
+          {
+            "title": "The Demands of Financial Emergencies",
+            "description": "<p>Hospital systems must be able to handle unexpected challenges and expenses, often at a moment’s notice. Sometimes a patient’s family needs temporary housing or help with travel, for example, or the supply of personal protective equipment for employees runs low in the middle of a pandemic. <strong>2O36 supports programs, services, and equipment that help Emory Healthcare quickly respond to such unexpected situations so our care teams can stay focused on their mission.</strong></p>"
+          },
+          {
+            "title": "Taking Care of Caregivers",
+            "description": "<p>The Emory Healthcare Employee Hardship Fund helps our care teams weather difficult times in their lives. They may experience a death in the family, medical expenses from a severe illness or accident, financial losses from an uninsured disaster, unusual expenses when caring for a sick family member, or pandemic-related financial emergencies. 2O36 will increase this fund, previously supported solely by employee giving, to reach more Emory Healthcare staff in need.</p>"
+          },
+          {
+            "title": "Empowering Our Care Teams",
+            "description": "<p>At Emory Healthcare, we empower our teams to serve patients in the most efficient, effective ways possible. This is where EmPower comes in. Started with an investment from Jim Kennedy of the James M. Cox Foundation, EmPower is a customer-focused way of thinking that reduces waste, optimizes patient care and safety, and improves the patient and family experience. 2O36 will expand EmPower to all areas of Emory Healthcare and create a sustainability plan to ensure this valuable approach continues to thrive. The result will be continued improvements for the patients and families who entrust us with their care.</p>"
+          },
+          {
+            "title": "Healing Wounded Warriors",
+            "description": "<p>The Emory Healthcare Veterans Program delivers life-changing care to post-9/11 veterans and service members suffering from the invisible wounds of war. This remarkable program reduces the symptoms of depression, anxiety, post-traumatic stress disorder, and brain injury at no cost to veterans. Those who complete the program—more than 3,000 since 2015—reconnect with their families, rejoin the workforce, and take many other important steps along the road to recovery. 2O36 will enable the program to serve 50 more patients and expand eligibility to pre-9/11 veterans.</p>"
+          },
+          {
+            "title": "Education for Well-Being",
+            "description": "<p>At a time when demand for health care providers is at an all-time high, education remains our most-underfunded mission. Education increases employee well-being, reduces job turnover, improves efficiency, and increases productivity—all to the betterment of patient care. By coordinating diverse educational experiences, 2O36 will strengthen compassionate, cross-cultural care. By advancing programs to improve the mental, emotional, and physical wellness of care teams, 2O36 will put people first across the board.</p>"
           }
         ]
       }
