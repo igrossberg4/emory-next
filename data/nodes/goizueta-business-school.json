@@ -4,7 +4,7 @@
   "page_props": {
     "header": "Goizueta<br>Business School",
     "about":"School spotlight",
-    "text":"A description of the school",
+    "text":"Business is a vehicle capable of delivering meaningful, lasting benefits to society.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_grid_yellow.jpg"
   },
@@ -18,28 +18,122 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "Our namesake, Roberto C. Goizueta once said, “Business schools today cannot just reflect business the way it is. They must teach business the way it will be.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "text": "<p>Named for one of the great business leaders of the 20th century, Goizueta Business School is a training ground for principled leaders and a laboratory for powerful insights. By navigating the complex interdependency of business and society, we seek to convene brilliant minds to solve profound problems with integrity, ingenuity, and grit.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Goizueta Business School",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "We are in the business of unlocking the potential of others.",
+        "attribution": "— Jagdish N. Sheth, Charles H. Kellstadt Chaired Professor of Marketing"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "GOIZUETA BUSINESS SCHOOL FUELS LEADERSHIP WITH PRIORITIES FOR 2O36.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Goizueta"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "For 2O36, Research is Essential",
+        "body": "<p>Business-related questions affect the economy of our country and city, and the answers Goizueta faculty uncover through their research can affect our families’ everyday costs. Faculty research in the areas of business and society, entrepreneurship and innovation, and leadership development fulfills the mission of preparing principled leaders to solve problems to benefit the world.</p><p><strong>Supporting faculty research through 2O36 funds academic inquiry and scholarship, designating resources for tools that enable rigorous research, like paying support staff, and purchasing data sets, analytical software licenses, and market terminals.</strong> This kind of academic funding and engagement makes the business school a more sought-after institution, improving faculty retention and recruitment efforts, generating new academic pedagogy, redesigning curricula based on research results, and providing additional publication opportunities.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Research is Essential",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Business and Society are One",
+        "body": "<p>The Roberto C. Goizueta Business and Society Institute creates long-term value while addressing the social and environmental issues confronting local and global communities and businesses. Since its inception, the institute has accelerated more than 300 underserved small businesses in Atlanta and Central America, developed more than 30 research papers and projects, enrolled 200+ students annually in social advancement courses, and graduated 74 undergraduate and graduate Social Enterprise Fellows.</p><p><strong>Funding through 2O36 will help markets work for more people in more places.</strong> It will provide for a wide range of student and community initiatives, including microbusiness development (Start:ME Accelerator), specialty coffee markets (Grounds for Empowerment and Transparent Trade Coffee), next-generation leaders (Social Enterprise Fellows), and faculty-led interdisciplinary research. This support can expand the reach of programs into new markets and populations to increase prosperity, reduce poverty, and build stronger communities.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Business and Society are One",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Jordyn Turner 22B",
+        "layout": "left",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Jordyn Turner 22B",
+        "media_header": "Jordyn Turner 22B",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Data is Key to Understanding",
+        "body": "<p>As businesses and organizations increasingly rely on data to drive decisions, Goizueta trains students to understand its complexities and applications. Our degree programs and research combine business, data, and technology in solving business challenges and shaping graduates to be data-savvy, capable leaders.</p><p><strong>Your generosity to 2O36 allows us to meet the growing demand for data scientists, attract talented students by expanding experiential learning programming, and provide analytics insights to our corporate partners.</strong> Through an immersive academic experience with an emphasis on hands-on learning in real-world partnerships, Goizueta’s data-driven graduates bring well-informed, innovative solutions to the table in any function, organization, or field.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Data is Key to Understanding",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "GOIZUETA BUSINESS SCHOOL",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Championing Entrepreneurship through 2O36",
+            "description": "<p>By fostering discovery, entrepreneurship, and early-stage investing, we help leaders solve today’s challenges and create tomorrow’s opportunities. Offering undergraduate and graduate students, alumni, community members, and corporate partners a portfolio of programs and research to foster novel initiatives, the Center for Entrepreneurship & Innovation empowers them to develop and implement solutions to business problems, unaddressed market opportunities, and significant social needs.</p><p>Goizueta’s multidisciplinary approach supports our students as they formulate ideas and engage Atlanta’s vibrant, rapidly growing entrepreneurial ecosystem—home to more than 100 public companies, 16 Fortune 500s, 40 corporate innovation centers, almost 600 venture-backed startups, multiple incubators, a burgeoning TV and film industry, and much more. The proliferation of startups, venture capital, and investment in corporate innovation centers has reached record levels. <strong>Funding through 2O36 sustains current offerings and expands the  scope of our entrepreneurial programming to better support the needs of our academic and business communities.</strong> Elevating our commitment to the fundamental business principles of entrepreneurship and innovation will raise Goizueta’s visibility among prospective students, alumni, and peer institutions.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "In 2036, Principles Lead the Way",
+            "description": "<p>Built on academic, experiential, and reflective learning, the Goizueta Leadership Development Program shapes leaders who reflect Mr. Goizueta’s principles: conducting business with integrity, honor, and pride. These leadership skills are infused into every aspect of the curriculum and immersive experiential learning opportunities like the Leadership Coaching Fellows program, the Leader’s Reaction Course, and the Goizueta Advanced Leadership Academy. Students in these programs learn how to improve individual and team performance, flex problem-solving and team-building skills, and cultivate their personal leadership styles.</p><p><strong>Support for our leadership programming through 2O36 will allow us to scale our programs and elevate the visibility and prominence of our brand as we develop business leaders well-equipped to benefit business and society.</strong></p>"
+          },
+          {
+            "title": "Extending Access",
+            "description": "<p>The cost of pursuing an undergraduate or graduate degree is a significant investment and can be a prohibitive obstacle for many. At their core, scholarships cover the costs of tuition, textbooks, housing, and co-curricular experiences, providing relief and elevating students’ career trajectories. More broadly, they benefit communities by establishing a pipeline of principled leaders to join (or rejoin) the workforce.</p><p><strong>Your support of 2O36 helps us attract and retain top students through our Goizueta Scholars Program, which improves the diversity and talent of our student body and ultimately leads to better career placement outcomes.</strong> This enhances Goizueta's ranking and prominence, in turn fueling alumni confidence, affinity, and philanthropy. For undergraduate students joining Goizueta to pursue BBAs in their junior year, this funding sustains any scholarships they received as  for their last two years at Emory. Because tomorrow’s better leaders and smarter businesses start with access and opportunity today.</p>"
+          },
+          {
+            "title": "Making Business Leaders Into Doctors",
+            "description": "<p>One of a select number of business programs to offer doctoral degrees in business, Goizueta’s educational offerings elevate the school’s reputation. Doctoral students are the future of business school faculty, and through teaching and research, they push business thinking and theory forward.</p><p>PhD stipends provide support for scholarship, research, and opportunities to access data and other sources of information necessary to achieve not only their degrees, but their projected business success. <strong>By supporting 2O36, you help increase access to PhD stipends, therefore boosting enrollment.</strong> Expanding the program creates new publishable research opportunities, advancing academic pedagogy and uncovering business insights for industry.</p>"
+          },
+          {
+            "title": "Faculty Power Progress",
+            "description": "<p>Goizueta Business School relies on faculty members with unique expertise to teach and conduct research that delivers relevant industry insights. Investing in distinguished professorships means investing in academic rigor and thought leadership that produces knowledgeable businesspeople who will propel business and industry forward.</p><p><strong>Endowed professorships supported by 2O36 will enable Goizueta to recruit and retain the highest-quality faculty members and signal the school's prominence in specific business fields.</strong> The distinguished professorships we seek to add have an eye on the future of industry: two in business analytics, two in the Roberto C. Goizueta Business and Society Institute, and one in the Roberto C. Goizueta Center for Entrepreneurship and Innovation. Every aspect of the student experience will be enhanced by these additional professorships, including academic rigor and teaching methodology. Students will benefit from the faculty members’ expertise and be able to participate in co-curricular experiences in these faculty members’ research areas.</p>"
+          },
+          {
+            "title": "In 2036, Experience is Everything",
+            "description": "<p>The student experience is central to Goizueta's mission of developing principled leaders, and the Fund for Excellence provides the financial resources necessary. From scholarship support to operational support for degree programs, and co-curricular experiences, these opportunities require resources to allow students to flourish.</p><p>Supporting 2O36 provides Goizueta with flexible resources to respond to shifting needs quickly. As the market has changed, we’ve adapted with business analytics training. As societal leaders, we’ve enhanced diversity programming. When the global pandemic arose, the unrestricted funding of the Fund for Excellence allowed us to move to online instruction. By enhancing curricular and co-curricular student programming and expanding education and teaching resources, we can further increase visibility for Goizueta in the region and around the country and cultivate principled business leaders to solve challenges we haven’t even met yet.</p>"
           }
         ]
       }

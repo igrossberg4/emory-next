@@ -2,7 +2,9 @@
   "id": "oxford-college",
   "type": "collection",
   "page_props": {
-    "header": "OXFORD COLLEGE",
+    "header": "OXFORD COLLEGE OF EMORY UNIVERSITY",
+    "about":"School spotlight",
+    "text": "Leaders aren’t born. They’re made at Oxford College.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg"
   },
@@ -16,15 +18,106 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "Through powerful inquiry, Oxford students become thoughtful, effective, and responsible leaders and agents of change.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_data_science_grid_yellow.jpg",
-        "media_src": "2036_data_science_grid_yellow.jpg",
+        "text": "<p>One of Emory University's two liberal arts colleges, Oxford prides itself on an intense focus on the liberal arts, leadership, and service. Just 45 minutes from Atlanta, the Oxford campus is deeply rooted in history with eyes on the future. Through the related processes of discovery, exploration, and reflection, students are immersed in a curriculum that introduces them to ways of finding and producing knowledge.</p>",
+        "img_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Oxford College",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "From the time students arrive on campus as first-year students, we are deeply invested in their success, in their satisfaction, and in their flourishing.",
+        "attribution": "— Douglas A. Hicks, Dean of Oxford College of Emory University and William R. Kenan Jr. Professor of Religion"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "OXFORD COLLEGE OF EMORY UNIVERSITY HAS BIG PRIORITIES FOR 2O36.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Oxford"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Sustainability is Essential",
+        "body": "<p>From the tree-lined campus in a charming small town, to the woods Oxford students have spent years restoring, to the 11-acre organic farm, a living laboratory that feeds students and the community, Oxford College doesn't just value ecological sustainability, we live it. A distinguished professorship in environmental studies would expand the curriculum and learning opportunities, strengthening a key area of undergraduate study at Emory.</p><p><strong>By supporting 2O36, we can recruit a senior scholar to lead our academic study of the environment and support co-curricular sustainability initiatives like Oxford’s organic farm.</strong> The professorship in environmental studies will position Oxford College, and Emory more broadly, as a leader in understanding and practicing sustainability.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Sustainability is Essential",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Research Isn’t Just for Faculty",
+        "body": "<p>An Oxford education centers on the close attention of faculty teaching and mentoring our students through their academic and research pursuits. <strong>Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities.</strong> Collaborative projects bolster students’ educational experience, prepare them for professional opportunities, and enable Oxford to compete with top liberal arts colleges and research universities alike.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Faculty Lead",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Kim Chenevey o2Ox o4B",
+        "layout": "left",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Kim Chenevey o2Ox o4B",
+        "media_header": "Kim Chenevey o2Ox o4B",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Expanding Student Horizons by 2036",
+        "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford's identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Expand Horizons",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Hugh Tarbutton 84Ox",
+        "layout": "right",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Hugh Tarbutton 84Ox",
+        "media_header": "Hugh Tarbutton 84Ox",
+        "media_text": "",
+        "button_close_text": "Exit"
       }
     },
     {
@@ -32,12 +125,12 @@
       "props": {
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "The Arts Are Key to 2O36",
+            "description": "<p>The arts are essential to our residential liberal arts experience, and the TV and film industries’ growing presence in Georgia, particularly here in Newton County, provides substantial opportunities for applied learning. Improving our studio arts, film, and media studies programs can help Oxford increase engagement with the film industry and serve our students pursuing related careers. <strong>Through 2O36, Oxford can invest in the arts and in students’ futures.</strong> We can develop more TV and film industry partnerships, update equipment students practice on, and beautify historic Humanities Hall, Few Hall, and Tarbutton Theater. These efforts will not only raise the quality and profile of these key programs, they’ll better prepare Oxford students to transition into arts careers.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Better Access Starts with 2O36",
+            "description": "<p>Every family sending a student to college cares about the value proposition. Oxford provides an education of true and abiding value for our graduates, preparing them for personal and professional success. Making that education affordable for students from all backgrounds is integral to our educational mission.</p><p>Trailing our peer colleges and universities in endowment funding, Oxford needs endowed funds to provide student scholarships in perpetuity. <strong>With your support for 2O36, we can offer more scholarships so that more high-ability, high-potential students from all income levels will be able to attend and graduate from Oxford College.</strong> Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place.</p>"
           }
         ]
       }

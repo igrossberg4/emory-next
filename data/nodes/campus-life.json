@@ -25,7 +25,7 @@
         "media_src": "2036_data_science_code_yellow.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
+        "media_header": "Campus Life",
         "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
       }
     },
@@ -33,7 +33,7 @@
       "component": "Quote",
       "props": {
         "text": "We can play a significant role in cultivating an experience in Atlanta and beyond, that is about bringing those different perspectives to the forefront to solve our difficult issues.",
-        "attribution": "—Ed Lee 21T"
+        "attribution": "— Ed Lee 21T"
       }
     },
     {
@@ -42,7 +42,7 @@
         "text": "CAMPUS LIFE IS LOOKING FORWARD TO THESE PRIORITIES IN 2O36.",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://example.com/#placeholder",
-        "cta_text": "Support College"
+        "cta_text": "Support Campus Life"
       }
     },
     {
@@ -73,13 +73,6 @@
         "media_type": "image",
         "media_header": "Student-Athletes",
         "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
-      }
-    },
-    {
-      "component": "ColumnsText",
-      "props": {
-        "column1": "",
-        "column2": ""
       }
     },
     {
@@ -123,7 +116,7 @@
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Enku Gelaya",
         "media_header": "Enku Gelaya",
-        "media_text": "",
+        "media_text": "Senior Vice President and Dean of Campus Life",
         "button_close_text": "Exit"
       }
     },
@@ -135,15 +128,15 @@
         "items": [
           {
             "title": "Removing Roadblocks in 2O36",
-            "description": "Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness."
+            "description": "<p>Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness.</p>"
           },
           {
             "title": "In 2O36, Support is Everywhere",
-            "description": "<strong>2036 will allow Campus Life to expand program options, especially for students from disadvantaged populations, both on an ongoing basis and in times of crisis.</strong> This includes  meeting academic, medical, financial, and social challenges. Your help will allow every student, regardless of background, to flourish at Emory and beyond."
+            "description": "<p><strong>2036 will allow Campus Life to expand program options, especially for students from disadvantaged populations, both on an ongoing basis and in times of crisis.</strong> This includes  meeting academic, medical, financial, and social challenges. Your help will allow every student, regardless of background, to flourish at Emory and beyond.</p>"
           },
           {
             "title": "With 2O36, Deepened Student Engagement",
-            "description": "Emory students deserve an experience that’s vibrant and fulfilling—one that they will cherish and want to continue as alumni. <strong>Investing in 2O36 will facilitate a range of community-building and class-year-based rites of passage, with a specific focus on campus activities.</strong> Thursday movie nights. Friday concerts. Saturday food truck festivals. Sunday field trips to Atlanta landmarks. All these activities and more will preserve and expand Emory’s beloved traditions, leading to higher retention, graduation rates, student satisfaction, and alumni engagement."
+            "description": "<p>Emory students deserve an experience that’s vibrant and fulfilling—one that they will cherish and want to continue as alumni. <strong>Investing in 2O36 will facilitate a range of community-building and class-year-based rites of passage, with a specific focus on campus activities.</strong> Thursday movie nights. Friday concerts. Saturday food truck festivals. Sunday field trips to Atlanta landmarks. All these activities and more will preserve and expand Emory’s beloved traditions, leading to higher retention, graduation rates, student satisfaction, and alumni engagement.</p>"
           }
         ]
       }

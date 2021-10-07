@@ -2,7 +2,9 @@
   "id": "carlos-museum",
   "type": "collection",
   "page_props": {
-    "header": "CARLOS MUSEUM",
+    "about": "unit spotlight",
+    "header": "MICHAEL C. CARLOS MUSEUM",
+    "text": "Fostering cultural experiences that inspire minds and build connections.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_brain_health_smoke_blue.jpg"
   },
@@ -16,28 +18,148 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "The Michael C. Carlos Museum collects, preserves, exhibits, and interprets art and artifacts from antiquity to the present.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "text": "<p>Since 1919, the Carlos Museum has been a beacon for people seeking to enrich their lives by studying and experiencing art. It has become one of the premier museums in the Southeast, featuring a renowned collection of artwork from ancient Egypt, Nubia, the Near East, Greece, Rome, the Americas, Africa, and Asia, as well as a collection of works on paper from the Renaissance to the present.</p><p>In addition to the collection’s inspiring beauty, pieces provide a window into other worlds, giving visitors a chance to experience different cultures and religions in a way that’s meaningful, entertaining, and educational, while also promoting interdisciplinary teaching and research.</p>",
         "img_src": "2036_data_science_grid_yellow.jpg",
         "media_src": "2036_data_science_grid_yellow.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Carlos Museum",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "We need to care about our past in order to prepare for our future.",
+        "attribution": "— Eleanor Ridley 74L"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "THE CARLOS MUSEUM IS READY TO TAKE ON THESE PRIORITIES FOR 2O36.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Carlos Museum"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2036, Curators Are Key",
+        "body": "<p>Curators and conservators are the heart of the Carlos Museum, leading scholarly production, enhancing student engagement, and cementing the museum’s and university’s reputation. Now is the time to renew support and recommit to making the Carlos Museum a best-in-class experience. <strong>An investment in 2O36 will facilitate the hiring and retention of curators specializing in pieces from Africa, the Americas, Asia, Egypt, Greece and Rome, and Works on Paper.</strong> To amplify their work, curators and conservators will also have additional funds for acquisitions, research, professional development, internships, exhibitions, and travel.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Curators are Key",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "With 2O36, the Permanent Collection Is Permanent",
+        "body": "<p>The Carlos Museum holds one of the most comprehensive collections in the Southeast, with awe-inspiring artwork from all around. <strong>With your help, 2O36 will ensure these treasures have a permanent, dedicated home at Emory.</strong> Not only will an endowed gallery continue to build and expand upon the museum’s legacy, it will provide resources to find new ways to attract and engage our increasingly diverse audience.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Permanent Collection",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "Imagine the possibilities: pieces from Nubia, Rome, Greece, and more, using an exhibition design that inspires audiences through rich storytelling and dynamic installations. With the right resources in place, the Carlos Museum can become both a must-see attraction and a new cultural hub for students.",
+        "column2": ""
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Monique Seefried",
+        "layout": "left",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Monique Seefried",
+        "media_header": "Monique Seefried",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "New Exhibitions Are Headed for 2036",
+        "body": "<p>Museums are places to explore and discover; to remember where we’ve been and consider how our past shapes our present and future. While permanent collections go a long way in establishing a museum’s identity, special exhibits are equally fundamental, bringing in exciting new works that increase publicity and reinvigorate a museum’s mission.</p><p><strong>With that in mind, 2O36 will fund a special exhibition gallery to house prestigious pieces from national and international collaborators.</strong> Through this unique space, the Carlos Museum will take its reputation to the next level, increasing programming across the board and attracting a fresh new audience.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "New Exhibitions",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Eleanor Ridley 74L",
+        "layout": "right",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Eleanor Ridley 74L",
+        "media_header": "Eleanor Ridley 74L",
+        "media_text": "",
+        "button_close_text": "Exit"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "Michael C. Carlos Museum",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Funding New Acquisitions in 2036",
+            "description": "<p>Original works of art are the museum’s raison d'être. Consider the purchase of the Niagara Museum's Egyptian art collection in 1998: just one example of how purchasing significant works of art is a pivotal part of the museum's efforts to build community and increase access to the arts.</p><p><strong>2O36 will allow the Carlos Museum to acquire exceptional artwork and foster the growth of the collection in exciting and meaningful ways.</strong> When you invest in 2O36, you invest in the museum’s ability to inspire our community, elevate our global standing, and reinforce our commitment to promoting the arts at Emory and throughout Atlanta.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "In 2036, the Past Speaks to the Present",
+            "description": "<p>The Carlos Museum has always found ways to curate an experience that’s equal parts engaging and educational. Hence, the variety of programming options designed to supplement and complement exhibitions.</p><p><strong>2O36 will continue that tradition, launching a new lecture series—Ancients Among Us.</strong> This annual interdisciplinary program will bring fresh perspectives from contemporary artists, writers, and thinkers inspired by antiquity, challenging both Emory and public attendees to look anew at our shared human history. As audiences continue to search for surprising and captivating storytelling, the Carlos Museum sees this series as a thrilling new way to fulfill its mission.</p>"
+          },
+          {
+            "title": "Conserving and Preserving in 2036",
+            "description": "<p>The museum’s Parsons Conservation Lab is the only one of its kind in the region, preserving tens of thousands of priceless objects while providing students the rare chance to gain hands-on experience with examination, analysis, preventive care, and treatment. Suffice to say, its importance to the Carlos Museum’s mission and reputation can’t be overstated. Funding from 2O36 will support essential preservation for a wide variety of materials, as well as continuing research and collaboration initiatives among staff, faculty, and students.</p>"
+          },
+          {
+            "title": "In 2036, Students Come First",
+            "description": "<p>The Carlos Museum is committed to being a space where Emory students feel welcome and encouraged to participate. All Emory students enjoy free admission and membership, in addition to a range of enrichment opportunities, from workshops to internships to formal courses. Still, the museum plans to up the ante. <strong>With your support, 2O36 will further expand engagement initiatives, developing programs that invite students to deepen their relationship to the Carlos Museum and discover surprising connections with their classroom studies.</strong></p>"
+          },
+          {
+            "title": "Empowering Teachers in 2036",
+            "description": "<p>As public funding shrinks for school field trips, it’s more important than ever for the Carlos Museum to provide teachers with the tools and funding they need to get students excited about the arts. <strong>2O36 will generate support for innovative, compelling, object-based workshops.</strong> By developing tailored teaching resources, the museum will increase its ability to reach younger audiences and make good on its educational mission.</p>"
+          },
+          {
+            "title": "With 2O36, Technology Tells a Story",
+            "description": "<p>No 21st-century museum can excel without using technology to help tell a story. <strong>With your support and generosity, 2O36 will allow the museum to continue to leverage unique technologies while maintaining its laser focus on access and engagement for all, at little to no cost.</strong> The museum’s plans include digital exhibition screens, with updated content and audio guides for visitors, and heat and humidity monitors designed to preserve collection pieces. These are just a few of the potential additions that are sure to enhance the audience experience and guarantee the Carlos Museum can continue to be enjoyed for years to come.</p>"
+          },
+          {
+            "title": "In 2036, Art is For Everyone",
+            "description": "Accessibility is a top priority for the Carlos Museum. <strong>By making an intentional effort to remove barriers to entry, 2O36 can provide more opportunities for children, students, and families to experience firsthand all the museum has to offer.</strong> Extended hours, free days, camp and workshop scholarships, free admission to university partners, and discounted programs for Title 1 schools are all on the table. The more we can increase access for all, the more we can fulfill the Carlos Museum’s mission.</p>"
           }
         ]
       }
