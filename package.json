@@ -7,7 +7,8 @@
     "build": "next build && next export",
     "postbuild": "./script.sh",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npx patch-package "
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
@@ -63,6 +64,7 @@
     "jimp": "^0.16.1",
     "lqip-loader": "^2.2.1",
     "next-compose-plugins": "^2.2.1",
+    "patch-package": "^6.4.7",
     "responsive-loader": "^2.0.0",
     "sharp": "^0.29.1",
     "svg-sprite-loader": "^6.0.9",
