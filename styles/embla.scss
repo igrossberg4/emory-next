@@ -282,8 +282,9 @@ body.is-scrolled {
   &.transitioning,
   &.blocked {
     .embla__button{
-      opacity: 0.4;
-      cursor: not-allowed;
+      // Not required because the carousel is working without blocking.
+    //  opacity: 0.4;
+    //  cursor: not-allowed;
     }
   }
 }
