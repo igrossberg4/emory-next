@@ -636,7 +636,7 @@ export default function Home(props: any) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/site.webmanifest" crossOrigin="use-credentials" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="preload" as="font" type="font/woff2" href="/fonts/pangram-regular.woff2" crossOrigin={"true"}></link>
         <link rel="preload" as="font" type="font/woff2" href="/fonts/pangram-bold.woff2" crossOrigin={"true"}></link>
