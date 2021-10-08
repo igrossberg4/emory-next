@@ -1,9 +1,18 @@
 .menu-main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
+
+  &:before {
+    content: '';
+    margin-top: auto;
+  }
+
+  &:after {
+    content: '';
+    margin-bottom: auto;
+  }
 
   .menu-main__link {
     margin-bottom: 2rem;
