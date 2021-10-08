@@ -108,7 +108,7 @@ export default function CarouselItem2036(props: any) {
           <div className="subtitle text-body--lg">{props.text}</div>
           <div className="title_cta">
             <Link  href="http://placeholder-link.com">
-              <a className="link-button">Support the campaign</a>
+              <a className="link-button">Support Emory</a>
             </Link>
           </div>
         </div>
