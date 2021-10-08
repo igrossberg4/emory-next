@@ -39,7 +39,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "2O36 PRIORITIES FOR THE NELL HODGSON WOODRUFF SCHOOL OF NURSING.",
+        "text": "2O36 PRIORITIES FOR NELL HODGSON WOODRUFF SCHOOL OF NURSING",
         "image_src": "nursing_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/nell-hodgson-woodruff-school-nursing",
         "cta_text": "Support Nursing"
@@ -50,7 +50,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "In 2O36, Innovation is Elemental",
-        "body": "<p>Boundless opportunities. Ultramodern facilities. Visionary thinking. Expected to serve  the community by summer 2022, the Emory Nursing Learning Center will lead the way in nursing education. With new technologies and advanced teaching methods, including an advanced simulation and skills lab, the facility will support experiential and immersive learning for students. It also will be home to the Emory Nursing Experience continuing professional education program, in partnership with Emory Healthcare Nursing.</p>",
+        "body": "<p>Boundless opportunities. Ultramodern facilities. Visionary thinking. Expected to serve  the community by summer 2022, the Emory Nursing Learning Center will lead the way in nursing education. With new technologies and advanced teaching methods, including an advanced simulation and skills lab, the facility will support experiential and immersive learning for students. It also will be home to the Emory Nursing Experience continuing professional education program, in partnership with Emory Healthcare Nursing.</p><p>The stunning new simulation center, where new classes of nurse leaders will train in world-class care, will be the largest of its kind in Georgia. And by sharing our facilities, equipment, and programs with others across the state who need advanced training, Emory will solidly plant a flag as the health care leader in Georgia. <strong>Supporting 2O36 helps provide a unique opportunity for collaboration and growth between the School of Nursing and Emory Healthcare and keeps Emory at the forefront of health care innovations.</strong></p>",
         "layout": "right",
         "img_src": "nursing_priority_1.jpg",
         "media_src": "nursing_priority_1_popup.jpg",
@@ -58,13 +58,6 @@
         "media_type": "image",
         "media_header": "Innovation is Elemental",
         "media_text": "Expected to serve the community by summer 2022, the Emory Nursing Learning Center will lead the way in nursing education."
-      }
-    },
-    {
-      "component": "ColumnsText",
-      "props": {
-        "column1": "The stunning new simulation center, where new classes of nurse leaders will train in world-class care, will be the largest of its kind in Georgia. And by sharing our facilities, equipment, and programs with others across the state who need advanced training, Emory will solidly plant a flag as the health care leader in Georgia.",
-        "column2": "<strong>Supporting 2O36 helps provide a unique opportunity for collaboration and growth between the School of Nursing and Emory Healthcare and keeps Emory at the forefront of health care innovations.</strong>"
       }
     },
     {
@@ -79,7 +72,7 @@
         "media_alt": "A professor demos on a mannequin for students..",
         "media_type": "image",
         "media_header": "Cultivating Leadership",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments."
       }
     },
     {
