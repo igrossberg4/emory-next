@@ -122,8 +122,8 @@ a {
   right: 5px;
 
   @include media-breakpoint-up(sm) {
-    top: 23px;
-    right: 37px;
+    top: 18px;
+    right: 28px;
   }
 
   &::after {
