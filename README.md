@@ -25,68 +25,42 @@ parents, community members.
 
 [Next.js](https://nextjs.org/) open-source Javascript web framework, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Getting started
 
-## Development using local environment
+Note: Local development requires Docker so that we can standardize software
+versions and dependencies.
 
-* Install javascript dependencies:
+Install [Docker desktop](https://docker.com/products/docker-desktop) first.
 
-```bash
-npm install
-```
+### Installation & Development
 
-* Run the development server:
+    $ make install
 
-```bash
-npm run dev
-```
+This command spins up the Docker container in development mode, installs node
+dependencies via npm, and executes `npm run dev` internally, making the site
+available at http://localhost:3000/ in your browser. Code changes in your
+file system are detected and hot-reloaded in the browser.
 
-* Open [http://localhost:3000/](http://localhost:3000/) in your browser.
+### Production build
 
-## Development using docker and docker compose
-* Requirements.
-Make it's required for run the steps using the Makefile
-* Setup build:
-```bash
-make setup
-```
-This command allows the development server to be up
+    $ make build
 
-Check the development server at http://localhost:3000/
-* Setup production build and serve it:
-```bash
-make setup-prod
-```
-This command performs a static build of the project and serves it with a basic http server.
+This command spins up the Docker container in production mode, installs node
+dependencies via npm, and executes `npm run build` to build a static HTML
+export of the project codebase making the site available via a basic HTTP
+web server at http://localhost:8080/ in your browser. NOTE: Code changes in
+your file system *are not monitored nor hot-reloaded* in the browser.
 
-Check the production server at http://localhost:8080/
-* Make artifact
-```bash
-make artifact
-```
-This command builds the production artifact but doesn't serve it into any server. 
+### Shutdown docker container
 
-* Regenerate development build:
-```bash
-make setup
-```
-If the command make setup-prod was run while the development one is in use, it's required to run again for serve the development server.
+    $ make stop
 
-* Stop process:
-```bash
-make stop
-```
-* If not server or process is present at port 8080, check the logs with:
-```bash
-docker-compose logs next_prod
-```
+This command stops either the local Docker development or production server.
 
-## Deployment using docker and npm
-* Deployment:
-It's required to run the command ```npm run build```. We have two ways of doing it:
-- Using node v12 and using bash.
-- Using docker-compose (the next_prod service) and stopping the process when it's done
+### Log debugging
 
-After the production build is done, it would be present at the out/ directory into the root of the project. This folder contains the artifact ready to be used as a static site.
+    $ docker-compose logs next_dev
+    $ docker-compose logs next_prod
 
 ## Platform.sh Integration
 
@@ -94,7 +68,6 @@ After the production build is done, it would be present at the out/ directory in
 
 * Node.js 14
 * Automatic TLS certificates
-* yarn-based build
 
 **Customizations include:**
 

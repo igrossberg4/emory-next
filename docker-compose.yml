@@ -2,7 +2,7 @@ version: '3'
 services:
   next_dev:
     build: .
-    command: tail -F foo
+    command: sleep infinity
     volumes:
       - .:/usr/app/
     ports:
