@@ -34,7 +34,7 @@ export default function MainMenu(props: any) {
                 </div>
               ))}
               <div className="menu-main__cta">
-                <Link  href="http://placeholder-link.com">
+                <Link  href="https://together.emory.edu/give">
                   <a className="link-button">Support Emory</a>
                 </Link>
               </div>
