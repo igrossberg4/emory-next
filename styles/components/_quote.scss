@@ -30,6 +30,8 @@
   }
 
   .quote__attribution {
-    margin-top: 15px;
+    margin: 15px 0 auto;
+    max-width: map-get($container-max-widths, 'sm');
+    text-align: center;
   }
 }
