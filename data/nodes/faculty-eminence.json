@@ -5,8 +5,8 @@
     "header": "FACULTY EMINENCE",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
-    "about": "About text",
-    "text": "Example text"
+    "about": "core area",
+    "text": "Our faculty are essential to achieving Emory’s vision of an inquiry-driven, ethically engaged, and inclusive intellectual community."
   },
   "path": "faculty-eminence",
   "metatag": {
@@ -18,28 +18,133 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Faculty are the heart of Emory University.",
+        "header": "Investing in Emory’s faculty and their research, scholarship, and publications will elevate  students’ educational experiences, reinforcing Emory as a destination for future students and faculty.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Everything we accomplish—from world-changing research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. That means National Academy members but also extraordinary early and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
+        "text": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-altering research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. That means National Academy members but also extraordinary early- and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Faculty Eminence",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "One of our biggest needs is to endow faculty positions. In academic terms, that's the currency for prestige, it's the currency to make the university run. And we need the ability to attract, keep, and nourish the talent that we have.",
+        "attribution": "— Ravi V. Bellamkonda, Provost and Executive Vice President for Academic Affairs"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "PRIORITIES TO BOLSTER FACULTY EMINENCE FOR 2O36.",
+        "image_src": "ecas_divider_bg.jpg",
+        "cta_link": "https://example.com/#placeholder",
+        "cta_text": "Support Faculty"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "New Professors, Thanks to New Endowments",
+        "body": "<p>In teaching their niche areas of expertise , conducting research, and gaining further prominence in their fields, Emory faculty members are fundamental to both the learning process and our ability to attract new faculty members. Investing in new distinguished professorships across schools means investing in academic rigor and thought leadership that produces top notch graduates ready to deliver meaningful, lasting contributions to society.</p><p><stong>One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university's prominence.</strong> Endowed  professorships enhance the student experience schoolwide, increasing  academic rigor and  the number of co-curricular experiences available to students across disciplines.</p><p>Endowed professorships provide research funding to support the work of the faculty members who hold them. In an era of increasingly constricted federal funding, reliable research support is essential to attracting the best faculty.  Endowed professorships may be named after the donor or in honor of someone whom the donor specifies, such as “The Ernie V. Garcia Professorship in Cardiac Imaging.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Endowments Bring New Professors",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Building our Faculty Bench",
+        "body": "<p>We’re always looking to add the highest caliber of teachers and researchers to Emory’s braintrust, and <strong>establishing a faculty recruitment pipeline will enable Emory to attract teachers and researchers who are emerging as leaders in their fields.</strong></p><p>Our faculty recruitment pipeline wouldn’t just focus on established educators, it would support postdoctoral fellows from underrepresented groups in transitioning to academic roles. Bringing new talents and fresh perspectives into our educational system will further strengthen Emory’s curriculum and better prepare our students for emerging priorities and trends.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Build Faculty Bench",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Margaret T. McGehee 03G 07G",
+        "layout": "left",
+        "subtitle": "Associate Dean for Faculty Development<br/>Director of the Oxford Center for Teaching and Scholarship<br/>Associate Professor of English and American Studies",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Margaret T. McGehee 03G 07G",
+        "media_header": "Margaret T. McGehee 03G 07G",
+        "media_text": "Associate Dean for Faculty Development<br/>Director of the Oxford Center for Teaching and Scholarship<br/>Associate Professor of English and American Studies",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Elevating the Best",
+        "body": "<p>An endowed chair held by, and named after, a faculty member is the single highest honor that can be bestowed by a department on its faculty. Chairships help Emory recruit and support senior-level clinicians, teachers, and researchers, particularly those who have done work of singular importance in their fields. The designation of chair allows senior-level faculty to further their research endeavors, deepen their scholarship, and explore promising medical techniques and treatments as they seek federal funding. <strong>Endowed chairs advance a school, department, and  area of academic or clinical interest, while honoring both a distinguished faculty member and the individual the chair is named for.</strong></p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Elevating the Best",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Kelly Wiltse Nicely",
+        "layout": "right",
+        "subtitle": "Assistant Professor, CRNA Program Director",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Kelly Wiltse Nicely",
+        "media_header": "Kelly Wiltse Nicely",
+        "media_text": "Assistant Professor, CRNA Program Director",
+        "button_close_text": "Exit"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "FACULTY EMINENCE",        
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Research is Power",
+            "description": "<p>As a leading research university, Emory’s focus is the number of lives saved, partnerships forged, and discoveries driven.. Without research, we can’t answer the big questions, uncover new insights, make scientific or medical breakthroughs, or find solutions to the challenges communities face today and in the future. Fundamental for professors in a multitude of fields, research leads to new ideas and profound discoveries, keeps their academic and educational priorities fresh and relevant, and helps propel their careers and professional reputations forward. <strong>Funding through 2O36 offers faculty resources to purchase needed equipment and software licenses, pay support staff, and afford travel for field research.</strong></p><p>Funding faculty research will help us recruit and retain faculty members. Research discoveries  inform new academic pedagogy, create new knowledge,  and lead to  publication opportunities that can reach new audiences and win awards. Faculty research prepares our  students to lead with the greater purpose of serving humanity.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Collaboration Rounds Out Curriculum",
+            "description": "<p>In addition to the research faculty conduct on their own, students have a unique opportunity to take part in research programs as a part of their learning experience. <strong>Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more students can have access to valuable research experience.</strong> Collaborative projects bolster students’ educational experience and  prepare them for professional opportunities. They also enable Emory to compete with top liberal arts colleges and research universities, better positioning Emory students for exceptional career trajectories upon graduation.</p>"
+          },
+          {
+            "title": "Promoting Faculty Scholarship",
+            "description": "<p>Access to flexible development funds is crucial to retaining and developing widely respected faculty. <strong>Financial support for faculty development endowments through 2O36 allows faculty to focus on research and scholarship in their fields, ensuring they  establish or maintain their own prominence and that of their school.</strong></p><p>Faculty development endowments will improve faculty retention and productivity and help Emory attract more diverse talent.  Funds can support academic leaves for faculty to participate in fellowships opportunities that enhance their professional development, create or further meaningful collaborations with peer institutions, and lead to new educational paradigms, curriculum, and learning models.</p>"
+          },
+          {
+            "title": "The Faculty of the Future",
+            "description": "<p>Through generous endowment support, Emory will be a destination, rather than a stepping stone, for leading faculty. <strong>Your support of  2O36 helps us create  new distinguished professorships to attract faculty who are gaining prominence  in their disciplines and retain rising stars at Emory who may be considering taking their talents to other universities.</strong></p><p>By pursuing early- to mid-career faculty, we will increase the number of faculty who are members of international academies and garner additional research funding at every level. Because of the caliber of our faculty and research ecosystem,  Emory faculty will be  more sought out as international commentators on important issues in forums that define public scholarship.</p>"
+          },
+          {
+            "title": "Supporting Fellowships and Residencies Through 2O36",
+            "description": "<p>As a thriving and growing center for the TV and film industry and a mecca for artists, there's creativity to be researched or experienced around every corner in Atlanta. The arts are a golden opportunity to bring Emory to Atlanta, and Atlanta to our students, through performances, collaborations, and the engagement of local visiting artists, fellows, and teachers. These experiences enhance the undergraduate experience, expand access, and create lasting, productive partnerships across creative disciplines.</p><p><strong>Funding fellowships and residencies for faculty across film, music, dance, theater, and creative writing, and hosting internationally-respected artists offers faculty and students alike opportunities to take big risks.</strong> By focusing on careers in the arts that align with their passions over potential profits, they can change the world by changing hearts.</p>"
           }
         ]
       }
