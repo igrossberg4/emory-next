@@ -183,6 +183,23 @@ export default function EmblaCarousel({
   const [nextBtnEnabled, setNextBtnEnabled] = useState(
     page < slides.length - 1 ? false : true
   );
+  useEffect(() => {
+    const routeChangeStart = () => {
+      if (performTransition && isCircleOnAnimation) {
+        const newErr = new Error("Abort route");
+        (newErr as any).cancelled = true;
+        throw newErr;
+      }else{
+        window.scroll({ top: 0, behavior: "smooth" });
+        const scrollbarWidth = window.innerWidth - document.body.scrollWidth;
+        document.body.style.overflowY = "hidden";
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+    };
+    router.events.on("routeChangeStart", routeChangeStart);
+    return () => router.events.off("routeChangeStart", routeChangeStart);
+  }, [performTransition, isCircleOnAnimation]);
+
   const changeRoute = useCallback(
     (route, newDirection) => {
       if (route == undefined) return;
@@ -195,7 +212,6 @@ export default function EmblaCarousel({
           route,
           { scroll: false, shallow: false }
         );
-
       } else {
         setTransitioning(false);
         setPerformTransition(false);
@@ -211,11 +227,7 @@ export default function EmblaCarousel({
         queue.concat(slides[page + newDirection].props.view[0].props.path)
       );
       dispatch({ type: "IS_TRANSITIONING", payload: true });
-      window.scroll({ top: 0 , behavior: "smooth" });
 
-      const scrollbarWidth = window.innerWidth - document.body.scrollWidth;
-      document.body.style.overflowY='hidden';
-      document.body.style.paddingRight=`${scrollbarWidth}px`;
     },
     [changeRoute, page, slides, queue, setQueue]
   );
@@ -231,7 +243,7 @@ export default function EmblaCarousel({
   }, [paginate, page, queue]);
   const [refViewport, inView, entry] = useInView({});
   useEffect(() => {
-    if (!isCircleOnAnimation && performTransition) {
+    if (performTransition) {
       changeRoute(slides[page].props.view[0].props.path, 0);
     }
   }, [isCircleOnAnimation, performTransition, page, changeRoute]);
@@ -248,7 +260,7 @@ export default function EmblaCarousel({
         }
       }
     },
-    [page, inView, scrollNext, scrollPrev,  state.isCircleExpanded]
+    [page, inView, scrollNext, scrollPrev, state.isCircleExpanded]
   );
   useEffect(() => {
     document.body.addEventListener("keydown", handleKey, { passive: false });
@@ -291,22 +303,29 @@ export default function EmblaCarousel({
               <div
                 className="embla__container"
                 data-route={`${slides[page].props.view[0].props.path}`}
-                onTransitionEnd={isCircleOnAnimation ? (e) => {
-                  if (
-                    e.propertyName === "transform" &&
-                    !(e.target as HTMLElement)?.className.includes("no_selected") &&
-                    (e.target as HTMLElement)?.className.includes("selected")
-                    && isCircleOnAnimation
-                  ) {
-                    //e.stopPropagation();
+                onTransitionEnd={
+                  isCircleOnAnimation
+                    ? (e) => {
+                        if (
+                          e.propertyName === "transform" &&
+                          !(e.target as HTMLElement)?.className.includes(
+                            "no_selected"
+                          ) &&
+                          (e.target as HTMLElement)?.className.includes(
+                            "selected"
+                          ) &&
+                          isCircleOnAnimation
+                        ) {
+                          //e.stopPropagation();
 
-                    setTimeout(() => {
-                      setPerformTransition(true);
-                    }, 0);
-
-                    setTransitioning(false);
-                  }
-                } : undefined}
+                          setTimeout(() => {
+                            setPerformTransition(true);
+                          }, 0);
+                          setTransitioning(false)
+                        }
+                      }
+                    : undefined
+                }
               >
                 {slides.map((value: any, i: number) => {
                   // No offset used right now, left here in case it is needed
@@ -326,13 +345,15 @@ export default function EmblaCarousel({
                           i < page
                             ? `${
                                 (i - page) *
-                                ((!isSmall ? (isMedium ? 60 : 50) : 100) + valueMore)
+                                ((!isSmall ? (isMedium ? 60 : 50) : 100) +
+                                  valueMore)
                               }vw`
                             : page === i
                             ? `0`
                             : `${
                                 (i - page) *
-                                ((!isSmall ? (isMedium ? 60 : 50) : 100) + valueMore)
+                                ((!isSmall ? (isMedium ? 60 : 50) : 100) +
+                                  valueMore)
                               }vw`
                         })`,
                       }}
@@ -368,14 +389,14 @@ export default function EmblaCarousel({
 
           <PrevButton
             href={actual ? actual.prev : page === 0 ? "" : "active"}
-            onClick={!performTransition ? scrollPrev : () => {}}
+            onClick={true ? scrollPrev : () => {}}
             enabled={prevBtnEnabled}
           />
           <NextButton
             href={
               actual ? actual.next : page === slides.length - 1 ? "" : "active"
             }
-            onClick={!performTransition ? scrollNext : () => {}}
+            onClick={true ? scrollNext : () => {}}
             enabled={nextBtnEnabled}
           />
         </div>
@@ -396,6 +417,14 @@ export default function EmblaCarousel({
         )}
       </>
     );
-  }, [page, isSmall, isMedium, handleKey, state.isCircleExpanded, performTransition, setPerformTransition,]);
+  }, [
+    page,
+    isSmall,
+    isMedium,
+    handleKey,
+    state.isCircleExpanded,
+    performTransition,
+    setPerformTransition,
+  ]);
   return memo;
 }
