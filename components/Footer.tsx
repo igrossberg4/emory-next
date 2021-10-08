@@ -64,8 +64,8 @@ export default function Footer(props:any) {
 }
         <p className="footer__title">The future starts here</p>
         <div className="footer__cta">
-          <Link  href="http://placeholder-link.com">
-            <a className="link-button">Support the campaign</a>
+          <Link  href="https://together.emory.edu/give">
+            <a className="link-button">Support Emory</a>
           </Link>
         </div>
         <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="95px" height="20px"></Image>
