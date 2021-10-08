@@ -3,7 +3,7 @@
   "type": "collection",
   "page_props": {
     "header": "Campaign Leadership",
-    "text": "Logline: Lorem Ipsum.",
+    "text": "Building on Emory’s commitment to serve humanity.",
     "about": "Special thanks to our",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_blue.jpg"
@@ -18,15 +18,15 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_data_science_code_yellow.jpg",
-        "media_src": "2036_data_science_code_yellow.jpg",
+        "header": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
+        "background_image": "about_isolated_bg.png",
+        "text": "<p>It’s our vision that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to shape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to purposefully prepare students for careers with the potential to change hearts, minds, and through that, the world.</p><p>Together, we can bring to life an ever promising future.</p>",
+        "img_src": "about_intro.jpg",
+        "media_src": "about_intro.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Gregory L. Fenves",
+        "media_text": "President, Emory University"
       }
     },
     {
@@ -36,51 +36,51 @@
         "items": [
           {
             "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "description" : "School and Unit Co-Chairs",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Susan Cahoon"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "John & Cammie Rice",
+            "description" : "School and Unit Co-Chairs",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of John and Cammie Rice"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Sarah Beth Brown 89B",
+            "description" : "Regional Co-Chairs",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Sarah Beth Brown"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Adam Rogers 92C 96M P19 P21, Stephanie Rogers 92C P19 P21",
+            "description" : "Regional Co-Chairs",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Adam & Stephanie Rogers"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Gregory L. Fenves",
+            "description" : "President, Emory University",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Gregory L. Fenves"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Joshua R. Newton",
+            "description" : "Senior Vice President, Advancement and Alumni Engagement",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Joshua R. Newton"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Bob Goddard",
+            "description" : "Chair, Emory Board of Trustees",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Bob Goddard"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Mitchell Tanzman 81C P18",
+            "description" : "Chair, Development Committee, Emory Board of Trustees",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Mitchell Tanzman 81C P18"
           }
         ]
       }
@@ -92,67 +92,529 @@
         "size" : "small",
         "items": [
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Claudia Adkison",
+            "description" : "School of Medicine",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Claudia Adkison"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Dan Amos P02",
+            "description" : "Candler School of Theology",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Dan Amos P02"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Kathelen Amos 79C",
+            "description" : "Candler School of Theology, School of Medicine",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Kathelen Amos 79C"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Amanda Arrendale",
+            "description" : "Oxford College",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Amanda Arrendale"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Chris Arrendale 99Ox 01C",
+            "description" : "Oxford College",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Chris Arrendale 99Ox 01C"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Ellen Bailey 63C 87B P87",
+            "description" : "Emory Healthcare",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Ellen Bailey 63C 87B P87"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name" : "Laura Balser 94B 01B",
+            "description" : "Goizueta Business School",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Laura Balser 94B 01B"
           },
           {
-            "name" : "Susan Cahoon 68C",
+            "name" : "Don Benson 84C P22 P25",
             "description" : "Campaign Focus Area",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Don Benson 84C P22 P25"
+          },
+          {
+            "name" : "Diana Blair",
+            "description" : "Emory Healthcare",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Diana Blair"
+          },
+          {
+            "name" : "Elise Blalock 04C",
+            "description" : "Campus Life and Athletics",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Elise Blalock 04C"
+          },
+          {
+            "name" : "Travis Blalock 03C",
+            "description" : "Campus Life and Athletics",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Travis Blalock 03C"
+          },
+          {
+            "name" : "Bill Britt 83T",
+            "description" : "Candler School of Theology",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Bill Britt 83T"
+          },
+          {
+            "name" : "Dirk Brown 90B",
+            "description" : "Michael C. Carlos Museum",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Dirk Brown 90B"
+          },
+          {
+            "name" : "Jonathan Butler 96C",
+            "description" : "Alumni Engagement",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Jonathan Butler 96C"
+          },
+          {
+            "name" : "Andrew Conway 92B P21",
+            "description" : "Goizueta Business School",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Andrew Conway 92B P21"
+          },
+          {
+            "name" : "Lilly D’Angelo 89G",
+            "description" : "Laney Graduate School",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Lilly D’Angelo 89G"
+          },
+          {
+            "name" : "Mike Dangerfield",
+            "description" : "Yerkes National Primate Research Center",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Mike Dangerfield"
+          },
+          {
+            "name" : "Jeff Denneen 92C 97B P24",
+            "description" : "Goizueta Business School",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Jeff Denneen 92C 97B P24"
+          },
+          {
+            "name" : "Tash Elwyn 93C",
+            "description" : "College of Arts and Sciences",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Tash Elwyn 93C"
+          },
+          {
+            "name" : "Rob Friedman",
+            "description" : "School of Medicine",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Rob Friedman"
+          },
+          {
+            "name" : "Jim Gavin 70G",
+            "description" : "Laney Graduate School",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Jim Gavin 70G"
+          },
+          {
+            "name" : "Lou Glenn",
+            "description" : "Winship Cancer Institute",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Lou Glenn"
+          },
+          {
+            "name" : "Nelly Golarz de Bourne 63G",
+            "description" : "Yerkes National Primate Research Center",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Nelly Golarz de Bourne 63G"
+          },
+          {
+            "name" : "Steve Greenfield 04B",
+            "description" : "Alumni Engagement",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Steve Greenfield 04B"
+          },
+          {
+            "name" : "Ashley Grice 97PH 03B",
+            "description" : "Alumni Engagement",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Ashley Grice 97PH 03B"
+          },
+          {
+            "name" : "Kimberly Hoang",
+            "description" : "Faculty and Staff",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Kimberly Hoang"
+          },
+          {
+            "name" : "Ira Horowitz P10 P13",
+            "description" : "Faculty and Staff",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Ira Horowitz P10 P13"
+          },
+          {
+            "name" : "Francis Humann 87C P13",
+            "description" : "Michael C. Carlos Museum",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Francis Humann 87C P13"
+          },
+          {
+            "name" : "Stephanie Kennedy",
+            "description" : "Emory Healthcare",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Stephanie Kennedy"
+          },
+          {
+            "name" : "Amy Kreisler",
+            "description" : "Rollins School of Public Health",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Amy Kreisler"
+          },
+          {
+            "name" : "Mary Anne Lanier",
+            "description" : "Rollins School of Public Health",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Mary Anne Lanier"
+          },
+          {
+            "name" : "John Latham 79L",
+            "description" : "School of Law",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of John Latham 79L"
+          },
+          {
+            "name" : "Crystal Edmonson Lewis 95C",
+            "description" : "Alumni Engagement",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Crystal Edmonson Lewis 95C"
+          },
+          {
+            "name" : "Melissa Lowe P07 P09 P14 P18",
+            "description" : "Rollins School of Public Health",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Melissa Lowe P07 P09 P14 P18"
+          },
+          {
+            "name" : "Sarah McPhee",
+            "description" : "Faculty and Staff",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Sarah McPhee"
+          },
+          {
+            "name" : "Lee Miller 82L",
+            "description" : "School of Law",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Lee Miller 82L"
+          },
+          {
+            "name" : "Cheryl Murphy 77N P06 P08",
+            "description" : "Nell Hodgson Woodruff School of Nursing",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Cheryl Murphy 77N P06 P08"
+          },
+          {
+            "name" : "Edjah Nduom 13MR",
+            "description" : "Faculty and Staff",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Edjah Nduom 13MR"
+          },
+          {
+            "name" : "Bill Newton 75C 76G",
+            "description" : "University Libraries",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Bill Newton 75C 76G"
+          },
+          {
+            "name" : "Anne Newton 76G",
+            "description" : "University Libraries",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Anne Newton 76G"
+          },
+          {
+            "name" : "Karen Parks 16T",
+            "description" : "Candler School of Theology",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Karen Parks 16T"
+          },
+          {
+            "name" : "Anita Paye",
+            "description" : "Faculty and Staff",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Anita Paye"
+          },
+          {
+            "name" : "Rein Saral P02",
+            "description" : "Winship Cancer Institute",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Rein Saral P02"
+          },
+          {
+            "name" : "Jag Sheth",
+            "description" : "Faculty and Staff",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Jag Sheth"
+          },
+          {
+            "name" : "Danny Shoy 95C",
+            "description" : "Campus Life and Athletics",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Danny Shoy 95C"
+          },
+          {
+            "name" : "Roy Simpson",
+            "description" : "Nell Hodgson Woodruff School of Nursing",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Roy Simpson"
+          },
+          {
+            "name" : "Chris Smith P21 P23 P24",
+            "description" : "Parents",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Chris Smith P21 P23 P24"
+          },
+          {
+            "name" : "Ginger Smith 77C 82G",
+            "description" : "University Libraries",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Ginger Smith 77C 82G"
+          },
+          {
+            "name" : "Hugh Tarbutton 84Ox",
+            "description" : "Oxford College",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Hugh Tarbutton 84Ox"
+          },
+          {
+            "name" : "Linda Taylor 74C",
+            "description" : "College of Arts & Sciences",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Linda Taylor 74C"
+          },
+          {
+            "name" : "Greg Vaughn 87C",
+            "description" : "College of Arts & Sciences",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Greg Vaughn 87C"
+          },
+          {
+            "name" : "David Williams P16 P18 P20 P22",
+            "description" : "Oxford College",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of David Williams P16 P18 P20 P22"
+          },
+          {
+            "name" : "Kelly Williams P16 P18 P20 P22",
+            "description" : "Oxford College",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Kelly Williams P16 P18 P20 P22"
+          },
+          {
+            "name" : "Linda Yarden P21 P23 P24",
+            "description" : "Parents",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Linda Yarden P21 P23 P24"
           }
         ]
       }
     },
     {
-      "component": "AccordionComponent",
+      "component": "ProfileGrid",
       "props": {
+        "header": "Regional Volunteer Leaders",
+        "size" : "small",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "name" : "Jamie Baldinger 78C P11 P16",
+            "description" : "Washington DC",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Jamie Baldinger 78C P11 P16"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "name" : "Joe Baldinger P11 P16",
+            "description" : "Washington DC",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Joe Baldinger P11 P16"
+          },
+          {
+            "name" : "Curley Bonds 87C",
+            "description" : "Southern California",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Curley Bonds 87C"
+          },
+          {
+            "name" : "Kim Chenevey 02Ox 04B",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Kim Chenevey 02Ox 04B"
+          },
+          {
+            "name" : "Ed Cloaninger 91Ox 93C",
+            "description" : "Boston",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Ed Cloaninger 91Ox 93C"
+          },
+          {
+            "name" : "Darren Cohen 96C",
+            "description" : "New York",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Darren Cohen 96C"
+          },
+          {
+            "name" : "Sherri Cohen 96C",
+            "description" : "New York",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Sherri Cohen 96C"
+          },
+          {
+            "name" : "Shan Cooper 89C 95B",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Shan Cooper 89C 95B"
+          },
+          {
+            "name" : "Michele Davis 87C",
+            "description" : "Boston",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Michele Davis 87C"
+          },
+          {
+            "name" : "Anita Friedmann 88C",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Anita Friedmann 88C"
+          },
+          {
+            "name" : "Noni Holmes-Kidd 05C",
+            "description" : "Florida",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Noni Holmes-Kidd 05C"
+          },
+          {
+            "name" : "Cyrus Irani 05C",
+            "description" : "Houston",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Cyrus Irani 05C"
+          },
+          {
+            "name" : "Embry Kidd 05C",
+            "description" : "Florida",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Embry Kidd 05C"
+          },
+          {
+            "name" : "Kevin Murriel 11T",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Kevin Murriel 11T"
+          },
+          {
+            "name" : "Robert Oh 10B",
+            "description" : "International",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Robert Oh 10B"
+          },
+          {
+            "name" : "Emily Park 04C",
+            "description" : "Southern California",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Emily Park 04C"
+          },
+          {
+            "name" : "Leslie Patterson 99B",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Leslie Patterson 99B"
+          },
+          {
+            "name" : "Dan Philips 99B",
+            "description" : "New York",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Dan Philips 99B"
+          },
+          {
+            "name" : "Stacey Philips 99C",
+            "description" : "New York",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Stacey Philips 99C"
+          },
+          {
+            "name" : "James Reilly 11C 12G",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of James Reilly 11C 12G"
+          },
+          {
+            "name" : "Cheryl Rucker-Whitaker 89C",
+            "description" : "Chicago",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Cheryl Rucker-Whitaker 89C"
+          },
+          {
+            "name" : "Steven Rudofsky 88L P21",
+            "description" : "International",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Steven Rudofsky 88L P21"
+          },
+          {
+            "name" : "Amy Rudolph 88C 91L",
+            "description" : "Atlanta",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Amy Rudolph 88C 91L"
+          },
+          {
+            "name" : "David Sambur 02C",
+            "description" : "New York",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of David Sambur 02C"
+          },
+          {
+            "name" : "Charles Scott 82C 86M",
+            "description" : "San Francisco",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Charles Scott 82C 86M"
+          },
+          {
+            "name" : "Hank Siegel 80B P10",
+            "description" : "Florida",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Hank Siegel 80B P10"
+          },
+          {
+            "name" : "Lisette Siegel 80C P10",
+            "description" : "International",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Lisette Siegel 80C P10"
+          },
+          {
+            "name" : "Cameron Taylor 90C",
+            "description" : "Washington DC",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Cameron Taylor 90C"
+          },
+          {
+            "name" : "Gordon Taylor 90C",
+            "description" : "Washington DC",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Gordon Taylor 90C"
+          },
+          {
+            "name" : "Sam Tenebaum 65C",
+            "description" : "Carolinas",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Sam Tenebaum 65C"
+          },
+          {
+            "name" : "Mary Williams 82C",
+            "description" : "Houston",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Mary Williams 82C"
+          },
+          {
+            "name" : "Neil Wizel 99C",
+            "description" : "Houston",
+            "img_src": "2036_data_science_code_yellow.jpg",
+            "media_alt": "Portrait of Neil Wizel 99C"
           }
         ]
       }
