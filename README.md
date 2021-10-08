@@ -9,21 +9,25 @@ vision of what we will accomplish together.
 
 The website engages Emory donors and constituents with stories, the “why”, the
 potential impact of the campaign; communicating the goals of each of Emory’s
-schools & units in order to raise awareness, increase engagement, and ultimately, garner financial support for the University.
+schools & units in order to raise awareness, increase engagement, and ultimately,
+garner financial support for the University.
 
 
 # Milestones
 
 * Phase 1 (September 2021-February 2022ish) - soft launch. Goals to drum up
-interest in the campaign, geared toward, but not exclusively focused on, major
-and principal gift donors. Campaign committee members will also need access to specific information on the site.
+  interest in the campaign, geared toward, but not exclusively focused on, major
+  and principal gift donors. Campaign committee members will also need access
+  to specific information on the site.
 
-* Phase 2 (February 2022-the life of the campaign) - public launch to a broader Emory audience, including the full alumni base, faculty, staff, students,
-parents, community members.
+* Phase 2 (February 2022-the life of the campaign) - public launch to a broader
+  Emory audience, including the full alumni base, faculty, staff, students,
+  parents, community members.
 
 ## Tech Stack
 
-[Next.js](https://nextjs.org/) open-source Javascript web framework, bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[Next.js](https://nextjs.org/) open-source Javascript web framework, bootstrapped
+with [`create-next-app`][create-next-app], and hosted on [Platform.sh][platform-sh]
 
 ## Getting started
 
@@ -71,11 +75,16 @@ This command stops either the local Docker development or production server.
 
 **Customizations include:**
 
-The following files and additions make the Next.js framework work on Platform.sh, modified from the `npx` command [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The following files and additions make the Next.js framework work on
+Platform.sh, modified from the `npx` command [`create-next-app`][create-next-app].
 
-* The `.platform.app.yaml`, `.platform/services.yaml`, and `.platform/routes.yaml` files provide Platform.sh-specific configuration.
-* An additional module, [`config-reader-nodejs`](https://github.com/platformsh/config-reader-nodejs), provides convenience wrappers for accessing the Platform.sh environment variables.
-* A `handle_mounts.sh` script leverages Platform build and deploy phases to add special handling for committed files pushed to directories also defined as mounts points via `.platform.app.yaml`.
+* The `.platform.app.yaml`, `.platform/services.yaml`, and `.platform/routes.yaml`
+  files provide Platform.sh-specific configuration.
+* An additional module, [`config-reader-nodejs`][config-reader-nodejs], provides
+  convenience wrappers for accessing the Platform.sh environment variables.
+* A `scripts/platformsh_handle_mounts.sh` script leverages Platform build and
+  deploy phases to add special handling for committed files pushed to directories
+  also defined as mounts points via `.platform.app.yaml`.
 
 ## Project Resources
 
@@ -85,6 +94,9 @@ The following files and additions make the Next.js framework work on Platform.sh
 * [Designs & Component Library][figma] (Figma)
 * [Technical Spec][miro] (Miro)
 
+[platform-sh]: https://platform.sh/marketplace/nodejs/
+[create-next-app]: https://github.com/vercel/next.js/tree/canary/packages/create-next-app
+[config-reader-nodejs]: https://github.com/platformsh/config-reader-nodejs
 [creative-brief]: https://drive.google.com/file/d/1TFiqv9IY3kSJSGcR6pqZRUskEguNjGgA/view
 [technical-brief]: https://docs.google.com/document/d/1QsFaQ1iJL__LEeZFuiLoUCdJ1gpkcrtfjijpMgwmOVw/
 [brand-guide]: https://drive.google.com/drive/folders/1kmWQ2nrndwP6nzaY7_brTNkqytepOiE2
