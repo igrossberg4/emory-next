@@ -638,8 +638,9 @@ export default function Home(props: any) {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <link rel="preload" href="/fonts/pangram-regular.woff2"></link>
-        <link rel="preload" href="/fonts/pangram-bold.woff2"></link>
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/pangram-regular.woff2" crossOrigin={"true"}></link>
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/pangram-bold.woff2" crossOrigin={"true"}></link>
+        <link rel="preload" as="font" type="font/woff" href="/fonts/ampersand-medium.woff" crossOrigin={"true"}></link>
 
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
