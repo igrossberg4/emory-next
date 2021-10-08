@@ -67,7 +67,7 @@
           {
             "name" : "Joshua R. Newton",
             "description" : "Senior Vice President, Advancement and Alumni Engagement",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/j_newtown_3.jpg",
             "media_alt": "Portrait of Joshua R. Newton"
           },
           {
@@ -100,25 +100,25 @@
           {
             "name" : "Dan Amos P02",
             "description" : "Candler School of Theology",
-            "img_src": "headshots/amos_1.jpg",
+            "img_src": "headshots/d_amos_1.jpg",
             "media_alt": "Portrait of Dan Amos P02"
           },
           {
             "name" : "Kathelen Amos 79C",
             "description" : "Candler School of Theology, School of Medicine",
-            "img_src": "headshots/amos_2.jpg",
+            "img_src": "headshots/k_amos_2.jpg",
             "media_alt": "Portrait of Kathelen Amos 79C"
           },
           {
             "name" : "Amanda Arrendale",
             "description" : "Oxford College",
-            "img_src": "headshots/arrendale_1.jpg",
+            "img_src": "headshots/a_arrendale_1.jpg",
             "media_alt": "Portrait of Amanda Arrendale"
           },
           {
             "name" : "Chris Arrendale 99Ox 01C",
             "description" : "Oxford College",
-            "img_src": "headshots/arrendale_2.jpg",
+            "img_src": "headshots/c_arrendale_2.jpg",
             "media_alt": "Portrait of Chris Arrendale 99Ox 01C"
           },
           {
@@ -148,13 +148,13 @@
           {
             "name" : "Elise Blalock 04C",
             "description" : "Campus Life and Athletics",
-            "img_src": "headshots/blalock_1.jpg",
+            "img_src": "headshots/e_blalock_1.jpg",
             "media_alt": "Portrait of Elise Blalock 04C"
           },
           {
             "name" : "Travis Blalock 03C",
             "description" : "Campus Life and Athletics",
-            "img_src": "headshots/blalock_2.jpg",
+            "img_src": "headshots/t_blalock_2.jpg",
             "media_alt": "Portrait of Travis Blalock 03C"
           },
           {
@@ -322,13 +322,13 @@
           {
             "name" : "Bill Newton 75C 76G",
             "description" : "University Libraries",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/b_newton_2.jpg",
             "media_alt": "Portrait of Bill Newton 75C 76G"
           },
           {
             "name" : "Anne Newton 76G",
             "description" : "University Libraries",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/a_newton_2.jpg",
             "media_alt": "Portrait of Anne Newton 76G"
           },
           {
@@ -376,7 +376,7 @@
           {
             "name" : "Ginger Smith 77C 82G",
             "description" : "University Libraries",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/g_smith_1.jpg",
             "media_alt": "Portrait of Ginger Smith 77C 82G"
           },
           {
@@ -388,7 +388,7 @@
           {
             "name" : "Linda Taylor 74C",
             "description" : "College of Arts & Sciences",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/l_taylor_3.jpg",
             "media_alt": "Portrait of Linda Taylor 74C"
           },
           {
@@ -400,13 +400,13 @@
           {
             "name" : "David Williams P16 P18 P20 P22",
             "description" : "Oxford College",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/d_williams_2.jpg",
             "media_alt": "Portrait of David Williams P16 P18 P20 P22"
           },
           {
             "name" : "Kelly Williams P16 P18 P20 P22",
             "description" : "Oxford College",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/k_williams_1.jpg",
             "media_alt": "Portrait of Kelly Williams P16 P18 P20 P22"
           },
           {
@@ -427,13 +427,13 @@
           {
             "name" : "Jamie Baldinger 78C P11 P16",
             "description" : "Washington DC",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/jamie_baldinger_1.jpg",
             "media_alt": "Portrait of Jamie Baldinger 78C P11 P16"
           },
           {
             "name" : "Joe Baldinger P11 P16",
             "description" : "Washington DC",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/joe_baldinger_2.jpg",
             "media_alt": "Portrait of Joe Baldinger P11 P16"
           },
           {
@@ -457,13 +457,13 @@
           {
             "name" : "Darren Cohen 96C",
             "description" : "New York",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/d_cohen_1.jpg",
             "media_alt": "Portrait of Darren Cohen 96C"
           },
           {
             "name" : "Sherri Cohen 96C",
             "description" : "New York",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/s_cohen_2.jpg",
             "media_alt": "Portrait of Sherri Cohen 96C"
           },
           {
@@ -577,25 +577,25 @@
           {
             "name" : "Hank Siegel 80B P10",
             "description" : "Florida",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/h_siegel_1.jpg",
             "media_alt": "Portrait of Hank Siegel 80B P10"
           },
           {
             "name" : "Lisette Siegel 80C P10",
             "description" : "International",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/l_siegel_2.jpg",
             "media_alt": "Portrait of Lisette Siegel 80C P10"
           },
           {
             "name" : "Cameron Taylor 90C",
             "description" : "Washington DC",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/c_taylor_1.jpg",
             "media_alt": "Portrait of Cameron Taylor 90C"
           },
           {
             "name" : "Gordon Taylor 90C",
             "description" : "Washington DC",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/g_taylor_2.jpg",
             "media_alt": "Portrait of Gordon Taylor 90C"
           },
           {
@@ -607,7 +607,7 @@
           {
             "name" : "Mary Williams 82C",
             "description" : "Houston",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/m_williams_3.jpg",
             "media_alt": "Portrait of Mary Williams 82C"
           },
           {
