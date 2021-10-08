@@ -79,7 +79,7 @@
           {
             "name" : "Mitchell Tanzman 81C P18",
             "description" : "Chair, Development Committee, Emory Board of Trustees",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/tanzman_1.jpg",
             "media_alt": "Portrait of Mitchell Tanzman 81C P18"
           }
         ]
@@ -184,7 +184,7 @@
           {
             "name" : "Lilly D’Angelo 89G",
             "description" : "Laney Graduate School",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/dangelo_1.jpg",
             "media_alt": "Portrait of Lilly D’Angelo 89G"
           },
           {
@@ -613,7 +613,7 @@
           {
             "name" : "Neil Wizel 99C",
             "description" : "Houston",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/wizel_2.jpg",
             "media_alt": "Portrait of Neil Wizel 99C"
           }
         ]
