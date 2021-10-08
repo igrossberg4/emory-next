@@ -2,7 +2,7 @@
   "id": "oxford-college",
   "type": "collection",
   "page_props": {
-    "header": "OXFORD COLLEGE OF EMORY UNIVERSITY",
+    "header": "OXFORD COLLEGE",
     "about":"School spotlight",
     "text": "Leaders aren’t born. They’re made at Oxford College.",
     "button_scroll": "Scroll to explore",
@@ -39,7 +39,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "OXFORD COLLEGE OF EMORY UNIVERSITY HAS BIG PRIORITIES FOR 2O36.",
+        "text": "OXFORD COLLEGE HAS BIG PRIORITIES FOR 2O36.",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/oxford-college",
         "cta_text": "Support Oxford"
