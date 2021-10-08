@@ -227,16 +227,20 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     if (item.read_more && !re.test(item.read_more)) {
 
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === item.read_more && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        item.read_more = path;
-                        item.internal_link = true;
+                        if (nodeAccordionLink) {
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            item.read_more = path;
+                            item.internal_link = true;
+                        }
                     }
                     item?.tags?.forEach((tag: any) => {
                         if (tag.url && !re.test(tag.url)) {
                             const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
-                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                            tag.url = path;
-                            tag.internal_link = true;
+                            if (nodeAccordionLink) {
+                                const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                                tag.url = path;
+                                tag.internal_link = true;
+                            }
                         }
                     })
                 })
@@ -247,9 +251,11 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     const item = slide.props;
                     if (item.explore_link && !re.test(item.explore_link)) {
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === item.explore_link && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        item.explore_link = path;
-                        item.internal_link = true;
+                        if (nodeAccordionLink) {
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            item.explore_link = path;
+                            item.internal_link = true;
+                        }
                     }
                 })
             }
@@ -258,16 +264,20 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 component.props?.tags?.forEach((tag: any) => {
                     if (tag.url && !re.test(tag.url)) {
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        tag.url = path;
-                        tag.internal_link = true;
+                        if (nodeAccordionLink) {
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            tag.url = path;
+                            tag.internal_link = true;
+                        }
                     }
                 });
                 if (component.props.read_more && !re.test(component.props.read_more)) {
                     const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === component.props.read_more && node.id === page) > -1);
-                    const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                    component.props.read_more = path;
-                    component.props.internal_link = true;
+                    if (nodeAccordionLink) {
+                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                        component.props.read_more = path;
+                        component.props.internal_link = true;
+                    }
                 }
 
             }
