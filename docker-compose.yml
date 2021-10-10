@@ -4,13 +4,20 @@ services:
     build: .
     command: sleep infinity
     volumes:
+      # Mount the current project folder from the host
+      # OS into the container.
       - .:/usr/app/
     ports:
+      # Next.js dev mode runs on http://localhost:3000/
       - "3000:3000"
   next_prod:
     build: .
     command: http-server out/
     volumes:
+      # Mount the current project folder from the host
+      # OS into the container.
       - .:/usr/app/
     ports:
+      # The HTTP server from the static Next.js build
+      # and export runs on http://localhost:8080/
       - "8080:8080"
