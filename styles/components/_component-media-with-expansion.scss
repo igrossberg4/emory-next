@@ -28,6 +28,8 @@
     figure {
       display: table;
       max-height: 50vh;
+      max-width: map-get($container-max-widths, 'md');
+
 
       video{
         max-width: 900px;
