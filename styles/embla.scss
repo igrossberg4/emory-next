@@ -43,7 +43,6 @@
     left: 0;
     top: 0;
     content: " ";
-    filter: drop-shadow(1px 1px 1px rgba(grey, 0.33));
     opacity:0;
     content: ' ';
     transition: opacity $main-carousel-transition-duration ease-in-out;
