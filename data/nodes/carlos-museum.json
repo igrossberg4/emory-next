@@ -126,21 +126,6 @@
       }
     },
     {
-      "component": "VideoQuote",
-      "props": {
-        "pretitle": "A MESSAGE FROM",
-        "title": "Eleanor Ridley 74L",
-        "layout": "right",
-        "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/630265384/5be8da587b",
-        "media_alt": "A video quote of Eleanor Ridley 74L",
-        "media_header": "Eleanor Ridley 74L",
-        "media_text": "",
-        "button_close_text": "Exit"
-      }
-    },
-    {
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
