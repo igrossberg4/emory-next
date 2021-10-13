@@ -39,10 +39,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "EMORY HEALTHCARE’S PRIORITIES FOR 2O36 ARE COMMUNITY PRIORITIES.",
+        "text": "2O36 PRIORITIES FOR EMORY HEALTHCARE",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/emory-healthcare",
-        "cta_text": "Support Healthcare"
+        "cta_text": "Support Emory Healthcare"
       }
     },
     {
