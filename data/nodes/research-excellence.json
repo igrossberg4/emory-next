@@ -4,7 +4,7 @@
   "page_props": {
     "header": "RESEARCH EXCELLENCE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "img_src": "research_lede.jpg",
     "about": "core area",
     "text": "We don’t just teach or lecture—we equip and inspire students to make their own discoveries."
   },
@@ -20,11 +20,11 @@
       "props": {
         "header": "As a leading research university, our rankings speak volumes. But what matters most is the number of lives saved, partnerships forged, and discoveries driven—across the globe.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>From mapping human DNA to studying the psychology of thrillseekers, to finding emerging treatments for COVID-19, Emory research is at the forefront of discovery.. Emory research leads to better health outcomes, lives, and global communities.</p><p>Research at Emory encompasses a multitude of disciplines. It includes the work of doctors, faculty, and clinicians of Emory Healthcare; our community service and green initiatives; work examining the racial implications of federal tax policy; creating forecasting models for political elections, formulating policy on bioethical issues and safeguarding research subjects for NASA; and mathematical discoveries that ​​answer complex problems of theoretical computer science. The fields, applications, and implications of Emory research are exhaustive, and have the potential to touch all our lives.",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "text": "<p>From mapping human DNA to studying the psychology of thrillseekers, to finding emerging treatments for COVID-19, Emory research is at the forefront of discovery. Emory research leads to better health outcomes, lives, and global communities.</p><p>Research at Emory encompasses a multitude of disciplines. It includes the work of doctors, faculty, and clinicians of Emory Healthcare working on the forefront of the study of cancer and brain health; our community service and green initiatives; work examining the racial implications of federal tax policy; creating forecasting models for political elections, formulating policy on bioethical issues and safeguarding research subjects for NASA; and mathematical discoveries that ​​answer complex problems of theoretical computer science. The fields, applications, and implications of Emory research are exhaustive, and have the potential to touch all our lives.",
+        "img_src": "research_intro.jpg",
+        "media_src": "https://vimeo.com/623637496/8fb02cba32",
+        "media_alt": "Student researcher",
+        "media_type": "video",
         "media_header": "Research Excellence",
         "media_text": ""
       }
@@ -39,10 +39,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "THE PRIORITIES FOR RESEARCH EXCELLENCE ARE AT THE HEART OF 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR RESEARCH EXCELLENCE",
+        "image_src": "research_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
-        "cta_text": "Support Research"
+        "cta_text": "Support Emory"
       }
     },
     {
@@ -52,8 +52,8 @@
         "title": "Top Faculty Attracts Top Faculty",
         "body": "<p>Through teaching, research, and service, Emory faculty members play an essential role in helping the university achieve its vision of an inquiry-driven, ethically engaged, and inclusive intellectual community. Emory faculty do more than just teach. They are distinguished scientists and researchers, authors, and public intellectuals who’ve become household names, like Dr. Sanjay Gupta, CNN chief medical correspondent; and Carol Anderson, the author of White Rage: The Unspoken Truth of Our Racial Divide. Among our distinguished faculty, we can boast of two Pulitzer Prize and two Nobel Peace Prize winners.</p><p>Our faculty’s commitment to their communities and their students leaves an impression well beyond their time at Emory. While inspiring students and driving educational excellence, Emory’s world-renowned professors have the attention of their peers, both in their fields and related fields. Because top scholars want to study, teach, and work alongside each other, the more our faculty are recognized as leaders in their fields, the more they attract new highly respected faculty. <strong>By funding 2O36, you can help facilitate these academics’ research pursuits so they can reach their full potential and achieve such distinction.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "research_priority_1.jpg",
+        "media_src": "research_priority_1_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Top Faculty",
@@ -67,8 +67,8 @@
         "title": "Attracting Top Scholars",
         "body": "<p>Gone are the days of offering only traditional majors. Cross-disciplinary research allows Emory students to combine their specific areas of study with their varied passions, and even to respond to new trends and challenges in science, business, society, and beyond. We foster creativity, curiosity, and the freedom that enables a vision for change. By creating their own academic paths and combining seemingly unrelated studies, students create  ingenious ways to make the world better.</p><p>Singular research opportunities with ​​some of the brightest minds in academia, partnerships with major research institutions, and the ability to tailor their educational experiences are just some of the many reasons Emory’s student body represents more than 100 countries. That academic and social diversity allows our community to thrive. <strong>Your support of 2O36 allows for research funding, and for the scholarships needed to support students using their creativity and ingenuity to make a better world.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "research_priority_2.jpg",
+        "media_src": "research_priority_2_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Top Scholars",
@@ -82,7 +82,7 @@
         "title": "Vasiliki Michopoulos 12G",
         "layout": "left",
         "subtitle": "Assistant Professor, Psychiatry and Behavioral Sciences<br/>Affiliate Scientist, Division of Developmental and Cognitive Neuroscience, Yerkes National Primate Research Center",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "research_quote_1.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Vasiliki Michopoulos 12G",
         "media_header": "Vasiliki Michopoulos 12G",
@@ -97,8 +97,8 @@
         "title": "Research Shapes Curriculum",
         "body": "<p>At Emory, learning isn’t relegated to the classroom. Research isn’t just important for the discoveries themselves and the improvements those discoveries can make in people’s lives, it’s an essential part of the Emory educational experience.</p><p>In research, students get first-hand experience that can’t be found in a textbook. Our local community benefits from the work of students and faculty. And as students are able to study abroad, they gain an understanding of how their discoveries can have effects far from home. . With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "research_priority_3.jpg",
+        "media_src": "research_priority_3_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Shaping Curriculum",
@@ -112,7 +112,7 @@
         "title": "Carey Jansen 19M 23G",
         "layout": "right",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "research_quote_2.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Carey Jansen 19M 23G",
         "media_header": "Carey Jansen 19M 23G",

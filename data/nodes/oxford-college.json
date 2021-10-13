@@ -6,7 +6,7 @@
     "about":"School spotlight",
     "text": "Leaders aren’t born. They’re made at Oxford College.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg"
+    "img_src": "oxford_lede.jpg"
   },
   "path": "oxford-college",
   "metatag": {
@@ -21,10 +21,10 @@
         "header": "Through powerful inquiry, Oxford students become thoughtful, effective, and responsible leaders and agents of change.",
         "background_image": "ecas_isolated_bg.png",
         "text": "<p>One of Emory University's two liberal arts colleges, Oxford prides itself on an intense focus on the liberal arts, leadership, and service. Just 45 minutes from Atlanta, the Oxford campus is deeply rooted in history with eyes on the future. Through the related processes of discovery, exploration, and reflection, students are immersed in a curriculum that introduces them to ways of finding and producing knowledge.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "img_src": "oxford_intro.jpg",
+        "media_src": "https://vimeo.com/623729255/c0042c8639",
+        "media_alt": "Oxford student on campus",
+        "media_type": "video",
         "media_header": "Oxford College",
         "media_text": ""
       }
@@ -32,15 +32,15 @@
     {
       "component": "Quote",
       "props": {
-        "text": "From the time students arrive on campus as first-year students, we are deeply invested in their success, in their satisfaction, and in their flourishing.",
+        "text": "From the time students arrive on campus, we are deeply invested in their success, in their satisfaction, and in their flourishing.",
         "attribution": "— Douglas A. Hicks, Dean of Oxford College of Emory University and William R. Kenan Jr. Professor of Religion"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "OXFORD COLLEGE HAS BIG PRIORITIES FOR 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR OXFORD COLLEGE",
+        "image_src": "oxford_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/oxford-college",
         "cta_text": "Support Oxford"
       }
@@ -52,12 +52,12 @@
         "title": "Sustainability is Essential",
         "body": "<p>From the tree-lined campus in a charming small town, to the woods Oxford students have spent years restoring, to the 11-acre organic farm, a living laboratory that feeds students and the community, Oxford College doesn't just value ecological sustainability, we live it. A distinguished professorship in environmental studies would expand the curriculum and learning opportunities, strengthening a key area of undergraduate study at Emory.</p><p><strong>By supporting 2O36, we can recruit a senior scholar to lead our academic study of the environment and support co-curricular sustainability initiatives like Oxford’s organic farm.</strong> The professorship in environmental studies will position Oxford College, and Emory more broadly, as a leader in understanding and practicing sustainability.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "oxford_priority_1.jpg",
+        "media_src": "oxford_priority_1_popup.jpg",
+        "media_alt": "Oxford’s organic farm in action.",
         "media_type": "image",
         "media_header": "Sustainability is Essential",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "By supporting 2O36, we can recruit a senior scholar to lead our academic study of the environment and support co-curricular sustainability initiatives like Oxford’s organic farm."
       }
     },
     {
@@ -67,25 +67,25 @@
         "title": "Research Isn’t Just for Faculty",
         "body": "<p>An Oxford education centers on the close attention of faculty teaching and mentoring our students through their academic and research pursuits. <strong>Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities.</strong> Collaborative projects bolster students’ educational experience, prepare them for professional opportunities, and enable Oxford to compete with top liberal arts colleges and research universities alike.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "oxford_priority_2.jpg",
+        "media_src": "oxford_priority_2_popup.jpg",
+        "media_alt": "A professor guides a student in research.",
         "media_type": "image",
         "media_header": "Faculty Lead",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities."
       }
     },
     {
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Kim Chenevey o2Ox o4B",
+        "title": "Kim Chenevey 02Ox 04B",
         "layout": "left",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
-        "media_alt": "A video quote of Kim Chenevey o2Ox o4B",
-        "media_header": "Kim Chenevey o2Ox o4B",
+        "img_src": "oxford_quote_1.jpg",
+        "media_src": "https://vimeo.com/630265273/86499fb63a",
+        "media_alt": "A video quote of Kim Chenevey 02Ox 04B",
+        "media_header": "Kim Chenevey 02Ox 04B",
         "media_text": "",
         "button_close_text": "Exit"
       }
@@ -97,12 +97,12 @@
         "title": "Expanding Student Horizons by 2036",
         "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford's identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "oxford_priority_3.jpg",
+        "media_src": "oxford_priority_3_popup.jpg",
+        "media_alt": "Oxford students take advantage of learning outside of the classroom.",
         "media_type": "image",
         "media_header": "Expand Horizons",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration."
       }
     },
     {
@@ -112,8 +112,8 @@
         "title": "Hugh Tarbutton 84Ox",
         "layout": "right",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "oxford_quote_2.jpg",
+        "media_src": "https://vimeo.com/630265299/bab32e6750",
         "media_alt": "A video quote of Hugh Tarbutton 84Ox",
         "media_header": "Hugh Tarbutton 84Ox",
         "media_text": "",
