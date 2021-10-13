@@ -35,11 +35,11 @@ build:
 	@echo "\n---> WARNING: This command breaks the development build, run 'make install' to have it running properly again. <---"
 
 
-# ## release: Bumps the package version and creates a release.
-# ##
-# .PHONY: release
-# release:
-#   git
+## release: Bumps the package version and creates a release.
+##
+.PHONY: release
+release:
+	./scripts/create-release.sh
 
 ## stop:    Stop running containers.
 ##
