@@ -6,7 +6,10 @@
     "text": "Invest in people for the benefit of people.",
     "about": "Special thanks to our",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg"
+    "img_src": "2036_cancer_cells_blue.jpg",
+    "footer": {
+      "cta_support_button": false
+    }
   },
   "path": "campaign-leadership",
   "metatag": {
