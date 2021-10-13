@@ -37,6 +37,26 @@ footer[role="contentinfo"] {
   }
 
   .footer__cta {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .footer__contact {
+    margin-top: 2rem;
+
+    &__heading {
+      margin-bottom: 2rem;
+    }
+
+    &__person,
+    &__title,
+    &__links {
+      font-size: $font-size-xs;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    &__links a {
+      display: block;
+    }
   }
 }

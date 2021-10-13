@@ -68,16 +68,13 @@ export default function Footer(props:any) {
           <Link  href={props?.cta_support_button?.url ? props?.cta_support_button?.url : "https://together.emory.edu/give"}>
             <a className="link-button">{props?.cta_support_button?.text ? props?.cta_support_button?.text : 'Support Emory'}</a>
           </Link>
-          <div className="contact-block"
-          >
-            <div>{props?.cta_contact_info?.heading ? props?.cta_contact_info?.heading : '' }</div>
-            <div>{props?.cta_contact_info?.person ? props?.cta_contact_info?.person : '' }</div>
-            <div>{props?.cta_contact_info?.title ? props?.cta_contact_info?.title : '' }</div>
-            <div>
-            <a href={`mailto: ${props?.cta_contact_info?.email ? props?.cta_contact_info?.email : ''}` }>{props?.cta_contact_info?.email ? props?.cta_contact_info?.email : '' }</a>
-            </div>
-            <div>
-            <a href={`tel:${props?.cta_contact_info?.telephone ? props?.cta_contact_info?.telephone : ''}` }>{props?.cta_contact_info?.telephone ? props?.cta_contact_info?.telephone : '' }</a>
+          <div className="footer__contact">
+            <div className="footer__contact__heading">{props?.cta_contact_info?.heading ? props?.cta_contact_info?.heading : '' }</div>
+            <div className="footer__contact__person">{props?.cta_contact_info?.person ? props?.cta_contact_info?.person : '' }</div>
+            <div className="footer__contact__title">{props?.cta_contact_info?.title ? props?.cta_contact_info?.title : '' }</div>
+            <div className="footer__contact__links">
+              <a href={`mailto: ${props?.cta_contact_info?.email ? props?.cta_contact_info?.email : ''}` }>{props?.cta_contact_info?.email ? props?.cta_contact_info?.email : '' }</a>
+              <a href={`tel:${props?.cta_contact_info?.telephone ? props?.cta_contact_info?.telephone : ''}` }>{props?.cta_contact_info?.telephone ? props?.cta_contact_info?.telephone : '' }</a>
             </div>
           </div>
         </div>
