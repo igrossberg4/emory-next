@@ -6,7 +6,7 @@
     "header": "CAMPUS LIFE",
     "text": "Embrace your passion. Unleash your potential.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg"
+    "img_src": "campus_lede.jpg"
   },
   "path": "campus-life",
   "metatag": {
@@ -21,12 +21,12 @@
         "header": "Guided by Emory’s mission and values, Campus Life works closely with our students, faculty, and the entire Emory community to foster a nurturing, respectful, and rewarding campus environment.",
         "background_image": "ecas_isolated_bg.png",
         "text": "<p>Emory Campus Life is based on the belief that every member of our community deserves the highest standard of care and support. Through an array of programs and resources, we promote a healthy and sustainable environment where students live what they learn and discover what they live for. While the classroom will always have a fundamental role in shaping strong and empowered individuals, some of the most transformative learning experiences take place outside the classroom, from events and activities around campus to real-world opportunities.</p>",
-        "img_src": "2036_data_science_code_yellow.jpg",
-        "media_src": "2036_data_science_code_yellow.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "img_src": "campus_intro.jpg",
+        "media_src": "https://vimeo.com/618333747/179a689d91",
+        "media_alt": "Atlanta Freedom Bands",
+        "media_type": "video",
         "media_header": "Campus Life",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_text": ""
       }
     },
     {
@@ -39,8 +39,8 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "CAMPUS LIFE IS LOOKING FORWARD TO THESE PRIORITIES IN 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR CAMPUS LIFE",
+        "image_src": "campus_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/campus-experience/campus-life",
         "cta_text": "Support Campus Life"
       }
@@ -49,8 +49,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "In 2O36, Community Counts",
-        "body": "<p>At Emory, education has always extended beyond the classroom. Let’s take it to the next level. By promoting faculty engagement within residence life—including immersive health, wellness, and diversity programs—we will support a more intimate and fully integrated academic experience in which students and faculty work, play, and live together daily. <strong>In an era often associated with isolation and alienation, Emory will stand for community, first and foremost.</strong></p><p>Faculty will be able to mentor students on a more personal level, and students will have the opportunity to develop lifelong, transformative relationships. Still, stronger student-faculty dynamics are just the beginning. We expect to see retention rates increase across the board and among undergraduate students, in particular.</p>",
+        "title": "Removing Roadblocks in 2036",
+        "body": "<p>Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness.</p>",
         "layout": "right",
         "img_src": "ecas_priority_1.jpg",
         "media_src": "ecas_priority_1_popup.jpg",
@@ -82,8 +82,8 @@
         "title": "Eddy Cabrera 22C",
         "layout": "left",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "campus_quote_1.jpg",
+        "media_src": "https://vimeo.com/630265510/66a83a60f2",
         "media_alt": "A video quote of Eddy Cabrera 22C",
         "media_header": "Eddy Cabrera 22C",
         "media_text": "",
@@ -109,13 +109,13 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Enku Gelaya",
+        "title": "Enku Gelaye",
         "layout": "right",
         "subtitle": "Senior Vice President and Dean of Campus Life",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
-        "media_alt": "A video quote of Enku Gelaya",
-        "media_header": "Enku Gelaya",
+        "img_src": "campus_quote_2.jpg",
+        "media_src": "https://vimeo.com/630265409/8d9cfa3e6e",
+        "media_alt": "A video quote of Enku Gelaye",
+        "media_header": "Enku Gelaye",
         "media_text": "Senior Vice President and Dean of Campus Life",
         "button_close_text": "Exit"
       }
@@ -127,8 +127,8 @@
         "title": "KEY PRIORITIES",
         "items": [
           {
-            "title": "Removing Roadblocks in 2O36",
-            "description": "<p>Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness.</p>"
+            "title": "Centering Health and Wellness Through 2O36",
+            "description": "<p>As part of Emory’s commitment to the complete health of our student body, we’re creating new programs to educate students about the eight dimensions of wellness, including behavioral health, spiritual connection, emotional awareness, and physical wellness. These educational resources will strengthen academic achievement, personal growth, confidence, mental well-being, and social connection for the Emory community. <strong>2O36 will support students’ health needs by increasing staffing and expanding clinical care, case management, crisis response, and preventative care.</strong> By training faculty and staff to identify and support students who need attention, we can create a more caring, campus-wide approach to positive mental health and emotional support.</p>"
           },
           {
             "title": "In 2O36, Support is Everywhere",
