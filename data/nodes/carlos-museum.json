@@ -32,7 +32,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "The Michael C. Carlos Museum collects, preserves, exhibits, and interprets art and artifacts from antiquity to the present.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "carlos_isolated_bg.png",
         "text": "<p>Since 1919, the Carlos Museum has been a beacon for people seeking to enrich their lives by studying and experiencing art. It has become one of the premier museums in the Southeast, featuring a renowned collection of artwork from ancient Egypt, Nubia, the Near East, Greece, Rome, the Americas, Africa, and Asia, as well as a collection of works on paper from the Renaissance to the present.</p><p>In addition to the collection’s inspiring beauty, pieces provide a window into other worlds, giving visitors a chance to experience different cultures and religions in a way that’s meaningful, entertaining, and educational, while also promoting interdisciplinary teaching and research.</p>",
         "img_src": "carlos_intro.jpg",
         "media_src": "https://vimeo.com/625569653/a936855fc1",
@@ -118,7 +118,7 @@
         "body": "<p>Museums are places to explore and discover; to remember where we’ve been and consider how our past shapes our present and future. While permanent collections go a long way in establishing a museum’s identity, special exhibits are equally fundamental, bringing in exciting new works that increase publicity and reinvigorate a museum’s mission.</p><p><strong>With that in mind, 2O36 will fund a special exhibition gallery to house prestigious pieces from national and international collaborators.</strong> Through this unique space, the Carlos Museum will take its reputation to the next level, increasing programming across the board and attracting a fresh new audience.</p>",
         "layout": "right",
         "img_src": "carlos_priority_3.jpg",
-        "media_src": "carlos_priority_2_popup.jpg",
+        "media_src": "carlos_priority_3_popup.jpg",
         "media_alt": "Carlos visitors view an exhibit.",
         "media_type": "image",
         "media_header": "New Exhibitions",

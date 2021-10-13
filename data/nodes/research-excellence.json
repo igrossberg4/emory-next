@@ -60,10 +60,10 @@
         "layout": "right",
         "img_src": "research_priority_1.jpg",
         "media_src": "research_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Faculty researcher",
         "media_type": "image",
         "media_header": "Top Faculty",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "By funding 2O36, you can help facilitate these academics’ research pursuits so they can reach their full potential and achieve such distinction."
       }
     },
     {
@@ -75,10 +75,10 @@
         "layout": "right",
         "img_src": "research_priority_2.jpg",
         "media_src": "research_priority_2_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Student inspects a solution.",
         "media_type": "image",
         "media_header": "Top Scholars",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Your support of 2O36 allows for research funding, and for the scholarships needed to support students using their creativity and ingenuity to make a better world."
       }
     },
     {
@@ -101,14 +101,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Research Shapes Curriculum",
-        "body": "<p>At Emory, learning isn’t relegated to the classroom. Research isn’t just important for the discoveries themselves and the improvements those discoveries can make in people’s lives, it’s an essential part of the Emory educational experience.</p><p>In research, students get first-hand experience that can’t be found in a textbook. Our local community benefits from the work of students and faculty. And as students are able to study abroad, they gain an understanding of how their discoveries can have effects far from home. . With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers.</p>",
+        "body": "<p>At Emory, learning isn’t relegated to the classroom. Research isn’t just important for the discoveries themselves and the improvements those discoveries can make in people’s lives, it’s an essential part of the Emory educational experience.</p><p>In research, students get first-hand experience that can’t be found in a textbook. Our local community benefits from the work of students and faculty. And as students are able to study abroad, they gain an understanding of how their discoveries can have effects far from home. <strong>With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers.</strong></p>",
         "layout": "right",
         "img_src": "research_priority_3.jpg",
         "media_src": "research_priority_3_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Students learn outside the classroom.",
         "media_type": "image",
         "media_header": "Shaping Curriculum",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers."
       }
     },
     {
