@@ -3,6 +3,8 @@
   "type": "collection",
   "page_props": {
     "header": "ROLLINS SCHOOL<br>OF PUBLIC HEALTH",
+    "about":"school spotlight",
+    "text": "A place where students learn to identify, analyze, and create solutions to global health problems.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_brain_health_neurons.jpg",
     "footer": {
@@ -29,37 +31,137 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
+        "header": "Cultivating the public health leaders of tomorrow, the Rollins School of Public Health improves health and well-being through excellence in teaching, research, and the application of knowledge in partnership with domestic and global communities.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
+        "text": "<p><i>Public health</i>, once an obscure term to many, is now widely recognized with the onset of the global COVID-19 pandemic. The need for science-driven inquiry and public health leadership is greater now than ever. The Rollins School of Public Health provides both, pairing expertise with collaboration and interdisciplinary action to prevent disease, promote health, and save lives around the world. Founded just over 30 years ago, Rollins is now ranked 4th among the nation's schools of public health. By 2036, we expect to be second to none.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/618170754/342455f066",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_type": "video",
+        "media_header": "Rollins School of Public Health",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "While at Rollins, I've been fortunate to be able to see to the training of the future generation of public health workers.",
+        "attribution": "— James W. Curran P03,  James W. Curran Dean of Public Health<br/>Co-Director, Emory Center for AIDS Research Professor, Epidemiology"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "EMORY UNIVERSITY HAS BIG PRIORITIES FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR ROLLINS SCHOOL OF PUBLIC HEALTH",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/rollins-school-public-health",
         "cta_text": "Support Rollins"
       }
     },
     {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2036, Students Flourish",
+        "body": "<p>Our faculty, our facilities, and our proximity to the Center for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p><strong>Scholarship support through 2O36 would enable Rollins to compete with the nation’s leading schools of public health for top doctoral candidates or Masters of Public health students.</strong> Additionally, such support would help to grow Rollins’s prestige, and retain leading faculty members who value accomplished postgraduates as collaborative members of their research teams.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Supporting Students",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "The Power of Flexible Support",
+        "body": "<p>Unrestricted endowment funds allow the dean to respond to urgent needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 20 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Increase, Recruit, Retain",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Shivani Patel",
+        "layout": "left",
+        "subtitle": "Assistant Professor, Hubert Department of Global Health",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Shivani Patel",
+        "media_header": "Shivani Patel",
+        "media_text": "Assistant Professor, Hubert Department of Global Health",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Improving Cancer Prevention",
+        "body": "<p>Working with the Georgia Cancer Registry, Rollins researchers are building the world’s first database of cancer recurrence, launched by a time-limited National Institutes of Health grant. Given that 15 million cancer survivors live in the United States alone, the new registry will fill an important gap in knowledge. Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.</p>",
+        "layout": "right",
+        "img_src": "ecas_priority_1.jpg",
+        "media_src": "ecas_priority_1_popup.jpg",
+        "media_alt": "Three students at a pep rally.",
+        "media_type": "image",
+        "media_header": "Power in Prevention",
+        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Lisa Chung 21PH 27G",
+        "layout": "right",
+        "subtitle": "",
+        "img_src": "ecas_quote_2.jpg",
+        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_alt": "A video quote of Lisa Chung 21PH 27G",
+        "media_header": "Lisa Chung 21PH 27G",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "ROLLINS SCHOOL OF PUBLIC HEALTH",        
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Research Abounds",
+            "description": "<p>Emory is in a strong position to be a global leader in implementation science research to address health disparity. An emerging field of study, implementation science explores the application of research findings into routine practice and policy. With support for implementation science research in health disparities, Rollins will develop an interdisciplinary focus on social determinants of health and environmental justice. 2O36, will support grant proposal development, capacity building, training, community-based collaborations, and partnerships with CARE and the Centers for Disease Control and Prevention.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Addressing Climate Change",
+            "description": "Beyond the COVID-19 pandemic, climate change is the greatest threat to human health. To better understand the public health consequences of global climate change, the Gangarosa Department of Environmental Health is building connections with partners around the world and in the Atlanta community. The department leads high-impact research on climate effects, strategies for reducing greenhouse gas emissions, and approaches for increasing resilience to climate change. A national leader in training future leaders to combat climate change, the department plays a key role in translating research into policy and practice. With the support of 2O36, we will continue this important work."
+          },
+          {
+            "title": "Bridge the Gap in Preventable Diseases",
+            "description": "<p>HIV/AIDS, diabetes, and cancer are preventable yet major causes of death for many Americans. The Hubert Department of Global Health seeks funding to build collaborations with partners worldwide to enhance our work in HIV/AIDS; global safe water, sanitation, and hygiene;, cancer; and diabetes. <strong>With the help of 2O36, we will combat diseases and save lives, and under-resourced countries will have new strategies for responding to these health threats.</strong></p>"
+          },
+          {
+            "title": "Health Policy and Equity Take Lead",
+            "description": "<p>Collaboration is central to everything we do at Emory, and that extends to health equity. Support for our work in this important area of research would bring together faculty from different disciplines to determine how health policy and health care systems affect health inequities. <strong>Through 2O36, we will organize educational programming and training activities to influence policies that improve health for all.</strong></p>"
+          },
+          {
+            "title": "Preparing for the Next Crisis",
+            "description": "<p>The COVID-19 pandemic is far from over, and we’ve already learned several lessons related to public health. For one, we know that global pandemics require increased investments in infectious disease research and disaster preparedness. New strategies for pandemic response and public education are imperative if we want to be prepared for the next disruptive event. With increased investments through 2O36, Rollins will have a head start in crafting pandemic responses, disease prevention plans, public health communications, vaccine denial responses, and strategies that improve testing and tracing.</p>"
+          },
+          {
+            "title": "Addressing Substance Use Disorders",
+            "description": "<p>Substance use disorders affect almost every family in the United States, and the COVID-19 pandemic has only exacerbated the problem. Rollins is working to help end suffering from substance use disorders and related maladies, including overdoses, hepatitis C, HIV, and neonatal opioid withdrawal syndrome. Rollins faculty, staff, students, and collaborators are advancing research and developing interventions, which we will further advance through 2O36. These efforts will encompass drug discovery, novel clinical interventions, community-based interventions, and policy research.</p>"
           }
         ]
       }
