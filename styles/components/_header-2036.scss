@@ -189,13 +189,10 @@
     width: 55px;
     height: 80px;
     overflow: visible;
-
-    path {
-      filter:
-        drop-shadow(-3px -3px 6px rgba(255, 255, 255, .5))
-        drop-shadow(2px 2px 6px rgba(95, 92, 89, .12))
-        drop-shadow(4px 4px 11px rgba(177, 167, 162, .4));
-    }
+    filter:
+      drop-shadow(-3px -3px 6px rgba(255, 255, 255, .5))
+      drop-shadow(2px 2px 6px rgba(95, 92, 89, .12))
+      drop-shadow(4px 4px 11px rgba(177, 167, 162, .4));
   }
 
   @include media-breakpoint-up(sm) {
