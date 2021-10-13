@@ -6,7 +6,7 @@
     "about":"School spotlight",
     "text":"Business is a vehicle capable of delivering meaningful, lasting benefits to society.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_grid_yellow.jpg"
+    "img_src": "goizueta_lede.jpg"
   },
   "path": "goizueta-business-school",
   "metatag": {
@@ -21,9 +21,9 @@
         "header": "Our namesake, Roberto C. Goizueta once said, “Business schools today cannot just reflect business the way it is. They must teach business the way it will be.",
         "background_image": "ecas_isolated_bg.png",
         "text": "<p>Named for one of the great business leaders of the 20th century, Goizueta Business School is a training ground for principled leaders and a laboratory for powerful insights. By navigating the complex interdependency of business and society, we seek to convene brilliant minds to solve profound problems with integrity, ingenuity, and grit.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
+        "img_src": "goizueta_intro.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "Goizueta students in class",
         "media_type": "image",
         "media_header": "Goizueta Business School",
         "media_text": ""
@@ -39,8 +39,8 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "GOIZUETA BUSINESS SCHOOL FUELS LEADERSHIP WITH PRIORITIES FOR 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR GOIZUETA BUSINESS SCHOOL",
+        "image_src": "goizueta_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/goizueta-business-school",
         "cta_text": "Support Goizueta"
       }
@@ -52,12 +52,12 @@
         "title": "For 2O36, Research is Essential",
         "body": "<p>Business-related questions affect the economy of our country and city, and the answers Goizueta faculty uncover through their research can affect our families’ everyday costs. Faculty research in the areas of business and society, entrepreneurship and innovation, and leadership development fulfills the mission of preparing principled leaders to solve problems to benefit the world.</p><p><strong>Supporting faculty research through 2O36 funds academic inquiry and scholarship, designating resources for tools that enable rigorous research, like paying support staff, and purchasing data sets, analytical software licenses, and market terminals.</strong> This kind of academic funding and engagement makes the business school a more sought-after institution, improving faculty retention and recruitment efforts, generating new academic pedagogy, redesigning curricula based on research results, and providing additional publication opportunities.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "goizueta_priority_1.jpg",
+        "media_src": "goizueta_priority_1_popup.jpg",
+        "media_alt": "Business resources.",
         "media_type": "image",
         "media_header": "Research is Essential",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Supporting faculty research through 2O36 funds academic inquiry and scholarship, designating resources for tools that enable rigorous research."
       }
     },
     {
@@ -67,12 +67,12 @@
         "title": "Business and Society are One",
         "body": "<p>The Roberto C. Goizueta Business and Society Institute creates long-term value while addressing the social and environmental issues confronting local and global communities and businesses. Since its inception, the institute has accelerated more than 300 underserved small businesses in Atlanta and Central America, developed more than 30 research papers and projects, enrolled 200+ students annually in social advancement courses, and graduated 74 undergraduate and graduate Social Enterprise Fellows.</p><p><strong>Funding through 2O36 will help markets work for more people in more places.</strong> It will provide for a wide range of student and community initiatives, including microbusiness development (Start:ME Accelerator), specialty coffee markets (Grounds for Empowerment and Transparent Trade Coffee), next-generation leaders (Social Enterprise Fellows), and faculty-led interdisciplinary research. This support can expand the reach of programs into new markets and populations to increase prosperity, reduce poverty, and build stronger communities.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "goizueta_priority_2.jpg",
+        "media_src": "goizueta_priority_2_popup.jpg",
+        "media_alt": "Celebrating the work of Start:ME Accelerator.",
         "media_type": "image",
         "media_header": "Business and Society are One",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Funding through 2O36 will help markets work for more people in more places."
       }
     },
     {
@@ -82,8 +82,8 @@
         "title": "Jordyn Turner 22B",
         "layout": "left",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "goizueta_quote_1.jpg",
+        "media_src": "https://vimeo.com/630265303/b9cabdb5e6",
         "media_alt": "A video quote of Jordyn Turner 22B",
         "media_header": "Jordyn Turner 22B",
         "media_text": "",
@@ -97,12 +97,12 @@
         "title": "Data is Key to Understanding",
         "body": "<p>As businesses and organizations increasingly rely on data to drive decisions, Goizueta trains students to understand its complexities and applications. Our degree programs and research combine business, data, and technology in solving business challenges and shaping graduates to be data-savvy, capable leaders.</p><p><strong>Your generosity to 2O36 allows us to meet the growing demand for data scientists, attract talented students by expanding experiential learning programming, and provide analytics insights to our corporate partners.</strong> Through an immersive academic experience with an emphasis on hands-on learning in real-world partnerships, Goizueta’s data-driven graduates bring well-informed, innovative solutions to the table in any function, organization, or field.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "goizueta_priority_3.jpg",
+        "media_src": "goizueta_priority_3_popup.jpg",
+        "media_alt": "Students make connections with company representatives.",
         "media_type": "image",
         "media_header": "Data is Key to Understanding",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Your generosity to 2O36 allows us to meet the growing demand for data scientists, attract talented students by expanding experiential learning programming, and provide analytics insights to our corporate partners."
       }
     },
     {
