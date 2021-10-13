@@ -78,7 +78,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "With 2O36, the Permanent Collection Is Permanent",
-        "body": "<p>The Carlos Museum holds one of the most comprehensive collections in the Southeast, with awe-inspiring artwork from all around. <strong>With your help, 2O36 will ensure these treasures have a permanent, dedicated home at Emory.</strong> Not only will an endowed gallery continue to build and expand upon the museum’s legacy, it will provide resources to find new ways to attract and engage our increasingly diverse audience.</p>",
+        "body": "<p>The Carlos Museum holds one of the most comprehensive collections in the Southeast, with awe-inspiring artwork from all around. <strong>With your help, 2O36 will ensure these treasures have a permanent, dedicated home at Emory.</strong> Not only will an endowed gallery continue to build and expand upon the museum’s legacy, it will provide resources to find new ways to attract and engage our increasingly diverse audience.</p><p>Imagine the possibilities: pieces from Nubia, Rome, Greece, and more, using an exhibition design that inspires audiences through rich storytelling and dynamic installations. With the right resources in place, the Carlos Museum can become both a must-see attraction and a new cultural hub for students.</p>",
         "layout": "right",
         "img_src": "carlos_priority_2.jpg",
         "media_src": "carlos_priority_2_popup.jpg",
@@ -86,13 +86,6 @@
         "media_type": "image",
         "media_header": "Permanent Collection",
         "media_text": "With your help, 2O36 will ensure these treasures have a permanent, dedicated home at Emory."
-      }
-    },
-    {
-      "component": "ColumnsText",
-      "props": {
-        "column1": "Imagine the possibilities: pieces from Nubia, Rome, Greece, and more, using an exhibition design that inspires audiences through rich storytelling and dynamic installations. With the right resources in place, the Carlos Museum can become both a must-see attraction and a new cultural hub for students.",
-        "column2": ""
       }
     },
     {
