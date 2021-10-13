@@ -15,9 +15,9 @@ install:
 	docker-compose stop next_dev
 	docker-compose up --build -d next_dev
 	docker-compose exec -T next_dev npm install
-	docker-compose exec -d -T next_dev npm run dev
 	@echo "\n\n\n---> Development: http://localhost:3000 <---"
 	@echo "\n---> NOTE: Please allow several seconds on initial page load for Next.js to finish dev compilation. <---"
+	docker-compose exec -T next_dev npm run dev
 
 
 ## build:   Provision docker contanier and create a production build.
