@@ -6,7 +6,20 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "text": "Music, maps, films, personal diaries, and of course, books. Emory Libraries believe knowledge comes from many sources.",
-    "about": "unit spotlight"
+    "about": "unit spotlight",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory Libraries",
+        "url": "https://together.emory.edu/give/to/arts-libraries-and-museum/university-libraries"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Erin Horeni-Ogle",
+        "title":"Managing Director of Development",
+        "email":"ehoreni@emory.edu",
+        "telephone":"404-727-5386"
+      }
+   }
   },
   "path": "university-libraries",
   "metatag": {

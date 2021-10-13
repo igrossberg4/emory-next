@@ -6,7 +6,20 @@
     "header": "NELL HODGSON WOODRUFF<br>SCHOOL OF NURSING",
     "text": "We prepare visionary nurse leaders who improve bedside care, transform care delivery through research, and educate the next wave of leaders in nursing.",
     "button_scroll": "Scroll to explore",
-    "img_src": "nursing_lede.jpg"
+    "img_src": "nursing_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Nursing",
+        "url": "https://together.emory.edu/give/to/health-and-medicine/nell-hodgson-woodruff-school-nursing"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Alison M. Thompson",
+        "title":"Assistant Dean, Advancement and Alumni Engagement",
+        "email":"alison.m.thompson@emory.edu",
+        "telephone":"470-561-2964"
+      }
+   }
   },
   "path": "nell-hodgson-woodruff-school-of-nursing",
   "metatag": {

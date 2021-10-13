@@ -56,7 +56,7 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
 
                 ].concat(nodeFinded.components)
                     .concat(
-                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase)
+                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase, nodeFinded)
                     )
             }
         }
@@ -157,7 +157,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
     }
 }
 
-function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode: any) {
+function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode: any, nodeFinded:any) {
     const basePath = baseNode ? `${baseNode.path}/` : '';
     const prevNodeSelect = !lastNode ? nodes[nodes.length - 1] : lastNode;
     const nextNodeSelect = !nextNode ? nodes[0] : nextNode;
@@ -175,7 +175,7 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
         },
         {
             "component": "Footer",
-            "props": Object.assign({}, baseNode.page_props.footer)
+            "props": Object.assign({}, nodeFinded.page_props.footer)
         }
     ]
 }
@@ -312,7 +312,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                         }
 
                                 ].concat(nodeFinded.components).concat(
-                                    prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase)
+                                    prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase, nodeFinded)
                                 )
                             }
                         },
