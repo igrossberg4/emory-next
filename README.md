@@ -38,7 +38,7 @@ Install [Docker desktop](https://docker.com/products/docker-desktop) first.
 
 ### Installation & Development
 
-    $ make install
+    $ make dev
 
 This command spins up the Docker container in development mode, installs node
 dependencies via npm, and executes `npm run dev` internally, making the site
@@ -63,7 +63,10 @@ This command stops either the local Docker development or production server.
 
 ### Log debugging
 
-    $ docker-compose logs next_dev
+The `make dev` command itself shows console output from Next.js build process.
+
+To see log info for the static HTML server from the prod build, run:
+
     $ docker-compose logs next_prod
 
 ## Platform.sh Integration
