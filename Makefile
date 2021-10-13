@@ -6,12 +6,12 @@ help :
 	@sed -n 's/^##//p' Makefile
 
 
-## install: Provision docker container for local development.
-##          Internally this executes `npm run dev` to watch your
-##          filesystem for changes and auto-reload the browser.
+## dev:     Provision docker container for local development. Internally this
+##          executes `npm run dev` to watch your filesystem for changes and
+##          auto-reload the browser at http://localhost:3000/.
 ##
-.PHONY: install
-install:
+.PHONY: dev
+dev:
 	docker-compose stop next_dev
 	docker-compose up --build -d next_dev
 	docker-compose exec -T next_dev npm install
@@ -20,10 +20,11 @@ install:
 	docker-compose exec -T next_dev npm run dev
 
 
-## build:   Provision docker contanier and create a production build.
-##          NOTE: Unlike the dev container, the production build is not
-##          automatically updated when code is changed; you must run this
-##          command again to update it.
+## build:   Create a production build and serve it in static HTTP server at
+##          http://localhost:8000/. NOTE: Unlike the dev endpoint, this
+##          production build task does not monitor for code changes; you must
+##          manually run this command after every code change to see changes
+##          reflected in the browser.
 ##
 .PHONY: build
 build:
@@ -32,7 +33,7 @@ build:
 	docker-compose exec -T next_prod npm run build
 	@echo "\n\n\n---> Production: http://localhost:8080 <---"
 	@echo "\n---> Code is generated on ./out folder <---"
-	@echo "\n---> WARNING: This command breaks the development build, run 'make install' to have it running properly again. <---"
+	@echo "\n---> WARNING: This command breaks the development build, run 'make dev' to have it running properly again. <---"
 
 
 ## release: Bumps the package version and creates a release.
