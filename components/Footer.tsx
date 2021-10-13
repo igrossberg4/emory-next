@@ -23,7 +23,6 @@ export default function Footer(props:any) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scroll]); // @ts-ignore
-  console.log(props)
   return (
     <footer role="contentinfo">
       <div className="container">
