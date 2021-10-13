@@ -4,7 +4,7 @@
   "page_props": {
     "header": "STUDENT FLOURISHING",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_code_yellow.jpg",
+    "img_src": "student_lede.jpg",
     "about": "core area",
     "text": "Education is for life.",
     "footer": {
@@ -26,8 +26,8 @@
       "props": {
         "header": "Emory prepares students for a lifelong journey of transformation, contribution, and service.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our students are our future. And supporting student flourishing means helping them become thinkers, doers, and team players. It means strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. . Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
+        "text": "<p>Our students are our future. And supporting student flourishing means helping them become thinkers, doers, and team players. It means creating an inclusive environment where our diverse student body feels at home, strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. . Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
+        "img_src": "student_intro.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
         "media_type": "image",
@@ -45,10 +45,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "HELPING STUDENTS FLOURISH IS PARAMOUNT FOR 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR STUDENT FLOURISHING",
+        "image_src": "student_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
-        "cta_text": "Support Students"
+        "cta_text": "Support Emory"
       }
     },
     {
@@ -58,8 +58,8 @@
         "title": "Scholarships Mean Better Access",
         "body": "<p>First-generation college students face unique psychological, academic, and financial challenges that can interfere with the completion of their  undergraduate studies. Many of these students come from low-income families who can provide less financial support than those of their peers. For these students, scholarships can be the deciding factor in their college choice.</p><p>To  ensure that the best students come to Emory, we must offer competitive and compelling scholarships to first-generation students. <strong>By creating an endowed scholarship at Emory college, we will provide enduring opportunities not just for a single student, but for entire generations.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "student_priority_1.jpg",
+        "media_src": "student_priority_1_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Opportunities Abound",
@@ -73,8 +73,8 @@
         "title": "With 2O36, Experience is Part of the Curriculum",
         "body": "<p>The Emory experience is much more than strong academics or a vibrant on-campus community. Experiential learning opportunities like undergraduate research, internships, and education abroad teach our students how to translate their academic interests and training into transformative careers and lives. These experiences challenge students to apply new skills, make discoveries about themselves, and forge paths that they will follow long after graduation. <strong>Through the support of 2O36, we can help cultivate an entire generation of Emory leaders.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "student_priority_2.jpg",
+        "media_src": "student_priority_2_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Learn by Experience",
@@ -88,7 +88,7 @@
         "title": "Eddy Cabrera 22C",
         "layout": "left",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "student_quote_1.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Eddy Cabrera 22C",
         "media_header": "Eddy Cabrera 22C",
@@ -101,10 +101,10 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Research Moves Us Forward to 2O36",
-        "body": "<p>Our students are some of the best in the country. When they come to Emory, our top tier faculty guide them through research projects in their respective fields of study. Our undergraduate research programs support scholarship opportunities in classrooms, laboratories, libraries, studios, and overseas programs; graduate research opportunities are equally vast, and position students alongside leading professors and experts. Over our history, Emory has established itself as a research powerhouse, but it’s important that we continue to accelerate research excellence. <strong>This is Emory’s chance to shape the future on the road to 2O36, fueled by continued investment in pioneering research.</strong></p>",
+        "body": "<p>Our students are some of the best in the country. When they come to Emory, our top tier faculty guide them through research projects in their respective fields of study. Our undergraduate research programs support scholarship opportunities in classrooms, laboratories, libraries, studios, and overseas programs; graduate research opportunities are equally vast, and position students alongside leading professors and experts. Over our history, Emory has established itself as a research powerhouse, but it’s important that we continue to accelerate research excellence. <strong>This is Emory’s chance to shape the future on the road to 2O36, fueled by continued investment in pioneering research.</strong></p><p>Investments in research allow our faculty, students, and researchers to address some of the most pressing issues of the day. Exciting research in the humanities, social sciences, law, and theology is uncovering challenges to address to advance social and racial justice. Scientists and biomedical researchers across the university and Emory Healthcare are working toward eliminating cancer and the effects of brain traumas. And we’re modeling into the future to understand how artificial intelligence can better serve humanity in the many ways it will be used.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "img_src": "student_priority_3.jpg",
+        "media_src": "student_priority_3_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Shape the Future",
@@ -118,7 +118,7 @@
         "title": "Rachel Ding 20Ox 22B",
         "layout": "right",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "student_quote_2.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Rachel Ding 20Ox 22B",
         "media_header": "Rachel Ding 20Ox 22B",
