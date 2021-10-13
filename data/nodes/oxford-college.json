@@ -6,7 +6,20 @@
     "about":"School spotlight",
     "text": "Leaders aren’t born. They’re made at Oxford College.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg"
+    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Oxford",
+        "url": "https://together.emory.edu/give/to/schools-and-colleges/oxford-college"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Kevin Smyrl",
+        "title":"Associate Dean of Advancement and Alumni Engagement",
+        "email":"rsmyrl@emory.edu",
+        "telephone":"770-784-4637"
+      }
+   }
   },
   "path": "oxford-college",
   "metatag": {

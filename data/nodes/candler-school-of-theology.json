@@ -6,7 +6,20 @@
     "header": "CANDLER SCHOOL<br>OF THEOLOGY",
     "text": "Preparing real people to make a real difference in the real world.",
     "button_scroll": "Scroll to explore",
-    "img_src": "candler_lede.jpg"
+    "img_src": "candler_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Candler",
+        "url": "https://together.emory.edu/give/to/schools-and-colleges/candler-school-theology"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Bill Doerr",
+        "title":"Assistant Dean, Advancement and Alumni Engagement ",
+        "email":"bill.doerr@emory.edu",
+        "telephone":"404-727-8882"
+      }
+   }
   },
   "path": "candler-school-of-theology",
   "metatag": {

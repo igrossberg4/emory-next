@@ -6,7 +6,20 @@
     "header": "CAMPUS LIFE",
     "text": "Embrace your passion. Unleash your potential.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg"
+    "img_src": "2036_cancer_cells_blue.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Campus Life",
+        "url": "https://together.emory.edu/give/to/campus-experience/campus-life"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Jessi Arnidis",
+        "title":"Managing Senior Director of Development ",
+        "email":"jessi.arnidis@emory.edu",
+        "telephone":"404-938-3354"
+      }
+   }
   },
   "path": "campus-life",
   "metatag": {

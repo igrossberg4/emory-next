@@ -6,7 +6,13 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "about": "core area",
-    "text": "We don’t just teach or lecture—we equip and inspire students to make their own discoveries."
+    "text": "We don’t just teach or lecture—we equip and inspire students to make their own discoveries.",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory",
+        "url": "https://together.emory.edu/give"
+       }
+   }
   },
   "path": "research-excellence",
   "metatag": {
