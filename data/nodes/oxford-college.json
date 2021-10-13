@@ -32,7 +32,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "Through powerful inquiry, Oxford students become thoughtful, effective, and responsible leaders and agents of change.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "oxford_isolated_bg.png",
         "text": "<p>One of Emory University's two liberal arts colleges, Oxford prides itself on an intense focus on the liberal arts, leadership, and service. Just 45 minutes from Atlanta, the Oxford campus is deeply rooted in history with eyes on the future. Through the related processes of discovery, exploration, and reflection, students are immersed in a curriculum that introduces them to ways of finding and producing knowledge.</p>",
         "img_src": "oxford_intro.jpg",
         "media_src": "https://vimeo.com/623729255/c0042c8639",
