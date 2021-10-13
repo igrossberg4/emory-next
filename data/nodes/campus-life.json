@@ -32,7 +32,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "Guided by Emory’s mission and values, Campus Life works closely with our students, faculty, and the entire Emory community to foster a nurturing, respectful, and rewarding campus environment.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "campus_isolated_bg.png",
         "text": "<p>Emory Campus Life is based on the belief that every member of our community deserves the highest standard of care and support. Through an array of programs and resources, we promote a healthy and sustainable environment where students live what they learn and discover what they live for. While the classroom will always have a fundamental role in shaping strong and empowered individuals, some of the most transformative learning experiences take place outside the classroom, from events and activities around campus to real-world opportunities.</p>",
         "img_src": "campus_intro.jpg",
         "media_src": "https://vimeo.com/618333747/179a689d91",
@@ -65,12 +65,12 @@
         "title": "Removing Roadblocks in 2036",
         "body": "<p>Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "campus_priority_1.jpg",
+        "media_src": "campus_priority_1_popup.jpg",
+        "media_alt": "Group of students cheering.",
         "media_type": "image",
         "media_header": "Community Counts",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities."
       }
     },
     {
@@ -80,12 +80,12 @@
         "title": "Rewarding Student-Athletes in 2O36",
         "body": "<p>It’s time for Emory Athletics to get its due. In the same way that the arts are an essential part of Emory’s culture, sports make an invaluable contribution to campus life for participants and fans alike. <strong>2O36 will endow all 19 varsity sports, enhancing the student-athlete experience and reinvigorating school spirit and pride across the Emory community.</strong></p><p>Armed with sustainable funding, coaches for every sport will be able to meet the changing needs of our student-athletes. Endowments will support customized nutrition plans and wellness programs and address the inherent challenges that are part and parcel of all college athletics, from transportation and equipment costs to stipends for assistant coaches. If we are serious about supporting the entire Emory community—and we are—student-athletes must be recognized as essential members and leaders of our community.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "campus_priority_2.jpg",
+        "media_src": "campus_priority_2_popup.jpg",
+        "media_alt": "Four athletes on a basketball court.",
         "media_type": "image",
         "media_header": "Student-Athletes",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "2O36 will endow all 19 varsity sports, enhancing the student-athlete experience and reinvigorating school spirit and pride across the Emory community."
       }
     },
     {
@@ -110,12 +110,12 @@
         "title": "In 2O36, Students Are Global Citizens",
         "body": "<p>While our physical campuses will always remain the heart and soul of our community, Emory’s off-campus presence is more important than ever: across Atlanta, throughout the country, and around the world. Preparing students to become community leaders will be a key part of our future, but how can we accomplish this in an engaging way? How do we encourage Emory graduates to become agents of change? <strong>2O36 will invest in global citizenship experiences designed to provide students with life-changing, real-world learning opportunities.</strong></p><p>Tutoring K-12 students at an Atlanta public school. Registering voters in historically marginalized communities. Whatever piques our students' interests. We want them to engage with the world around them firsthand—to be ambitious but open-minded; eager for change but realistic about what it takes. With your support, students can make a direct link between the classroom and the community while learning how to listen, act, collaborate, and grow.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "campus_priority_3.jpg",
+        "media_src": "campus_priority_3_popup.jpg",
+        "media_alt": "Doctor examines patient with tool.",
         "media_type": "image",
         "media_header": "Global Citizens",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "2O36 will invest in global citizenship experiences designed to provide students with life-changing,  real-world learning opportunities."
       }
     },
     {
