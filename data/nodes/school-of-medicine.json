@@ -11,11 +11,11 @@
       "cta_support_button": {
         "text": "Support Medicine",
         "url": "https://together.emory.edu/give/to/health-and-medicine/emory-school-medicine"
-       },
+      },
       "cta_contact_info": {
-        "raw_block":"<div class=\"footer__contact__heading\">Learn more about ways to support 2036<\/div>\r\n            <div class=\"footer__contact__person\">Anya Reid<\/div>\r\n            <div class=\"footer__contact__title\">Associate Vice President for Advancement<\/div>\r\n            <div class=\"footer__contact__links\">\r\n              <a href=\"mailto: anya.reid@emory.edu\">anya.reid@emory.edu<\/a>\r\n              <a href=\"tel: 404-712-0151\">404-712-0151<\/a>\r\n            <\/div><br>\r\n            <div class=\"footer__contact__person\">Margaret Fala<\/div>\r\n            <div class=\"footer__contact__title\">Associate Vice President for Advancement<\/div>\r\n            <div class=\"footer__contact__links\">\r\n              <a href=\"mailto: margaret.fala@emory.edu\">margaret.fala@emory.edu<\/a>\r\n              <a href=\"tel: 610-283-7573\">610-283-7573<\/a>\r\n            <\/div>"
+        "raw_block": "<div class=\"footer__contact__heading\">Learn more about ways to support 2036</div>\r\n            <div class=\"footer__contact__person\">Anya Reid</div>\r\n            <div class=\"footer__contact__title\">Associate Vice President for Advancement</div>\r\n            <div class=\"footer__contact__links\">\r\n              <a href=\"mailto: anya.reid@emory.edu\">anya.reid@emory.edu</a>\r\n              <a href=\"tel: 404-712-0151\">404-712-0151</a>\r\n            </div><br>\r\n            <div class=\"footer__contact__person\">Margaret Fala</div>\r\n            <div class=\"footer__contact__title\">Associate Vice President for Advancement</div>\r\n            <div class=\"footer__contact__links\">\r\n              <a href=\"mailto: margaret.fala@emory.edu\">margaret.fala@emory.edu</a>\r\n              <a href=\"tel: 610-283-7573\">610-283-7573</a>\r\n            </div>"
       }
-   }
+    }
   },
   "path": "school-of-medicine",
   "metatag": {
@@ -119,7 +119,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "SCHOOL OF MEDICINE",        
+        "pretitle": "SCHOOL OF MEDICINE",
         "items": [
           {
             "title": "Faculty to Fight Heart Disease",

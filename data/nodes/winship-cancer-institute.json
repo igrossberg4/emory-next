@@ -3,7 +3,7 @@
   "type": "collection",
   "page_props": {
     "header": "WINSHIP CANCER<br>INSTITUTE",
-    "about":"unit spotlight",
+    "about": "unit spotlight",
     "text": "Caring for the whole patient with a multidisciplinary approach that facilitates cancer prevention, treatment, and survival.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_brain_health_neurons_blue.jpg",
@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Winship",
         "url": "https://together.emory.edu/give/to/health-and-medicine/winship-cancer-institute"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Irene Hammer-McLaughlin",
-        "title":"Executive Director",
-        "email":"ihammermc@emory.edu",
-        "telephone":"404-712-2896"
+        "person": "Irene Hammer-McLaughlin",
+        "title": "Executive Director",
+        "email": "ihammermc@emory.edu",
+        "telephone": "404-712-2896"
       }
-   }
+    }
   },
   "path": "winship-cancer-institute",
   "metatag": {
@@ -129,7 +129,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "WINSHIP CANCER INSTITUTE",        
+        "pretitle": "WINSHIP CANCER INSTITUTE",
         "items": [
           {
             "title": "Rising Stars in 2036",

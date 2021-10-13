@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Emory Libraries",
         "url": "https://together.emory.edu/give/to/arts-libraries-and-museum/university-libraries"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Erin Horeni-Ogle",
-        "title":"Managing Director of Development",
-        "email":"ehoreni@emory.edu",
-        "telephone":"404-727-5386"
+        "person": "Erin Horeni-Ogle",
+        "title": "Managing Director of Development",
+        "email": "ehoreni@emory.edu",
+        "telephone": "404-727-5386"
       }
-   }
+    }
   },
   "path": "university-libraries",
   "metatag": {
@@ -137,7 +137,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "UNIVERSITY LIBRARIES",        
+        "pretitle": "UNIVERSITY LIBRARIES",
         "items": [
           {
             "title": "Elevating the Importance of our African American Collections",

@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Law",
         "url": "https://together.emory.edu/give/to/schools-and-colleges/emory-law"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Courtney Stombock",
-        "title":"Associate Dean of Advancement and Alumni Engagement ",
-        "email":"courtney.stombock@emory.edu",
-        "telephone":"404-727-9172"
+        "person": "Courtney Stombock",
+        "title": "Associate Dean of Advancement and Alumni Engagement ",
+        "email": "courtney.stombock@emory.edu",
+        "telephone": "404-727-9172"
       }
-   }
+    }
   },
   "path": "school-of-law",
   "metatag": {
@@ -152,7 +152,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "SCHOOL OF LAW",        
+        "pretitle": "SCHOOL OF LAW",
         "items": [
           {
             "title": "2O36 Drives Community Support",

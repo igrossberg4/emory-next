@@ -11,8 +11,8 @@
       "cta_support_button": {
         "text": "Support Emory",
         "url": "https://together.emory.edu/give"
-       }
-   }
+      }
+    }
   },
   "path": "research-excellence",
   "metatag": {
@@ -130,7 +130,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "RESEARCH EXCELLENCE",        
+        "pretitle": "RESEARCH EXCELLENCE",
         "items": [
           {
             "title": "Fostering Research Partnerships",

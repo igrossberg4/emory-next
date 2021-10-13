@@ -11,8 +11,8 @@
       "cta_support_button": {
         "text": "Support Emory",
         "url": "https://together.emory.edu/give"
-       }
-   }
+      }
+    }
   },
   "path": "faculty-eminence",
   "metatag": {
@@ -130,7 +130,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "FACULTY EMINENCE",        
+        "pretitle": "FACULTY EMINENCE",
         "items": [
           {
             "title": "Research is Power",

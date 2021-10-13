@@ -3,7 +3,7 @@
   "type": "collection",
   "page_props": {
     "header": "ROLLINS SCHOOL<br>OF PUBLIC HEALTH",
-    "about":"school spotlight",
+    "about": "school spotlight",
     "text": "A place where students learn to identify, analyze, and create solutions to global health problems.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_brain_health_neurons.jpg",
@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Rollins",
         "url": "https://together.emory.edu/give/to/health-and-medicine/rollins-school-public-health"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Kathryn Graves",
-        "title":"Senior Associate Dean for Advancement and Alumni Engagement",
-        "email":"kgraves@emory.edu",
-        "telephone":"404-727-3352"
+        "person": "Kathryn Graves",
+        "title": "Senior Associate Dean for Advancement and Alumni Engagement",
+        "email": "kgraves@emory.edu",
+        "telephone": "404-727-3352"
       }
-   }
+    }
   },
   "path": "rollins-school-of-public-health",
   "metatag": {
@@ -137,7 +137,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "ROLLINS SCHOOL OF PUBLIC HEALTH",        
+        "pretitle": "ROLLINS SCHOOL OF PUBLIC HEALTH",
         "items": [
           {
             "title": "Research Abounds",

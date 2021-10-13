@@ -3,15 +3,15 @@
   "type": "collection",
   "page_props": {
     "header": "Goizueta<br>Business School",
-    "about":"School spotlight",
-    "text":"Business is a vehicle capable of delivering meaningful, lasting benefits to society.",
+    "about": "School spotlight",
+    "text": "Business is a vehicle capable of delivering meaningful, lasting benefits to society.",
     "button_scroll": "Scroll to explore",
     "img_src": "goizueta_lede.jpg",
     "footer": {
       "cta_support_button": {
         "text": "Support Goizueta",
         "url": "https://together.emory.edu/give/to/schools-and-colleges/goizueta-business-school"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
         "person": "Kat Collier",
