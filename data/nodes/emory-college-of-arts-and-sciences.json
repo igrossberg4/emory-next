@@ -11,21 +11,21 @@
       "cta_support_button": {
         "text": "Support Emory College",
         "url": "https://together.emory.edu/give/to/schools-and-colleges/emory-college-arts-sciences"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Kate Lawlor",
-        "title":"Executive Director of Development",
-        "email":"kate.lawlor@emory.edu",
-        "telephone":"404-712-0464"
+        "person": "Kate Lawlor",
+        "title": "Executive Director of Development",
+        "email": "kate.lawlor@emory.edu",
+        "telephone": "404-712-0464"
       }
-   }
+    }
   },
   "path": "college-of-arts-and-sciences",
   "metatag": {
     "title": "College of Arts & Sciences - Emory 2036",
     "description": "In service of humanity, Emory College is reimagining the liberal arts and sciences and revolutionizing the student experience, bridging the disciplines to address global challenges.",
-    "image":""
+    "image": ""
   },
   "components": [
     {

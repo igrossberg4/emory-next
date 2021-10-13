@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Laney",
         "url": "https://together.emory.edu/give/to/schools-and-colleges/james-t-laney-school-graduate-studies"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Monica Polisetty",
-        "title":"Managing Senior Director of Development ",
-        "email":"monica.polisetty@emory.edu",
-        "telephone":"404-778-4632"
+        "person": "Monica Polisetty",
+        "title": "Managing Senior Director of Development ",
+        "email": "monica.polisetty@emory.edu",
+        "telephone": "404-778-4632"
       }
-   }
+    }
   },
   "path": "laney-graduate-school",
   "metatag": {

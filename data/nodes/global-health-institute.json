@@ -3,7 +3,7 @@
   "type": "collection",
   "page_props": {
     "header": "EMORY GLOBAL HEALTH<br>INSTITUTE",
-    "about":"unit spotlight",
+    "about": "unit spotlight",
     "text": "Research, resources, and training designed to advance Emory University’s efforts to improve health around the world.",
     "button_scroll": "Scroll to explore",
     "img_src": "global_lede.jpg",
@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Global Health",
         "url": "https://together.emory.edu/give/to/centers-and-institutes?q=Global+Health+Institute+Support"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Anya Reid",
-        "title":"Associate Vice President for Advancement",
-        "email":"anya.reid@emory.edu",
-        "telephone":"404-712-0151"
+        "person": "Anya Reid",
+        "title": "Associate Vice President for Advancement",
+        "email": "anya.reid@emory.edu",
+        "telephone": "404-712-0151"
       }
-   }
+    }
   },
   "path": "global-health-institute",
   "metatag": {

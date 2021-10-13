@@ -3,7 +3,7 @@
   "type": "collection",
   "page_props": {
     "header": "YERKES NATIONAL<br>PRIMATE RESEARCH CENTER",
-    "about":"unit spotlight",
+    "about": "unit spotlight",
     "text": "Advancing scientific understanding and improving human and animal health worldwide.",
     "button_scroll": "Scroll to explore",
     "img_src": "2036_brain_health_neurons.jpg",
@@ -11,15 +11,15 @@
       "cta_support_button": {
         "text": "Support Yerkes",
         "url": "https://together.emory.edu/give/to/centers-and-institutes/yerkes-national-primate-research-center"
-       },
+      },
       "cta_contact_info": {
         "heading": "Learn more about ways to support 2036",
-        "person":"Jonathan Russell",
-        "title":"Senior Director of Development",
-        "email":"jonathan.russell@emory.edu",
-        "telephone":"404-727-6416"
+        "person": "Jonathan Russell",
+        "title": "Senior Director of Development",
+        "email": "jonathan.russell@emory.edu",
+        "telephone": "404-727-6416"
       }
-   }
+    }
   },
   "path": "yerkes-national-primate-research-center",
   "metatag": {
@@ -137,7 +137,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "YERKES NATIONAL PRIMATE RESEARCH CENTER",        
+        "pretitle": "YERKES NATIONAL PRIMATE RESEARCH CENTER",
         "items": [
           {
             "title": "2O36 Creates Partnerships",
