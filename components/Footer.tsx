@@ -64,9 +64,23 @@ export default function Footer(props:any) {
 }
         <p className="footer__title">The future starts here</p>
         <div className="footer__cta">
-          <Link  href="https://together.emory.edu/give">
-            <a className="link-button">Support Emory</a>
+          <Link  href={props?.cta_support_button?.url ? props?.cta_support_button?.url : "https://together.emory.edu/give"}>
+            <a className="link-button">{props?.cta_support_button?.text ? props?.cta_support_button?.text : 'Support Emory'}</a>
           </Link>
+          {!props?.cta_contact_info?.raw_block ? 
+          <div className="footer__contact">
+            <div className="footer__contact__heading">{props?.cta_contact_info?.heading ? props?.cta_contact_info?.heading : '' }</div>
+            <div className="footer__contact__person">{props?.cta_contact_info?.person ? props?.cta_contact_info?.person : '' }</div>
+            <div className="footer__contact__title">{props?.cta_contact_info?.title ? props?.cta_contact_info?.title : '' }</div>
+            <div className="footer__contact__links">
+              <a href={`mailto: ${props?.cta_contact_info?.email ? props?.cta_contact_info?.email : ''}` }>{props?.cta_contact_info?.email ? props?.cta_contact_info?.email : '' }</a>
+              <a href={`tel:${props?.cta_contact_info?.telephone ? props?.cta_contact_info?.telephone : ''}` }>{props?.cta_contact_info?.telephone ? props?.cta_contact_info?.telephone : '' }</a>
+            </div>
+          </div>
+
+: <div className="footer__contact" dangerouslySetInnerHTML={{__html:props?.cta_contact_info?.raw_block}}>
+  
+  </div>}
         </div>
         <Image src="/logos/emory-university-logo.svg" alt="EMORY" width="95px" height="20px"></Image>
       </div>

@@ -6,7 +6,20 @@
     "header": "MICHAEL C. CARLOS MUSEUM",
     "text": "Fostering cultural experiences that inspire minds and build connections.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_smoke_blue.jpg"
+    "img_src": "2036_brain_health_smoke_blue.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Carlos",
+        "url": "https://together.emory.edu/give/to/arts-libraries-and-museum/michael-c-carlos-museum"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Jennifer Kirker",
+        "title":"Managing Senior Director of Development",
+        "email":"jkirker@emory.edu",
+        "telephone":"404-727-2251"
+      }
+   }
   },
   "path": "carlos-museum",
   "metatag": {

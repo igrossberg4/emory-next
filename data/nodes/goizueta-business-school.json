@@ -6,7 +6,20 @@
     "about":"School spotlight",
     "text":"Business is a vehicle capable of delivering meaningful, lasting benefits to society.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_grid_yellow.jpg"
+    "img_src": "2036_data_science_grid_yellow.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Goizueta",
+        "url": "https://together.emory.edu/give/to/schools-and-colleges/goizueta-business-school"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Kat Collier",
+        "title":"Associate Director of Alumni Services",
+        "email":"kat.collier@emory.edu",
+        "telephone":"404-291-2720"
+      }
+   }
   },
   "path": "goizueta-business-school",
   "metatag": {

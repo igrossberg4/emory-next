@@ -6,7 +6,20 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_blue.jpg",
     "text": "We aspire to change what is possible in ways not yet imagined.",
-    "about": "unit spotlight"
+    "about": "unit spotlight",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory Healthcare",
+        "url": "https://together.emory.edu/give/to/health-and-medicine/emory-healthcare"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Susan House",
+        "title":"Senior Director of Development",
+        "email":"shouse2@emory.edu",
+        "telephone":"404-727-9110"
+      }
+   }
   },
   "path": "emory-healthcare",
   "metatag": {

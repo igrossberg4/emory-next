@@ -4,7 +4,20 @@
   "page_props": {
     "header": "GLOBAL HEALTH<br>INSTITUTE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_grid_yellow.jpg"
+    "img_src": "2036_data_science_grid_yellow.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Global Health",
+        "url": "https://together.emory.edu/give/to/centers-and-institutes?q=Global+Health+Institute+Support"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Anya Reid",
+        "title":"Associate Vice President for Advancement",
+        "email":"anya.reid@emory.edu",
+        "telephone":"404-712-0151"
+      }
+   }
   },
   "path": "global-health-institute",
   "metatag": {

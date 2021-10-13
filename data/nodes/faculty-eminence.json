@@ -6,7 +6,13 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "about": "core area",
-    "text": "Our faculty are essential to achieving Emory’s vision of an inquiry-driven, ethically engaged, and inclusive intellectual community."
+    "text": "Our faculty are essential to achieving Emory’s vision of an inquiry-driven, ethically engaged, and inclusive intellectual community.",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory",
+        "url": "https://together.emory.edu/give"
+       }
+   }
   },
   "path": "faculty-eminence",
   "metatag": {

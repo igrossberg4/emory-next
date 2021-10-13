@@ -56,31 +56,31 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
 
                 ].concat(nodeFinded.components)
                     .concat(
-                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase)
+                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase, nodeFinded)
                     )
             }
         }
     });
     const slidesCloned = [];
-    for (let i = Math.round(slides.length / 2); i < slides.length; i++){
-        if(i+index > slides.length -1){
-          slidesCloned.push(slides[index+i-slides.length]);
+    for (let i = Math.round(slides.length / 2); i < slides.length; i++) {
+        if (i + index > slides.length - 1) {
+            slidesCloned.push(slides[index + i - slides.length]);
         }
-        else{
-          slidesCloned.push(slides[index+i]);
-    
+        else {
+            slidesCloned.push(slides[index + i]);
+
         }
-      }
-      slidesCloned.push(slides[index])
-      for (let i = 1; i < Math.round(slides.length / 2); i++){
-        if(i+index > slides.length -1){
-          slidesCloned.push(slides[index+i-slides.length]);
+    }
+    slidesCloned.push(slides[index])
+    for (let i = 1; i < Math.round(slides.length / 2); i++) {
+        if (i + index > slides.length - 1) {
+            slidesCloned.push(slides[index + i - slides.length]);
         }
-        else{
-          slidesCloned.push(slides[index+i]);
-    
+        else {
+            slidesCloned.push(slides[index + i]);
+
         }
-      }
+    }
     //slidesCloned.push(...slidesCloned.slice(0, 2));
     //slidesCloned.unshift(...slidesCloned.slice(slidesCloned.length-2, slidesCloned.length-1))
 
@@ -157,7 +157,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
     }
 }
 
-function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode: any) {
+function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode: any, nodeFinded:any) {
     const basePath = baseNode ? `${baseNode.path}/` : '';
     const prevNodeSelect = !lastNode ? nodes[nodes.length - 1] : lastNode;
     const nextNodeSelect = !nextNode ? nodes[0] : nextNode;
@@ -175,7 +175,7 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
         },
         {
             "component": "Footer",
-            "props": {}
+            "props": Object.assign({}, nodeFinded.page_props.footer)
         }
     ]
 }
@@ -195,7 +195,7 @@ function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndepen
                 }
             ].concat(node.components).concat({
                 "component": "Footer",
-                "props": {}
+                "props": Object.assign({}, baseNode.page_props.footer)
             })
         }
     }).filter(Boolean);
@@ -312,7 +312,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                         }
 
                                 ].concat(nodeFinded.components).concat(
-                                    prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase)
+                                    prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase, nodeFinded)
                                 )
                             }
                         },
