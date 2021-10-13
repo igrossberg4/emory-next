@@ -78,25 +78,21 @@ export default function MediaWithExpantion(props: any) {
             <Fragment>
               <motion.figure
                 data-media={props.media_type}
-                style={{
-                  // maxWidth: multipleSizesImgExpanded ? ( multipleSizesImgExpanded.width / multipleSizesImgExpanded.height ) * 50 + 'vh' : 'auto',
-                  width: "100%"
-                }}
-                // layout
-                // layoutId={layoutId}
-                // initial={{ opacity: 1 }}
-                // animate={{ opacity: 1 }}
               >
                 {props.media_type === "image" ? (
-                  <Image
-                    loader={imageLoader(multipleSizesImgExpanded) as any}
-                    priority={true}
-                    alt={props.media_alt}
-                    src={multipleSizesImgExpanded.src}
-                    layout={"responsive"}
-                    width={multipleSizesImgExpanded.width}
-                    height={multipleSizesImgExpanded.height}
-                  ></Image>
+                  <div
+                    className="image-container"
+                  >
+                    <Image
+                      loader={imageLoader(multipleSizesImgExpanded) as any}
+                      priority={true}
+                      alt={props.media_alt}
+                      src={multipleSizesImgExpanded.src}
+                      layout={"responsive"}
+                      width={multipleSizesImgExpanded.width}
+                      height={multipleSizesImgExpanded.height}
+                    ></Image>
+                  </div>
                 ) : (
                   <Video {...props} controls={true}></Video>
                 )}
