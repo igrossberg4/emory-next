@@ -6,7 +6,13 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_code_yellow.jpg",
     "about": "core area",
-    "text": "Education is for life."
+    "text": "Education is for life.",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory",
+        "url": "https://together.emory.edu/give"
+       }
+   }
   },
   "path": "student-flourishing",
   "metatag": {

@@ -16,15 +16,7 @@
       "cta_support_button": {
         "text": "Support Emory",
         "url": "https://together.emory.edu/give"
-       },
-      "cta_contact_info": {
-        "heading": "Learn more about ways to support 2036",
-        "person":"Firstname LastName",
-        "title":"Title",
-        "email":"user@example.com",
-        "telephone":"123.456.7890",
-        "description": "<a href=\"tel:1234567890\">123.456.7890</a>"
-      }
+       }
    }
   },
   "path": "",

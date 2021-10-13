@@ -6,7 +6,13 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_data_science_grid_yellow.jpg",
     "text": "Our mantra is simple yet profound: Investing in people for the benefit of people.",
-    "about": "core area"
+    "about": "core area",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory",
+        "url": "https://together.emory.edu/give"
+       }
+   }
   },
   "path": "signature-themes",
   "metatag": {

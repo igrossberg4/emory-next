@@ -6,7 +6,20 @@
     "header": "COLLEGE OF <br>ARTS & SCIENCES",
     "text": "By 2036, we will be measuring higher education by its impact on the world.",
     "button_scroll": "Scroll to explore",
-    "img_src": "ecas_lede.jpg"
+    "img_src": "ecas_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory College",
+        "url": "https://together.emory.edu/give/to/schools-and-colleges/emory-college-arts-sciences"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Kate Lawlor",
+        "title":"Executive Director of Development",
+        "email":"kate.lawlor@emory.edu",
+        "telephone":"404-712-0464"
+      }
+   }
   },
   "path": "college-of-arts-and-sciences",
   "metatag": {

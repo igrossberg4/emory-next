@@ -6,7 +6,20 @@
     "button_scroll": "Scroll to explore",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "text": "Ethics forms the basis of almost all personal decision making, whether we’re aware of it or not.",
-    "about": "unit spotlight"
+    "about": "unit spotlight",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Ethics",
+        "url": "https://together.emory.edu/give/to/centers-and-institutes/center-ethics"
+       },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person":"Anya Reid",
+        "title":"Associate Vice President for Advancement",
+        "email":"anya.reid@emory.edu",
+        "telephone":"404-712-0151"
+      }
+   }
   },
   "path": "center-for-ethics",
   "metatag": {
