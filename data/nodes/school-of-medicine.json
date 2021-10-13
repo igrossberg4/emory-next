@@ -4,7 +4,7 @@
   "page_props": {
     "header": "SCHOOL OF MEDICINE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg",
+    "img_src": "medicine_lede.jpg",
     "text": "2O36 will foster excellence in health care and medicine, transform students’ educational experiences, and create opportunities for groundbreaking research.",
     "about": "school spotlight",
     "footer": {
@@ -30,26 +30,26 @@
         "header": "During extraordinary times, Emory School of Medicine is changing the way we think of medicine.",
         "background_image": "ecas_isolated_bg.png",
         "text": "<p>Throughout the School of Medicine’s remarkable history, our objectives have remained the same: provide outstanding educational programs; develop excellent clinicians and investigators; conduct breakthrough collaborative research across disciplines; advance the detection, treatment, and prevention of disease; and ensure the highest ethical and professional standards.</p><p>By balancing each of these goals, Emory prepares students to challenge the conventions of traditional care, reshape how medicine is practiced, and promote the health of their patients and communities.</p>",
-        "img_src": "2036_data_science_code_yellow.jpg",
-        "media_src": "2036_data_science_code_yellow.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "School of Law",
+        "img_src": "medicine_intro.jpg",
+        "media_src": "https://vimeo.com/622527821/cb01c0f10f",
+        "media_alt": "Medical staff",
+        "media_type": "video",
+        "media_header": "School of Medicine",
         "media_text": ""
       }
     },
     {
       "component": "Quote",
       "props": {
-        "text": "Emory's uniquely positioned to support a better future in that we prize this teamwork and this collegiality—science and medicine no longer are individual sports.",
-        "attribution": "— Carey Jansen 19M 23G"
+        "text": "People here really want to work together. There's a tremendous desire to work collaboratively, and this is what's needed in order to tackle the toughest problems that face society today.",
+        "attribution": "— Vikas Sukhatme, Dean, Emory School of Medicine<br/>Chief Academic Officer, Emory Healthcare<br/>Woodruff Professor, Emory School of Medicine"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "THE SCHOOL OF MEDICINE IS ADVANCING AMBITIOUS PRIORITIES FOR 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR SCHOOL OF MEDICINE",
+        "image_src": "medicine_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/emory-school-medicine",
         "cta_text": "Support Medicine"
       }
@@ -61,12 +61,12 @@
         "title": "Create a Hub for Scientific Discoveries",
         "body": "<p>Emory University’s latest beacon of biomedical research, the Health Sciences Research Building II (HSRBII) will be a hub for scientific discoveries and entrepreneurial research. <strong>Investment in 2O36 will support this facility, providing laboratories for 130 principal investigators in many specialties.</strong> With a state-of-the-art building that reflects the school’s ambitious vision, we can dramatically increase our recruitment capabilities, bringing in the world’s leading scientists and scholars to help us transform patient care.</p><p>HSRBII will inspire connectivity, cross-disciplinary research, and collaboration, fostering innovation across a wide range of areas, from biomedical engineering and informatics to imaging sciences, brain health, cardiovascular medicine, child health, cancer, inflammation, and immunotherapy.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "medicine_priority_1.jpg",
+        "media_src": "medicine_priority_1_popup.jpg",
+        "media_alt": "Health Sciences Research Building II.",
         "media_type": "image",
         "media_header": "Cross-disciplinary Education",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Investment in 2O36 will support this facility, providing laboratories for 130 principal investigators in many specialties."
       }
     },
     {
@@ -74,14 +74,15 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Mastering the Art and Science of Medicine",
-        "body": "<p>In an era of artificial intelligence and other automated processes, physicians who understand both the art and science of medicine are increasingly rare. This is why they’re so important in medical education. With endowment funding, Emory School of Medicine will attract master clinicians to guide students with expertise and empathy. By teaching our students the art of medicine and the latest science, these master clinicians will ensure that new Emory physicians will provide effective, compassionate care.</p>",
+        "body": "<p>In an era of artificial intelligence and other automated processes, physicians who understand both the art and science of medicine are increasingly rare. This is why they’re so important in medical education. <strong>With endowment funding, Emory School of Medicine will attract master clinicians to guide students with expertise and empathy.</strong> By teaching our students the art of medicine and the latest science, these master clinicians will ensure that new Emory physicians will provide effective, compassionate care.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "medicine_priority_2.jpg",
+        "media_src": "medicine_priority_2_popup.jpg",
+        "media_alt": "A doctor in a lab.",
         "media_type": "image",
         "media_header": "Starting with Educators",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "With endowment funding, Emory School of Medicine will attract master clinicians to guide students with expertise and empathy.",
+        "media_byline": "Featured: Nadine Rouphael, Professor, Department of Medicine, Division of Infectious Diseases, Director of Hope Clinic, Emory Vaccine Center"
       }
     },
     {
@@ -91,7 +92,7 @@
         "title": "Gari Clifford",
         "layout": "left",
         "subtitle": "Chair and Professor, Department of Biomedical Informatics",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "medicine_quote_1.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Gari Clifford",
         "media_header": "Gari Clifford",
@@ -106,12 +107,12 @@
         "title": "Access for More Students",
         "body": "<p>Health care—both in practice and accessibility—must become more equitable. To that end, the Emory School of Medicine is committed to offering scholarships to students and trainees across all backgrounds, regardless of their financial situation.</p><p>By providing more scholarship opportunities, students will be able to pursue fulfilling and meaningful careers without having to prioritize specialties that promise the highest potential earnings. <strong>Thanks to 2O36, Emory School of Medicine will continue to be a leader in education, increasing access for talented aspiring physicians eager to keep our communities healthy.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "medicine_priority_3.jpg",
+        "media_src": "medicine_priority_3_popup.jpg",
+        "media_alt": "School of Medicine students graduate.",
         "media_type": "image",
         "media_header": "More Access, More Students",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Thanks to 2O36, Emory School of Medicine will continue to be a leader in education, increasing access for talented aspiring physicians eager to keep our communities healthy."
       }
     },
     {

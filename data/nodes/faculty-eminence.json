@@ -26,7 +26,7 @@
       "props": {
         "header": "Investing in Emory’s faculty and their research, scholarship, and publications will elevate  students’ educational experiences, reinforcing Emory as a destination for future students and faculty.",
         "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-altering research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. That means National Academy members but also extraordinary early- and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
+        "text": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-altering research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. A faculty diverse in thought, experience, and background that strengthens our university, and is integral to our eminence today and in the future. That means National Academy members but also extraordinary early- and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
         "img_src": "2036_brain_health_neurons_red.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
@@ -45,10 +45,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "PRIORITIES TO BOLSTER FACULTY EMINENCE FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR FACULTY EMINENCE",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
-        "cta_text": "Support Faculty"
+        "cta_text": "Support Emory"
       }
     },
     {
@@ -134,7 +134,7 @@
         "items": [
           {
             "title": "Research is Power",
-            "description": "<p>As a leading research university, Emory’s focus is the number of lives saved, partnerships forged, and discoveries driven.. Without research, we can’t answer the big questions, uncover new insights, make scientific or medical breakthroughs, or find solutions to the challenges communities face today and in the future. Fundamental for professors in a multitude of fields, research leads to new ideas and profound discoveries, keeps their academic and educational priorities fresh and relevant, and helps propel their careers and professional reputations forward. <strong>Funding through 2O36 offers faculty resources to purchase needed equipment and software licenses, pay support staff, and afford travel for field research.</strong></p><p>Funding faculty research will help us recruit and retain faculty members. Research discoveries  inform new academic pedagogy, create new knowledge,  and lead to  publication opportunities that can reach new audiences and win awards. Faculty research prepares our  students to lead with the greater purpose of serving humanity.</p>"
+            "description": "<p>As a leading research university, Emory’s focus is the number of lives saved, partnerships forged, and discoveries driven. Without research, we can’t answer the big questions, uncover new insights, make scientific or medical breakthroughs, or find solutions to the challenges communities face today and in the future. Exciting research in the humanities, social sciences, law, and theology is uncovering how to advance social and racial justice. Our scientists and biomedical researchers are working toward eliminating cancer and the effects of brain traumas. Future modeling is helping us understand how artificial intelligence can better serve humanity. Fundamental for professors in a multitude of fields, research leads to new ideas and profound discoveries, keeps their academic and educational priorities fresh and relevant, and helps propel their careers and professional reputations forward. <strong>Funding through 2O36 offers faculty resources to purchase needed equipment and software licenses, pay support staff, and afford travel for field research.</strong></p><p>Funding faculty research will help us recruit and retain faculty members. Research discoveries  inform new academic pedagogy, create new knowledge,  and lead to  publication opportunities that can reach new audiences and win awards. Faculty research prepares our  students to lead with the greater purpose of serving humanity.</p>"
           },
           {
             "title": "Collaboration Rounds Out Curriculum",

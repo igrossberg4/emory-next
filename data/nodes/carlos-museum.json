@@ -6,7 +6,7 @@
     "header": "MICHAEL C. CARLOS MUSEUM",
     "text": "Fostering cultural experiences that inspire minds and build connections.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_smoke_blue.jpg",
+    "img_src": "carlos_lede.jpg",
     "footer": {
       "cta_support_button": {
         "text": "Support Carlos",
@@ -34,10 +34,10 @@
         "header": "The Michael C. Carlos Museum collects, preserves, exhibits, and interprets art and artifacts from antiquity to the present.",
         "background_image": "ecas_isolated_bg.png",
         "text": "<p>Since 1919, the Carlos Museum has been a beacon for people seeking to enrich their lives by studying and experiencing art. It has become one of the premier museums in the Southeast, featuring a renowned collection of artwork from ancient Egypt, Nubia, the Near East, Greece, Rome, the Americas, Africa, and Asia, as well as a collection of works on paper from the Renaissance to the present.</p><p>In addition to the collection’s inspiring beauty, pieces provide a window into other worlds, giving visitors a chance to experience different cultures and religions in a way that’s meaningful, entertaining, and educational, while also promoting interdisciplinary teaching and research.</p>",
-        "img_src": "2036_data_science_grid_yellow.jpg",
-        "media_src": "2036_data_science_grid_yellow.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "img_src": "carlos_intro.jpg",
+        "media_src": "https://vimeo.com/625569653/a936855fc1",
+        "media_alt": "Michael C. Carlos Museum entrance on the quad",
+        "media_type": "video",
         "media_header": "Carlos Museum",
         "media_text": ""
       }
@@ -52,10 +52,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "THE CARLOS MUSEUM IS READY TO TAKE ON THESE PRIORITIES FOR 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR CARLOS MUSEUM",
+        "image_src": "carlos_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/arts-libraries-and-museum/michael-c-carlos-museum",
-        "cta_text": "Support Carlos Museum"
+        "cta_text": "Support Carlos"
       }
     },
     {
@@ -65,12 +65,12 @@
         "title": "In 2036, Curators Are Key",
         "body": "<p>Curators and conservators are the heart of the Carlos Museum, leading scholarly production, enhancing student engagement, and cementing the museum’s and university’s reputation. Now is the time to renew support and recommit to making the Carlos Museum a best-in-class experience. <strong>An investment in 2O36 will facilitate the hiring and retention of curators specializing in pieces from Africa, the Americas, Asia, Egypt, Greece and Rome, and Works on Paper.</strong> To amplify their work, curators and conservators will also have additional funds for acquisitions, research, professional development, internships, exhibitions, and travel.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "carlos_priority_1.jpg",
+        "media_src": "carlos_priority_1_popup.jpg",
+        "media_alt": "Conservator works on a piece for the museum.",
         "media_type": "image",
         "media_header": "Curators are Key",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "An investment in 2O36 will facilitate the hiring and retention of curators specializing in pieces from Africa, the Americas, Asia, Egypt, Greece and Rome, and Works on Paper."
       }
     },
     {
@@ -80,12 +80,12 @@
         "title": "With 2O36, the Permanent Collection Is Permanent",
         "body": "<p>The Carlos Museum holds one of the most comprehensive collections in the Southeast, with awe-inspiring artwork from all around. <strong>With your help, 2O36 will ensure these treasures have a permanent, dedicated home at Emory.</strong> Not only will an endowed gallery continue to build and expand upon the museum’s legacy, it will provide resources to find new ways to attract and engage our increasingly diverse audience.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "carlos_priority_2.jpg",
+        "media_src": "carlos_priority_2_popup.jpg",
+        "media_alt": "Visitors view a mummy at Carlos.",
         "media_type": "image",
         "media_header": "Permanent Collection",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "With your help, 2O36 will ensure these treasures have a permanent, dedicated home at Emory."
       }
     },
     {
@@ -101,12 +101,12 @@
         "pretitle": "A MESSAGE FROM",
         "title": "Monique Seefried",
         "layout": "left",
-        "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "subtitle": "Adjunct Professor, Art History",
+        "img_src": "carlos_quote_1.jpg",
+        "media_src": "https://vimeo.com/630265368/67156a845a",
         "media_alt": "A video quote of Monique Seefried",
         "media_header": "Monique Seefried",
-        "media_text": "",
+        "media_text": "Adjunct Professor, Art History",
         "button_close_text": "Exit"
       }
     },
@@ -117,12 +117,12 @@
         "title": "New Exhibitions Are Headed for 2036",
         "body": "<p>Museums are places to explore and discover; to remember where we’ve been and consider how our past shapes our present and future. While permanent collections go a long way in establishing a museum’s identity, special exhibits are equally fundamental, bringing in exciting new works that increase publicity and reinvigorate a museum’s mission.</p><p><strong>With that in mind, 2O36 will fund a special exhibition gallery to house prestigious pieces from national and international collaborators.</strong> Through this unique space, the Carlos Museum will take its reputation to the next level, increasing programming across the board and attracting a fresh new audience.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "carlos_priority_3.jpg",
+        "media_src": "carlos_priority_2_popup.jpg",
+        "media_alt": "Carlos visitors view an exhibit.",
         "media_type": "image",
         "media_header": "New Exhibitions",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "2O36 will fund a special exhibition gallery to house prestigious pieces from national and international collaborators."
       }
     },
     {
