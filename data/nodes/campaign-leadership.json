@@ -136,7 +136,7 @@
           {
             "name" : "Don Benson 84C P22 P25",
             "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/d_benson_1.jpg",
             "media_alt": "Portrait of Don Benson 84C P22 P25"
           },
           {
@@ -244,7 +244,7 @@
           {
             "name" : "Kimberly Hoang",
             "description" : "Faculty and Staff",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/k_hoang_1.jpg",
             "media_alt": "Portrait of Kimberly Hoang"
           },
           {
@@ -316,7 +316,7 @@
           {
             "name" : "Edjah Nduom 13MR",
             "description" : "Faculty and Staff",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/e_nduom_1.jpg",
             "media_alt": "Portrait of Edjah Nduom 13MR"
           },
           {
@@ -370,7 +370,7 @@
           {
             "name" : "Chris Smith P21 P23 P24",
             "description" : "Parents",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/c_smith_1.jpg",
             "media_alt": "Portrait of Chris Smith P21 P23 P24"
           },
           {
@@ -412,7 +412,7 @@
           {
             "name" : "Linda Yarden P21 P23 P24",
             "description" : "Parents",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/l_yarden_1.jpg",
             "media_alt": "Portrait of Linda Yarden P21 P23 P24"
           }
         ]
