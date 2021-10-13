@@ -52,7 +52,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "YERKES RESEARCH CENTER’S PRIORITIES TO ADVANCE RESEARCH FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR YERKES NATIONAL PRIMATE RESEARCH CENTER",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/centers-and-institutes/yerkes-national-primate-research-center",
         "cta_text": "Support Yerkes"
