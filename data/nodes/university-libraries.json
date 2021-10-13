@@ -45,17 +45,17 @@
     {
       "component": "Quote",
       "props": {
-        "text": "We bring in some of the most important and significant scholars and researchers in the world. We have an amazing African American program. We also are looking towards building an African American PhD program that's led by Dr. Carol Anderson. And we have some amazing scholars here, likeDr. Valerie Bab, Dr. Kimberly Wallace Sanders, who need these materials in order to do their work.",
+        "text": "If we don't collect these materials in this world where we're constantly being very digital, and ideas of the physical book, or the journals that you might've written when you were younger, those things kind of fall to the wayside.",
         "attribution": "— Clinton R. Fluker 17G, Curator of African American collections, Stuart A. Rose Manuscript, Archives, and Rare Book Library"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "UNIVERSITY LIBRARIES PRIORITIES TO ENHANCE SCHOLARSHIP FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR EMORY LIBRARIES",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/arts-libraries-and-museum/university-libraries",
-        "cta_text": "Support University Libraries"
+        "cta_text": "Support Emory Libraries"
       }
     },
     {

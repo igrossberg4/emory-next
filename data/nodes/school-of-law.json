@@ -45,14 +45,14 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Every Emory Law graduate starting next year will have a degree of financial and quantitative literacy. That was not the case a decade ago.",
-        "attribution": "— Joanna Shepherd 01G 02G, Vice Dean, Thomas Simmons Professor of Law<br/>Adjunct Professor, Economics, Emory College of Arts and Sciences"
+        "text": "I would not be where I am today without Emory, without the friends I made at Emory Law, without the connections I made at Emory Law, without the jobs I got from being at Emory none of this would have happened. I wouldn't be here.",
+        "attribution": "— Ruth Rocker McMullin 00L"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "EMORY SCHOOL OF LAW IS EXCITED TO PURSUE THE FOLLOWING PRIORITIES FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR SCHOOL OF LAW",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/emory-law",
         "cta_text": "Support Law"
