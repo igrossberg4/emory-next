@@ -18,7 +18,7 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "A rising star for future health care champions, the Nell Hodgson Woodruff School of Nursing is consistently named one of the best nursing schools for master’s degrees by U.S. News & World Report Why? Because our faculty, training, research, and students are unequaled.",
+        "header": "A rising star for future health care champions, the Nell Hodgson Woodruff School of Nursing is consistently named one of the best nursing schools by U.S. News & World Report Why? Because our faculty, training, research, and students are unequaled.",
         "background_image": "nursing_isolated_bg.png",
         "text": "<p>In the diverse, thriving health care hub of Atlanta, standing out isn’t easy. But, the clinicians, instructors, and nursing students of Emory Nursing do just that. Blurring the lines between classroom and career across a wide range of tech-focused, patient-centered specialties, Emory students and practicing nurses are working to transform lives not only for today, but for many days ahead.</p>",
         "img_src": "nursing_intro.jpg",
@@ -86,7 +86,7 @@
         "media_src": "https://vimeo.com/618390601/85517d1c4a",
         "media_alt": "A video quote of Carolyn Clevenger 02N 04N 14N P23",
         "media_header": "Carolyn Clevenger 02N 04N 14N P23",
-        "media_text": "Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.",
+        "media_text": "Associate Dean for Transformative Clinical Practice<br/>Professor, Clinical Track",
         "button_close_text": "Exit"
       }
     },
