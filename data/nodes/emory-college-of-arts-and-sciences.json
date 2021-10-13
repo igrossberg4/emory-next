@@ -53,10 +53,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "EMORY COLLEGE OF ARTS & SCIENCES IS EAGER TO PURSUE THE FOLLOWING PRIORITIES FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR EMORY COLLEGE OF ARTS & SCIENCES",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/emory-college-arts-sciences",
-        "cta_text": "Support College"
+        "cta_text": "Support Emory College"
       }
     },
     {
@@ -100,7 +100,7 @@
     {
       "component": "ColumnsText",
       "props": {
-        "column1": "Through generous endowment support, Emory will be a destination, rather than a stepping stone, for faculty who shape the most important discussions of our time. Nine new distinguished professorships, each with support for a graduate student, will attract and retain faculty leaders who are moving their disciplines forward. Ten new professorships will retain rising-star faculty, who, as they gain prominence at Emory, may consider taking their talents to other universities.",
+        "column1": "Through generous endowment support, Emory will be a destination, rather than a stepping stone, for faculty who shape the most important discussions of our time. New distinguished professorships, each with support for a graduate student, will attract and retain faculty leaders who are moving their disciplines forward. New professorships will retain rising-star faculty, who, as they gain prominence at Emory, may consider taking their talents to other universities.",
         "column2": "These faculty leaders strengthen the research and teaching profiles of key departments, driving discovery in the natural sciences and quantitative methods and producing knowledge about history, culture, society, and many other areas."
       }
     },
@@ -132,6 +132,13 @@
         "media_type": "image",
         "media_header": "Value the Arts",
         "media_text": "Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach."
+      }
+    },
+    {
+      "component": "ColumnsText",
+      "props": {
+        "column1": "Cultivating the arts expands the undergraduate experience, improves access, and creates lasting, productive partnerships across creative disciplines. Funding fellowships and residencies in film, music, dance, theater, and creative writing while hosting internationally respected artists offer students ways to take big risks, pursue careers that align with their passions, and change the world by changing hearts.",
+        "column2": "Investing in the arts gives voice to those unheard, canvas to those unseen, and shape to the way we understand humanity through creative expression. <strong>Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach.</strong>"
       }
     },
     {

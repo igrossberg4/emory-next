@@ -52,7 +52,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "CANDLER SCHOOL OF THEOLOGY HAS 2O36 PRIORITIES FOR THE COMMON GOOD.",
+        "text": "2O36 PRIORITIES FOR CANDLER SCHOOL OF THEOLOGY",
         "image_src": "candler_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/candler-school-theology",
         "cta_text": "Support Candler"
@@ -63,10 +63,10 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "In 2O36, Scholarships Abound",
-        "body": "<p>Candler’s influence depends on the remarkable ministries and community engagement of our students and graduates. In a time of extraordinary change, John Wesley’s question to his followers, “How is it with your soul?” could not be more urgent. And while competitive schools offer full scholarships to 100 percent of students, scholarships for Candler’s largest degree program, the master of divinity (MDiv), currently only reach 78 percent of our student population.</p><p>Investing in merit- and need-based scholarships enhances our students’ ability to focus fully on their calling and educational pursuits. <strong>By supporting 2O36, you will help us reach our ultimate goal of making the master of divinity program tuition-free for all students.</strong> Achieving this milestone will allow us to attract the best students, regardless of their financial circumstances, so that they may go on to provide inspired leadership for the churches and communities they serve.</p>",
+        "body": "<p>Candler’s influence depends on the remarkable ministries and community engagement of our students and graduates. In a time of extraordinary change, John Wesley’s question to his followers, “How is it with your soul?” could not be more urgent. And while competitive schools offer full scholarships to 100 percent of students, scholarships for Candler’s largest degree program, the master of divinity (MDiv), currently only reach 78 percent of our student population.</p><p>Investing in merit- and need-based scholarships enhances our students’ ability to focus fully on their calling and educational pursuits. <strong>By supporting 2O36, you will help us reach our ultimate goal of making the master of divinity program tuition-free for all students, freeing our graduates to pursue careers of service, particularly nourishing and strengthening the spirits of rural and other underserved communities.</strong> Achieving this milestone will allow us to attract the best students, regardless of their financial circumstances, so that they may go on to provide inspired leadership for the churches and communities they serve.</p>",
         "layout": "right",
         "img_src": "candler_priority_1.jpg",
-        "media_src": "candler_priority_1.jpg",
+        "media_src": "candler_priority_1_popup.jpg",
         "media_alt": "Two students light a candle.",
         "media_type": "image",
         "media_header": "Scholarship is Free",
@@ -88,8 +88,8 @@
         "body": "<p>Current and former faculty members with a passion for teaching, research, and service are the foundation of Candler’s international reputation. They lead their fields in scholarly productivity while laying the groundwork for Christian communities and churches to thrive.</p><p>Candler’s Episcopal and Anglican Studies Program has undergone a renaissance in interest, scale, and scope, adding two new faculty. As prospective interest continues to grow, we must ensure that students seeking this ministerial path have access to top scholars. <strong>With the help of 2O36, we can continue our leadership in scholarship and teaching by adding a named endowed chair for Episcopal and Anglican studies to anchor the work in this growing field.</strong></p>",
         "layout": "right",
         "img_src": "candler_priority_2.jpg",
-        "media_src": "candler_priority_2.jpg",
-        "media_alt": "A religious leader sings while holding a book.",
+        "media_src": "candler_priority_2_popup.jpg",
+        "media_alt": "Episcopal and Anglican leaders in chapel.",
         "media_type": "image",
         "media_header": "Nurture Leaders",
         "media_text": "Current and former faculty members with a passion for teaching, research, and service are the foundation of Candler’s international reputation. They lead their fields in scholarly productivity while laying the groundwork for Christian communities and churches to thrive."

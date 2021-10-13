@@ -45,7 +45,7 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "FIVE SIGNATURE THEMES ARE INTEGRAL TO 2O36.",
+        "text": "2O36 SIGNATURE THEMES",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
         "cta_text": "Support Emory"

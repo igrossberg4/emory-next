@@ -119,6 +119,21 @@
       }
     },
     {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Julie Barefoot",
+        "layout": "left",
+        "subtitle": "",
+        "img_src": "goizueta_quote_1.jpg",
+        "media_src": "https://vimeo.com/630265303/b9cabdb5e6",
+        "media_alt": "A video quote of Julie Barefoot",
+        "media_header": "Julie Barefoot",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",

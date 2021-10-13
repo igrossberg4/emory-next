@@ -6,7 +6,7 @@
     "about": "unit spotlight",
     "text": "Caring for the whole patient with a multidisciplinary approach that facilitates cancer prevention, treatment, and survival.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_neurons_blue.jpg",
+    "img_src": "winship_lede.jpg",
     "footer": {
       "cta_support_button": {
         "text": "Support Winship",
@@ -34,9 +34,9 @@
         "header": "Serving more than 17,000 patients each year, Winship Cancer Institute at Emory University helps cancer patients throughout Georgia, the Southeast, and beyond by working to prevent, treat, and cure cancer.",
         "background_image": "ecas_isolated_bg.png",
         "text": "<p>As the world deals with the COVID-19 public health crisis, Winship Cancer Institute continues to lessen the burden of cancer for Georgia residents by combining outstanding research, care, and prevention.</p>",
-        "img_src": "2036_data_science_code_yellow.jpg",
+        "img_src": "winship_intro.jpg",
         "media_src": "2036_data_science_code_yellow.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "Winship health professional",
         "media_type": "image",
         "media_header": "Winship Cancer Institute",
         "media_text": ""
@@ -45,15 +45,15 @@
     {
       "component": "Quote",
       "props": {
-        "text": "I'm excited that, at Winship Cancer Institute, our goal is to develop cures for cancer and inspire hope. We will do that by investing in research, investing in patient care, and investing in educating the next workforce that will do exactly what we hope will be required for patients with cancer.",
+        "text": "Every time I'm in the clinic, seeing patients, I feel like I'm making a difference. When you see treatment plans for patients with cancer work and they are here years later to say how happy they are for the outcomes, that to me feels like the biggest difference I could possibly make in someone's life.",
         "attribution": "— Suresh S. Ramalingham, Executive Director, Winship Cancer Institute of Emory University<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "WINSHIP CANCER INSTITUTE IS ADVANCING THE FOLLOWING PRIORITIES FOR 2O36.",
-        "image_src": "ecas_divider_bg.jpg",
+        "text": "2O36 PRIORITIES FOR WINSHIP CANCER INSTITUTE",
+        "image_src": "winship_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/winship-cancer-institute",
         "cta_text": "Support Winship"
       }
@@ -65,12 +65,12 @@
         "title": "Patients Come First at Winship",
         "body": "<p>In Winship’s specialized care communities, patients receive personalized cancer treatment aligned with groundbreaking research. To continue growing, Winship plans to expedite care, further improve outcomes, and foster more seamless collaboration among experts. <strong>The new Winship Midtown Center—with increased operating room capacity and reduced surgery wait times—will support these goals while making things easier for Winship patients.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "winship_priority_1.jpg",
+        "media_src": "winship_priority_1_popup.jpg",
+        "media_alt": "Winship Midtown Center.",
         "media_type": "image",
         "media_header": "Patients are First",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "The new Winship Midtown Center—with increased operating room capacity and reduced surgery wait times—will support these goals while making things easier for Winship patients."
       }
     },
     {
@@ -80,12 +80,13 @@
         "title": "Recognizing Discoveries",
         "body": "<p>The Winship community takes pride in the power of our people. Our physician scientists—with discoveries in cancer cell biology, genetics, drugs, radiation, surgery, and other therapies— produce some of the best treatments available.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "winship_priority_2.jpg",
+        "media_src": "winship_priority_2_popup.jpg",
+        "media_alt": "Winship faculty member.",
         "media_type": "image",
         "media_header": "Research and Discover",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "With endowed professorships and chairs, Winship will recruit and retain the brightest minds in cancer research, care, and education.",
+        "media_byline": "Featured: Suresh S. Ramalingham, Executive Director, Winship Cancer Institute of Emory University<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
       }
     },
     {
@@ -102,7 +103,7 @@
         "title": "Cassandra Quave 00C",
         "layout": "left",
         "subtitle": "Associate Professor, Department of Dermatology<br/>Associate Professor, Center for the Study of Human Health<br/>Curator, Emory University Herbarium",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "winship_quote_1.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Cassandra Quave 00C",
         "media_header": "Cassandra Quave 00C",
@@ -117,12 +118,13 @@
         "title": "Invest in Faculty, Invest in the Future",
         "body": "<p>Endowed professorships are key to retaining the best faculty and brightest minds in cancer research, care, and education. They also allow us to keep our designation as a National Cancer Institute (NCI) Comprehensive Cancer Center, a status dependent on the leadership of clinicians, scientists, educators, community liaisons, and staff.</p><p><strong>With support provided through 2O36, Winship will be able to endow five positions for research programs and 10 positions for senior investigators.</strong> These endowments will help to improve our profile as a research institution and will increase the amount of grant and philanthropic assistance we receive.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "winship_priority_3.jpg",
+        "media_src": "winship_priority_3_popup.jpg",
+        "media_alt": "Winship faculty lead research.",
         "media_type": "image",
         "media_header": "Faculty is Funded",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "With support provided through 2O36, Winship will be able to endow five positions for research programs and 10 positions for senior investigators.",
+        "media_byline": "Featured: Georgia Chen, Professor, Department of Hematology and Medical Oncology"
       }
     },
     {

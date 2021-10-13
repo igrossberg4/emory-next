@@ -45,14 +45,14 @@
     {
       "component": "Quote",
       "props": {
-        "text": "We have this incredible Ethics in the Arts program, the only one of its kind in the country, where we use art as a vehicle to talk about ethics. If you have a powerful piece of art—a visual image, a play, a movie, or even a song—and then curate important conversations around it, you see people opening up.",
-        "attribution": "— Paul Root Wolpe P12, Director, Center for Ethics<br/>Raymond F. Schinazi Distinguished Research Chair in Jewish Bioethics"
+        "text": "Art can be a powerful instrument for personal transformation because it not only functions as an invitation to explore the meaning of the art itself and the identity of the artist who created it, but art also invites us to explore who we are and what we believe. Because of this invitation, we may discover new modalities for our own existence, we may be challenged to interrogate some of our own beliefs, and ultimately we may be confronted with new ideas that broaden our own perspectives.",
+        "attribution": "— Carlton Mackey 05T, Director, Ethics & the Arts Program<br/>Associate Director, D. Abbott Turner Program in Ethics and Servant Leadership"
       }
     },
     {
       "component": "TextBg",
       "props": {
-        "text": "THE CENTER FOR ETHICS HAS GREAT TRANSFORMATIONS IN MIND FOR 2O36.",
+        "text": "2O36 PRIORITIES FOR CENTER FOR ETHICS",
         "image_src": "ecas_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/centers-and-institutes/center-ethics",
         "cta_text": "Support Ethics"
