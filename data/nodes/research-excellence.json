@@ -25,7 +25,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "As a leading research university, our rankings speak volumes. But what matters most is the number of lives saved, partnerships forged, and discoveries driven—across the globe.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "research_isolated_bg.png",
         "text": "<p>From mapping human DNA to studying the psychology of thrillseekers, to finding emerging treatments for COVID-19, Emory research is at the forefront of discovery. Emory research leads to better health outcomes, lives, and global communities.</p><p>Research at Emory encompasses a multitude of disciplines. It includes the work of doctors, faculty, and clinicians of Emory Healthcare working on the forefront of the study of cancer and brain health; our community service and green initiatives; work examining the racial implications of federal tax policy; creating forecasting models for political elections, formulating policy on bioethical issues and safeguarding research subjects for NASA; and mathematical discoveries that ​​answer complex problems of theoretical computer science. The fields, applications, and implications of Emory research are exhaustive, and have the potential to touch all our lives.",
         "img_src": "research_intro.jpg",
         "media_src": "https://vimeo.com/623637496/8fb02cba32",
