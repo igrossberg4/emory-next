@@ -136,13 +136,13 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Karen Webster Parks",
+        "title": "Karen Webster Parks 16T",
         "layout": "left",
         "subtitle": "",
         "img_src": "candler_quote_2.jpg",
         "media_src": "https://vimeo.com/619046479/dcb99727be",
-        "media_alt": "A video quote of Karen Webster Parks",
-        "media_header": "Karen Webster Parks",
+        "media_alt": "A video quote of Karen Webster Parks 16T",
+        "media_header": "Karen Webster Parks 16T",
         "media_text": "",
         "button_close_text": "Exit"
       }
