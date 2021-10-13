@@ -18,9 +18,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
+        "header": "The 2O36 Campaign Council leads the charge to invest in people for the benefit of people for a better future, as evidenced by their continued support, selfless acts of service, and passion for Emory.",
         "background_image": "about_isolated_bg.png",
-        "text": "<p>It’s our vision that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to shape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to purposefully prepare students for careers with the potential to change hearts, minds, and through that, the world.</p><p>Together, we can bring to life an ever promising future.</p>",
+        "text": "<p>The council represents our community members—alumni, faculty, staff, students, physicians, parents, and friends—as well as the nine academic schools and units and Emory Healthcare. Their guidance over the next four years will support university and health care leadership to ensure priorities and funding is aligned with the mission, vision, and values of Emory—in service of humanity.</p>",
         "img_src": "about_intro.jpg",
         "media_src": "about_intro.jpg",
         "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
@@ -250,7 +250,7 @@
           {
             "name" : "Ira Horowitz P10 P13",
             "description" : "Faculty and Staff",
-            "img_src": "headshots/horowitz_1.png",
+            "img_src": "headshots/horowitz_1.jpg",
             "media_alt": "Portrait of Ira Horowitz P10 P13"
           },
           {
