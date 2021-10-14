@@ -35,9 +35,9 @@
         "background_image": "global_isolated_bg.png",
         "text": "<p>For more than a decade, Emory Global Health Institute (EGHI) has improved health worldwide by fostering global partnerships, supporting Emory faculty and their research, and training leaders in global health. Needless to say, EGHI’s mission is more important than ever. From expert faculty to entrepreneurial students to one-of-a-kind programs, EGHI looks forward to continuing its legacy as an invaluable catalyst for change.</p>",
         "img_src": "global_intro.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "https://vimeo.com/632311554/7c3a480b59",
         "media_alt": "Hospital in India",
-        "media_type": "image",
+        "media_type": "video",
         "media_header": "Global Health Institute",
         "media_text": ""
       }
@@ -93,13 +93,13 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Rebecca Martin 02Ox 04C",
+        "title": "Rebecca Martin",
         "layout": "left",
         "subtitle": "Vice President for Global Health<br/>Director, Emory Global Health Institute",
         "img_src": "global_quote_1.jpg",
         "media_src": "https://vimeo.com/630265358/80dfa17119",
-        "media_alt": "A video quote of Rebecca Martin 02Ox 04C",
-        "media_header": "Rebecca Martin 02Ox 04C",
+        "media_alt": "A video quote of Rebecca Martin",
+        "media_header": "Rebecca Martin",
         "media_text": "Vice President for Global Health<br/>Director, Emory Global Health Institute",
         "button_close_text": "Exit"
       }

@@ -38,8 +38,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Emory is an incredible collaborative environment for outstanding scientists who are conducting novel research to better understand, prevent, and treat human diseases. I can't think of a better place to be than Emory University for this sort of work.",
-        "attribution": "— Paul Johnson P22, Director, Yerkes Research Center"
+        "text": "We're really pushing forward to try to solve the problems that need solving no matter how hard it might be.",
+        "attribution": "— Carey Jansen 19M 23G"
       }
     },
     {
@@ -116,14 +116,14 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Carey Jansen 19M 23G",
+        "title": "Paul Johnson P22",
         "layout": "right",
         "subtitle": "",
         "img_src": "research_quote_2.jpg",
-        "media_src": "“https://vimeo.com/631304205/35e494700c",
-        "media_alt": "A video quote of Carey Jansen 19M 23G",
-        "media_header": "Carey Jansen 19M 23G",
-        "media_text": "",
+        "media_src": "https://vimeo.com/632300238/61ab2a3979",
+        "media_alt": "A video quote of Paul Johnson P22",
+        "media_header": "Paul Johnson P22",
+        "media_text": "Director, Yerkes National Primate Research Center",
         "button_close_text": "Exit"
       }
     },
