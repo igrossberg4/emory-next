@@ -46,8 +46,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "When we have entire swaths of human beings who are denied the education that they need in order to thrive in this society, it does damage. We cannot be willing to accept that as the norm.",
-        "attribution": "— Carol Anderson, Charles Howard Candler Professor and Chair, African American Studies"
+        "text": "Emory is the best place to work toward a better future. We have phenomenally bright, intellectually curious, hardworking students and a motivated faculty that cares about the social good.",
+        "attribution": "— CLIFF CARRUBBA, SAMUEL CANDLER DOBBS PROFESSOR AND CHAIR OF QUANTITATIVE THEORY AND METHODS"
       }
     },
     {
@@ -145,14 +145,14 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Cliff Carrubba",
+        "title": "Carol Anderson",
         "layout": "right",
-        "subtitle": "Samuel Candler Dobbs Professor and Chair, Quantitative Theory and Methods",
+        "subtitle": "Charles Howard Candler Professor And Chair, African American Studies",
         "img_src": "ecas_quote_3.jpg",
-        "media_src": "https://vimeo.com/617120201/12b16e2806",
-        "media_alt": "Audio quote from Cliff Carrubba",
-        "media_header": "Cliff Carrubba",
-        "media_text": "Samuel Candler Dobbs Professor and Chair of Quantitative Theory and Methods",
+        "media_src": "https://vimeo.com/630219957/cce00947a0",
+        "media_alt": "A video quote from Carol Anderson",
+        "media_header": "Carol Anderson",
+        "media_text": "Charles Howard Candler Professor And Chair, African American Studies",
         "button_close_text": "Exit"
       }
     },
