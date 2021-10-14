@@ -17,7 +17,8 @@
   "metatag": {
     "title": "Style guide - Emory 2036",
     "description": "",
-    "image": "2036_cancer_cells_red_uncropped.jpg"
+    "image": "2036_cancer_cells_red_uncropped.jpg",
+    "robots": "noindex,nofollow"
   },
   "components": [
     {
