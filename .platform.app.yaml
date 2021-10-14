@@ -6,6 +6,11 @@ name: app
 # The type key specifies the language and version for your application.
 type: 'nodejs:15'
 
+# Define environment variables used in all environments.
+variables:
+    env:
+        SITE_URL: "https://2036.emory.edu"
+
 # The hooks that will be triggered when the package is deployed.
 hooks:
     # The build hook runs after container dependencies are available.
