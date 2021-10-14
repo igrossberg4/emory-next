@@ -54,10 +54,29 @@
     margin-top: 20px;
 
     a {
-      transition: opacity .25s ease-in-out;
+      text-decoration: none;
+      position: relative;
+      text-align: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        display: inline-block;
+        height: 1px;
+        background: $color_black;
+        transform: translate(-50%, 0);
+        left: 50%;
+        transition: width .2s ease-out;
+      }
 
       &:hover, &:focus {
-        opacity: .6;
+        opacity: 1;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
