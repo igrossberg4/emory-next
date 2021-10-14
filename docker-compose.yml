@@ -15,6 +15,8 @@ services:
     ports:
       # Next.js dev mode runs on http://localhost:3000/
       - "3000:3000"
+    environment:
+      - SITE_URL=http://localhost:3000/
   next_prod:
     build: .
     command: http-server out/
@@ -31,3 +33,5 @@ services:
       # The HTTP server from the static Next.js build
       # and export runs on http://localhost:8080/
       - "8080:8080"
+    environment:
+      - SITE_URL=http://localhost:8080/
