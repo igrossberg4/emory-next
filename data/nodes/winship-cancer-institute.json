@@ -46,7 +46,7 @@
       "component": "Quote",
       "props": {
         "text": "Every time I'm in the clinic, seeing patients, I feel like I'm making a difference. When you see treatment plans for patients with cancer work and they are here years later to say how happy they are for the outcomes, that to me feels like the biggest difference I could possibly make in someone's life.",
-        "attribution": "— Suresh S. Ramalingham, Executive Director, Winship Cancer Institute of Emory University<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
+        "attribution": "— Suresh S. Ramalingham, Executive Director, Winship Cancer Institute <br/> Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
       }
     },
     {
@@ -86,14 +86,7 @@
         "media_type": "image",
         "media_header": "Research and Discover",
         "media_text": "With endowed professorships and chairs, Winship will recruit and retain the brightest minds in cancer research, care, and education.",
-        "media_byline": "Featured: Suresh S. Ramalingham, Executive Director, Winship Cancer Institute of Emory University<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
-      }
-    },
-    {
-      "component": "ColumnsText",
-      "props": {
-        "column1": "<strong>With endowed professorships and chairs, Winship will recruit and retain the brightest minds in cancer research, care, and education.</strong> These faculty positions will help Winship to retain National Cancer Institute Comprehensive Cancer Center designation—which depends on the leadership of clinicians—improve rankings, and increase both grants and philanthropic support.",
-        "column2": "NA"
+        "media_byline": "Featured: Suresh S. Ramalingham, Executive Director, Winship Cancer Institute<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
       }
     },
     {
@@ -151,7 +144,7 @@
           },
           {
             "title": "Grow Immune-Based Approaches",
-            "description": "<p>Cancer immunology research harnesses the body’s natural defenses to develop new treatments—immunotherapies—that target immune cells in and around cancer cells. Philanthropy advances this groundbreaking work. Winship investigators have been involved in clinical trials of nearly every FDA-approved immunotherapy drug, and we expect that growth in immune-based approaches will separate Winship from other cancer centers around the nation. Through 2O36, Winship will be able to manufacture cell-based therapies and improve immunotherapy for certain kinds of cancers.</p>"
+            "description": "<p>Cancer immunology research harnesses the body’s natural defenses to develop new treatments—immunotherapies—that target immune cells in and around cancer cells. Philanthropy advances this groundbreaking work. Winship investigators have been involved in clinical trials of nearly every FDA-approved immunotherapy drug, and we expect that growth in immune-based approaches will separate Winship from other cancer centers around the nation. <strong>Through 2O36, Winship will be able to manufacture cell-based therapies and improve immunotherapy for certain kinds of cancers.</strong></p>"
           },
           {
             "title": "Promoting Global Cancer Awareness in 2036",
