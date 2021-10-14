@@ -1,5 +1,11 @@
 import Head from "next/head";
-import React, { Fragment, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useRouter } from "next/dist/client/router";
 import { Box } from "@chakra-ui/react";
 import { Context } from "../state/Store";
@@ -7,7 +13,7 @@ import Image from "next/image";
 import IconButton from "./IconButton";
 import Link from "next/link";
 
-export default function Footer(props:any) {
+export default function Footer(props: any) {
   const [scroll, setScroll] = useState(0);
   const [state, dispatch] = useContext(Context) as any;
 
@@ -68,20 +74,25 @@ export default function Footer(props:any) {
         )}
         <p className="footer__title">The future starts here</p>
         <div className="footer__cta">
-          <Link
-            href={
-              props?.cta_support_button?.url
-                ? props?.cta_support_button?.url
-                : "https://together.emory.edu/give"
-            }
-          >
-            <a className="link-button">
-              {props?.cta_support_button?.text
-                ? props?.cta_support_button?.text
-                : "Support Emory"}
-            </a>
-          </Link>
-          {!props?.cta_contact_info?.raw_block ? (
+          {props.cta_support_button != false ? (
+            <Link
+              href={
+                props?.cta_support_button?.url
+                  ? props?.cta_support_button?.url
+                  : "https://together.emory.edu/give"
+              }
+            >
+              <a className="link-button">
+                {props?.cta_support_button?.text
+                  ? props?.cta_support_button?.text
+                  : "Support Emory"}
+              </a>
+            </Link>
+          ) : (
+            ""
+          )}
+          {!props?.cta_contact_info?.raw_block &&
+          props.cta_contact_info != false ? (
             <div className="footer__contact">
               <div className="footer__contact__heading">
                 {props?.cta_contact_info?.heading
@@ -103,7 +114,7 @@ export default function Footer(props:any) {
                   href={`mailto: ${
                     props?.cta_contact_info?.email
                       ? props?.cta_contact_info?.email
-                      : ""
+                      : "support2O36@emory.edu"
                   }`}
                 >
                   {props?.cta_contact_info?.email
@@ -123,13 +134,15 @@ export default function Footer(props:any) {
                 </a>
               </div>
             </div>
-          ) : (
+          ) : props.cta_contact_info !== false ? (
             <div
               className="footer__contact"
               dangerouslySetInnerHTML={{
                 __html: props?.cta_contact_info?.raw_block,
               }}
             ></div>
+          ) : (
+            ""
           )}
         </div>
         <Image
