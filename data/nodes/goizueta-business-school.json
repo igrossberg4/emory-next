@@ -35,9 +35,9 @@
         "background_image": "goizueta_isolated_bg.png",
         "text": "<p>Named for one of the great business leaders of the 20th century, Goizueta Business School is a training ground for principled leaders and a laboratory for powerful insights. By navigating the complex interdependency of business and society, we seek to convene brilliant minds to solve profound problems with integrity, ingenuity, and grit.</p>",
         "img_src": "goizueta_intro.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/632104341/eb4f3df23d",
         "media_alt": "Goizueta students in class",
-        "media_type": "image",
+        "media_type": "video",
         "media_header": "Goizueta Business School",
         "media_text": ""
       }
