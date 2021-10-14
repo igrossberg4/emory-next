@@ -114,17 +114,14 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  padding-top: $default-separation;
-  padding-bottom: $default-separation;
+  padding: 76px 0; // height of header on mobile.
+
+  @include media-breakpoint-up(md) {
+    padding: $default-separation 0;
+  }
 
   @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     background-color: rgba($color_white, .95);
-  }
-
-  // Avoid CLOSE X menu overlapping text via a very specific media query
-  @media (max-height: 900px) and (max-width: 1000px) {
-    padding-top: $default-separation * 2;
-    padding-bottom: $default-separation * 2;
   }
 }
 
@@ -132,13 +129,13 @@ a {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 5px;
-  right: 5px;
+  padding-left: 12px;
+  top: 18px;
+  right: 17px;
   z-index: 1;
 
   @include media-breakpoint-up(sm) {
-    top: 18px;
-    right: 28px;
+    right: 24px;
   }
 
   &::after {

@@ -18,11 +18,11 @@
     align-items: center;
     justify-content: flex-start;
     padding-top: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     .close-popup {
       position: absolute;
-      top: 18px;
-      right: 28px;
     }
 
     figure {

@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow-x: hidden;
   overflow-y: auto;
 
   &:before {
@@ -16,15 +19,20 @@
   }
 
   .menu-main__link {
+    font-size: 1.6rem;
     margin-bottom: 2rem;
     text-align: center;
 
     @include media-breakpoint-up(sm) {
-      margin-bottom: 3rem;
+      font-size: $h3-font-size;
     }
 
-    @media (max-height: 900px) {
+    @include media-breakpoint-up(md) {
       font-size: $h2-font-size;
+    }
+
+    @media (min-height: 900px) {
+      margin-bottom: 3rem;
     }
 
     &:last-child {
@@ -34,6 +42,7 @@
     a {
       text-decoration: none;
       position: relative;
+      display: inline;
 
       &::after {
         content: "";
