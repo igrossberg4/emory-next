@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   &:before {
     content: '';
@@ -18,7 +22,7 @@
     margin-bottom: 2rem;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
+    @media (min-height: 900px) {
       margin-bottom: 3rem;
     }
 
@@ -29,6 +33,7 @@
     a {
       text-decoration: none;
       position: relative;
+      display: inline;
 
       &::after {
         content: "";
