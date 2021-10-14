@@ -3,7 +3,12 @@
   padding: 6px 16px;
   background: $color_white;
   text-transform: uppercase;
+  text-decoration: none;
   border-radius: 50px;
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
 }
 
 .tags {
