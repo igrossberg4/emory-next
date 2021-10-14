@@ -73,7 +73,7 @@ export default function Footer(props: any) {
         )}
         <p className="footer__title">The future starts here</p>
         <div className="footer__cta">
-          {props.cta_support_button != false ? (
+          {props.cta_support_button !== false ? (
             <Link
               href={
                 props?.cta_support_button?.url
@@ -91,7 +91,7 @@ export default function Footer(props: any) {
             ""
           )}
           {!props?.cta_contact_info?.raw_block &&
-          props.cta_contact_info != false ? (
+          props.cta_contact_info !== false ? (
             <div className="footer__contact">
               <div className="footer__contact__heading">
                 {props?.cta_contact_info?.heading
