@@ -51,18 +51,19 @@
   }
 
   .menu-schools__link {
-    margin-top: 20px;
+    margin: 1rem 0;
 
     a {
       text-decoration: none;
       position: relative;
       text-align: center;
       display: inline;
+      padding: .5rem 0;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: .25rem;
         width: 0;
         display: inline-block;
         height: 1px;
