@@ -30,11 +30,11 @@ export default function Footer(props: any) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scroll]); // @ts-ignore
   return (
-    <footer role="contentinfo">
-      <div className="container">
+    <footer role='contentinfo'>
+      <div className='container'>
         {scroll > 170 ? (
           <div
-            className="footer__scrolltop btn text-label"
+            className='footer__scrolltop btn text-label'
             style={{ cursor: "pointer" }}
             onClick={(e) => {
               window.scrollTo({
@@ -65,14 +65,14 @@ export default function Footer(props: any) {
               }, 400);
             }}
           >
-            <IconButton icon="chevron-up"></IconButton>
+            <IconButton icon='chevron-up'></IconButton>
             Back to top
           </div>
         ) : (
           ""
         )}
-        <p className="footer__title">The future starts here</p>
-        <div className="footer__cta">
+        <p className='footer__title'>The future starts here</p>
+        <div className='footer__cta'>
           {props.cta_support_button !== false ? (
             <Link
               href={
@@ -81,7 +81,7 @@ export default function Footer(props: any) {
                   : "https://together.emory.edu/give"
               }
             >
-              <a className="link-button">
+              <a className='link-button'>
                 {props?.cta_support_button?.text
                   ? props?.cta_support_button?.text
                   : "Support Emory"}
@@ -92,23 +92,23 @@ export default function Footer(props: any) {
           )}
           {!props?.cta_contact_info?.raw_block &&
           props.cta_contact_info !== false ? (
-            <div className="footer__contact">
-              <div className="footer__contact__heading">
+            <div className='footer__contact'>
+              <div className='footer__contact__heading'>
                 {props?.cta_contact_info?.heading
                   ? props?.cta_contact_info?.heading
                   : "Learn more about ways to support 2036"}
               </div>
-              <div className="footer__contact__person">
+              <div className='footer__contact__person'>
                 {props?.cta_contact_info?.person
                   ? props?.cta_contact_info?.person
                   : ""}
               </div>
-              <div className="footer__contact__title">
+              <div className='footer__contact__title'>
                 {props?.cta_contact_info?.title
                   ? props?.cta_contact_info?.title
                   : "support2O36@emory.edu"}
               </div>
-              <div className="footer__contact__links">
+              <div className='footer__contact__links'>
                 <a
                   href={`mailto: ${
                     props?.cta_contact_info?.email
@@ -135,7 +135,7 @@ export default function Footer(props: any) {
             </div>
           ) : props.cta_contact_info !== false ? (
             <div
-              className="footer__contact"
+              className='footer__contact'
               dangerouslySetInnerHTML={{
                 __html: props?.cta_contact_info?.raw_block,
               }}
@@ -145,10 +145,10 @@ export default function Footer(props: any) {
           )}
         </div>
         <Image
-          src="/logos/emory-university-logo.svg"
-          alt="EMORY"
-          width="95px"
-          height="20px"
+          src='/logos/emory-university-logo.svg'
+          alt='EMORY'
+          width='95px'
+          height='20px'
         ></Image>
       </div>
     </footer>
