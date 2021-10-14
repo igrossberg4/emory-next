@@ -19,17 +19,8 @@
   }
 
   .menu-main__link {
-    font-size: 1.6rem;
     margin-bottom: 2rem;
     text-align: center;
-
-    @include media-breakpoint-up(sm) {
-      font-size: $h3-font-size;
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: $h2-font-size;
-    }
 
     @media (min-height: 900px) {
       margin-bottom: 3rem;

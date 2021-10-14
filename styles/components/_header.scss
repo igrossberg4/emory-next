@@ -58,3 +58,21 @@ header[role="banner"] {
     }
   }
 }
+
+.header-menu {
+  .header-h2 {
+    font-size: 1.8rem;
+
+    @media (min-width:480px) {
+      font-size: 2.2rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: $h3-font-size;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: $h2-font-size;
+    }
+  }
+}
