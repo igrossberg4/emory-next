@@ -24,10 +24,10 @@
         "header": "The 2O36 Campaign Council leads the charge to invest in people for the benefit of people for a better future, as evidenced by their continued support, selfless acts of service, and passion for Emory.",
         "background_image": "about_isolated_bg.png",
         "text": "<p>The council represents our community members—alumni, faculty, staff, students, physicians, parents, and friends—as well as the nine academic schools and units and Emory Healthcare. Their guidance over the next four years will support university and health care leadership to ensure priorities and funding is aligned with the mission, vision, and values of Emory—in service of humanity.</p>",
-        "img_src": "about_intro.jpg",
-        "media_src": "about_intro.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "img_src": "leadership_intro.jpg",
+        "media_src": "https://vimeo.com/605963807/295678c674",
+        "media_alt": "Portrait of President Greg L. Fenves",
+        "media_type": "video",
         "media_header": "Gregory L. Fenves",
         "media_text": "President, Emory University"
       }
@@ -39,7 +39,7 @@
         "items": [
           {
             "name": "Susan Cahoon 68C",
-            "description": "School and Unit Co-Chairs",
+            "description": "School and Unit Co-Chair",
             "img_src": "headshots/cahoon_1.jpg",
             "media_alt": "Portrait of Susan Cahoon"
           },
@@ -51,8 +51,8 @@
           },
           {
             "name": "Sarah Beth Brown 89B",
-            "description": "Regional Co-Chairs",
-            "img_src": "headshots/brown_1.jpg",
+            "description": "Regional Co-Chair",
+            "img_src": "headshots/brown_2.jpg",
             "media_alt": "Portrait of Sarah Beth Brown"
           },
           {

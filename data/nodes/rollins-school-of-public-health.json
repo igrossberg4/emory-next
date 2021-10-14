@@ -6,7 +6,7 @@
     "about": "school spotlight",
     "text": "A place where students learn to identify, analyze, and create solutions to global health problems.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_neurons.jpg",
+    "img_src": "rollins_lede.jpg",
     "footer": {
       "cta_support_button": {
         "text": "Support Rollins",
@@ -32,11 +32,11 @@
       "component": "SectionIntro",
       "props": {
         "header": "Cultivating the public health leaders of tomorrow, the Rollins School of Public Health improves health and well-being through excellence in teaching, research, and the application of knowledge in partnership with domestic and global communities.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "rollins_isolated_bg.png",
         "text": "<p><i>Public health</i>, once an obscure term to many, is now widely recognized with the onset of the global COVID-19 pandemic. The need for science-driven inquiry and public health leadership is greater now than ever. The Rollins School of Public Health provides both, pairing expertise with collaboration and interdisciplinary action to prevent disease, promote health, and save lives around the world. Founded just over 30 years ago, Rollins is now ranked 4th among the nation's schools of public health. By 2036, we expect to be second to none.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
+        "img_src": "rollins_intro.jpg",
         "media_src": "https://vimeo.com/618170754/342455f066",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "Men with glasses look at presentation.",
         "media_type": "video",
         "media_header": "Rollins School of Public Health",
         "media_text": ""
@@ -53,7 +53,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR ROLLINS SCHOOL OF PUBLIC HEALTH",
-        "image_src": "ecas_divider_bg.jpg",
+        "image_src": "rollins_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/rollins-school-public-health",
         "cta_text": "Support Rollins"
       }
@@ -65,12 +65,12 @@
         "title": "In 2036, Students Flourish",
         "body": "<p>Our faculty, our facilities, and our proximity to the Center for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p><strong>Scholarship support through 2O36 would enable Rollins to compete with the nation’s leading schools of public health for top doctoral candidates or Masters of Public health students.</strong> Additionally, such support would help to grow Rollins’s prestige, and retain leading faculty members who value accomplished postgraduates as collaborative members of their research teams.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "rollins_priority_1.jpg",
+        "media_src": "rollins_priority_1_popup.jpg",
+        "media_alt": "Medical student experiments in lab.",
         "media_type": "image",
         "media_header": "Supporting Students",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Scholarship support through 2O36 would enable Rollins to compete with the nation’s leading schools of public health for top doctoral candidates or Masters of Public health students."
       }
     },
     {
@@ -80,12 +80,13 @@
         "title": "The Power of Flexible Support",
         "body": "<p>Unrestricted endowment funds allow the dean to respond to urgent needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 20 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "rollins_priority_2.jpg",
+        "media_src": "rollins_priority_2_popup.jpg",
+        "media_alt": "A group of three people stand in a garden.",
         "media_type": "image",
         "media_header": "Increase, Recruit, Retain",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.",
+        "media_byline": "Featured: Christine Moe, Eugene J. Gangarosa Chair in Safe Water and Sanitation, Rollins School of Public Health"
       }
     },
     {
@@ -95,7 +96,7 @@
         "title": "Shivani Patel",
         "layout": "left",
         "subtitle": "Assistant Professor, Hubert Department of Global Health",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "rollins_quote_1.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Shivani Patel",
         "media_header": "Shivani Patel",
@@ -110,12 +111,13 @@
         "title": "Improving Cancer Prevention",
         "body": "<p>Working with the Georgia Cancer Registry, Rollins researchers are building the world’s first database of cancer recurrence, launched by a time-limited National Institutes of Health grant. Given that 15 million cancer survivors live in the United States alone, the new registry will fill an important gap in knowledge. Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "rollins_priority_3.jpg",
+        "media_src": "rollins_priority_3_popup.jpg",
+        "media_alt": "A woman touches hanging ribbon.",
         "media_type": "image",
         "media_header": "Power in Prevention",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.",
+        "media_byline": "Featured: Joellen Schildkraut, Professor, Department of Epidemiology, Rollins School of Public Health, Emory University"
       }
     },
     {
@@ -125,7 +127,7 @@
         "title": "Lisa Chung 21PH 27G",
         "layout": "right",
         "subtitle": "",
-        "img_src": "ecas_quote_2.jpg",
+        "img_src": "rollins_quote_2.jpg",
         "media_src": "https://vimeo.com/617120215/331cc7c86b",
         "media_alt": "A video quote of Lisa Chung 21PH 27G",
         "media_header": "Lisa Chung 21PH 27G",
