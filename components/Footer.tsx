@@ -106,7 +106,7 @@ export default function Footer(props: any) {
               <div className="footer__contact__title">
                 {props?.cta_contact_info?.title
                   ? props?.cta_contact_info?.title
-                  : ""}
+                  : "support2O36@emory.edu"}
               </div>
               <div className="footer__contact__links">
                 <a
