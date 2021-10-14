@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "postbuild": "./scripts/nextjs-fix-route-collisions.sh",
+    "postbuild": "./scripts/nextjs-fix-route-collisions.sh && next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "npx patch-package "
@@ -25,6 +25,7 @@
     "lodash-es": "^4.17.21",
     "next": "11.0.1",
     "next-optimized-images": "^2.6.2",
+    "next-sitemap": "^1.6.184",
     "object-hash": "^2.2.0",
     "parallax-js": "^3.1.0",
     "popmotion": "^9.4.0",
