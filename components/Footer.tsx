@@ -48,7 +48,6 @@ export default function Footer(props: any) {
                   type: "GOING_UP",
                   payload: false,
                 });
-                console.log("circleAnimateCollapse");
                 setTimeout(() => {
                   dispatch({ type: "IS_TRANSITIONING", payload: false });
                 }, 600);
