@@ -4,7 +4,7 @@
   "page_props": {
     "header": "EMORY HEALTHCARE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg",
+    "img_src": "healthcare_lede.jpg",
     "text": "We aspire to change what is possible in ways not yet imagined.",
     "about": "unit spotlight",
     "footer": {
@@ -32,14 +32,14 @@
       "component": "SectionIntro",
       "props": {
         "header": "The health and wellness of our communities drives us to find new ways to understand, manage, and overcome every medical condition.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "healthcare_isolated_bg.png",
         "text": "<p>Emory Healthcare, part of Emory University, is the most extensive health care system in Georgia. Made up of 11 hospitals, the Emory Clinic, and more than 250 provider locations, the Emory Healthcare Network is the largest clinically integrated network in Georgia, with more than 2,800 physicians concentrating in 70 different subspecialties. Patients are always our priority, and we work every day to improve the health of individuals and communities at home and throughout the world.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
+        "img_src": "healthcare_intro.jpg",
         "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "A woman in lab coat uses medical instrument.",
         "media_type": "image",
         "media_header": "Emory Healthcare",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_text": ""
       }
     },
     {
@@ -53,7 +53,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR EMORY HEALTHCARE",
-        "image_src": "ecas_divider_bg.jpg",
+        "image_src": "healthcare_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/health-and-medicine/emory-healthcare",
         "cta_text": "Support Emory Healthcare"
       }
@@ -65,12 +65,12 @@
         "title": "Building Rehab’s Future",
         "body": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. 2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "healthcare_priority_1.jpg",
+        "media_src": "healthcare_priority_1_popup.jpg",
+        "media_alt": "Two nurses help man to walk using sticks.",
         "media_type": "image",
         "media_header": "The Future of Rehab",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better."
       }
     },
     {
@@ -80,12 +80,12 @@
         "title": "The Best Cancer Care in Midtown",
         "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "healthcare_priority_2.jpg",
+        "media_src": "healthcare_priority_2_popup.jpg",
+        "media_alt": "Emory Winship Midtown building.",
         "media_type": "image",
         "media_header": "Winship Emory Midtown",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research."
       }
     },
     {
@@ -95,8 +95,8 @@
         "title": "Madeleine Hackney",
         "layout": "left",
         "subtitle": "Associate Professor of Medicine, Division of General Medicine and Geriatrics",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "healthcare_quote_1.jpg",
+        "media_src": "https://vimeo.com/631452691/a0890ee92b",
         "media_alt": "A video quote of Madeleine Hackney",
         "media_header": "Madeleine Hackney",
         "media_text": "Associate Professor of Medicine, Division of General Medicine and Geriatrics",
@@ -110,12 +110,12 @@
         "title": "A Better Surgical Pavilion",
         "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. Anew leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "healthcare_priority_3.jpg",
+        "media_src": "healthcare_priority_3_popup.jpg",
+        "media_alt": "Three doctors discuss in surgical room.",
         "media_type": "image",
         "media_header": "Space for Innovation",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams."
       }
     },
     {
@@ -125,8 +125,8 @@
         "title": "Karen Law 11MR",
         "layout": "left",
         "subtitle": "Program Director, J Willis Hurst Internal Medicine Residency Program<br/>Associate Vice Chair of Education<br/>Associate Professor, Emory School of Medicine",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "healthcare_quote_2.jpg",
+        "media_src": "https://vimeo.com/631452668/27e9e0406c",
         "media_alt": "A video quote of Karen Law 11MR",
         "media_header": "Karen Law 11MR",
         "media_text": "Program Director, J Willis Hurst Internal Medicine Residency Program<br/>Associate Vice Chair of Education<br/>Associate Professor, Emory School of Medicine",

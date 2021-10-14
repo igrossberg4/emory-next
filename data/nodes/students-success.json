@@ -25,12 +25,12 @@
       "component": "SectionIntro",
       "props": {
         "header": "Emory prepares students for a lifelong journey of transformation, contribution, and service.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "student_isolated_bg.png",
         "text": "<p>Our students are our future. And supporting student flourishing means helping them become thinkers, doers, and team players. It means creating an inclusive environment where our diverse student body feels at home, strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. . Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
         "img_src": "student_intro.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "media_src": "https://vimeo.com/632162118/5f4afc93b5",
+        "media_alt": "Man in suit speaking.",
+        "media_type": "video",
         "media_header": "Student Flourishing",
         "media_text": ""
       }
@@ -60,10 +60,10 @@
         "layout": "right",
         "img_src": "student_priority_1.jpg",
         "media_src": "student_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Student shakes hand at fair.",
         "media_type": "image",
         "media_header": "Opportunities Abound",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "By creating an endowed scholarship at Emory college, we will provide enduring opportunities not just for a single student, but for entire generations."
       }
     },
     {
@@ -75,10 +75,10 @@
         "layout": "right",
         "img_src": "student_priority_2.jpg",
         "media_src": "student_priority_2_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "Two students write in a notebook in a newsroom.",
         "media_type": "image",
         "media_header": "Learn by Experience",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Experiential learning opportunities like undergraduate research, internships, and education abroad teach our students how to translate their academic interests and training into transformative careers and lives."
       }
     },
     {
@@ -89,7 +89,7 @@
         "layout": "left",
         "subtitle": "",
         "img_src": "student_quote_1.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/631452455/367232935e",
         "media_alt": "A video quote of Eddy Cabrera 22C",
         "media_header": "Eddy Cabrera 22C",
         "media_text": "",
@@ -105,10 +105,10 @@
         "layout": "right",
         "img_src": "student_priority_3.jpg",
         "media_src": "student_priority_3_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "media_alt": "A woman examines a circle with gloves.",
         "media_type": "image",
         "media_header": "Shape the Future",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "This is Emory’s chance to shape the future on the road to 2O36, fueled by continued investment in pioneering research."
       }
     },
     {
@@ -119,7 +119,7 @@
         "layout": "right",
         "subtitle": "",
         "img_src": "student_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/632207358/968fc54dc3",
         "media_alt": "A video quote of Rachel Ding 20Ox 22B",
         "media_header": "Rachel Ding 20Ox 22B",
         "media_text": "",

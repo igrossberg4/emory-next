@@ -4,7 +4,7 @@
   "page_props": {
     "header": "SIGNATURE THEMES",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_grid_yellow.jpg",
+    "img_src": "themes_lede.jpg",
     "text": "Our mantra is simple yet profound: Investing in people for the benefit of people.",
     "about": "core area",
     "footer": {
@@ -25,11 +25,11 @@
       "component": "SectionIntro",
       "props": {
         "header": "In classrooms, boardrooms, and operating rooms,  whether uncovering the smallest details of brain chemistry or exploring the deepest mysteries of humanity, Emory is pursuing an expansive future.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "themes_isolated_bg.png",
         "text": "<p>With implications for the world beyond Emory, we aim to make huge strides in five signature themes: student flourishing, social and racial justice, AI and humanity, cancer, and brain health. These core tenets of 2O36—while posing massive challenges for many educational institutions and communities—truly give shape to our mission of investing in people for the benefit of people. Each has the power to bring the Emory community together, fulfilling our mission to serve humanity through knowledge.</p>",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
+        "img_src": "themes_intro.jpg",
         "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_alt": "Students in front of the Student Center",
         "media_type": "image",
         "media_header": "Signature Themes",
         "media_text": ""
@@ -46,7 +46,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 SIGNATURE THEMES",
-        "image_src": "ecas_divider_bg.jpg",
+        "image_src": "themes_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
         "cta_text": "Support Emory"
       }
@@ -58,12 +58,13 @@
         "title": "For 2O36, Student Flourishing is Paramount",
         "body": "<p>Our students are our future. Their Emory education and experiences prepare them for a life of leadership, contribution, and service. Supporting student success means helping them become thinkers, doers, and team players while strengthening their values, developing their skills, and preparing them for advanced and professional studies and, of course, careers. Their success empowers them to contribute to the world around them in valuable and enriching ways.</p><p>Nestled in a diverse city with access to, and partnerships with, transformational organizations like the CDC and the King Center for Nonviolent Social Change, Emory has unique advantages to foster success and transform students into well-rounded, respected professionals in myriad fields. <strong>Through your generous support of 2O36, Emory can achieve our top priority: helping students realize their full potential—global citizens of the future who serve humanity.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "themes_priority_1.jpg",
+        "media_src": "themes_priority_1_popup.jpg",
+        "media_alt": "Faculty members and a student.",
         "media_type": "image",
         "media_header": "Student Flourishing",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Through your generous support of 2O36, Emory can achieve our top priority: helping students realize their full potential—global citizens of the future who serve humanity.",
+        "media_byline": "Featured: Helen Baker, Assistant Professor, Clinical Track, Nell Hodgson Woodruff School of Nursing"
       }
     },
     {
@@ -71,14 +72,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Working Toward True Social and Racial Justice",
-        "body": "<p>In pursuit of our mission of service to humanity, Emory is a leader in understanding our past in order to better serve our community today and work toward a just future. With a track record of scholarship on civil rights, a strong African American studies program and Center for Ethics, and working relationships with organizations that focus on social and racial justice, Emory is positioned for leadership on a wide range of issues around inequity, public health, and educational disparities.</p><p>Knowing that educational equity is key to a better future for all, Emory has set goals of working toward a student body, faculty, and staff that accurately reflect Atlanta’s social and racial diversity. In addition, Emory is acknowledging and atoning for  discrimination and racial injustices in its past, and working toward true equity and access in admissions, scholarships, and hiring as well as in the health care Emory provides in Atlanta and across Georgia. Because we need to understand, accept, and learn from the past  to create a more just future for everyone.</p>",
+        "body": "<p><strong>In pursuit of our mission of service to humanity, Emory is a leader in understanding our past in order to better serve our community today and work toward a just future.</strong> With a track record of scholarship on civil rights, a strong African American studies program and Center for Ethics, and working relationships with organizations that focus on social and racial justice, Emory is positioned for leadership on a wide range of issues around inequity, public health, and educational disparities.</p><p>Knowing that educational equity is key to a better future for all, Emory has set goals of working toward a student body, faculty, and staff that accurately reflect Atlanta’s social and racial diversity. In addition, Emory is acknowledging and atoning for discrimination and racial injustices in its past, and working toward true equity and access in admissions, scholarships, and hiring as well as in the health care Emory provides in Atlanta and across Georgia. Because we need to understand, accept, and learn from the past to create a more just future for everyone.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "themes_priority_2.jpg",
+        "media_src": "themes_priority_2_popup.jpg",
+        "media_alt": "A professor guides a discussion with students.",
         "media_type": "image",
         "media_header": "Social and Racial Justice",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "In pursuit of our mission of service to humanity, Emory is a leader in understanding our past in order to better serve our community today and work toward a just future."
       }
     },
     {
@@ -88,8 +89,8 @@
         "title": "Andra Gillespie",
         "layout": "left",
         "subtitle": "Associate Professor, Political Science<br/>Director, James Weldon Johnson Institute",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "themes_quote_1.jpg",
+        "media_src": "https://vimeo.com/631456372/b58eff861f",
         "media_alt": "A video quote of Andra Gillespie",
         "media_header": "Andra Gillespie",
         "media_text": "Associate Professor, Political Science<br/>Director, James Weldon Johnson Institute",
@@ -101,14 +102,15 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "The Crossroads of AI and Humanity is at Emory",
-        "body": "<p>Future generations of artificial intelligence will have enormous implications for society and the potential to reshape nearly every industry. Essential to understanding AI and its influence is the people programming it. Emory has a moral imperative to be an authority in the field, establishing guidelines and helping to shape its algorithms, applications, and uses to promote equity and equality that benefit us all.</p><p>Emory faculty are asking: How can we pursue AI in ways that promote human flourishing, and recognize that intelligence includes navigating ambiguity, employing ethical decision-making, and eliminating bias? Emory can lead the development of AI as an interdisciplinary approach between technologists, humanists, and social scientists. Applications of future AI technologies involve many areas of Emory strengths, including health care, business, and social sciences.</p>",
+        "body": "<p>Future generations of artificial intelligence will have enormous implications for society and the potential to reshape nearly every industry. Essential to understanding AI and its influence is the people programming it. Emory has a moral imperative to be an authority in the field, establishing guidelines and helping to shape its algorithms, applications, and uses to promote equity and equality that benefit us all.</p><p>Emory faculty are asking: How can we pursue AI in ways that promote human flourishing, and recognize that intelligence includes navigating ambiguity, employing ethical decision-making, and eliminating bias? <strong>Emory can lead the development of AI as an interdisciplinary approach between technologists, humanists, and social scientists. Applications of future AI technologies involve many areas of Emory strengths, including health care, business, and social sciences.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "themes_priority_3.jpg",
+        "media_src": "themes_priority_3_popup.jpg",
+        "media_alt": "A gentleman writes on a chalkboard.",
         "media_type": "image",
         "media_header": "AI and Humanity",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Emory can lead the development of AI as an interdisciplinary approach between technologists, humanists, and social scientists. Applications of future AI technologies involve many areas of Emory strengths, including health care, business, and social sciences.",
+        "media_byline": "Featured: Lars Ruthotto, Associate Professor, Mathematics and Computer Science"
       }
     },
     {
@@ -116,14 +118,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Working to End Cancer",
-        "body": "<p>As a leader in biomedical innovation and comprehensive patient care, Emory is advancing our understanding of cancer and patient-centered comprehensive treatment. Our world-renowned academic medical center with the largest health care system in Georgia benefits from collaborative, multidisciplinary expertise to develop novel therapies and elevate patient care. We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it. At the forefront of their fields, Emory’s researchers, faculty, and physicians have their sights on a cancer-free future.</p>",
+        "body": "<p>As a leader in biomedical innovation and comprehensive patient care, Emory is advancing our understanding of cancer and patient-centered comprehensive treatment. Our world-renowned academic medical center with the largest health care system in Georgia benefits from collaborative, multidisciplinary expertise to develop novel therapies and elevate patient care. <strong>We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it. At the forefront of their fields, Emory’s researchers, faculty, and physicians have their sights on a cancer-free future.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "themes_priority_4.jpg",
+        "media_src": "themes_priority_4_popup.jpg",
+        "media_alt": "TA gentleman completes experiment with tubes.",
         "media_type": "image",
         "media_header": "Working to End Cancer",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it."
       }
     },
     {
@@ -133,8 +135,8 @@
         "title": "Jinho Choi",
         "layout": "left",
         "subtitle": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "themes_quote_2.jpg",
+        "media_src": "https://vimeo.com/631452503/495c92f942",
         "media_alt": "A video quote of Jinho Choi",
         "media_header": "Jinho Choi",
         "media_text": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
@@ -146,29 +148,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "In 2036, Brain Health is a Given",
-        "body": "<p>From targeting migraines and treating addiction to pursuing cures for Alzheimer’s and Parkinson’s diseases, Emory researchers have been at the forefront of brain health since 1917. Most of these experts are part of the Emory Brain Health Center, a thriving community of more than 400 physicians, clinicians, and researchers in varied disciplines who partner with patients and their families to address devastating disorders of the brain.</p><p>With advancements in technology, and the proliferation of data collection, finding the proverbial needle in a haystack when it comes to optimal brain health is on the horizon.. With our resources and connections in the field, we’re leading research and advancements in improving stroke recovery, depression, PTSD, traumatic brain injuries, and more. Emory is poised to make substantial discoveries that can lead to new methods of prevention and treatment.</p>",
+        "body": "<p>From targeting migraines and treating addiction to pursuing cures for Alzheimer’s and Parkinson’s diseases, Emory researchers have been at the forefront of brain health since 1917. Most of these experts are part of the Emory Brain Health Center, a thriving community of more than 400 physicians, clinicians, and researchers in varied disciplines who partner with patients and their families to address devastating disorders of the brain.</p><p>With advancements in technology, and the proliferation of data collection, finding the proverbial needle in a haystack when it comes to optimal brain health is on the horizon. With our resources and connections in the field, we’re leading research and advancements in improving stroke recovery, depression, PTSD, traumatic brain injuries, and more. <strong>Emory is poised to make substantial discoveries that can lead to new methods of prevention and treatment.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "themes_priority_5.jpg",
+        "media_src": "themes_priority_5_popup.jpg",
+        "media_alt": "A couple walks out of a building.",
         "media_type": "image",
         "media_header": "Working to End Cancer",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
-      }
-    },
-    {
-      "component": "AccordionComponent",
-      "props": {
-        "items": [
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          },
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          }
-        ]
+        "media_text": "Emory Brain Health Center is a thriving community of more than 400 physicians, clinicians, and researchers in varied disciplines who partner with patients and their families to address devastating disorders of the brain."
       }
     }
   ]
