@@ -71,6 +71,10 @@
         transform: translate(-50%, 0);
         left: 50%;
         transition: width .2s ease-out;
+
+        @media (max-width: 480) {
+          display: none;
+        }
       }
 
       &:hover, &:focus {
