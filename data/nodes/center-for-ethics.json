@@ -35,9 +35,9 @@
         "background_image": "ethics_isolated_bg.png",
         "text": "<p>Scholars from across the university gather at the Center for Ethics to collaborate and study. Scholarship, conversation, and understanding are promoted through public programs, partnerships, and consultations with private and public community organizations. Emory's renowned ethicists are committed to asking tough questions and developing strategies that enable individuals and organizations to put ethics into practice.</p>",
         "img_src": "ethics_intro.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/632311292/5e8a93f3a7",
         "media_alt": "People with umbrellas walk on streets.",
-        "media_type": "image",
+        "media_type": "video",
         "media_header": "Center for Ethics",
         "media_text": ""
       }
@@ -96,7 +96,7 @@
         "layout": "left",
         "subtitle": "Director, Center for Ethics<br/>Raymond F. Schinazi Distinguished Research Chair in Jewish Bioethics",
         "img_src": "ethics_quote_1.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/632415156/23537e4ba9",
         "media_alt": "A video quote of Paul Root Wolpe P12",
         "media_header": "Paul Root Wolpe P12",
         "media_text": "Director, Center for Ethics<br/>Raymond F. Schinazi Distinguished Research Chair in Jewish Bioethics",
