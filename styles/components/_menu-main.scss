@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  overflow-y: auto;
 
   &:before {
     content: '';
@@ -20,6 +21,10 @@
 
     @include media-breakpoint-up(sm) {
       margin-bottom: 3rem;
+    }
+
+    @media (max-height: 900px) {
+      font-size: $h2-font-size;
     }
 
     &:last-child {
