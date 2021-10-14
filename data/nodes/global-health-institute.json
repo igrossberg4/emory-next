@@ -32,7 +32,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "Founded in 2006, Emory Global Health Institute is a recognized leader in building healthier communities abroad and developing new tools to combat public health problems at home.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "global_isolated_bg.png",
         "text": "<p>For more than a decade, Emory Global Health Institute (EGHI) has improved health worldwide by fostering global partnerships, supporting Emory faculty and their research, and training leaders in global health. Needless to say, EGHI’s mission is more important than ever. From expert faculty to entrepreneurial students to one-of-a-kind programs, EGHI looks forward to continuing its legacy as an invaluable catalyst for change.</p>",
         "img_src": "global_intro.jpg",
         "media_src": "2036_brain_health_neurons_blue.jpg",
@@ -66,7 +66,7 @@
         "body": "<p>Today’s global health challenges require a variety of skills, approaches, and insights to develop creative and sustainable solutions. But most important, global health requires leadership. <strong>2O36 will dedicate resources to securing an endowed directorship to lead Emory Global Health Institute at a pivotal time, while providing perpetual funding for programs, research, and scholarship opportunities.</strong></p><p>In addition to allowing institute leaders to encourage, promote, and facilitate multidisciplinary approaches, an endowment will generate much-needed support for vulnerable populations living in low- and middle-income countries and help recruit and retain top talent to carry on the EGHI mission and vision. Thanks to your generosity, Emory and EGHI will continue to lead the way forward in creating a healthier future.</p>",
         "layout": "right",
         "img_src": "global_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
+        "media_src": "global_priority_1_popup.jpg",
         "media_alt": "Leading global health in the world.",
         "media_type": "image",
         "media_header": "Empower Global Health Leaders",

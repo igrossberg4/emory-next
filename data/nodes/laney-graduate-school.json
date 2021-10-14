@@ -120,6 +120,21 @@
       }
     },
     {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Andra Gillespie",
+        "layout": "left",
+        "subtitle": "Associate Professor of Political Science and Director of the James Weldon Johnson Institute at Emory University",
+        "img_src": "laney_quote_1.jpg",
+        "media_src": "https://vimeo.com/616255678/2627789f95",
+        "media_alt": "A video quote of Andra Gillespie",
+        "media_header": "Andra Gillespie",
+        "media_text": "Associate Professor of Political Science and Director of the James Weldon Johnson Institute at Emory University",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "AccordionComponent",
       "props": {
         "pretitle": "LANEY GRADUATE SCHOOL",
@@ -134,8 +149,8 @@
             "description": "<p>Recruiting and retaining faculty is central to everything we do at Emory University, and Laney’s graduate education program is a cornerstone of our academic excellence. The Emory Society of Postdoctoral Fellows is a pipeline for recent PhDs to become full-time faculty in a supportive, rigorous intellectual community with guidance from senior leadership. It provides time at a pivotal stage, as they develop their dissertations into monographs or other foundational scholarly products.</p><p><strong>2O36 will support this fellowship in attracting diverse, recent PhDs at the leading edge of their fields.</strong> Members of the Emory Society of Fellows will be recruited through regular assistant professor searches, with deferred appointments that provide two years of support as they develop professionally. After completing the two-year fellowship, the scholars transition to the tenure track as assistant professors. In their fifth year of teaching at Emory (third as regular faculty), we begin to assess fellows’ readiness for the journey toward tenure.</p>"
           },
           {
-            "title": "Address Inequities",
-            "description": "<p>Education, health care, STEM. Jobs in these high-demand fields often require at least a master’s degree. By launching a “4+1” dual-degree program in partnership with Atlanta University Center (AUC) institutions, students can complete their foundational bachelor’s studies at Morehouse, Spelman, or Clark Atlanta, and spend their “+1” year at Laney Graduate School to receive a master’s degree.</p><p><strong>2O36 will allow us to make higher education more accessible so students from diverse backgrounds have opportunities to create meaningful change in their professions.</strong> Partnering with AUC institutions to offer this 4+1 degree helps create equitable change in the Atlanta area and across Georgia, today. Graduate programs develop tomorrow’s faculty and prepare leaders for business and society, so addressing inequities in graduate education will have ripple effects for generations.</p>"
+            "title": "Improving Access",
+            "description": "<p>Education, health care, STEM. Jobs in these high-demand fields often require at least a master’s degree. By launching a “4+1” dual-degree program in partnership with key institutions, such as Historically Black Colleges and Universities (HBCU) which have historically empowered underrepresented communities, students can complete their foundational bachelor’s studies and spend their “+1” year at Laney Graduate School to receive a master’s degree.</p><p><strong>2O36 will allow us to make higher education more accessible so students from diverse backgrounds have opportunities to create meaningful change in their professions.</strong> Partnering with HBCU institutions to offer this 4+1 degree helps create equitable change in the Atlanta area and across Georgia, today. Graduate programs develop tomorrow’s faculty and prepare leaders for business and society, so addressing inequities in graduate education will have ripple effects for generations.</p>"
           }
         ]
       }
