@@ -32,7 +32,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "Serving more than 17,000 patients each year, Winship Cancer Institute at Emory University helps cancer patients throughout Georgia, the Southeast, and beyond by working to prevent, treat, and cure cancer.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "winship_isolated_bg.png",
         "text": "<p>As the world deals with the COVID-19 public health crisis, Winship Cancer Institute continues to lessen the burden of cancer for Georgia residents by combining outstanding research, care, and prevention.</p>",
         "img_src": "winship_intro.jpg",
         "media_src": "2036_data_science_code_yellow.jpg",
@@ -104,7 +104,7 @@
         "layout": "left",
         "subtitle": "Associate Professor, Department of Dermatology<br/>Associate Professor, Center for the Study of Human Health<br/>Curator, Emory University Herbarium",
         "img_src": "winship_quote_1.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/631304153/51fc71c9ab",
         "media_alt": "A video quote of Cassandra Quave 00C",
         "media_header": "Cassandra Quave 00C",
         "media_text": "Associate Professor, Department of Dermatology<br/>Associate Professor, Center for the Study of Human Health<br/>Curator, Emory University Herbarium",

@@ -4,7 +4,7 @@
   "page_props": {
     "header": "UNIVERSITY LIBRARIES",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "img_src": "libraries_lede.jpg",
     "text": "Music, maps, films, personal diaries, and of course, books. Emory Libraries believe knowledge comes from many sources.",
     "about": "unit spotlight",
     "footer": {
@@ -32,12 +32,12 @@
       "component": "SectionIntro",
       "props": {
         "header": "Home to more than 5.6 million volumes, 400,970 electronic journals,  1.6 million electronic books, and internationally renowned special collections, Emory’s nine libraries are a precious learning resource.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "libraries_isolated_bg.png",
         "text": "<p>One of the top 20 Association of Research Libraries in North America, Emory University Libraries in Atlanta and Oxford, Georgia, are the interdisciplinary intellectual commons for Emory University. Our innovative resources, services, spaces, and collections advance the success of Emory students, staff, and faculty, and benefit the community beyond campus.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "img_src": "libaries_intro.jpg",
+        "media_src": "https://vimeo.com/629374817/ba179bca3e",
+        "media_alt": "Student with hat sits at computer desk.",
+        "media_type": "video",
         "media_header": "University Libraries",
         "media_text": ""
       }
@@ -53,7 +53,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR EMORY LIBRARIES",
-        "image_src": "ecas_divider_bg.jpg",
+        "image_src": "libraries_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/arts-libraries-and-museum/university-libraries",
         "cta_text": "Support Emory Libraries"
       }
@@ -62,15 +62,15 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Building Rehab’s Future",
+        "title": "Celebrating Literature and Poetry",
         "body": "<p>Including the papers of writers, poets, and critics; records of publishers and presses; and rare books and literary manuscripts, our collections make Emory Libraries a destination for scholars from around the world. The Rose Library houses a globally significant collection of centuries of materials from Irish literature to modern poetry, African American writers, Georgia and Southern writers, counterculture, and the Beats.</p><p><strong>Endowed funding for Emory’s literature and poetry collections will create a new curatorship for literature and poetry.</strong> A curator in these key areas can expand and care for the collections. A curator endowment also provides funding for exhibitions and programs so we can share these extraordinary collections with the larger community.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "libraries_priority_1.jpg",
+        "media_src": "libraries_priority_1_popup.jpg",
+        "media_alt": "Two people handle artwork with gloves.",
         "media_type": "image",
         "media_header": "Celebrate Collections",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Endowed funding for Emory’s literature and poetry collections will create a new curatorship for literature and poetry."
       }
     },
     {
@@ -80,12 +80,12 @@
         "title": "Documenting America’s Movements",
         "body": "<p>In addition to books and literary records, the Rose Library collects materials that document the history, culture, and politics of Atlanta and the South. These materials highlight the remarkable changes from the end of the Civil War to Atlanta’s emergence as a 21st-century cosmopolitan center. History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham.</p><p><strong>With a gift to 2O36, we can designate a permanent curator for this phenomenal resource.</strong> We can continue growing the collection, properly care for the pieces, and host exhibitions and programs so the community can bear witness to this living history. Because the best teachers of history are the activists, artists, athletes, business leaders, elected officials, journalists, and organizations that lived it, challenged the thinking of their day, and transformed the region into a bellwether for American political, cultural, and economic shifts.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "libraries_priority_2.jpg",
+        "media_src": "libraries_priority_2_popup.jpg",
+        "media_alt": "A person views a picture through a magnifying glass.",
         "media_type": "image",
         "media_header": "Highlighting History",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham."
       }
     },
     {
@@ -95,8 +95,8 @@
         "title": "Jonathan Coulis 19G",
         "layout": "left",
         "subtitle": "Oral History Coordinator",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "libraries_quote_1.jpg",
+        "media_src": "https://vimeo.com/631452606/369f64dbdc",
         "media_alt": "A video quote of Jonathan Coulis 19G",
         "media_header": "Jonathan Coulis 19G",
         "media_text": "Oral History Coordinator",
@@ -110,27 +110,12 @@
         "title": "Rare Books: A Wealth of Knowledge to Share",
         "body": "<p>Complementing its manuscript holdings, the Rose Library is also home to several hundred thousand volumes of rare books and serials dating from the 13th to the 21st centuries, covering a wide range of subjects from religious texts to anatomical engravings and avant-garde poetry. Highlights of the collection include art and art history, 19th- and 20th-century British literature and Victorian novels, African American literature and imprints, and volumes of Southern history. The personal libraries of many important writers, scholars, presses, and collectors are additional standouts. From the first editions to their translations, inscribed and signed copies, and adaptations, the rare books collection is a treasured resource for textual and bibliographical research.</p><p><strong>Funding through 2O36 would endow a curator position and provide the much-needed resources to make the collection more widely available to the Emory community and beyond.</strong> A collection of this caliber requires a curator whose expertise and energies would focus on expanding it, organizing programming and exhibitions, and connecting with those who will appreciate and learn from it.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "libraries_priority_3.jpg",
+        "media_src": "libraries_priority_3_popup.jpg",
+        "media_alt": "Old book on a shelf.",
         "media_type": "image",
         "media_header": "A Wealth of Knowledge",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
-      }
-    },
-    {
-      "component": "VideoQuote",
-      "props": {
-        "pretitle": "A MESSAGE FROM",
-        "title": "Clinton R. Fluker 17G",
-        "layout": "right",
-        "subtitle": "Curator of African American collections, Stuart A. Rose Manuscript, Archives, and Rare Book Library",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
-        "media_alt": "A video quote of Clinton R. Fluker 17G",
-        "media_header": "Clinton R. Fluker 17G",
-        "media_text": "Curator of African American collections, Stuart A. Rose Manuscript, Archives, and Rare Book Library",
-        "button_close_text": "Exit"
+        "media_text": "From the first editions to their translations, inscribed and signed copies, and adaptations, the rare books collection is a treasured resource for textual and bibliographical research."
       }
     },
     {

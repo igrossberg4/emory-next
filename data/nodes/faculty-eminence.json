@@ -4,7 +4,7 @@
   "page_props": {
     "header": "FACULTY EMINENCE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg",
+    "img_src": "faculty_lede.jpg",
     "about": "core area",
     "text": "Our faculty are essential to achieving Emory’s vision of an inquiry-driven, ethically engaged, and inclusive intellectual community.",
     "footer": {
@@ -25,12 +25,12 @@
       "component": "SectionIntro",
       "props": {
         "header": "Investing in Emory’s faculty and their research, scholarship, and publications will elevate  students’ educational experiences, reinforcing Emory as a destination for future students and faculty.",
-        "background_image": "ecas_isolated_bg.png",
+        "background_image": "faculty_isolated_bg.png",
         "text": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-altering research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world. A faculty diverse in thought, experience, and background that strengthens our university, and is integral to our eminence today and in the future. That means National Academy members but also extraordinary early- and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
+        "img_src": "faculty_intro.jpg",
+        "media_src": "https://vimeo.com/623637496/8fb02cba32",
+        "media_alt": "A faculty member connects with a student.",
+        "media_type": "video",
         "media_header": "Faculty Eminence",
         "media_text": ""
       }
@@ -46,7 +46,7 @@
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR FACULTY EMINENCE",
-        "image_src": "ecas_divider_bg.jpg",
+        "image_src": "faculty_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
         "cta_text": "Support Emory"
       }
@@ -58,12 +58,12 @@
         "title": "New Professors, Thanks to New Endowments",
         "body": "<p>In teaching their niche areas of expertise , conducting research, and gaining further prominence in their fields, Emory faculty members are fundamental to both the learning process and our ability to attract new faculty members. Investing in new distinguished professorships across schools means investing in academic rigor and thought leadership that produces top notch graduates ready to deliver meaningful, lasting contributions to society.</p><p><stong>One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university's prominence.</strong> Endowed  professorships enhance the student experience schoolwide, increasing  academic rigor and  the number of co-curricular experiences available to students across disciplines.</p><p>Endowed professorships provide research funding to support the work of the faculty members who hold them. In an era of increasingly constricted federal funding, reliable research support is essential to attracting the best faculty.  Endowed professorships may be named after the donor or in honor of someone whom the donor specifies, such as “The Ernie V. Garcia Professorship in Cardiac Imaging.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "faculty_priority_1.jpg",
+        "media_src": "faculty_priority_1_popup.jpg",
+        "media_alt": "A faculty researcher",
         "media_type": "image",
         "media_header": "Endowments Bring New Professors",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university's prominence."
       }
     },
     {
@@ -73,12 +73,13 @@
         "title": "Building our Faculty Bench",
         "body": "<p>We’re always looking to add the highest caliber of teachers and researchers to Emory’s braintrust, and <strong>establishing a faculty recruitment pipeline will enable Emory to attract teachers and researchers who are emerging as leaders in their fields.</strong></p><p>Our faculty recruitment pipeline wouldn’t just focus on established educators, it would support postdoctoral fellows from underrepresented groups in transitioning to academic roles. Bringing new talents and fresh perspectives into our educational system will further strengthen Emory’s curriculum and better prepare our students for emerging priorities and trends.</p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "faculty_priority_2.jpg",
+        "media_src": "faculty_priority_2_popup.jpg",
+        "media_alt": "Emory faculty member.",
         "media_type": "image",
         "media_header": "Build Faculty Bench",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Establishing a faculty recruitment pipeline will enable Emory to attract teachers and researchers who are emerging as leaders in their fields.",
+        "media_byline": "Featured: Ciannat Howett, Associate Vice President, Sustainability, Resilience and Economic Inclusion and Adjunct Associate Professor, Emory University"
       }
     },
     {
@@ -88,8 +89,8 @@
         "title": "Margaret T. McGehee 03G 07G",
         "layout": "left",
         "subtitle": "Associate Dean for Faculty Development<br/>Director of the Oxford Center for Teaching and Scholarship<br/>Associate Professor of English and American Studies",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "faculty_quote_1.jpg",
+        "media_src": "https://vimeo.com/631304372/74d3967c46",
         "media_alt": "A video quote of Margaret T. McGehee 03G 07G",
         "media_header": "Margaret T. McGehee 03G 07G",
         "media_text": "Associate Dean for Faculty Development<br/>Director of the Oxford Center for Teaching and Scholarship<br/>Associate Professor of English and American Studies",
@@ -103,12 +104,12 @@
         "title": "Elevating the Best",
         "body": "<p>An endowed chair held by, and named after, a faculty member is the single highest honor that can be bestowed by a department on its faculty. Chairships help Emory recruit and support senior-level clinicians, teachers, and researchers, particularly those who have done work of singular importance in their fields. The designation of chair allows senior-level faculty to further their research endeavors, deepen their scholarship, and explore promising medical techniques and treatments as they seek federal funding. <strong>Endowed chairs advance a school, department, and  area of academic or clinical interest, while honoring both a distinguished faculty member and the individual the chair is named for.</strong></p>",
         "layout": "right",
-        "img_src": "ecas_priority_1.jpg",
-        "media_src": "ecas_priority_1_popup.jpg",
-        "media_alt": "Three students at a pep rally.",
+        "img_src": "faculty_priority_3.jpg",
+        "media_src": "faculty_priority_3_popup.jpg",
+        "media_alt": "Emory faculty member.",
         "media_type": "image",
         "media_header": "Elevating the Best",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Endowed chairs advance a school, department, and  area of academic or clinical interest, while honoring both a distinguished faculty member and the individual the chair is named for."
       }
     },
     {
@@ -118,8 +119,8 @@
         "title": "Kelly Wiltse Nicely",
         "layout": "right",
         "subtitle": "Assistant Professor, CRNA Program Director",
-        "img_src": "ecas_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "img_src": "faculty_quote_2.jpg",
+        "media_src": "https://vimeo.com/631304287/059f7f4254",
         "media_alt": "A video quote of Kelly Wiltse Nicely",
         "media_header": "Kelly Wiltse Nicely",
         "media_text": "Assistant Professor, CRNA Program Director",
