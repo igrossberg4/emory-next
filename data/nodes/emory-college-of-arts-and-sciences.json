@@ -64,14 +64,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Access for All Students",
-        "body": "<p>Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society.</p>",
+        "body": "<p>Key to a better future, access to higher education through scholarships is a social good. Opening up an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society.</p>",
         "layout": "right",
         "img_src": "ecas_priority_1.jpg",
         "media_src": "ecas_priority_1_popup.jpg",
         "media_alt": "Three students at a pep rally.",
         "media_type": "image",
         "media_header": "Student Access",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "2O36 will generate need-based scholarships for many more students and create sustainable funding for the long term."
       }
     },
     {
@@ -137,7 +137,7 @@
     {
       "component": "ColumnsText",
       "props": {
-        "column1": "Cultivating the arts expands the undergraduate experience, improves access, and creates lasting, productive partnerships across creative disciplines. Funding fellowships and residencies in film, music, dance, theater, and creative writing while hosting internationally respected artists offer students ways to take big risks, pursue careers that align with their passions, and change the world by changing hearts.",
+        "column1": "Cultivating the arts expands the undergraduate experience, improves access, and creates lasting, productive partnerships across creative disciplines. Funding fellowships and residencies in film, music, dance, theater, and creative writing while hosting internationally respected artists offers students ways to take big risks, pursue careers that align with their passions, and change the world by changing hearts.",
         "column2": "Investing in the arts gives voice to those unheard, canvas to those unseen, and shape to the way we understand humanity through creative expression. <strong>Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach.</strong>"
       }
     },
@@ -147,12 +147,12 @@
         "pretitle": "A MESSAGE FROM",
         "title": "Carol Anderson",
         "layout": "right",
-        "subtitle": "Charles Howard Candler Professor And Chair, African American Studies",
-        "img_src": "ecas_quote_3.jpg",
+        "subtitle": "Charles Howard Candler Professor and Chair, African American Studies",
+        "img_src": "ecas_quote_4.jpg",
         "media_src": "https://vimeo.com/630219957/cce00947a0",
-        "media_alt": "A video quote from Carol Anderson",
+        "media_alt": "An audio quote from Carol Anderson",
         "media_header": "Carol Anderson",
-        "media_text": "Charles Howard Candler Professor And Chair, African American Studies",
+        "media_text": "Charles Howard Candler Professor and Chair, African American Studies",
         "button_close_text": "Exit"
       }
     },
@@ -168,10 +168,10 @@
           },
           {
             "title": "Encourage Collaboration of Emerging Scientists",
-            "description": "<p>Imagine developing a cancer vaccine from a plant or finding new subatomic particles that produce cleaner energy. These types of unexpected discoveries come from sharing knowledge between disciplines and departments. <strong>In 2036, an interdisciplinary postdoctoral fellowship in natural sciences will quickly become a destination for emerging scientists.</strong></p><p>Encompassing every discipline, these postdoctoral fellows can be free-floating conduits between departments and schools. Not tied to one lab or research program, they can draw inspiration, leverage knowledge, and share research more widely. By collaborating with some of the greatest scientific minds in the fields of biology, chemistry, anthropology, and more, Emory College postdoctoral fellows will explore the boundless potential for world-changing discoveries in the natural sciences.</p>"
+            "description": "<p>Imagine developing a cancer vaccine from a plant or finding new subatomic particles that produce cleaner energy. These types of unexpected discoveries come from sharing knowledge between disciplines and departments. <strong>In 2036, an interdisciplinary postdoctoral fellowship in natural sciences will quickly become sought after for emerging scientists.</strong></p><p>Encompassing every discipline, these postdoctoral fellows can be free-floating conduits between departments and schools. Not tied to one lab or research program, they can draw inspiration, leverage knowledge, and share research more widely. By collaborating with some of the greatest scientific minds in the fields of biology, chemistry, anthropology, and more, Emory College postdoctoral fellows will explore the boundless potential for world-changing discoveries in the natural sciences.</p>"
           },
           {
-            "title": "Experiential Learning through Emory Edge",
+            "title": "Experiential Learning Through Emory Edge",
             "description": "<p>The Emory experience includes anything that allows our students to apply the lessons they learn from our 86 majors and 63 minors. Outfitted with rigorous critical thinking skills, Emory College students can venture into a constellation of transformative experiences, including undergraduate research, entrepreneurship, internships, and study abroad. The Emory Edge program helps students choose which opportunities to participate in and makes sure those opportunities are available to all students, regardless of finances.</p><p><strong>In 2036, every Emory College student will participate in experiential learning.</strong> Endowing the Emory Edge program will fulfill the promise of an Emory experience that serves students for a lifetime. As our students navigate the larger world, they will carry with them Emory’s defining ethos: a sense of community brimming with opportunity.</p>"
           }
         ]
