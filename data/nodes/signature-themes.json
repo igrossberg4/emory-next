@@ -38,7 +38,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Student success is just absolutely at the core of our educational mission. Emory has a very good track record, but as we think about our student body and where they're coming from, and what their individual goals are, we need to be able to serve our students.",
+        "text": "Student flourishing is just absolutely at the core of our educational mission. Emory has a very good track record, but as we think about our student body and where they're coming from, and what their individual goals are, we need to be able to serve our students.",
         "attribution": "— Gregory L. Fenves, President, Emory University"
       }
     },
@@ -114,21 +114,6 @@
       }
     },
     {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key Priority",
-        "title": "Working to End Cancer",
-        "body": "<p>As a leader in biomedical innovation and comprehensive patient care, Emory is advancing our understanding of cancer and patient-centered comprehensive treatment. Our world-renowned academic medical center with the largest health care system in Georgia benefits from collaborative, multidisciplinary expertise to develop novel therapies and elevate patient care. <strong>We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it. At the forefront of their fields, Emory’s researchers, faculty, and physicians have their sights on a cancer-free future.</strong></p>",
-        "layout": "right",
-        "img_src": "themes_priority_4.jpg",
-        "media_src": "themes_priority_4_popup.jpg",
-        "media_alt": "TA gentleman completes experiment with tubes.",
-        "media_type": "image",
-        "media_header": "Working to End Cancer",
-        "media_text": "We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it."
-      }
-    },
-    {
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
@@ -141,6 +126,21 @@
         "media_header": "Jinho Choi",
         "media_text": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
         "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Working to End Cancer",
+        "body": "<p>As a leader in biomedical innovation and comprehensive patient care, Emory is advancing our understanding of cancer and patient-centered comprehensive treatment. Our world-renowned academic medical center with the largest health care system in Georgia benefits from collaborative, multidisciplinary expertise to develop novel therapies and elevate patient care. <strong>We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it. At the forefront of their fields, Emory’s researchers, faculty, and physicians have their sights on a cancer-free future.</strong></p>",
+        "layout": "right",
+        "img_src": "themes_priority_4.jpg",
+        "media_src": "themes_priority_4_popup.jpg",
+        "media_alt": "TA gentleman completes experiment with tubes.",
+        "media_type": "image",
+        "media_header": "Working to End Cancer",
+        "media_text": "We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it."
       }
     },
     {
