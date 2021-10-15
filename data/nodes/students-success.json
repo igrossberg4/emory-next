@@ -26,7 +26,7 @@
       "props": {
         "header": "Emory prepares students for a lifelong journey of transformation, contribution, and service.",
         "background_image": "student_isolated_bg.png",
-        "text": "<p>Our students are our future. And supporting student flourishing means helping them become thinkers, doers, and team players. It means creating an inclusive environment where our diverse student body feels at home, strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. . Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
+        "text": "<p>Our students are our future. And supporting student flourishing means helping them become thinkers, doers, and team players. It means creating an inclusive environment where our diverse student body feels at home, strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
         "img_src": "student_intro.jpg",
         "media_src": "https://vimeo.com/632162118/5f4afc93b5",
         "media_alt": "Man in suit speaking.",
@@ -133,12 +133,12 @@
         "pretitle": "STUDENT FLOURISHING",
         "items": [
           {
-            "title": "For Students, Campus is Home",
-            "description": "<p>As a community grounded in relationships, few things are more important than maintaining the best possible campus experience. <strong>To achieve that goal, funding from 2O36 will be allocated to improving Emory residence halls and campus buildings.</strong> Your support will allow us to continue what has always made Emory campuses unique—from their natural beauty to architectural integrity—while also pushing forward in areas like accessibility, transportation, and tech integration. The more our campus can feel like home, the more our students will thrive.</p>"
-          },
-          {
             "title": "In 2O36, Sports Bring Our Community Together",
             "description": "<p>From varsity athletics to recreation and wealthness, Emory believes that physical activity is essential to promoting a student body that’s happy and healthy. <strong>When you support 2O36, you’re supporting initiatives that will help us grow all our athletic offerings.</strong> This is not restricted to our awesome student-athletes. With dozens of intercollegiate and intramural sports offered at both the Atlanta and Oxford campuses, Emory is committed to providing a wide range of athletic opportunities to enhance students’ well-being, promote community pride, and allow students to pursue passions and goals outside of the classroom.</p>"
+          },
+          {
+            "title": "For Students, Campus is Home",
+            "description": "<p>As a community grounded in relationships, few things are more important than maintaining the best possible campus experience. <strong>To achieve that goal, funding from 2O36 will be allocated to improving Emory residence halls and student spaces.</strong> Your support will allow us to continue what has always made Emory campuses unique—from their natural beauty to architectural integrity—while also pushing forward in areas like accessibility, transportation, and tech integration. The more our campus can feel like home, the more our students will thrive.</p>"
           }
         ]
       }
