@@ -35,7 +35,7 @@
         "background_image": "rollins_isolated_bg.png",
         "text": "<p><i>Public health</i>, once an obscure term to many, is now widely recognized with the onset of the global COVID-19 pandemic. The need for science-driven inquiry and public health leadership is greater now than ever. The Rollins School of Public Health provides both, pairing expertise with collaboration and interdisciplinary action to prevent disease, promote health, and save lives around the world. Founded just over 30 years ago, Rollins is now ranked 4th among the nation's schools of public health. By 2036, we expect to be second to none.</p>",
         "img_src": "rollins_intro.jpg",
-        "media_src": "https://vimeo.com/618170754/342455f066",
+        "media_src": "https://vimeo.com/633278116/47a2ac88e5",
         "media_alt": "Men with glasses look at presentation.",
         "media_type": "video",
         "media_header": "Rollins School of Public Health",
@@ -45,8 +45,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "While at Rollins, I've been fortunate to be able to see to the training of the future generation of public health workers.",
-        "attribution": "— James W. Curran P03,  James W. Curran Dean of Public Health<br/>Co-Director, Emory Center for AIDS Research Professor, Epidemiology"
+        "text": "At Rollins, we share the value of investing in people knowing that investments in our students have an immediate impact on their lives and long-term implications for the well-being, health, and happiness of populations throughout the world. We are preparing students for lives of leadership on a global scale.",
+        "attribution": "— James W. Curran, MD, MPH, James W. Curran Dean of Public Health<br/>Co-Director, Emory Center for AIDS Research<br/>Professor of Epidemiology"
       }
     },
     {
