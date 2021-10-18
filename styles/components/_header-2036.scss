@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  padding: 40px 0 100px 0;
+  padding: 0;
   text-align: center;
   //background: url("/public/images/2036-bg.jpg") no-repeat center bottom;
   background-size: cover !important;
@@ -318,26 +318,26 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     position: relative;
     padding-left: math.div($grid-gutter-width, 2);
     padding-right: math.div($grid-gutter-width, 2);
-    padding-top: calc((80px * 3) + (10px * 3) + 120px + 80px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
+    //padding-top: calc((80px * 3) + (10px * 3) + 120px + 80px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
     max-width: map-get($container-max-widths, 'lg');
     transition: padding-top $scroll-down-transition-duration * 1.5 ease;
 
-    // Rotated mobiel devices!!
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (orientation: landscape) {
-      padding-top: 250px !important;
-    }
+    // // Rotated mobiel devices!!
+    // @media (max-width: map-get($grid-breakpoints, 'md')) and (orientation: landscape) {
+    //   padding-top: 250px !important;
+    // }
 
-    @include media-breakpoint-up(sm) {
-      padding-top: calc((88px * 3) + (20px * 3) + 150px + 40px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
-    }
+    // @include media-breakpoint-up(sm) {
+    //   padding-top: calc((88px * 3) + (20px * 3) + 150px + 40px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
+    // }
 
-    @include media-breakpoint-up(lg) {
-      padding-top: $round-image-size-medium;
-    }
+    // @include media-breakpoint-up(lg) {
+    //   padding-top: $round-image-size-medium;
+    // }
 
-    @include media-breakpoint-up(xl) {
-      padding-top: $round-image-size-medium;
-    }
+    // @include media-breakpoint-up(xl) {
+    //   padding-top: $round-image-size-medium;
+    // }
   }
 
   .title {
@@ -389,9 +389,9 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       }
     }
 
-    .header-inner-content__text {
-      padding-top: math.div($round-image-size + $default-separation, 5);
-    }
+    // .header-inner-content__text {
+    //   padding-top: math.div($round-image-size + $default-separation, 5);
+    // }
 
     .title {
       animation: flash $scroll-down-transition-duration * 2;

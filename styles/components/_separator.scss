@@ -31,6 +31,11 @@
         height: 150%;
         top: -50%;
       }
+
+      @media (max-height: $round-image-vertical-breakpoint-md) {
+        height: 100%;
+        top: -25%;
+      }
     }
   }
 

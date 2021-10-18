@@ -9,4 +9,8 @@
     bottom: 30px;
     left: 30px;
   }
+
+  @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+    display: none;
+  }
 }

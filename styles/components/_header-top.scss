@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 60px 0 80px 0;
+  // padding: 60px 0 80px 0;
   text-align: center;
 
   .header-inner-content {
@@ -63,8 +63,22 @@
     line-height: $line-height-xs;
     text-transform: uppercase;
     font-size: $h2-font-size;
+
     @include media-breakpoint-up(xl){
       font-size: $h2-font-size--desktop;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, 'lg')) and (max-height: $round-image-vertical-breakpoint-lg) {
+      font-size: $h2-font-size;
+    }
+
+    // ¡Vertical media queries take precedence!
+    @media (min-width: map-get($grid-breakpoints, 'lg')) and (max-height: $round-image-vertical-breakpoint-md) {
+      font-size: $h3-font-size;
+    }
+
+    @media (max-height: $round-image-vertical-breakpoint-sm) {
+      font-size: $font-size-xxlg;
     }
   }
 
@@ -98,6 +112,16 @@
     @include media-breakpoint-up(sm) {
       padding-bottom: $default-separation;
     }
+
+    @media (max-height: $round-image-vertical-breakpoint-md) {
+      padding-bottom: math.div($default-separation, 2);
+    }
+
+    @media (max-height: $round-image-vertical-breakpoint-sm) {
+      .btn {
+        font-size: $font-size-tiny;
+      }
+    }
   }
 
   .btn {
@@ -113,11 +137,11 @@
 
   .header-inner-content__img {
     position: absolute;
-    bottom: 50%;
     max-width: unset;
+    bottom: 45%;
     width: $round-image-size-small;
     height: $round-image-size-small;
-    margin-bottom: calc(-1 * ((#{$round-image-size-small} / 2) - 5em));
+    //margin-bottom: calc(-1 * ((#{$round-image-size-small} / 2) - 5em));
     box-sizing: border-box;
     will-change: width, height, opacity, bottom, transform, margin-bottom;
     transition:
@@ -130,17 +154,30 @@
     @include media-breakpoint-up(sm) {
       width: $round-image-size;
       height: $round-image-size;
-      margin-bottom: calc(-1 * ((#{$round-image-size} / 2) - 5em));
+      bottom: 40%;
     }
     @include media-breakpoint-up(lg) {
       width: $round-image-size-medium;
       height: $round-image-size-medium;
-      margin-bottom: calc(-1 * ((#{$round-image-size-medium} / 2) - 5em));
+      bottom: 35%;
     }
     @include media-breakpoint-up(xl) {
       width: $round-image-size-big;
       height: $round-image-size-big;
-      margin-bottom: calc(-1 * ((#{$round-image-size-big} / 2) - 5em));
+      bottom: 30%;
+    }
+
+    // ¡Vertical media queries take precedence!
+
+    @media (min-width: map-get($grid-breakpoints, 'lg')) and (max-height: $round-image-vertical-breakpoint-md) {
+      width: $round-image-size-medium;
+      height: $round-image-size-medium;
+    }
+
+    @media (max-height: $round-image-vertical-breakpoint-sm) {
+      width: $round-image-size-tiny;
+      height: $round-image-size-tiny;
+      bottom: 40%;
     }
 
     img {
@@ -149,42 +186,57 @@
   }
 
   .header-inner-content__text {
-    position: relative;
+    position: absolute;
+    top: 60%;
     z-index: 1;
     padding-left: math.div($grid-gutter-width, 2);
     padding-right: math.div($grid-gutter-width, 2);
-    padding-top: $round-image-size-small + $default-separation;
+    // padding-top: $round-image-size-small + $default-separation;
     //max-width: map-get($container-max-widths, 'md');
     max-width: 100%;
     transition: all $scroll-down-transition-duration ease-out;
 
     @include media-breakpoint-up(sm) {
-      padding-top: $round-image-size + $default-separation;
+      top: 65%;
     }
-
     @include media-breakpoint-up(lg) {
-      padding-top: $round-image-size-medium + $default-separation;
+      top:70%;
+    }
+    @include media-breakpoint-up(xl) {
+      top: 75%;
     }
 
-    @include media-breakpoint-up(xl) {
-      padding-top: $round-image-size-big + $default-separation;
+    @media (max-height: $round-image-vertical-breakpoint-sm) {
+      top: 65%;
     }
   }
 
   .title {
-    transition: all math.div($scroll-down-transition-duration, 2) ease-out;
-    max-height: 2em;
+    transition: all $scroll-down-transition-duration ease-out;
     @include media-breakpoint-up(md) {
       white-space: nowrap;
+      max-height: 2em;
     }
   }
 
   .pretitle,
   .subtitle {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align:center;
     opacity: 0;
     margin-bottom: 0;
-    max-height: 0;
-    transition: all math.div($scroll-down-transition-duration, 2) ease-out;
+    transition: all $scroll-down-transition-duration ease-out;
+  }
+
+  .pretitle {
+    bottom: 100%;
+  }
+
+  .subtitle {
+    top: 100%;
   }
 
   // ANIMATION ACTIVE
@@ -192,7 +244,7 @@
     background: $body-bg;
 
     .header-inner-content__img {
-      bottom: -100px;
+      bottom: 0px;
       width: 110vw;
       height: 110vw;
       // transform: translate(0, 0);
@@ -206,8 +258,9 @@
     }
 
     .header-inner-content__text {
+      top: 40%;
       //max-width: map-get($container-max-widths, 'lg');
-      padding-top: math.div($round-image-size + $default-separation, 5);
+      // padding-top: math.div($round-image-size + $default-separation, 5);
     }
 
     .title {
@@ -215,7 +268,6 @@
       // The typography is not properly centered on its own axis.
       // 0.17em is the correction needed to make it optically centered.
       margin: 12px 0 calc(32px - 0.17em) 0;
-      max-height: 100em;
       white-space: normal;
     }
 
@@ -226,7 +278,6 @@
     .pretitle,
     .subtitle {
       opacity: 1;
-      max-height: 100%;
     }
   }
 }

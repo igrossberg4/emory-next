@@ -38,6 +38,7 @@ $font-family-serif: 'Ampersand', serif !default;
 
 $rem-in-px: 16px !default;
 $font-size-base: 1.125rem !default; // 18px
+$font-size-tiny: $font-size-base * 0.5; // 12px
 $font-size-xs: $font-size-base * 0.667; // 12px
 $font-size-xsm: $font-size-base * 0.78 !default; // 14px
 $font-size-sm: $font-size-base * 0.875 !default; // 15.75px
@@ -108,10 +109,15 @@ $default-separation: 30px;
 $default-section-padding: 60px;
 $default-separation-sm: 20px;
 
+$round-image-size-tiny: 200px;
 $round-image-size-small: 280px;
 $round-image-size: 373px;
 $round-image-size-medium: 420px;
 $round-image-size-big: 580px;
+
+$round-image-vertical-breakpoint-lg: 900px;
+$round-image-vertical-breakpoint-md: 800px;
+$round-image-vertical-breakpoint-sm: 600px;
 
 $icon-button-size: 64px;
 $icon-button-size--small: 48px;
