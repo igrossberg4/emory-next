@@ -35,9 +35,9 @@
         "background_image": "law_isolated_bg.png",
         "text": "<p>Emory Law is more than reading cases and statutes. It’s an inclusive environment where students are given a unique learning opportunity and resources that prepare them to immediately serve their communities upon graduation. With ethics and ideals at the helm, Emory Law shapes future thought leaders and innovators—their reach extending far beyond our city.</p>",
         "img_src": "law_intro.jpg",
-        "media_src": "2036_brain_health_smoke_blue.jpg",
+        "media_src": "https://vimeo.com/633273454/d90f52f2a5",
         "media_alt": "Three students walk past trees.",
-        "media_type": "image",
+        "media_type": "video",
         "media_header": "School of Law",
         "media_text": ""
       }
@@ -96,7 +96,7 @@
         "layout": "left",
         "subtitle": "Dean and Asa Griggs Candler Professor of Law",
         "img_src": "law_quote_1.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/632415049/d73e5a657c",
         "media_alt": "A video quote of Mary Anne Bobinski",
         "media_header": "Mary Anne Bobinski",
         "media_text": "Dean and Asa Griggs Candler Professor of Law",
@@ -126,7 +126,7 @@
         "layout": "right",
         "subtitle": "Vice Dean, Thomas Simmons Professor of Law<br/>Adjunct Professor, Economics, Emory College of Arts and Sciences",
         "img_src": "law_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/632415020/097c1a5ade",
         "media_alt": "A video quote of Joanna Shepherd 01G 02G",
         "media_header": "Joanna Shepherd 01G 02G",
         "media_text": "Vice Dean, Thomas Simmons Professor of Law<br/>Adjunct Professor, Economics, Emory College of Arts and Sciences",
@@ -146,19 +146,6 @@
         "media_type": "image",
         "media_header": "Aiding the Community",
         "media_text": "2O36 will provide support for students to continue participating in pro bono legal support for individuals, community groups, and nonprofit organizations."
-      }
-    },
-    {
-      "component": "AccordionComponent",
-      "props": {
-        "title": "KEY PRIORITIES",
-        "pretitle": "SCHOOL OF LAW",
-        "items": [
-          {
-            "title": "2O36 Drives Community Support",
-            "description": "<p>Through the centers, clinics, and institutes at Emory Law, students have access to hands-on experiences through live-client clinics, community outreach, and policy analysis. These experiential aspects of Emory Law’s curriculum are crucial to shaping leaders in this space and preparing them for a successful career.</p><p><strong>2O36 will provide support for students to continue participating in pro bono legal support for individuals, community groups, and nonprofit organizations.</strong> This experience provides a tremendous benefit  while training students and instilling in them the importance of volunteering and service, contributing to a profession led with empathy and understanding.</p>"
-          }
-        ]
       }
     }
   ]

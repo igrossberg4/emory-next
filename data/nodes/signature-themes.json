@@ -38,7 +38,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Student success is just absolutely at the core of our educational mission. Emory has a very good track record, but as we think about our student body and where they're coming from, and what their individual goals are, we need to be able to serve our students.",
+        "text": "Student flourishing is just absolutely at the core of our educational mission. Emory has a very good track record, but as we think about our student body and where they're coming from, and what their individual goals are, we need to be able to serve our students.",
         "attribution": "— Gregory L. Fenves, President, Emory University"
       }
     },
@@ -102,7 +102,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "The Crossroads of AI and Humanity is at Emory",
-        "body": "<p>Future generations of artificial intelligence will have enormous implications for society and the potential to reshape nearly every industry. Essential to understanding AI and its influence is the people programming it. Emory has a moral imperative to be an authority in the field, establishing guidelines and helping to shape its algorithms, applications, and uses to promote equity and equality that benefit us all.</p><p>Emory faculty are asking: How can we pursue AI in ways that promote human flourishing, and recognize that intelligence includes navigating ambiguity, employing ethical decision-making, and eliminating bias? <strong>Emory can lead the development of AI as an interdisciplinary approach between technologists, humanists, and social scientists. Applications of future AI technologies involve many areas of Emory strengths, including health care, business, and social sciences.</strong></p>",
+        "body": "<p>Future generations of artificial intelligence will have enormous implications for society and the potential to reshape nearly every industry. Essential to understanding AI and its influence are the people programming it. Emory has a moral imperative to be an authority in the field, establishing guidelines and helping to shape its algorithms, applications, and uses to promote equity and equality that benefit us all.</p><p>Emory faculty are asking: How can we pursue AI in ways that promote human flourishing, and recognize that intelligence includes navigating ambiguity, employing ethical decision-making, and eliminating bias? <strong>Emory can lead the development of AI as an interdisciplinary approach between technologists, humanists, and social scientists. Applications of future AI technologies involve many areas of Emory strengths, including health care, business, and social sciences.</strong></p>",
         "layout": "right",
         "img_src": "themes_priority_3.jpg",
         "media_src": "themes_priority_3_popup.jpg",
@@ -111,6 +111,21 @@
         "media_header": "AI and Humanity",
         "media_text": "Emory can lead the development of AI as an interdisciplinary approach between technologists, humanists, and social scientists. Applications of future AI technologies involve many areas of Emory strengths, including health care, business, and social sciences.",
         "media_byline": "Featured: Lars Ruthotto, Associate Professor, Mathematics and Computer Science"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Jinho Choi",
+        "layout": "right",
+        "subtitle": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
+        "img_src": "themes_quote_2.jpg",
+        "media_src": "https://vimeo.com/631452503/495c92f942",
+        "media_alt": "A video quote of Jinho Choi",
+        "media_header": "Jinho Choi",
+        "media_text": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
+        "button_close_text": "Exit"
       }
     },
     {
@@ -126,21 +141,6 @@
         "media_type": "image",
         "media_header": "Working to End Cancer",
         "media_text": "We’re not only advancing the world’s understanding of cancer, but we’re constantly investigating new ways to treat it, and possibly in the near future, how to prevent it."
-      }
-    },
-    {
-      "component": "VideoQuote",
-      "props": {
-        "pretitle": "A MESSAGE FROM",
-        "title": "Jinho Choi",
-        "layout": "left",
-        "subtitle": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
-        "img_src": "themes_quote_2.jpg",
-        "media_src": "https://vimeo.com/631452503/495c92f942",
-        "media_alt": "A video quote of Jinho Choi",
-        "media_header": "Jinho Choi",
-        "media_text": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
-        "button_close_text": "Exit"
       }
     },
     {
