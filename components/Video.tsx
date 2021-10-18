@@ -30,54 +30,52 @@ export default function Video(props: any) {
   const re = new RegExp("^(http|https)://", "i");
   return (
     <Fragment>
-      {!re.test(media_src)  ?
-      <video
-              playsInline={props.playsInline}
-              muted={props.muted}
-              autoPlay={props.autoPlay}
-              loop={props.loop}
-              onPlay={() => {
-                if(props.onPlay){
-                  props.onPlay();
-                }
-              }}
-              ref={(ref) => {
-                videoRef.current = ref as any;
-                /*dispatch({
-                  type: "REGISTER_VIDEO",
-                  payload: {
-                    key: props.video_src ? props.video_src : props.media_src,
-                    value: { paused: true, muted: true, videoRef: ref, controls:controls },
-                  },
-                });*/
-                if(props.onVideoRef){
-                  props.onVideoRef(ref);
-                }
-                //props.onVideoRef(controls)
-
-              }}
-              onEnded={(en) => {
-                //dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src ? props.video_src : props.media_src}});
-                if(props.onVideoEnd){
-                  props.onVideoEnd();
-                }
-                //router.push(props.route_to)
-                // Check if the video has ended.
-                // TO DO define if we take some action on end.
-              }}
-        controls={props.controls}
-        key={props.video_src ? props.video_src : props.media_src}
-        //initial={!props.initial_animation ? { opacity: 0 } : props.initial_animation}
-        //exit={!props.initial_animation ? { opacity: 1, height: "400px", width: "400px", borderRadius:'50%' } : props.initial_animation}
-
-      >
-        <source src={media_src} type="video/mp4"></source>
-      </video>
-      :
-      <div className="video-vimeo">
-        <ReactPlayer playing={true} light={false} controls url={media_src}/>
-      </div>
-}
+      {!re.test(media_src) ? (
+        <video
+          playsInline={props.playsInline}
+          muted={props.muted}
+          autoPlay={props.autoPlay}
+          loop={props.loop}
+          onPlay={() => {
+            if (props.onPlay) {
+              props.onPlay();
+            }
+          }}
+          ref={(ref) => {
+            videoRef.current = ref as any;
+            /*dispatch({
+              type: "REGISTER_VIDEO",
+              payload: {
+                key: props.video_src ? props.video_src : props.media_src,
+                value: { paused: true, muted: true, videoRef: ref, controls:controls },
+              },
+            });*/
+            if (props.onVideoRef) {
+              props.onVideoRef(ref);
+            }
+            //props.onVideoRef(controls)
+          }}
+          onEnded={(en) => {
+            //dispatch({ type: 'SKIP_VIDEO', payload:{key:props.video_src ? props.video_src : props.media_src}});
+            if (props.onVideoEnd) {
+              props.onVideoEnd();
+            }
+            //router.push(props.route_to)
+            // Check if the video has ended.
+            // TO DO define if we take some action on end.
+          }}
+          controls={props.controls}
+          key={props.video_src ? props.video_src : props.media_src}
+          //initial={!props.initial_animation ? { opacity: 0 } : props.initial_animation}
+          //exit={!props.initial_animation ? { opacity: 1, height: "400px", width: "400px", borderRadius:'50%' } : props.initial_animation}
+        >
+          <source src={media_src} type='video/mp4'></source>
+        </video>
+      ) : (
+        <div className='video-vimeo'>
+          <ReactPlayer playing={true} light={false} controls url={media_src} />
+        </div>
+      )}
     </Fragment>
   );
 }
