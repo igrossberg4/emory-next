@@ -164,25 +164,17 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: 80px;
+  top: 120px;
   width: 100%;
   z-index: 2;
 
   span {
     display: block;
     margin-bottom: 10px;
-
-    @include media-breakpoint-up(sm) {
-      margin-bottom: 20px;
-    }
   }
 
   .header-2036__title__3 {
     margin-top: 120px;
-
-    @include media-breakpoint-up(sm) {
-      margin-top: 150px;
-    }
   }
 
   svg {
@@ -195,19 +187,18 @@
       drop-shadow(4px 4px 11px rgba(177, 167, 162, .4));
   }
 
-  @include media-breakpoint-up(sm) {
-    top: 40px;
+  // Rotated mobile devices!!!
 
+  @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
     svg {
-      width: 62px;
-      height: 88px;
+      width: 40px;
+      height: 58px;
     }
   }
 
-  // Rotated mobile devices!!!
-  @media (max-width: map-get($grid-breakpoints, 'md')) and (orientation: landscape) {
+  @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
     flex-direction: row;
-    top: auto;
+    top: 200px;
 
     .header-2036__title__3 {
       margin-top: 0;
@@ -217,14 +208,14 @@
 
     > span {
       display: block;
-      padding: 0 23px;
+      padding: 0 6px;
     }
   }
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
     top: auto;
-    bottom: 40%;
+    bottom: 46%;
 
     > span {
       display: block;
@@ -262,7 +253,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
   .header-inner-content__img {
     position: absolute;
-    bottom: calc(100vh - 410px);
+    bottom: calc(100% - 120px - 86px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
     max-width: unset;
     width: 100px;
     height: 100px;
@@ -282,24 +273,20 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       transform $scroll-down-transition-duration $pre-animation-delay $curve,
       opacity $scroll-down-transition-duration $pre-animation-delay $curve;
 
-    @include media-breakpoint-up(sm) {
-      bottom: calc(100vh - 430px);
-      width: 130px;
-      height: 130px;
-    }
-
     @include media-breakpoint-up(md) {
       left: calc((100vw / 2) - 230px);
-      bottom: 36.9%;
+      bottom: 42%;
       width: 258px;
       height: 258px;
     }
 
-    // Rotated mobile devices!!!
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (orientation: landscape) {
-      margin-left: -100px;
-      margin-bottom: 0px;
-      bottom: calc(50% - 60px);
+    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
+      bottom: calc(100% - 120px - 64px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
+    }
+
+    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
+      bottom: calc(100% - 200px - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
+      margin-left: -45px;
     }
 
     video {
@@ -315,29 +302,24 @@ $curve: cubic-bezier(.63,.72,.79,.98);
   }
 
   .header-inner-content__text {
-    position: relative;
+    top: 75%;
     padding-left: math.div($grid-gutter-width, 2);
     padding-right: math.div($grid-gutter-width, 2);
     //padding-top: calc((80px * 3) + (10px * 3) + 120px + 80px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
     max-width: map-get($container-max-widths, 'lg');
     transition: padding-top $scroll-down-transition-duration * 1.5 ease;
 
-    // // Rotated mobiel devices!!
-    // @media (max-width: map-get($grid-breakpoints, 'md')) and (orientation: landscape) {
-    //   padding-top: 250px !important;
-    // }
+    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
+      top: 70%;
+    }
 
-    // @include media-breakpoint-up(sm) {
-    //   padding-top: calc((88px * 3) + (20px * 3) + 150px + 40px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
-    // }
+    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
+      top: 65%;
+    }
 
-    // @include media-breakpoint-up(lg) {
-    //   padding-top: $round-image-size-medium;
-    // }
-
-    // @include media-breakpoint-up(xl) {
-    //   padding-top: $round-image-size-medium;
-    // }
+    @include media-breakpoint-up(md) {
+      top: 63%;
+    }
   }
 
   .title {
@@ -371,7 +353,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       top: auto;
       width:110vw;
       height:110vw;
-      bottom: -100px !important;
+      bottom: 0px !important;
       margin-left: 0 !important;
       margin-bottom: 0 !important;
       z-index: -1;
@@ -389,9 +371,9 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       }
     }
 
-    // .header-inner-content__text {
-    //   padding-top: math.div($round-image-size + $default-separation, 5);
-    // }
+    .header-inner-content__text {
+      top: 40%;
+    }
 
     .title {
       animation: flash $scroll-down-transition-duration * 2;
