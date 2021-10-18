@@ -184,6 +184,7 @@ export default function IntroPage(props: any) {
                         ref={(ref) => (reftoAnimation.current = ref as any)}
                       >
                         <Video
+                          playsInline={true}
                           muted={muted || state.isCircleExpanded}
                           autoPlay={videoPlayed != undefined && !userPlayVideo &&  props.active}
                           loop={true}

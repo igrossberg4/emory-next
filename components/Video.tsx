@@ -32,6 +32,7 @@ export default function Video(props: any) {
     <Fragment>
       {!re.test(media_src)  ?
       <video
+              playsInline={props.playsInline}
               muted={props.muted}
               autoPlay={props.autoPlay}
               loop={props.loop}
