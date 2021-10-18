@@ -25,9 +25,35 @@
       position: absolute;
     }
 
+    // Due to Next.js terrible handling of image containers (always absolute and
+    // stretched to the parent size, thus provoking deformations when trying
+    // to set a max-height) we need to add a container that keeps the
+    // aspect ratio and hard reset Next.js. Thanks for nothing, Next.js.
+    .image-container {
+      max-height: 80vh;
+      overflow: hidden;
+      display:inline-block;
+
+      > div {
+        display: inline-block !important;
+      }
+
+      div {
+        padding-top: 0 !important;
+      }
+
+      img {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        max-height: 80vh !important;
+      }
+    }
+
     figure {
       display: table;
-      max-height: 50vh;
 
       video{
         max-width: 900px;
@@ -40,7 +66,7 @@
       display: table-caption;
       caption-side: bottom;
       margin: 20px auto;
-      max-width: map-get($container-max-widths, 'md');
+      // max-width: map-get($container-max-widths, 'md');
       .text-body{
         &:before{
           content: unset;
