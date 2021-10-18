@@ -324,7 +324,9 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
+      const isMenu = e.target instanceof HTMLElement && e.target.closest('.menu-main');
       if (
+        !isMenu &&
         circleAnimatePreventScrollEnabled &&
         scrollY < circleAnimateMinimunScroll &&
         ((!isCircleExpanded && isGoingDown) ||
