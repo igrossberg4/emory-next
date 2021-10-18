@@ -35,9 +35,9 @@
         "background_image": "healthcare_isolated_bg.png",
         "text": "<p>Emory Healthcare, part of Emory University, is the most extensive health care system in Georgia. Made up of 11 hospitals, the Emory Clinic, and more than 250 provider locations, the Emory Healthcare Network is the largest clinically integrated network in Georgia, with more than 2,800 physicians concentrating in 70 different subspecialties. Patients are always our priority, and we work every day to improve the health of individuals and communities at home and throughout the world.</p>",
         "img_src": "healthcare_intro.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
+        "media_src": "https://vimeo.com/629052231/28a44506b2",
         "media_alt": "A woman in lab coat uses medical instrument.",
-        "media_type": "image",
+        "media_type": "video",
         "media_header": "Emory Healthcare",
         "media_text": ""
       }
@@ -108,7 +108,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "A Better Surgical Pavilion",
-        "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. Anew leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
+        "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
         "layout": "right",
         "img_src": "healthcare_priority_3.jpg",
         "media_src": "healthcare_priority_3_popup.jpg",
@@ -123,7 +123,7 @@
       "props": {
         "pretitle": "A MESSAGE FROM",
         "title": "Karen Law 11MR",
-        "layout": "left",
+        "layout": "right",
         "subtitle": "Program Director, J Willis Hurst Internal Medicine Residency Program<br/>Associate Vice Chair of Education<br/>Associate Professor, Emory School of Medicine",
         "img_src": "healthcare_quote_2.jpg",
         "media_src": "https://vimeo.com/631452668/27e9e0406c",

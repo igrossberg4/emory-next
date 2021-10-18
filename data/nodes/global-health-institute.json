@@ -33,11 +33,11 @@
       "props": {
         "header": "Founded in 2006, Emory Global Health Institute is a recognized leader in building healthier communities abroad and developing new tools to combat public health problems at home.",
         "background_image": "global_isolated_bg.png",
-        "text": "<p>For more than a decade, Emory Global Health Institute (EGHI) has improved health worldwide by fostering global partnerships, supporting Emory faculty and their research, and training leaders in global health. Needless to say, EGHI’s mission is more important than ever. From expert faculty to entrepreneurial students to one-of-a-kind programs, EGHI looks forward to continuing its legacy as an invaluable catalyst for change.</p>",
+        "text": "<p>For more than a decade, Emory Global Health Institute (EGHI) has improved health worldwide by fostering global partnerships, supporting Emory faculty and their research, and training leaders in global health. EGHI’s mission is more important than ever. From expert faculty to entrepreneurial students to one-of-a-kind programs, EGHI looks forward to continuing its legacy as an invaluable catalyst for change.</p>",
         "img_src": "global_intro.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "https://vimeo.com/633273243/9aa23f6e1e",
         "media_alt": "Hospital in India",
-        "media_type": "image",
+        "media_type": "video",
         "media_header": "Global Health Institute",
         "media_text": ""
       }
@@ -78,7 +78,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "In 2036, Research is Limitless",
-        "body": "<p>When it comes to advances in global health, few things are more important than the time, energy, and brain power it takes to solve complex, evolving challenges. Needless to say, it also takes investment. <strong>2O36 will provide Emory faculty members with pilot funding to address global health issues.</strong></p><p>Pilot funds are essential for giving faculty a platform to pursue game-changing ideas before they are ready for national funding. Not only will your support directly advance the work of Emory and EGHI faculty, it will also enhance our students’ experiences, offering opportunities to observe and participate in the kind of groundbreaking initiatives they hope to create one day.</p>",
+        "body": "<p>When it comes to advances in global health, few things are more important than the time, energy, and brain power it takes to solve complex, evolving challenges. It also takes investment. <strong>2O36 will provide Emory faculty members with pilot funding to address global health issues.</strong></p><p>Pilot funds are essential for giving faculty a platform to pursue game-changing ideas before they are ready for national funding. Not only will your support directly advance the work of Emory and EGHI faculty, it will also enhance our students’ experiences, offering opportunities to observe and participate in the kind of groundbreaking initiatives they hope to create one day.</p>",
         "layout": "right",
         "img_src": "global_priority_2.jpg",
         "media_src": "global_priority_2_popup.jpg",
@@ -93,13 +93,13 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Rebecca Martin 02Ox 04C",
+        "title": "Rebecca Martin",
         "layout": "left",
         "subtitle": "Vice President for Global Health<br/>Director, Emory Global Health Institute",
         "img_src": "global_quote_1.jpg",
         "media_src": "https://vimeo.com/630265358/80dfa17119",
-        "media_alt": "A video quote of Rebecca Martin 02Ox 04C",
-        "media_header": "Rebecca Martin 02Ox 04C",
+        "media_alt": "A video quote of Rebecca Martin",
+        "media_header": "Rebecca Martin",
         "media_text": "Vice President for Global Health<br/>Director, Emory Global Health Institute",
         "button_close_text": "Exit"
       }
