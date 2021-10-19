@@ -8,12 +8,12 @@
     align-items: center;
     padding: 0;
 
-    &:before {
+    &::before {
       content: '';
       margin-top: auto;
     }
 
-    &:after {
+    &::after {
       content: '';
       margin-bottom: auto;
     }
