@@ -33,10 +33,10 @@
       "props": {
         "header": "Cultivating the public health leaders of tomorrow, the Rollins School of Public Health improves health and well-being through excellence in teaching, research, and the application of knowledge in partnership with domestic and global communities.",
         "background_image": "rollins_isolated_bg.png",
-        "text": "<p><i>Public health</i>, once an obscure term to many, is now widely recognized with the onset of the global COVID-19 pandemic. The need for science-driven inquiry and public health leadership is greater now than ever. The Rollins School of Public Health provides both, pairing expertise with collaboration and interdisciplinary action to prevent disease, promote health, and save lives around the world. Founded just over 30 years ago, Rollins is now ranked 4th among the nation's schools of public health. By 2036, we expect to be second to none.</p>",
+        "text": "<p>Founded just more than 30 years ago, Rollins has experienced unparalleled growth. Now recognized as one of the world’s leading schools of public health, Rollins strives to be second to none. The global pandemic has brought into sharp focus the necessity of a robust, well-trained public health workforce. Our mission—producing knowledge through education and research to improve health on a global scale—has never been more relevant.</p>",
         "img_src": "rollins_intro.jpg",
-        "media_src": "https://vimeo.com/633278116/47a2ac88e5",
-        "media_alt": "Men with glasses look at presentation.",
+        "media_src": "https://vimeo.com/635621432/7e0ecfcf55",
+        "media_alt": "Rollins student abroad",
         "media_type": "video",
         "media_header": "Rollins School of Public Health",
         "media_text": ""
@@ -63,11 +63,11 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "In 2036, Students Flourish",
-        "body": "<p>Our faculty, our facilities, and our proximity to the Center for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p><strong>Scholarship support through 2O36 would enable Rollins to compete with the nation’s leading schools of public health for top doctoral candidates or Masters of Public health students.</strong> Additionally, such support would help to grow Rollins’s prestige, and retain leading faculty members who value accomplished postgraduates as collaborative members of their research teams.</p>",
+        "body": "<p>Our faculty, our facilities, and our proximity to the Center for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p>Scholarships for Masters of Public Health students will help address the enormous surge in student interest in public health. Increasing support for PhD students will ensure Rollins a competitive edge in attracting leading candidates, which will strengthen faculty recruitment and research. <strong>Rollins seeks to expand our ability to provide both financial support and valuable career-enhancing experiences to a higher percentage of our students through our work-study and global field experience funds.</strong></p>",
         "layout": "right",
         "img_src": "rollins_priority_1.jpg",
         "media_src": "rollins_priority_1_popup.jpg",
-        "media_alt": "Medical student experiments in lab.",
+        "media_alt": "Rollins student learning abroad.",
         "media_type": "image",
         "media_header": "Supporting Students",
         "media_text": "Scholarship support through 2O36 would enable Rollins to compete with the nation’s leading schools of public health for top doctoral candidates or Masters of Public health students."
@@ -113,11 +113,11 @@
         "layout": "right",
         "img_src": "rollins_priority_3.jpg",
         "media_src": "rollins_priority_3_popup.jpg",
-        "media_alt": "A woman touches hanging ribbon.",
+        "media_alt": "Two faculty members.",
         "media_type": "image",
         "media_header": "Power in Prevention",
         "media_text": "Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.",
-        "media_byline": "Featured: Joellen Schildkraut, Professor, Department of Epidemiology, Rollins School of Public Health, Emory University"
+        "media_byline": "Featured: Tim Lash, Professor and Chair of the Department of Epidemiology; Kevin Ward, Director of the Georgia Center for Cancer Statistics and an Assistant Professor of Epidemiology"
       }
     },
     {
