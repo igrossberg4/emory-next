@@ -84,12 +84,12 @@
     {
       "component": "VideoQuote",
       "props": {
-        "pretitle": "Student flourishing is about being intentional in how we prepare our students for not only professional achievement but also success in life—providing resources and creating space that allow students to find their purpose through critical thinking and self-reflection.",
-        "title": "",
+        "pretitle": "A MESSAGE FROM",
+        "title": "Eddy Cabrera 22C",
         "layout": "left",
-        "subtitle": "Ravi Bellamkonda, Provost and Executive Vice President for Academic Affairs",
+        "subtitle": "",
         "img_src": "student_quote_1.jpg",
-        "media_src": "",
+        "media_src": "https://vimeo.com/631452455/367232935e",
         "media_alt": "A video quote of Eddy Cabrera 22C",
         "media_header": "Eddy Cabrera 22C",
         "media_text": "",
