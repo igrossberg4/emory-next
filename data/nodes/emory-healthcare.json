@@ -62,21 +62,6 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Building Rehab’s Future",
-        "body": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. 2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</p>",
-        "layout": "right",
-        "img_src": "healthcare_priority_1.jpg",
-        "media_src": "healthcare_priority_1_popup.jpg",
-        "media_alt": "Two nurses help man to walk using sticks.",
-        "media_type": "image",
-        "media_header": "The Future of Rehab",
-        "media_text": "2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better."
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key Priority",
         "title": "The Best Cancer Care in Midtown",
         "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research.</p>",
         "layout": "right",
@@ -86,6 +71,21 @@
         "media_type": "image",
         "media_header": "Winship Emory Midtown",
         "media_text": "Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "A Better Surgical Pavilion",
+        "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
+        "layout": "right",
+        "img_src": "healthcare_priority_3.jpg",
+        "media_src": "healthcare_priority_3_popup.jpg",
+        "media_alt": "Three doctors discuss in surgical room.",
+        "media_type": "image",
+        "media_header": "Space for Innovation",
+        "media_text": "Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams."
       }
     },
     {
@@ -107,15 +107,15 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "A Better Surgical Pavilion",
-        "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
+        "title": "Building Rehab’s Future",
+        "body": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. 2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_3.jpg",
-        "media_src": "healthcare_priority_3_popup.jpg",
-        "media_alt": "Three doctors discuss in surgical room.",
+        "img_src": "healthcare_priority_1.jpg",
+        "media_src": "healthcare_priority_1_popup.jpg",
+        "media_alt": "Two nurses help man to walk using sticks.",
         "media_type": "image",
-        "media_header": "Space for Innovation",
-        "media_text": "Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams."
+        "media_header": "The Future of Rehab",
+        "media_text": "2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better."
       }
     },
     {
