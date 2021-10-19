@@ -13,4 +13,8 @@
   @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
     display: none;
   }
+
+  @media (max-width: 360px) {
+    display: none;
+  }
 }

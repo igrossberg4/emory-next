@@ -8,12 +8,12 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  &:before {
+  &::before {
     content: '';
     margin-top: auto;
   }
 
-  &:after {
+  &::after {
     content: '';
     margin-bottom: auto;
   }

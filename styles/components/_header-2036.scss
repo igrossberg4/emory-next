@@ -1,3 +1,18 @@
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
 .content-header__container.header-2036 {
   position: relative;
   display: flex;
@@ -6,7 +21,7 @@
   align-items:center;
   padding: 0;
   text-align: center;
-  //background: url("/public/images/2036-bg.jpg") no-repeat center bottom;
+  // background: url("/public/images/2036-bg.jpg") no-repeat center bottom;
   background-size: cover !important;
   height: 100%;
 
@@ -23,7 +38,7 @@
       margin-left math.div($main-carousel-transition-duration, 2) ease-in-out;
     margin-left: 0;
     transform: translateX(0);
-    //max-width: map-get($container-max-widths, lg);
+    // max-width: map-get($container-max-widths, lg);
     max-width: 100%;
     z-index: 2;
 
@@ -34,7 +49,6 @@
       .header-inner-content__text {
         max-width: 100%;
       }
-
     }
 
     // Ensure the transition of the O goes along with the slide transition speed.
@@ -128,11 +142,6 @@
     }
   }
 
-  @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-
   .actions {
     position: absolute;
     left: 0;
@@ -140,7 +149,12 @@
     animation: fadeIn math.div($main-carousel-transition-duration, 6) ease-in-out;
     width: 100%;
     z-index: 2;
-    //transition: opacity math.div($main-carousel-transition-duration, 3) ease-out;
+    // transition: opacity math.div($main-carousel-transition-duration, 3) ease-out;
+
+    // 2O36 Horizontal, without space
+    @media (max-height: $round-image-vertical-breakpoint-xsm) {
+      display: none;
+    }
   }
 
   .btn {
@@ -187,8 +201,7 @@
       drop-shadow(4px 4px 11px rgba(177, 167, 162, .4));
   }
 
-  // Rotated mobile devices!!!
-
+  // Vertical Media queries
   @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
     svg {
       width: 40px;
@@ -198,18 +211,21 @@
 
   @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
     flex-direction: row;
-    top: 200px;
+    top: 35%;
 
     .header-2036__title__3 {
       margin-top: 0;
       margin-left: 120px;
     }
 
-
     > span {
       display: block;
       padding: 0 6px;
     }
+  }
+
+  @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-xsm) {
+    top: 25%;
   }
 
   @include media-breakpoint-up(md) {
@@ -236,15 +252,6 @@
 // Scroll Animation
 
 $pre-animation-delay: math.div($scroll-down-transition-duration, 2);
-
-@keyframes flash {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 $curve: cubic-bezier(.63,.72,.79,.98);
 
@@ -280,13 +287,19 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       height: 258px;
     }
 
+    // 2O36 vertical
     @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
       bottom: calc(100% - 120px - 64px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
     }
 
+    // 2O36 horizontal
     @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
-      bottom: calc(100% - 200px - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
-      margin-left: -45px;
+      bottom: calc(100% - 35% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
+      left: calc((100vw / 2) - 80px);
+    }
+
+    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-xsm) {
+      bottom: calc(100% - 25% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
     }
 
     video {
@@ -298,6 +311,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       height: 100%;
       object-fit: cover;
       z-index:20;
+      border-radius: 50%;
     }
   }
 
@@ -305,7 +319,8 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     top: 75%;
     padding-left: math.div($grid-gutter-width, 2);
     padding-right: math.div($grid-gutter-width, 2);
-    //padding-top: calc((80px * 3) + (10px * 3) + 120px + 80px); // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
+    // padding-top: calc((80px * 3) + (10px * 3) + 120px + 80px);
+    // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
     max-width: map-get($container-max-widths, 'lg');
     transition: padding-top $scroll-down-transition-duration * 1.5 ease;
 
@@ -333,8 +348,15 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     max-height: 0;
     opacity: 0;
     transition: opacity math.div($scroll-down-transition-duration, 2) ease-out,
-                max-height math.div($scroll-down-transition-duration, 2) ease-out,
-                margin math.div($scroll-down-transition-duration, 2) ease-out;
+      max-height math.div($scroll-down-transition-duration, 2) ease-out,
+      margin math.div($scroll-down-transition-duration, 2) ease-out;
+  }
+
+  .link-button {
+    @media (max-height: $round-image-vertical-breakpoint-sm) {
+      padding: 8px 15px;
+      font-size: $font-size-xs;
+    }
   }
 
   // ANIMATION ACTIVE
@@ -342,7 +364,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     background: $body-bg !important;
 
     .header-inner-content {
-      //overflow: hidden;
+      // overflow: hidden;
     }
 
     .header-2036__title {
@@ -353,7 +375,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       top: auto;
       width:110vw;
       height:110vw;
-      bottom: 0px !important;
+      bottom: 0 !important;
       margin-left: 0 !important;
       margin-bottom: 0 !important;
       z-index: -1;
@@ -376,11 +398,19 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     .title {
-      animation: flash $scroll-down-transition-duration * 2;
+      animation: flash ($scroll-down-transition-duration * 2);
       @extend .header-xlarge;
       line-height: 0.9em;
       letter-spacing: 0;
       white-space: normal;
+
+      @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-md) {
+        font-size: $h2-font-size--desktop;
+      }
+
+      @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $h2-font-size;
+      }
     }
 
     .title_expanded {
