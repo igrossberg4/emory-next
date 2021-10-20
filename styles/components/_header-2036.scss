@@ -195,6 +195,8 @@
     width: 55px;
     height: 80px;
     overflow: visible;
+    display: block;
+    margin: 0 auto;
     filter:
       drop-shadow(-3px -3px 6px rgba(255, 255, 255, .5))
       drop-shadow(2px 2px 6px rgba(95, 92, 89, .12))
@@ -231,6 +233,25 @@
   @include media-breakpoint-up(md) {
     flex-direction: row;
     top: auto;
+    bottom: 54%;
+
+    > span {
+      display: block;
+      padding: 0 15px;
+      margin-bottom:0;
+    }
+
+    .header-2036__title__3 {
+      margin: 0 0 0 260px;
+    }
+
+    svg {
+      width: 100px;
+      height: inherit;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
     bottom: 46%;
 
     > span {
@@ -286,24 +307,35 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     @include media-breakpoint-up(md) {
+      border-width: 8px;
+      left: calc((100vw / 2) - 190px);
+      bottom: 54%; // Equal to .header-2036__title bottom
+      margin-bottom: calc(-1 * (230px + 16px - 140px) / 2); // ball height + ball border - height of 2/3/6
+      width: 230px;
+      height: 230px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border-width: 12px;
       left: calc((100vw / 2) - 230px);
-      bottom: 42%;
+      bottom: 46%; // Equal to .header-2036__title bottom
+      margin-bottom: calc(-1 * (258px + 24px - 194px) / 2); // ball height + ball border - height of 2/3/6
       width: 258px;
       height: 258px;
     }
 
     // 2O36 vertical
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-md) {
       bottom: calc(100% - 120px - 64px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
     }
 
     // 2O36 horizontal
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-sm) {
       bottom: calc(100% - 35% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
       left: calc((100vw / 2) - 80px);
     }
 
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-xsm) {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-xsm) {
       bottom: calc(100% - 25% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
     }
 
