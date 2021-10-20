@@ -35,7 +35,7 @@
         "background_image": "rollins_isolated_bg.png",
         "text": "<p><i>Public health</i>, once an obscure term to many, is now widely recognized with the onset of the global COVID-19 pandemic. The need for science-driven inquiry and public health leadership is greater now than ever. The Rollins School of Public Health provides both, pairing expertise with collaboration and interdisciplinary action to prevent disease, promote health, and save lives around the world. Founded just over 30 years ago, Rollins is now ranked 4th among the nation's schools of public health. By 2036, we expect to be second to none.</p>",
         "img_src": "rollins_intro.jpg",
-        "media_src": "https://vimeo.com/618170754/342455f066",
+        "media_src": "https://vimeo.com/633278116/47a2ac88e5",
         "media_alt": "Men with glasses look at presentation.",
         "media_type": "video",
         "media_header": "Rollins School of Public Health",
@@ -45,8 +45,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "While at Rollins, I've been fortunate to be able to see to the training of the future generation of public health workers.",
-        "attribution": "— James W. Curran P03,  James W. Curran Dean of Public Health<br/>Co-Director, Emory Center for AIDS Research Professor, Epidemiology"
+        "text": "At Rollins, we share the value of investing in people knowing that investments in our students have an immediate impact on their lives and long-term implications for the well-being, health, and happiness of populations throughout the world. We are preparing students for lives of leadership on a global scale.",
+        "attribution": "— James W. Curran, MD, MPH, James W. Curran Dean of Public Health<br/>Co-Director, Emory Center for AIDS Research<br/>Professor of Epidemiology"
       }
     },
     {
@@ -78,7 +78,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "The Power of Flexible Support",
-        "body": "<p>Unrestricted endowment funds allow the dean to respond to urgent needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 20 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
+        "body": "<p>Unrestricted endowment funds allow the dean to respond to priority needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 25 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
         "layout": "right",
         "img_src": "rollins_priority_2.jpg",
         "media_src": "rollins_priority_2_popup.jpg",
@@ -97,10 +97,10 @@
         "layout": "left",
         "subtitle": "Assistant Professor, Hubert Department of Global Health",
         "img_src": "rollins_quote_1.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/632415265/e71d3b465f",
         "media_alt": "A video quote of Shivani Patel",
         "media_header": "Shivani Patel",
-        "media_text": "Assistant Professor, Hubert Department of Global Health",
+        "media_text": "Assistant Professor, Hubert Department of Global Health<br/>On what makes the Rollins School of Public Health special",
         "button_close_text": "Exit"
       }
     },
@@ -128,10 +128,10 @@
         "layout": "right",
         "subtitle": "",
         "img_src": "rollins_quote_2.jpg",
-        "media_src": "https://vimeo.com/617120215/331cc7c86b",
+        "media_src": "https://vimeo.com/632415039/c87cd2a5f7",
         "media_alt": "A video quote of Lisa Chung 21PH 27G",
         "media_header": "Lisa Chung 21PH 27G",
-        "media_text": "",
+        "media_text": "2021 Marion Luther Brittain Award Winner",
         "button_close_text": "Exit"
       }
     },
@@ -143,7 +143,7 @@
         "items": [
           {
             "title": "Research Abounds",
-            "description": "<p>Emory is in a strong position to be a global leader in implementation science research to address health disparity. An emerging field of study, implementation science explores the application of research findings into routine practice and policy. With support for implementation science research in health disparities, Rollins will develop an interdisciplinary focus on social determinants of health and environmental justice. 2O36, will support grant proposal development, capacity building, training, community-based collaborations, and partnerships with CARE and the Centers for Disease Control and Prevention.</p>"
+            "description": "<p>Emory is in a strong position to be a global leader in implementation science research to address health disparity. An emerging field of study, implementation science explores the application of research findings into routine practice and policy. <strong>With support for implementation science research in health disparities, Rollins will develop an interdisciplinary focus on social determinants of health and environmental justice.</strong> 2O36 will support grant proposal development, capacity building, training, community-based collaborations, and partnerships with CARE and the Centers for Disease Control and Prevention.</p>"
           },
           {
             "title": "Addressing Climate Change",
