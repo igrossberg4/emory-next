@@ -92,6 +92,7 @@ a {
     max-width: $round-image-size-big;
   }
   img{
+    display:block;
     transform: scale(1.05);
   }
 
