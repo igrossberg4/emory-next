@@ -181,12 +181,15 @@
       height: $round-image-size-medium;
     }
 
-    @media (max-height: $round-image-vertical-breakpoint-sm) {
-      width: $round-image-size-tiny;
-      height: $round-image-size-tiny;
-      bottom: 40%;
-      border-width: 6px;
+    &:not(#video-container) {
+      @media (max-height: $round-image-vertical-breakpoint-sm) {
+        width: $round-image-size-tiny;
+        height: $round-image-size-tiny;
+        bottom: 40%;
+        border-width: 6px;
+      }
     }
+
 
     img {
       object-fit: cover;
@@ -252,16 +255,16 @@
     background: $body-bg;
 
     .header-inner-content__img {
-      bottom: 0;
-      width: 110vw;
-      height: 110vw;
+      bottom: 0 !important;
+      width: 110vw !important;
+      height: 110vw !important;
       // transform: translate(0, 0);
       margin-bottom: 0;
       opacity: .5;
 
       @media (orientation: portrait) {
-        width: 110vh;
-        height: 110vh;
+        width: 110vh !important;
+        height: 110vh !important;
       }
     }
 
@@ -278,12 +281,16 @@
       margin: 12px 0 calc(32px - 0.17em) 0;
       white-space: normal;
 
-      @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-md) {
+      @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-lg) {
         font-size: $h2-font-size--desktop;
       }
 
       @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
         font-size: $h2-font-size;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-height: 100%;
       }
     }
 
