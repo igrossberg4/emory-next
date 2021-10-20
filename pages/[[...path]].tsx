@@ -173,12 +173,12 @@ export default function Home(props: any) {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
 
-      const videoElement = document.getElementById("video-container");
-      if (videoElement) {
-        videoElement.style.bottom = isMobile
-          ? videoContainerBottomCalculator(window, document)
-          : (undefined as any);
-      }
+      // const videoElement = document.getElementById("video-container");
+      // if (videoElement) {
+      //   videoElement.style.bottom = isMobile
+      //     ? videoContainerBottomCalculator(window, document)
+      //     : (undefined as any);
+      // }
     };
 
     updateWindowDimensions();

@@ -26,7 +26,7 @@
   }
 
   .title {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 20px;
   }
 
   .svg-quote {
@@ -41,7 +41,7 @@
 
     &--bottom {
       margin-top: 30px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       @include media-breakpoint-up('lg') {
         position: absolute;
         bottom: auto;
