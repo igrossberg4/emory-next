@@ -48,7 +48,9 @@ export default function Home(props: any) {
   );
   const [state, dispatch] = useContext(Context) as any;
   useEffect(() => {
-    console.log(browserName, isMobile);
+    if (isMobile && /safari/i.test(browserName) ) {
+      document.body.classList.add("is-mobile-safari");
+    }
   }, []);
   const circleAnimateExpand = useCallback(() => {
     const element = document.getElementById("selected");
@@ -571,7 +573,7 @@ export default function Home(props: any) {
           className={`main-container ${
             props.view[1].props.isMain && !state.comesFromCarousel
               ? "full_video"
-              : ""
+              : "unfull_video"
           }`}
           id={state.route + " --- " + state.route}
           onAnimationComplete={() => {

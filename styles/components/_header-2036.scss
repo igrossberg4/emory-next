@@ -273,12 +273,17 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     transition:
       width $scroll-down-transition-duration $pre-animation-delay $curve,
       height $scroll-down-transition-duration $pre-animation-delay $curve,
-      $scroll-down-transition-duration $pre-animation-delay $curve,
       left $scroll-down-transition-duration $pre-animation-delay $curve,
       bottom $scroll-down-transition-duration $pre-animation-delay $curve,
       margin-bottom $scroll-down-transition-duration $pre-animation-delay $curve,
       transform $scroll-down-transition-duration $pre-animation-delay $curve,
       opacity $scroll-down-transition-duration $pre-animation-delay $curve;
+
+    // Mobile safari has problems animating the video.
+    // Avoid transitions on the O of 2O36 on the main page, allow them on scroll.
+    body.is-mobile-safari:not(.is-scrolled) & {
+      transition: none;
+    }
 
     @include media-breakpoint-up(md) {
       left: calc((100vw / 2) - 230px);
@@ -323,10 +328,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
     max-width: map-get($container-max-widths, 'lg');
     transition: padding-top $scroll-down-transition-duration * 1.5 ease;
-
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
-      top: 70%;
-    }
 
     @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
       top: 65%;
