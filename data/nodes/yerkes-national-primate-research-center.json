@@ -31,9 +31,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "We nurture individual brilliance in an environment with technology and resources to enable pioneering discoveries.",
+        "header": "We nurture scientific discovery in an environment with technology and resources to enable pioneering advances.",
         "background_image": "yerkes_isolated_bg.png",
-        "text": "<p>In conducting essential basic science and translational research, the Yerkes National Primate Research Center provides the leadership, training, and resources necessary to foster scientific discoveries. Our research is grounded in scientific integrity, expert knowledge, an open exchange of ideas, and compassionate, quality animal care. The research center, the oldest scientific institute dedicated to nonhuman primate research, paved the way for the National Institutes of Health-funded National Primate Research Center program. With our researchers’ help, these national centers search for the causes, preventions, treatments, and cures that lead to longer, healthier lives worldwide.</p>",
+        "text": "<p>In conducting essential basic science and translational research, the Yerkes National Primate Research Center provides the leadership, training, and resources necessary to foster scientific discoveries. Our research is grounded in scientific integrity, expert knowledge, an open exchange of ideas, a commitment to diversity, equity and inclusion, and compassionate, quality animal care. The research center, the oldest scientific institute dedicated to nonhuman primate research, paved the way for the National Institutes of Health-funded National Primate Research Center program. With our researchers’ help, these national centers search for the causes, preventions, treatments, and cures that lead to longer, healthier lives worldwide.</p>",
         "img_src": "yerkes_intro.jpg",
         "media_src": "https://vimeo.com/632007328/461e2a742a",
         "media_alt": "Researcher looks through microscope.",
@@ -45,7 +45,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Emory provides a rich environment for students, particularly in research, and the opportunity to work with faculty members—to learn what it's like to be in a lab, to actually undertake an independent project, and to do so across a wide range of students who work at the Emory Primate Research Center.",
+        "text": "Emory provides a rich environment for students, particularly in research, and the opportunity to work with faculty members—to learn what it's like to be in a lab, to actually undertake an independent project, and to do so with a wide range of faculty.",
         "attribution": "— Paul Johnson P22, Director, Yerkes National Primate Research Center"
       }
     },
@@ -78,7 +78,7 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Fighting Diseases Starts with 2O36",
+        "title": "Fighting Diseases in 2O36",
         "body": "<p>Yerkes brings together top researchers with advanced technology and equipment. Targeted investment in three research priorities—an HIV cure and vaccine, neurodegenerative diseases, and genomics—is needed to discover new treatments for destructive diseases. With scientific resources found at few other institutions, Yerkes teams collaborate with research colleagues across campus and around the world, making key discoveries.</p><p>Investing in disease-specific research speeds discovery and can support new, untested ideas not yet eligible for federal grants. The resulting data and proofs of concept help promising new ideas qualify more quickly for federal funding, often leading to breakthroughs. <strong>Innovation funds support transformational new technologies and targeted investments in specific high-priority research areas.</strong></p>",
         "layout": "right",
         "img_src": "yerkes_priority_2.jpg",

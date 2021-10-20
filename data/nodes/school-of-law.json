@@ -5,7 +5,7 @@
     "header": "SCHOOL OF LAW",
     "button_scroll": "Scroll to explore",
     "img_src": "law_lede.jpg",
-    "text": "In 2036, ethics and ideals will lead.",
+    "text": "In 2036, leading in a changing world.",
     "about": "school spotlight",
     "footer": {
       "cta_support_button": {
@@ -33,10 +33,10 @@
       "props": {
         "header": "Emory Law is committed to continuing to create an inclusive community that fosters empathy, service, and leadership.",
         "background_image": "law_isolated_bg.png",
-        "text": "<p>Emory Law is more than reading cases and statutes. It’s an inclusive environment where students are given a unique learning opportunity and resources that prepare them to immediately serve their communities upon graduation. With ethics and ideals at the helm, Emory Law shapes future thought leaders and innovators—their reach extending far beyond our city.</p>",
+        "text": "<p>Emory Law will continue to be a national and global leader in legal education by welcoming and supporting a diverse law school community, by carrying out path breaking and influential scholarship, and by offering exceptional teaching and practical learning opportunities.</p>",
         "img_src": "law_intro.jpg",
         "media_src": "https://vimeo.com/633273454/d90f52f2a5",
-        "media_alt": "Three students walk past trees.",
+        "media_alt": "Two students at Law entrance.",
         "media_type": "video",
         "media_header": "School of Law",
         "media_text": ""
@@ -62,8 +62,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Create Greater Access",
-        "body": "<p>One of our nation's greatest burdens is student debt. By increasing the endowment for scholarships, Emory Law will give more students access to excellence in legal education without financial hardship.</p><p>It’s imperative that Emory Law expands access in order for the legal profession to become more diverse. Legal practice needs to more accurately reflect and represent society to better serve society. <strong>2O36 will enhance scholarships and financial aid, increasing access and affordability while also supporting long-term financial stability for the school.</strong></p>",
+        "title": "Student Recruitment, Access and Success",
+        "body": "<p>Emory Law seeks to recruit ambitious, outstanding, and diverse students from across the nation who aspire to the level of excellence associated with Emory lawyers. By tripling the size of its endowments devoted to merit scholarships, needs-based financial aid, and other forms of student support, Emory Law will provide the nation’s top students access to exceptional legal education and prepare these future leaders for career success without financial hardship.</p><p><strong>It is imperative that Emory Law be the gateway for professional success and service to society for students from a wide range of backgrounds and financial circumstances while also supporting long-term financial stability for the school.</strong></p>",
         "layout": "right",
         "img_src": "law_priority_1.jpg",
         "media_src": "law_priority_1_popup.jpg",
@@ -82,10 +82,11 @@
         "layout": "right",
         "img_src": "law_priority_2.jpg",
         "media_src": "law_priority_2_popup.jpg",
-        "media_alt": "Man smiles outside of law building.",
+        "media_alt": "Law school faculty member.",
         "media_type": "image",
         "media_header": "Leaders Take Charge",
-        "media_text": "Increasing the number of endowed positions will make Emory Law more competitive in recruiting and retaining top-tier faculty in legal scholarship."
+        "media_text": "Increasing the number of endowed positions will make Emory Law more competitive in recruiting and retaining top-tier faculty in legal scholarship.",
+        "media_byline": "Fred Smith, Associate Professor"
       }
     },
     {
@@ -108,11 +109,11 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "A Hub for Civil Rights and Social Justice",
-        "body": "<p>It is crucial for Emory University School of Law to take advantage of the unique benefits of calling Atlanta home. Being a birthplace of the civil rights movement and now a bustling  business hub, Emory Law will have the ability to partner with other schools and units at Emory along with community organizations to lead sustainable change in fighting injustice.</p><p><strong>Emory Law will accelerate an integral part of the university and school’s strategic plan with the creation of the Center for Civil Rights and Social Justice.</strong> The center will serve as a hub for interdisciplinary scholarship, research, teaching, evidence-based policy reform, and community outreach.</p>",
+        "body": "<p>It is crucial for Emory University School of Law to take advantage of the unique benefits of calling Atlanta home. Being a birthplace of the civil rights movement and now a bustling  business hub, Emory Law will have the ability to partner with other schools and units at Emory along with community organizations to lead sustainable change in fighting injustice.</p><p><strong>Emory Law will accelerate an integral part of the university and school’s strategic plan with the creation of the Center for Civil Rights and Social Justice.</strong> The center will serve as a hub for interdisciplinary scholarship, research, teaching, evidence-based policy reform, and community outreach. Significant investments have already been made in this area by Southern Company Foundation, Inc., other alumni, and friends.</p>",
         "layout": "right",
         "img_src": "law_priority_3.jpg",
         "media_src": "law_priority_3_popup.jpg",
-        "media_alt": "Two students walk outside of building.",
+        "media_alt": "John Lewis at Commencement.",
         "media_type": "image",
         "media_header": "Leading the Fight",
         "media_text": "Emory Law will accelerate an integral part of the university and school’s strategic plan with the creation of the Center for Civil Rights and Social Justice."
@@ -142,7 +143,7 @@
         "layout": "right",
         "img_src": "law_priority_4.jpg",
         "media_src": "law_priority_4_popup.jpg",
-        "media_alt": "A woman reads a book.",
+        "media_alt": "Students gather.",
         "media_type": "image",
         "media_header": "Aiding the Community",
         "media_text": "2O36 will provide support for students to continue participating in pro bono legal support for individuals, community groups, and nonprofit organizations."

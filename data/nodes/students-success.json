@@ -38,8 +38,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Emory is a very diverse environment. We have students coming from all different backgrounds—racial, ethnic, gender identity, and sexuality. And it's very, very important for me that each of those students know that we want them here. And honestly, it's an honor for us to have them here because these are some of the best students in the country.",
-        "attribution": "— Enku Gelaye, Senior Vice President and Dean of Campus Life"
+        "text": "Student flourishing is about being intentional in how we prepare our students for not only professional achievement but also success in life—providing resources and creating space that allow students to find their purpose through critical thinking and self-reflection.",
+        "attribution": "— Ravi Bellamkonda, Provost and Executive Vice President for Academic Affairs"
       }
     },
     {
@@ -84,12 +84,12 @@
     {
       "component": "VideoQuote",
       "props": {
-        "pretitle": "Student flourishing is about being intentional in how we prepare our students for not only professional achievement but also success in life—providing resources and creating space that allow students to find their purpose through critical thinking and self-reflection.",
-        "title": "",
+        "pretitle": "A MESSAGE FROM",
+        "title": "Eddy Cabrera 22C",
         "layout": "left",
-        "subtitle": "Ravi Bellamkonda, Provost and Executive Vice President for Academic Affairs",
+        "subtitle": "",
         "img_src": "student_quote_1.jpg",
-        "media_src": "",
+        "media_src": "https://vimeo.com/631452455/367232935e",
         "media_alt": "A video quote of Eddy Cabrera 22C",
         "media_header": "Eddy Cabrera 22C",
         "media_text": "",
@@ -137,8 +137,8 @@
             "description": "<p>From varsity athletics to recreation and wealthness, Emory believes that physical activity is essential to promoting a student body that’s happy and healthy. <strong>When you support 2O36, you’re supporting initiatives that will help us grow all our athletic offerings.</strong> This is not restricted to our awesome student-athletes. With dozens of intercollegiate and intramural sports offered at both the Atlanta and Oxford campuses, Emory is committed to providing a wide range of athletic opportunities to enhance students’ well-being, promote community pride, and allow students to pursue passions and goals outside of the classroom.</p>"
           },
           {
-            "title": "For Students, Campus is Home",
-            "description": "<p>As a community grounded in relationships, few things are more important than maintaining the best possible campus experience. <strong>To achieve that goal, funding from 2O36 will be allocated to improving Emory residence halls and student spaces.</strong> Your support will allow us to continue what has always made Emory campuses unique—from their natural beauty to architectural integrity—while also pushing forward in areas like accessibility, transportation, and tech integration. The more our campus can feel like home, the more our students will thrive.</p>"
+            "title": "Training and Support",
+            "description": "<p>Wellness is multidimensional—behavioral, spiritual, emotional, physical—and resources to promote balance are deepened through Emory’s commitment to our student body. Faculty and staff are key to identifying and supporting students in need, and <strong>2O36 will bolster the training necessary to continue increasing prevention, awareness and response.</strong></p>"
           }
         ]
       }

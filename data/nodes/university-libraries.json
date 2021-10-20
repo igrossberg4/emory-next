@@ -31,7 +31,7 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Home to more than 5.6 million volumes, 400,970 electronic journals,  1.6 million electronic books, and internationally renowned special collections, Emory’s nine libraries are a precious learning resource.",
+        "header": "Home to more than 5.6 million volumes, 400,970 electronic journals, 1.6 million electronic books, and internationally renowned special collections, Emory’s eight libraries are a precious learning resource.",
         "background_image": "libraries_isolated_bg.png",
         "text": "<p>One of the top 20 Association of Research Libraries in North America, Emory University Libraries in Atlanta and Oxford, Georgia, are the interdisciplinary intellectual commons for Emory University. Our innovative resources, services, spaces, and collections advance the success of Emory students, staff, and faculty, and benefit the community beyond campus.</p>",
         "img_src": "libraries_intro.jpg",
@@ -63,7 +63,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Celebrating Literature and Poetry",
-        "body": "<p>Including the papers of writers, poets, and critics; records of publishers and presses; and rare books and literary manuscripts, our collections make Emory Libraries a destination for scholars from around the world. The Rose Library houses a globally significant collection of centuries of materials from Irish literature to modern poetry, African American writers, Georgia and Southern writers, counterculture, and the Beats.</p><p><strong>Endowed funding for Emory’s literature and poetry collections will create a new curatorship for literature and poetry.</strong> A curator in these key areas can expand and care for the collections. A curator endowment also provides funding for exhibitions and programs so we can share these extraordinary collections with the larger community.</p>",
+        "body": "<p>Including the papers of writers, poets, and critics; records of publishers and presses; and rare books and literary manuscripts, our collections make Emory Libraries a destination for scholars from around the world. The Rose Library houses a globally significant collection of centuries of materials from Irish literature to modern poetry, African American writers, Georgia and Southern writers, counterculture, and the Beats.</p><p><strong>Endowed funding for Emory’s literature and poetry collections will allow us to expand and care for the collections.</strong> An endowment also provides funding for exhibitions and programs so we can share these extraordinary collections with the larger community.</p>",
         "layout": "right",
         "img_src": "libraries_priority_1.jpg",
         "media_src": "libraries_priority_1_popup.jpg",
@@ -77,8 +77,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Documenting America’s Movements",
-        "body": "<p>In addition to books and literary records, the Rose Library collects materials that document the history, culture, and politics of Atlanta and the South. These materials highlight the remarkable changes from the end of the Civil War to Atlanta’s emergence as a 21st-century cosmopolitan center. History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham.</p><p><strong>With a gift to 2O36, we can designate a permanent curator for this phenomenal resource.</strong> We can continue growing the collection, properly care for the pieces, and host exhibitions and programs so the community can bear witness to this living history. Because the best teachers of history are the activists, artists, athletes, business leaders, elected officials, journalists, and organizations that lived it, challenged the thinking of their day, and transformed the region into a bellwether for American political, cultural, and economic shifts.</p>",
+        "title": "Documenting Political, Cultural, and Social Movements",
+        "body": "<p>In addition to books and literary records, the Rose Library collects materials that document the history, culture, and politics of Atlanta and the South. These materials highlight the remarkable changes from the end of the Civil War to Atlanta’s emergence as a 21st-century cosmopolitan center. History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham.</p><p><strong>With a gift to 2O36, we can continue growing the collection, properly care for the pieces, and host exhibitions and programs so the community can bear witness to this living history.</strong> Because the best teachers of history are the activists, artists, athletes, business leaders, elected officials, journalists, and organizations that lived it, challenged the thinking of their day, and influenced the political, cultural, and social movements of the region.</p>",
         "layout": "right",
         "img_src": "libraries_priority_2.jpg",
         "media_src": "libraries_priority_2_popup.jpg",
@@ -127,7 +127,7 @@
         "items": [
           {
             "title": "Elevating the Importance of our African American Collections",
-            "description": "<p>Tracing African American life from its beginnings in North America through the present, the materials of the Rose Library’s African American collections focus on the development of social, political, and cultural movements, literature, the visual arts, dance, sports, and more. Not only does the collection celebrate the efforts of well-known public intellectuals, scholars, writers, and religious leaders, it shines a light on the contributions of lesser-known community activists, cultural workers, and African Americans from divergent backgrounds and perspectives.</p><p><strong>Gifts to 2O36 will support a permanent curator who can grow and care for these collections, and provide funding for exhibitions and programs so Emory’s African American collections can be studied and appreciated by Emory students, researchers, and all of Atlanta.</strong></p>"
+            "description": "<p>Tracing African American life from its beginnings in North America through the present, the materials of the Rose Library’s African American collections focus on the development of social, political, and cultural movements, literature, the visual arts, dance, sports, and more. Not only does the collection celebrate the efforts of well-known public intellectuals, scholars, writers, and religious leaders, it shines a light on the contributions of lesser-known community activists, cultural workers, and African Americans from divergent backgrounds and perspectives.</p><p><strong>Gifts to 2O36 will support growing and caring for these collections, and provide funding for exhibitions and programs so Emory’s African American collections can be studied and appreciated by Emory students, researchers, and all of Atlanta.</strong></p>"
           },
           {
             "title": "Digitizing Means Access",
@@ -135,7 +135,7 @@
           },
           {
             "title": "Enhancing and Expanding Collections",
-            "description": "<p>Librarians across specific disciplines are continuously looking to grow their collections in order to provide the best resources possible for scholars of their subject matter. Funding for general collections allows Emory Libraries to develop, care for, and expand holdings in every category, and to preserve their materials for future generations. <strong>This much-needed funding will support expertise in collections development and care across the nine libraries on our campus.</strong></p>"
+            "description": "<p>Librarians across specific disciplines are continuously looking to grow their collections in order to provide the best resources possible for scholars of their subject matter. Funding for general collections allows Emory Libraries to develop, care for, and expand holdings in every category, and to preserve their materials for future generations. <strong>This much-needed funding will support collections development and care across the eight libraries on our campus.</strong></p>"
           },
           {
             "title": "Preserving our Stories for 2O36",
@@ -143,7 +143,7 @@
           },
           {
             "title": "Taking our Collections to the People",
-            "description": "<p>Emory Libraries have a traveling exhibitions program that allows us to share our archives and unique collections with a wider audience, taking these collections into K-12 schools, public libraries, and other spaces to connect with the community and broaden access to these extraordinary works.</p><p><strong>Funding from 2O36 would allow the libraries to digitize materials, build exhibitions, and expand physical installations throughout the city of Atlanta.</strong> The partnerships that the traveling exhibition program develops will deepen Emory Libraries’ engagement with and connection to the community, increase our visibility, and encourage the use of our collections."
+            "description": "<p>Emory Libraries have a traveling exhibitions program that allows us to share our archives and unique collections with a wider audience, taking these collections into K-12 schools, public libraries, and other spaces to connect with the community and broaden access to these extraordinary works.</p><p><strong>Funding from 2O36 would allow the libraries to digitize materials, build exhibitions, and expand physical installations throughout the city of Atlanta and beyond.</strong> The partnerships that the traveling exhibition program develops will deepen Emory Libraries’ engagement with and connection to the community, increase our visibility, and encourage the use of our collections."
           },
           {
             "title": "Preserving Treasures for the Future",
