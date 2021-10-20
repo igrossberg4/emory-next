@@ -181,12 +181,15 @@
       height: $round-image-size-medium;
     }
 
-    @media (max-height: $round-image-vertical-breakpoint-sm) {
-      width: $round-image-size-tiny;
-      height: $round-image-size-tiny;
-      bottom: 40%;
-      border-width: 6px;
+    &:not(#video-container) {
+      @media (max-height: $round-image-vertical-breakpoint-sm) {
+        width: $round-image-size-tiny;
+        height: $round-image-size-tiny;
+        bottom: 40%;
+        border-width: 6px;
+      }
     }
+
 
     img {
       object-fit: cover;
