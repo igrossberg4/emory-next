@@ -68,7 +68,7 @@
       margin: 20px auto;
       // max-width: map-get($container-max-widths, 'md');
       .text-body{
-        &:before{
+        &::before{
           content: unset;
         }
       }

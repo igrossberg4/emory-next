@@ -134,6 +134,11 @@
   &:hover, &:focus {
     box-shadow: $default-box-shadow--hover;
   }
+
+  @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .embla__button:disabled {
