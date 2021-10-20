@@ -43,12 +43,16 @@ web:
             root: "out"
             index:
                 - "index.html"
+            expires: 5m
             rules:
                 # Add ".html" to URLs without any file extension.
                 # This is required for links and routes inside the next static
                 # app to work properly.
                 '^([^.]+)$':
                     passthru: '/$1.html'
+                # Expire static assets after 2 weeks.
+                '\.(jpe?g|png|webp|webmanifest|mp4|mp3|gif|svgz?|ico|eot|woff2?|otf|ttf?|xml|pdf)$':
+                    expires: 2w
 
 
 # The size of the persistent disk of the application (in MB).
