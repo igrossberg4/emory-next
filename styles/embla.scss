@@ -43,7 +43,6 @@
     left: 0;
     top: 0;
     content: " ";
-    filter: drop-shadow(1px 1px 1px rgba(grey, 0.33));
     opacity:0;
     content: ' ';
     transition: opacity $main-carousel-transition-duration ease-in-out;
@@ -134,6 +133,11 @@
 
   &:hover, &:focus {
     box-shadow: $default-box-shadow--hover;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -282,8 +286,9 @@ body.is-scrolled {
   &.transitioning,
   &.blocked {
     .embla__button{
-      opacity: 0.4;
-      cursor: not-allowed;
+      // Not required because the carousel is working without blocking.
+    //  opacity: 0.4;
+    //  cursor: not-allowed;
     }
   }
 }

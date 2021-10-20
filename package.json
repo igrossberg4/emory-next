@@ -1,13 +1,15 @@
 {
   "name": "emory-2036-campaign",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "postbuild": "./script.sh",
+    "postbuild": "./scripts/nextjs-fix-route-collisions.sh && next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npx patch-package ",
+    "css:lint": "npx stylelint styles/**/*.scss"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
@@ -24,6 +26,7 @@
     "lodash-es": "^4.17.21",
     "next": "11.0.1",
     "next-optimized-images": "^2.6.2",
+    "next-sitemap": "^1.6.184",
     "object-hash": "^2.2.0",
     "parallax-js": "^3.1.0",
     "popmotion": "^9.4.0",
@@ -45,6 +48,8 @@
     "sass": "^1.36.0",
     "skrollr": "^0.6.26",
     "smooth-scroll": "^16.1.3",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.21.0",
     "use-persisted-state": "^0.3.3"
   },
   "devDependencies": {
@@ -63,6 +68,7 @@
     "jimp": "^0.16.1",
     "lqip-loader": "^2.2.1",
     "next-compose-plugins": "^2.2.1",
+    "patch-package": "^6.4.7",
     "responsive-loader": "^2.0.0",
     "sharp": "^0.29.1",
     "svg-sprite-loader": "^6.0.9",

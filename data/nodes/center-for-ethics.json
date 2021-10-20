@@ -4,7 +4,22 @@
   "page_props": {
     "header": "CENTER FOR ETHICS",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg"
+    "img_src": "ethics_lede.jpg",
+    "text": "Ethics forms the basis of almost all personal and professional decision making, whether we’re aware of it or not.",
+    "about": "unit spotlight",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Ethics",
+        "url": "https://together.emory.edu/give/to/centers-and-institutes/center-ethics"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person": "Anya Reid",
+        "title": "Associate Vice President for Advancement",
+        "email": "anya.reid@emory.edu",
+        "telephone": "404-712-0151"
+      }
+    }
   },
   "path": "center-for-ethics",
   "metatag": {
@@ -16,15 +31,91 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "header": "An international leader in the exploration of ethics, the Emory Center for Ethics is dedicated to exploring how ethical issues underlie the decisions that shape our minds, lives, and society.",
+        "background_image": "ethics_isolated_bg.png",
+        "text": "<p>Scholars from across the university gather at the Center for Ethics to collaborate and study. Scholarship, conversation, and understanding are promoted through public programs, partnerships, and consultations with private and public community organizations. Emory's renowned ethicists are committed to asking tough questions and developing strategies that enable individuals and organizations to put ethics into practice.</p>",
+        "img_src": "ethics_intro.jpg",
+        "media_src": "https://vimeo.com/633273308/8d74d90db6",
+        "media_alt": "People with umbrellas walk on streets.",
+        "media_type": "video",
+        "media_header": "Center for Ethics",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "Art can be a powerful instrument for personal transformation because it not only functions as an invitation to explore the meaning of the art itself and the identity of the artist who created it, but art also invites us to explore who we are and what we believe. Because of this invitation, we may discover new modalities for our own existence, we may be challenged to interrogate some of our own beliefs, and ultimately we may be confronted with new ideas that broaden our own perspectives.",
+        "attribution": "— Carlton Mackey 05T, Director, Ethics & the Arts Program<br/>Associate Director, D. Abbott Turner Program in Ethics and Servant Leadership"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR CENTER FOR ETHICS",
+        "image_src": "ethics_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give/to/centers-and-institutes/center-ethics",
+        "cta_text": "Support Ethics"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2O36, Graduate Studies in Ethics are Available to All",
+        "body": "<p>As we’ve seen throughout the COVID-19 pandemic, the study of social and ethical challenges facing medicine and life sciences is continually evolving. Professionals and students dive deep into these challenges with rigorous interdisciplinary study in the Master of Arts in Bioethics program.  We need to be able to recruit and provide scholarships to a more diverse student body, developing leaders to address the global ethical challenges to come.</p><p>Our graduates help advance the national conversation on important issues influencing public policy, scholarship, practice, and education in these fields. <strong>Funding for scholarships evens the playing field, enabling students to pursue careers aligned with their passions without worrying about overwhelming debt.</strong> The future of health care and the life sciences depend on our ability to financially support scholars learning how to address ongoing and emerging social and ethical challenges in these areas.</p>",
+        "layout": "right",
+        "img_src": "ethics_priority_1.jpg",
+        "media_src": "ethics_priority_1_popup.jpg",
+        "media_alt": "Nurses practice on doll.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Pursuing Passion for Ethics",
+        "media_text": "The future of health care and the life sciences depend on our ability to financially support scholars learning how to address ongoing and emerging social and ethical challenges in these areas."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Training the Ethical Leaders of the Future",
+        "body": "<p>In teaching the skills and knowledge of servant leadership, the D. Abbott Turner Program in Ethics and Servant Leadership (EASL) is shaping future community leaders. Students live out ethical leadership in this sought-after summer internship program that benefits local nonprofits. The expertise they gain in real-world situations has lasting effects on Emory and wider society.</p><p><strong>Increasing scholarship support will allow students from all backgrounds to participate in this important program regardless of financial situation, while providing Atlanta’s community organizations with skilled and talented support to further their missions. </strong></p>",
+        "layout": "right",
+        "img_src": "ethics_priority_2.jpg",
+        "media_src": "ethics_priority_2_popup.jpg",
+        "media_alt": "Group of students hold rakes outdoors.",
+        "media_type": "image",
+        "media_header": "Shaping Future Leaders",
+        "media_text": "The expertise they gain in real-world situations has lasting effects on Emory and wider society."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Paul Root Wolpe P12",
+        "layout": "left",
+        "subtitle": "Director, Center for Ethics<br/>Raymond F. Schinazi Distinguished Research Chair in Jewish Bioethics",
+        "img_src": "ethics_quote_1.jpg",
+        "media_src": "https://vimeo.com/632415156/23537e4ba9",
+        "media_alt": "A video quote of Paul Root Wolpe P12",
+        "media_header": "Paul Root Wolpe P12",
+        "media_text": "Director, Center for Ethics<br/>Raymond F. Schinazi Distinguished Research Chair in Jewish Bioethics",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Expanding Access to Ethics Master’s Programs",
+        "body": "<p>Making graduate ethics degree programs accessible to a wider population and educating more leaders in this complex field of study—in this, there is no gray area. To remain a leader, the Center for Ethics is developing a Master’s in Ethics, and growing our new 4+1 Master’s in Bioethics. In establishing a 4+1 dual-degree program, we provide Emory undergraduate students an accelerated path from their bachelor’s studies to their year studying for a master’s degree. And by engaging other educational institutions in this 4+1 program, we can provide greater access to a diverse body of students around the region.</p><p><strong>Funding from 2O36 will allow us to expand these programs,addressing growing student demand, both at Emory and peer institutions in metro Atlanta.</strong> Not only do these programs offer students an extraordinary education and real-world experiences, they provide an important revenue stream for the Center for Ethics that supports research, teaching, service, and outreach.</p>",
+        "layout": "right",
+        "img_src": "ethics_priority_3.jpg",
+        "media_src": "ethics_priority_3_popup.jpg",
+        "media_alt": "Students lay on ground in circle.",
+        "media_type": "image",
+        "media_header": "Growing the Master’s Program",
+        "media_text": "Funding from 2O36 will allow us to expand these programs,addressing growing student demand, both at Emory and peer institutions in metro Atlanta."
       }
     },
     {
@@ -32,12 +123,12 @@
       "props": {
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Improving Care With Bioethics",
+            "description": "<p>Comprehensive, cross-disciplinary training for clinicians leads to better patient outcomes. Thus, we have a duty to educate physicians and health care workers in ethical issues around science, health care systems, and clinical care. This is a key commitment of the Center for Ethics—our curriculum encompasses the health sciences, scholarship and research in clinical ethics, public health ethics, health policy, and neuroethics.</p><p>The pandemic has created unprecedented demand for these programs. <strong>Increased funding will allow the center to expand outreach to students and the global community, provide greater access, and allow us to increase the scope of our most prominent programs.</strong></p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Working Toward an Ethical Community",
+            "description": "<p>Community outreach is a cornerstone of Emory's commitment to society, and it helps students, professionals, and the public confront and understand ethical issues in health, technology, the arts, the environment, and the life sciences. The Center for Ethics fosters public discussion and experiential learning through community engagement activities and outreach.</p><p>In our programs, students and community members engage with ongoing and emerging issues in food studies, health care, social justice, the arts, and more. In and out of classrooms, they’re free to address complex ethical and social challenges in civil discussion and debate that elevates public discourse and increases mutual understanding. <strong>Funding would ensure the continuation and expansion of these in-demand signature programs, both at Emory and in the Atlanta area.</strong> The hope is that they lead to deeper civic understanding and more civil discourse in a world that so desperately needs them.</p>"
           }
         ]
       }

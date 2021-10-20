@@ -2,9 +2,24 @@
   "id": "global-health-institute",
   "type": "collection",
   "page_props": {
-    "header": "GLOBAL HEALTH<br>INSTITUTE",
+    "header": "EMORY GLOBAL HEALTH<br>INSTITUTE",
+    "about": "unit spotlight",
+    "text": "Research, resources, and training designed to advance Emory University’s efforts to improve health around the world.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_grid_yellow.jpg"
+    "img_src": "global_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Global Health",
+        "url": "https://together.emory.edu/give/to/centers-and-institutes?q=Global+Health+Institute+Support"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person": "Anya Reid",
+        "title": "Associate Vice President for Advancement",
+        "email": "anya.reid@emory.edu",
+        "telephone": "404-712-0151"
+      }
+    }
   },
   "path": "global-health-institute",
   "metatag": {
@@ -16,30 +31,107 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_blue.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "header": "Founded in 2006, Emory Global Health Institute is a recognized leader in building healthier communities abroad and developing new tools to combat public health problems at home.",
+        "background_image": "global_isolated_bg.png",
+        "text": "<p>For more than a decade, Emory Global Health Institute (EGHI) has improved health worldwide by fostering global partnerships, supporting Emory faculty and their research, and training leaders in global health. EGHI’s mission is more important than ever. From expert faculty to entrepreneurial students to one-of-a-kind programs, EGHI looks forward to continuing its legacy as an invaluable catalyst for change.</p>",
+        "img_src": "global_intro.jpg",
+        "media_src": "https://vimeo.com/633273243/9aa23f6e1e",
+        "media_alt": "Hospital in India",
+        "media_type": "video",
+        "media_header": "Global Health Institute",
+        "media_text": ""
       }
     },
     {
-      "component": "AccordionComponent",
+      "component": "Quote",
       "props": {
-        "items": [
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          },
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          }
-        ]
+        "text": "EGHI is important to me because of the principles that guide our work, which include equity, innovation, and commitment to multidisciplinary and results-based global health programs.",
+        "attribution": "— Parminder Suchdev, Associate Director, Emory Global Health Institute<br/>Director, Global Health Office of Pediatrics<br/>Professor of Pediatrics and Global Health"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR EMORY GLOBAL HEALTH INSTITUTE",
+        "image_src": "global_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give/to/centers-and-institutes?q=Global+Health+Institute+Support",
+        "cta_text": "Support Global Health"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Empowering Global Health Leaders in 2036",
+        "body": "<p>Today’s global health challenges require a variety of skills, approaches, and insights to develop creative and sustainable solutions. But most important, global health requires leadership. <strong>2O36 will dedicate resources to securing an endowed directorship to lead Emory Global Health Institute at a pivotal time, while providing perpetual funding for programs, research, and scholarship opportunities.</strong></p><p>In addition to allowing institute leaders to encourage, promote, and facilitate multidisciplinary approaches, an endowment will generate much-needed support for vulnerable populations living in low- and middle-income countries and help recruit and retain top talent to carry on the EGHI mission and vision. Thanks to your generosity, Emory and EGHI will continue to lead the way forward in creating a healthier future.</p>",
+        "layout": "right",
+        "img_src": "global_priority_1.jpg",
+        "media_src": "global_priority_1_popup.jpg",
+        "media_alt": "Leading global health in the world.",
+        "media_type": "image",
+        "media_header": "Empower Global Health Leaders",
+        "media_text": "2O36 will dedicate resources to securing an endowed directorship to lead Emory Global Health Institute at a pivotal time, while providing perpetual funding for programs, research, and scholarship opportunities."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2036, Research is Limitless",
+        "body": "<p>When it comes to advances in global health, few things are more important than the time, energy, and brain power it takes to solve complex, evolving challenges. It also takes investment. <strong>2O36 will provide Emory faculty members with pilot funding to address global health issues.</strong></p><p>Pilot funds are essential for giving faculty a platform to pursue game-changing ideas before they are ready for national funding. Not only will your support directly advance the work of Emory and EGHI faculty, it will also enhance our students’ experiences, offering opportunities to observe and participate in the kind of groundbreaking initiatives they hope to create one day.</p>",
+        "layout": "right",
+        "img_src": "global_priority_2.jpg",
+        "media_src": "global_priority_2_popup.jpg",
+        "media_alt": "Faculty discuss ideas.",
+        "media_type": "image",
+        "media_header": "Limitless Research",
+        "media_text": "2O36 will provide Emory faculty members with pilot funding to address global health issues.",
+        "media_byline": "Featured: Matthew Freeman, professor, environmental health, Rollins School of Public Health; Cam Escoffrey, Director, Intervention Development, Dissemination, and Implementation Shared Resource, Winship Cancer Institute of Emory University"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Rebecca Martin",
+        "layout": "left",
+        "subtitle": "Vice President for Global Health<br/>Director, Emory Global Health Institute",
+        "img_src": "global_quote_1.jpg",
+        "media_src": "https://vimeo.com/630265358/80dfa17119",
+        "media_alt": "A video quote of Rebecca Martin",
+        "media_header": "Rebecca Martin",
+        "media_text": "Vice President for Global Health<br/>Director, Emory Global Health Institute",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2036, Students Lead",
+        "body": "<p>The more people working together to solve global health issues, the better — whether they've got 40 years of professional experience or are 2 years into a pre-med program. Harnessing fresh ideas from young leaders in training, the Emory Morningside Global Health Case Competition and the Intramural Emory Global Health Case Competition allow graduate and undergraduate students from multiple disciplines to collaborate on solutions for 21st century global health issues. <strong>2O36 promises to expand these annual competitions, which offer unparalleled professional development opportunities and build Emory's reputation in global health.</strong></p><p>In 2021, the Emory Morningside Global Health Competition featured 52 teams from universities across 15 countries and 6 continents to develop plans for COVID-19 vaccination programs. The Emory model has grown into an internationally recognized program and has been replicated at other leading institutions. Now is the time to build on our momentum. With your support, imagine all the ways in which the global health experts of tomorrow can benefit from these hands-on learning experiences.</p>",
+        "layout": "right",
+        "img_src": "global_priority_3.jpg",
+        "media_src": "global_priority_3_popup.jpg",
+        "media_alt": "Students collaborate to provide solutions.",
+        "media_type": "image",
+        "media_header": "Students Lead",
+        "media_text": "2O36 promises to expand these annual competitions, which offer unparalleled professional development opportunities and build Emory's reputation in global health."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Perspectives are Global in 2036",
+        "body": "<p>We can’t expect to help communities around the world without a solid understanding and appreciation of their cultures. <strong>2O36 will invest in programs that promote cultural awareness around global health.</strong> By funding experiential projects that directly connect students with people from all walks of life, all around the world, we can prepare them to become global health leaders who appreciate the importance that cultural factors play in health outcomes.</p>",
+        "layout": "right",
+        "img_src": "global_priority_4.jpg",
+        "media_src": "global_priority_4_popup.jpg",
+        "media_alt": "Doctors examine patient with microscope.",
+        "media_type": "image",
+        "media_header": "Global Perspective",
+        "media_text": "2O36 will invest in programs that promote cultural awareness around global health."
       }
     }
   ]

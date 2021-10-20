@@ -1,42 +1,49 @@
 
-## help	:	Print commands help.
+## help:    Prints this makefile's help messages.
+##
 .PHONY: help
 help :
 	@sed -n 's/^##//p' Makefile
 
 
-## setup	:	Preparees an run dev contanier for local development
-.PHONY: setup
-setup:
+## dev:     Provision docker container for local development. Internally this
+##          executes `npm run dev` to watch your filesystem for changes and
+##          auto-reload the browser at http://localhost:3000/.
+##
+.PHONY: dev
+dev:
 	docker-compose stop next_dev
 	docker-compose up --build -d next_dev
 	docker-compose exec -T next_dev npm install
-	docker-compose exec -d -T next_dev npm run dev
-	@echo "\n\nDevelopment: http://localhost:3000 (it may need almost several seconds until Next.js compiles and returns data the first time)\n"
+	@echo "\n\n\n---> Development: http://localhost:3000 <---"
+	@echo "\n---> NOTE: Please allow several seconds on initial page load for Next.js to finish dev compilation. <---"
+	docker-compose exec -T next_dev npm run dev
 
 
-## setup-prod	:	Run prod contanier with the prod release of current code. WARNING! Site is not updated when code is updated, you need to run this command again to update it.
-.PHONY: setup-prod
-setup-prod:
+## build:   Create a production build and serve it in static HTTP server at
+##          http://localhost:8000/. NOTE: Unlike the dev endpoint, this
+##          production build task does not monitor for code changes; you must
+##          manually run this command after every code change to see changes
+##          reflected in the browser.
+##
+.PHONY: build
+build:
 	docker-compose up --build -d next_prod
 	docker-compose exec -T next_prod npm install
 	docker-compose exec -T next_prod npm run build
 	@echo "\n\n\n---> Production: http://localhost:8080 <---"
 	@echo "\n---> Code is generated on ./out folder <---"
-	@echo "\n---> WARNING: This command breaks the development build, run 'make setup' to have it running properly again <---"
+	@echo "\n---> WARNING: This command breaks the development build, run 'make dev' to have it running properly again. <---"
 
 
+## release: Bumps the package version and creates a release.
+##
+.PHONY: release
+release:
+	./scripts/create-release.sh
 
-## stop	:	Stop running containers
+## stop:    Stop running containers.
+##
 .PHONY: stop
 stop:
 	docker-compose stop
-
-
-## artifact	:	Creates and commits an artifact from the last prod code available
-.PHONY: artifact
-artifact:
-	docker-compose run -T next_prod npm install
-	docker-compose run -T next_prod npm run build
-	scripts/deliver_artifact.sh
-

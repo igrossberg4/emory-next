@@ -2,15 +2,36 @@ version: '3'
 services:
   next_dev:
     build: .
-    command: tail -F foo
+    command: sleep infinity
     volumes:
+      # Mount the current project folder from the host
+      # OS into the container.
       - .:/usr/app/
+      # Isolate node modules folder per environment
+      # so that `npm install` on the host OS, does
+      # not collide with the executables installed
+      # inside the container.
+      - /usr/app/node_modules
     ports:
+      # Next.js dev mode runs on http://localhost:3000/
       - "3000:3000"
+    environment:
+      - SITE_URL=http://localhost:3000/
   next_prod:
     build: .
     command: http-server out/
     volumes:
+      # Mount the current project folder from the host
+      # OS into the container.
       - .:/usr/app/
+      # Isolate node modules folder per environment
+      # so that `npm install` on the host OS, does
+      # not collide with the executables installed
+      # inside the container.
+      - /usr/app/node_modules
     ports:
+      # The HTTP server from the static Next.js build
+      # and export runs on http://localhost:8080/
       - "8080:8080"
+    environment:
+      - SITE_URL=http://localhost:8080/

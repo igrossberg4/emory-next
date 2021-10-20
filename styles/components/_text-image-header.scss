@@ -9,6 +9,7 @@
   }
 
   .component-media-with-expansion {
+    margin: 0 auto 40px;
     @include media-breakpoint-up(md) {
       position: absolute;
       width: 100%;
@@ -21,10 +22,6 @@
   .pretitle,
   .title {
     margin-bottom: $default-separation-sm;
-  }
-
-  .component-media-with-expansion {
-    margin: 0 auto 40px;
   }
 
   .readmore {

@@ -12,7 +12,7 @@
 
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
-      margin-left: -16.66666667%;
+      margin-left: -16.667%;
     }
   }
 
@@ -71,7 +71,7 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(180deg, rgba(245, 244, 245, 0) 77.07%, #F5F4F5 100%),
-                  linear-gradient(180deg, #F5F4F5 0%, rgba(245, 244, 245, 0) 23.8%);
+        linear-gradient(180deg, #F5F4F5 0%, rgba(245, 244, 245, 0) 23.8%);
       z-index: 2;
     }
   }

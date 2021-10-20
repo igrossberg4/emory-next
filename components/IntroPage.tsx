@@ -102,10 +102,10 @@ export default function IntroPage(props: any) {
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
-        <div className="container-force-screen-fit-y">
+        <div className='container-force-screen-fit-y'>
           {process.browser ? (
             <div
-              id="container-video"
+              id='container-video'
               className={`container-fit container-video-intro
   ${props.active && videoPlayed == undefined ? "video-no-played" : ""}`}
             >
@@ -115,7 +115,7 @@ export default function IntroPage(props: any) {
                 <Fragment>
                   {videoRef?.played && playing && !state.isCircleExpanded ? (
                     <div
-                      className="mute_button btn text-label"
+                      className='mute_button btn text-label'
                       style={{ cursor: "pointer" }}
                       onClick={(e) => {
                         if (videoRef) {
@@ -146,7 +146,7 @@ export default function IntroPage(props: any) {
                         }`}
                         onClick={(e) => {
                           {
-                            if(!state.isCircleExpanded){
+                            if (!state.isCircleExpanded) {
                               if (videoPlayed) {
                                 dispatch({
                                   type: "VIDEO_PLAYED",
@@ -158,7 +158,9 @@ export default function IntroPage(props: any) {
                                 document.body
                                   .querySelector(".main-container")
                                   ?.classList.add("full_video");
-                                  document.body.querySelector('container-video-intro')?.classList.add('video-no-played')
+                                document.body
+                                  .querySelector("container-video-intro")
+                                  ?.classList.add("video-no-played");
 
                                 return;
                               } else {
@@ -173,19 +175,24 @@ export default function IntroPage(props: any) {
                                 document.body
                                   .querySelector(".main-container")
                                   ?.classList.remove("full_video");
-                                  document.body.querySelector('container-video-intro')?.classList.remove('video-no-played')
-
+                                document.body
+                                  .querySelector("container-video-intro")
+                                  ?.classList.remove("video-no-played");
                               }
                             }
-
                           }
                         }}
                         //className="video-circle"
                         ref={(ref) => (reftoAnimation.current = ref as any)}
                       >
                         <Video
+                          playsInline={true}
                           muted={muted || state.isCircleExpanded}
-                          autoPlay={videoPlayed != undefined && !userPlayVideo &&  props.active}
+                          autoPlay={
+                            videoPlayed != undefined &&
+                            !userPlayVideo &&
+                            props.active
+                          }
                           loop={true}
                           {...props}
                           onPlay={() => setPlaying(true)}
@@ -216,9 +223,9 @@ export default function IntroPage(props: any) {
                         <Fragment>
                           {videoRef && !state.videoPlayed ? (
                             <Fragment>
-                              {true? (
+                              {true ? (
                                 <button
-                                  type="button"
+                                  type='button'
                                   className={`btn-begin-experience ${
                                     videoRef.paused ? "paused" : ""
                                   }`}
@@ -236,7 +243,7 @@ export default function IntroPage(props: any) {
                                 ""
                               )}
                               <motion.button
-                                className="btn-skip-intro"
+                                className='btn-skip-intro'
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setSkipped(true);

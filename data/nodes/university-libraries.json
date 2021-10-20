@@ -4,7 +4,22 @@
   "page_props": {
     "header": "UNIVERSITY LIBRARIES",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg"
+    "img_src": "libraries_lede.jpg",
+    "text": "Music, maps, films, personal diaries, and of course, books. Emory Libraries believe knowledge comes from many sources.",
+    "about": "unit spotlight",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory Libraries",
+        "url": "https://together.emory.edu/give/to/arts-libraries-and-museum/university-libraries"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person": "Erin Horeni-Ogle",
+        "title": "Managing Director of Development",
+        "email": "ehoreni@emory.edu",
+        "telephone": "404-727-5386"
+      }
+    }
   },
   "path": "university-libraries",
   "metatag": {
@@ -16,28 +31,123 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "header": "Home to more than 5.6 million volumes, 400,970 electronic journals, 1.6 million electronic books, and internationally renowned special collections, Emory’s eight libraries are a precious learning resource.",
+        "background_image": "libraries_isolated_bg.png",
+        "text": "<p>One of the top 20 Association of Research Libraries in North America, Emory University Libraries in Atlanta and Oxford, Georgia, are the interdisciplinary intellectual commons for Emory University. Our innovative resources, services, spaces, and collections advance the success of Emory students, staff, and faculty, and benefit the community beyond campus.</p>",
+        "img_src": "libraries_intro.jpg",
+        "media_src": "https://vimeo.com/629374817/ba179bca3e",
+        "media_alt": "Student with hat sits at computer desk.",
+        "media_type": "video",
+        "media_header": "University Libraries",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "If we don't collect these materials in this world where we're constantly being very digital, and ideas of the physical book, or the journals that you might've written when you were younger, those things kind of fall to the wayside.",
+        "attribution": "— Clinton R. Fluker 17G, Curator of African American collections, Stuart A. Rose Manuscript, Archives, and Rare Book Library"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR EMORY LIBRARIES",
+        "image_src": "libraries_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give/to/arts-libraries-and-museum/university-libraries",
+        "cta_text": "Support Emory Libraries"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Celebrating Literature and Poetry",
+        "body": "<p>Including the papers of writers, poets, and critics; records of publishers and presses; and rare books and literary manuscripts, our collections make Emory Libraries a destination for scholars from around the world. The Rose Library houses a globally significant collection of centuries of materials from Irish literature to modern poetry, African American writers, Georgia and Southern writers, counterculture, and the Beats.</p><p><strong>Endowed funding for Emory’s literature and poetry collections will allow us to expand and care for the collections.</strong> An endowment also provides funding for exhibitions and programs so we can share these extraordinary collections with the larger community.</p>",
+        "layout": "right",
+        "img_src": "libraries_priority_1.jpg",
+        "media_src": "libraries_priority_1_popup.jpg",
+        "media_alt": "Two people handle artwork with gloves.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Celebrate Collections",
+        "media_text": "Endowed funding for Emory’s literature and poetry collections will create a new curatorship for literature and poetry."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Documenting Political, Cultural, and Social Movements",
+        "body": "<p>In addition to books and literary records, the Rose Library collects materials that document the history, culture, and politics of Atlanta and the South. These materials highlight the remarkable changes from the end of the Civil War to Atlanta’s emergence as a 21st-century cosmopolitan center. History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham.</p><p><strong>With a gift to 2O36, we can continue growing the collection, properly care for the pieces, and host exhibitions and programs so the community can bear witness to this living history.</strong> Because the best teachers of history are the activists, artists, athletes, business leaders, elected officials, journalists, and organizations that lived it, challenged the thinking of their day, and influenced the political, cultural, and social movements of the region.</p>",
+        "layout": "right",
+        "img_src": "libraries_priority_2.jpg",
+        "media_src": "libraries_priority_2_popup.jpg",
+        "media_alt": "A person views a picture through a magnifying glass.",
+        "media_type": "image",
+        "media_header": "Highlighting History",
+        "media_text": "History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham.",
+        "media_byline": "Featured: Judith A Miller, Associate Professor, Department of History"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Jonathan Coulis 19G",
+        "layout": "left",
+        "subtitle": "Oral History Coordinator",
+        "img_src": "libraries_quote_1.jpg",
+        "media_src": "https://vimeo.com/631452606/369f64dbdc",
+        "media_alt": "A video quote of Jonathan Coulis 19G",
+        "media_header": "Jonathan Coulis 19G",
+        "media_text": "Oral History Coordinator",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Rare Books: A Wealth of Knowledge to Share",
+        "body": "<p>Complementing its manuscript holdings, the Rose Library is also home to several hundred thousand volumes of rare books and serials dating from the 13th to the 21st centuries, covering a wide range of subjects from religious texts to anatomical engravings and avant-garde poetry. Highlights of the collection include art and art history, 19th- and 20th-century British literature and Victorian novels, African American literature and imprints, and volumes of Southern history. The personal libraries of many important writers, scholars, presses, and collectors are additional standouts. From the first editions to their translations, inscribed and signed copies, and adaptations, the rare books collection is a treasured resource for textual and bibliographical research.</p><p><strong>Funding through 2O36 would endow a curator position and provide the much-needed resources to make the collection more widely available to the Emory community and beyond.</strong> A collection of this caliber requires a curator whose expertise and energies would focus on expanding it, organizing programming and exhibitions, and connecting with those who will appreciate and learn from it.</p>",
+        "layout": "right",
+        "img_src": "libraries_priority_3.jpg",
+        "media_src": "libraries_priority_3_popup.jpg",
+        "media_alt": "Old book on a shelf.",
+        "media_type": "image",
+        "media_header": "A Wealth of Knowledge",
+        "media_text": "From the first editions to their translations, inscribed and signed copies, and adaptations, the rare books collection is a treasured resource for textual and bibliographical research."
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "UNIVERSITY LIBRARIES",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Elevating the Importance of our African American Collections",
+            "description": "<p>Tracing African American life from its beginnings in North America through the present, the materials of the Rose Library’s African American collections focus on the development of social, political, and cultural movements, literature, the visual arts, dance, sports, and more. Not only does the collection celebrate the efforts of well-known public intellectuals, scholars, writers, and religious leaders, it shines a light on the contributions of lesser-known community activists, cultural workers, and African Americans from divergent backgrounds and perspectives.</p><p><strong>Gifts to 2O36 will support growing and caring for these collections, and provide funding for exhibitions and programs so Emory’s African American collections can be studied and appreciated by Emory students, researchers, and all of Atlanta.</strong></p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Digitizing Means Access",
+            "description": "<p>By digitizing our varied collections, Emory’s digital library program preserves and provides access to these unique—in some cases, one-of-a-kind—pieces. <strong>Your support for 2O36 allows us to staff, curate, digitize, and preserve these collections.</strong> Once fully funded, digital access to these collections will be available to students and scholars around the world, regardless of means or ability to travel to Emory’s campus.</p>"
+          },
+          {
+            "title": "Enhancing and Expanding Collections",
+            "description": "<p>Librarians across specific disciplines are continuously looking to grow their collections in order to provide the best resources possible for scholars of their subject matter. Funding for general collections allows Emory Libraries to develop, care for, and expand holdings in every category, and to preserve their materials for future generations. <strong>This much-needed funding will support collections development and care across the eight libraries on our campus.</strong></p>"
+          },
+          {
+            "title": "Preserving our Stories for 2O36",
+            "description": "<p>Stories from the COVID-19pandemic and Ebola survivors. The struggles and successes of first-generation students and those who identify as Latinx, Black, and LGBTQ. Currently focused on these timely tales and the voices of underrepresented populations at Emory, the oral history program collects, preserves, and provides access to the stories and experiences of peoples and cultures.</p><p>Giving a platform to those who haven’t always had one, the oral history program preserves these voices and makes them accessible to all. <strong>With the financial help of 2O36, we can collect more stories, host workshops on storytelling and story capturing, and partner with other similarly minded groups to continuously expand these oral collections.</strong></p>"
+          },
+          {
+            "title": "Taking our Collections to the People",
+            "description": "<p>Emory Libraries have a traveling exhibitions program that allows us to share our archives and unique collections with a wider audience, taking these collections into K-12 schools, public libraries, and other spaces to connect with the community and broaden access to these extraordinary works.</p><p><strong>Funding from 2O36 would allow the libraries to digitize materials, build exhibitions, and expand physical installations throughout the city of Atlanta and beyond.</strong> The partnerships that the traveling exhibition program develops will deepen Emory Libraries’ engagement with and connection to the community, increase our visibility, and encourage the use of our collections."
+          },
+          {
+            "title": "Preserving Treasures for the Future",
+            "description": "<p>From monitoring the environments of both rare and wide circulation collections to restoring materials to their former glory and preparing for disasters, the Emory Libraries preservation program oversees all preservation activities across libraries.</p><p>Funding provides the preservation program with the tools, equipment, training, and resources needed to care for our collections now and in the future. <strong>This preservation will ensure that our collections remain accessible to generations of scholars.</strong></p>"
           }
         ]
       }

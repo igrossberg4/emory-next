@@ -56,31 +56,31 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
 
                 ].concat(nodeFinded.components)
                     .concat(
-                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase)
+                        prepareBottomMenu(lastNode, nextNode, nodes, nodeBase, nodeFinded)
                     )
             }
         }
     });
     const slidesCloned = [];
-    for (let i = Math.round(slides.length / 2); i < slides.length; i++){
-        if(i+index > slides.length -1){
-          slidesCloned.push(slides[index+i-slides.length]);
+    for (let i = Math.round(slides.length / 2); i < slides.length; i++) {
+        if (i + index > slides.length - 1) {
+            slidesCloned.push(slides[index + i - slides.length]);
         }
-        else{
-          slidesCloned.push(slides[index+i]);
-    
+        else {
+            slidesCloned.push(slides[index + i]);
+
         }
-      }
-      slidesCloned.push(slides[index])
-      for (let i = 1; i < Math.round(slides.length / 2); i++){
-        if(i+index > slides.length -1){
-          slidesCloned.push(slides[index+i-slides.length]);
+    }
+    slidesCloned.push(slides[index])
+    for (let i = 1; i < Math.round(slides.length / 2); i++) {
+        if (i + index > slides.length - 1) {
+            slidesCloned.push(slides[index + i - slides.length]);
         }
-        else{
-          slidesCloned.push(slides[index+i]);
-    
+        else {
+            slidesCloned.push(slides[index + i]);
+
         }
-      }
+    }
     //slidesCloned.push(...slidesCloned.slice(0, 2));
     //slidesCloned.unshift(...slidesCloned.slice(slidesCloned.length-2, slidesCloned.length-1))
 
@@ -157,7 +157,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
     }
 }
 
-function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode: any) {
+function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, baseNode: any, nodeFinded: any) {
     const basePath = baseNode ? `${baseNode.path}/` : '';
     const prevNodeSelect = !lastNode ? nodes[nodes.length - 1] : lastNode;
     const nextNodeSelect = !nextNode ? nodes[0] : nextNode;
@@ -175,7 +175,7 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
         },
         {
             "component": "Footer",
-            "props": {}
+            "props": Object.assign({}, nodeFinded.page_props.footer)
         }
     ]
 }
@@ -195,7 +195,7 @@ function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndepen
                 }
             ].concat(node.components).concat({
                 "component": "Footer",
-                "props": {}
+                "props": Object.assign({}, node.page_props.footer)
             })
         }
     }).filter(Boolean);
@@ -227,16 +227,20 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     if (item.read_more && !re.test(item.read_more)) {
 
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === item.read_more && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        item.read_more = path;
-                        item.internal_link = true;
+                        if (nodeAccordionLink) {
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            item.read_more = path;
+                            item.internal_link = true;
+                        }
                     }
                     item?.tags?.forEach((tag: any) => {
                         if (tag.url && !re.test(tag.url)) {
                             const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
-                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                            tag.url = path;
-                            tag.internal_link = true;
+                            if (nodeAccordionLink) {
+                                const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                                tag.url = path;
+                                tag.internal_link = true;
+                            }
                         }
                     })
                 })
@@ -247,9 +251,11 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                     const item = slide.props;
                     if (item.explore_link && !re.test(item.explore_link)) {
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === item.explore_link && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        item.explore_link = path;
-                        item.internal_link = true;
+                        if (nodeAccordionLink) {
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            item.explore_link = path;
+                            item.internal_link = true;
+                        }
                     }
                 })
             }
@@ -258,16 +264,20 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                 component.props?.tags?.forEach((tag: any) => {
                     if (tag.url && !re.test(tag.url)) {
                         const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === tag.url && node.id === page) > -1);
-                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                        tag.url = path;
-                        tag.internal_link = true;
+                        if (nodeAccordionLink) {
+                            const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                            tag.url = path;
+                            tag.internal_link = true;
+                        }
                     }
                 });
                 if (component.props.read_more && !re.test(component.props.read_more)) {
                     const nodeAccordionLink = nodes.find(node => pages.findIndex(page => page === component.props.read_more && node.id === page) > -1);
-                    const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
-                    component.props.read_more = path;
-                    component.props.internal_link = true;
+                    if (nodeAccordionLink) {
+                        const path = nodeAccordionLink.id === pages_list.nodeBase.id ? `${pages_list.nodeBase.path}` : `${pages_list.nodeBase.path}/${nodeAccordionLink.path}`;
+                        component.props.read_more = path;
+                        component.props.internal_link = true;
+                    }
                 }
 
             }
@@ -302,7 +312,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
                                         }
 
                                 ].concat(nodeFinded.components).concat(
-                                    prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase)
+                                    prepareBottomMenu(prevNode, nextNode, nodesForCollection, pages_list.nodeBase, nodeFinded)
                                 )
                             }
                         },

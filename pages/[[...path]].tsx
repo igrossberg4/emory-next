@@ -173,12 +173,12 @@ export default function Home(props: any) {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
 
-      const videoElement = document.getElementById("video-container");
-      if (videoElement) {
-        videoElement.style.bottom = isMobile
-          ? videoContainerBottomCalculator(window, document)
-          : (undefined as any);
-      }
+      // const videoElement = document.getElementById("video-container");
+      // if (videoElement) {
+      //   videoElement.style.bottom = isMobile
+      //     ? videoContainerBottomCalculator(window, document)
+      //     : (undefined as any);
+      // }
     };
 
     updateWindowDimensions();
@@ -324,7 +324,9 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
+      const isMenu = e.target instanceof HTMLElement && e.target.closest('.menu-main');
       if (
+        !isMenu &&
         circleAnimatePreventScrollEnabled &&
         scrollY < circleAnimateMinimunScroll &&
         ((!isCircleExpanded && isGoingDown) ||
@@ -615,7 +617,13 @@ export default function Home(props: any) {
   return (
     <Fragment>
       <Head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VDCSNB');`}}></script>
         <title>{props.meta.title}</title>
+        {props.meta.robots ? (
+          <meta name="robots" content={props.meta.robots} />
+        ) : (
+          ""
+        )}
         <meta name="description" content={props.meta.description} />
         <meta property="og:image" content={props.meta.image}></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -636,14 +644,38 @@ export default function Home(props: any) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="manifest"
+          href="/site.webmanifest"
+          crossOrigin="use-credentials"
+        />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <link rel="preload" href="/fonts/pangram-regular.woff2"></link>
-        <link rel="preload" href="/fonts/pangram-bold.woff2"></link>
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/pangram-regular.woff2"
+          crossOrigin={"true"}
+        ></link>
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/pangram-bold.woff2"
+          crossOrigin={"true"}
+        ></link>
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff"
+          href="/fonts/ampersand-medium.woff"
+          crossOrigin={"true"}
+        ></link>
 
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
+      <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VDCSNB" title="google tag manager" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
       {memo}
     </Fragment>
   );

@@ -10,10 +10,9 @@
   "metatag": {
     "title": "Data Science - Emory 2036",
     "description": "",
-    "image":""
+    "image": ""
   },
   "components": [
-
     {
       "component": "SectionIntro",
       "props": {
@@ -26,8 +25,7 @@
         "button_close_text": "Close",
         "media_src": "2036_data_science_grid_yellow.jpg",
         "media_type": "image",
-        "media_alt":
-          "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
       }
     }
   ]

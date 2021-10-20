@@ -26,6 +26,7 @@ p {
   line-height: $line-height-lg;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .text-label {
@@ -83,6 +84,7 @@ p {
   font-size: 14px;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 0.15em;
   border-bottom: 1px solid $color_black;
 }

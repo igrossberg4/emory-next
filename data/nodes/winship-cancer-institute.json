@@ -3,8 +3,23 @@
   "type": "collection",
   "page_props": {
     "header": "WINSHIP CANCER<br>INSTITUTE",
+    "about": "unit spotlight",
+    "text": "To discover cures for cancer and inspire hope.",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_brain_health_neurons_blue.jpg"
+    "img_src": "winship_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Winship",
+        "url": "https://together.emory.edu/give/to/health-and-medicine/winship-cancer-institute"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person": "Irene Hammer-McLaughlin",
+        "title": "Executive Director",
+        "email": "ihammermc@emory.edu",
+        "telephone": "404-712-2896"
+      }
+    }
   },
   "path": "winship-cancer-institute",
   "metatag": {
@@ -16,28 +31,144 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_data_science_code_yellow.jpg",
-        "media_src": "2036_data_science_code_yellow.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "header": "Serving more than 17,000 patients each year, Winship Cancer Institute at Emory University helps cancer patients throughout Georgia, the Southeast, and beyond by working to prevent, treat, and cure cancer. This is where science becomes hope.",
+        "background_image": "winship_isolated_bg.png",
+        "text": "<p>As the world deals with the COVID-19 public health crisis, Winship Cancer Institute continues to lessen the burden of cancer for Georgia residents by combining outstanding research, care, and prevention.</p>",
+        "img_src": "winship_intro.jpg",
+        "media_src": "https://vimeo.com/632101132/65a9ba9fb3",
+        "media_alt": "Winship health professional",
+        "media_type": "video",
+        "media_header": "Winship Cancer Institute",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "Every time I'm in the clinic, seeing patients, I feel like I'm making a difference. When you see treatment plans for patients with cancer work and they are here years later to say how happy they are for the outcomes, that to me feels like the biggest difference I could possibly make in someone's life.",
+        "attribution": "— Suresh S. Ramalingam, Executive Director, Winship Cancer Institute <br/> Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR WINSHIP CANCER INSTITUTE",
+        "image_src": "winship_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give/to/health-and-medicine/winship-cancer-institute",
+        "cta_text": "Support Winship"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Patients Come First at Winship",
+        "body": "<p>In Winship’s specialized care communities, patients receive personalized cancer treatment aligned with groundbreaking research. To continue growing, Winship plans to expedite care, further improve outcomes, and foster more seamless collaboration among experts. <strong>The new Winship Midtown Center—with increased operating room capacity and reduced surgery wait times—will support these goals while making things easier for Winship patients.</strong></p>",
+        "layout": "right",
+        "img_src": "winship_priority_1.jpg",
+        "media_src": "winship_priority_1_popup.jpg",
+        "media_alt": "Winship Midtown Center.",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Patients are First",
+        "media_text": "The new Winship Midtown Center—with increased operating room capacity and reduced surgery wait times—will support these goals while making things easier for Winship patients."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Recognizing Discoveries",
+        "body": "<p>The Winship community takes pride in the power of our people. Our physician scientists—with discoveries in cancer cell biology, genetics, drugs, radiation, surgery, and other therapies— produce some of the best treatments available.</p>",
+        "layout": "right",
+        "img_src": "winship_priority_2.jpg",
+        "media_src": "winship_priority_2_popup.jpg",
+        "media_alt": "Winship faculty member.",
+        "media_type": "image",
+        "media_header": "Research and Discover",
+        "media_text": "With endowed professorships and chairs, Winship will recruit and retain the brightest minds in cancer research, care, and education.",
+        "media_byline": "Featured: Suresh S. Ramalingam, Executive Director, Winship Cancer Institute<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Cassandra Quave 00C",
+        "layout": "left",
+        "subtitle": "Associate Professor, Department of Dermatology<br/>Associate Professor, Center for the Study of Human Health<br/>Curator, Emory University Herbarium",
+        "img_src": "winship_quote_1.jpg",
+        "media_src": "https://vimeo.com/631304153/51fc71c9ab",
+        "media_alt": "A video quote of Cassandra Quave 00C",
+        "media_header": "Cassandra Quave 00C",
+        "media_text": "Associate Professor, Department of Dermatology<br/>Associate Professor, Center for the Study of Human Health<br/>Curator, Emory University Herbarium",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Invest in Faculty, Invest in the Future",
+        "body": "<p>Endowed professorships are key to retaining the best faculty and brightest minds in cancer research, care, and education. They also allow us to keep our designation as a National Cancer Institute (NCI) Comprehensive Cancer Center, a status dependent on the leadership of clinicians, scientists, educators, community liaisons, and staff.</p><p><strong>With support provided through 2O36, Winship will be able to endow five positions for research programs and 10 positions for senior investigators.</strong> These endowments will help to improve our profile as a research institution and will increase the amount of grant and philanthropic assistance we receive.</p>",
+        "layout": "right",
+        "img_src": "winship_priority_3.jpg",
+        "media_src": "winship_priority_3_popup.jpg",
+        "media_alt": "Winship faculty lead research.",
+        "media_type": "image",
+        "media_header": "Faculty is Funded",
+        "media_text": "With support provided through 2O36, Winship will be able to endow five positions for research programs and 10 positions for senior investigators.",
+        "media_byline": "Featured: Georgia Chen, Professor, Department of Hematology and Medical Oncology"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "WINSHIP CANCER INSTITUTE",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Rising Stars in 2036",
+            "description": "<p>Through a multidisciplinary approach, Winship Cancer Institute provides comprehensive programs for the whole patient. Lessening the burden of cancer for Georgia residents remains our core mission, which we achieve by aligning cancer research with prevention efforts.</p><p><strong>To fulfill this mission, Winship recruits high-performing rising stars who reflect our values.</strong> Our recruitment strategy targets diverse faculty members who reflect the communities Winship serves, while our outreach programs work to include people who have long been underrepresented in cancer care and clinical research. With shorter tenures and faster turnover in health care nationwide, Winship is moving quickly to inspire talented people to join—and stay with—our research teams. Meanwhile, Winship is accelerating growth in our research programs to break new ground in cancer treatment and meet the needs of patients across the region.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Imaging Innovation in 2036",
+            "description": "<p>Our clinicians and researchers are integral to Emory’s success, and the same can be said for Winship. Thanks to our collaborative infrastructure, state-of-the-art facilities, and programs of wide breadth and depth, research within the Winship Cancer Institute has produced important findings that translate positively to patient outcomes.</p><p>Researchers need sophisticated techniques and equipment to better understand how cancer develops and progresses. When they can visualize molecular-level interactions with a high degree of precision, developing strategies for cancer prevention and treatment becomes more feasible. And imaging technology can improve detection, diagnosis, prognosis, therapy, and the prediction of efficacy. <strong>An investment in new technology through 2O36 will reach beyond Winship to ensure that our many collaborators in the broader cancer community—in Georgia, throughout the nation, and around the world—will have access to the tools of innovation.</strong></p>"
+          },
+          {
+            "title": "Supporting Disease-Specific Research Centers in 2036",
+            "description": "<p>Cancer research has become multidisciplinary, and Winship facilitates cancer prevention, treatment, and survivorship through support groups and integrated complementary therapies. This multidisciplinary approach has led us to become one of the leading cancer programs in the nation. In 2020 alone, Winship conducted more than 300 therapeutic clinical trials and enrolled more than 900 patients. We also have Georgia’s largest unit for phase I clinical trials, which are important for introducing new therapies against cancer.</p><p><strong>Through 2O36, Winship will support basic, clinical, and applied scientists working together on projects that will result in new and diverse approaches to the prevention, early detection, diagnosis, and treatment of cancers.</strong> Winship will make important scientific discoveries that result in novel treatments and change the standard of care.</p>"
+          },
+          {
+            "title": "Big Data in 2036",
+            "description": "<p>Winship uses data to inform research and extracts new meaning from large clinical and molecular datasets. <strong>Through investments from 2O36, Winship will accelerate patient-focused research and support personalized care.</strong> Data science and machine learning technologies can improve the quality of patient care by streamlining processes and helping Winship researchers translate discoveries into cancer treatments. These investments will help us perform better, increase the number of patients we can care for, and improve patient satisfaction with our services.</p>"
+          },
+          {
+            "title": "Grow Immune-Based Approaches",
+            "description": "<p>Cancer immunology research harnesses the body’s natural defenses to develop new treatments—immunotherapies—that target immune cells in and around cancer cells. Philanthropy advances this groundbreaking work. Winship investigators have been involved in clinical trials of nearly every FDA-approved immunotherapy drug, and we expect that growth in immune-based approaches will separate Winship from other cancer centers around the nation. <strong>Through 2O36, Winship will be able to manufacture cell-based therapies and improve immunotherapy for certain kinds of cancers.</strong></p>"
+          },
+          {
+            "title": "Promoting Global Cancer Awareness in 2036",
+            "description": "<p>Cancer is the second-leading cause of death in developing nations. Winship can help provide global cancer care through education and training, improved diagnostic resources, and collaborative research, efforts that fulfill Emory’s mission of service. <strong>Through 2O36, Winship will have a respected Center for Global Cancer Medicine to partner with academic medical centers and cancer clinics in low- and middle-income countries.</strong></p>"
+          },
+          {
+            "title": "Foster Collaborative Science",
+            "description": "<p>Collaboration is the key to cancer research. To combat cancer effectively, researchers and scientists must work together. Funding that facilitates collaborative science allows researchers to go beyond institutional bounds and work with the best minds in different fields. Not only that, but researchers involved in interdepartmental collaborations tend to be more productive and successful in translational research compared to those who collaborate only with colleagues from their own research departments. <strong>Through 2O36, major research advances will enable better ways to detect, prevent, and treat cancer, all while furthering Winship’s national reputation as a powerhouse cancer research enterprise.</strong></p>"
+          },
+          {
+            "title": "Promoting Survivorship",
+            "description": "<p>Integrative oncology is a patient-centered, evidence-based approach to cancer care that includes complimentary services, mind and body practices, natural products, and lifestyle modifications that work alongside conventional cancer treatments. Integrative oncology services make patients happier with their care and can improve sleep and mood, reduce fatigue, relieve pain, and manage both short- and long-term symptoms sometimes associated with cancer treatment. <strong>Through 2O36, the share of Winship cancer survivors using complimentary services will increase from 20 to more than 50 percent, while current Winship patients using these services will increase from 24 percent to more than 60 percent.</strong> Patients will experience increased satisfaction, and Winship’s clinical volume will increase."
+          },
+          {
+            "title": "Training Grants",
+            "description": "<p>Successful cancer research and care require skills in business, leadership, collaboration, and communication. By developing these skills, training grants help Winship catalyze a 21st-century workforce in a cost-effective way. <strong>Through 2O36, Winship will cultivate a community of scientists with diverse backgrounds, support faculty members through onboarding and mentoring, and create a lasting culture of inclusion.</strong></p>"
+          },
+          {
+            "title": "In 2036, Expanding Access to Clinical Trials",
+            "description": "<p>In clinical trials, Winship researchers pioneer promising treatments that become standards of care. Despite the benefits of participating in clinical trials, however, fewer than 1 in 20 of our adult patients enroll. Expanding our clinical trials program will give Winship patients access to the latest treatments and improve outcomes for people living with cancer worldwide.</p><p><strong>Through 2O36, clinical trial opportunities will be provided at all Winship patient care locations, aligning with Emory’s goal of promoting diversity and accessibility.</strong> Support for investigator-initiated trials will round out Winship’s translational research continuum.</p>"
+          },
+          {
+            "title": "Improving Patient Care in 2036",
+            "description": "<p>Patients with positive care experiences often have better health outcomes. With this in mind, the Winship Way combines best practices in care delivery with advanced technologies and business systems that put our patients at the center of a constructive health care culture. <strong>Through 2O36, Winship will ensure that every patient has an exceptional experience.</strong></p>"
           }
         ]
       }

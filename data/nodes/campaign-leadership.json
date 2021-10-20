@@ -3,10 +3,13 @@
   "type": "collection",
   "page_props": {
     "header": "Campaign Leadership",
-    "text": "Logline: Lorem Ipsum.",
+    "text": "Invest in people for the benefit of people.",
     "about": "Special thanks to our",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_blue.jpg"
+    "img_src": "2036_cancer_cells_blue.jpg",
+    "footer": {
+      "cta_support_button": false
+    }
   },
   "path": "campaign-leadership",
   "metatag": {
@@ -18,15 +21,15 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_data_science_code_yellow.jpg",
-        "media_src": "2036_data_science_code_yellow.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "header": "The 2O36 Campaign Council leads the charge to invest in people for the benefit of people for a better future, as evidenced by their continued support, selfless acts of service, and passion for Emory.",
+        "background_image": "about_isolated_bg.png",
+        "text": "<p>The council represents our community members—alumni, faculty, staff, students, physicians, parents, and friends—as well as the nine academic schools and units and Emory Healthcare. Their guidance over the next four years will support university and health care leadership to ensure priorities and funding is aligned with the mission, vision, and values of Emory—in service of humanity.</p>",
+        "img_src": "leadership_intro.jpg",
+        "media_src": "https://vimeo.com/605963807/295678c674",
+        "media_alt": "Portrait of President Greg L. Fenves",
+        "media_type": "video",
+        "media_header": "Gregory L. Fenves",
+        "media_text": "President, Emory University"
       }
     },
     {
@@ -35,52 +38,52 @@
         "header": "Campaign Cabinet",
         "items": [
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Susan Cahoon 68C",
+            "description": "School and Unit Co-Chair",
+            "img_src": "headshots/cahoon_1.jpg",
+            "media_alt": "Portrait of Susan Cahoon"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "John & Cammie Rice",
+            "description": "School and Unit Co-Chairs",
+            "img_src": "headshots/rice_1.jpg",
+            "media_alt": "Portrait of John and Cammie Rice"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Sarah Beth Brown 89B",
+            "description": "Regional Co-Chair",
+            "img_src": "headshots/brown_2.jpg",
+            "media_alt": "Portrait of Sarah Beth Brown"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Adam Rogers 92C 96M P19 P21, Stephanie Rogers 92C P19 P21",
+            "description": "Regional Co-Chairs",
+            "img_src": "headshots/rogers_1.jpg",
+            "media_alt": "Portrait of Adam & Stephanie Rogers"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Gregory L. Fenves",
+            "description": "President, Emory University",
+            "img_src": "headshots/g_fenves_1.jpg",
+            "media_alt": "Portrait of Gregory L. Fenves"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Joshua R. Newton",
+            "description": "Senior Vice President, Advancement and Alumni Engagement",
+            "img_src": "headshots/j_newton_3.jpg",
+            "media_alt": "Portrait of Joshua R. Newton"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Bob Goddard",
+            "description": "Chair, Emory Board of Trustees",
+            "img_src": "headshots/goddard_1.jpg",
+            "media_alt": "Portrait of Bob Goddard"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Mitchell Tanzman 81C P18",
+            "description": "Chair, Development Committee, Emory Board of Trustees",
+            "img_src": "headshots/tanzman_1.jpg",
+            "media_alt": "Portrait of Mitchell Tanzman 81C P18"
           }
         ]
       }
@@ -89,70 +92,532 @@
       "component": "ProfileGrid",
       "props": {
         "header": "School & Unit Volunteer Leaders",
-        "size" : "small",
+        "size": "small",
         "items": [
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Claudia Adkison",
+            "description": "School of Medicine",
+            "img_src": "headshots/adkison_1.jpg",
+            "media_alt": "Portrait of Claudia Adkison"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Dan Amos P02",
+            "description": "Candler School of Theology",
+            "img_src": "headshots/d_amos_1.jpg",
+            "media_alt": "Portrait of Dan Amos P02"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Kathelen Amos 79C",
+            "description": "Candler School of Theology, School of Medicine",
+            "img_src": "headshots/k_amos_2.jpg",
+            "media_alt": "Portrait of Kathelen Amos 79C"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Amanda Arrendale",
+            "description": "Oxford College",
+            "img_src": "headshots/a_arrendale_1.jpg",
+            "media_alt": "Portrait of Amanda Arrendale"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Chris Arrendale 99Ox 01C",
+            "description": "Oxford College",
+            "img_src": "headshots/c_arrendale_2.jpg",
+            "media_alt": "Portrait of Chris Arrendale 99Ox 01C"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Ellen Bailey 63C 87B P87",
+            "description": "Emory Healthcare",
+            "img_src": "headshots/bailey_1.jpg",
+            "media_alt": "Portrait of Ellen Bailey 63C 87B P87"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
-            "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "name": "Laura Balser 94B 01B",
+            "description": "Goizueta Business School",
+            "img_src": "headshots/balser_1.jpg",
+            "media_alt": "Portrait of Laura Balser 94B 01B"
           },
           {
-            "name" : "Susan Cahoon 68C",
-            "description" : "Campaign Focus Area",
+            "name": "Don Benson 84C P22 P25",
+            "description": "Campaign Focus Area",
+            "img_src": "headshots/d_benson_1.jpg",
+            "media_alt": "Portrait of Don Benson 84C P22 P25"
+          },
+          {
+            "name": "Diana Blair",
+            "description": "Emory Healthcare",
+            "img_src": "headshots/blair_1.jpg",
+            "media_alt": "Portrait of Diana Blair"
+          },
+          {
+            "name": "Elise Blalock 04C",
+            "description": "Campus Life and Athletics",
+            "img_src": "headshots/e_blalock_1.jpg",
+            "media_alt": "Portrait of Elise Blalock 04C"
+          },
+          {
+            "name": "Travis Blalock 03C",
+            "description": "Campus Life and Athletics",
+            "img_src": "headshots/t_blalock_2.jpg",
+            "media_alt": "Portrait of Travis Blalock 03C"
+          },
+          {
+            "name": "Bill Britt 83T",
+            "description": "Candler School of Theology",
+            "img_src": "headshots/britt_1.jpg",
+            "media_alt": "Portrait of Bill Britt 83T"
+          },
+          {
+            "name": "Dirk Brown 90B",
+            "description": "Michael C. Carlos Museum",
+            "img_src": "headshots/brown_1.jpg",
+            "media_alt": "Portrait of Dirk Brown 90B"
+          },
+          {
+            "name": "Jonathan Butler 96C",
+            "description": "Alumni Engagement",
+            "img_src": "headshots/butler_1.jpg",
+            "media_alt": "Portrait of Jonathan Butler 96C"
+          },
+          {
+            "name": "Andrew Conway 92B P21",
+            "description": "Goizueta Business School",
+            "img_src": "headshots/conway_1.jpg",
+            "media_alt": "Portrait of Andrew Conway 92B P21"
+          },
+          {
+            "name": "Lilly D’Angelo 89G",
+            "description": "Laney Graduate School",
+            "img_src": "headshots/dangelo_1.jpg",
+            "media_alt": "Portrait of Lilly D’Angelo 89G"
+          },
+          {
+            "name": "Mike Dangerfield",
+            "description": "Yerkes National Primate Research Center",
+            "img_src": "headshots/dangerfield_1.jpg",
+            "media_alt": "Portrait of Mike Dangerfield"
+          },
+          {
+            "name": "Jeff Denneen 92C 97B P24",
+            "description": "Goizueta Business School",
+            "img_src": "headshots/denneen_1.jpg",
+            "media_alt": "Portrait of Jeff Denneen 92C 97B P24"
+          },
+          {
+            "name": "Tash Elwyn 93C",
+            "description": "College of Arts and Sciences",
+            "img_src": "headshots/elwyn_1.jpg",
+            "media_alt": "Portrait of Tash Elwyn 93C"
+          },
+          {
+            "name": "Rob Friedman",
+            "description": "School of Medicine",
+            "img_src": "headshots/friedman_1.jpg",
+            "media_alt": "Portrait of Rob Friedman"
+          },
+          {
+            "name": "Jim Gavin 70G",
+            "description": "Laney Graduate School",
+            "img_src": "headshots/gavin_1.jpg",
+            "media_alt": "Portrait of Jim Gavin 70G"
+          },
+          {
+            "name": "Lou Glenn",
+            "description": "Winship Cancer Institute",
+            "img_src": "headshots/glenn_1.jpg",
+            "media_alt": "Portrait of Lou Glenn"
+          },
+          {
+            "name": "Nelly Golarz de Bourne 63G",
+            "description": "Yerkes National Primate Research Center",
+            "img_src": "headshots/golarz_1.jpg",
+            "media_alt": "Portrait of Nelly Golarz de Bourne 63G"
+          },
+          {
+            "name": "Steve Greenfield 04B",
+            "description": "Alumni Engagement",
+            "img_src": "headshots/greenfield_1.jpg",
+            "media_alt": "Portrait of Steve Greenfield 04B"
+          },
+          {
+            "name": "Ashley Grice 97PH 03B",
+            "description": "Alumni Engagement",
+            "img_src": "headshots/grice_1.jpg",
+            "media_alt": "Portrait of Ashley Grice 97PH 03B"
+          },
+          {
+            "name": "Kimberly Hoang",
+            "description": "Faculty and Staff",
+            "img_src": "headshots/k_hoang_1.jpg",
+            "media_alt": "Portrait of Kimberly Hoang"
+          },
+          {
+            "name": "Ira Horowitz P10 P13",
+            "description": "Faculty and Staff",
+            "img_src": "headshots/horowitz_1.jpg",
+            "media_alt": "Portrait of Ira Horowitz P10 P13"
+          },
+          {
+            "name": "Francis Humann 87C P13",
+            "description": "Michael C. Carlos Museum",
+            "img_src": "headshots/humann_1.jpg",
+            "media_alt": "Portrait of Francis Humann 87C P13"
+          },
+          {
+            "name": "Stephanie Kennedy",
+            "description": "Emory Healthcare",
             "img_src": "2036_data_science_code_yellow.jpg",
-            "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui."
+            "media_alt": "Portrait of Stephanie Kennedy"
+          },
+          {
+            "name": "Amy Kreisler",
+            "description": "Rollins School of Public Health",
+            "img_src": "headshots/kreisler_1.jpg",
+            "media_alt": "Portrait of Amy Kreisler"
+          },
+          {
+            "name": "Mary Anne Lanier",
+            "description": "Rollins School of Public Health",
+            "img_src": "headshots/lanier_1.jpg",
+            "media_alt": "Portrait of Mary Anne Lanier"
+          },
+          {
+            "name": "John Latham 79L",
+            "description": "School of Law",
+            "img_src": "headshots/latham_1.jpg",
+            "media_alt": "Portrait of John Latham 79L"
+          },
+          {
+            "name": "Crystal Edmonson Lewis 95C",
+            "description": "Alumni Engagement",
+            "img_src": "headshots/lewis_1.jpg",
+            "media_alt": "Portrait of Crystal Edmonson Lewis 95C"
+          },
+          {
+            "name": "Melissa Lowe P07 P09 P14 P18",
+            "description": "Rollins School of Public Health",
+            "img_src": "headshots/lowe_1.jpg",
+            "media_alt": "Portrait of Melissa Lowe P07 P09 P14 P18"
+          },
+          {
+            "name": "Sarah McPhee",
+            "description": "Faculty and Staff",
+            "img_src": "headshots/mcphee_1.jpg",
+            "media_alt": "Portrait of Sarah McPhee"
+          },
+          {
+            "name": "Lee Miller 82L",
+            "description": "School of Law",
+            "img_src": "headshots/miller_1.jpg",
+            "media_alt": "Portrait of Lee Miller 82L"
+          },
+          {
+            "name": "Cheryl Murphy 77N P06 P08",
+            "description": "Nell Hodgson Woodruff School of Nursing",
+            "img_src": "headshots/murphy_1.jpg",
+            "media_alt": "Portrait of Cheryl Murphy 77N P06 P08"
+          },
+          {
+            "name": "Edjah Nduom 13MR",
+            "description": "Faculty and Staff",
+            "img_src": "headshots/e_nduom_1.jpg",
+            "media_alt": "Portrait of Edjah Nduom 13MR"
+          },
+          {
+            "name": "Bill Newton 75C 76G",
+            "description": "University Libraries",
+            "img_src": "headshots/b_newton_2.jpg",
+            "media_alt": "Portrait of Bill Newton 75C 76G"
+          },
+          {
+            "name": "Anne Newton 76G",
+            "description": "University Libraries",
+            "img_src": "headshots/a_newton_1.jpg",
+            "media_alt": "Portrait of Anne Newton 76G"
+          },
+          {
+            "name": "Karen Parks 16T",
+            "description": "Candler School of Theology",
+            "img_src": "headshots/parks_2.jpg",
+            "media_alt": "Portrait of Karen Parks 16T"
+          },
+          {
+            "name": "Anita Paye",
+            "description": "Faculty and Staff",
+            "img_src": "headshots/paye_1.jpg",
+            "media_alt": "Portrait of Anita Paye"
+          },
+          {
+            "name": "Rein Saral P02",
+            "description": "Winship Cancer Institute",
+            "img_src": "headshots/saral_1.jpg",
+            "media_alt": "Portrait of Rein Saral P02"
+          },
+          {
+            "name": "Jag Sheth",
+            "description": "Faculty and Staff",
+            "img_src": "headshots/sheth_1.jpg",
+            "media_alt": "Portrait of Jag Sheth"
+          },
+          {
+            "name": "Danny Shoy 95C",
+            "description": "Campus Life and Athletics",
+            "img_src": "headshots/shoy_1.jpg",
+            "media_alt": "Portrait of Danny Shoy 95C"
+          },
+          {
+            "name": "Roy Simpson",
+            "description": "Nell Hodgson Woodruff School of Nursing",
+            "img_src": "headshots/simpson_1.jpg",
+            "media_alt": "Portrait of Roy Simpson"
+          },
+          {
+            "name": "Chris Smith P21 P23 P24",
+            "description": "Parents",
+            "img_src": "headshots/c_smith_1.jpg",
+            "media_alt": "Portrait of Chris Smith P21 P23 P24"
+          },
+          {
+            "name": "Ginger Smith 77C 82G",
+            "description": "University Libraries",
+            "img_src": "headshots/g_smith_1.jpg",
+            "media_alt": "Portrait of Ginger Smith 77C 82G"
+          },
+          {
+            "name": "Hugh Tarbutton 84Ox",
+            "description": "Oxford College",
+            "img_src": "headshots/tarbutton_1.jpg",
+            "media_alt": "Portrait of Hugh Tarbutton 84Ox"
+          },
+          {
+            "name": "Linda Taylor 74C",
+            "description": "College of Arts & Sciences",
+            "img_src": "headshots/l_taylor_3.jpg",
+            "media_alt": "Portrait of Linda Taylor 74C"
+          },
+          {
+            "name": "Greg Vaughn 87C",
+            "description": "College of Arts & Sciences",
+            "img_src": "headshots/vaughn_1.jpg",
+            "media_alt": "Portrait of Greg Vaughn 87C"
+          },
+          {
+            "name": "David Williams P16 P18 P20 P22",
+            "description": "Oxford College",
+            "img_src": "headshots/d_williams_2.jpg",
+            "media_alt": "Portrait of David Williams P16 P18 P20 P22"
+          },
+          {
+            "name": "Kelly Williams P16 P18 P20 P22",
+            "description": "Oxford College",
+            "img_src": "headshots/k_williams_1.jpg",
+            "media_alt": "Portrait of Kelly Williams P16 P18 P20 P22"
+          },
+          {
+            "name": "Linda Yarden P21 P23 P24",
+            "description": "Parents",
+            "img_src": "headshots/l_yarden_1.jpg",
+            "media_alt": "Portrait of Linda Yarden P21 P23 P24"
           }
         ]
       }
     },
     {
-      "component": "AccordionComponent",
+      "component": "ProfileGrid",
       "props": {
+        "header": "Regional Volunteer Leaders",
+        "size": "small",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "name": "Jamie Baldinger 78C P11 P16",
+            "description": "Washington DC",
+            "img_src": "headshots/jamie_baldinger_1.jpg",
+            "media_alt": "Portrait of Jamie Baldinger 78C P11 P16"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "name": "Joe Baldinger P11 P16",
+            "description": "Washington DC",
+            "img_src": "headshots/joe_baldinger_2.jpg",
+            "media_alt": "Portrait of Joe Baldinger P11 P16"
+          },
+          {
+            "name": "Curley Bonds 87C",
+            "description": "Southern California",
+            "img_src": "headshots/bonds_1.jpg",
+            "media_alt": "Portrait of Curley Bonds 87C"
+          },
+          {
+            "name": "Kim Chenevey 02Ox 04B",
+            "description": "Atlanta",
+            "img_src": "headshots/chenevey_1.jpg",
+            "media_alt": "Portrait of Kim Chenevey 02Ox 04B"
+          },
+          {
+            "name": "Ed Cloaninger 91Ox 93C",
+            "description": "Boston",
+            "img_src": "headshots/cloaninger_1.jpg",
+            "media_alt": "Portrait of Ed Cloaninger 91Ox 93C"
+          },
+          {
+            "name": "Darren Cohen 96C",
+            "description": "New York",
+            "img_src": "headshots/d_cohen_1.jpg",
+            "media_alt": "Portrait of Darren Cohen 96C"
+          },
+          {
+            "name": "Sherri Cohen 96C",
+            "description": "New York",
+            "img_src": "headshots/s_cohen_2.jpg",
+            "media_alt": "Portrait of Sherri Cohen 96C"
+          },
+          {
+            "name": "Shan Cooper 89C 95B",
+            "description": "Atlanta",
+            "img_src": "headshots/cooper_1.jpg",
+            "media_alt": "Portrait of Shan Cooper 89C 95B"
+          },
+          {
+            "name": "Michele Davis 87C",
+            "description": "Boston",
+            "img_src": "headshots/davis_1.jpg",
+            "media_alt": "Portrait of Michele Davis 87C"
+          },
+          {
+            "name": "Anita Friedmann 88C",
+            "description": "Atlanta",
+            "img_src": "headshots/friedmann_1.jpg",
+            "media_alt": "Portrait of Anita Friedmann 88C"
+          },
+          {
+            "name": "Noni Holmes-Kidd 05C",
+            "description": "Florida",
+            "img_src": "headshots/holmes_1.jpg",
+            "media_alt": "Portrait of Noni Holmes-Kidd 05C"
+          },
+          {
+            "name": "Cyrus Irani 05C",
+            "description": "Houston",
+            "img_src": "headshots/irani_1.jpg",
+            "media_alt": "Portrait of Cyrus Irani 05C"
+          },
+          {
+            "name": "Embry Kidd 05C",
+            "description": "Florida",
+            "img_src": "headshots/kidd_1.jpg",
+            "media_alt": "Portrait of Embry Kidd 05C"
+          },
+          {
+            "name": "Kevin Murriel 11T",
+            "description": "Atlanta",
+            "img_src": "headshots/murriel_1.jpg",
+            "media_alt": "Portrait of Kevin Murriel 11T"
+          },
+          {
+            "name": "Robert Oh 10B",
+            "description": "International",
+            "img_src": "headshots/oh_1.jpg",
+            "media_alt": "Portrait of Robert Oh 10B"
+          },
+          {
+            "name": "Emily Park 04C",
+            "description": "Southern California",
+            "img_src": "headshots/park_1.jpg",
+            "media_alt": "Portrait of Emily Park 04C"
+          },
+          {
+            "name": "Leslie Patterson 99B",
+            "description": "Atlanta",
+            "img_src": "headshots/patterson_1.jpg",
+            "media_alt": "Portrait of Leslie Patterson 99B"
+          },
+          {
+            "name": "Dan Philips 99B",
+            "description": "New York",
+            "img_src": "headshots/philips_1.jpg",
+            "media_alt": "Portrait of Dan Philips 99B"
+          },
+          {
+            "name": "Stacey Philips 99C",
+            "description": "New York",
+            "img_src": "headshots/philips_1.jpg",
+            "media_alt": "Portrait of Stacey Philips 99C"
+          },
+          {
+            "name": "James Reilly 11C 12G",
+            "description": "Atlanta",
+            "img_src": "headshots/reilly_1.jpg",
+            "media_alt": "Portrait of James Reilly 11C 12G"
+          },
+          {
+            "name": "Cheryl Rucker-Whitaker 89C",
+            "description": "Chicago",
+            "img_src": "headshots/rucker_1.jpg",
+            "media_alt": "Portrait of Cheryl Rucker-Whitaker 89C"
+          },
+          {
+            "name": "Steven Rudofsky 88L P21",
+            "description": "International",
+            "img_src": "headshots/rudofsky_1.jpg",
+            "media_alt": "Portrait of Steven Rudofsky 88L P21"
+          },
+          {
+            "name": "Amy Rudolph 88C 91L",
+            "description": "Atlanta",
+            "img_src": "headshots/rudolph_1.jpg",
+            "media_alt": "Portrait of Amy Rudolph 88C 91L"
+          },
+          {
+            "name": "David Sambur 02C",
+            "description": "New York",
+            "img_src": "headshots/sambur_1.jpg",
+            "media_alt": "Portrait of David Sambur 02C"
+          },
+          {
+            "name": "Charles Scott 82C 86M",
+            "description": "San Francisco",
+            "img_src": "headshots/scott_1.jpg",
+            "media_alt": "Portrait of Charles Scott 82C 86M"
+          },
+          {
+            "name": "Hank Siegel 80B P10",
+            "description": "Florida",
+            "img_src": "headshots/h_siegel_1.jpg",
+            "media_alt": "Portrait of Hank Siegel 80B P10"
+          },
+          {
+            "name": "Lisette Siegel 80C P10",
+            "description": "International",
+            "img_src": "headshots/l_siegel_2.jpg",
+            "media_alt": "Portrait of Lisette Siegel 80C P10"
+          },
+          {
+            "name": "Cameron Taylor 90C",
+            "description": "Washington DC",
+            "img_src": "headshots/c_taylor_1.jpg",
+            "media_alt": "Portrait of Cameron Taylor 90C"
+          },
+          {
+            "name": "Gordon Taylor 90C",
+            "description": "Washington DC",
+            "img_src": "headshots/g_taylor_2.jpg",
+            "media_alt": "Portrait of Gordon Taylor 90C"
+          },
+          {
+            "name": "Sam Tenebaum 65C",
+            "description": "Carolinas",
+            "img_src": "headshots/tenebaum_1.jpg",
+            "media_alt": "Portrait of Sam Tenebaum 65C"
+          },
+          {
+            "name": "Mary Williams 82C",
+            "description": "Houston",
+            "img_src": "headshots/m_williams_3.jpg",
+            "media_alt": "Portrait of Mary Williams 82C"
+          },
+          {
+            "name": "Neil Wizel 99C",
+            "description": "Houston",
+            "img_src": "headshots/wizel_2.jpg",
+            "media_alt": "Portrait of Neil Wizel 99C"
           }
         ]
       }
