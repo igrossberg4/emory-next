@@ -34,16 +34,20 @@
       // @todo: Those are very specific breakpoints 1:1 tailored to some bugs
       // introduced with the vertical media queries.
       // Instead, a full refactor of the maginified "O" should be done.
-      @media (min-width: map-get($grid-breakpoints, 'md')) and (max-width: map-get($grid-breakpoints, 'lg')) and (orientation: portrait) {
+      @media (min-width: map-get($grid-breakpoints, 'md')) and (orientation: portrait) {
         left: calc(-20vh - 30px) !important;
-      }
-
-      @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) and (orientation: portrait) {
-        left: calc(-20vh - 50px) !important;
       }
 
       @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) and (orientation: landscape) {
         left: calc(-10.5vw - 6px) !important;
+      }
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-xsm) and (orientation: portrait) {
+        left: calc(-20vh - 30px) !important;
+      }
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) and (orientation: portrait) {
+        left: calc(50vw - 70vh) !important;
       }
     }
 
