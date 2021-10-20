@@ -17,7 +17,7 @@ const normalize = (val: number, max: number, min: number) => {
 export default function CarouselItem(props: any) {
   const [state, dispatch] = useContext(Context) as any;
 
-  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=1024,sizes[]=2048&format=png`);
+  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
   const memo = useMemo(() => {
     return <div
         className="content-header__container container-force-screen-fit-y"
