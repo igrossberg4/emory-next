@@ -186,7 +186,7 @@
   }
 }
 
-body.full_video {
+body.animate_video {
   overflow: hidden;
 
   // Mobile safari has problems animating the video, so provide a fallback
@@ -196,7 +196,7 @@ body.full_video {
   }
 }
 
-body.unfull_video {
+body.deanimate_video {
   // Mobile safari has problems animating the video, so provide a fallback
   // behavior after mobile detection.
   &.is-mobile-safari .header-inner-content__img {
