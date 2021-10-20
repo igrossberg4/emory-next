@@ -120,21 +120,6 @@
       }
     },
     {
-      "component": "VideoQuote",
-      "props": {
-        "pretitle": "A MESSAGE FROM",
-        "title": "Andra Gillespie",
-        "layout": "right",
-        "subtitle": "Associate Professor of Political Science and Director of the James Weldon Johnson Institute at Emory University",
-        "img_src": "laney_quote_2.jpg",
-        "media_src": "https://vimeo.com/616255678/2627789f95",
-        "media_alt": "A video quote of Andra Gillespie",
-        "media_header": "Andra Gillespie",
-        "media_text": "Associate Professor of Political Science and Director of the James Weldon Johnson Institute at Emory University",
-        "button_close_text": "Exit"
-      }
-    },
-    {
       "component": "AccordionComponent",
       "props": {
         "pretitle": "LANEY GRADUATE SCHOOL",
