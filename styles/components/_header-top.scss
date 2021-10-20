@@ -255,16 +255,16 @@
     background: $body-bg;
 
     .header-inner-content__img {
-      bottom: 0;
-      width: 110vw;
-      height: 110vw;
+      bottom: 0 !important;
+      width: 110vw !important;
+      height: 110vw !important;
       // transform: translate(0, 0);
       margin-bottom: 0;
       opacity: .5;
 
       @media (orientation: portrait) {
-        width: 110vh;
-        height: 110vh;
+        width: 110vh !important;
+        height: 110vh !important;
       }
     }
 
