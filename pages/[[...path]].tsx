@@ -13,11 +13,10 @@ import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Context } from "../state/Store";
-import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
 import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
-import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
+import { browserName, isMobile } from "react-device-detect";
 
 function getElementXPath(element: any): string {
   if (element.id) {
@@ -48,7 +47,9 @@ export default function Home(props: any) {
     process.browser ? window.innerHeight : 0
   );
   const [state, dispatch] = useContext(Context) as any;
-
+  useEffect(() => {
+    console.log(browserName, isMobile);
+  }, []);
   const circleAnimateExpand = useCallback(() => {
     const element = document.getElementById("selected");
     document.body.classList.add("is-scrolled");
@@ -324,7 +325,8 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
-      const isMenu = e.target instanceof HTMLElement && e.target.closest('.menu-main');
+      const isMenu =
+        e.target instanceof HTMLElement && e.target.closest(".menu-main");
       if (
         !isMenu &&
         circleAnimatePreventScrollEnabled &&
@@ -617,7 +619,11 @@ export default function Home(props: any) {
   return (
     <Fragment>
       <Head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VDCSNB');`}}></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VDCSNB');`,
+          }}
+        ></script>
         <title>{props.meta.title}</title>
         {props.meta.robots ? (
           <meta name="robots" content={props.meta.robots} />
@@ -675,7 +681,11 @@ export default function Home(props: any) {
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VDCSNB" title="google tag manager" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VDCSNB" title="google tag manager" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+        }}
+      ></noscript>
       {memo}
     </Fragment>
   );
