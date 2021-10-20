@@ -4,9 +4,15 @@
   "page_props": {
     "header": "RESEARCH EXCELLENCE",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_cancer_cells_red_uncropped.jpg",
-    "about": "About text",
-    "text": "Example text"
+    "img_src": "research_lede.jpg",
+    "about": "core area",
+    "text": "We don’t just teach or lecture—we equip and inspire students to make their own discoveries.",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Emory",
+        "url": "https://together.emory.edu/give"
+      }
+    }
   },
   "path": "research-excellence",
   "metatag": {
@@ -18,28 +24,126 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we need to accelerate research excellence and impact.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>For example, the COVID-19 crisis has required our faculty to step into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p>",
-        "img_src": "2036_brain_health_neurons_red.jpg",
-        "media_src": "2036_brain_health_neurons_red.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "header": "As a leading research university, our rankings speak volumes. But what matters most is the number of lives saved, partnerships forged, and discoveries driven—across the globe.",
+        "background_image": "research_isolated_bg.png",
+        "text": "<p>From mapping human DNA to studying the psychology of thrillseekers, to finding emerging treatments for COVID-19, Emory research is at the forefront of discovery. Emory research leads to better health outcomes, lives, and global communities.</p><p>Research at Emory encompasses a multitude of disciplines. It includes the work of doctors, faculty, and clinicians of Emory Healthcare working on the forefront of the study of cancer and brain health; our community service and green initiatives; work examining the racial implications of federal tax policy; creating forecasting models for political elections, formulating policy on bioethical issues and safeguarding research subjects for NASA; and mathematical discoveries that ​​answer complex problems of theoretical computer science. The fields, applications, and implications of Emory research are exhaustive, and have the potential to touch all our lives.",
+        "img_src": "research_intro.jpg",
+        "media_src": "https://vimeo.com/623637496/8fb02cba32",
+        "media_alt": "Student researcher",
+        "media_type": "video",
+        "media_header": "Research Excellence",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "We're really pushing forward to try to solve the problems that need solving no matter how hard it might be.",
+        "attribution": "— Carey Jansen 19M 23G"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR RESEARCH EXCELLENCE",
+        "image_src": "research_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give",
+        "cta_text": "Support Emory"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Top Faculty Attracts Top Faculty",
+        "body": "<p>Through teaching, research, and service, Emory faculty members play an essential role in helping the university achieve its vision of an inquiry-driven, ethically engaged, and inclusive intellectual community. Emory faculty do more than just teach. They are distinguished scientists and researchers, authors, and public intellectuals who’ve become household names, like Dr. Sanjay Gupta, CNN chief medical correspondent; and Carol Anderson, the author of White Rage: The Unspoken Truth of Our Racial Divide. Among our distinguished faculty, we can boast of two Pulitzer Prize and two Nobel Peace Prize winners.</p><p>Our faculty’s commitment to their communities and their students leaves an impression well beyond their time at Emory. While inspiring students and driving educational excellence, Emory’s world-renowned professors have the attention of their peers, both in their fields and related fields. Because top scholars want to study, teach, and work alongside each other, the more our faculty are recognized as leaders in their fields, the more they attract new highly respected faculty. <strong>By funding 2O36, you can help facilitate these academics’ research pursuits so they can reach their full potential and achieve such distinction.</strong></p>",
+        "layout": "right",
+        "img_src": "research_priority_1.jpg",
+        "media_src": "research_priority_1_popup.jpg",
+        "media_alt": "Faculty researcher",
         "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "media_header": "Top Faculty",
+        "media_text": "By funding 2O36, you can help facilitate these academics’ research pursuits so they can reach their full potential and achieve such distinction."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Attracting Top Scholars",
+        "body": "<p>Gone are the days of offering only traditional majors. Cross-disciplinary research allows Emory students to combine their specific areas of study with their varied passions, and even to respond to new trends and challenges in science, business, society, and beyond. We foster creativity, curiosity, and the freedom that enables a vision for change. By creating their own academic paths and combining seemingly unrelated studies, students create  ingenious ways to make the world better.</p><p>Singular research opportunities with ​​some of the brightest minds in academia, partnerships with major research institutions, and the ability to tailor their educational experiences are just some of the many reasons Emory’s student body represents more than 100 countries. That academic and social diversity allows our community to thrive. <strong>Your support of 2O36 allows for research funding, and for the scholarships needed to support students using their creativity and ingenuity to make a better world.</strong></p>",
+        "layout": "right",
+        "img_src": "research_priority_2.jpg",
+        "media_src": "research_priority_2_popup.jpg",
+        "media_alt": "Student inspects a solution.",
+        "media_type": "image",
+        "media_header": "Top Scholars",
+        "media_text": "Your support of 2O36 allows for research funding, and for the scholarships needed to support students using their creativity and ingenuity to make a better world.",
+        "media_byline": "Featured: Anita H. Corbett, Samuel C. Dobbs Professor, Department of Biology, Emory College of Arts and Sciences"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Vasiliki Michopoulos 12G",
+        "layout": "left",
+        "subtitle": "Assistant Professor, Psychiatry and Behavioral Sciences<br/>Affiliate Scientist, Division of Developmental and Cognitive Neuroscience, Yerkes National Primate Research Center",
+        "img_src": "research_quote_1.jpg",
+        "media_src": "https://vimeo.com/631304444/77eb20a032",
+        "media_alt": "A video quote of Vasiliki Michopoulos 12G",
+        "media_header": "Vasiliki Michopoulos 12G",
+        "media_text": "Assistant Professor, Psychiatry and Behavioral Sciences<br/>Affiliate Scientist, Division of Developmental and Cognitive Neuroscience, Yerkes National Primate Research Center",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Research Shapes Curriculum",
+        "body": "<p>At Emory, learning isn’t relegated to the classroom. Research isn’t just important for the discoveries themselves and the improvements those discoveries can make in people’s lives, it’s an essential part of the Emory educational experience.</p><p>In research, students get first-hand experience that can’t be found in a textbook. Our local community benefits from the work of students and faculty. And as students are able to study abroad, they gain an understanding of how their discoveries can have effects far from home. <strong>With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers.</strong></p>",
+        "layout": "right",
+        "img_src": "research_priority_3.jpg",
+        "media_src": "research_priority_3_popup.jpg",
+        "media_alt": "Students learn outside the classroom.",
+        "media_type": "image",
+        "media_header": "Shaping Curriculum",
+        "media_text": "With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Paul Johnson P22",
+        "layout": "right",
+        "subtitle": "Director, Yerkes National Primate Research Center",
+        "img_src": "research_quote_2.jpg",
+        "media_src": "https://vimeo.com/632300238/61ab2a3979",
+        "media_alt": "A video quote of Paul Johnson P22",
+        "media_header": "Paul Johnson P22",
+        "media_text": "Director, Yerkes National Primate Research Center",
+        "button_close_text": "Exit"
       }
     },
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "RESEARCH EXCELLENCE",
         "items": [
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Fostering Research Partnerships",
+            "description": "<p>Some of our greatest discoveries are not ours alone. By partnering with community organizations and accomplished academic institutions, we’ve strengthened and multiplied the good that Emory faculty, staff, and students can do. These partnerships allow for endless possibilities to make real change. It’s the definition of community—a mission to benefit lives far beyond our geographic boundaries.</p><p>In an endeavor with Georgia Tech, we collaborate with the best in our pursuit of groundbreaking research. This project has attracted billions in federal research funding to the Winship Cancer Institute, Georgia’s only National Cancer Institute-designated Comprehensive Cancer Center, in partnership with the American Cancer Society. In addition to research you’d expect in health care, cancer, and scientific developments, Emory research delves into discoveries in areas as surprising as community advancement, business and analytics, technology, and social issues.</p>"
           },
           {
-            "title": "Accordion title",
-            "description": "Accordion description"
+            "title": "Resources for Effective Research",
+            "description": "<p>Conducting and implementing research is a team effort, from the facilities where data is collected and analyzed, to suppliers of materials, to administrative support. Researchers can find the specialized technology, equipment, and expertise they need in our 16 core facilities, the Division of Animal Resources, and a network of independent facilities and service centers. Further research and learning can then move into Emory’s libraries and digital catalogs, with special collections as diverse as our programs of study—from the Pitts Theology Library to our rare books collection dating back to the 13th century.</p><p>Experts in the Office of Sponsored Programs manage the paperwork for grants, contracts, and awards, freeing researchers’ time for investigation. And the Office of Compliance ensures that groundbreaking discoveries adhere to the highest legal, professional, and ethical standards. Finally, the Office of Technology Transfer helps bring discoveries to life through patent protection, marketing, license negotiation, and start-ups, with the goal of improving the health of the world around us.</p>"
+          },
+          {
+            "title": "More Than Statistics, Lives Changed",
+            "description": "<p>Emory efforts have attracted more than $600 million in research awards to Georgia, and this year, we passed a new funding milestone of $894 million in awards for campuswide research. Internationally, Emory maintains more than 159 research partnerships bringing Emory’s top minds to the challenges large and small communities face thousands of miles away. Because research is the greatest investment in people for the benefit of people.</p><p>As the nation’s fifth-ranked infectious diseases program, we’re uncovering the causes and treatments for familiar and emerging diseases, making everyday life safer around the globe. Our third-ranked biomedical engineering program has led to breakthroughs like technology that improves the lives of people who use catheters, neuroscientists gaining new insights into brain health using AI and algorithms, and a long-distance stethoscope that’s made telemedicine appointments during the pandemic more comprehensive. As the numbers show, Emory discoveries are more than academic. They’re personal.</p>"
           }
         ]
       }

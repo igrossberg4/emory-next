@@ -4,9 +4,22 @@
   "page_props": {
     "about": "school spotlight",
     "header": "NELL HODGSON WOODRUFF<br>SCHOOL OF NURSING",
-    "text": "We prepare visionary nurse leaders who improve bedside care, transform care delivery through research, and educate the next wave of leaders in nursing.",
+    "text": "Improving bedside care, transforming care delivery through research, and educating the next wave of leaders in nursing.",
     "button_scroll": "Scroll to explore",
-    "img_src": "nursing_lede.jpg"
+    "img_src": "nursing_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Nursing",
+        "url": "https://together.emory.edu/give/to/health-and-medicine/nell-hodgson-woodruff-school-nursing"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person": "Alison M. Thompson",
+        "title": "Assistant Dean, Advancement and Alumni Engagement",
+        "email": "alison.m.thompson@emory.edu",
+        "telephone": "470-561-2964"
+      }
+    }
   },
   "path": "nell-hodgson-woodruff-school-of-nursing",
   "metatag": {
@@ -18,11 +31,11 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "A rising star for future health care champions, the Nell Hodgson Woodruff School of Nursing is consistently named one of the best nursing schools for master’s degrees by U.S. News & World Report Why? Because our faculty, training, research, and students are unequaled.",
+        "header": "A rising star for future health care champions, the Nell Hodgson Woodruff School of Nursing is consistently named one of the best nursing schools by U.S. News & World Report Why? Because our faculty, training, research, and students are unequaled.",
         "background_image": "nursing_isolated_bg.png",
         "text": "<p>In the diverse, thriving health care hub of Atlanta, standing out isn’t easy. But, the clinicians, instructors, and nursing students of Emory Nursing do just that. Blurring the lines between classroom and career across a wide range of tech-focused, patient-centered specialties, Emory students and practicing nurses are working to transform lives not only for today, but for many days ahead.</p>",
         "img_src": "nursing_intro.jpg",
-        "media_src": "https://vimeo.com/619171116/a27db6e5c4",
+        "media_src": "https://vimeo.com/619171116/9eefd41084",
         "media_alt": "Nursing student tends to patient.",
         "media_type": "video",
         "media_header": "Nell Hodgson Woodruff School of Nursing",
@@ -39,9 +52,9 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "2O36 PRIORITIES FOR THE NELL HODGSON WOODRUFF SCHOOL OF NURSING.",
+        "text": "2O36 PRIORITIES FOR NELL HODGSON WOODRUFF SCHOOL OF NURSING",
         "image_src": "nursing_divider_bg.jpg",
-        "cta_link": "https://example.com/#placeholder",
+        "cta_link": "https://together.emory.edu/give/to/health-and-medicine/nell-hodgson-woodruff-school-nursing",
         "cta_text": "Support Nursing"
       }
     },
@@ -50,7 +63,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "In 2O36, Innovation is Elemental",
-        "body": "<p>Boundless opportunities. Ultramodern facilities. Visionary thinking. Expected to serve  the community by summer 2022, the Emory Nursing Learning Center will lead the way in nursing education. With new technologies and advanced teaching methods, including an advanced simulation and skills lab, the facility will support experiential and immersive learning for students. It also will be home to the Emory Nursing Experience continuing professional education program, in partnership with Emory Healthcare Nursing.</p>",
+        "body": "<p>Boundless opportunities. Ultramodern facilities. Visionary thinking. Expected to serve the community by summer 2022, the <a href=\"https://www.nursing.emory.edu/pages/emory-nursing-learning-center\" target=\"_blank\">Emory Nursing Learning Center</a> will lead the way in nursing education. With new technologies and advanced teaching methods, including an advanced simulation and skills lab, the facility will support experiential and immersive learning for students. It also will be home to the Emory Nursing Experience continuing professional education program, in partnership with Emory Healthcare Nursing.</p><p>The stunning new simulation center, where new classes of nurse leaders will train in world-class care, will be the largest of its kind in Georgia. And by sharing our facilities, equipment, and programs with others across the state who need advanced training, Emory will solidly plant a flag as the health care leader in Georgia. <strong>Supporting 2O36 helps provide a unique opportunity for collaboration and growth between the School of Nursing and Emory Healthcare and keeps Emory at the forefront of health care innovations.</strong></p>",
         "layout": "right",
         "img_src": "nursing_priority_1.jpg",
         "media_src": "nursing_priority_1_popup.jpg",
@@ -61,25 +74,18 @@
       }
     },
     {
-      "component": "ColumnsText",
-      "props": {
-        "column1": "The stunning new simulation center, where new classes of nurse leaders will train in world-class care, will be the largest of its kind in Georgia. And by sharing our facilities, equipment, and programs with others across the state who need advanced training, Emory will solidly plant a flag as the health care leader in Georgia.",
-        "column2": "<strong>Supporting 2O36 helps provide a unique opportunity for collaboration and growth between the School of Nursing and Emory Healthcare and keeps Emory at the forefront of health care innovations.</strong>"
-      }
-    },
-    {
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
         "title": "Cultivating Leadership",
-        "body": "<p>To retain and develop widely respected faculty at a nursing school of our ranking, access to flexible development funds is crucial. <strong>Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.</strong></p><p>Expected to improve both retention and productivity of nursing faculty members, these funds may support academic leaves for faculty to participate in fellowships opportunities that enhance their professional development.</p>",
+        "body": "<p>To retain and develop widely respected faculty at a nursing school of our ranking, access to flexible development funds is crucial. <strong>Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.</strong></p><p>Expected to improve both retention and productivity of nursing faculty members, these funds may support academic leaves for faculty to participate in fellowships opportunities that enhance their professional development.</p><p>These funds support the recruitment and retention of the School of Nursing’s outstanding faculty, allowing faculty members to pursue fellowship opportunities and other professional development endeavors.</p>",
         "layout": "right",
         "img_src": "nursing_priority_2.jpg",
         "media_src": "nursing_priority_2_popup.jpg",
-        "media_alt": "A professor demos on a mannequin for students..",
+        "media_alt": "A professor demos on a mannequin for students.",
         "media_type": "image",
         "media_header": "Cultivating Leadership",
-        "media_text": "Key to a better future, access to higher education through scholarships is a social good. Opening an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society."
+        "media_text": "Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments."
       }
     },
     {
@@ -93,7 +99,7 @@
         "media_src": "https://vimeo.com/618390601/85517d1c4a",
         "media_alt": "A video quote of Carolyn Clevenger 02N 04N 14N P23",
         "media_header": "Carolyn Clevenger 02N 04N 14N P23",
-        "media_text": "Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.",
+        "media_text": "Associate Dean for Transformative Clinical Practice<br/>Professor, Clinical Track",
         "button_close_text": "Exit"
       }
     },

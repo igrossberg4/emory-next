@@ -4,7 +4,22 @@
   "page_props": {
     "header": "SCHOOL OF LAW",
     "button_scroll": "Scroll to explore",
-    "img_src": "2036_data_science_code_yellow.jpg"
+    "img_src": "law_lede.jpg",
+    "text": "In 2036, leading in a changing world.",
+    "about": "school spotlight",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support Law",
+        "url": "https://together.emory.edu/give/to/schools-and-colleges/emory-law"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2036",
+        "person": "Courtney Stombock",
+        "title": "Associate Dean of Advancement and Alumni Engagement ",
+        "email": "courtney.stombock@emory.edu",
+        "telephone": "404-727-9172"
+      }
+    }
   },
   "path": "school-of-law",
   "metatag": {
@@ -16,30 +31,122 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Emory College of Arts & Sciences provides the sense of community and quality of faculty engagement usually found at a liberal arts college, but embedded within an urban research  university, with the full resources and opportunities that entails.",
-        "background_image": "ecas_isolated_bg.png",
-        "text": "<p>Our outstanding 550-member faculty guide students as they explore widely and dive deeply  into their own interests and our research priorities. Post-doctoral researchers play an important  role in the undergraduate college, bringing fresh ideas and driving new thought.</p><p>Emory College boasts 50 departments and programs, several of which have achieved a national  reputation. We offer 86 majors and 63 minors — rigorous courses of study that emphasize  critical thinking, asking bold questions, and expanding the boundaries of knowledge. Students continue their education outside of the classroom with experiential learning like internships,  undergraduate research, entrepreneurial experiences, and study abroad.</p>",
-        "img_src": "2036_brain_health_smoke_blue.jpg",
-        "media_src": "2036_brain_health_smoke_blue.jpg",
-        "media_alt": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
-        "media_type": "image",
-        "media_header": "Image title",
-        "media_text": "Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui, commodo posuere libero tortor eget neque. Donec molestie placerat sapien vitae auctor. Sed tincidunt massa ut lacus pharetra, et feugiat lacus dapibus. Proin imperdiet nec leo eu egestas."
+        "header": "Emory Law is committed to continuing to create an inclusive community that fosters empathy, service, and leadership.",
+        "background_image": "law_isolated_bg.png",
+        "text": "<p>Emory Law will continue to be a national and global leader in legal education by welcoming and supporting a diverse law school community, by carrying out path breaking and influential scholarship, and by offering exceptional teaching and practical learning opportunities.</p>",
+        "img_src": "law_intro.jpg",
+        "media_src": "https://vimeo.com/633273454/d90f52f2a5",
+        "media_alt": "Two students at Law entrance.",
+        "media_type": "video",
+        "media_header": "School of Law",
+        "media_text": ""
       }
     },
     {
-      "component": "AccordionComponent",
+      "component": "Quote",
       "props": {
-        "items": [
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          },
-          {
-            "title": "Accordion title",
-            "description": "Accordion description"
-          }
-        ]
+        "text": "I would not be where I am today without Emory, without the friends I made at Emory Law, without the connections I made at Emory Law, without the jobs I got from being at Emory none of this would have happened. I wouldn't be here.",
+        "attribution": "— Ruth Rocker McMullin 00L"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR SCHOOL OF LAW",
+        "image_src": "law_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give/to/schools-and-colleges/emory-law",
+        "cta_text": "Support Law"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Student Recruitment, Access and Success",
+        "body": "<p>Emory Law seeks to recruit ambitious, outstanding, and diverse students from across the nation who aspire to the level of excellence associated with Emory lawyers. By tripling the size of its endowments devoted to merit scholarships, needs-based financial aid, and other forms of student support, Emory Law will provide the nation’s top students access to exceptional legal education and prepare these future leaders for career success without financial hardship.</p><p><strong>It is imperative that Emory Law be the gateway for professional success and service to society for students from a wide range of backgrounds and financial circumstances while also supporting long-term financial stability for the school.</strong></p>",
+        "layout": "right",
+        "img_src": "law_priority_1.jpg",
+        "media_src": "law_priority_1_popup.jpg",
+        "media_alt": "Students around table watching presentation.",
+        "media_type": "image",
+        "media_header": "Access for All",
+        "media_text": "2O36 will enhance scholarships and financial aid, increasing access and affordability while also supporting long-term financial stability for the school."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "In 2036, Leaders Take Charge",
+        "body": "<p>By increasing the number of endowed professorships and distinguished professorships, Emory Law will have the means to recruit thought leaders who will spend a large portion of their career with us. Because of this, these professors will shape the scholarship, teaching, and mentorship of the school for decades to come and must be of the highest caliber. <strong>Increasing the number of endowed positions will make Emory Law more competitive in recruiting and retaining top-tier faculty in legal scholarship.</strong></p>",
+        "layout": "right",
+        "img_src": "law_priority_2.jpg",
+        "media_src": "law_priority_2_popup.jpg",
+        "media_alt": "Law school faculty member.",
+        "media_type": "image",
+        "media_header": "Leaders Take Charge",
+        "media_text": "Increasing the number of endowed positions will make Emory Law more competitive in recruiting and retaining top-tier faculty in legal scholarship.",
+        "media_byline": "Fred Smith, Associate Professor"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Mary Anne Bobinski",
+        "layout": "left",
+        "subtitle": "Dean and Asa Griggs Candler Professor of Law",
+        "img_src": "law_quote_1.jpg",
+        "media_src": "https://vimeo.com/632415049/d73e5a657c",
+        "media_alt": "A video quote of Mary Anne Bobinski",
+        "media_header": "Mary Anne Bobinski",
+        "media_text": "Dean and Asa Griggs Candler Professor of Law",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "A Hub for Civil Rights and Social Justice",
+        "body": "<p>It is crucial for Emory University School of Law to take advantage of the unique benefits of calling Atlanta home. Being a birthplace of the civil rights movement and now a bustling  business hub, Emory Law will have the ability to partner with other schools and units at Emory along with community organizations to lead sustainable change in fighting injustice.</p><p><strong>Emory Law will accelerate an integral part of the university and school’s strategic plan with the creation of the Center for Civil Rights and Social Justice.</strong> The center will serve as a hub for interdisciplinary scholarship, research, teaching, evidence-based policy reform, and community outreach. Significant investments have already been made in this area by Southern Company Foundation, Inc., other alumni, and friends.</p>",
+        "layout": "right",
+        "img_src": "law_priority_3.jpg",
+        "media_src": "law_priority_3_popup.jpg",
+        "media_alt": "John Lewis at Commencement.",
+        "media_type": "image",
+        "media_header": "Leading the Fight",
+        "media_text": "Emory Law will accelerate an integral part of the university and school’s strategic plan with the creation of the Center for Civil Rights and Social Justice."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Joanna Shepherd 01G 02G",
+        "layout": "right",
+        "subtitle": "Vice Dean, Thomas Simmons Professor of Law<br/>Adjunct Professor, Economics, Emory College of Arts and Sciences",
+        "img_src": "law_quote_2.jpg",
+        "media_src": "https://vimeo.com/632415020/097c1a5ade",
+        "media_alt": "A video quote of Joanna Shepherd 01G 02G",
+        "media_header": "Joanna Shepherd 01G 02G",
+        "media_text": "Vice Dean, Thomas Simmons Professor of Law<br/>Adjunct Professor, Economics, Emory College of Arts and Sciences",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Students Provide Community Support",
+        "body": "<p>Through the centers, clinics, and institutes at Emory Law, students have access to hands-on experiences through live-client clinics, community outreach, and policy analysis. These experiential aspects of Emory Law’s curriculum are crucial in shaping leaders in various areas of law and preparing them for a successful career.</p><p><strong>2O36 will provide support for students to continue participating in pro bono legal support for individuals, community groups, and nonprofit organizations.</strong> This experience provides a tremendous benefit while training students and instilling in them the importance of volunteering and service, contributing to a profession led with empathy and understanding.</p>",
+        "layout": "right",
+        "img_src": "law_priority_4.jpg",
+        "media_src": "law_priority_4_popup.jpg",
+        "media_alt": "Students gather.",
+        "media_type": "image",
+        "media_header": "Aiding the Community",
+        "media_text": "2O36 will provide support for students to continue participating in pro bono legal support for individuals, community groups, and nonprofit organizations."
       }
     }
   ]

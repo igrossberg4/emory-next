@@ -1,15 +1,28 @@
 .menu-main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::before {
+    content: '';
+    margin-top: auto;
+  }
+
+  &::after {
+    content: '';
+    margin-bottom: auto;
+  }
 
   .menu-main__link {
     margin-bottom: 2rem;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
+    @media (min-height: 900px) {
       margin-bottom: 3rem;
     }
 
@@ -18,10 +31,29 @@
     }
 
     a {
-      transition: opacity .25s ease-in-out;
+      text-decoration: none;
+      position: relative;
+      display: inline;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        display: inline-block;
+        height: 1px;
+        background: $color_black;
+        transform: translate(-50%, 0);
+        left: 50%;
+        transition: width .2s ease-out;
+      }
 
       &:hover, &:focus {
-        opacity: .6;
+        opacity: 1;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
