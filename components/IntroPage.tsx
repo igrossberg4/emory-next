@@ -35,6 +35,7 @@ export default function IntroPage(props: any) {
     () => {
       dispatch({ type: "VIDEO_PLAYED", payload: true });
       document.body.classList.remove("full_video");
+      document.body.classList.add("unfull_video");
 
       document.body
         .querySelector(".main-container")
@@ -57,12 +58,14 @@ export default function IntroPage(props: any) {
   useEffect(() => {
     if (!videoPlayed && props.active) {
       document.body.classList.add("full_video");
+      document.body.classList.remove("unfull_video");
       document.body
         .querySelector(".main-container")
         ?.classList.add("full_video");
     } else {
       if (props.active) {
         document.body.classList.remove("full_video");
+        document.body.classList.add("unfull_video");
         document.body
           .querySelector(".main-container")
           ?.classList.remove("full_video");
@@ -155,6 +158,7 @@ export default function IntroPage(props: any) {
                                 setMuted(false);
                                 setSkipped(false);
                                 document.body.classList.add("full_video");
+                                document.body.classList.remove("unfull_video");
                                 document.body
                                   .querySelector(".main-container")
                                   ?.classList.add("full_video");
@@ -172,6 +176,7 @@ export default function IntroPage(props: any) {
                                 setMuted(true);
 
                                 document.body.classList.remove("full_video");
+                                document.body.classList.add("unfull_video");
                                 document.body
                                   .querySelector(".main-container")
                                   ?.classList.remove("full_video");

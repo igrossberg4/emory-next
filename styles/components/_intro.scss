@@ -177,6 +177,20 @@
 
 body.full_video {
   overflow: hidden;
+
+  // Mobile safari has problems animating the video, so provide a fallback
+  // behavior after mobile detection.
+  &.is-mobile-safari .header-inner-content__img {
+    animation: flash ($scroll-down-transition-duration * 2);
+  }
+}
+
+body.unfull_video {
+  // Mobile safari has problems animating the video, so provide a fallback
+  // behavior after mobile detection.
+  &.is-mobile-safari .header-inner-content__img {
+    animation: fadeIn ($scroll-down-transition-duration * 2);
+  }
 }
 
 .main-container.full_video{
@@ -190,3 +204,4 @@ body.full_video {
     display:none;
   }
 }
+
