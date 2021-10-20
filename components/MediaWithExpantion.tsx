@@ -26,7 +26,7 @@ export default function MediaWithExpantion(props: any) {
     props.img_src ? props.img_src : props.media_src
   }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
   if (props.media_type != "video") {
-    multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+    multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
   }
 
   //const files = fs.readdirSync(__dirname);
