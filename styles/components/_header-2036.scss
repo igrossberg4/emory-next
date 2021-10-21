@@ -300,9 +300,9 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       transform $scroll-down-transition-duration $pre-animation-delay $curve,
       opacity $scroll-down-transition-duration $pre-animation-delay $curve;
 
-    // Mobile safari has problems animating the video.
-    // Avoid transitions on the O of 2O36 on the main page, allow them on scroll.
-    body.is-mobile-safari:not(.is-scrolled) & {
+    // Mobile browsers have less RAM for animating video zoom, so fallback to a
+    // fade out, size change without transition animation, then fade in.
+    body.is-mobile:not(.is-scrolled) & {
       transition: none;
     }
 
