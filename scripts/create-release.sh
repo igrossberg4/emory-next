@@ -85,7 +85,7 @@ $git commit -am "Bump to version $versionLabel"
 
 # Merge release branch with the new version number into master.
 $git checkout $masterBranch
-$git pull
+$git pull origin $masterBranch
 $git merge --no-ff $releaseBranch
 
 # Create tag for new version from master.
@@ -99,7 +99,7 @@ else
   $git checkout $currentBranch
   $git merge --no-ff $releaseBranch
   $git checkout $devBranch
-  $git pull
+  $git pull origin $devBranch
   $git merge --no-ff $releaseBranch
 fi
 
@@ -113,12 +113,12 @@ set +x
 
 echo ""
 echo ""
-echo "Release '$versionLabel' was created. You're now on the '$masterBranch'."
+echo "Release '$versionLabel' was created. You're now on the '$masterBranch' branch."
 echo "Please review the changes and execute the following commands to trigger CI workflows:"
 echo ""
 echo "  git push origin $masterBranch"
 echo "  git push origin $versionLabel"
-if [$currentBranch == $devBranch]; then
+if [ $currentBranch == $devBranch ]; then
 echo "  git checkout $devBranch"
 echo "  git merge $masterBranch --ff"
 echo "  git push origin $devBranch"
