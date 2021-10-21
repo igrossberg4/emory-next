@@ -438,7 +438,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
         top: 55%;
       }
-
     }
 
     .title {
