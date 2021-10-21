@@ -1,15 +1,15 @@
 @keyframes flash {
   0% {
-    opacity: 0; outline: 1px solid red
+    opacity: 0;
   }
   100% {
-    opacity: 1; outline: 1px solid red
+    opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  0% {opacity:0; outline: 1px solid green}
-  100% {opacity:1; outline: 1px solid green}
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 
