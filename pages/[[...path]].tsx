@@ -17,6 +17,7 @@ import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 import { browserName, isMobile } from "react-device-detect";
+import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
 
 function getElementXPath(element: any): string {
   if (element.id) {
@@ -49,6 +50,10 @@ export default function Home(props: any) {
   useEffect(() => {
     if (isMobile) {
       document.body.classList.add("is-mobile");
+
+      if (/safari/i.test(browserName)) {
+        document.body.classList.add("is-safari");
+      };
     }
   }, []);
   const circleAnimateExpand = useCallback(() => {
@@ -175,12 +180,12 @@ export default function Home(props: any) {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
 
-      // const videoElement = document.getElementById("video-container");
-      // if (videoElement) {
-      //   videoElement.style.bottom = isMobile
-      //     ? videoContainerBottomCalculator(window, document)
-      //     : (undefined as any);
-      // }
+      const videoElement = document.getElementById("video-container");
+      if (videoElement) {
+        videoElement.style.marginBottom = isMobile
+          ? videoContainerBottomCalculator(window)
+          : (undefined as any);
+      }
     };
 
     updateWindowDimensions();

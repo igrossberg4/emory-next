@@ -273,7 +273,6 @@
 // Scroll Animation
 
 $pre-animation-delay: math.div($scroll-down-transition-duration, 2);
-
 $curve: cubic-bezier(.63,.72,.79,.98);
 
 .header-2036.content-header__container {
@@ -282,6 +281,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
   .header-inner-content__img {
     position: absolute;
     bottom: calc(100% - 120px - 86px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
+    left: calc(50vw - 54px); // Left explicit centering is needed for transitions! We can't do :auto
     max-width: unset;
     width: 100px;
     height: 100px;
@@ -310,7 +310,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       border-width: 8px;
       left: calc((100vw / 2) - 190px);
       bottom: 54%; // Equal to .header-2036__title bottom
-      margin-bottom: calc(-1 * (230px + 16px - 140px) / 2); // ball height + ball border - height of 2/3/6
       width: 230px;
       height: 230px;
     }
@@ -319,7 +318,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       border-width: 12px;
       left: calc((100vw / 2) - 230px);
       bottom: 46%; // Equal to .header-2036__title bottom
-      margin-bottom: calc(-1 * (258px + 24px - 194px) / 2); // ball height + ball border - height of 2/3/6
       width: 258px;
       height: 258px;
     }
@@ -406,24 +404,36 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     .header-inner-content__img {
       top: auto;
-      width:110vw;
-      height:110vw;
+      width:110vw !important;
+      height:110vw !important;
       bottom: 0 !important;
       margin-left: 0 !important;
       margin-bottom: 0 !important;
+      left: calc(50% - (110vw / 2) - 12px) !important;
       z-index: -1;
       opacity: .5;
 
       @media (orientation: portrait) {
-        width: 110vh;
-        height: 110vh;
-        left: auto;
+        width: 110vh !important;
+        height: 110vh !important;
+        left: calc(50% - (110vh / 2) - 12px) !important;
+
       }
 
-      @include media-breakpoint-up(md) {
-        margin-bottom: 0;
-        left: calc(-5vw - 12px - (15px / 2));
+      // O Safari on mobile, you little rascal!
+      // It looks like every other browser - even Safari on desktop! - will safely
+      // interpolate between the two left values - the original and the final.
+      // You amuse us by first positioning the "left" property and then animating
+      // (thus starting the transition from the leftmost FINAL position instead of
+      // animating TO that position).
+      // It looks like an "auto" value will encourage you to do your work, but will
+      // confuse the rest of the (well-behaved) browsers.
+      // Well...
+      // Here it is! Your own override! Enjoy it!
+      .is-safari & {
+        left: auto !important;
       }
+
     }
 
     .header-inner-content__text {
@@ -467,6 +477,24 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     video {
       pointer-events: none;
+    }
+  }
+}
+
+
+// Overrides for when the video is not played
+// This is needed to override inline css dinamycally generated.
+#container-video:not(.video-no-played) .header-2036.content-header__container {
+
+  .header-inner-content__img {
+    margin-bottom: 0 !important;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: calc(-1 * (230px + 16px - 140px) / 2) !important; // ball height + ball border - height of 2/3/6
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: calc(-1 * (258px + 24px - 194px) / 2) !important; // ball height + ball border - height of 2/3/6
     }
   }
 }

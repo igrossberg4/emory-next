@@ -88,9 +88,9 @@ export default function CarouselItem2036(props: any) {
         <div
           id="video-container"
           className="header-inner-content__img image round-wp"
-          // style={{
-          //   bottom: isMobile && process.browser ? videoContainerBottomCalculator(window, document) : undefined
-          // }}
+          style={{
+            marginBottom: isMobile && process.browser ? videoContainerBottomCalculator(window) : undefined
+          }}
           ref={(ref) => {}}
         >
           {props.children}
