@@ -188,20 +188,19 @@ $landscape-bottom-offset: calc(50% - (#{$landscape-video-size / 2}));
   }
 }
 
-body.animate_video {
-  overflow: hidden;
+body.is-mobile .animate_video {
 
   // Mobile browsers have less RAM for animating video zoom, so fallback to a
   // fade out, size change, then fade in.
-  &.is-mobile .header-inner-content__img {
+  &.header-inner-content__img {
     animation: flash ($scroll-down-transition-duration * 2);
   }
 }
 
-body.deanimate_video {
+body.is-mobile .deanimate_video {
   // Mobile browsers have less RAM for animating video zoom, so fallback to a
   // fade out, size change, then fade in.
-  &.is-mobile .header-inner-content__img {
+  &.header-inner-content__img {
     animation: fadeIn ($scroll-down-transition-duration * 2);
   }
 }

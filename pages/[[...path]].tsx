@@ -577,7 +577,7 @@ export default function Home(props: any) {
           className={`main-container ${
             props.view[1].props.isMain && !state.comesFromCarousel
               ? "full_video"
-              : "unfull_video"
+              : ""
           }`}
           id={state.route + " --- " + state.route}
           onAnimationComplete={() => {
