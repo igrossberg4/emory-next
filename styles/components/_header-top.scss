@@ -270,8 +270,10 @@
 
     .header-inner-content__text {
       top: 40%;
-      //max-width: map-get($container-max-widths, 'lg');
-      // padding-top: math.div($round-image-size + $default-separation, 5);
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        top: 55%;
+      }
     }
 
     .title {
@@ -281,8 +283,9 @@
       margin: 12px 0 calc(32px - 0.17em) 0;
       white-space: normal;
 
-      @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-lg) {
-        font-size: $h2-font-size--desktop;
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $h4-font-size;
+        margin: 0 5px;
       }
 
       @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
@@ -301,6 +304,12 @@
     .pretitle,
     .subtitle {
       opacity: 1;
+    }
+
+    .subtitle {
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $font-size-base
+      }
     }
   }
 }
