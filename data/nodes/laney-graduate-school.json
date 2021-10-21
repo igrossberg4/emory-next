@@ -33,7 +33,7 @@
       "props": {
         "header": "Shaping leaders in service to the global good, the James T. Laney School of Graduate Studies at Emory University prepares a diverse, inclusive student body for success through scholarship, research, teaching, and programming.",
         "background_image": "laney_isolated_bg.png",
-        "text": "<p>As society faces constant and escalating challenges, the Laney Graduate School leads the charge in training future leaders across more than 40 disciplines including the humanities; social, biomedical, and natural sciences; public health; nursing; and business. Students work with faculty researchers and scholars to uncover solutions to complex problems and improve the human condition. They enter the professional world armed with deep knowledge and experience in their fields and a desire to be leaders in change for academia, business, health care, industry and government.</p>",
+        "text": "<p>As society faces constant and escalating challenges, the Laney Graduate School leads the charge in training future leaders across more than 40 disciplines including the humanities; social, biomedical, and natural sciences; public health; nursing; and business. Students work with faculty researchers and scholars to uncover solutions to complex problems and improve the human condition. They enter the professional world armed with deep knowledge and experience in their fields and a desire to be leaders in change for academia, business, health care, industry, and government.</p>",
         "img_src": "laney_intro.jpg",
         "media_src": "https://vimeo.com/618335404/4b275b5e47",
         "media_alt": "Two researchers work in a lab.",
@@ -96,7 +96,7 @@
         "layout": "left",
         "subtitle": "Dean, Laney Graduate School, Emory University<br/>Vice Provost for Graduate Affairs, Emory University<br/>Charles Howard Candler Professor of Behavioral, Social, and Health Education Sciences, Rollins School of Public Health",
         "img_src": "laney_quote_1.jpg",
-        "media_src": "https://vimeo.com/616255678/2627789f95",
+        "media_src": "https://vimeo.com/637220960/ef90463382",
         "media_alt": "A video quote of Kimberly Jacob Arriola 01PH",
         "media_header": "Kimberly Jacob Arriola 01PH",
         "media_text": "Dean, Laney Graduate School, Emory University<br/>Vice Provost for Graduate Affairs, Emory University<br/>Charles Howard Candler Professor of Behavioral, Social, and Health Education Sciences, Rollins School of Public Health",
@@ -117,6 +117,21 @@
         "media_header": "Connections are Vital",
         "media_text": "In developing a chatbot for Amazon Alexa that makes logical inferences, rather than functioning as a search engine, students are teaching bots to ask questions that lead people to seek much-needed human companionship and treatment.",
         "media_byline": "Featured: James Finch 24G; Jinho Choi, Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics; Sarah Finch 24G"
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Andra Gillespie",
+        "layout": "right",
+        "subtitle": "Associate Professor, Political Science<br/>Director, James Weldon Johnson Institute at Emory University",
+        "img_src": "laney_quote_2.jpg",
+        "media_src": "https://vimeo.com/637220908/7229821091",
+        "media_alt": "A video quote of Andra Gillespie",
+        "media_header": "Andra Gillespie",
+        "media_text": "Associate Professor, Political Science<br/>Director, James Weldon Johnson Institute at Emory University",
+        "button_close_text": "Exit"
       }
     },
     {
