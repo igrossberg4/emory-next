@@ -45,6 +45,7 @@
   }
 
   .header-inner-content__img {
+    box-sizing: border-box; // This is to simplify centering operations by making the border be part of the box...
     .image {
       display: block;
       position: absolute;
@@ -149,8 +150,6 @@
     bottom: 45%;
     width: $round-image-size-small;
     height: $round-image-size-small;
-    //margin-bottom: calc(-1 * ((#{$round-image-size-small} / 2) - 5em));
-    box-sizing: border-box;
     will-change: width, height, opacity, bottom, transform, margin-bottom;
     transition:
       width $scroll-down-transition-duration ease-in-out,

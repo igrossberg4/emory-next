@@ -279,13 +279,12 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
   .header-inner-content__img {
     position: absolute;
-    bottom: calc(100% - 120px - 86px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
-    left: calc(50vw - 54px); // Left explicit centering is needed for transitions! We can't do :auto
+    bottom: calc(100% - 120px - 86px - 8px - 100px); // vh - 2036 offset - 2 height - margin - O size
+    left: calc(50vw - 50px); // Left explicit centering is needed for transitions! We can't do :auto
     max-width: unset;
     width: 100px;
     height: 100px;
     transform: none;
-    box-sizing: content-box;
     z-index: 10;
     padding: 0;
     margin-bottom: 0;
@@ -307,7 +306,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     @include media-breakpoint-up(md) {
       border-width: 8px;
-      left: calc((100vw / 2) - 190px);
+      left: calc((100vw / 2) - 178px);
       bottom: 54%; // Equal to .header-2036__title bottom
       width: 230px;
       height: 230px;
@@ -315,21 +314,21 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     @include media-breakpoint-up(lg) {
       border-width: 12px;
-      left: calc((100vw / 2) - 230px);
+      left: calc((100vw / 2) - 218px);
       bottom: 46%; // Equal to .header-2036__title bottom
-      width: 258px;
-      height: 258px;
+      width: 282px;
+      height: 282px;
     }
 
     // 2O36 vertical
     @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-md) {
-      bottom: calc(100% - 120px - 64px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
+      bottom: calc(100% - 120px - 64px - 10px - 100px); // vh - 2036 offset - 2 height - margin - O size
     }
 
     // 2O36 horizontal
     @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-sm) {
-      bottom: calc(100% - 35% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
-      left: calc((100vw / 2) - 80px);
+      bottom: calc(100% - 35% - 61px - 20px); // vh - 2036 offset - 2 height - margin - O size
+      left: calc((100vw / 2) - 74px);
     }
 
     @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-xsm) {
@@ -408,15 +407,14 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       bottom: 0 !important;
       margin-left: 0 !important;
       margin-bottom: 0 !important;
-      left: calc(50% - (110vw / 2) - 12px) !important;
+      left: calc(50% - (110vw / 2)) !important;
       z-index: -1;
       opacity: .5;
 
       @media (orientation: portrait) {
         width: 110vh !important;
         height: 110vh !important;
-        left: calc(50% - (110vh / 2) - 12px) !important;
-
+        left: calc(50% - (110vh / 2)) !important;
       }
 
       // O Safari on mobile, you little rascal!
@@ -502,11 +500,11 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     margin-bottom: 0 !important;
 
     @include media-breakpoint-up(md) {
-      margin-bottom: calc(-1 * (230px + 16px - 140px) / 2) !important; // ball height + ball border - height of 2/3/6
+      margin-bottom: calc(-1 * (230px - 140px) / 2) !important; // ball height - height of 2/3/6
     }
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: calc(-1 * (258px + 24px - 194px) / 2) !important; // ball height + ball border - height of 2/3/6
+      margin-bottom: calc(-1 * (282px - 194px) / 2) !important; // ball height - height of 2/3/6
     }
   }
 }
