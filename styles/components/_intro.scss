@@ -189,17 +189,17 @@
 body.animate_video {
   overflow: hidden;
 
-  // Mobile safari has problems animating the video, so provide a fallback
-  // behavior after mobile detection.
-  &.is-mobile-safari .header-inner-content__img {
+  // Mobile browsers have less RAM for animating video zoom, so fallback to a
+  // fade out, size change, then fade in.
+  &.is-mobile .header-inner-content__img {
     animation: flash ($scroll-down-transition-duration * 2);
   }
 }
 
 body.deanimate_video {
-  // Mobile safari has problems animating the video, so provide a fallback
-  // behavior after mobile detection.
-  &.is-mobile-safari .header-inner-content__img {
+  // Mobile browsers have less RAM for animating video zoom, so fallback to a
+  // fade out, size change, then fade in.
+  &.is-mobile .header-inner-content__img {
     animation: fadeIn ($scroll-down-transition-duration * 2);
   }
 }

@@ -41,15 +41,14 @@ function getElementXPath(element: any): string {
 export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const scrollVar = 5;
   const [innerHeight, setInnerHeight] = useState(
     process.browser ? window.innerHeight : 0
   );
   const [state, dispatch] = useContext(Context) as any;
   useEffect(() => {
-    if (isMobile && /safari/i.test(browserName) ) {
-      document.body.classList.add("is-mobile-safari");
+    if (isMobile) {
+      document.body.classList.add("is-mobile");
     }
   }, []);
   const circleAnimateExpand = useCallback(() => {
