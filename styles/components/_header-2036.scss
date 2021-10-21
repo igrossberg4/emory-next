@@ -145,7 +145,6 @@
   .actions {
     position: absolute;
     left: 0;
-    bottom: 0;
     animation: fadeIn math.div($main-carousel-transition-duration, 6) ease-in-out;
     width: 100%;
     z-index: 2;
@@ -433,11 +432,15 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       .is-safari & {
         left: auto !important;
       }
-
     }
 
     .header-inner-content__text {
       top: 40%;
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        top: 55%;
+      }
+
     }
 
     .title {
@@ -446,6 +449,11 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       line-height: 0.9em;
       letter-spacing: 0;
       white-space: normal;
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $h4-font-size;
+        margin: 0 5px;
+      }
 
       @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-md) {
         font-size: $h2-font-size--desktop;
@@ -462,6 +470,10 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       opacity: 1;
       margin-bottom: 20px;
       display: block;
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $font-size-base
+      }
     }
 
     .pretitle,
