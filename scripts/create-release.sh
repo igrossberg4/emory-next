@@ -85,26 +85,44 @@ $git commit -am "Bump to version $versionLabel"
 
 # Merge release branch with the new version number into master.
 $git checkout $masterBranch
-$git pull origin $masterBranch
+$git pull origin $masterBranch --rebase
 $git merge --no-ff $releaseBranch
 
 # Create tag for new version from master.
 $git tag $versionLabel
 
 # Merge release branch with the new version number back into current branch.
-if [$currentBranch == $devBranch]; then
+if [ $currentBranch == $devBranch ]; then
   $git checkout $currentBranch
-  $git merge --ff $releaseBranch
-else
+  $git merge --ff-only $releaseBranch
+  [ $? -ne 0 ] && FF_MERGE_FAILED=1 || FF_MERGE_FAILED=0
+elif [ $currentBranch == $stgBranch ]; then
   $git checkout $currentBranch
-  $git merge --no-ff $releaseBranch
+  $git merge --ff-only $releaseBranch
+  [ $? -ne 0 ] && FF_MERGE_FAILED=1 || FF_MERGE_FAILED=0
   $git checkout $devBranch
-  $git pull origin $devBranch
-  $git merge --no-ff $releaseBranch
+  $git pull origin $devBranch --rebase
+  $git merge --ff-only $releaseBranch 2>/dev/null
+  [ $? -ne 0 ] && FF_MERGE_FAILED=1 || FF_MERGE_FAILED=0
 fi
 
 # Remove release branch.
-$git branch -d $releaseBranch
+if [ $FF_MERGE_FAILED -eq 1 ]; then
+  echo "Unable to cleanly fast-forward merge $releaseBranch"
+else
+  $git branch -d $releaseBranch
+
+  # Try to fast-forward merge branches with master.
+  $git checkout $currentBranch
+  $git pull origin $currentBranch --rebase
+  $git merge --ff-only $masterBranch
+  $git checkout $devBranch
+  $git pull origin $devBranch --rebase
+  $git merge --ff-only $masterBranch
+  $git checkout $stgBranch
+  $git pull origin $stgBranch --rebase
+  $git merge --ff-only $masterBranch
+fi
 
 # Switch back to master branch to review and push the release.
 $git checkout $masterBranch
