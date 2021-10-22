@@ -85,14 +85,14 @@
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
-        "title": "Eddy Cabrera 22C",
+        "title": "Ravi V. Bellamkonda",
         "layout": "left",
-        "subtitle": "",
+        "subtitle": "Provost and Executive Vice President for Academic Affairs",
         "img_src": "student_quote_1.jpg",
-        "media_src": "https://vimeo.com/631452455/367232935e",
-        "media_alt": "A video quote of Eddy Cabrera 22C",
-        "media_header": "Eddy Cabrera 22C",
-        "media_text": "",
+        "media_src": "https://vimeo.com/637213639/df79bb57dc",
+        "media_alt": "A video quote of Ravi V. Bellamkonda",
+        "media_header": "Ravi V. Bellamkonda",
+        "media_text": "Provost and Executive Vice President for Academic Affairs",
         "button_close_text": "Exit"
       }
     },
