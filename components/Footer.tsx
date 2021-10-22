@@ -96,7 +96,7 @@ export default function Footer(props: any) {
               <div className='footer__contact__heading'>
                 {props?.cta_contact_info?.heading
                   ? props?.cta_contact_info?.heading
-                  : "Learn more about ways to support 2036"}
+                  : "Learn more about ways to support 2O36."}
               </div>
               <div className='footer__contact__person'>
                 {props?.cta_contact_info?.person
