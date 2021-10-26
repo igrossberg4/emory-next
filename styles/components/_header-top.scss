@@ -26,21 +26,6 @@
 
     .no_selected & {
       opacity: .3;
-
-      .header-inner-content__text {
-        padding-left: 0;
-        padding-right: 0;
-
-        // @include media-breakpoint-up(sm) {
-        //   max-width: $round-image-size;
-        // }
-        // @include media-breakpoint-up(lg) {
-        //   max-width: $round-image-size-medium;
-        // }
-        // @include media-breakpoint-up(xl) {
-        //   max-width: $round-image-size-big;
-        // }
-      }
     }
   }
 
