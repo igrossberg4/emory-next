@@ -48,12 +48,13 @@ export default function Home(props: any) {
   );
   const [state, dispatch] = useContext(Context) as any;
   useEffect(() => {
-    if (isMobile) {
+    console.log("entra");
+    if (isMobile && !document.body.classList.contains("is-mobile")) {
       document.body.classList.add("is-mobile");
 
       if (/safari/i.test(browserName)) {
         document.body.classList.add("is-safari");
-      };
+      }
     }
   }, []);
   const circleAnimateExpand = useCallback(() => {
