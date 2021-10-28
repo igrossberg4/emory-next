@@ -102,6 +102,11 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
           [action.payload.key]: videoStoreSKIP,
         }),
       };
+    case "IS_VIDEO_ON_EXPANSION":
+      if (action.payload !== state.isVideoOnExpansion) {
+        return { ...state, isVideoOnExpansion: action.payload };
+      }
+      return state;
 
     default:
       return state;

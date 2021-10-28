@@ -26,6 +26,7 @@ const initialState = {
     scrollComesFromUser: false,
     isTransitionEnd: true,
     isCircleOnAnimation: false,
+    isVideoOnExpansion: false,
     isOverlayExpanded: false
 }
 

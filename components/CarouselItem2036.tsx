@@ -86,6 +86,18 @@ export default function CarouselItem2036(props: any) {
         </div>
 
         <div
+          onTransitionEnd={(e) => {
+            // Due to iOS's fantastic buggy behavior, we need to animate a
+            // dummy property (z-index) in order to keep things in sync.
+            // Thanks again, iOS.
+            if (e.propertyName === 'z-index' && (e.target as HTMLElement).id === 'video-container' ) {
+              console.log('transition ended', e);
+              dispatch({
+                type: "IS_VIDEO_ON_EXPANSION",
+                payload: false
+              });
+            }
+          }}
           id="video-container"
           className="header-inner-content__img image round-wp"
           style={{
