@@ -273,6 +273,9 @@ export default function EmblaCarousel({
       <>
         <div
           id="carousel"
+          style={{
+            height: process.browser ? window.innerHeight : 'auto'
+          }}
           className={`embla embla--carousel-navigation
         ${!navigation ? "page-carousel" : ""}
         ${

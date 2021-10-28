@@ -181,6 +181,11 @@ export default function Home(props: any) {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
 
+      const carousel = document.querySelector('.embla--carousel-navigation');
+      if (carousel instanceof HTMLElement) {
+        carousel.style.height = `${newHeight}px`;
+      }
+
       const videoElement = document.getElementById("video-container");
       if (videoElement) {
         videoElement.style.marginBottom = isMobile
