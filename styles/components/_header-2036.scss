@@ -445,7 +445,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       // confuse the rest of the (well-behaved) browsers.
       // Well...
       // Here it is! Your own override! Enjoy it!
-      .is-safari & {
+      .is-ios & {
         left: auto !important;
       }
     }

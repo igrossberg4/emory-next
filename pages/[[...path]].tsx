@@ -16,7 +16,7 @@ import { Context } from "../state/Store";
 import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
-import { browserName, isMobile } from "react-device-detect";
+import { browserName, isMobile, isIOS } from "react-device-detect";
 import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
 
 function getElementXPath(element: any): string {
@@ -51,9 +51,8 @@ export default function Home(props: any) {
     console.log("entra");
     if (isMobile && !document.body.classList.contains("is-mobile")) {
       document.body.classList.add("is-mobile");
-
-      if (/safari/i.test(browserName)) {
-        document.body.classList.add("is-safari");
+      if (isIOS) {
+        document.body.classList.add("is-ios");
       }
     }
   }, []);
