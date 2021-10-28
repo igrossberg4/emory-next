@@ -28,7 +28,7 @@
         "background_image": "themes_isolated_bg.png",
         "text": "<p>With implications for the world beyond Emory, we aim to make huge strides in five signature themes: student flourishing, social and racial justice, AI and humanity, cancer, and brain health. These core tenets of 2O36—while posing massive challenges for many educational institutions and communities—truly give shape to our mission of investing in people for the benefit of people. Each has the power to bring the Emory community together, fulfilling our mission to serve humanity through knowledge.</p>",
         "img_src": "themes_intro.jpg",
-        "media_src": "2036_brain_health_neurons_blue.jpg",
+        "media_src": "themes_intro_popup.jpg",
         "media_alt": "Students in front of the Student Center",
         "media_type": "image",
         "media_header": "Signature Themes",
@@ -68,6 +68,21 @@
       }
     },
     {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Cat Dymond 20N 21N",
+        "layout": "left",
+        "subtitle": "",
+        "img_src": "themes_quote_1.jpg",
+        "media_src": "https://vimeo.com/637221105/d8893f3da9",
+        "media_alt": "A video quote of Cat Dymond 20N 21N",
+        "media_header": "Cat Dymond 20N 21N",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
@@ -87,9 +102,9 @@
       "props": {
         "pretitle": "A MESSAGE FROM",
         "title": "Andra Gillespie",
-        "layout": "left",
+        "layout": "right",
         "subtitle": "Associate Professor, Political Science<br/>Director, James Weldon Johnson Institute",
-        "img_src": "themes_quote_1.jpg",
+        "img_src": "themes_quote_2.jpg",
         "media_src": "https://vimeo.com/631456372/b58eff861f",
         "media_alt": "A video quote of Andra Gillespie",
         "media_header": "Andra Gillespie",
@@ -118,9 +133,9 @@
       "props": {
         "pretitle": "A MESSAGE FROM",
         "title": "Jinho Choi",
-        "layout": "right",
+        "layout": "left",
         "subtitle": "Assistant Professor, Department of Computer Science, Institute of Quantitative Theory and Methods, and Program of Linguistics",
-        "img_src": "themes_quote_2.jpg",
+        "img_src": "themes_quote_3.jpg",
         "media_src": "https://vimeo.com/631452503/495c92f942",
         "media_alt": "A video quote of Jinho Choi",
         "media_header": "Jinho Choi",
@@ -144,6 +159,21 @@
       }
     },
     {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Suresh S. Ramalingam",
+        "layout": "right",
+        "subtitle": "Executive Director, Winship Cancer Institute of Emory University<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center",
+        "img_src": "themes_quote_4.jpg",
+        "media_src": "https://vimeo.com/637221197/1e0d5d11f7",
+        "media_alt": "A video quote of Suresh S. Ramalingam",
+        "media_header": "Suresh S. Ramalingam",
+        "media_text": "Executive Director, Winship Cancer Institute of Emory University<br/>Professor, Department of Hematology and Medical Oncology<br/>Roberto C. Goizueta Distinguished Chair for Cancer Research<br/>Associate Vice President for Cancer, Woodruff Health Sciences Center",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
@@ -156,6 +186,21 @@
         "media_type": "image",
         "media_header": "Working to End Cancer",
         "media_text": "Emory Brain Health Center is a thriving community of more than 400 physicians, clinicians, and researchers in varied disciplines who partner with patients and their families to address devastating disorders of the brain."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Allan Levey P18",
+        "layout": "left",
+        "subtitle": "Goizueta Foundation Endowed Chair for Alzheimer's Disease Research<br/>Director, Goizueta Alzheimer's Disease Research Center",
+        "img_src": "themes_quote_5.jpg",
+        "media_src": "https://vimeo.com/637221024/1e1edccb57",
+        "media_alt": "A video quote of Allan Levey P18",
+        "media_header": "Allan Levey P18",
+        "media_text": "Goizueta Foundation Endowed Chair for Alzheimer's Disease Research<br/>Director, Goizueta Alzheimer's Disease Research Center",
+        "button_close_text": "Exit"
       }
     }
   ]

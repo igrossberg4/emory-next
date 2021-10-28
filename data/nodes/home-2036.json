@@ -10,6 +10,7 @@
     "about_before_scroll": "ABOUT THE CAMPAIGN",
     "img_src": "about_lede.jpg",
     "video_src": "videos/intro_video_v03.mp4",
+    "video_webm_src": "videos/intro_video_v03.webm",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video",
     "footer": {
@@ -57,11 +58,11 @@
         "background_image": "about_isolated_bg.png",
         "text": "<p>It’s our vision that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to shape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to purposefully prepare students for careers with the potential to change hearts, minds, and through that, the world.</p><p>Together, we can bring to life an ever promising future.</p>",
         "img_src": "about_intro.jpg",
-        "media_src": "https://vimeo.com/605963807/295678c674",
-        "media_alt": "Portrait of President Greg L. Fenves",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Video of Emory University",
         "media_type": "video",
-        "media_header": "Gregory L. Fenves",
-        "media_text": "President, Emory University"
+        "media_header": "2O36",
+        "media_text": "Emory University"
       }
     },
     {
@@ -103,7 +104,7 @@
       "props": {
         "pretitle": "Core Area",
         "title": "Faculty Eminence",
-        "body": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-changing research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world who themselves are diverse and inclusive. That means National Academy members but also extraordinary early and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines. After all, the diversity of our faculty is a strength for our university, and integral to eminence today and in the future.</p>",
+        "body": "<p>Faculty are the heart of Emory University. Everything we accomplish—from world-changing research and artistic expression, to the outstanding liberal arts education that has long defined our university—is powered by our professors. As we look to the future, we need to recruit and retain the most talented and accomplished faculty in the world, an integral component to the diverse and inclusive Emory community. That means National Academy members, but also extraordinary early- and mid-career faculty who are poised to make pioneering discoveries and transform their disciplines. After all, the diversity of our faculty is a strength for our university, as they contribute to our eminence today and in the future.</p>",
         "read_more": "faculty-eminence",
         "tags": [],
         "layout": "right",
@@ -121,7 +122,7 @@
       "props": {
         "pretitle": "Emory University",
         "title": "Research Excellence",
-        "body": "<p>In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we need to accelerate research excellence and impact. For example, the COVID-19 crisis has seen our faculty step into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. We’ve also seen Emory researchers make huge strides in the areas of brain health, cancer, social and racial justice, artificial intelligence, and so many more. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p><p>Investments in research allow our faculty, students, and researchers to address some of the most pressing issues of the day. Research in the humanities, social sciences, law, and theology is uncovering what we need to advance social and racial justice. Scientists and biomedical researchers across the university and Emory Healthcare are working toward eliminating cancer and afflictions of the brain. And we’re modeling into the future to understand how artificial intelligence can better serve humanity in the many ways it will be used.</p>",
+        "body": "<p>In its 185-year history, Emory has grown from a small liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we’re responding to the need to accelerate research excellence and impact. The COVID-19 crisis has propelled our faculty into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p><p>Research in the humanities, social sciences, law, and theology is uncovering what we need to advance social and racial justice. Scientists and biomedical researchers across the university and Emory Healthcare are working toward eliminating cancer and afflictions of the brain. And we’re modeling into the future to understand how artificial intelligence can better serve humanity in the many ways it will be used.</p>",
         "read_more": "research-excellence",
         "tags": [],
         "layout": "left",
@@ -130,7 +131,7 @@
         "media_alt": "A student looks at a specimen in the lab with their professor.",
         "media_type": "image",
         "media_header": "Research Excellence",
-        "media_text": "In its 185-year history, Emory has grown from a small, liberal arts university into a globally recognized research powerhouse.",
+        "media_text": "In its 185-year history, Emory has grown from a small liberal arts university into a globally recognized research powerhouse.",
         "media_byline": "Featured: Biomedical researchers Dr. Keira Davis and Dr. Winfield Sale, Professor and Deputy Chair in the Department of Cell Biology, Emory University School of Medicine"
       }
     }
