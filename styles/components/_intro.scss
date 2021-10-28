@@ -1,11 +1,11 @@
 // Helper variables for video positioning
 $portrait-video-size: 145vh;
 $portrait-bottom-offset: (100vh - $portrait-video-size) * 0.5;
-$portrait-left-offset: calc(50% - (#{$portrait-video-size / 2}));
+$portrait-left-offset: calc(50% - (#{math.div($portrait-video-size, 2)}));
 
 $landscape-video-size: 125vw;
 $landscape-left-offset: (100vw - $landscape-video-size) * 0.5;
-$landscape-bottom-offset: calc(50% - (#{$landscape-video-size / 2}));
+$landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
 
 
 // Intro page.

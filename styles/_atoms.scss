@@ -81,7 +81,7 @@ a {
   display: inline-block;
   overflow: hidden;
   border-radius: 50%;
-  border: 4px solid $color-white;
+  border: 8px solid $color-white;
   box-shadow: $default-box-shadow;
   background-color: $color-white;
   max-width: $round-image-size;
@@ -96,12 +96,20 @@ a {
     transform: scale(1.05);
   }
 
-  @include media-breakpoint-up(sm){
-    border-width: 6px;
-  }
-
   @include media-breakpoint-up(md){
     border-width: 12px;
+  }
+
+  &#video-container {
+    border: 4px solid $color-white;
+
+    @include media-breakpoint-up(md){
+      border-width: 8px;
+    }
+
+    @include media-breakpoint-up(lg){
+      border-width: 12px;
+    }
   }
 }
 
