@@ -19,7 +19,7 @@ import {
 import { Context } from "../state/Store";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player";
 
 export default function Video(props: any) {
   const router = useRouter();
@@ -69,10 +69,15 @@ export default function Video(props: any) {
           //initial={!props.initial_animation ? { opacity: 0 } : props.initial_animation}
           //exit={!props.initial_animation ? { opacity: 1, height: "400px", width: "400px", borderRadius:'50%' } : props.initial_animation}
         >
-          <source src={media_src} type='video/mp4'></source>
+          {props.video_webm_src ? (
+            <source src={props.video_webm_src} type="video/webm"></source>
+          ) : (
+            ""
+          )}
+          <source src={media_src} type="video/mp4"></source>
         </video>
       ) : (
-        <div className='video-vimeo'>
+        <div className="video-vimeo">
           <ReactPlayer playing={true} light={false} controls url={media_src} />
         </div>
       )}
