@@ -1,43 +1,56 @@
+// Helper variables for video positioning
+$portrait-video-size: 145vh;
+$portrait-bottom-offset: (100vh - $portrait-video-size) * 0.5;
+$portrait-left-offset: calc(50% - (#{math.div($portrait-video-size, 2)}));
+
+$landscape-video-size: 125vw;
+$landscape-left-offset: (100vw - $landscape-video-size) * 0.5;
+$landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
+
+
 // Intro page.
 .container-video-intro {
   position: relative;
 
   &.video-no-played {
-    .header-inner-content__img {
-      width: 140vh !important;
-      height: 140vh !important;
-      border-radius: 50%;
+    .header-inner-content__img#video-container { // ID is to ensure overrides
       margin-left: 0 !important;
       margin-top: 0 !important;
       z-index: 999 !important;
-      bottom: 50% !important;
-      margin-bottom: calc(-70vh + 6px) !important;
-      position: relative;
+      // Reset margin alterations made to fit the O inside 2O36
+      margin-bottom: 0;
 
-      // @media (orientation: portrait) {
-      //   width: 140vh !important;
-      //   height: 140vh !important;
-      //   margin-bottom: calc(-70vh + 6px) !important;
-      // }
+      // Sizing and positioning of the video-no-played is complex because
+      // it neeeds to take into consideration the inherited positioning (left, bottom)
+      // of the "O" that has many variations on responsive and a different sizing
+      // depending on the orientation (lanscape, portrait).
+      //
+      // We will try to abstract and separate the different logics as much as possible
+      // in order to make them readable and understandable even if it means introducing
+      // more code.
+      //
+      // Important! For transitioning the "O", the ONLY animatable properties are
+      // "bottom", "left" and "margin-bottom". DON'T USE "top" or "right" because
+      // it will break transitions.
 
-      // @media (orientation: portrait) and (min-width: map-get($grid-breakpoints, 'md')) {
-      //   left: calc(-20vh - 50px) !important;
-      // }
+      // 1 - On all portrait breakpoints, video size is proportional to vh
+      // in order to make it depend on the biggest measure (height)
+      @media (orientation: portrait) {
+        width: $portrait-video-size !important;
+        height: $portrait-video-size !important;
+        left: $portrait-left-offset !important;
+        bottom: $portrait-bottom-offset !important;
+      }
 
+      // 2 - On all landscape breakpoints, video size is proportional to vw
+      // in order to make it depend on the biggest measure (width)
       @media (orientation: landscape) {
-        width: 122vw !important;
-        height: 122vw !important;
-        margin-bottom: calc(-61vw + 6px) !important;
-        left: calc(-10.5vw - 12px) !important;
+        width: $landscape-video-size !important;
+        height: $landscape-video-size !important;
+        left: $landscape-left-offset !important;
+        bottom: $landscape-bottom-offset !important;
       }
 
-      @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) and (orientation: portrait) {
-        left: calc(-20vh - 50px) !important;
-      }
-
-      @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) and (orientation: landscape) {
-        left: calc(-10.5vw - 6px) !important;
-      }
     }
 
     .content-header__container {
@@ -175,9 +188,19 @@
   }
 }
 
-body.full_video {
-  overflow: hidden;
+body.is-mobile .animate_video {
+
+  // Mobile browsers have less RAM for animating video zoom, so fallback to a
+  // fade out, size change, then fade in.
+  &.header-inner-content__img {
+    // Due to iOS's fantastic buggy behavior, we need to animate a
+    // dummy property (z-index) in order to keey things in sync.
+    // Thanks again, iOS.
+    z-index: 2;
+    animation: flash $mobile-animation-duration;
+  }
 }
+
 
 .main-container.full_video{
   .header-menu,
@@ -190,3 +213,4 @@ body.full_video {
     display:none;
   }
 }
+

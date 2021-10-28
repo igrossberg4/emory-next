@@ -1,15 +1,20 @@
 @keyframes flash {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
+    opacity:1;
   }
 }
 
+
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 
@@ -130,6 +135,12 @@
 
   .title_cta {
     margin-top: 1.5rem;
+
+    // On mobile, the previous element (empty, height=0, ¿¿??) receives the
+    // click event unless a z-index is set to make the button pop above.
+    position: relative;
+    z-index: 1;
+
     @include media-breakpoint-up(md) {
       margin-top: 3rem;
     }
@@ -145,7 +156,6 @@
   .actions {
     position: absolute;
     left: 0;
-    bottom: 0;
     animation: fadeIn math.div($main-carousel-transition-duration, 6) ease-in-out;
     width: 100%;
     z-index: 2;
@@ -195,6 +205,8 @@
     width: 55px;
     height: 80px;
     overflow: visible;
+    display: block;
+    margin: 0 auto;
     filter:
       drop-shadow(-3px -3px 6px rgba(255, 255, 255, .5))
       drop-shadow(2px 2px 6px rgba(95, 92, 89, .12))
@@ -231,6 +243,25 @@
   @include media-breakpoint-up(md) {
     flex-direction: row;
     top: auto;
+    bottom: 54%;
+
+    > span {
+      display: block;
+      padding: 0 15px;
+      margin-bottom:0;
+    }
+
+    .header-2036__title__3 {
+      margin: 0 0 0 260px;
+    }
+
+    svg {
+      width: 100px;
+      height: inherit;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
     bottom: 46%;
 
     > span {
@@ -252,7 +283,6 @@
 // Scroll Animation
 
 $pre-animation-delay: math.div($scroll-down-transition-duration, 2);
-
 $curve: cubic-bezier(.63,.72,.79,.98);
 
 .header-2036.content-header__container {
@@ -260,12 +290,12 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
   .header-inner-content__img {
     position: absolute;
-    bottom: calc(100% - 120px - 86px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
+    bottom: calc(100% - 120px - 86px - 8px - 100px); // vh - 2036 offset - 2 height - margin - O size
+    left: calc(50vw - 50px); // Left explicit centering is needed for transitions! We can't do :auto
     max-width: unset;
     width: 100px;
     height: 100px;
     transform: none;
-    box-sizing: content-box;
     z-index: 10;
     padding: 0;
     margin-bottom: 0;
@@ -273,32 +303,53 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     transition:
       width $scroll-down-transition-duration $pre-animation-delay $curve,
       height $scroll-down-transition-duration $pre-animation-delay $curve,
-      $scroll-down-transition-duration $pre-animation-delay $curve,
       left $scroll-down-transition-duration $pre-animation-delay $curve,
       bottom $scroll-down-transition-duration $pre-animation-delay $curve,
       margin-bottom $scroll-down-transition-duration $pre-animation-delay $curve,
       transform $scroll-down-transition-duration $pre-animation-delay $curve,
       opacity $scroll-down-transition-duration $pre-animation-delay $curve;
 
+    // Mobile browsers have less RAM for animating video zoom, so fallback to a
+    // fade out, size change without transition animation, then fade in.
+    // @see implementation on _intro.scss:191
+    body.is-mobile:not(.is-scrolled) & {
+      z-index: 998;
+
+      // Due to iOS's fantastic buggy behavior, we need to animate a
+      // dummy property (z-index) in order to keey things in sync.
+      // Thanks again, iOS.
+      transition:
+        z-index $mobile-animation-duration linear;
+    }
+
     @include media-breakpoint-up(md) {
-      left: calc((100vw / 2) - 230px);
-      bottom: 42%;
-      width: 258px;
-      height: 258px;
+      border-width: 8px;
+      left: calc((100vw / 2) - 178px);
+      bottom: 54%; // Equal to .header-2036__title bottom
+      width: 230px;
+      height: 230px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border-width: 12px;
+      left: calc((100vw / 2) - 218px);
+      bottom: 46%; // Equal to .header-2036__title bottom
+      width: 282px;
+      height: 282px;
     }
 
     // 2O36 vertical
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
-      bottom: calc(100% - 120px - 64px - 15px - 100px); // vh - 2036 offset - 2 height - margin - O size
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-md) {
+      bottom: calc(100% - 120px - 64px - 10px - 100px); // vh - 2036 offset - 2 height - margin - O size
     }
 
     // 2O36 horizontal
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
-      bottom: calc(100% - 35% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
-      left: calc((100vw / 2) - 80px);
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-sm) {
+      bottom: calc(100% - 35% - 61px - 20px); // vh - 2036 offset - 2 height - margin - O size
+      left: calc((100vw / 2) - 74px);
     }
 
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-xsm) {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1px) and (max-height: $round-image-vertical-breakpoint-xsm) {
       bottom: calc(100% - 25% - 64px - 20px); // vh - 2036 offset - 2 height - margin - O size
     }
 
@@ -323,10 +374,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     // letter_height * 3 + letter_margin_bottom * 3 + "O" margin offset +  offset from top.
     max-width: map-get($container-max-widths, 'lg');
     transition: padding-top $scroll-down-transition-duration * 1.5 ease;
-
-    @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-md) {
-      top: 70%;
-    }
 
     @media (max-width: map-get($grid-breakpoints, 'md')) and (max-height: $round-image-vertical-breakpoint-sm) {
       top: 65%;
@@ -373,36 +420,55 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     .header-inner-content__img {
       top: auto;
-      width:110vw;
-      height:110vw;
+      width:110vw !important;
+      height:110vw !important;
       bottom: 0 !important;
       margin-left: 0 !important;
       margin-bottom: 0 !important;
+      left: calc(50% - (110vw / 2)) !important;
       z-index: -1;
       opacity: .5;
 
       @media (orientation: portrait) {
-        width: 110vh;
-        height: 110vh;
-        left: auto;
+        width: 110vh !important;
+        height: 110vh !important;
+        left: calc(50% - (110vh / 2)) !important;
       }
 
-      @include media-breakpoint-up(md) {
-        margin-bottom: 0;
-        left: calc(-5vw - 12px - (15px / 2));
+      // O Safari on mobile, you little rascal!
+      // It looks like every other browser - even Safari on desktop! - will safely
+      // interpolate between the two left values - the original and the final.
+      // You amuse us by first positioning the "left" property and then animating
+      // (thus starting the transition from the leftmost FINAL position instead of
+      // animating TO that position).
+      // It looks like an "auto" value will encourage you to do your work, but will
+      // confuse the rest of the (well-behaved) browsers.
+      // Well...
+      // Here it is! Your own override! Enjoy it!
+      .is-ios & {
+        left: auto !important;
       }
     }
 
     .header-inner-content__text {
       top: 40%;
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        top: 55%;
+      }
     }
 
     .title {
-      animation: flash ($scroll-down-transition-duration * 2);
+      animation: fadeIn ($scroll-down-transition-duration * 2);
       @extend .header-xlarge;
       line-height: 0.9em;
       letter-spacing: 0;
       white-space: normal;
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $h4-font-size;
+        margin: 0 5px;
+      }
 
       @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-md) {
         font-size: $h2-font-size--desktop;
@@ -419,6 +485,10 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       opacity: 1;
       margin-bottom: 20px;
       display: block;
+
+      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $font-size-base
+      }
     }
 
     .pretitle,
@@ -434,6 +504,24 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     video {
       pointer-events: none;
+    }
+  }
+}
+
+
+// Overrides for when the video is not played
+// This is needed to override inline css dinamycally generated.
+#container-video:not(.video-no-played) .header-2036.content-header__container {
+
+  .header-inner-content__img {
+    margin-bottom: 0 !important;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: calc(-1 * (230px - 140px) / 2) !important; // ball height - height of 2/3/6
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: calc(-1 * (282px - 194px) / 2) !important; // ball height - height of 2/3/6
     }
   }
 }
