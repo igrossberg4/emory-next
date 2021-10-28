@@ -4,7 +4,7 @@
   "page_props": {
     "header": "OXFORD <br> COLLEGE",
     "about": "School spotlight",
-    "text": "Leaders aren’t born. They’re made at Oxford College.",
+    "text": "Leaders aren’t born. They’re made at Oxford College.",
     "button_scroll": "Scroll to explore",
     "img_src": "oxford_lede.jpg",
     "footer": {
@@ -13,7 +13,7 @@
         "url": "https://together.emory.edu/give/to/schools-and-colleges/oxford-college"
       },
       "cta_contact_info": {
-        "heading": "Learn more about ways to support 2036",
+        "heading": "Learn more about ways to support 2O36.",
         "person": "Kevin Smyrl",
         "title": "Associate Dean of Advancement and Alumni Engagement",
         "email": "rsmyrl@emory.edu",
@@ -33,7 +33,7 @@
       "props": {
         "header": "Through powerful inquiry, Oxford students become thoughtful, effective, and responsible leaders and agents of change.",
         "background_image": "oxford_isolated_bg.png",
-        "text": "<p>One of Emory University's two liberal arts colleges, Oxford prides itself on an intense focus on the liberal arts, leadership, and service. Just 45 minutes from Atlanta, the Oxford campus is deeply rooted in history with eyes on the future. Through the related processes of discovery, exploration, and reflection, students are immersed in a curriculum that introduces them to ways of finding and producing knowledge.</p>",
+        "text": "<p>A distinctive liberal arts college located on Emory’s original campus, Oxford prides itself on an intense focus on the liberal arts, leadership, and service. Just 45 minutes from Atlanta, the Oxford campus is deeply rooted in history with eyes on the future. Through the related processes of discovery, exploration, and reflection, students are immersed in a curriculum that introduces them to ways of finding and producing knowledge.</p>",
         "img_src": "oxford_intro.jpg",
         "media_src": "https://vimeo.com/623729255/c0042c8639",
         "media_alt": "Oxford student on campus",
@@ -96,7 +96,7 @@
         "layout": "left",
         "subtitle": "",
         "img_src": "oxford_quote_1.jpg",
-        "media_src": "https://vimeo.com/630265273/86499fb63a",
+        "media_src": "https://vimeo.com/633132610/29e4c99b96",
         "media_alt": "A video quote of Kim Chenevey 02Ox 04B",
         "media_header": "Kim Chenevey 02Ox 04B",
         "media_text": "",
@@ -126,7 +126,7 @@
         "layout": "right",
         "subtitle": "",
         "img_src": "oxford_quote_2.jpg",
-        "media_src": "https://vimeo.com/630265299/bab32e6750",
+        "media_src": "https://vimeo.com/633132281/6df6f184b9",
         "media_alt": "A video quote of Hugh Tarbutton 84Ox",
         "media_header": "Hugh Tarbutton 84Ox",
         "media_text": "",
