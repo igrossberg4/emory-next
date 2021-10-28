@@ -125,3 +125,6 @@ $icon-button-size--small: 48px;
 
 $main-carousel-transition-duration: 0.8s;
 $scroll-down-transition-duration: .6s;
+
+$mobile-animation-duration: 1s;
+$mobile-animation-delay: math.div($mobile-animation-duration, 2);
