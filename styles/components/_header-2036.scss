@@ -130,6 +130,12 @@
 
   .title_cta {
     margin-top: 1.5rem;
+
+    // On mobile, the previous element (empty, height=0, ¿¿??) receives the
+    // click event unless a z-index is set to make the button pop above.
+    position: relative;
+    z-index: 1;
+    
     @include media-breakpoint-up(md) {
       margin-top: 3rem;
     }
