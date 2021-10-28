@@ -1,15 +1,20 @@
 @keyframes flash {
   0% {
-    opacity: 0;
+    opacity:0;
   }
   100% {
-    opacity: 1;
+    opacity:1;
   }
 }
 
+
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 
@@ -135,7 +140,7 @@
     // click event unless a z-index is set to make the button pop above.
     position: relative;
     z-index: 1;
-    
+
     @include media-breakpoint-up(md) {
       margin-top: 3rem;
     }
@@ -306,8 +311,15 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     // Mobile browsers have less RAM for animating video zoom, so fallback to a
     // fade out, size change without transition animation, then fade in.
+    // @see implementation on _intro.scss:191
     body.is-mobile:not(.is-scrolled) & {
-      transition: none;
+      z-index: 998;
+
+      // Due to iOS's fantastic buggy behavior, we need to animate a
+      // dummy property (z-index) in order to keey things in sync.
+      // Thanks again, iOS.
+      transition:
+        z-index $mobile-animation-duration linear;
     }
 
     @include media-breakpoint-up(md) {
@@ -447,7 +459,7 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     }
 
     .title {
-      animation: flash ($scroll-down-transition-duration * 2);
+      animation: fadeIn ($scroll-down-transition-duration * 2);
       @extend .header-xlarge;
       line-height: 0.9em;
       letter-spacing: 0;

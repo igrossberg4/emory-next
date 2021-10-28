@@ -193,17 +193,14 @@ body.is-mobile .animate_video {
   // Mobile browsers have less RAM for animating video zoom, so fallback to a
   // fade out, size change, then fade in.
   &.header-inner-content__img {
-    animation: flash ($scroll-down-transition-duration * 2);
+    // Due to iOS's fantastic buggy behavior, we need to animate a
+    // dummy property (z-index) in order to keey things in sync.
+    // Thanks again, iOS.
+    z-index: 2;
+    animation: flash $mobile-animation-duration;
   }
 }
 
-body.is-mobile .deanimate_video {
-  // Mobile browsers have less RAM for animating video zoom, so fallback to a
-  // fade out, size change, then fade in.
-  &.header-inner-content__img {
-    animation: fadeIn ($scroll-down-transition-duration * 2);
-  }
-}
 
 .main-container.full_video{
   .header-menu,
