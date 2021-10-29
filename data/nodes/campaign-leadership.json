@@ -52,7 +52,7 @@
           {
             "name": "Sarah Beth Brown 89B",
             "description": "Regional Co-Chair",
-            "img_src": "headshots/brown_2.jpg",
+            "img_src": "headshots/s_brown_1.jpg",
             "media_alt": "Portrait of Sarah Beth Brown"
           },
           {
@@ -76,13 +76,13 @@
           {
             "name": "Bob Goddard",
             "description": "Chair, Emory Board of Trustees",
-            "img_src": "headshots/goddard_1.jpg",
+            "img_src": "headshots/b_goddard_1.jpg",
             "media_alt": "Portrait of Bob Goddard"
           },
           {
             "name": "Mitchell Tanzman 81C P18",
             "description": "Chair, Development Committee, Emory Board of Trustees",
-            "img_src": "headshots/tanzman_1.jpg",
+            "img_src": "headshots/m_tanzman_1.jpg",
             "media_alt": "Portrait of Mitchell Tanzman 81C P18"
           }
         ]
@@ -265,7 +265,7 @@
           {
             "name": "Stephanie Kennedy",
             "description": "Emory Healthcare",
-            "img_src": "2036_data_science_code_yellow.jpg",
+            "img_src": "headshots/s_kennedy_1.jpg",
             "media_alt": "Portrait of Stephanie Kennedy"
           },
           {
