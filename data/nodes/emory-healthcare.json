@@ -65,8 +65,8 @@
         "title": "The Best Cancer Care in Midtown",
         "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship’s advanced research.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_2.jpg",
-        "media_src": "healthcare_priority_2_popup.jpg",
+        "img_src": "healthcare_priority_1.jpg",
+        "media_src": "healthcare_priority_1_popup.jpg",
         "media_alt": "Emory Winship Midtown building.",
         "media_type": "image",
         "media_header": "Winship Emory Midtown",
@@ -80,12 +80,12 @@
         "title": "A Better Surgical Pavilion",
         "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_3.jpg",
-        "media_src": "healthcare_priority_3_popup.jpg",
-        "media_alt": "Nurse tends to patient.",
+        "img_src": "healthcare_priority_2.jpg",
+        "media_src": "healthcare_priority_2_popup.jpg",
+        "media_alt": "Three doctors discuss over cadaver",
         "media_type": "image",
-        "media_header": "Advance Treatment and Care",
-        "media_text": "By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions."
+        "media_header": "Space for Innovation",
+        "media_text": "Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams."
       }
     },
     {
@@ -110,12 +110,12 @@
         "title": "Elevating Heart Care and Research",
         "body": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_1.jpg",
-        "media_src": "healthcare_priority_1_popup.jpg",
-        "media_alt": "Two nurses help man to walk using sticks.",
+        "img_src": "healthcare_priority_3.jpg",
+        "media_src": "healthcare_priority_3_popup.jpg",
+        "media_alt": "Nurse tends to patient",
         "media_type": "image",
-        "media_header": "The Future of Rehab",
-        "media_text": "2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better."
+        "media_header": "Advance Treatment and Care",
+        "media_text": "By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions."
       }
     },
     {
