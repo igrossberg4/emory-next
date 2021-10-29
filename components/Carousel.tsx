@@ -307,7 +307,7 @@ export default function EmblaCarousel({
                 display: ${!state.isCircleExpanded ? "block" : "none"};
                 width: ${!state.isCircleExpanded ? "100%" : "95%"};
                 height: ${!state.isCircleExpanded ? "100%" : "95%"};
-                background: ${`url(${require(`../public/images/2036-bg-blur.png`)})
+                background: ${`url(${require(`../public/images/2036-bg-blur.jpg`)})
                 no-repeat`};
               }
             `} embla__viewport`}
