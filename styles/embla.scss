@@ -7,6 +7,7 @@
   background-color: $body-bg;
   margin-left: auto;
   height: 100vh;
+  min-height: $carousel-min-height;
   margin-right: auto;
 
   // Workaround to not lost the scroll bar on
