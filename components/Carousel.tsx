@@ -266,6 +266,14 @@ export default function EmblaCarousel({
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView, page, queue, state.isCircleExpanded]); // @ts-ignore
+
+  useEffect(() => {
+    const element = document.getElementById('carousel');
+    if (element && element instanceof HTMLElement) {
+      element.style.height = window.innerHeight.toString() + 'px';
+    }
+  }, [])
+
   const isSmall = useMediaQuery({ query: `(max-width: 800px)` });
   const isMedium = useMediaQuery({ query: `(max-width: 1000px)` });
   const memo = useMemo(() => {
@@ -273,8 +281,11 @@ export default function EmblaCarousel({
       <>
         <div
           id="carousel"
+          ref={(ref)=>{
+            document.body.style.visibility = 'visible';
+          }}
           style={{
-            height: process.browser ? window.innerHeight : 'auto'
+            height: process.browser ? window.innerHeight : '100vh'
           }}
           className={`embla embla--carousel-navigation
         ${!navigation ? "page-carousel" : ""}

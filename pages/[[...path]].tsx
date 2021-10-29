@@ -48,7 +48,6 @@ export default function Home(props: any) {
   );
   const [state, dispatch] = useContext(Context) as any;
   useEffect(() => {
-    console.log("entra");
     if (isMobile && !document.body.classList.contains("is-mobile")) {
       document.body.classList.add("is-mobile");
       if (isIOS) {

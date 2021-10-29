@@ -21,24 +21,11 @@ export default function CarouselItem(props: any) {
   const memo = useMemo(() => {
     return <div
         className="content-header__container container-force-screen-fit-y"
-        onTransitionEnd={(e) => {
-          /*if(e.propertyName === 'padding-top'){
-
-
-
-            /*setTimeout(() => {
-             const element = document.getElementById("selected")?.querySelector('.title.header-h2');
-             if(state.isCircleExpanded && element && window.scrollY < (element as any).clientHeight + 80){
-              window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
-            }
-            }, 1000)*/
-
-
-
-             /*if(state.isCircleExpanded && element && window.scrollY < (element as any).clientHeight + 80){
-               window.scrollTo({top: (element as any).clientHeight + 80, behavior:'smooth'})
-             }*/
-       }}
+        ref={(ref)=>{
+          if (!document.getElementById('carousel')) {
+            document.body.style.visibility = 'visible';
+          }
+        }}
       >
         <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
