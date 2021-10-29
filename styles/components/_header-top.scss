@@ -254,10 +254,6 @@
 
     .header-inner-content__text {
       top: 40%;
-
-      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
-        top: 55%;
-      }
     }
 
     .title {
@@ -291,15 +287,16 @@
     }
 
     .subtitle {
+      padding: 0 10px;
       @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
         font-size: $font-size-base
       }
     }
 
     .actions {
-      @media (max-height: $round-image-vertical-breakpoint-sm) {
-        bottom: -120px;
-      }
+      // @media (max-height: $round-image-vertical-breakpoint-sm) {
+      //   bottom: -120px;
+      // }
     }
   }
 }

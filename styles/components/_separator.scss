@@ -33,12 +33,17 @@
         height: 100%;
         top: -25%;
       }
+
+      @media (max-height: $round-image-vertical-breakpoint-sm) {
+        height: 50%;
+        top: -25%;
+      }
     }
   }
 
 
-  // Remove when vertical space is tiny
-  @media (max-height: $round-image-vertical-breakpoint-xsm) {
-    display: none;
-  }
+  // // Remove when vertical space is tiny
+  // @media (max-height: $round-image-vertical-breakpoint-xsm) {
+  //   display: none;
+  // }
 }
