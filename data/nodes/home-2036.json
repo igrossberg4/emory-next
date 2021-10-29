@@ -73,6 +73,21 @@
       }
     },
     {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "LEARN ABOUT",
+        "title": "Core Areas of 2O36",
+        "layout": "right",
+        "subtitle": "",
+        "img_src": "about_core_1.jpg",
+        "media_src": "https://vimeo.com/640010045/701aaa40cd",
+        "media_alt": "Two students walk down stairs to first day of class",
+        "media_header": "Core Areas of 2O36",
+        "media_text": "",
+        "button_close_text": "Exit"
+      }
+    },
+    {
       "component": "TextBg",
       "props": {
         "text": "2O36 PRIORITIES FOR EMORY UNIVERSITY",
