@@ -45,7 +45,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Emory provides a rich environment for students, particularly in research, and the opportunity to work with faculty members—to learn what it's like to be in a lab, to actually undertake an independent project, and to do so with a wide range of faculty.",
+        "text": "Emory provides a rich environment for students, particularly in research, and the opportunity to work with faculty members—to learn what it’s like to be in a lab, to actually undertake an independent project, and to do so with a wide range of faculty.",
         "attribution": "— Paul Johnson P22, Director, Yerkes National Primate Research Center"
       }
     },

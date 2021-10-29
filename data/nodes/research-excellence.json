@@ -38,7 +38,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "We're really pushing forward to try to solve the problems that need solving no matter how hard it might be.",
+        "text": "We’re really pushing forward to try to solve the problems that need solving no matter how hard it might be.",
         "attribution": "— Carey Jansen 19M 23G"
       }
     },
