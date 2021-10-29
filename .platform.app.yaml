@@ -53,6 +53,9 @@ web:
                 # Expire static assets after 2 weeks.
                 '\.(jpe?g|png|webp|webm|webmanifest|mp4|mp3|gif|svgz?|ico|eot|woff2?|otf|ttf?|xml|pdf)$':
                     expires: 2w
+                # Expire javascript & css assets after 1 week.
+                '\.(js|css)$':
+                    expires: 1w
 
 
 # The size of the persistent disk of the application (in MB).
