@@ -162,9 +162,9 @@
     // transition: opacity math.div($main-carousel-transition-duration, 3) ease-out;
 
     // 2O36 Horizontal, without space
-    @media (max-height: $round-image-vertical-breakpoint-xsm) {
-      display: none;
-    }
+    // @media (max-height: $round-image-vertical-breakpoint-xsm) {
+    //   bottom: -20px;
+    // }
   }
 
   .btn {
@@ -452,10 +452,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
 
     .header-inner-content__text {
       top: 40%;
-
-      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
-        top: 55%;
-      }
     }
 
     .title {
@@ -505,13 +501,20 @@ $curve: cubic-bezier(.63,.72,.79,.98);
     video {
       pointer-events: none;
     }
+
+    .actions {
+      // 2O36 Horizontal, without space
+      // @media (max-height: $round-image-vertical-breakpoint-xsm) {
+      //   bottom: -120px;
+      // }
+    }
   }
 }
 
 
 // Overrides for when the video is not played
 // This is needed to override inline css dinamycally generated.
-#container-video:not(.video-no-played) .header-2036.content-header__container {
+body:not(.is-scrolled) #container-video:not(.video-no-played) .header-2036.content-header__container {
 
   .header-inner-content__img {
     margin-bottom: 0 !important;

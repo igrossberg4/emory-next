@@ -126,8 +126,17 @@ export default function Home(props: any) {
           window.scrollY < circleAnimateMinimunScroll &&
           circleAnimatePreventScrollEnabled
         ) {
-          // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled):
-          window.scroll({ top: window.innerHeight / 4, behavior: "smooth" });
+          // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled).
+          // Also, avoid excesssive jumps that might generate excessive whitespace on these two scenarios:
+          // 1 - Portrait orientations
+          // 2 - Short viewports
+          // Also, avoid jumps of more than 200px.
+          const ratio = window.innerWidth / window.innerHeight;
+          const heightThreshold = 450; // heept this in sync with $carousel-min-height
+          const targetHeight = ratio >= 1 && window.innerHeight > heightThreshold ? window.innerHeight / 4 : 50;
+          console.log(targetHeight > 200 ? 200 : targetHeight);
+
+          window.scroll({ top: targetHeight > 200 ? 200 : targetHeight, behavior: "smooth" });
         }
       }
     },
@@ -173,6 +182,7 @@ export default function Home(props: any) {
   useEffect(() => {
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
+      const width = window.innerWidth;
       document
         .querySelectorAll(".container-force-screen-fit-y")
         .forEach((item) => {

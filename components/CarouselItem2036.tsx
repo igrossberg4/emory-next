@@ -91,7 +91,6 @@ export default function CarouselItem2036(props: any) {
             // dummy property (z-index) in order to keep things in sync.
             // Thanks again, iOS.
             if (e.propertyName === 'z-index' && (e.target as HTMLElement).id === 'video-container' ) {
-              console.log('transition ended', e);
               dispatch({
                 type: "IS_VIDEO_ON_EXPANSION",
                 payload: false
