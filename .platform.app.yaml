@@ -51,7 +51,7 @@ web:
                 '^([^.]+)$':
                     passthru: '/$1.html'
                 # Expire static assets after 2 weeks.
-                '\.(jpe?g|png|webp|webmanifest|mp4|mp3|gif|svgz?|ico|eot|woff2?|otf|ttf?|xml|pdf)$':
+                '\.(jpe?g|png|webp|webm|webmanifest|mp4|mp3|gif|svgz?|ico|eot|woff2?|otf|ttf?|xml|pdf)$':
                     expires: 2w
 
 
