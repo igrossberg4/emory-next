@@ -120,8 +120,13 @@ $round-image-vertical-breakpoint-md: 800px;
 $round-image-vertical-breakpoint-sm: 600px;
 $round-image-vertical-breakpoint-xsm: 400px;
 
+$carousel-min-height: 450px; // Keep this in sync with heightThreshold
+
 $icon-button-size: 64px;
 $icon-button-size--small: 48px;
 
 $main-carousel-transition-duration: 0.8s;
 $scroll-down-transition-duration: .6s;
+
+$mobile-animation-duration: 1s;
+$mobile-animation-delay: math.div($mobile-animation-duration, 2);

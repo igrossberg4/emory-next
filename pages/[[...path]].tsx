@@ -13,10 +13,10 @@ import DynamicComponentMatcher from "../components/DynamicComponentMatcher";
 import { Fragment, createContext, useReducer } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Context } from "../state/Store";
-import { instantiateEmscriptenWasm } from "next/dist/next-server/server/lib/squoosh/emscripten-utils";
 import { getNodes } from "../data-loader/get-nodes";
 import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
+import { browserName, isMobile, isIOS } from "react-device-detect";
 import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
 
 function getElementXPath(element: any): string {
@@ -42,13 +42,19 @@ function getElementXPath(element: any): string {
 export default function Home(props: any) {
   const router = useRouter();
   const [scroll, setScroll] = useState(0);
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const scrollVar = 5;
   const [innerHeight, setInnerHeight] = useState(
     process.browser ? window.innerHeight : 0
   );
   const [state, dispatch] = useContext(Context) as any;
-
+  useEffect(() => {
+    if (isMobile && !document.body.classList.contains("is-mobile")) {
+      document.body.classList.add("is-mobile");
+      if (isIOS) {
+        document.body.classList.add("is-ios");
+      }
+    }
+  }, []);
   const circleAnimateExpand = useCallback(() => {
     const element = document.getElementById("selected");
     document.body.classList.add("is-scrolled");
@@ -120,8 +126,16 @@ export default function Home(props: any) {
           window.scrollY < circleAnimateMinimunScroll &&
           circleAnimatePreventScrollEnabled
         ) {
-          // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled):
-          window.scroll({ top: window.innerHeight / 4, behavior: "smooth" });
+          // Scroll automatically a little bit as the human scroll is frozen (to behave similar but controlled).
+          // Also, avoid excesssive jumps that might generate excessive whitespace on these two scenarios:
+          // 1 - Portrait orientations
+          // 2 - Short viewports
+          // Also, avoid jumps of more than 200px.
+          const ratio = window.innerWidth / window.innerHeight;
+          const heightThreshold = 450; // heept this in sync with $carousel-min-height
+          const targetHeight = ratio >= 1 && window.innerHeight > heightThreshold ? window.innerHeight / 4 : 50;
+
+          window.scroll({ top: targetHeight > 200 ? 200 : targetHeight, behavior: "smooth" });
         }
       }
     },
@@ -167,18 +181,24 @@ export default function Home(props: any) {
   useEffect(() => {
     const updateWindowDimensions = () => {
       const newHeight = window.innerHeight;
+      const width = window.innerWidth;
       document
         .querySelectorAll(".container-force-screen-fit-y")
         .forEach((item) => {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
 
-      // const videoElement = document.getElementById("video-container");
-      // if (videoElement) {
-      //   videoElement.style.bottom = isMobile
-      //     ? videoContainerBottomCalculator(window, document)
-      //     : (undefined as any);
-      // }
+      const carousel = document.querySelector('.embla--carousel-navigation');
+      if (carousel instanceof HTMLElement) {
+        carousel.style.height = `${newHeight}px`;
+      }
+
+      const videoElement = document.getElementById("video-container");
+      if (videoElement) {
+        videoElement.style.marginBottom = isMobile
+          ? videoContainerBottomCalculator(window)
+          : (undefined as any);
+      }
     };
 
     updateWindowDimensions();
@@ -324,7 +344,7 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
-      const isMenu = e.target instanceof HTMLElement && e.target.closest('.menu-main');
+      const isMenu = e.target instanceof HTMLElement && (e.target.closest('.menu-main') || e.target.closest('.menu-schools'));
       if (
         !isMenu &&
         circleAnimatePreventScrollEnabled &&
@@ -617,7 +637,11 @@ export default function Home(props: any) {
   return (
     <Fragment>
       <Head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VDCSNB');`}}></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VDCSNB');`,
+          }}
+        ></script>
         <title>{props.meta.title}</title>
         {props.meta.robots ? (
           <meta name="robots" content={props.meta.robots} />
@@ -675,7 +699,11 @@ export default function Home(props: any) {
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
-      <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VDCSNB" title="google tag manager" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VDCSNB" title="google tag manager" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+        }}
+      ></noscript>
       {memo}
     </Fragment>
   );

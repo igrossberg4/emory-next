@@ -18,7 +18,7 @@ currentBranch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 lastRelease=$(git describe --tags $(git rev-list --tags --max-count=1))
 ## lastRelease=$(node -p "require('./package.json').version")
 devBranch=dev
-stgBranch=dev-preview
+stgBranch=stage
 masterBranch=main
 
 echo "Branch '${currentBranch}' will be merged into '${masterBranch}' for release."

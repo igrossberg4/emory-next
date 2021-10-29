@@ -19,6 +19,12 @@
     }
   }
 
+  .container-fluid {
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   .menu-schools__col {
     margin-bottom: $spacer * 3;
     text-align: center;

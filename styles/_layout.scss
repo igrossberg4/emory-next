@@ -39,6 +39,7 @@ body {
 .container-force-screen-fit-y {
   height: 100vh;
   width: 100%;
+  min-height: $carousel-min-height;
 }
 
 .container-fluid {
