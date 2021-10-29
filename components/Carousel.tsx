@@ -266,6 +266,14 @@ export default function EmblaCarousel({
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView, page, queue, state.isCircleExpanded]); // @ts-ignore
+
+  useEffect(() => {
+    const element = document.getElementById('carousel');
+    if (element && element instanceof HTMLElement) {
+      element.style.height = window.innerHeight.toString() + 'px';
+    }
+  }, [])
+
   const isSmall = useMediaQuery({ query: `(max-width: 800px)` });
   const isMedium = useMediaQuery({ query: `(max-width: 1000px)` });
   const memo = useMemo(() => {
@@ -273,6 +281,12 @@ export default function EmblaCarousel({
       <>
         <div
           id="carousel"
+          ref={(ref)=>{
+            document.body.style.visibility = 'visible';
+          }}
+          style={{
+            height: process.browser ? window.innerHeight : '100vh'
+          }}
           className={`embla embla--carousel-navigation
         ${!navigation ? "page-carousel" : ""}
         ${
@@ -293,7 +307,7 @@ export default function EmblaCarousel({
                 display: ${!state.isCircleExpanded ? "block" : "none"};
                 width: ${!state.isCircleExpanded ? "100%" : "95%"};
                 height: ${!state.isCircleExpanded ? "100%" : "95%"};
-                background: ${`url(${require(`../public/images/2036-bg-blur.png`)})
+                background: ${`url(${require(`../public/images/2036-bg-blur.jpg`)})
                 no-repeat`};
               }
             `} embla__viewport`}

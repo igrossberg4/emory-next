@@ -97,8 +97,16 @@ export default function IntroPage(props: any) {
       }
     }
 
-
   }, [state.isCircleOnAnimation, videoRef, state.comesFromCarousel, videoPlayed])
+
+  useEffect(() => {
+    if (state.isVideoOnExpansion) {
+      document.getElementById('video-container')?.classList.add('animate_video');
+    } else {
+      document.getElementById('video-container')?.classList.remove('animate_video');
+    }
+  }, [state.isVideoOnExpansion]);
+
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
@@ -152,6 +160,10 @@ export default function IntroPage(props: any) {
                                   type: "VIDEO_PLAYED",
                                   payload: undefined,
                                 });
+                                dispatch({
+                                  type: "IS_VIDEO_ON_EXPANSION",
+                                  payload: true
+                                });
                                 setMuted(false);
                                 setSkipped(false);
                                 document.body.classList.add("full_video");
@@ -168,10 +180,13 @@ export default function IntroPage(props: any) {
                                   type: "VIDEO_PLAYED",
                                   payload: true,
                                 });
+                                dispatch({
+                                  type: "IS_VIDEO_ON_EXPANSION",
+                                  payload: true
+                                });
                                 setSkipped(true);
                                 setMuted(true);
 
-                                document.body.classList.remove("full_video");
                                 document.body
                                   .querySelector(".main-container")
                                   ?.classList.remove("full_video");
@@ -254,6 +269,10 @@ export default function IntroPage(props: any) {
                                     element.classList.remove("video-no-played");
                                   }
                                   setVideoPlayed();
+                                  dispatch({
+                                    type: "IS_VIDEO_ON_EXPANSION",
+                                    payload: true
+                                  });
                                 }}
                                 animate={
                                   skipped

@@ -38,7 +38,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "One of our biggest needs is to endow faculty positions. In academic terms, that's the currency for prestige, it's the currency to make the university run. And we need the ability to attract, keep, and nourish the talent that we have.",
+        "text": "One of our biggest needs is to endow faculty positions. In academic terms, that’s the currency for prestige, it’s the currency to make the university run. And we need the ability to attract, keep, and nourish the talent that we have.",
         "attribution": "— Ravi V. Bellamkonda, Provost and Executive Vice President for Academic Affairs"
       }
     },
@@ -56,14 +56,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "New Professors, Thanks to New Endowments",
-        "body": "<p>In teaching their niche areas of expertise , conducting research, and gaining further prominence in their fields, Emory faculty members are fundamental to both the learning process and our ability to attract new faculty members. Investing in new distinguished professorships across schools means investing in academic rigor and thought leadership that produces top notch graduates ready to deliver meaningful, lasting contributions to society.</p><p><stong>One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university's prominence.</strong> Endowed  professorships enhance the student experience schoolwide, increasing  academic rigor and  the number of co-curricular experiences available to students across disciplines.</p><p>Endowed professorships provide research funding to support the work of the faculty members who hold them. In an era of increasingly constricted federal funding, reliable research support is essential to attracting the best faculty.  Endowed professorships may be named after the donor or in honor of someone whom the donor specifies.</p>",
+        "body": "<p>In teaching their niche areas of expertise , conducting research, and gaining further prominence in their fields, Emory faculty members are fundamental to both the learning process and our ability to attract new faculty members. Investing in new distinguished professorships across schools means investing in academic rigor and thought leadership that produces top notch graduates ready to deliver meaningful, lasting contributions to society.</p><p><stong>One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university’s prominence.</strong> Endowed  professorships enhance the student experience schoolwide, increasing  academic rigor and  the number of co-curricular experiences available to students across disciplines.</p><p>Endowed professorships provide research funding to support the work of the faculty members who hold them. In an era of increasingly constricted federal funding, reliable research support is essential to attracting the best faculty.  Endowed professorships may be named after the donor or in honor of someone whom the donor specifies.</p>",
         "layout": "right",
         "img_src": "faculty_priority_1.jpg",
         "media_src": "faculty_priority_1_popup.jpg",
         "media_alt": "A faculty researcher",
         "media_type": "image",
         "media_header": "Endowments Bring New Professors",
-        "media_text": "One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university's prominence.",
+        "media_text": "One of the most significant philanthropic contributions you can make, endowed professorships enable Emory to recruit and retain the highest-quality faculty members and maintain the university’s prominence.",
         "media_byline": "Featured: Tim Lian, William Henry Emerson Professor of Chemistry, Emory University"
       }
     },
@@ -153,7 +153,7 @@
           },
           {
             "title": "Supporting Fellowships and Residencies Through 2O36",
-            "description": "<p>As a thriving and growing center for the TV and film industry and a mecca for artists, there's creativity to be researched or experienced around every corner in Atlanta. The arts are a golden opportunity to bring Emory to Atlanta, and Atlanta to our students, through performances, collaborations, and the engagement of local visiting artists, fellows, and teachers. These experiences enhance the undergraduate experience, expand access, and create lasting, productive partnerships across creative disciplines.</p><p><strong>Funding fellowships and residencies for faculty across film, music, dance, theater, and creative writing, and hosting internationally-respected artists offers faculty and students alike opportunities to take big risks.</strong> By focusing on careers in the arts that align with their passions over potential profits, they can change the world by changing hearts.</p>"
+            "description": "<p>As a thriving and growing center for the TV and film industry and a mecca for artists, there’s creativity to be researched or experienced around every corner in Atlanta. The arts are a golden opportunity to bring Emory to Atlanta, and Atlanta to our students, through performances, collaborations, and the engagement of local visiting artists, fellows, and teachers. These experiences enhance the undergraduate experience, expand access, and create lasting, productive partnerships across creative disciplines.</p><p><strong>Funding fellowships and residencies for faculty across film, music, dance, theater, and creative writing, and hosting internationally-respected artists offers faculty and students alike opportunities to take big risks.</strong> By focusing on careers in the arts that align with their passions over potential profits, they can change the world by changing hearts.</p>"
           }
         ]
       }

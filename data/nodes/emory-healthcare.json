@@ -45,7 +45,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "Emory's people really make the difference by being kind and being committed to benefiting the communities they serve.",
+        "text": "Emory’s people really make the difference by being kind and being committed to benefiting the communities they serve.",
         "attribution": "— Jonathan S. Lewin, Executive Vice President for Health Affairs, Emory University<br/>Executive Director, Woodruff Health Sciences Center<br/>CEO and Chairman of the Board, Emory Healthcare"
       }
     },
@@ -63,14 +63,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "The Best Cancer Care in Midtown",
-        "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research.</p>",
-        "layout": "right",
-        "img_src": "healthcare_priority_2.jpg",
-        "media_src": "healthcare_priority_2_popup.jpg",
+        "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship’s advanced research.</p>",
+        "layout": "left",
+        "img_src": "healthcare_priority_1.jpg",
+        "media_src": "healthcare_priority_1_popup.jpg",
         "media_alt": "Emory Winship Midtown building.",
         "media_type": "image",
         "media_header": "Winship Emory Midtown",
-        "media_text": "Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship's advanced research."
+        "media_text": "Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship’s advanced research."
       }
     },
     {
@@ -80,9 +80,9 @@
         "title": "A Better Surgical Pavilion",
         "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_3.jpg",
-        "media_src": "healthcare_priority_3_popup.jpg",
-        "media_alt": "Three doctors discuss in surgical room.",
+        "img_src": "healthcare_priority_2.jpg",
+        "media_src": "healthcare_priority_2_popup.jpg",
+        "media_alt": "Three doctors discuss over cadaver",
         "media_type": "image",
         "media_header": "Space for Innovation",
         "media_text": "Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams."
@@ -107,15 +107,15 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Building Rehab’s Future",
-        "body": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. 2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</p>",
+        "title": "Elevating Heart Care and Research",
+        "body": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_1.jpg",
-        "media_src": "healthcare_priority_1_popup.jpg",
-        "media_alt": "Two nurses help man to walk using sticks.",
+        "img_src": "healthcare_priority_3.jpg",
+        "media_src": "healthcare_priority_3_popup.jpg",
+        "media_alt": "Nurse tends to patient",
         "media_type": "image",
-        "media_header": "The Future of Rehab",
-        "media_text": "2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better."
+        "media_header": "Advance Treatment and Care",
+        "media_text": "By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions."
       }
     },
     {
@@ -140,12 +140,12 @@
         "pretitle": "EMORY HEALTHCARE",
         "items": [
           {
-            "title": "Elevating Heart Care and Research",
-            "description": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatments interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies."
+            "title": "Building Rehab’s Future",
+            "description": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. <strong>2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</strong></p>"
           },
           {
             "title": "Improving Access to Care",
-            "description": "<p>The health of our community depends on providing care for all. An inability to pay keeps people from seeking health care, leading to more disease and escalating costs that can put a family's entire financial health at risk. This is why Emory Healthcare strives to serve every patient in need. 2O36 will help us provide financial assistance and outreach services that improve access to care, advance medical knowledge, and create healthier, more productive communities.</p>"
+            "description": "<p>The health of our community depends on providing care for all. An inability to pay keeps people from seeking health care, leading to more disease and escalating costs that can put a family’s entire financial health at risk. This is why Emory Healthcare strives to serve every patient in need. <strong>2O36 will help us provide financial assistance and outreach services that improve access to care, advance medical knowledge, and create healthier, more productive communities.</strong></p>"
           },
           {
             "title": "The Demands of Financial Emergencies",
@@ -153,7 +153,7 @@
           },
           {
             "title": "Taking Care of Caregivers",
-            "description": "<p>The Emory Healthcare Employee Hardship Fund helps our care teams weather difficult times in their lives. They may experience a death in the family, medical expenses from a severe illness or accident, financial losses from an uninsured disaster, unusual expenses when caring for a sick family member, or pandemic-related financial emergencies. 2O36 will increase this fund, previously supported solely by employee giving, to reach more Emory Healthcare staff in need.</p>"
+            "description": "<p><strong>The Emory Healthcare Employee Hardship Fund helps our care teams weather difficult times in their lives.</strong> They may experience a death in the family, medical expenses from a severe illness or accident, financial losses from an uninsured disaster, unusual expenses when caring for a sick family member, or pandemic-related financial emergencies. 2O36 will increase this fund, previously supported solely by employee giving, to reach more Emory Healthcare staff in need.</p>"
           },
           {
             "title": "Empowering Our Care Teams",
