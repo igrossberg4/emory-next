@@ -160,11 +160,6 @@
     width: 100%;
     z-index: 2;
     // transition: opacity math.div($main-carousel-transition-duration, 3) ease-out;
-
-    // 2O36 Horizontal, without space
-    // @media (max-height: $round-image-vertical-breakpoint-xsm) {
-    //   bottom: -20px;
-    // }
   }
 
   .btn {
@@ -502,12 +497,6 @@ $curve: cubic-bezier(.63,.72,.79,.98);
       pointer-events: none;
     }
 
-    .actions {
-      // 2O36 Horizontal, without space
-      // @media (max-height: $round-image-vertical-breakpoint-xsm) {
-      //   bottom: -120px;
-      // }
-    }
   }
 }
 

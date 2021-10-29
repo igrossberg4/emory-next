@@ -134,7 +134,6 @@ export default function Home(props: any) {
           const ratio = window.innerWidth / window.innerHeight;
           const heightThreshold = 450; // heept this in sync with $carousel-min-height
           const targetHeight = ratio >= 1 && window.innerHeight > heightThreshold ? window.innerHeight / 4 : 50;
-          console.log(targetHeight > 200 ? 200 : targetHeight);
 
           window.scroll({ top: targetHeight > 200 ? 200 : targetHeight, behavior: "smooth" });
         }
