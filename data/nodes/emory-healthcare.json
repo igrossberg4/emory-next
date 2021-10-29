@@ -80,12 +80,12 @@
         "title": "A Better Surgical Pavilion",
         "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_1.jpg",
-        "media_src": "healthcare_priority_1_popup.jpg",
-        "media_alt": "Three doctors discuss in surgical room.",
+        "img_src": "healthcare_priority_3.jpg",
+        "media_src": "healthcare_priority_3_popup.jpg",
+        "media_alt": "Nurse tends to patient.",
         "media_type": "image",
-        "media_header": "Space for Innovation",
-        "media_text": "Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams."
+        "media_header": "Advance Treatment and Care",
+        "media_text": "By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions."
       }
     },
     {
@@ -108,14 +108,14 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Elevating Heart Care and Research",
-        "body": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatments interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies.</p>",
+        "body": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies.</p>",
         "layout": "right",
-        "img_src": "healthcare_priority_3.jpg",
-        "media_src": "healthcare_priority_3_popup.jpg",
-        "media_alt": "Nurse thends to patient..",
+        "img_src": "healthcare_priority_1.jpg",
+        "media_src": "healthcare_priority_1_popup.jpg",
+        "media_alt": "Two nurses help man to walk using sticks.",
         "media_type": "image",
-        "media_header": "Advance Treatment and Care",
-        "media_text": "By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions."
+        "media_header": "The Future of Rehab",
+        "media_text": "2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better."
       }
     },
     {
@@ -140,7 +140,7 @@
         "pretitle": "EMORY HEALTHCARE",
         "items": [
           {
-            "title": "Building Rehab’s Future",
+            "title": "Building Rehab's Future",
             "description": "<p>Our Physical Medicine and Rehabilitation program is among the best in the nation. Our care and research teams strive to restore functional ability and quality of life for people with catastrophic injuries—such as burns or brain and spinal cord injuries—and those living with cancer, heart dysfunction, stroke, and organ transplants.</p><p>Physical spaces for multidisciplinary collaborations are central to this work. As part of an academic medical center, we are able to leverage the research strengths and clinical knowledge of experts throughout Emory Healthcare and the university. <strong>2O36 will support a new Emory Rehabilitation Hospital, providing exceptional, collaborative spaces to better serve our patients, their families, and the physicians and researchers working to make their lives better.</strong></p>"
           },
           {
@@ -157,15 +157,15 @@
           },
           {
             "title": "Empowering Our Care Teams",
-            "description": "<p>At Emory Healthcare, we empower our teams to serve patients in the most efficient, effective ways possible. This is where EmPower comes in. Started with an investment from Jim Kennedy of the James M. Cox Foundation, EmPower is a customer-focused way of thinking that reduces waste, optimizes patient care and safety, and improves the patient and family experience. <strong>2O36 will expand EmPower to all areas of Emory Healthcare and create a sustainability plan to ensure this valuable approach continues to thrive. The result will be continued improvements for the patients and families who entrust us with their care.</strong></p>"
+            "description": "<p>At Emory Healthcare, we empower our teams to serve patients in the most efficient, effective ways possible. This is where EmPower comes in. Started with an investment from Jim Kennedy of the James M. Cox Foundation, EmPower is a customer-focused way of thinking that reduces waste, optimizes patient care and safety, and improves the patient and family experience. 2O36 will expand EmPower to all areas of Emory Healthcare and create a sustainability plan to ensure this valuable approach continues to thrive. The result will be continued improvements for the patients and families who entrust us with their care.</p>"
           },
           {
             "title": "Healing Wounded Warriors",
-            "description": "<p>The Emory Healthcare Veterans Program delivers life-changing care to post-9/11 veterans and service members struggling with the invisible wounds of war. This remarkable program reduces the symptoms of depression, anxiety, post-traumatic stress disorder, substance use disorder, and mild traumatic brain injury at no cost to veterans. Those who complete the program—more than 3,000 since 2015—reconnect with their families, rejoin the workforce, and take many other important steps along the road to recovery. <strong>2O36 will contribute to expanding the program to serve 50 percent more patients and extend eligibility to pre-9/11 veterans.</strong></p>"
+            "description": "<p>The Emory Healthcare Veterans Program delivers life-changing care to post-9/11 veterans and service members struggling with the invisible wounds of war. This remarkable program reduces the symptoms of depression, anxiety, post-traumatic stress disorder, substance use disorder, and mild traumatic brain injury at no cost to veterans. Those who complete the program—more than 3,000 since 2015—reconnect with their families, rejoin the workforce, and take many other important steps along the road to recovery. 2O36 will contribute to expanding the program to serve 50 percent more patients and extend eligibility to pre-9/11 veterans.</p>"
           },
           {
             "title": "Education for Well-Being",
-            "description": "<p>At a time when demand for health care providers is at an all-time high, education remains our most-underfunded mission. Education increases employee well-being, reduces job turnover, improves efficiency, and increases productivity—all to the betterment of patient care. By coordinating diverse educational experiences, 2O36 will strengthen compassionate, cross-cultural care. <strong>By advancing programs to improve the mental, emotional, and physical wellness of care teams, 2O36 will put people first across the board.</strong></p>"
+            "description": "<p>At a time when demand for health care providers is at an all-time high, education remains our most-underfunded mission. Education increases employee well-being, reduces job turnover, improves efficiency, and increases productivity—all to the betterment of patient care. By coordinating diverse educational experiences, 2O36 will strengthen compassionate, cross-cultural care. By advancing programs to improve the mental, emotional, and physical wellness of care teams, 2O36 will put people first across the board.</p>"
           }
         ]
       }
