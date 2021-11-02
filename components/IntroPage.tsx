@@ -66,7 +66,6 @@ export default function IntroPage(props: any) {
         document.body
           .querySelector(".main-container")
           ?.classList.remove("full_video");
-
       }
     }
 
@@ -84,36 +83,52 @@ export default function IntroPage(props: any) {
   }, [props.active, state.isCircleExpanded, videoPlayed]); // @ts-ignore
 
   useEffect(() => {
-    if(videoRef){
-      if( state.isCircleOnAnimation && !state.isTransitionEnd && state.comesFromCarousel) {
+    if (videoRef) {
+      if (
+        state.isCircleOnAnimation &&
+        !state.isTransitionEnd &&
+        state.comesFromCarousel
+      ) {
         videoRef.pause();
-      }else{
-        if(state.isCircleExpanded){
+      } else {
+        if (state.isCircleExpanded) {
           videoRef.pause();
         }
-        if(!state.isCircleExpanded && props.active && !document.body.classList.contains('full_video')) {
+        if (
+          !state.isCircleExpanded &&
+          props.active &&
+          !document.body.classList.contains("full_video")
+        ) {
           videoRef.play();
         }
       }
     }
-
-  }, [state.isCircleOnAnimation, videoRef, state.comesFromCarousel, videoPlayed])
+  }, [
+    state.isCircleOnAnimation,
+    videoRef,
+    state.comesFromCarousel,
+    videoPlayed,
+  ]);
 
   useEffect(() => {
     if (state.isVideoOnExpansion) {
-      document.getElementById('video-container')?.classList.add('animate_video');
+      document
+        .getElementById("video-container")
+        ?.classList.add("animate_video");
     } else {
-      document.getElementById('video-container')?.classList.remove('animate_video');
+      document
+        .getElementById("video-container")
+        ?.classList.remove("animate_video");
     }
   }, [state.isVideoOnExpansion]);
 
   const memo = useMemo(() => {
     return (
       <AnimateSharedLayout>
-        <div className='container-force-screen-fit-y'>
+        <div className="container-force-screen-fit-y">
           {process.browser ? (
             <div
-              id='container-video'
+              id="container-video"
               className={`container-fit container-video-intro
   ${props.active && videoPlayed == undefined ? "video-no-played" : ""}`}
             >
@@ -123,12 +138,33 @@ export default function IntroPage(props: any) {
                 <Fragment>
                   {videoRef?.played && playing && !state.isCircleExpanded ? (
                     <div
-                      className='mute_button btn text-label'
+                      className="mute_button btn text-label"
                       style={{ cursor: "pointer" }}
                       onClick={(e) => {
                         if (videoRef) {
                           videoRef.muted = !videoRef.muted;
                           setMuted(videoRef.muted);
+                        }
+                      }}
+                    >
+                      <IconButton
+                        key={muted}
+                        icon={muted ? "mute" : "unmute"}
+                      ></IconButton>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  {videoRef?.played && playing && !state.isCircleExpanded ? (
+                    <div
+                      className="video_cap_button btn text-label"
+                      style={{ cursor: "pointer" }}
+                      onClick={(e) => {
+                        if (videoRef) {
+                          dispatch({
+                            type: "TOGGLE_VIDEO_CAPTION",
+                            payload: !state.captionVideoEnabled,
+                          });
                         }
                       }}
                     >
@@ -162,7 +198,7 @@ export default function IntroPage(props: any) {
                                 });
                                 dispatch({
                                   type: "IS_VIDEO_ON_EXPANSION",
-                                  payload: true
+                                  payload: true,
                                 });
                                 setMuted(false);
                                 setSkipped(false);
@@ -182,7 +218,7 @@ export default function IntroPage(props: any) {
                                 });
                                 dispatch({
                                   type: "IS_VIDEO_ON_EXPANSION",
-                                  payload: true
+                                  payload: true,
                                 });
                                 setSkipped(true);
                                 setMuted(true);
@@ -240,7 +276,7 @@ export default function IntroPage(props: any) {
                             <Fragment>
                               {true ? (
                                 <button
-                                  type='button'
+                                  type="button"
                                   className={`btn-begin-experience ${
                                     videoRef.paused ? "paused" : ""
                                   }`}
@@ -258,7 +294,7 @@ export default function IntroPage(props: any) {
                                 ""
                               )}
                               <motion.button
-                                className='btn-skip-intro'
+                                className="btn-skip-intro"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setSkipped(true);
@@ -271,7 +307,7 @@ export default function IntroPage(props: any) {
                                   setVideoPlayed();
                                   dispatch({
                                     type: "IS_VIDEO_ON_EXPANSION",
-                                    payload: true
+                                    payload: true,
                                   });
                                 }}
                                 animate={
@@ -308,6 +344,16 @@ export default function IntroPage(props: any) {
         </div>
       </AnimateSharedLayout>
     );
-  }, [videoRef, muted, skipped, state.videoPlayed, playing, videoRef?.muted, state.isCircleExpanded, state.isCircleOnAnimation]);
+  }, [
+    videoRef,
+    muted,
+    skipped,
+    state.videoPlayed,
+    playing,
+    videoRef?.muted,
+    state.isCircleExpanded,
+    state.isCircleOnAnimation,
+    state.captionVideoEnabled,
+  ]);
   return memo;
 }

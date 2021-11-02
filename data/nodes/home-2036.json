@@ -11,6 +11,8 @@
     "img_src": "about_lede.jpg",
     "video_src": "videos/intro_video_v03.mp4",
     "video_webm_src": "videos/intro_video_v03.webm",
+    "video_vtt": "videos/intro_video_v03.vtt",
+    "video_vtt_lang": "en",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video",
     "footer": {
