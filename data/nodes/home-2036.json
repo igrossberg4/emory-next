@@ -90,10 +90,26 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "2O36 PRIORITIES FOR EMORY UNIVERSITY",
+        "text": "2O36 CORE AREAS FOR EMORY",
         "image_src": "about_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
         "cta_text": "Support Emory"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Learn More About",
+        "title": "Core Areas",
+        "body": "<p>2O36 is about more than moving the needle in conversations, it’s about working toward radical changes for the good of humanity. But we can’t achieve our vision for a better tomorrow without investing in three core areas: helping our students flourish, attracting and retaining top faculty across the university, and championing groundbreaking research.</p>",
+        "read_more": "student-flourishing",
+        "tags": [],
+        "layout": "left",
+        "img_src": "about_core_1.jpg",
+        "media_src": "https://vimeo.com/640010045/701aaa40cd",
+        "media_alt": "Core Areas Video",
+        "media_type": "video",
+        "media_header": "Core Areas of 2O36"
       }
     },
     {
