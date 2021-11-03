@@ -119,7 +119,6 @@ export default function Video(props: any) {
               ""
             )}
             <source src={media_src} type="video/mp4"></source>
-            {state.captionVideoEnabled ? (
               <track
                 default
                 src={props.video_vtt}
@@ -127,21 +126,12 @@ export default function Video(props: any) {
                 srcLang={props.video_vtt_lang}
                 label="english_captions"
               ></track>
-            ) : (
-              ""
-            )}
           </video>
 
           <div
             className={`${
-              !state.videoPlayed ? "caption-visible" : "caption-hide"
+              !state.videoPlayed && state.captionVideoEnabled ? "caption-visible" : "caption-hide"
             }`}
-            style={{
-              position: "fixed",
-              zIndex: 200,
-              bottom: 20,
-              left: "40vw",
-            }}
             id="caption-block"
           ></div>
         </Fragment>

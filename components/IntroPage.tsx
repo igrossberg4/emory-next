@@ -169,8 +169,8 @@ export default function IntroPage(props: any) {
                       }}
                     >
                       <IconButton
-                        key={muted}
-                        icon={muted ? "mute" : "unmute"}
+                        key="caption"
+                        icon={state.captionVideoEnabled ? "caption" : "no-caption"}
                       ></IconButton>
                     </div>
                   ) : (

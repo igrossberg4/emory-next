@@ -70,11 +70,13 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     }
   }
 
-  .mute_button {
+  .mute_button,
+  .video_cap_button {
     position: absolute;
     bottom: 18px;
     right: 8px;
     z-index: 101;
+    display: none;
 
     .is-transitioning &,
     .blocked & {
@@ -86,6 +88,9 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
       height: 48px;
     }
 
+    .full_video & {
+      display: block;
+    }
 
     @include media-breakpoint-up(sm) {
       bottom: 50px;
@@ -107,6 +112,10 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
         height: 48px;
       }
     }
+  }
+
+  .video_cap_button {
+    transform: translateY(-120%);
   }
 
   video {
