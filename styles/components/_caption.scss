@@ -1,0 +1,17 @@
+.caption-visible {
+  display: block;
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
+  left: 0;
+  padding: 0 $spacer * 4;
+  z-index: 999;
+
+  @include media-breakpoint-up('sm') {
+    padding: 0 $spacer;
+  }
+}
+
+.caption-hide {
+  display: none;
+}
