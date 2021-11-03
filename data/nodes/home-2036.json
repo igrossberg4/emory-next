@@ -73,27 +73,27 @@
       }
     },
     {
-      "component": "VideoQuote",
-      "props": {
-        "pretitle": "LEARN ABOUT",
-        "title": "Core Areas of 2O36",
-        "layout": "right",
-        "subtitle": "",
-        "img_src": "about_core_1.jpg",
-        "media_src": "https://vimeo.com/640010045/701aaa40cd",
-        "media_alt": "Two students walk down stairs to first day of class",
-        "media_header": "Core Areas of 2O36",
-        "media_text": "",
-        "button_close_text": "Exit"
-      }
-    },
-    {
       "component": "TextBg",
       "props": {
-        "text": "2O36 PRIORITIES FOR EMORY UNIVERSITY",
+        "text": "2O36 CORE AREAS FOR EMORY",
         "image_src": "about_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give",
         "cta_text": "Support Emory"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Learn More About",
+        "title": "Core Areas",
+        "body": "<p>2O36 is about more than moving the needle in conversations; it’s about working toward radical changes for the good of humanity. Our vision for a better tomorrow starts with investing in three core areas: ensuring our students flourish, attracting and retaining eminent faculty, and championing influential research.</p>",
+        "tags": [],
+        "layout": "right",
+        "img_src": "about_core_1.jpg",
+        "media_src": "https://vimeo.com/640010045/701aaa40cd",
+        "media_alt": "Core Areas Video",
+        "media_type": "video",
+        "media_header": "Core Areas of 2O36"
       }
     },
     {
@@ -135,7 +135,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Emory University",
+        "pretitle": "Core Area",
         "title": "Research Excellence",
         "body": "<p>In its 185-year history, Emory has grown from a small liberal arts university into a globally recognized research powerhouse. The past four decades have been stunning, and we’re responding to the need to accelerate research excellence and impact. The COVID-19 crisis has propelled our faculty into the spotlight like never before, and they have risen to the occasion—helping to develop and test the Moderna vaccine while preparing solutions for future pandemics. Over the past year, we have set records for research funding. This is the time to launch the next era of Emory excellence in research and discovery to answer the most pressing questions and address the crucial needs of our nation and our communities. This is Emory’s chance to shape the future.</p><p>Research in the humanities, social sciences, law, and theology is uncovering what we need to advance social and racial justice. Scientists and biomedical researchers across the university and Emory Healthcare are working toward eliminating cancer and afflictions of the brain. And we’re modeling into the future to understand how artificial intelligence can better serve humanity in the many ways it will be used.</p>",
         "read_more": "research-excellence",
