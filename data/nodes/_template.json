@@ -10,6 +10,7 @@
     "about_before_scroll": "ABOUT THE CAMPAIGN",
     "img_src": "2036_cancer_cells_red_uncropped.jpg",
     "video_src": "videos/intro_video_v03.mp4",
+    "video_poster": "videos/poster.jpg",
     "video_webm_src": "videos/intro_video_v03.webm",
     "text_play": "Begin\r\nyour\r\nexperience",
     "text_skip": "Skip video"

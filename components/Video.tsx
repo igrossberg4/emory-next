@@ -38,6 +38,7 @@ export default function Video(props: any) {
           muted={props.muted}
           autoPlay={props.autoPlay}
           loop={props.loop}
+          poster={props.video_poster}
           onPlay={() => {
             if (props.onPlay) {
               props.onPlay();
