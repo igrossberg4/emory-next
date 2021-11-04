@@ -20,6 +20,7 @@ import { Context } from "../state/Store";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import ReactPlayer from "react-player";
+import { css } from "@emotion/css";
 
 export default function Video(props: any) {
   const router = useRouter();
