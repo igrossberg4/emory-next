@@ -73,8 +73,8 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
   .mute_button,
   .video_cap_button {
     position: absolute;
-    bottom: 18px;
-    right: 8px;
+    bottom: 68px;
+    right: 12px;
     z-index: 101;
     display: none;
 
@@ -86,36 +86,29 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     .icon-button {
       width: 48px;
       height: 48px;
+
+      svg {
+        height:28px;
+        width: auto;
+      }
     }
 
     .full_video & {
       display: block;
     }
 
-    @include media-breakpoint-up(sm) {
-      bottom: 50px;
-      right: 30px;
-
-      .icon-button {
-        width: 64px;
-        height: 64px;
-      }
+    @media (max-width: 360px) {
+      bottom: 24px;
     }
 
-    // Smaller on small heights
-    @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-md) {
-      bottom: 18px;
-      right: 24px;
-
-      .icon-button {
-        width: 48px;
-        height: 48px;
-      }
+    @include media-breakpoint-up(sm) {
+      bottom: 48px;
+      right: 48px;
     }
   }
 
   .video_cap_button {
-    transform: translateY(-120%);
+    transform: translateX(calc(-100% - 18px));
   }
 
   video {
@@ -176,23 +169,38 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
   .btn-skip-intro {
     min-width: 108px;
     border-radius: 20px;
-    padding: .5em 1em;
+    padding: 0 1em;
+    height: 34px;
     color: $color-black;
     font-size: 14px;
+    line-height: 34px;
     letter-spacing: .1em;
     text-transform: uppercase;
     background-color: rgba($color-white, .9);
     transition: $default-transition;
     position: fixed;
-    bottom: 5vh;
-    left: 50%;
+    bottom: 68px + ((48px - 34px) / 2);
+    left: 24px;
     margin-top: 40vh;
-    transform: translate(-50%, 0%);
     opacity: 0;
     z-index:60;
+    box-shadow: $default-box-shadow;
 
-    &:hover {
+    &:hover,
+    &:focus {
+      box-shadow: $default-box-shadow--hover;
       background-color: rgba($color-white, 1);
+    }
+
+    @media (max-width: 360px) {
+      bottom: 24px + ((48px - 34px) / 2);
+      left: 12px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      left: 50%;
+      transform: translate(-50%, 0%);
+      bottom: 48px + ((48px - 34px) / 2);
     }
   }
 }
