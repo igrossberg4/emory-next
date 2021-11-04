@@ -21,7 +21,6 @@ import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import ReactPlayer from "react-player";
 import { css } from "@emotion/css";
-import { isChrome, browserVersion } from "react-device-detect";
 
 export default function Video(props: any) {
   const router = useRouter();
@@ -34,13 +33,6 @@ export default function Video(props: any) {
     <Fragment>
       {!re.test(media_src) ? (
         <video
-          className={ isChrome && parseInt(browserVersion, 10) > 49 ? `
-            ${css`
-              &::-internal-media-controls-overlay-cast-button {
-                display: none;
-              }
-            `}` : ''
-          }
           disableRemotePlayback={true}
           playsInline={props.playsInline}
           muted={props.muted}
