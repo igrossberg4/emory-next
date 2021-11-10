@@ -81,7 +81,7 @@ export default function MediaWithExpantion(props: any) {
               >
                 {props.media_type === "image" ? (
                   <div
-                    className="image-container"
+                    className="image-wrapper"
                   >
                     <Image
                       loader={imageLoader(multipleSizesImgExpanded) as any}
