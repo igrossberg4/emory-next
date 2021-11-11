@@ -150,6 +150,7 @@ export default function IntroPage(props: any) {
                       <IconButton
                         key={muted}
                         icon={muted ? "mute" : "unmute"}
+                        label={muted ? "Mute" : "Unmute"}
                       ></IconButton>
                     </div>
                   ) : (
