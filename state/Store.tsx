@@ -27,7 +27,7 @@ const initialState = {
   isCircleOnAnimation: false,
   isVideoOnExpansion: false,
   isOverlayExpanded: false,
-  captionVideoEnabled: true,
+  captionVideoEnabled: false,
 };
 
 const Store = ({ children }: { children: any }) => {
