@@ -179,7 +179,7 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     background-color: rgba($color-white, .9);
     transition: $default-transition;
     position: fixed;
-    bottom: 68px + ((48px - 34px) / 2);
+    bottom: 68px + (math.div((48px - 34px), 2));
     left: 24px;
     margin-top: 40vh;
     opacity: 0;
@@ -193,14 +193,14 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     }
 
     @media (max-width: 360px) {
-      bottom: 24px + ((48px - 34px) / 2);
+      bottom: 24px + (math.div((48px - 34px), 2));
       left: 12px;
     }
 
     @include media-breakpoint-up(sm) {
       left: 50%;
       transform: translate(-50%, 0%);
-      bottom: 48px + ((48px - 34px) / 2);
+      bottom: 48px + (math.div((48px - 34px), 2));
     }
   }
 }

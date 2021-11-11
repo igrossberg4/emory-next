@@ -29,7 +29,7 @@
     // stretched to the parent size, thus provoking deformations when trying
     // to set a max-height) we need to add a container that keeps the
     // aspect ratio and hard reset Next.js. Thanks for nothing, Next.js.
-    .image-container {
+    .image-wrapper {
       overflow: hidden;
       display:inline-block;
 
@@ -60,7 +60,7 @@
         max-height: 50vh;
       }
     }
-
+    
     .overlay__text {
       display: table-caption;
       caption-side: bottom;
@@ -71,6 +71,10 @@
           content: unset;
         }
       }
+    }
+    
+    [data-media="video"] .overlay__text {
+      text-align: center;
     }
 
     .title {
