@@ -20,8 +20,8 @@ function BottomNavigation(props: any) {
               <Link href={props.previous_route === '' ? '/' : props.previous_route }>
                 <a className="pre-title text-label">Previous</a>
               </Link>
-              <h6 className="title header-h2"><Link href={props.previous_route === '' ? '/' : props.previous_route }><span dangerouslySetInnerHTML={{ __html: props.previous_title }}></span></Link></h6>
-              <IconButton link={props.previous_route === '' ? '/' : props.previous_route } icon="chevron-left"></IconButton>
+              <h3 className="title header-h2"><Link href={props.previous_route === '' ? '/' : props.previous_route }><span dangerouslySetInnerHTML={{ __html: props.previous_title }}></span></Link></h3>
+              <IconButton link={props.previous_route === '' ? '/' : props.previous_route } icon="chevron-left" label="Previous"></IconButton>
             </div>
           </div>
           <div className="col-md-6"
@@ -33,8 +33,8 @@ function BottomNavigation(props: any) {
               <Link href={props.next_route}>
                 <a className="pre-title text-label">Next</a>
               </Link>
-              <h6 className="title header-h2"><Link href={props.next_route}><span dangerouslySetInnerHTML={{ __html: props.next_title }}></span></Link></h6>
-              <IconButton link={props.next_route === '' ? '/' : props.next_route} icon="chevron-right"></IconButton>
+              <h3 className="title header-h2"><Link href={props.next_route}><span dangerouslySetInnerHTML={{ __html: props.next_title }}></span></Link></h3>
+              <IconButton link={props.next_route === '' ? '/' : props.next_route} icon="chevron-right" label="Next"></IconButton>
             </div>
           </div>
         </div>
