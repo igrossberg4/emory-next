@@ -91,38 +91,32 @@ $git merge --no-ff $releaseBranch
 # Create tag for new version from master.
 $git tag $versionLabel
 
-# Merge release branch with the new version number back into current branch.
-if [ $currentBranch == $devBranch ]; then
-  $git checkout $currentBranch
-  $git merge --ff-only $releaseBranch
-  [ $? -ne 0 ] && FF_MERGE_FAILED=1 || FF_MERGE_FAILED=0
-elif [ $currentBranch == $stgBranch ]; then
-  $git checkout $currentBranch
-  $git merge --ff-only $releaseBranch
-  [ $? -ne 0 ] && FF_MERGE_FAILED=1 || FF_MERGE_FAILED=0
+# Merge current branch with master.
+$git checkout $currentBranch
+$git merge --ff-only $masterBranch
+
+# Fast forward dev and stage branches with master, if possible.
+DEV_MERGE_FAILED=0
+STG_MERGE_FAILED=0
+if [ $currentBranch != $devBranch ]; then
   $git checkout $devBranch
   $git pull origin $devBranch --rebase
-  $git merge --ff-only $releaseBranch 2>/dev/null
-  [ $? -ne 0 ] && FF_MERGE_FAILED=1 || FF_MERGE_FAILED=0
+  $git merge --ff-only $masterBranch
+  if [ $? -ne 0 ]; then
+    DEV_MERGE_FAILED=1
+    echo "Unable to cleanly fast-forward merge $devBranch"
+  fi
+elif [ $currentBranch != $stgBranch ]; then
+  $git checkout $stgBranch
+  $git merge --ff-only $masterBranch
+  if [ $? -ne 0 ]; then
+    STG_MERGE_FAILED=1
+    echo "Unable to cleanly fast-forward merge $stgBranch"
+  fi
 fi
 
 # Remove release branch.
-if [ $FF_MERGE_FAILED -eq 1 ]; then
-  echo "Unable to cleanly fast-forward merge $releaseBranch"
-else
-  $git branch -d $releaseBranch
-
-  # Try to fast-forward merge branches with master.
-  $git checkout $currentBranch
-  $git pull origin $currentBranch --rebase
-  $git merge --ff-only $masterBranch
-  $git checkout $devBranch
-  $git pull origin $devBranch --rebase
-  $git merge --ff-only $masterBranch
-  $git checkout $stgBranch
-  $git pull origin $stgBranch --rebase
-  $git merge --ff-only $masterBranch
-fi
+$git branch -d $releaseBranch
 
 # Switch back to master branch to review and push the release.
 $git checkout $masterBranch
@@ -136,14 +130,19 @@ echo "Please review the changes and execute the following commands to trigger CI
 echo ""
 echo "  git push origin $masterBranch"
 echo "  git push origin $versionLabel"
-if [ $currentBranch == $devBranch ]; then
-echo "  git checkout $devBranch"
-echo "  git merge $masterBranch --ff"
-echo "  git push origin $devBranch"
-else
 echo "  git checkout $currentBranch"
 echo "  git push origin $currentBranch"
+if [ $currentBranch != $devBranch ]; then
 echo "  git checkout $devBranch"
-echo "  git merge $masterBranch --ff"
+if [ $DEV_MERGE_FAILED -eq 1 ]; then
+echo "  git merge $masterBranch"
+fi
 echo "  git push origin $devBranch"
+fi
+if [ $currentBranch != $stgBranch ]; then
+echo "  git checkout $stgBranch"
+if [ $STG_MERGE_FAILED -eq 1 ]; then
+echo "  git merge $masterBranch"
+fi
+echo "  git push origin $stgBranch"
 fi
