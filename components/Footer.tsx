@@ -65,7 +65,7 @@ export default function Footer(props: any) {
               }, 400);
             }}
           >
-            <IconButton icon='chevron-up'></IconButton>
+            <IconButton icon='chevron-up' label="Back to top"></IconButton>
             Back to top
           </div>
         ) : (
@@ -120,17 +120,14 @@ export default function Footer(props: any) {
                     ? props?.cta_contact_info?.email
                     : "support2O36@emory.edu"}
                 </a>
-                <a
-                  href={`tel:${
-                    props?.cta_contact_info?.telephone
-                      ? props?.cta_contact_info?.telephone
-                      : ""
-                  }`}
-                >
-                  {props?.cta_contact_info?.telephone
-                    ? props?.cta_contact_info?.telephone
-                    : ""}
-                </a>
+                {
+                  props?.cta_contact_info?.telephone ?
+                  <a
+                    href={`tel:${props?.cta_contact_info?.telephone}`}
+                  >
+                    {props?.cta_contact_info?.telephone}
+                  </a> : ''
+                }
               </div>
             </div>
           ) : props.cta_contact_info !== false ? (

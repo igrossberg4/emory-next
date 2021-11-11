@@ -51,6 +51,7 @@ export default function MainMenu(props: any) {
                       target={option.target}
                       link={option.link_to}
                       title={option.title}
+                      label={option.title.capitalize}
                     >
                     </IconButton>
                   </div>

@@ -120,6 +120,7 @@ export const PrevButton = ({ enabled, onClick, href }: ButtonEnabled) => (
     className="embla__button embla__button--prev"
     onClick={onClick}
     disabled={href != undefined ? false : true}
+    aria-label="Previous"
   >
     <svg
       className="embla__button__svg"
@@ -143,6 +144,7 @@ export const NextButton = ({ enabled, onClick, href }: ButtonEnabled) => (
     className="embla__button embla__button--next"
     onClick={onClick}
     disabled={href != undefined ? false : true}
+    aria-label="Next"
   >
     <svg
       className="embla__button__svg"

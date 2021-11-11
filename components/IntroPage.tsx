@@ -135,11 +135,37 @@ export default function IntroPage(props: any) {
                       <IconButton
                         key={muted}
                         icon={muted ? "mute" : "unmute"}
+                        label={muted ? "Mute" : "Unmute"}
                       ></IconButton>
                     </div>
                   ) : (
                     ""
                   )}
+<<<<<<< Updated upstream
+=======
+                  {videoRef?.played && playing && !state.isCircleExpanded ? (
+                    <div
+                      className="video_cap_button btn text-label"
+                      style={{ cursor: "pointer" }}
+                      onClick={(e) => {
+                        if (videoRef) {
+                          dispatch({
+                            type: "TOGGLE_VIDEO_CAPTION",
+                            payload: !state.captionVideoEnabled,
+                          });
+                        }
+                      }}
+                    >
+                      <IconButton
+                        key="caption"
+                        icon={state.captionVideoEnabled ? "caption" : "no-caption"}
+                        label={state.captionVideoEnabled ? "See captions" : "Hide captions"}
+                      ></IconButton>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+>>>>>>> Stashed changes
                   <CarouselItem2036
                     {...props}
                     videoPlayed={videoPlayed}
