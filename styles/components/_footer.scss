@@ -57,6 +57,11 @@ footer[role="contentinfo"] {
 
     &__links a {
       display: block;
+      padding: $spacer 0;
+      
+      @include media-breakpoint-up('md') {
+        padding: 0;
+      }
     }
   }
 }
