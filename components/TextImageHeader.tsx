@@ -32,7 +32,7 @@ export default function TextImageHeader(props:any) {
               <div className="body" dangerouslySetInnerHTML={{__html:props.body}}></div>
               {props.read_more && !props.internal_link &&
               <div>
-              <a href={props.read_more} className="readmore text-cta">Read more</a>
+              <a href={props.read_more} className="readmore text-cta">Read more<span className="visually-hidden"> about {props.title}</span></a>
               </div>}
               {props.read_more && props.internal_link &&
               <div
@@ -47,7 +47,7 @@ export default function TextImageHeader(props:any) {
                 router.push(`${props.read_more ? props.read_more : '/'}`);
               }}
               >
-              <a href={props.read_more} className="readmore text-cta">Read more</a>
+              <a href={props.read_more} className="readmore text-cta">Read more<span className="visually-hidden"> about {props.title}</span></a>
               </div>}
 
             </div>
