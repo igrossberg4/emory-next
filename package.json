@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "npx patch-package ",
-    "css:lint": "npx stylelint styles/**/*.scss"
+    "css:lint": "npx stylelint styles/**/*.scss",
+    "preprocess-images": "node ./scripts/preoptimize-images.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
@@ -59,8 +60,10 @@
     "@types/react": "17.0.15",
     "@types/react-scroll": "^1.8.3",
     "@types/smooth-scroll": "^16.1.1",
+    "chalk": "^4.1.2",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
+    "glob": "^7.2.0",
     "image-trace-loader": "^1.0.2",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
@@ -68,6 +71,7 @@
     "imagemin-svgo": "^9.0.0",
     "jimp": "^0.16.1",
     "lqip-loader": "^2.2.1",
+    "minimist": "^1.2.5",
     "next-compose-plugins": "^2.2.1",
     "patch-package": "^6.4.7",
     "responsive-loader": "^2.0.0",
