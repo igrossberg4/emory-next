@@ -68,9 +68,9 @@ export default function MediaWithExpantion(props: any) {
           expand_action={
             <div className="actions">
               {props.media_type === "image" ? (
-                <IconButton icon={"eye"}></IconButton>
+                <IconButton icon={"eye"} label="See more"></IconButton>
               ) : (
-                <IconButton icon={"play"} />
+                <IconButton icon={"play"} label="See more"/>
               )}
             </div>
           }

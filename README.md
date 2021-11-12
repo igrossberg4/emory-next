@@ -89,6 +89,58 @@ Platform.sh, modified from the `npx` command [`create-next-app`][create-next-app
   deploy phases to add special handling for committed files pushed to directories
   also defined as mounts points via `.platform.app.yaml`.
 
+## Image optimization
+
+In order to decrease build times, raw image uploads to the repository can
+and should be pre-processed. This ensures the Next.js image manipulators will
+receive assets that at least comply with a set of prerrequisites:
+
+* A maxmimum width is set in order to avoid expensive crops and resizes.
+* EXIF metadata has been already stripped.
+* Quality has been reduced.
+
+This can be achieved by running the Node.js script `scripts/preoptimize-images.js`
+and commiting the results.
+
+The script accepts the following flags:
+
+* `--folder` - Outputs the processed assets to a different folder.
+* `--quality` - Uses a different quality parameter (defaults to `90`).
+* `--maxwidth` - Sets a custom max-width (defaults to `3000`). Important: use
+integers, don't indicate the unit.
+
+### Examples:
+
+`node scripts/preoptimize-images.js`
+
+Will process all images on ./public and overwrite them using the default presets
+of `90` quality and `3000` max-width.
+
+`node scripts/preoptimize-images.js --folder test`
+
+Will process all images on ./public and output them to `./test` preserving the
+original folder structure and using the default presets of `90` quality and `3000` max-width.
+
+`node scripts/preoptimize-images.js --folder test --quality 10 --maxwidth 100`
+
+Will process all images on ./public and output them to `./test` preserving the
+original folder structure and using custom presets of `10` quality and `100` max-width.
+
+### Running from npm scripts and within docker containers
+
+For integration with the existing tools an alias npm script has been created:
+
+`npm run preprocess-images`
+
+It can pass the flags to the original script, as any npm script, using `--`
+
+`npm run preprocess-images -- --folder test`
+
+This can be used in order to easily execute the image processing from within a
+docker container and incorporate it to bash scripts or makefiles:
+
+`docker-compose exec next_dev npm run preprocess-images`
+
 ## Project Resources
 
 * [Creative Brief][creative-brief] (PDF)

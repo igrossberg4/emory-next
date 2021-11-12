@@ -18,11 +18,11 @@ export default function Audio(props: any) {
           <img alt={props.img_alt} src={multipleSizesImgPrincipal.src} srcSet={multipleSizesImgPrincipal.srcSet} ></img>
           {isPlaying ? (
             <div onClick={(e) => { audioRef?.current?.pause(); }}>
-              <IconButton icon="pause"></IconButton>
+              <IconButton icon="pause" label="Pause"></IconButton>
             </div>
           ) : (
             <div onClick={(e) => { audioRef?.current?.play(); }}>
-              <IconButton icon="play"></IconButton>
+              <IconButton icon="play" label="play"></IconButton>
             </div>
           )}
         </div>
