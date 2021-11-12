@@ -52,7 +52,7 @@ export default function AccordionComponent(props: any) {
                   {<div dangerouslySetInnerHTML={{__html:item.description}}></div>}
                   {item.read_more && !item.internal_link && (
                     <a href={item.read_more} className="readmore text-cta">
-                      Read more
+                      Read more<span className="visually-hidden"> about {item.title}</span>
                     </a>
                   )}
                   {item.read_more && item.internal_link && (
@@ -71,7 +71,7 @@ export default function AccordionComponent(props: any) {
                         href={item.read_more ? item.read_more : "/"}
                         className="readmore text-cta"
                       >
-                        Read more
+                        Read more<span className="visually-hidden"> about {item.title}</span>
                       </a>
                     </div>
                   )}
