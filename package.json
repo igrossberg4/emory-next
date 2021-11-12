@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "npx patch-package ",
-    "css:lint": "npx stylelint styles/**/*.scss"
+    "css:lint": "npx stylelint styles/**/*.scss",
+    "preprocess-images": "node ./scripts/preoptimize-images.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
@@ -70,6 +71,7 @@
     "imagemin-svgo": "^9.0.0",
     "jimp": "^0.16.1",
     "lqip-loader": "^2.2.1",
+    "minimist": "^1.2.5",
     "next-compose-plugins": "^2.2.1",
     "patch-package": "^6.4.7",
     "responsive-loader": "^2.0.0",
