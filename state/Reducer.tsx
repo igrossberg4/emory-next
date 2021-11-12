@@ -25,8 +25,8 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
       }
       return state;
     case "IS_OVERLAY_EXPANDED":
-      if(action.payload !== state.isOverlayExpanded){
-        return {...state, isOverlayExpanded:action.payload}
+      if (action.payload !== state.isOverlayExpanded) {
+        return { ...state, isOverlayExpanded: action.payload };
       }
       return state;
     case "SET_NAV":
@@ -107,7 +107,11 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         return { ...state, isVideoOnExpansion: action.payload };
       }
       return state;
-
+    case "TOGGLE_VIDEO_CAPTION":
+      if (action.payload !== state.captionVideoEnabled) {
+        return { ...state, captionVideoEnabled: action.payload };
+      }
+      return state;
     default:
       return state;
   }
