@@ -37,3 +37,6 @@ nbproject/
 
 # Artifact
 artifact
+
+# VScode settings
+settings.json

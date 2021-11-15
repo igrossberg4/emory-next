@@ -185,7 +185,7 @@ function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndepen
     return allIndependentNodes.map(node => {
         // Fallback to page text if description not provided.
         let metatags = node.metatag;
-        if (metatags.description.trim() == '') {
+        if (metatags.description.trim() == '' && node.page_props.hasOwnProperty('text')) {
             metatags.description = node.page_props.text;
         };
         return {
@@ -291,7 +291,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
         // Fallback to page text if description not provided.
         let metatags = nodeFinded.metatag;
-        if (metatags.description.trim() == '') {
+        if (metatags.description.trim() == '' && nodeFinded.page_props.hasOwnProperty('text')) {
             metatags.description = nodeFinded.page_props.text;
         };
         return {
