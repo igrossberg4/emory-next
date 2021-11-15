@@ -24,22 +24,6 @@ const targetFolder = args.folder ? args.folder : false;
 const quality = typeof args.quality === 'number' ? args.quality : 90;
 const maxWidth = typeof args.maxwidth === 'number' ? args.maxWidth : 3000;
 const avoidSizeIncrease = args.allowSizeIncrease ? false : true;
-
-// Get the cached images from JSON, create it if still not present.
-let processedImages;
-try {
-  processedImages = JSON.parse(fs.readFileSync('./processed-images.json').toString());
-} catch {
-  fs.writeFileSync('./processed-images.json', '{}', (err) => {
-    if (!err) {
-      console.log(chalk.green.bold(`🖒  Created processed-images.json`));
-    } else {
-      console.log(chalk.red.bold(`⚠  Error creating processed-images.json`));
-    }
-  })
-  processedImages = JSON.parse(fs.readFileSync('./processed-images.json').toString());
-}
-
 // -----------------------------------------------------------------------------
 // IMAGE PROCESSING
 
@@ -83,7 +67,6 @@ glob('./public/**/*+(.png|.jpg)', function(error, files){
           } else {
             fs.writeFile(`${outFolder}/${fileParts.base}`, data, (err) => {
               if (!err) {
-                processedImages[file] = Date.now();
                 console.log(chalk.green.bold(`🖒  Processed ${outFolder}/${fileParts.base}`));
               } else {
                 console.log(chalk.red.bold(`⚠  Error saving ${outFolder}/${fileParts.base}: ${err}`));
@@ -110,7 +93,6 @@ glob('./public/**/*+(.png|.jpg)', function(error, files){
           } else {
             fs.writeFile(`${outFolder}/${fileParts.base}`, data, (err) => {
               if (!err) {
-                processedImages[file] = Date.now();
                 console.log(chalk.green.bold(`🖒  Processed ${outFolder}/${fileParts.base}`));
               } else {
                 console.log(chalk.red.bold(`⚠  Error saving ${outFolder}/${fileParts.base}: ${err}`));
