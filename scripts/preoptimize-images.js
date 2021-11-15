@@ -3,6 +3,7 @@
 
 // File and path node.js tools
 const fs = require('fs');
+const fsPromises = fs.promises;
 const path = require('path');
 
 // Image optimizer and processor
@@ -17,11 +18,27 @@ const chalk = require('chalk');
 // CLI flags and options helper
 const minimist = require('minimist');
 
-// Get the target folder from args;
+// Get flags from args;
 const args = minimist(process.argv);
 const targetFolder = args.folder ? args.folder : false;
 const quality = typeof args.quality === 'number' ? args.quality : 90;
 const maxWidth = typeof args.maxwidth === 'number' ? args.maxWidth : 3000;
+const avoidSizeIncrease = args.allowSizeIncrease ? false : true;
+
+// Get the cached images from JSON, create it if still not present.
+let processedImages;
+try {
+  processedImages = JSON.parse(fs.readFileSync('./processed-images.json').toString());
+} catch {
+  fs.writeFileSync('./processed-images.json', '{}', (err) => {
+    if (!err) {
+      console.log(chalk.green.bold(`🖒  Created processed-images.json`));
+    } else {
+      console.log(chalk.red.bold(`⚠  Error creating processed-images.json`));
+    }
+  })
+  processedImages = JSON.parse(fs.readFileSync('./processed-images.json').toString());
+}
 
 // -----------------------------------------------------------------------------
 // IMAGE PROCESSING
@@ -37,6 +54,7 @@ glob('./public/**/*+(.png|.jpg)', function(error, files){
     const fileParts = path.parse(file);
     const fileBuffer =  fs.readFileSync(file);
     const outFolder = targetFolder ? `./${targetFolder}${fileParts.dir.replace('./public', '') }` : fileParts.dir;
+    const { size }  = fs.statSync(file);
 
     if(fileBuffer.toString() === '') {
       console.log(chalk.yellow(`⚠  Empty buffer on ${file}`));
@@ -58,12 +76,23 @@ glob('./public/**/*+(.png|.jpg)', function(error, files){
           quality: quality,
           mozjpeg: true
         })
-        .toFile(`${outFolder}/${fileParts.base}`)
-        .then(info => {
-          console.log(chalk.green(`🖒  Processed ${outFolder}/${fileParts.base}`));
+        .toBuffer({ resolveWithObject: true })
+        .then(({ data, info }) => {
+          if (avoidSizeIncrease && (info.size > size)) {
+            console.log(chalk.gray(`🖓  ${file} not processed as the outcome will be larger in size`));
+          } else {
+            fs.writeFile(`${outFolder}/${fileParts.base}`, data, (err) => {
+              if (!err) {
+                processedImages[file] = Date.now();
+                console.log(chalk.green.bold(`🖒  Processed ${outFolder}/${fileParts.base}`));
+              } else {
+                console.log(chalk.red.bold(`⚠  Error saving ${outFolder}/${fileParts.base}: ${err}`));
+              }
+            })
+          }
         })
-        .catch(error => {
-          console.log(chalk.red.bold(error))
+        .catch(err => {
+          console.log(chalk.red.bold(`⚠  ${err}`));
         });
     } else if (fileParts.ext == '.png') {
       sharp(fileBuffer)
@@ -74,12 +103,23 @@ glob('./public/**/*+(.png|.jpg)', function(error, files){
           quality: quality,
           compressionLevel: 9,
         })
-        .toFile(`${outFolder}/${fileParts.base}`)
-        .then(info => {
-          console.log(chalk.green(`🖒  Processed ${outFolder}/${fileParts.base}`));
+        .toBuffer({ resolveWithObject: true })
+        .then(({ data, info }) => {
+          if (avoidSizeIncrease && (info.size > size)) {
+            console.log(chalk.gray(`🖓  ${file} not processed as the outcome will be larger in size`));
+          } else {
+            fs.writeFile(`${outFolder}/${fileParts.base}`, data, (err) => {
+              if (!err) {
+                processedImages[file] = Date.now();
+                console.log(chalk.green.bold(`🖒  Processed ${outFolder}/${fileParts.base}`));
+              } else {
+                console.log(chalk.red.bold(`⚠  Error saving ${outFolder}/${fileParts.base}: ${err}`));
+              }
+            })
+          }
         })
-        .catch(error => {
-          console.log(chalk.red.bold(error))
+        .catch(err => {
+          console.log(chalk.red.bold(`⚠  ${err}`));
         });
     } else {
       console.log(chalk.yellow.bold(`⚠  Warning! File with unprocessable extension ${fileParts.ext} was found on the asset list.`))
