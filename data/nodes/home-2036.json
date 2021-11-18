@@ -27,7 +27,8 @@
   "metatag": {
     "title": "Emory 2036 - About the Campaign",
     "description": "",
-    "image": "2036_cancer_cells_red_uncropped.jpg"
+    "image": "2036_cancer_cells_red_uncropped.jpg",
+    "og_description": "The future starts here"
   },
   "list": [
     "home-2036",

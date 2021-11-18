@@ -133,9 +133,15 @@ export default function Home(props: any) {
           // Also, avoid jumps of more than 200px.
           const ratio = window.innerWidth / window.innerHeight;
           const heightThreshold = 450; // heept this in sync with $carousel-min-height
-          const targetHeight = ratio >= 1 && window.innerHeight > heightThreshold ? window.innerHeight / 4 : 50;
+          const targetHeight =
+            ratio >= 1 && window.innerHeight > heightThreshold
+              ? window.innerHeight / 4
+              : 50;
 
-          window.scroll({ top: targetHeight > 200 ? 200 : targetHeight, behavior: "smooth" });
+          window.scroll({
+            top: targetHeight > 200 ? 200 : targetHeight,
+            behavior: "smooth",
+          });
         }
       }
     },
@@ -188,7 +194,7 @@ export default function Home(props: any) {
           (item as HTMLElement).style.height = `${newHeight}px`;
         });
 
-      const carousel = document.querySelector('.embla--carousel-navigation');
+      const carousel = document.querySelector(".embla--carousel-navigation");
       if (carousel instanceof HTMLElement) {
         carousel.style.height = `${newHeight}px`;
       }
@@ -344,7 +350,9 @@ export default function Home(props: any) {
       scrollY: number,
       isGoingDown: boolean
     ) => {
-      const isMenu = e.target instanceof HTMLElement && (e.target.closest('.menu-main') || e.target.closest('.menu-schools'));
+      const isMenu =
+        e.target instanceof HTMLElement &&
+        (e.target.closest(".menu-main") || e.target.closest(".menu-schools"));
       if (
         !isMenu &&
         circleAnimatePreventScrollEnabled &&
@@ -650,6 +658,12 @@ export default function Home(props: any) {
         )}
         <meta name="description" content={props.meta.description} />
         <meta property="og:image" content={props.meta.image}></meta>
+        {props.meta.og_description ? (
+          <meta property="og:description" content={props.meta.og_description} />
+        ) : (
+          ""
+        )}
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="apple-touch-icon"
