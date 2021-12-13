@@ -91,6 +91,7 @@ glob('./public/**/*+(.png|.jpg)', function(error, files){
           .png({
             quality: quality,
             compressionLevel: 9,
+            adaptiveFiltering: true,
           })
           .toBuffer({ resolveWithObject: true });
       } else {
