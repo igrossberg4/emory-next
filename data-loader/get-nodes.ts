@@ -183,9 +183,14 @@ function prepareBottomMenu(lastNode: any, nextNode: any, nodes: Array<any>, base
 function generatePagesWithoutParent(nodes: Array<any>, baseNode: any, allIndependentNodes: Array<any>) {
     const menus = prepareMenu(nodes, baseNode, nodes);
     return allIndependentNodes.map(node => {
+        // Fallback to page text if description not provided.
+        let metatags = node.metatag;
+        if (metatags.description.trim() == '' && node.page_props.hasOwnProperty('text')) {
+            metatags.description = node.page_props.text;
+        };
         return {
             path: node.path,
-            meta: Object.assign({}, node.metatag),
+            meta: Object.assign({}, metatags),
             view: [
                 menus,
                 {
@@ -283,9 +288,15 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
             }
         });
         const path = pages_list.nodeBase.id === nodeFinded.id ? `${nodeFinded.path == '' ? '' : nodeFinded.path}` : `${pages_list.nodeBase.path == '' ? nodeFinded.path : pages_list.nodeBase.path + '/' + nodeFinded.path}`;
+
+        // Fallback to page text if description not provided.
+        let metatags = nodeFinded.metatag;
+        if (metatags.description.trim() == '' && nodeFinded.page_props.hasOwnProperty('text')) {
+            metatags.description = nodeFinded.page_props.text;
+        };
         return {
             path: path,
-            meta: Object.assign({}, nodeFinded.metatag),
+            meta: Object.assign({}, metatags),
             view: [
                 menus,
                 {
