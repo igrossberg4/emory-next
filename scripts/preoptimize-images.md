@@ -2,14 +2,14 @@
 
 In order to decrease build times, raw image uploads to the repository can
 and should be pre-processed. This ensures the Next.js image manipulators will
-receive assets that at least comply with a set of prerrequisites:
+receive assets that at least comply with a set of prerequisites:
 
-* A maxmimum width is set in order to avoid expensive crops and resizes.
+* A maximum width is set in order to avoid expensive crops and resizes.
 * EXIF metadata has been already stripped.
 * Quality has been reduced.
 
 This can be achieved by running the Node.js script `scripts/preoptimize-images.js`
-and commiting the results.
+and committing the results.
 
 The script accepts the following flags:
 
@@ -56,7 +56,7 @@ It can pass the flags to the original script, as any npm script, using `--`
 `npm run preprocess-images -- --folder test`
 
 This can be used in order to easily execute the image processing from within a
-docker container and incorporate it to bash scripts or makefiles:
+docker container and incorporate it to bash scripts or Makefile:
 
 `docker-compose exec next_dev npm run preprocess-images`
 
