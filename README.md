@@ -93,9 +93,11 @@ Platform.sh, modified from the `npx` command [`create-next-app`][create-next-app
 
 * [Creative Brief][creative-brief] (PDF)
 * [Technical Brief][technical-brief] (GDocs)
+* [Content Editor Guide][content-editor-guide] (GDocs)
 * [Brand Guidelines][brand-guide] (GDrive folder)
 * [Designs & Component Library][figma] (Figma)
 * [Technical Spec][miro] (Miro)
+
 
 [platform-sh]: https://platform.sh/marketplace/nodejs/
 [create-next-app]: https://github.com/vercel/next.js/tree/canary/packages/create-next-app
@@ -105,3 +107,4 @@ Platform.sh, modified from the `npx` command [`create-next-app`][create-next-app
 [brand-guide]: https://drive.google.com/drive/folders/1kmWQ2nrndwP6nzaY7_brTNkqytepOiE2
 [figma]: https://www.figma.com/file/ts9PYKFK6a53xMCnplR50t/2O36
 [miro]: https://miro.com/app/board/o9J_l7T5iRo=/
+[content-editor-guide]: https://docs.google.com/document/d/1Tmr7MzXbNFwkzhJh7ibHq4DuHUwJl_D9RUAtmuHHyx0/
