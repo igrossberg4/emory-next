@@ -62,30 +62,30 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Sustainability is Essential",
-        "body": "<p>From the tree-lined campus in a charming small town, to the woods Oxford students have spent years restoring, to the 11-acre organic farm, a living laboratory that feeds students and the community, Oxford College doesn’t just value ecological sustainability, we live it. A distinguished professorship in environmental studies would expand the curriculum and learning opportunities, strengthening a key area of undergraduate study at Emory.</p><p><strong>By supporting 2O36, we can recruit a senior scholar to lead our academic study of the environment and support co-curricular sustainability initiatives like Oxford’s organic farm.</strong> The professorship in environmental studies will position Oxford College, and Emory more broadly, as a leader in understanding and practicing sustainability.</p>",
+        "title": "Expanding Student Horizons by 2036",
+        "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford’s identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
         "layout": "right",
-        "img_src": "oxford_priority_1.jpg",
-        "media_src": "oxford_priority_1_popup.jpg",
-        "media_alt": "Oxford’s organic farm in action.",
+        "img_src": "oxford_priority_3.jpg",
+        "media_src": "oxford_priority_3_popup.jpg",
+        "media_alt": "Oxford students take advantage of learning outside of the classroom.",
         "media_type": "image",
-        "media_header": "Sustainability is Essential",
-        "media_text": "By supporting 2O36, we can recruit a senior scholar to lead our academic study of the environment and support co-curricular sustainability initiatives like Oxford’s organic farm."
+        "media_header": "Expand Horizons",
+        "media_text": "Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration."
       }
     },
     {
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Research Isn’t Just for Faculty",
-        "body": "<p>An Oxford education centers on the close attention of faculty teaching and mentoring our students through their academic and research pursuits. <strong>Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities.</strong> Collaborative projects bolster students’ educational experience, prepare them for professional opportunities, and enable Oxford to compete with top liberal arts colleges and research universities alike.</p>",
-        "layout": "right",
-        "img_src": "oxford_priority_2.jpg",
-        "media_src": "oxford_priority_2_popup.jpg",
-        "media_alt": "A professor guides a student in research.",
+        "title": "Better Access Starts with 2O36",
+        "body": "<p>Every family sending a student to college cares about the value proposition. Oxford provides an education of true and abiding value for our graduates, preparing them for personal and professional success. Making that education affordable for students from all backgrounds is integral to our educational mission.</p><p>Trailing our peer colleges and universities in endowment funding, Oxford needs endowed funds to provide student scholarships in perpetuity. <strong>With your support for 2O36, we can offer more scholarships so that more high-ability, high-potential students from all income levels will be able to attend and graduate from Oxford College.</strong> Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place.</p>",
+        "layout": "left",
+        "img_src": "oxford_priority_4.jpg",
+        "media_src": "oxford_priority_4_popup.jpg",
+        "media_alt": "Facade, gardens and flagpole of Oxford College’s Seney Hall on a bright spring day",
         "media_type": "image",
-        "media_header": "Faculty Lead",
-        "media_text": "Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities."
+        "media_header": "Better Access",
+        "media_text": "Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place."
       }
     },
     {
@@ -93,7 +93,7 @@
       "props": {
         "pretitle": "A MESSAGE FROM",
         "title": "Kim Chenevey 02Ox 04B",
-        "layout": "left",
+        "layout": "right",
         "subtitle": "",
         "img_src": "oxford_quote_1.jpg",
         "media_src": "https://vimeo.com/633132610/29e4c99b96",
@@ -107,15 +107,15 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Expanding Student Horizons by 2036",
-        "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford’s identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
-        "layout": "right",
-        "img_src": "oxford_priority_3.jpg",
-        "media_src": "oxford_priority_3_popup.jpg",
-        "media_alt": "Oxford students take advantage of learning outside of the classroom.",
+        "title": "Research Isn’t Just for Faculty",
+        "body": "<p>An Oxford education centers on the close attention of faculty teaching and mentoring our students through their academic and research pursuits. <strong>Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities.</strong> Collaborative projects bolster students’ educational experience, prepare them for professional opportunities, and enable Oxford to compete with top liberal arts colleges and research universities alike.</p>",
+        "layout": "left",
+        "img_src": "oxford_priority_2.jpg",
+        "media_src": "oxford_priority_2_popup.jpg",
+        "media_alt": "A professor guides a student in research.",
         "media_type": "image",
-        "media_header": "Expand Horizons",
-        "media_text": "Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration."
+        "media_header": "Faculty Lead",
+        "media_text": "Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities."
       }
     },
     {
@@ -138,12 +138,12 @@
       "props": {
         "items": [
           {
-            "title": "The Arts Are Key to 2O36",
-            "description": "<p>The arts are essential to our residential liberal arts experience, and the TV and film industries’ growing presence in Georgia, particularly here in Newton County, provides substantial opportunities for applied learning. Improving our studio arts, film, and media studies programs can help Oxford increase engagement with the film industry and serve our students pursuing related careers. <strong>Through 2O36, Oxford can invest in the arts and in students’ futures.</strong> We can develop more TV and film industry partnerships, update equipment students practice on, and beautify historic Humanities Hall, Few Hall, and Tarbutton Theater. These efforts will not only raise the quality and profile of these key programs, they’ll better prepare Oxford students to transition into arts careers.</p>"
+            "title": "Sustainability is Essential",
+            "description": "<p>From the tree-lined campus in a charming small town, to the woods Oxford students have spent years restoring, to the 11-acre organic farm, a living laboratory that feeds students and the community, Oxford College doesn’t just value ecological sustainability, we live it. A distinguished professorship in environmental studies would expand the curriculum and learning opportunities, strengthening a key area of undergraduate study at Emory.</p><p><strong>By supporting 2O36, we can recruit a senior scholar to lead our academic study of the environment and support co-curricular sustainability initiatives like Oxford’s organic farm.</strong> The professorship in environmental studies will position Oxford College, and Emory more broadly, as a leader in understanding and practicing sustainability.</p>"
           },
           {
-            "title": "Better Access Starts with 2O36",
-            "description": "<p>Every family sending a student to college cares about the value proposition. Oxford provides an education of true and abiding value for our graduates, preparing them for personal and professional success. Making that education affordable for students from all backgrounds is integral to our educational mission.</p><p>Trailing our peer colleges and universities in endowment funding, Oxford needs endowed funds to provide student scholarships in perpetuity. <strong>With your support for 2O36, we can offer more scholarships so that more high-ability, high-potential students from all income levels will be able to attend and graduate from Oxford College.</strong> Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place.</p>"
+            "title": "The Arts Are Key to 2O36",
+            "description": "<p>The arts are essential to our residential liberal arts experience, and the TV and film industries’ growing presence in Georgia, particularly here in Newton County, provides substantial opportunities for applied learning. Improving our studio arts, film, and media studies programs can help Oxford increase engagement with the film industry and serve our students pursuing related careers. <strong>Through 2O36, Oxford can invest in the arts and in students’ futures.</strong> We can develop more TV and film industry partnerships, update equipment students practice on, and beautify historic Humanities Hall, Few Hall, and Tarbutton Theater. These efforts will not only raise the quality and profile of these key programs, they’ll better prepare Oxford students to transition into arts careers.</p>"
           }
         ]
       }
