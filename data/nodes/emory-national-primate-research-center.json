@@ -124,7 +124,7 @@
       "component": "AccordionComponent",
       "props": {
         "title": "KEY PRIORITIES",
-        "pretitle": "YERKES NATIONAL PRIMATE RESEARCH CENTER",
+        "pretitle": "EMORY NATIONAL PRIMATE RESEARCH CENTER",
         "items": [
           {
             "title": "2O36 Creates Partnerships",
