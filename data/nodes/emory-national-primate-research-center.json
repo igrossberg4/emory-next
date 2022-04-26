@@ -1,0 +1,141 @@
+{
+  "id": "emory-national-primate-research-center",
+  "type": "collection",
+  "page_props": {
+    "header": "EMORY NATIONAL<br>PRIMATE RESEARCH CENTER",
+    "about": "unit spotlight",
+    "text": "Advancing scientific understanding and improving human and animal health worldwide.",
+    "button_scroll": "Scroll to explore",
+    "img_src": "yerkes_lede.jpg",
+    "footer": {
+      "cta_support_button": {
+        "text": "Support EPC",
+        "url": "https://together.emory.edu/give/to/centers-and-institutes/yerkes-national-primate-research-center"
+      },
+      "cta_contact_info": {
+        "heading": "Learn more about ways to support 2O36.",
+        "person": "Jonathan Russell",
+        "title": "Senior Director of Development",
+        "email": "jonathan.russell@emory.edu",
+        "telephone": "404-727-6416"
+      }
+    }
+  },
+  "path": "emory-national-primate-research-center",
+  "metatag": {
+    "title": "Emory National Primate Research Center - Emory 2036",
+    "description": "",
+    "image": "og_image.jpg"
+  },
+  "components": [
+    {
+      "component": "SectionIntro",
+      "props": {
+        "header": "We nurture scientific discovery in an environment with technology and resources to enable pioneering advances.",
+        "background_image": "yerkes_isolated_bg.png",
+        "text": "<p>In conducting essential basic science and translational research, the Emory National Primate Research Center provides the leadership, training, and resources necessary to foster scientific discoveries. EPC research is grounded in scientific integrity, expert knowledge, an open exchange of ideas, a commitment to diversity, equity and inclusion, and compassionate, quality animal care. The research center, the oldest scientific institute dedicated to nonhuman primate research, paved the way for the National Institutes of Health-funded National Primate Research Center program. With our researchers’ help, these national centers search for the causes, preventions, treatments, and cures that lead to longer, healthier lives worldwide.</p>",
+        "img_src": "yerkes_intro.jpg",
+        "media_src": "https://vimeo.com/632007328/461e2a742a",
+        "media_alt": "Researcher looks through microscope.",
+        "media_type": "video",
+        "media_header": "Emory National Primate Research Center",
+        "media_text": ""
+      }
+    },
+    {
+      "component": "Quote",
+      "props": {
+        "text": "Emory provides a rich environment for students, particularly in research, and the opportunity to work with faculty members—to learn what it’s like to be in a lab, to actually undertake an independent project, and to do so with a wide range of faculty.",
+        "attribution": "— Paul Johnson P22, Director, Emory National Primate Research Center"
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "2O36 PRIORITIES FOR EMORY NATIONAL PRIMATE RESEARCH CENTER",
+        "image_src": "yerkes_divider_bg.jpg",
+        "cta_link": "https://together.emory.edu/give/to/centers-and-institutes/yerkes-national-primate-research-center",
+        "cta_text": "Support EPC"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Developing Star Faculty",
+        "body": "<p>As a generation of brilliant research leaders retires, their absence has the potential to stall progress toward new cures, treatments, and prevention strategies. This means recruiting and retaining promising, early-stage researchers is crucial for both Emory and EPC to maintain our top-notch workforce and reputation. <strong>2O36 endowment funding will provide five years of support for junior faculty who show great promise as EPC researchers.</strong> Together, we can build the next generation of leading researchers.</p>",
+        "layout": "right",
+        "img_src": "yerkes_priority_1.jpg",
+        "media_src": "yerkes_priority_1_popup.jpg",
+        "media_alt": "Woman in lab coat leans against wall.",
+        "media_type": "image",
+        "media_header": "Future Faculty Leaders",
+        "media_text": "2O36 endowment funding will provide five years of support for junior faculty who show great promise as EPC researchers.",
+        "media_byline": "Featured: Rachelle L. Stammen, Clinical Veterinarian, Emory National Primate Research Center"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Fighting Diseases in 2O36",
+        "body": "<p>EPC brings together top researchers with advanced technology and equipment. Targeted investment in three research priorities—an HIV cure and vaccine, neurodegenerative diseases, and genomics—is needed to discover new treatments for destructive diseases. With scientific resources found at few other institutions, EPC teams collaborate with research colleagues across campus and around the world, making key discoveries.</p><p>Investing in disease-specific research speeds discovery and can support new, untested ideas not yet eligible for federal grants. The resulting data and proofs of concept help promising new ideas qualify more quickly for federal funding, often leading to breakthroughs. <strong>Innovation funds support transformational new technologies and targeted investments in specific high-priority research areas.</strong></p>",
+        "layout": "right",
+        "img_src": "yerkes_priority_2.jpg",
+        "media_src": "yerkes_priority_2_popup.jpg",
+        "media_alt": "Table filled with beakers and tubes.",
+        "media_type": "image",
+        "media_header": "Speeding Towards New Discoveries",
+        "media_text": "Innovation funds support transformational new technologies and targeted investments in specific high-priority research areas."
+      }
+    },
+    {
+      "component": "VideoQuote",
+      "props": {
+        "pretitle": "A MESSAGE FROM",
+        "title": "Vasiliki Michopoulos 12G",
+        "layout": "left",
+        "subtitle": "Assistant Professor, Psychiatry and Behavioral Sciences<br/>Affiliate Scientist, Division of Developmental and Cognitive Neuroscience, Emory National Primate Research Center",
+        "img_src": "yerkes_quote_1.jpg",
+        "media_src": "https://vimeo.com/632415310/d13e315908",
+        "media_alt": "A video quote of Vasiliki Michopoulos 12G",
+        "media_header": "Vasiliki Michopoulos 12G",
+        "media_text": "Assistant Professor, Psychiatry and Behavioral Sciences<br/>Affiliate Scientist, Division of Developmental and Cognitive Neuroscience, Emory National Primate Research Center",
+        "button_close_text": "Exit"
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Nurturing New Ideas in 2O36",
+        "body": "<p>Lack of funding is the leading reason up-and-coming researchers leave their fields for other pursuits. Pilot funding allows novel ideas and approaches to be tested, a key step in solving mysteries of human disease. <strong>Seed funds from 2O36 for short-term projects, especially studies by early-stage investigators, pave the way for National Institutes of Health funding.</strong> With pilot funding, researchers generate data that demonstrate proofs of concept for their ideas, a requirement in applying for federal grants needed to continue deep-diving research.</p>",
+        "layout": "right",
+        "img_src": "yerkes_priority_3.jpg",
+        "media_src": "yerkes_priority_3_popup.jpg",
+        "media_alt": "Lab full of researchers in lab coats.",
+        "media_type": "image",
+        "media_header": "Proof of Concept",
+        "media_text": "Seed funds from 2O36 for short-term projects, especially studies by early-stage investigators, pave the way for National Institutes of Health funding.",
+        "media_byline": "Featured: David Weiss, Director, Emory Antibiotic Resistance Center"
+      }
+    },
+    {
+      "component": "AccordionComponent",
+      "props": {
+        "title": "KEY PRIORITIES",
+        "pretitle": "EMORY NATIONAL PRIMATE RESEARCH CENTER",
+        "items": [
+          {
+            "title": "2O36 Creates Partnerships",
+            "description": "<p>For more than 50 years, EPC has partnered with foundations and industry to speed discoveries from the lab to the community. As one of only seven national primate research centers in the United States, EPC is one of the few institutions that can perform many types of studies.</p><p>Sponsored research support from foundations and industry is a key complement to NIH funding, especially for early-stage and translational research projects. It’s the financial foundation in generating data to advance understanding of strategic, scientific questions. These sponsorships are often part of a larger, coordinated approach connecting many institutions working in concert to answer specific scientific questions about how the human body works and how it reacts to disease. <strong>Support for these early research endeavors attracts research sponsors and propels discovery forward.</strong></p>"
+          },
+          {
+            "title": "In 2O36, Education is for Everyone",
+            "description": "<p>We know that learning isn’t constrained to classrooms, and the university’s core mission of education isn’t limited to Emory students. As part of the metro Atlanta community, EPC has a responsibility to teach people of all ages and backgrounds, and inspire interest in STEM fields, animal care, and habitat conservation.</p><p>The EPC Field Station, with 2,000 nonhuman primates, is an ideal location where community members can learn about the importance of science, technology, and conservation. Adding educational space at this facility, including a classroom and exhibits, will serve as the gateway for additional learning opportunities through public tours. <strong>2O36 will strengthen the educational programming of our world-renowned research center throughout the region.</strong></p>"
+          }
+        ]
+      }
+    }
+  ]
+}
