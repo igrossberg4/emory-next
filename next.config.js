@@ -11,6 +11,15 @@ module.exports = withPlugins([
   }]
 ],{
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/yerkes-national-primate-research-center',
+        destination: '/emory-national-primate-research-center',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     disableStaticImages: true,
     loader: 'imgix',
