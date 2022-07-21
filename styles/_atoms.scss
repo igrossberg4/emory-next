@@ -97,6 +97,8 @@ a {
   img {
     display: block;
     transform: scale(1.05);
+    aspect-ratio: 1/1;
+    object-fit: cover;
   }
 
   @include media-breakpoint-up(md) {
