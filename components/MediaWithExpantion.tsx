@@ -61,6 +61,7 @@ export default function MediaWithExpantion(props: any) {
               alt={props.media_alt}
               srcSet={multipleSizesImgPrincipal.srcSet}
               src={multipleSizesImgPrincipal.src}
+              style={props.img_size ? { objectFit: props.img_size } : {}}
             />
           </motion.figure>
         </motion.figure>

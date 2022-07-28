@@ -24,6 +24,16 @@
 			"title":"CAMPAIGN LEADERSHIP",
 			"id":"campaign-leadership",
 			"standalone": true
+		},
+		{
+			"title":"THE PODIUM",
+			"id":"the-podium",
+			"standalone": true
+		},
+		{
+			"title":"THE PODCAST",
+			"id":"the-podcast",
+			"standalone": true
 		}
 	],
 	"social":[

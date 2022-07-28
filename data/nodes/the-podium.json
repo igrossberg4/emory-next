@@ -23,6 +23,7 @@
         "background_image": "podium_explore_bg.png",
         "text": "<p>In 10 minutes or less, learn from and be inspired by influential Emory University faculty, students, and alumni who share their expertise and insights on timely topics—health, technology, business, philosophy, culture, and education. If you want to find out how thought leaders from the Emory community are serving humanity and radically reshaping the future, this series is for you. THE FUTURE STARTS NOW.</p>",
         "img_src": "podium_explore.jpeg",
+        "img_size": "fill",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
         "media_alt": "Video of Emory University",
         "media_type": "video",

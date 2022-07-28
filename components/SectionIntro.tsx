@@ -32,6 +32,7 @@ export default function SectionIntro(props:any) {
           <div className='col-md-8 image-container'>
             <MediaWithExpantion
               img_src={props.img_src}
+              img_size={props.img_size}
               media_src={props.media_src}
               media_alt={props.media_alt}
               media_type={props.media_type}
