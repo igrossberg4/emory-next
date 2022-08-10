@@ -27,13 +27,11 @@
 		},
 		{
 			"title":"THE PODIUM",
-			"id":"the-podium",
-			"standalone": true
+			"id":"the-podium"
 		},
 		{
 			"title":"THE PODCAST",
-			"id":"the-podcast",
-			"standalone": true
+			"id":"the-podcast"
 		}
 	],
 	"social":[

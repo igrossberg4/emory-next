@@ -1,296 +1,179 @@
 {
-    "id": "the-podcast",
-    "type": "collection",
-    "page_props": {
-      "header": "THE PODCAST",
-      "text": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields.",
-      "about": "CONTENT SERIES",
-      "button_scroll": "Scroll to explore",
-      "img_src": "podcast_hero.png"
-    },
-    "path": "the-podcast",
-    "metatag": {
-      "title": "The Podcast - Emory 2036",
-      "description": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields.",
-      "image": "podcast_hero.png",
-      "og_description": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields."
-    },
-    "components": [
-      {
-        "component": "SectionIntro",
-        "props": {
-          "header": "What will 2O36 look like? And who will shape the world to come?",
-          "background_image": "podcast_header_bg.png",
-          "text": "<p>Emory University is dedicated to creating positive transformation in the face of profound challenges. On each episode of 2O36: The Podcast, you’ll hear from faculty, alumni, students, and community members who embody the school’s mission to serve humanity through knowledge. These conversations were recorded in October 2021 at the 2O36 kickoff event in front of a live audience. If you want to learn about how Emory is reshaping the future—from using plant compounds to treat infectious diseases to the latest advances in brain health and artificial intelligence—this show is for you. THE FUTURE STARTS HERE.</p>",
-          "img_src": "podcast_header.jpeg",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "Video of Emory University",
-          "media_type": "video",
-          "media_header": "2O36",
-          "media_text": "Emory University"
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 1",
-          "title": "A Future Where Neurodegenerative Diseases Can Be Cured",
-          "body": "<p>Will it ever be possible to prevent or cure Alzheimer’s disease and related disorders? Allan Levey of the Goizueta Institute @ Emory Brain Health says there’s reason to think so. In this episode, Emory neuroscience student Calen MacDonald talks with Levey about his research and the work Emory is doing to make brain diseases a thing of the past.</p>",
-          "tags": [
-            {
-              "label": "signature themes",
-              "url": ""
-            },
-            {
-              "label": "medicine",
-              "url": ""
-            },
-            {
-              "label": "faculty",
-              "url": ""
-            }
-          ],
-          "layout": "right",
-          "img_src": "podcast_episode_1.jpeg",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Where Neurodegenerative Diseases Can Be Cured",
-          "media_type": "video",
-          "media_header": "2O36: A Future Where Neurodegenerative Diseases Can Be Cured",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 2",
-          "title": "A Future Where Cancer Patients Survive and Thrive",
-          "body": "<p>When it comes to treating cancer, what was not possible just a few years ago is now possible. In this episode, Suresh S. Ramalingam, executive director of Winship Cancer Institute of Emory University, speaks with Emory School of Medicine student Carey Jansen about advances in research, patient care, and education that are leading to long-term survival and a better quality of life for people with cancer.</p>",
-          "tags": [
-            {
-              "label": "winship",
-              "url": ""
-            },
-            {
-              "label": "faculty",
-              "url": ""
-            },
-            {
-              "label": "research",
-              "url": ""
-            }
-          ],
-          "layout": "left",
-          "img_src": "podcast_episode_2.jpeg",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Where Cancer Patients Survive and Thrive",
-          "media_type": "video",
-          "media_header": "A Future Where Cancer Patients Survive and Thrive",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 3",
-          "title": "A Future Without Health Disparities",
-          "body": "<p>What role does the community play in reducing health disparities? How are institutions like Emory University working to bridge the gaps? In this episode, Briana Woods-Jaeger of the Rollins School of Public Health and Everett Moss, an Emory nursing student, speak with Emory Alumni Board President Munir Meghjani about the progress they are making to reduce health disparities in communities of color.</p>",
-          "tags": [
-            {
-              "label": "nursing",
-              "url": ""
-            },
-            {
-              "label": "healthcare",
-              "url": ""
-            },
-            {
-              "label": "student",
-              "url": ""
-            }
-          ],
-          "layout": "right",
-          "img_src": "podcast_episode_3.jpeg",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Without Health Disparities",
-          "media_type": "video",
-          "media_header": "A Future Without Health Disparities",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 4",
-          "title": "A Future Without Fear",
-          "body": "<p>What do bungee jumpers, race car drivers, and skydivers have in common? Are they born fearless? In this episode, Emory Alumni Board President Munir Meghjani speaks with clinical psychologist Kenneth Carter at Oxford College of Emory University about the psychology behind thrill-seeking behavior. He also describes how we can use this insight to better understand ourselves and each other.</p>",
-          "tags": [
-            {
-              "label": "oxford",
-              "url": ""
-            },
-            {
-              "label": "faculty",
-              "url": ""
-            },
-            {
-              "label": "research",
-              "url": ""
-            }
-          ],
-          "layout": "left",
-          "img_src": "podcast_episode_4.jpeg",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Without Fear",
-          "media_type": "video",
-          "media_header": "A Future Without Fear",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 5",
-          "title": "A Future Where Computers Are More Like Us",
-          "body": "<p>When you talk to your computer, does it actually talk back? As part of the team that won Amazon’s 2020 Alexa Prize SocialBot Grand Challenge, Emory University’s Jinho Choi and computer science doctoral students Sarah and James Finch are pushing the boundaries of technology and communication. In this episode, they speak with Emory Alumni Board President Munir Meghjani about the future of artificial intelligence and how conversations with computers are becoming more human.</p>",
-          "tags": [
-            {
-              "label": "laney",
-              "url": ""
-            },
-            {
-              "label": "college",
-              "url": ""
-            },
-            {
-              "label": "faculty",
-              "url": ""
-            },
-            {
-              "label": "research",
-              "url": ""
-            }
-          ],
-          "layout": "right",
-          "img_src": "podcast_episode_5.png",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Where Computers Are More Like Us",
-          "media_type": "video",
-          "media_header": "A Future Where Computers Are More Like Us",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 6",
-          "title": "A Future Where Plants End Pandemics",
-          "body": "<p>People have been using plants as medicine since ancient times. Now, Emory University scientists are collaborating with global communities to discover how botanical ingredients can improve human health. In this episode, Emory Alumni Board President Munir Meghjani speaks with Cassandra Quave, a medical ethnobotanist at Emory, and Cutler Cannon, a student and phytochemistry research assistant, about unlocking the power of plants to treat infectious diseases.</p>",
-          "tags": [
-            {
-              "label": "college",
-              "url": ""
-            },
-            {
-              "label": "research",
-              "url": ""
-            },
-            {
-              "label": "faculty",
-              "url": ""
-            },
-            {
-              "label": "student",
-              "url": ""
-            }
-          ],
-          "layout": "left",
-          "img_src": "podcast_episode_6.png",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Where Plants End Pandemics",
-          "media_type": "video",
-          "media_header": "A Future Where Plants End Pandemics",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 7",
-          "title": "A Future of First-Generation Students",
-          "body": "<p>Finding your path as a first-year college student can be challenging for anyone. But without guidance from family members who have been there before, first-generation students often have an even harder time navigating higher education. In this episode, Emory University graduate Anna Dix and first-generation student Xiomara Fernandez talk with Emory Alumni Board President Munir Meghjani about the unique challenges first-gen students face and how, through the 1915 Scholars Program, Emory’s alumni community is coming together to provide support.</p>",
-          "tags": [
-            {
-              "label": "student",
-              "url": ""
-            },
-            {
-              "label": "college",
-              "url": ""
-            }
-          ],
-          "layout": "right",
-          "img_src": "podcast_episode_7.png",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future of First-Generation Students",
-          "media_type": "video",
-          "media_header": "A Future of First-Generation Students",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "episode 8",
-          "title": "A Future Where Ingenuity Meets Opportunity",
-          "body": "<p>What does it take to cure diseases like HIV and cancer? How do breakthroughs in drug development happen? In this episode, Emory University President Greg Fenves speaks with Dennis Liotta and George Painter of Drug Innovation Ventures at Emory (DRIVE) about their role in advancing breakthrough therapies and how Emory is pairing academic researchers with innovators to facilitate drug development.</p>",
-          "tags": [
-            {
-              "label": "medicine",
-              "url": ""
-            },
-            {
-              "label": "faculty",
-              "url": ""
-            },
-            {
-              "label": "research",
-              "url": ""
-            }
-          ],
-          "layout": "left",
-          "img_src": "podcast_episode_8.png",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "A Future Where Ingenuity Meets Opportunity",
-          "media_type": "video",
-          "media_header": "A Future Where Ingenuity Meets Opportunity",
-          "media_text": "",
-          "media_byline": ""
-        }
-      },
-      {
-        "component": "TextImageHeader",
-        "props": {
-          "pretitle": "Coming soon july 1, 2022",
-          "title": "Coming Soon Example",
-          "body": "",
-          "tags": [],
-          "layout": "right",
-          "img_src": "podcast_episode_8.png",
-          "media_src": "https://vimeo.com/636508070/3b66fe1932",
-          "media_alt": "Jordyn Turner",
-          "media_type": "video",
-          "media_header": "Jordyn Turner",
-          "media_text": "",
-          "media_byline": ""
-        }
+  "id": "the-podcast",
+  "type": "collection",
+  "page_props": {
+    "header": "THE PODCAST",
+    "text": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields.",
+    "about": "CONTENT SERIES",
+    "button_scroll": "Scroll to explore",
+    "img_src": "podcast_hero.png"
+  },
+  "path": "the-podcast",
+  "metatag": {
+    "title": "The Podcast - Emory 2036",
+    "description": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields.",
+    "image": "podcast_hero.png",
+    "og_description": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields."
+  },
+  "components": [
+    {
+      "component": "SectionIntro",
+      "props": {
+        "header": "What will 2O36 look like? And who will shape the world to come?",
+        "background_image": "podcast_header_bg.png",
+        "text": "<p>Emory University is dedicated to creating positive transformation in the face of profound challenges. On each episode of 2O36: The Podcast, you’ll hear from faculty, alumni, students, and community members who embody the school’s mission to serve humanity through knowledge. These conversations were recorded in October 2021 at the 2O36 kickoff event in front of a live audience. If you want to learn about how Emory is reshaping the future—from using plant compounds to treat infectious diseases to the latest advances in brain health and artificial intelligence—this show is for you. THE FUTURE STARTS HERE.</p>",
+        "img_src": "podcast_header.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Video of Emory University",
+        "media_type": "video",
+        "media_header": "2O36",
+        "media_text": "Emory University",
+        "disabled": true
       }
-    ]
-  }
-  
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon August 23, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_1.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Neurodegenerative Diseases Can Be Cured",
+        "media_type": "video",
+        "media_header": "2O36: A Future Where Neurodegenerative Diseases Can Be Cured",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon September 6, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_2.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Cancer Patients Survive and Thrive",
+        "media_type": "video",
+        "media_header": "A Future Where Cancer Patients Survive and Thrive",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon September 20, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_3.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Without Health Disparities",
+        "media_type": "video",
+        "media_header": "A Future Without Health Disparities",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon October 4, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_4.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Without Fear",
+        "media_type": "video",
+        "media_header": "A Future Without Fear",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon October 18, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_5.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Computers Are More Like Us",
+        "media_type": "video",
+        "media_header": "A Future Where Computers Are More Like Us",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 1, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_6.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Plants End Pandemics",
+        "media_type": "video",
+        "media_header": "A Future Where Plants End Pandemics",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 15, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_7.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future of First-Generation Students",
+        "media_type": "video",
+        "media_header": "A Future of First-Generation Students",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 29, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_8.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Ingenuity Meets Opportunity",
+        "media_type": "video",
+        "media_header": "A Future Where Ingenuity Meets Opportunity",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    }
+  ]
+}
