@@ -64,58 +64,55 @@ export default function MediaWithExpantion(props: any) {
               style={props.img_size ? { objectFit: props.img_size } : {}}
             />
           </motion.figure>
+          {props.disabled && <div className="image-overlay" />}
         </motion.figure>
-        <Overlay
-          expand_action={
-            <div className="actions">
-              {props.media_type === "image" ? (
-                <IconButton icon={"eye"} label="See more"></IconButton>
-              ) : (
-                <IconButton icon={"play"} label="See more"/>
-              )}
-            </div>
-          }
-          expanded_content={
-            <Fragment>
-              <motion.figure
-                data-media={props.media_type}
-              >
-                {props.media_type === "image" ? (
-                  <div
-                    className="image-wrapper"
-                  >
-                    <Image
-                      loader={imageLoader(multipleSizesImgExpanded) as any}
-                      priority={true}
-                      alt={props.media_alt}
-                      src={multipleSizesImgExpanded.src}
-                      layout={"responsive"}
-                      width={multipleSizesImgExpanded.width}
-                      height={multipleSizesImgExpanded.height}
-                    ></Image>
-                  </div>
-                ) : (
-                  <Video {...props} controls={true}></Video>
-                )}
-                <figcaption className="overlay__text">
-                  <h6 className="title text-body">{props.header}</h6>
-                  <div
-                    className="body"
-                    dangerouslySetInnerHTML={{ __html: props.text }}
-                  ></div>
-                  {props.byline ? (
+        {!props.disabled && (
+          <Overlay
+            expand_action={
+              <div className="actions">
+                <IconButton icon={props.media_type === "image" ? "eye" : "play"} label="See more" />
+              </div>
+            }
+            expanded_content={
+              <Fragment>
+                <motion.figure
+                  data-media={props.media_type}
+                >
+                  {props.media_type === "image" ? (
                     <div
-                      className="byline"
-                      dangerouslySetInnerHTML={{ __html: props.byline }}
-                    ></div>
+                      className="image-wrapper"
+                    >
+                      <Image
+                        loader={imageLoader(multipleSizesImgExpanded) as any}
+                        priority={true}
+                        alt={props.media_alt}
+                        src={multipleSizesImgExpanded.src}
+                        layout={"responsive"}
+                        width={multipleSizesImgExpanded.width}
+                        height={multipleSizesImgExpanded.height}
+                      />
+                    </div>
                   ) : (
-                    ""
+                    <Video {...props} controls={true} />
                   )}
-                </figcaption>
-              </motion.figure>
-            </Fragment>
-          }
-        ></Overlay>
+                  <figcaption className="overlay__text">
+                    <h6 className="title text-body">{props.header}</h6>
+                    <div
+                      className="body"
+                      dangerouslySetInnerHTML={{ __html: props.text }}
+                    />
+                    {props.byline && (
+                      <div
+                        className="byline"
+                        dangerouslySetInnerHTML={{ __html: props.byline }}
+                      />
+                    )}
+                  </figcaption>
+                </motion.figure>
+              </Fragment>
+            }
+          />
+        )}
       </div>
     </Fragment>
   );

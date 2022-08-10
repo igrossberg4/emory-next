@@ -40,6 +40,7 @@ export default function SectionIntro(props:any) {
               header={props.media_header}
               text={props.media_text}
               byline={props.media_byline}
+              disabled={props.disabled}
             ></MediaWithExpantion>
           </div>
           <div className='col-md-6 text-container'>
