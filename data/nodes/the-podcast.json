@@ -1,0 +1,179 @@
+{
+  "id": "the-podcast",
+  "type": "collection",
+  "page_props": {
+    "header": "THE PODCAST",
+    "text": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields.",
+    "about": "CONTENT SERIES",
+    "button_scroll": "Scroll to explore",
+    "img_src": "podcast_hero.png"
+  },
+  "path": "the-podcast",
+  "metatag": {
+    "title": "The Podcast - Emory 2036",
+    "description": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields.",
+    "image": "podcast_hero.png",
+    "og_description": "Listen to intimate conversations with Emory’s foremost authorities on transformational advancement in their fields."
+  },
+  "components": [
+    {
+      "component": "SectionIntro",
+      "props": {
+        "header": "What will 2O36 look like? And who will shape the world to come?",
+        "background_image": "podcast_header_bg.png",
+        "text": "<p>Emory University is dedicated to creating positive transformation in the face of profound challenges. On each episode of 2O36: The Podcast, you’ll hear from faculty, alumni, students, and community members who embody the school’s mission to serve humanity through knowledge. These conversations were recorded in October 2021 at the 2O36 kickoff event in front of a live audience. If you want to learn about how Emory is reshaping the future—from using plant compounds to treat infectious diseases to the latest advances in brain health and artificial intelligence—this show is for you. THE FUTURE STARTS HERE.</p>",
+        "img_src": "podcast_header.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Video of Emory University",
+        "media_type": "video",
+        "media_header": "2O36",
+        "media_text": "Emory University",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon August 23, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_1.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Neurodegenerative Diseases Can Be Cured",
+        "media_type": "video",
+        "media_header": "2O36: A Future Where Neurodegenerative Diseases Can Be Cured",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon September 6, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_2.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Cancer Patients Survive and Thrive",
+        "media_type": "video",
+        "media_header": "A Future Where Cancer Patients Survive and Thrive",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon September 20, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_3.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Without Health Disparities",
+        "media_type": "video",
+        "media_header": "A Future Without Health Disparities",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon October 4, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_4.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Without Fear",
+        "media_type": "video",
+        "media_header": "A Future Without Fear",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon October 18, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_5.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Computers Are More Like Us",
+        "media_type": "video",
+        "media_header": "A Future Where Computers Are More Like Us",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 1, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_6.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Plants End Pandemics",
+        "media_type": "video",
+        "media_header": "A Future Where Plants End Pandemics",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 15, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podcast_episode_7.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future of First-Generation Students",
+        "media_type": "video",
+        "media_header": "A Future of First-Generation Students",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 29, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podcast_episode_8.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "A Future Where Ingenuity Meets Opportunity",
+        "media_type": "video",
+        "media_header": "A Future Where Ingenuity Meets Opportunity",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    }
+  ]
+}

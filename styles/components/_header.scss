@@ -1,3 +1,5 @@
+@use "sass:color";
+
 header[role="banner"] {
   display: flex;
   align-items: center;
@@ -74,5 +76,66 @@ header[role="banner"] {
     @include media-breakpoint-up(md) {
       font-size: $h2-font-size;
     }
+  }
+
+  &__newpages {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: $color_black_soft;
+    color: $color_white;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px 5px 5px 12px;
+    margin-right: 20px;
+    position: relative;
+    top: -3px;
+    box-shadow: -3px -3px 6px color.change($color_white, $alpha: 0.5), 2px 2px 6px color.change($color_black_soft, $alpha: 0.15), 4px 4px 11px color.change($color_black_soft, $alpha: 0.4);
+
+    .icon-button {
+      background-color: transparent;
+      box-shadow: none;
+      width: 28px;
+      height: 28px;
+      color: $color_white;
+
+      svg {
+        width: 34px;
+        height: 23px;
+        transform: translate(12px, -5px);
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    color: $color_white;
+    background: $color_black_soft;
+    font-size: 12px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 color.change($color_black_soft, $alpha: 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px color.change($color_black_soft, $alpha: 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 color.change($color_black_soft, $alpha: 0);
   }
 }
