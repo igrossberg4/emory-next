@@ -126,7 +126,8 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
 
             return {
                 title: link.title ? link.title : nodeFind.page_props.title,
-                link_to: linkFound
+                link_to: linkFound,
+                new: link.new ?? false
             }
         } catch (e) {
             throw "Link page with id " + link.id + " at menu not found in pages with base collection " + baseNode.id;

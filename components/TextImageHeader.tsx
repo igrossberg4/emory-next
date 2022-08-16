@@ -27,7 +27,7 @@ export default function TextImageHeader(props:any) {
                   })}
                 </div>
               }
-              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} byline={props.media_byline} ></MediaWithExpantion>
+              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} byline={props.media_byline} disabled={props.disabled}></MediaWithExpantion>
               <div className="text-image-header__line"></div>
               <div className="body" dangerouslySetInnerHTML={{__html:props.body}}></div>
               {props.read_more && !props.internal_link &&

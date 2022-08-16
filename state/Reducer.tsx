@@ -112,6 +112,12 @@ const Reducer = (state: any, action: { payload: any; type: string }) => {
         return { ...state, captionVideoEnabled: action.payload };
       }
       return state;
+    case "HIDE_BANNER":
+      localStorage.setItem("hide_banner", "1");
+      return {
+        ...state,
+        hideBanner: true
+      };
     default:
       return state;
   }

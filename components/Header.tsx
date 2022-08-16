@@ -1,10 +1,4 @@
-import Head from "next/head";
-import React, { Fragment, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/dist/client/router";
-import { Box } from "@chakra-ui/react";
-import { Context } from "../state/Store";
-import Image from "next/image";
-import IconButton from "./IconButton";
+import React, { useCallback, useEffect, useState } from "react";
 import MainMenu from "./MainMenu";
 import SchoolsMenu from "./SchoolsMenu";
 import Link from "next/link";
@@ -38,11 +32,12 @@ export default function Header(props:any) {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scroll]); // @ts-ignore
 
   return (
     <header id="header" className={"in-offset"} role="banner">
-      <SchoolsMenu {...props.menu_school}></SchoolsMenu>
+      <SchoolsMenu {...props.menu_school} />
       <div className="header__logo">
         <Link href="/" passHref >
           <svg width="106" height="36" viewBox="0 0 106 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +48,7 @@ export default function Header(props:any) {
           </svg>
         </Link>
       </div>
-      <MainMenu {...props.main_menu}></MainMenu>
+      <MainMenu {...props.main_menu} />
     </header>
   );
 }

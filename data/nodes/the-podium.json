@@ -1,0 +1,198 @@
+{
+  "id": "the-podium",
+  "type": "collection",
+  "page_props": {
+    "header": "THE PODIUM",
+    "text": "Focused on discovery and advocacy, these talks demonstrate how the Emory community is using ingenuity to transform the future.",
+    "about": "CONTENT SERIES",
+    "button_scroll": "Scroll to explore",
+    "img_src": "podium_hero.png"
+  },
+  "path": "the-podium",
+  "metatag": {
+    "title": "The Podium - Emory 2036",
+    "description": "Focused on discovery and advocacy, these talks demonstrate how the Emory community is using ingenuity to transform the future.",
+    "image": "podium_hero.jpg",
+    "og_description": "Focused on discovery and advocacy, these talks demonstrate how the Emory community is using ingenuity to transform the future."
+  },
+  "components": [
+    {
+      "component": "SectionIntro",
+      "props": {
+        "header": "Explore what's possible on 2O36:<br>The Podium.",
+        "background_image": "podium_explore_bg.png",
+        "text": "<p>In 10 minutes or less, learn from and be inspired by influential Emory University faculty, students, and alumni who share their expertise and insights on timely topics—health, technology, business, philosophy, culture, and education. If you want to find out how thought leaders from the Emory community are serving humanity and radically reshaping the future, this series is for you. THE FUTURE STARTS NOW.</p>",
+        "img_src": "podium_explore.jpeg",
+        "img_size": "fill",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Video of Emory University",
+        "media_type": "video",
+        "media_header": "2O36",
+        "media_text": "Emory University",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon August 30, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podium_cat_dymond.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Cat Dymond",
+        "media_type": "video",
+        "media_header": "Cat Dymond",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon September 13, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podium_roger_nam.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Roger Nam",
+        "media_type": "video",
+        "media_header": "Roger Nam",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon September 27, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podium_dakshitha.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Dakshitha Anandakumar",
+        "media_type": "video",
+        "media_header": "Dakshitha Anandakumar",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon October 11, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podium_tayari_jones.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Tayari Jones",
+        "media_type": "video",
+        "media_header": "Tayari Jones",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon October 25, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podium_jen_heemstra.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Jen Heemstra",
+        "media_type": "video",
+        "media_header": "Jen Heemstra",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 8, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podium_kristin_johnson.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Kristin Johnson",
+        "media_type": "video",
+        "media_header": "Kristin Johnson",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon November 22, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podium_pushkar_shinde.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Pushkar Shinde",
+        "media_type": "video",
+        "media_header": "Pushkar Shinde",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon December 6, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "left",
+        "img_src": "podium_jordyn_turner.png",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Jordyn Turner",
+        "media_type": "video",
+        "media_header": "Jordyn Turner",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Coming soon December 6, 2022",
+        "title": "Coming Soon",
+        "body": "",
+        "tags": [],
+        "layout": "right",
+        "img_src": "podium_ravi.jpeg",
+        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_alt": "Ravi Bellamkonda",
+        "media_type": "video",
+        "media_header": "Ravi Bellamkonda",
+        "media_text": "",
+        "media_byline": "",
+        "disabled": true
+      }
+    }
+  ]
+}
