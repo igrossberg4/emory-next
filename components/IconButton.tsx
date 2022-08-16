@@ -11,7 +11,7 @@ function IconButton(props: any) {
         <a className="icon-button" aria-label={props.label}>
             <Icons icon={props.icon} />
         </a>
-        </Link> : <button type="button" className="icon-button" aria-label={props.label}>
+        </Link> : <button type="button" className="icon-button" onClick={props.onClick} aria-label={props.label}>
             <Icons icon={props.icon} />
         </button>
 }

@@ -21,6 +21,7 @@
   .menu-main__link {
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
 
     @media (min-height: 900px) {
       margin-bottom: 3rem;
@@ -60,5 +61,11 @@
 
   .menu-main__cta {
     margin-bottom: 1rem;
+  }
+
+  &__badge {
+    position: absolute;
+    right: -66px;
+    top: -8px;
   }
 }
