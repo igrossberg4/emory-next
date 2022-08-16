@@ -28,6 +28,7 @@ const initialState = {
   isVideoOnExpansion: false,
   isOverlayExpanded: false,
   captionVideoEnabled: false,
+  hideBanner: process.browser ? !!localStorage.getItem('hide_banner') : true
 };
 
 const Store = ({ children }: { children: any }) => {
