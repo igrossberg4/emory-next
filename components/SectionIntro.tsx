@@ -11,14 +11,17 @@ export default function SectionIntro(props:any) {
   const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`) : undefined;
 
   return (
-    <div
-      className='section component-intro-text'
-      style={{
-        backgroundImage: props.background_image
-          ? `url(${multipleSizesImgPrincipal.src})`
-          : "",
-      }}
-    >
+    <div className='section component-intro-text'>
+      {props.background_image && (
+        <div
+          className="background-image"
+          style={{
+            backgroundImage: `url(${multipleSizesImgPrincipal.src})`,
+            opacity: props.background_opacity ?? 'unset',
+            transform: props.background_rotate ? `rotate(${props.background_rotate}deg)` : 'unset'
+          }}
+        />
+      )}
       <div className='container'>
         <div className='row header-container'>
           <div className='col-md-6'>

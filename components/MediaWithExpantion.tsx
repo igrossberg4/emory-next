@@ -113,6 +113,15 @@ export default function MediaWithExpantion(props: any) {
             }
           />
         )}
+        {props.links && (
+          <div className="links">
+            {props.links.map((link: any, idx: number) => (
+              <a key={idx} href={link.url} target="_blank" rel="noreferrer">
+                <img src={`/${link.icon}`} alt={link.icon} />
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </Fragment>
   );

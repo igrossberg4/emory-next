@@ -24,27 +24,33 @@
         "text": "<p>In 10 minutes or less, learn from and be inspired by influential Emory University faculty, students, and alumni who share their expertise and insights on timely topics—health, technology, business, philosophy, culture, and education. If you want to find out how thought leaders from the Emory community are serving humanity and radically reshaping the future, this series is for you. THE FUTURE STARTS NOW.</p>",
         "img_src": "podium_explore.jpeg",
         "img_size": "fill",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "https://vimeo.com/739726171/b360c093a4",
         "media_alt": "Video of Emory University",
         "media_type": "video",
-        "media_header": "2O36",
-        "media_text": "Emory University",
-        "disabled": true
+        "media_header": "2O36 Podium Trailer",
+        "media_text": ""
       }
     },
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon August 30, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 1: Coming soon August 30",
+        "title": "A Talk with Cat Dymond",
+        "body": "Cat Dymond’s journey as a nurse-midwife began when she was a sophomore at Harvard. Her mother had passed away, and she wanted to honor her memory. Dymond began her first career in social services, shifted to reproductive health, served as a pro bono doula for more than 20 years, raised two sons, and eventually came to the Nell Hodgson Woodruff School of Nursing. Through Emory’s innovation lab, The Hatchery, she received a grant to develop a mobile midwifery service to reach underserved communities. In this deeply personal talk, Cat describes her life’s work and how she’s reimagining what nursing can be.",
+        "tags": [
+          {
+            "label": "nursing"
+          },
+          {
+            "label": "student"
+          }
+        ],
         "layout": "right",
         "img_src": "podium_cat_dymond.jpeg",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
         "media_alt": "Cat Dymond",
         "media_type": "video",
-        "media_header": "Cat Dymond",
+        "media_header": "A Talk with Cat Dymond",
         "media_text": "",
         "media_byline": "",
         "disabled": true
@@ -53,10 +59,20 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon September 13, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 8: Coming soon September 13",
+        "title": "A Talk with Roger Nam",
+        "body": "To escape poverty and political unrest, Roger Nam’s parents emigrated from South Korea to the United States in 1967. As a professor of biblical studies and ancient Near Eastern studies at Emory University, his experience as a Korean American inspired him to study groups of people who also were dispersed from their homelands—and the identities they formed as a result of migration. In this talk, Nam explores questions of identity and how, by understanding the past, we can develop greater empathy for each other today. ",
+        "tags": [
+          {
+            "label": "candler"
+          },
+          {
+            "label": "research"
+          },
+          {
+            "label": "faculty"
+          }
+        ],
         "layout": "left",
         "img_src": "podium_roger_nam.jpeg",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -71,10 +87,17 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon September 27, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 2: Coming soon September 27",
+        "title": "A Talk with Dakshitha Anandakumar",
+        "body": "During a school field trip to a science museum, Dakshitha Anandakumar saw an exhibit on sensory perception that sparked her curiosity about how we perceive the world around us. As a graduate student in the biomedical engineering program at Georgia Tech and Emory University, she explores how the brain processes sound and understands speech. In this talk, Anandakumar shares exciting research that could lead to improved assessments and therapies for people with communication disorders like autism.",
+        "tags": [
+          {
+            "label": "laney"
+          },
+          {
+            "label": "student"
+          }
+        ],
         "layout": "right",
         "img_src": "podium_dakshitha.png",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -89,10 +112,20 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon October 11, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 9: Coming soon October 11",
+        "title": "A Talk with Tayari Jones",
+        "body": "Can creativity be taught? Novelist and Emory University professor Tayari Jones answers this question, and she firmly believes creative writing can contribute to success in a variety of careers. That’s why she encourages her writing students at Emory to be brave, think critically, and learn from their own stories. In this uplifting talk, Jones explores what it means to be creative and how she is making space for the next generation of storytellers.",
+        "tags": [
+          {
+            "label": "college"
+          },
+          {
+            "label": "faculty"
+          },
+          {
+            "label": "research"
+          }
+        ],
         "layout": "left",
         "img_src": "podium_tayari_jones.png",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -107,10 +140,20 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon October 25, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 3: Coming soon October 25",
+        "title": "A Talk with Jen Heemstra",
+        "body": "As a chemistry professor at Emory University, Jen Heemstra is passionate about conducting research. But she believes her most important work is mentoring other researchers—her students. In this talk, Heemstra shares how a breakthrough discovery by a student in her lab could help improve the detection and diagnosis of cancer. It’s just one example of student flourishing at Emory that is shaping the future.",
+        "tags": [
+          {
+            "label": "College"
+          },
+          {
+            "label": "faculty"
+          },
+          {
+            "label": "research"
+          }
+        ],
         "layout": "right",
         "img_src": "podium_jen_heemstra.png",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -125,10 +168,17 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon November 8, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 5: Coming soon November 8",
+        "title": "A Talk with Kristin Johnson",
+        "body": "In recent years, artificial intelligence (AI) has played an increasingly significant role in our lives, from driving our cars to assisting with contact tracing during the pandemic. Integrating AI technology into our society has many benefits, but AI algorithms may not take into account inequities that disproportionately affect marginalized people. In this talk, Emory law professor Kristin Johnson shares insight about the applications of AI and raises important questions about the values and biases embedded within.",
+        "tags": [
+          {
+            "label": "law"
+          },
+          {
+            "label": "faculty"
+          }
+        ],
         "layout": "left",
         "img_src": "podium_kristin_johnson.png",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -143,10 +193,17 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon November 22, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 6: Coming soon November 22",
+        "title": "A Talk with Pushkar Shinde",
+        "body": "Pushkar Shinde, a Woodruff Scholar and student-athlete at Emory University, is on a double mission: to discover truth and to heal others. Through his interdisciplinary studies and attending the Emory Tibetan Mind/Body Sciences Summer Abroad Program, he learned that his quests are interconnected. In this talk, Shinde describes how his Emory experience led him to the intersection of mind and matter and his vision to empower people to live healthier lives.",
+        "tags": [
+          {
+            "label": "college"
+          },
+          {
+            "label": "student"
+          }
+        ],
         "layout": "right",
         "img_src": "podium_pushkar_shinde.jpeg",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -161,10 +218,17 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon December 6, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 4: Coming soon December 6",
+        "title": "A Talk with Jordyn Turner",
+        "body": "As a child, Jordyn Turner wanted to be a superhero when she grew up. Now a graduate of Emory University, she believes every young person should have the resources and the opportunity to realize their greatest dreams. As a mentor and serial entrepreneur, she encourages students to explore their interests and unlock their own potential as entrepreneurs. In this inspirational talk, Turner describes how she’s reimagining the future of education.",
+        "tags": [
+          {
+            "label": "GBS"
+          },
+          {
+            "label": "Student"
+          }
+        ],
         "layout": "left",
         "img_src": "podium_jordyn_turner.png",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
@@ -179,10 +243,14 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Coming soon December 6, 2022",
-        "title": "Coming Soon",
-        "body": "",
-        "tags": [],
+        "pretitle": "episode 7: Coming soon December 6",
+        "title": "A Talk with Ravi Bellamkonda",
+        "body": "What makes students flourish at academic institutions, in their careers, and throughout their lives? Ravi Bellamkonda, provost at Emory University, describes how Emory is transforming the undergraduate experience and his vision for student flourishing that will shape not only what students achieve but who they become.",
+        "tags": [
+          {
+            "label": "Student"
+          }
+        ],
         "layout": "right",
         "img_src": "podium_ravi.jpeg",
         "media_src": "https://vimeo.com/636508070/3b66fe1932",
