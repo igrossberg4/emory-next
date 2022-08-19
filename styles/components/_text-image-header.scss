@@ -34,6 +34,17 @@
     margin-top: $default-separation-sm;
   }
 
+  .links {
+    position: relative;
+    top: 64px;
+    text-align: center;
+    height: 0;
+
+    a:first-child {
+      margin-right: 24px;
+    }
+  }
+
   .text-image-header__line {
     @include media-breakpoint-up(md) {
       position: relative;
