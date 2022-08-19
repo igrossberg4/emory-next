@@ -1,12 +1,26 @@
 // Text in one column with floating media.
 .component-intro-text {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 85%;
-  background-blend-mode: multiply;
+  position: relative;
+  margin-bottom: -80px;
 
-  @include media-breakpoint-up(md) {
-    background-size: 50%;
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 85%;
+    background-blend-mode: multiply;
+    
+    @include media-breakpoint-up(md) {
+      background-size: 50%;
+    }
+  }
+
+  .container {
+    position: relative;
   }
 
   .header-container,
