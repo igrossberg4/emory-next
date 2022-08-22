@@ -8,7 +8,7 @@ header[role="banner"] {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 23px 24px;
+  padding: 12px;
   z-index: 9;
   transition: all .25s ease-in-out;
 
@@ -92,6 +92,14 @@ header[role="banner"] {
     top: -3px;
     box-shadow: -3px -3px 6px color.change($color_white, $alpha: 0.5), 2px 2px 6px color.change($color_black_soft, $alpha: 0.15), 4px 4px 11px color.change($color_black_soft, $alpha: 0.4);
 
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+      padding: 3px 0 3px 5px;
+      font-size: 10px;
+      gap: 0;
+      border-radius: 6px;
+    }
+
     .icon-button {
       background-color: transparent;
       box-shadow: none;
@@ -99,16 +107,33 @@ header[role="banner"] {
       height: 28px;
       color: $color_white;
 
+      @include media-breakpoint-down(sm) {
+        width: 18px;
+        height: 18px;
+      }
+
       svg {
         width: 34px;
         height: 23px;
         transform: translate(12px, -5px);
+
+        @include media-breakpoint-down(sm) {
+          width: 28px;
+          height: 18px;
+          transform: translate(10px, -3px);
+        }
       }
     }
   }
 
   &__icon {
     position: relative;
+
+    button span:first-child {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
   }
 
   &__badge {
