@@ -34,11 +34,7 @@ export default function MediaWithExpantion(props: any) {
   return (
     <Fragment>
       <div
-        className={
-          false
-            ? "component-media-with-expansion is-expanded"
-            : "component-media-with-expansion"
-        }
+        className={`component-media-with-expansion${props.links && props.links.length > 0 ? ' component-media-with-expansion--has-link' : ''}`}
       >
         <motion.figure
           className={

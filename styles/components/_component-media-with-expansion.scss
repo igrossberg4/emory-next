@@ -3,6 +3,12 @@
   display: inline-block;
   margin-bottom: math.div($icon-button-size, 2);
 
+  &--has-link {
+    @include media-breakpoint-down(md) {
+      margin-bottom: math.div($icon-button-size, 2) + 90px !important;
+    }
+  }
+
   .actions {
     position: absolute;
     bottom: 0;
