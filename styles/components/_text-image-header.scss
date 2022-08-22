@@ -40,6 +40,10 @@
     text-align: center;
     height: 0;
 
+    @include media-breakpoint-down(md) {
+      top: 55px;
+    }
+
     a:first-child {
       margin-right: 24px;
     }

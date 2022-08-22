@@ -5,7 +5,13 @@
 
   &--has-link {
     @include media-breakpoint-down(md) {
-      margin-bottom: math.div($icon-button-size, 2) + 90px !important;
+      margin-bottom: math.div($icon-button-size, 2) + 80px !important;
+    }
+
+    &.component-media-with-expansion--disabled {
+      @include media-breakpoint-down(md) {
+        margin-bottom: math.div($icon-button-size, 2) + 95px !important;
+      }
     }
   }
 
