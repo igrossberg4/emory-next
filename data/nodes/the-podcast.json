@@ -35,7 +35,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 1: Coming soon August 23",
+        "pretitle": "episode 1",
         "title": "2O36: A Future Where Neurodegenerative Diseases Can Be Cured",
         "body": "Will it ever be possible to prevent or cure Alzheimer’s disease and related disorders? Allan Levey of the Goizueta Institute @ Emory Brain Health says there’s reason to think so. In this episode, Emory neuroscience student Calen MacDonald talks with Levey about his research and the work Emory is doing to make brain diseases a thing of the past.",
         "tags": [
@@ -64,13 +64,12 @@
         ],
         "layout": "right",
         "img_src": "podcast_episode_1.jpeg",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-05-19-emory-iup-podcast-levey.mp3",
         "media_alt": "A Future Where Neurodegenerative Diseases Can Be Cured",
-        "media_type": "video",
+        "media_type": "audio",
         "media_header": "2O36: A Future Where Neurodegenerative Diseases Can Be Cured",
-        "media_text": "",
-        "media_byline": "",
-        "disabled": true
+        "media_text": "Will it ever be possible to prevent or cure Alzheimer’s disease and related disorders? Allan Levey of the Goizueta Institute @ Emory Brain Health says there’s reason to think so. In this episode, Emory neuroscience student Calen MacDonald talks with Levey about his research and the work Emory is doing to make brain diseases a thing of the past.",
+        "media_byline": ""
       }
     },
     {
