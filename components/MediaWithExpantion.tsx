@@ -1,38 +1,26 @@
-import * as fs from "fs";
-
-import Head from "next/head";
-import React, { Fragment, useContext, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/dist/client/router";
-import { Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { Context } from "../state/Store";
-import LateralImageExpanded from "./LateralImageExpanded";
 import Video from "./Video";
 import IconButton from "./IconButton";
 import Overlay from "./Overlay";
-import path from "path";
-import dynamic from "next/dynamic";
 import { imageLoader } from "./utils/imageLoader";
+import Audio from "./Audio";
 
 export default function MediaWithExpantion(props: any) {
-  const router = useRouter();
-  const [state, dispatch] = useContext(Context) as any;
-  const [layoutId, setLayoutID] = useState(Math.random().toString());
   let multipleSizesImgPrincipal;
   let multipleSizesImgExpanded;
 
   multipleSizesImgPrincipal = require(`../public/images/${
     props.img_src ? props.img_src : props.media_src
   }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  if (props.media_type != "video") {
+  if (props.media_type !== "video" && props.media_type !== "audio") {
     multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
   }
 
   //const files = fs.readdirSync(__dirname);
   //const moduleName = path.join(__dirname, files[0]);
   return (
-    <Fragment>
+    <>
       <div
         className={`component-media-with-expansion${props.links && props.links.length > 0 ? ' component-media-with-expansion--has-link' : ''}${props.disabled ? ' component-media-with-expansion--disabled' : ''}`}
       >
@@ -70,11 +58,11 @@ export default function MediaWithExpantion(props: any) {
               </div>
             }
             expanded_content={
-              <Fragment>
+              <>
                 <motion.figure
                   data-media={props.media_type}
                 >
-                  {props.media_type === "image" ? (
+                  {props.media_type === "image" && (
                     <div
                       className="image-wrapper"
                     >
@@ -88,8 +76,12 @@ export default function MediaWithExpantion(props: any) {
                         height={multipleSizesImgExpanded.height}
                       />
                     </div>
-                  ) : (
+                  )}
+                  {props.media_type === "video" && (
                     <Video {...props} controls={true} />
+                  )}
+                  {props.media_type === "audio" && (
+                    <Audio {...props} controls={true} />
                   )}
                   <figcaption className="overlay__text">
                     <h6 className="title text-body">{props.header}</h6>
@@ -105,7 +97,7 @@ export default function MediaWithExpantion(props: any) {
                     )}
                   </figcaption>
                 </motion.figure>
-              </Fragment>
+              </>
             }
           />
         )}
@@ -119,6 +111,6 @@ export default function MediaWithExpantion(props: any) {
           </div>
         )}
       </div>
-    </Fragment>
+    </>
   );
 }
