@@ -20,9 +20,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "What will 2O36 look like? And who will shape the world to come?",
-        "background_image": "podcast_header_bg.png",
-        "background_rotate": -30,
-        "background_opacity": 0.2,
+        "background_image": "podcast_microphone.png",
         "text": "<p>Emory University is dedicated to creating positive transformation in the face of profound challenges. On each episode of 2O36: The Podcast, you’ll hear from faculty, alumni, students, and community members who embody the school’s mission to serve humanity through knowledge. These conversations were recorded in October 2021 at the 2O36 kickoff event in front of a live audience. If you want to learn about how Emory is reshaping the future—from using plant compounds to treat infectious diseases to the latest advances in brain health and artificial intelligence—this show is for you. THE FUTURE STARTS HERE.</p>",
         "img_src": "podcast_header.jpeg",
         "media_src": "https://vimeo.com/740527712/1f71c23db9",

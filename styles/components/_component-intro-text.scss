@@ -1,26 +1,14 @@
 // Text in one column with floating media.
 .component-intro-text {
-  position: relative;
   margin-bottom: -80px;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 50%;
+  background-blend-mode: multiply;
 
   @include media-breakpoint-down(md) {
+    background-image: none !important;
     margin-bottom: 0;
-  }
-
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: 85%;
-    background-blend-mode: multiply;
-    
-    @include media-breakpoint-up(md) {
-      background-size: 50%;
-    }
   }
 
   .container {
@@ -47,5 +35,22 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: contain;
+      background-blend-mode: multiply;
+      
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
   }
 }
