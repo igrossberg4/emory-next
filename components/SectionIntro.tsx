@@ -1,27 +1,13 @@
-import Head from "next/head";
-import React, { Fragment, useContext, useState } from "react";
-import Image from "next/image";
-import { useRouter } from "next/dist/client/router";
-import { Box } from "@chakra-ui/react";
-import { AnimateSharedLayout, motion } from "framer-motion";
-import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 
 export default function SectionIntro(props:any) {
   const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`) : undefined;
 
   return (
-    <div className='section component-intro-text'>
-      {props.background_image && (
-        <div
-          className="background-image"
-          style={{
-            backgroundImage: `url(${multipleSizesImgPrincipal.src})`,
-            opacity: props.background_opacity ?? 'unset',
-            transform: props.background_rotate ? `rotate(${props.background_rotate}deg)` : 'unset'
-          }}
-        />
-      )}
+    <div
+      className='section component-intro-text'
+      style={{ backgroundImage: `url(${multipleSizesImgPrincipal.src})` }}
+    >
       <div className='container'>
         <div className='row header-container'>
           <div className='col-md-6'>
@@ -44,13 +30,19 @@ export default function SectionIntro(props:any) {
               text={props.media_text}
               byline={props.media_byline}
               disabled={props.disabled}
-            ></MediaWithExpantion>
+            />
           </div>
           <div className='col-md-6 text-container'>
+            {props.background_image && (
+              <div
+                className="background-image"
+                style={{ backgroundImage: `url(${multipleSizesImgPrincipal.src})` }}
+              />
+            )}
             <div
               className='body'
               dangerouslySetInnerHTML={{ __html: props.text }}
-            ></div>
+            />
           </div>
         </div>
       </div>
