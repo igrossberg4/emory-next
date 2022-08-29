@@ -34,7 +34,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 1: Coming soon August 30",
+        "pretitle": "episode 1",
         "title": "A Talk with Cat Dymond",
         "body": "Cat Dymond’s journey as a nurse-midwife began when she was a sophomore at Harvard. Her mother had passed away, and she wanted to honor her memory. Dymond began her first career in social services, shifted to reproductive health, served as a pro bono doula for more than 20 years, raised two sons, and eventually came to the Nell Hodgson Woodruff School of Nursing. Through Emory’s innovation lab, The Hatchery, she received a grant to develop a mobile midwifery service to reach underserved communities. In this deeply personal talk, Cat describes her life’s work and how she’s reimagining what nursing can be.",
         "tags": [
@@ -49,13 +49,12 @@
         ],
         "layout": "right",
         "img_src": "podium_cat_dymond.jpeg",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "https://vimeo.com/725346454/d04884980a",
         "media_alt": "Cat Dymond",
         "media_type": "video",
-        "media_header": "A Talk with Cat Dymond",
+        "media_header": "",
         "media_text": "",
-        "media_byline": "",
-        "disabled": true
+        "media_byline": ""
       }
     },
     {
