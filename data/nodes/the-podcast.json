@@ -73,7 +73,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 2: Coming soon September 6",
+        "pretitle": "episode 2",
         "title": "A Future Where Cancer Patients Survive and Thrive",
         "body": "When it comes to treating cancer, what was not possible just a few years ago is now possible. In this episode, Suresh S. Ramalingam, executive director of Winship Cancer Institute of Emory University, speaks with Emory School of Medicine student Carey Jansen about advances in research, patient care, and education that are leading to long-term survival and a better quality of life for people with cancer.",
         "tags": [
@@ -102,13 +102,12 @@
         ],
         "layout": "left",
         "img_src": "podcast_episode_2.jpeg",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-03-23-emory-iup-podcast-2.mp3",
         "media_alt": "A Future Where Cancer Patients Survive and Thrive",
-        "media_type": "video",
-        "media_header": "A Future Where Cancer Patients Survive and Thrive",
+        "media_type": "audio",
+        "media_header": "",
         "media_text": "",
-        "media_byline": "",
-        "disabled": true
+        "media_byline": ""
       }
     },
     {
