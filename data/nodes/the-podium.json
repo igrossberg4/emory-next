@@ -60,7 +60,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 2: Coming soon September 13",
+        "pretitle": "episode 2",
         "title": "A Talk with Roger Nam",
         "body": "To escape poverty and political unrest, Roger Nam’s parents emigrated from South Korea to the United States in 1967. As a professor of biblical studies and ancient Near Eastern studies at Emory University, his experience as a Korean American inspired him to study groups of people who also were dispersed from their homelands—and the identities they formed as a result of migration. In this talk, Nam explores questions of identity and how, by understanding the past, we can develop greater empathy for each other today. ",
         "tags": [
@@ -79,13 +79,12 @@
         ],
         "layout": "left",
         "img_src": "podium_roger_nam.jpeg",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "https://vimeo.com/731380353/a50b9b8a5c",
         "media_alt": "Roger Nam",
         "media_type": "video",
         "media_header": "Roger Nam",
         "media_text": "",
-        "media_byline": "",
-        "disabled": true
+        "media_byline": ""
       }
     },
     {
