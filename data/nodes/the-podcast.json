@@ -113,7 +113,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 3: Coming soon September 20",
+        "pretitle": "episode 3",
         "title": "2O36: A Future Without Health Disparities",
         "body": "What role does the community play in reducing health disparities? How are institutions like Emory University working to bridge the gaps? In this episode, Briana Woods-Jaeger of the Rollins School of Public Health and Everett Moss, an Emory nursing student, speak with Emory Alumni Board President Munir Meghjani about the progress they are making to reduce health disparities in communities of color.",
         "tags": [
@@ -142,13 +142,12 @@
         ],
         "layout": "right",
         "img_src": "podcast_episode_3.jpeg",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-05-11-emory-iup-podcast-4-jaeger-and-moss.mp3",
         "media_alt": "A Future Without Health Disparities",
-        "media_type": "video",
-        "media_header": "A Future Without Health Disparities",
+        "media_type": "audio",
+        "media_header": "",
         "media_text": "",
-        "media_byline": "",
-        "disabled": true
+        "media_byline": ""
       }
     },
     {
