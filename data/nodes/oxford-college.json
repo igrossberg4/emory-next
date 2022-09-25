@@ -45,8 +45,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "From the time students arrive on campus, we are deeply invested in their success, in their satisfaction, and in their flourishing.",
-        "attribution": "— Douglas A. Hicks, Dean of Oxford College of Emory University and William R. Kenan Jr. Professor of Religion"
+        "text": "Oxford is keenly focused on the student experience. From the time students arrive on campus we are deeply invested in them. We want them to succeed and flourish.",
+        "attribution": "— KENNETH E. CARTER, INTERIM Dean of Oxford College of Emory University and CHARLES HOWARD CANDLER PROFESSOR OF PSYCHOLOGY"
       }
     },
     {
@@ -62,21 +62,6 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "Expanding Student Horizons by 2036",
-        "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford’s identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
-        "layout": "right",
-        "img_src": "oxford_priority_3.jpg",
-        "media_src": "oxford_priority_3_popup.jpg",
-        "media_alt": "Oxford students take advantage of learning outside of the classroom.",
-        "media_type": "image",
-        "media_header": "Expand Horizons",
-        "media_text": "Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration."
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key Priority",
         "title": "Better Access Starts with 2O36",
         "body": "<p>Every family sending a student to college cares about the value proposition. Oxford provides an education of true and abiding value for our graduates, preparing them for personal and professional success. Making that education affordable for students from all backgrounds is integral to our educational mission.</p><p>Trailing our peer colleges and universities in endowment funding, Oxford needs endowed funds to provide student scholarships in perpetuity. <strong>With your support for 2O36, we can offer more scholarships so that more high-ability, high-potential students from all income levels will be able to attend and graduate from Oxford College.</strong> Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place.</p>",
         "layout": "left",
@@ -86,6 +71,21 @@
         "media_type": "image",
         "media_header": "Better Access",
         "media_text": "Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place."
+      }
+    },
+    {
+      "component": "TextImageHeader",
+      "props": {
+        "pretitle": "Key Priority",
+        "title": "Expanding Student Horizons by 2036",
+        "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Pathways and Purpose to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford’s identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
+        "layout": "right",
+        "img_src": "oxford_priority_3.jpg",
+        "media_src": "oxford_priority_3_popup.jpg",
+        "media_alt": "Oxford students take advantage of learning outside of the classroom.",
+        "media_type": "image",
+        "media_header": "Expand Horizons",
+        "media_text": "Through 2O36, we can create a Center for Leadership and Experiential Education to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration."
       }
     },
     {

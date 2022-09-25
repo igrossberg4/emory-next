@@ -4,7 +4,7 @@
   "page_props": {
     "about": "unit spotlight",
     "header": "CAMPUS LIFE",
-    "text": "Embrace your passion. Unleash your potential.",
+    "text": "",
     "button_scroll": "Scroll to explore",
     "img_src": "campus_lede.jpg",
     "footer": {
@@ -56,21 +56,6 @@
         "image_src": "campus_divider_bg.jpg",
         "cta_link": "https://together.emory.edu/give/to/campus-experience/campus-life",
         "cta_text": "Support Campus Life"
-      }
-    },
-    {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Key Priority",
-        "title": "Removing Roadblocks in 2036",
-        "body": "<p>Students’ financial situations should never affect their ability to learn and grow outside the standard classroom curriculum. <strong>2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities.</strong> Not only will this initiative provide equal access to career development, it will also expose students to a variety of professional pathways and increase alumni satisfaction with career preparedness.</p>",
-        "layout": "right",
-        "img_src": "campus_priority_1.jpg",
-        "media_src": "campus_priority_1_popup.jpg",
-        "media_alt": "Group of students cheering.",
-        "media_type": "image",
-        "media_header": "Community Counts",
-        "media_text": "2O36 will support all students who wish to participate in three-month unpaid internships or other experiential learning opportunities."
       }
     },
     {
@@ -140,7 +125,7 @@
         "title": "KEY PRIORITIES",
         "items": [
           {
-            "title": "Centering Health and Wellness Through 2O36",
+            "title": "Centering on Well-Being Through 2O36",
             "description": "<p>As part of Emory’s commitment to the complete health of our student body, we’re creating new programs to educate students about the eight dimensions of wellness, including behavioral health, spiritual connection, emotional awareness, and physical wellness. These educational resources will strengthen academic achievement, personal growth, confidence, mental well-being, and social connection for the Emory community. <strong>2O36 will support students’ health needs by increasing staffing and expanding clinical care, case management, crisis response, and preventative care.</strong> By training faculty and staff to identify and support students who need attention, we can create a more caring, campus-wide approach to positive mental health and emotional support.</p>"
           },
           {
