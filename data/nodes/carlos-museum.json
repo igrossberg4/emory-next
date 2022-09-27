@@ -62,8 +62,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "In 2036, Experts Are Essential",
-        "body": "<p>Curators and conservators are essential to the Carlos Museum, leading research and publication of the collections, developing exhibitions, and contributing to the academic vitality of the Emory scholarly community. 2036 investment in curatorial support will allow the Carlos Museum to hire and retain curators and conservators of the highest caliber as well as provide funding for research, exhibitions, and professional development.</p>",
+        "title": "In 2036, Students Come First",
+        "body": "<p>The Carlos Museum is a center for student flourishing on campus. Emory students collaborate with curators, conservators, and educators to create exhibitions, investigate objects, and explore ideas through great works of art. With your support, 2O36 will further distinguish an Emory education by ensuring students have access to these unique research opportunities.</p>",
         "layout": "right",
         "img_src": "carlos_priority_1.jpg",
         "media_src": "carlos_priority_1_popup.jpg",
@@ -77,8 +77,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "In 2036, Students Come First",
-        "body": "<p>The Carlos Museum is a center for student flourishing on campus. Emory students collaborate with curators, conservators, and educators to create exhibitions, investigate objects, and explore ideas through great works of art. With your support, 2036 will further distinguish an Emory education by ensuring students have access to these unique research opportunities.</p>",
+        "title": "In 2036, Experts Are Essential",
+        "body": "<p>Curators and conservators are essential to the Carlos Museum, leading research and publication of the collections, developing exhibitions, and contributing to the academic vitality of the Emory scholarly community. 2O36 investment in curatorial support will allow the Carlos Museum to hire and retain curators and conservators of the highest caliber as well as provide funding for research, exhibitions, and professional development.</p>",
         "layout": "right",
         "img_src": "carlos_priority_1.jpg",
         "media_src": "carlos_priority_1_popup.jpg",
@@ -123,7 +123,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "New Exhibitions Are Headed for 2036",
-        "body": "<p>Museums are places to explore and discover; to remember where we’ve been and consider how our past shapes our present and our future. While permanent collections shape a museum’s identity, temporary exhibitions engage with those collections in real time- expanding our understanding of them, showcasing new scholarship, and attracting new audiences.</p><p><strong>With that in mind, 2036 will fund the renovation of the Carlos Museum's temporary exhibition galleries and the development of new exhibitions in partnership with national and international collaborators.</strong> </p>",
+        "body": "<p>Museums are places to explore and discover; to remember where we’ve been and consider how our past shapes our present and our future. While permanent collections shape a museum’s identity, temporary exhibitions engage with those collections in real time- expanding our understanding of them, showcasing new scholarship, and attracting new audiences.</p><p><strong>With that in mind, 2O36 will fund the renovation of the Carlos Museum's temporary exhibition galleries and the development of new exhibitions in partnership with national and international collaborators.</strong> </p>",
         "layout": "right",
         "img_src": "carlos_priority_3.jpg",
         "media_src": "carlos_priority_3_popup.jpg",
@@ -138,7 +138,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "The Carlos Museum Is A Launchpad For Youn Scholars In 2036",
-        "body": "<p>The Carlos Museum supports new scholars by launching their careers at Emory University. Postdoctoral positions offer the opportunity for targeted research focused on important but underserved areas of the Carlos Museum’s extensive and diverse collections. Postdoctoral fellowships allow the museum to broaden and deepen its knowledge production and increase access to its collections through exhibitions and programming. 2036 support will ensure the Carlos Museum and Emory University promote the careers of young scholars while expanding access and scholarship at the museum.</p>",
+        "body": "<p>The Carlos Museum supports new scholars by launching their careers at Emory University. Postdoctoral positions offer the opportunity for targeted research focused on important but underserved areas of the Carlos Museum’s extensive and diverse collections. Postdoctoral fellowships allow the museum to broaden and deepen its knowledge production and increase access to its collections through exhibitions and programming. 2O36 support will ensure the Carlos Museum and Emory University promote the careers of young scholars while expanding access and scholarship at the museum.</p>",
         "layout": "right",
         "img_src": "carlos_priority_3.jpg",
         "media_src": "carlos_priority_3_popup.jpg",
@@ -159,29 +159,29 @@
             "description": "<p>The Carlos Museum offers a wide range of academic, informal learning and social experiences, from programs for undergraduates to graduate students and medical school students. With your support, 2036 will further expand student engagement opportunities, developing programs that invite students to deepen their relationship with the Carlos Museum.</p>"
           },
           {
+            "title": "In 2036, Art is For Everyone",
+            "description": "Accessibility is a top priority for the Carlos Museum. <strong>By expanding opportunities and accessibility to the museum, 2O36 can ensure that more children, students, and families are able to experience firsthand all the museum has to offer.</strong> Extended hours, free days, camp and workshop scholarships, reduced and free admission, and discounted programs for schools are a few examples of how support for this initiative will build our community and ensure everyone has access to experience works of art firsthand.</p>"
+          },
+          {
             "title": "In 2036, the Past Speaks to the Present",
-            "description": "<p>Innovative programming is a hallmark of the Carlos Museum.</p><p><strong>2O36 will continue that tradition, launching a new lecture series—Ancients Among Us.</strong> In this annual interdisciplinary program, contemporary artists, writers, and thinkers inspired by antiquity will challenge both Emory and public audiences to look anew at our shared human history. As audiences continue to search for surprising and captivating storytelling, the Carlos Museum sees this series as an importnt contribution to campus and community.</p>"
+            "description": "<p>Innovative programming is a hallmark of the Carlos Museum.</p><p><strong>2O36 will continue that tradition, launching a new lecture series—Ancients Among Us.</strong> In this annual interdisciplinary program, contemporary artists, writers, and thinkers inspired by antiquity will challenge both Emory and public audiences to look anew at our shared human history. As audiences continue to search for surprising and captivating storytelling, the Carlos Museum sees this series as an important contribution to campus and community.</p>"
           },
           {
             "title": "Conserving The Past for 2036",
-            "description": "<p>TThe Carlos Museum is the only university museum with an art conservation lab in the region. The Parsons Conservation Lab not only preserves museum objects but also fosters unique training opportunities for students to gain hands-on experience with examination, analysis, preventive care, and treatment. Funding from 2O36 will support essential preservation for a wide variety of materials, as well as continuing research and collaboration initiatives among staff, faculty, and students.</p>"
+            "description": "<p>The Carlos Museum is the only university museum with an art conservation lab in the region. The Parsons Conservation Lab not only preserves museum objects but also fosters unique training opportunities for students to gain hands-on experience with examination, analysis, preventive care, and treatment. Funding from 2O36 will support essential preservation for a wide variety of materials, as well as continuing research and collaboration initiatives among staff, faculty, and students.</p>"
           },
           {
             "title": "New Acquisitions For New Stories in 2036",
-            "description": "<p>Objects tell stories, The Carlos Museum creates and shares new knowledge through the study of objects- not only by museum curators and conservators but by scholars and students here at Emory and around the world and by descendent communities. New acquisitions foster opportunities for teaching and research, scholarly production, and community connection.</p><p>When you invest in 2036, you invest in the museum's ability to inspire our community with meaningful stories about the past that inform our future.</p>"
+            "description": "<p>Objects tell stories, The Carlos Museum creates and shares new knowledge through the study of objects- not only by museum curators and conservators but by scholars and students here at Emory and around the world and by descendent communities. New acquisitions foster opportunities for teaching and research, scholarly production, and community connection.</p><p>When you invest in 2O36, you invest in the museum's ability to inspire our community with meaningful stories about the past that inform our future.</p>"
           },
           {
             "title": "Empowering Teachers in 2036",
-            "description": "<p>As public funding for education shrinks, it’s more important than ever for the Carlos Museum to provide teachers with the tools they need to connect students to works of art from diverse cultures spanning five continents and nine millennia. <strong>2036 will generate support for professional development workshops for K-12 teachers, innovative use of technology for connecting the museum and the classroom, and most essential, opportunities for K-12 students to learn from actual works of art in the galleries.</strong></p>"
+            "description": "<p>As public funding for education shrinks, it’s more important than ever for the Carlos Museum to provide teachers with the tools they need to connect students to works of art from diverse cultures spanning five continents and nine millennia. <strong>2O36 will generate support for professional development workshops for K-12 teachers, innovative use of technology for connecting the museum and the classroom, and most essential, opportunities for K-12 students to learn from actual works of art in the galleries.</strong></p>"
           },
           {
             "title": "With 2O36, Technology Tells a Story",
-            "description": "<p>Museums integrate and use technology to tell stories and connect with audiences. <strong>With your support and generosity, 2036 will ensure that audiences have access to the rich array of information and context that surround works in the collection.</strong> From how an object was made and used to how it has been conserved, technology offers a window to a wider experience.</p><p>Multimedia guides to the collection, online exhibitions, educational resources, interactive games, video explorations, and three-dimensional models are just some of the ways to expand access and encourage engagement. 2036 will keep the museum on the cutting edge of these protean technologies.</p>"
+            "description": "<p>Museums integrate and use technology to tell stories and connect with audiences. <strong>With your support and generosity, 2O36 will ensure that audiences have access to the rich array of information and context that surround works in the collection.</strong> From how an object was made and used to how it has been conserved, technology offers a window to a wider experience.</p><p>Multimedia guides to the collection, online exhibitions, educational resources, interactive games, video explorations, and three-dimensional models are just some of the ways to expand access and encourage engagement. 2O36 will keep the museum on the cutting edge of these protean technologies.</p>"
           },
-          {
-            "title": "In 2036, Art is For Everyone",
-            "description": "Accessibility is a top priority for the Carlos Museum. <strong>By expanding opportunities and accessibility to the museum, 2036 can ensure that more children, students, and families are able to experience firsthand all the museum has to offer.</strong> Extended hours, free days, camp and workshop scholarships, reduced and free admission, and discounted programs for schools are a few examples of how support for this initiative will build our community and ensure everyone has access to experience works of art firsthand.</p>"
-          }
         ]
       }
     }
