@@ -33,7 +33,7 @@
       "props": {
         "header": "The health and wellness of our communities drives us to find new ways to understand, manage, and overcome every medical condition.",
         "background_image": "healthcare_isolated_bg.png",
-        "text": "<p>Emory Healthcare, part of Emory University, is the most extensive health care system in Georgia. Made up of 11 hospitals, the Emory Clinic, and more than 250 provider locations, the Emory Healthcare Network is the largest clinically integrated network in Georgia, with more than 2,800 physicians concentrating in 70 different subspecialties. Patients are always our priority, and we work every day to improve the health of individuals and communities at home and throughout the world.</p>",
+        "text": "<p>Emory Healthcare, part of Emory University, is the most comprehensive academic health system in Georgia. Made up of 11 hospitals, the Emory Clinic, and more than 250 provider locations, the Emory Healthcare Network is the largest clinically integrated network in Georgia, with more than 2,800 physicians concentrating in 70 different subspecialties. Patients are always our priority, and we work every day to improve lives and provide hope to individuals and communities at home and throughout the world.</p>",
         "img_src": "healthcare_intro.jpg",
         "media_src": "https://vimeo.com/629052231/28a44506b2",
         "media_alt": "A woman in lab coat uses medical instrument.",
@@ -62,8 +62,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Key Priority",
-        "title": "The Best Cancer Care in Midtown",
-        "body": "<p>Shorter wait times for surgery. Higher patient satisfaction. Improved clinical outcomes. The Winship Emory Midtown tower, scheduled to open for patient care in spring 2023, will transform the patient experience and create seamless efficiency for collaborative science.</p><p>As the only National Cancer Institute-designated comprehensive cancer center in Georgia, Winship can provide interventions and cures that are unavailable elsewhere. <strong>And in this new facility, we’ll be able to provide an extraordinary level of care to more people with cancer.</strong> Winship Emory Midtown will put patients at the center of specialized care communities where they receive personalized cancer care aligned with Winship’s advanced research.</p>",
+        "title": "Transforming Cancer Care",
+        "body": "<p>Improved clinical outcomes. Higher patient satisfaction. First of its kind. Welcome to Winship at Emory Midtown, a freestanding, full-service cancer hospital by Georgia’s only National Cancer Institute-designated Comprehensive Cancer Center, Winship Cancer Institute of Emory University.</p><p>Set to open in spring 2023, Winship at Emory Midtown is conceived, designed and constructed to deliver a never-before-seen model of cancer care that bridges outpatient and inpatient care and integrates groundbreaking research into cancer preventions and treatments. Uniquely created to place patients at the center of collaborative cancer care teams, treatments and services, this next-generation cancer hospital is purpose-built to deliver an experience for each patient that is as personalized and advanced as the science of their care.</p>",
         "layout": "left",
         "img_src": "healthcare_priority_1.jpg",
         "media_src": "healthcare_priority_1_popup.jpg",
@@ -152,7 +152,7 @@
             "description": "<p>Hospital systems must be able to handle unexpected challenges and expenses, often at a moment’s notice. Sometimes a patient’s family needs temporary housing or help with travel, for example, or the supply of personal protective equipment for employees runs low in the middle of a pandemic. <strong>2O36 supports programs, services, and equipment that help Emory Healthcare quickly respond to such unexpected situations so our care teams can stay focused on their mission.</strong></p>"
           },
           {
-            "title": "Taking Care of Caregivers",
+            "title": "Taking Care of Healthcare Workers",
             "description": "<p><strong>The Emory Healthcare Employee Hardship Fund helps our care teams weather difficult times in their lives.</strong> They may experience a death in the family, medical expenses from a severe illness or accident, financial losses from an uninsured disaster, unusual expenses when caring for a sick family member, or pandemic-related financial emergencies. 2O36 will increase this fund, previously supported solely by employee giving, to reach more Emory Healthcare staff in need.</p>"
           },
           {

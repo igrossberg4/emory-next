@@ -78,7 +78,7 @@
       "component": "ColumnsText",
       "props": {
         "column1": "Emory College provides experiences that foster growth and community engagement, so the best students find Emory irresistible. The generous scholarship support that 2O36 inspires will ensure that every student who meets the college’s high standards will be able to attend. Without the burden of education debt, students can explore the career paths that mean the most, which aren’t always the ones that pay the most.",
-        "column2": "Emory College has been chipping away at financial obstacles to education for years. Partnering with alumni and other donors since 2007, for example, the Emory Advantage program offers students with family incomes under $100,000 the ability to graduate with little or no debt. Several merit-based programs reward top students, and our Scholarship Endowment Initiative has set the stage for a healthy endowment to grow. <strong>2O36 will generate need-based scholarships for many more students and create sustainable funding for the long term.</strong>"
+        "column2": "Emory College has an extraordinary commitment to financial aid. We are committed to a need-blind admissions process and to meeting a student’s full demonstrated need—now without any expectation that a student take out loans. The resulting financial aid bill is more than $120M in the coming academic year, and only about 10% of that is currently funded through philanthropy. Our alumni and donors have stepped up to more than double the number of endowed scholarships in Emory College over the past 10 years. <strong>2036 will continue that momentum for scholarships that can make an Emory experience accessible—and exceptional.</strong>"
       }
     },
     {
@@ -86,7 +86,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Equip Faculty for the Future",
-        "body": "<p>Preeminent in their fields and devoted to their craft, more than 550 Emory College professors reach across 50 departments and programs to equip students with the tools to explore lifelong passions. <strong>With 2O36, funding will allow Emory College professors to focus on strategic scholarship that tackles growing global challenges.</strong></p>",
+        "body": "<p>Preeminent in their fields and devoted to teaching and research, more than 550 Emory College faculty reach across 50 departments and programs to equip students with the tools to explore lifelong passions. <strong>With 2O36, we will continue to grow an Emory College faculty who have both the potential to change the lives of students in the classroom and how the world approaches the most important questions of our time through their work in the lab, library, and stage.</strong></p>",
         "layout": "left",
         "img_src": "ecas_priority_2.jpg",
         "media_src": "ecas_priority_2_popup.jpg",
@@ -100,7 +100,7 @@
     {
       "component": "ColumnsText",
       "props": {
-        "column1": "Through generous endowment support, Emory will be a destination, rather than a stepping stone, for faculty who shape the most important discussions of our time. New distinguished professorships, each with support for a graduate student, will attract and retain faculty leaders who are moving their disciplines forward. New professorships will retain rising-star faculty, who, as they gain prominence at Emory, may consider taking their talents to other universities.",
+        "column1": "Through generous endowment support, Emory will be a destination, rather than a stepping stone, for extraordinary faculty. Professorships will attract and retain leaders who are moving their disciplines forward and who will sharpen Emory's trajectory in teaching and research. New professorships will retain rising-star faculty, who, as they gain prominence at Emory, may consider taking their talents to other universities.",
         "column2": "These faculty leaders strengthen the research and teaching profiles of key departments, driving discovery in the natural sciences and quantitative methods and producing knowledge about history, culture, society, and many other areas."
       }
     },
@@ -124,7 +124,7 @@
       "props": {
         "pretitle": "Key Priority",
         "title": "Cultivate the Arts",
-        "body": "<p>The seat of so much American history and culture, Atlanta is fast becoming a mecca for artists. With remarkable stories around every corner, Atlanta inspires a spectrum of creative experiences and anchors much of the action inspired by Emory professors. For a campus without Division 1 athletics, the arts take Emory into Atlanta and bring the city to our students—through performances, collaborations, and engagement with local visiting artists, fellows, and teachers.</p>",
+        "body": "<p>Atlanta is a thriving, global, city, with distinct history, voices, and potential to center artistic production within a research university. We will measurably change the footprint and prominence of the arts on campus, in the city of Atlanta, and far beyond. For a campus without Division 1 athletics, the arts take Emory into Atlanta and bring the city to our students—through performances, collaborations, and engagement with local visiting artists, fellows, and teachers.</p>",
         "layout": "right",
         "img_src": "ecas_priority_3.jpg",
         "media_src": "ecas_priority_3_popup.jpg",
@@ -137,7 +137,7 @@
     {
       "component": "ColumnsText",
       "props": {
-        "column1": "Cultivating the arts expands the undergraduate experience, improves access, and creates lasting, productive partnerships across creative disciplines. Funding fellowships and residencies in film, music, dance, theater, and creative writing while hosting internationally respected artists offers students ways to take big risks, pursue careers that align with their passions, and change the world by changing hearts.",
+        "column1": "Cultivating the arts expands the undergraduate experience, improves access to forms of creative and intellectual expression, and creates lasting, productive partnerships across creative disciplines. Funding fellowships and residencies in film, music, dance, theater, and creative writing while hosting internationally respected artists offers students ways to take big risks, pursue careers that align with their passions, and change the world by changing hearts.",
         "column2": "Investing in the arts gives voice to those unheard, canvas to those unseen, and shape to the way we understand humanity through creative expression. <strong>Emory College can lead the national creative conversation through the work of our students, faculty, alumni, and those who come here to perform and teach.</strong>"
       }
     },
@@ -163,8 +163,8 @@
         "title": "KEY PRIORITIES",
         "items": [
           {
-            "title": "Build Strength Through Program Endowments",
-            "description": "<p>Rooted in the work of top research faculty, Emory College has educational programs that are destinations for undergraduate students throughout the nation. Named endowments extend the reach of these leading programs and build additional strength, and they link the donors’ names to Emory’s excellence long term. These areas of strength have the power to transform how undergraduate students learn, preparing them to carry new perspectives into careers in every field.</p><p>For our nationally recognized <strong>Creative Writing Program, an endowed fellowship</strong> would attract and assist emerging writers, enhance the curriculum, and further build the program’s reputation. 2O36 will support an environment for writers to produce work that will be read, awarded, and widely taught. <strong>An endowment for the Department of African American Studies</strong> will help redefine understanding of race, inequality, and justice. This endowment could launch a PhD program in antiracism and the study of racial inequality, for example, or fund a research center to study contemporary and historical slavery or address health inequities.</p><p><strong>An endowment for the Center for Human Health,</strong> which brings Emory’s top researchers into the classroom, would allow visiting scholars to spend a year working with undergraduates on new developments in health. <strong>Endowed funding for the Department of Quantitative Theory and Methods</strong> (QTM) could create new research clusters in forward-focused areas such as data justice—bringing the data sciences into collaborations with scholars of race and racism—or biomedical sciences. Emory undergraduates will gain a unique skill set, and QTM-focused faculty will reinvent the approach to research.</p>"
+            "title": "Build Strength in Academic Areas",
+            "description": "<p>Rooted in the work of top research faculty, Emory College has academic areas that are destinations for faculty researchers and undergraduate students. Donor funding extends the reach of these leading programs and build additional strength, and they link the donors’ names to Emory’s excellence long term. These areas of strength have the power to transform how undergraduate students learn and academic disciplines.</p><p>For our nationally recognized <strong>Creative Writing Program, an endowed fellowship</strong> would attract and assist emerging writers, enhance the curriculum, and further build the program’s reputation. 2O36 will support an environment for writers to produce work that will be read, awarded, and widely taught. <strong>An endowment for the Department of African American Studies</strong> will help redefine understanding of race, inequality, and justice. This endowment could launch a PhD program in antiracism and the study of racial inequality, for example, or fund a research center to study contemporary and historical slavery or address health inequities.</p><p><strong>An endowment for the Center for Human Health,</strong> which brings Emory’s top researchers into the classroom, would allow visiting scholars to spend a year working with undergraduates on new developments in health. <strong>Endowed funding for the Department of Quantitative Theory and Methods</strong> (QTM) could create new research clusters in forward-focused areas such as data justice—bringing the data sciences into collaborations with scholars of race and racism—or biomedical sciences. Emory undergraduates will gain a unique skill set, and QTM-focused faculty will reinvent the approach to research.</p>"
           },
           {
             "title": "Encourage Collaboration of Emerging Scientists",
@@ -172,7 +172,7 @@
           },
           {
             "title": "Experiential Learning Through Emory Edge",
-            "description": "<p>The Emory experience includes anything that allows our students to apply the lessons they learn from our 86 majors and 63 minors. Outfitted with rigorous critical thinking skills, Emory College students can venture into a constellation of transformative experiences, including undergraduate research, entrepreneurship, internships, and study abroad. The Emory Edge program helps students choose which opportunities to participate in and makes sure those opportunities are available to all students, regardless of finances.</p><p><strong>In 2036, every Emory College student will participate in experiential learning.</strong> Endowing the Emory Edge program will fulfill the promise of an Emory experience that serves students for a lifetime. As our students navigate the larger world, they will carry with them Emory’s defining ethos: a sense of community brimming with opportunity.</p>"
+            "description": "<p>The Emory experience includes anything that allows our students to apply the lessons they learn from our 86 majors and 63 minors. Outfitted with rigorous critical thinking skills, Emory College students can participate in high-impact experiences, including undergraduate research, entrepreneurship, internships, and study abroad, which bring these skills into application. Emory Edge helps students choose which opportunities to participate in and makes sure those opportunities are available to all students, regardless of finances.</p><p><strong>In 2036, every Emory College student will participate in experiential learning.</strong> Funding experiential learning through Emory Edge will fulfill the promise of an Emory experience that serves students for a lifetime. As our students navigate the larger world, they will carry with them Emory’s defining ethos: a sense of community brimming with opportunity.</p>"
           }
         ]
       }
