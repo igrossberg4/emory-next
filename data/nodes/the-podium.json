@@ -90,7 +90,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 3: Coming soon September 27",
+        "pretitle": "episode 3",
         "title": "A Talk with Dakshitha Anandakumar",
         "body": "During a school field trip to a science museum, Dakshitha Anandakumar saw an exhibit on sensory perception that sparked her curiosity about how we perceive the world around us. As a graduate student in the biomedical engineering program at Georgia Tech and Emory University, she explores how the brain processes sound and understands speech. In this talk, Anandakumar shares exciting research that could lead to improved assessments and therapies for people with communication disorders like autism.",
         "tags": [
@@ -105,13 +105,13 @@
         ],
         "layout": "right",
         "img_src": "podium_dakshitha.png",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "https://vimeo.com/712134546/8b7e127f0f",
         "media_alt": "Dakshitha Anandakumar",
         "media_type": "video",
         "media_header": "Dakshitha Anandakumar",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     },
     {
