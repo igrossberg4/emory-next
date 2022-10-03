@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Empowering Global Health Leaders in 2036",
         "body": "<p>Today’s global health challenges require a variety of skills, approaches, and insights to develop creative and sustainable solutions. But most important, global health requires leadership. <strong>2O36 will dedicate resources to securing an endowed directorship to lead Emory Global Health Institute at a pivotal time, while providing perpetual funding for programs, research, and scholarship opportunities.</strong></p><p>In addition to allowing institute leaders to encourage, promote, and facilitate multidisciplinary approaches, an endowment will generate much-needed support for vulnerable populations living in low- and middle-income countries and help recruit and retain top talent to carry on the EGHI mission and vision. Thanks to your generosity, Emory and EGHI will continue to lead the way forward in creating a healthier future.</p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2036, Research is Limitless",
         "body": "<p>When it comes to advances in global health, few things are more important than the time, energy, and brain power it takes to solve complex, evolving challenges. It also takes investment. <strong>2O36 will provide Emory faculty members with pilot funding to address global health issues.</strong></p><p>Pilot funds are essential for giving faculty a platform to pursue game-changing ideas before they are ready for national funding. Not only will your support directly advance the work of Emory and EGHI faculty, it will also enhance our students’ experiences, offering opportunities to observe and participate in the kind of groundbreaking initiatives they hope to create one day.</p>",
         "layout": "right",
@@ -107,7 +107,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2036, Students Lead",
         "body": "<p>The more people working together to solve global health issues, the better — whether they’ve got 40 years of professional experience or are 2 years into a pre-med program. Harnessing fresh ideas from young leaders in training, the Emory Morningside Global Health Case Competition and the Intramural Emory Global Health Case Competition allow graduate and undergraduate students from multiple disciplines to collaborate on solutions for 21st century global health issues. <strong>2O36 promises to expand these annual competitions, which offer unparalleled professional development opportunities and build Emory’s reputation in global health.</strong></p><p>In 2021, the Emory Morningside Global Health Competition featured 52 teams from universities across 15 countries and 6 continents to develop plans for COVID-19 vaccination programs. The Emory model has grown into an internationally recognized program and has been replicated at other leading institutions. Now is the time to build on our momentum. With your support, imagine all the ways in which the global health experts of tomorrow can benefit from these hands-on learning experiences.</p>",
         "layout": "right",
@@ -122,7 +122,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Perspectives are Global in 2036",
         "body": "<p>We can’t expect to help communities around the world without a solid understanding and appreciation of their cultures. <strong>2O36 will invest in programs that promote cultural awareness around global health.</strong> By funding experiential projects that directly connect students with people from all walks of life, all around the world, we can prepare them to become global health leaders who appreciate the importance that cultural factors play in health outcomes.</p>",
         "layout": "right",

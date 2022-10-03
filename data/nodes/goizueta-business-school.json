@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Extending Access through Scholarships",
         "body": "<p>At Goizueta, students come first. That’s why one of our chief campaign priorities is scholarship support. The cost of pursuing an undergraduate, graduate, or PhD degree is a significant investment; one that can be a prohibitive obstacle for many. At their core, scholarships provide individual students financial relief and allow Goizueta to attract the most sought-after student talent. More broadly, they benefit communities by establishing a pipeline of diverse and talented students prepared  to join (or rejoin) the workforce.</p><p><strong>Your support of scholarships helps us attract and retain top students to Goizueta's degree programs; and to improve the diversity and talent of our student body.</strong> Our goal is to create equal access and opportunity for all students with the talent and abilities to drive business forward, regardless of their ability to pay. Tomorrow’s leaders and better businesses start with access and opportunity today.</p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Business and Society are One",
         "body": "<p>Goizueta Business School is reimagining business to solve society’s biggest problems – critical issues confronting people, the planet, and the business community. Its community-facing initiatives address long-standing inequities while empowering communities locally, regionally, and globally. Its research creates platforms for dialog, debate, and collaborative problem solving. Over the last decade, the school has accelerated more than 300 small businesses in underserved communities in Atlanta and Central America, published more than 30 research papers focused on business and society, enrolled 200+ students annually in social advancement courses. Goizueta challenges both its students and the world to further explore the connection between business and positive social impact.<p><p><strong>Funding through 2O36 will allow Goizueta to help markets work for more people in more places.</strong> It will provide for a wide range of student and community initiatives, including microbusiness development (Start:ME Accelerator), specialty coffee markets (Grounds for Empowerment and Transparent Trade Coffee), next-generation leaders (Social Enterprise Fellows), and faculty-led interdisciplinary research. This support can expand work to find solutions that transcend borders and politics and achieve thriving markets, vibrant communities, and a healthy planet for all.</p>",
         "layout": "right",
@@ -106,7 +106,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Data is Key to Understanding",
         "body": "<p>As businesses and organizations increasingly rely on data to drive decisions, we must invest in world-class programs that analyze, harness, and wield data to drive business forward. Goizueta prepares students to succeed in a data-driven world by teaching them to be fluent in the languages of business, data, and technology. Data is the key to solving some of the world's most complex challenges. And when you put that insight into the hands of a Goizueta business leader, you unlock the wisdom to transform industries.</p><p><strong>Your generosity to 2O36 allows us to meet the growing demand for data-savvy business professionals, attract talented students by expanding experiential learning programming, and provide analytics insights to our corporate partners.</strong> Through an immersive academic experience with an emphasis on hands-on learning in real-world partnerships, Goizueta’s data-driven graduates bring well-informed, innovative solutions to the table in any function, organization, or field.</p>",
         "layout": "right",
@@ -136,7 +136,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "GOIZUETA BUSINESS SCHOOL",
         "items": [
           {

@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Transforming Cancer Care",
         "body": "<p>Improved clinical outcomes. Higher patient satisfaction. First of its kind. Welcome to Winship at Emory Midtown, a freestanding, full-service cancer hospital by Georgia’s only National Cancer Institute-designated Comprehensive Cancer Center, Winship Cancer Institute of Emory University.</p><p>Set to open in spring 2023, Winship at Emory Midtown is conceived, designed and constructed to deliver a never-before-seen model of cancer care that bridges outpatient and inpatient care and integrates groundbreaking research into cancer preventions and treatments. Uniquely created to place patients at the center of collaborative cancer care teams, treatments and services, this next-generation cancer hospital is purpose-built to deliver an experience for each patient that is as personalized and advanced as the science of their care.</p>",
         "layout": "left",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "A Better Surgical Pavilion",
         "body": "<p><strong>A new surgical pavilion will be a space for physicians and nurses to effectively treat patients with the latest tools.</strong> Designed to support better patient experiences and optimal outcomes, this new facility will maximize the skill and talent of our physicians, nurses, and care teams. A new leading-edge surgical pavilion also will reduce costs, lower readmission rates, and provide greater access to the community.</p>",
         "layout": "right",
@@ -106,7 +106,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Elevating Heart Care and Research",
         "body": "<p>Heart disease remains the leading killer in the United States. <strong>By investing in research and clinical excellence in heart and vascular care, we will strengthen our ability to meet the needs of patients with sustainable and effective treatment interventions.</strong> Emory Healthcare has a national reputation for providing the most advanced treatment options. 2O36 will elevate clinical care, prevention programs, and research, providing patients and their families with the latest advances in heart health, including new devices, medicines, and technologies.</p>",
         "layout": "right",
@@ -136,7 +136,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "EMORY HEALTHCARE",
         "items": [
           {

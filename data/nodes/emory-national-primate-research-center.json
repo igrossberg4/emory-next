@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Developing Star Faculty",
         "body": "<p>As a generation of brilliant research leaders retires, their absence has the potential to stall progress toward new cures, treatments, and prevention strategies. This means recruiting and retaining promising, early-stage researchers is crucial for both Emory and EPC to maintain our top-notch workforce and reputation. <strong>2O36 endowment funding will provide five years of support for junior faculty who show great promise as EPC researchers.</strong> Together, we can build the next generation of leading researchers.</p>",
         "layout": "right",
@@ -77,7 +77,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Fighting Diseases in 2O36",
         "body": "<p>EPC brings together top researchers with advanced technology and equipment. Targeted investment in three research priorities—an HIV cure and vaccine, neurodegenerative diseases, and genomics—is needed to discover new treatments for destructive diseases. With scientific resources found at few other institutions, EPC teams collaborate with research colleagues across campus and around the world, making key discoveries.</p><p>Investing in disease-specific research speeds discovery and can support new, untested ideas not yet eligible for federal grants. The resulting data and proofs of concept help promising new ideas qualify more quickly for federal funding, often leading to breakthroughs. <strong>Innovation funds support transformational new technologies and targeted investments in specific high-priority research areas.</strong></p>",
         "layout": "right",
@@ -107,7 +107,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Nurturing New Ideas in 2O36",
         "body": "<p>Lack of funding is the leading reason up-and-coming researchers leave their fields for other pursuits. Pilot funding allows novel ideas and approaches to be tested, a key step in solving mysteries of human disease. <strong>Seed funds from 2O36 for short-term projects, especially studies by early-stage investigators, pave the way for National Institutes of Health funding.</strong> With pilot funding, researchers generate data that demonstrate proofs of concept for their ideas, a requirement in applying for federal grants needed to continue deep-diving research.</p>",
         "layout": "right",
@@ -123,7 +123,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "EMORY NATIONAL PRIMATE RESEARCH CENTER",
         "items": [
           {

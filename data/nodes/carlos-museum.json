@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2036, Students Come First",
         "body": "<p>The Carlos Museum is a center for student flourishing on campus. Emory students collaborate with curators, conservators, and educators to create exhibitions, investigate objects, and explore ideas through great works of art. With your support, 2O36 will further distinguish an Emory education by ensuring students have access to these unique research opportunities.</p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2036, Experts Are Essential",
         "body": "<p>Curators and conservators are essential to the Carlos Museum, leading research and publication of the collections, developing exhibitions, and contributing to the academic vitality of the Emory scholarly community. 2O36 investment in curatorial support will allow the Carlos Museum to hire and retain curators and conservators of the highest caliber as well as provide funding for research, exhibitions, and professional development.</p>",
         "layout": "right",
@@ -91,7 +91,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "With 2O36, the Collections Are The Heart of the Museum",
         "body": "<p>The Carlos Museum collections include art from Africa; Ancient Egypt, Nubia and the Near East; Ancient Greece and Rome; the Indigenous Americas; and South Asia as well as American and European works on paper. With your help, 2O36 will ensure these collections are accessible to the campus and community, through continuous research and scholarship, contemporary exhibition design features, and innovative public programming. Endowment can transform these galleries into nimble and dynamic spaces of learning and wonderment, incorporating the work of contemporary artists and descendent communities in dialogue with museum collections.</p>",
         "layout": "right",
@@ -121,7 +121,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "New Exhibitions Are Headed for 2036",
         "body": "<p>Museums are places to explore and discover; to remember where we’ve been and consider how our past shapes our present and our future. While permanent collections shape a museum’s identity, temporary exhibitions engage with those collections in real time- expanding our understanding of them, showcasing new scholarship, and attracting new audiences.</p><p><strong>With that in mind, 2O36 will fund the renovation of the Carlos Museum's temporary exhibition galleries and the development of new exhibitions in partnership with national and international collaborators.</strong> </p>",
         "layout": "right",
@@ -136,7 +136,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "The Carlos Museum Is A Launchpad For Youn Scholars In 2036",
         "body": "<p>The Carlos Museum supports new scholars by launching their careers at Emory University. Postdoctoral positions offer the opportunity for targeted research focused on important but underserved areas of the Carlos Museum’s extensive and diverse collections. Postdoctoral fellowships allow the museum to broaden and deepen its knowledge production and increase access to its collections through exhibitions and programming. 2O36 support will ensure the Carlos Museum and Emory University promote the careers of young scholars while expanding access and scholarship at the museum.</p>",
         "layout": "right",
@@ -151,7 +151,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "Michael C. Carlos Museum",
         "items": [
           {

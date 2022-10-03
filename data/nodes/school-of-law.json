@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Student Recruitment, Access and Success",
         "body": "<p>Emory Law seeks to recruit ambitious, outstanding, and diverse students from across the nation who aspire to the level of excellence associated with Emory lawyers. By tripling the size of its endowments devoted to merit scholarships, needs-based financial aid, and other forms of student support, Emory Law will provide the nation’s top students access to exceptional legal education and prepare these future leaders for career success without financial hardship.</p><p><strong>It is imperative that Emory Law be the gateway for professional success and service to society for students from a wide range of backgrounds and financial circumstances while also supporting long-term financial stability for the school.</strong></p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2036, Leaders Take Charge",
         "body": "<p>By increasing the number of endowed professorships and distinguished professorships, Emory Law will have the means to recruit thought leaders who will spend a large portion of their career with us. Because of this, these professors will shape the scholarship, teaching, and mentorship of the school for decades to come and must be of the highest caliber. <strong>Increasing the number of endowed positions will make Emory Law more competitive in recruiting and retaining top-tier faculty in legal scholarship.</strong></p>",
         "layout": "right",
@@ -107,7 +107,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "A Hub for Civil Rights and Social Justice",
         "body": "<p>It is crucial for Emory University School of Law to take advantage of the unique benefits of calling Atlanta home. Being a birthplace of the civil rights movement and now a bustling  business hub, Emory Law will have the ability to partner with other schools and units at Emory along with community organizations to lead sustainable change in fighting injustice.</p><p><strong>Emory Law will accelerate an integral part of the university and school’s strategic plan with the creation of the Center for Civil Rights and Social Justice.</strong> The center will serve as a hub for interdisciplinary scholarship, research, teaching, evidence-based policy reform, and community outreach. Significant investments have already been made in this area by Southern Company Foundation, Inc., other alumni, and friends.</p>",
         "layout": "right",
@@ -137,7 +137,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Students Provide Community Support",
         "body": "<p>Through the centers, clinics, and institutes at Emory Law, students have access to hands-on experiences through live-client clinics, community outreach, and policy analysis. These experiential aspects of Emory Law’s curriculum are crucial in shaping leaders in various areas of law and preparing them for a successful career.</p><p><strong>2O36 will provide support for students to continue participating in pro bono legal support for individuals, community groups, and nonprofit organizations.</strong> This experience provides a tremendous benefit while training students and instilling in them the importance of volunteering and service, contributing to a profession led with empathy and understanding.</p>",
         "layout": "right",

@@ -62,7 +62,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Access for All Students",
         "body": "<p>Key to a better future, access to higher education through scholarships is a social good. Opening up an Emory College education to the most talented students, no matter their income levels, benefits all students, their families, and the larger society.</p>",
         "layout": "right",
@@ -84,7 +84,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Equip Faculty for the Future",
         "body": "<p>Preeminent in their fields and devoted to teaching and research, more than 550 Emory College faculty reach across 50 departments and programs to equip students with the tools to explore lifelong passions. <strong>With 2O36, we will continue to grow an Emory College faculty who have both the potential to change the lives of students in the classroom and how the world approaches the most important questions of our time through their work in the lab, library, and stage.</strong></p>",
         "layout": "left",
@@ -122,7 +122,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Cultivate the Arts",
         "body": "<p>Atlanta is a thriving, global, city, with distinct history, voices, and potential to center artistic production within a research university. We will measurably change the footprint and prominence of the arts on campus, in the city of Atlanta, and far beyond. For a campus without Division 1 athletics, the arts take Emory into Atlanta and bring the city to our students—through performances, collaborations, and engagement with local visiting artists, fellows, and teachers.</p>",
         "layout": "right",
@@ -160,7 +160,7 @@
       "component": "AccordionComponent",
       "props": {
         "pretitle": "COLLEGE OF ARTS & SCIENCES",
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "items": [
           {
             "title": "Build Strength in Academic Areas",

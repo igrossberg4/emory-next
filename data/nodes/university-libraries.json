@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Celebrating Literature and Poetry",
         "body": "<p>Including the papers of writers, poets, and critics; records of publishers and presses; and rare books and literary manuscripts, our collections make Emory Libraries a destination for scholars from around the world. The Rose Library houses a globally significant collection of centuries of materials from Irish literature to modern poetry, African American writers, Georgia and Southern writers, counterculture, and the Beats.</p><p><strong>Endowed funding for Emory’s literature and poetry collections will allow us to expand and care for the collections.</strong> An endowment also provides funding for exhibitions and programs so we can share these extraordinary collections with the larger community.</p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Documenting Political, Cultural, and Social Movements",
         "body": "<p>In addition to books and literary records, the Rose Library collects materials that document the history, culture, and politics of Atlanta and the South. These materials highlight the remarkable changes from the end of the Civil War to Atlanta’s emergence as a 21st-century cosmopolitan center. History comes alive for researchers, scholars, and the public alike in photos showing how Atlanta’s skyline has changed, personal journals about confronting a public health crisis, and newspaper columns published after the 1963 bombing of the 16th Street Baptist Church in Birmingham.</p><p><strong>With a gift to 2O36, we can continue growing the collection, properly care for the pieces, and host exhibitions and programs so the community can bear witness to this living history.</strong> Because the best teachers of history are the activists, artists, athletes, business leaders, elected officials, journalists, and organizations that lived it, challenged the thinking of their day, and influenced the political, cultural, and social movements of the region.</p>",
         "layout": "right",
@@ -107,7 +107,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Rare Books: A Wealth of Knowledge to Share",
         "body": "<p>Complementing its manuscript holdings, the Rose Library is also home to several hundred thousand volumes of rare books and serials dating from the 13th to the 21st centuries, covering a wide range of subjects from religious texts to anatomical engravings and avant-garde poetry. Highlights of the collection include art and art history, 19th- and 20th-century British literature and Victorian novels, African American literature and imprints, and volumes of Southern history. The personal libraries of many important writers, scholars, presses, and collectors are additional standouts. From the first editions to their translations, inscribed and signed copies, and adaptations, the rare books collection is a treasured resource for textual and bibliographical research.</p><p><strong>Funding through 2O36 would endow a curator position and provide the much-needed resources to make the collection more widely available to the Emory community and beyond.</strong> A collection of this caliber requires a curator whose expertise and energies would focus on expanding it, organizing programming and exhibitions, and connecting with those who will appreciate and learn from it.</p>",
         "layout": "right",
@@ -122,7 +122,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "UNIVERSITY LIBRARIES",
         "items": [
           {
