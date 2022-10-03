@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2O36, Innovation is Elemental",
         "body": "<p>World-class facilities. Visionary thinking. Boundless opportunities. The Emory Nursing Learning Center (ENLC) opened in late summer 2022, leading the way in nursing education. With the latest technologies and advanced teaching methods, including advanced simulation and skills labs, the facility will support experiential and immersive learning for our students. It is also home to the Emory Nursing Experience (ENE), helping to advance knowledge for continuing professionals, in partnership with Emory Healthcare.</p><p>The new simulation center is where new classes of nurse leaders will train in world-class care. And by sharing our facilities, equipment, and programs with others across the region who need advanced training, Emory will solidly plant a flag as the health care leader in the southeast. <strong>Supporting 2O36 helps provide a unique opportunity for collaboration and growth between the School of Nursing and Emory Healthcare, keeping Emory at the forefront of health care innovations.</strong></p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Cultivating Leadership",
         "body": "<p>To retain and develop widely respected faculty at a nursing school of our ranking, access to flexible development funds is crucial. <strong>Financial support for the faculty development endowment through 2O36 ensures that faculty can fully contribute to the field of nursing science and clinical practice, increasing their scholarly and clinical accomplishments.</strong></p><p>Expected to improve both retention and productivity of nursing faculty members, these funds may support academic leaves for faculty to participate in fellowships opportunities that enhance their professional development.</p><p>These funds support the recruitment and retention of the School of Nursing’s outstanding faculty, allowing faculty members to pursue fellowship opportunities and other professional development endeavors.</p>",
         "layout": "right",
@@ -106,7 +106,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2O36, Data Leads Decisions",
         "body": "<p>A hub for research and the education of future nursing and health care leaders, the Data Science Center is among a growing number of data science resources across Emory University. Signature initiatives include Project NeLL and Project CONQUER, that use artificial intelligence to guide insights into practice.</p><p>From better clinical decision support, to discovery of metabolic bases of disease, to population health management, the Data Science Center’s goal is to use data-driven analysis to address nursing and health care challenges. <strong>With the help of 2O36, this immersive initiative will highlight the role of nursing science in solving complex problems and prepare nursing students to accelerate the future of patient care through data analytics.</strong></p>",
         "layout": "right",
@@ -137,7 +137,7 @@
       "component": "AccordionComponent",
       "props": {
         "pretitle": "NELL HODGSON WOODRUFF SCHOOL OF NURSING",
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "items": [
           {
             "title": "Revolutionizing Approaches for 2O36",

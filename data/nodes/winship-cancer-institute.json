@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Patients Come First at Winship",
         "body": "<p>In Winship’s specialized care communities, patients receive personalized cancer treatment aligned with groundbreaking research. To continue growing, Winship plans to expedite care, further improve outcomes, and foster more seamless collaboration among experts. <strong>The new Winship Emory Midtown Center—with increased operating room capacity and reduced surgery wait times—will support these goals while making things easier for Winship patients.</strong></p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Recognizing Discoveries",
         "body": "<p>The Winship community takes pride in the power of our people. Our physician scientists—with discoveries in cancer cell biology, genetics, drugs, radiation, surgery, and other therapies— produce some of the best treatments available.</p>",
         "layout": "right",
@@ -107,7 +107,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Invest in Faculty, Invest in the Future",
         "body": "<p>Endowed professorships are key to retaining the best faculty and brightest minds in cancer research, care, and education. They also allow us to keep our designation as a National Cancer Institute (NCI) Comprehensive Cancer Center, a status dependent on the leadership of clinicians, scientists, educators, community liaisons, and staff.</p><p><strong>With support provided through 2O36, Winship will be able to endow five positions for research programs and 10 positions for senior investigators.</strong> These endowments will help to improve our profile as a research institution and will increase the amount of grant and philanthropic assistance we receive.</p>",
         "layout": "right",
@@ -123,7 +123,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "WINSHIP CANCER INSTITUTE",
         "items": [
           {
