@@ -153,7 +153,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 4: Coming soon October 4",
+        "pretitle": "episode 4",
         "title": "2O36: A Future Without Fear",
         "body": "What do bungee jumpers, race car drivers, and skydivers have in common? Are they born fearless? In this episode, Emory Alumni Board President Munir Meghjani speaks with clinical psychologist Kenneth Carter at Oxford College of Emory University about the psychology behind thrill-seeking behavior. He also describes how we can use this insight to better understand ourselves and each other.",
         "tags": [
@@ -182,13 +182,13 @@
         ],
         "layout": "left",
         "img_src": "podcast_episode_4.jpeg",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-05-06-emory-iup-podcast-carter.mp3",
         "media_alt": "A Future Without Fear",
         "media_type": "video",
         "media_header": "A Future Without Fear",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     },
     {
