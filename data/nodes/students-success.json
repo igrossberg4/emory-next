@@ -54,7 +54,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Scholarships Mean Better Access",
         "body": "<p>First-generation college students face unique psychological, academic, and financial challenges that can interfere with the completion of their  undergraduate studies. Many of these students come from low-income families who can provide less financial support than those of their peers. For these students, scholarships can be the deciding factor in their college choice.</p><p>To  ensure that the best students come to Emory, we must offer competitive and compelling scholarships to first-generation students. <strong>By creating an endowed scholarship at Emory, we will provide enduring opportunities not just for a single student, but for entire generations.</strong></p>",
         "layout": "right",
@@ -69,7 +69,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "With 2O36, Experience is Part of the Curriculum",
         "body": "<p>The Emory experience is much more than strong academics or a vibrant on-campus community. Experiential learning opportunities like undergraduate research, internships, and education abroad teach our students how to translate their academic interests and training into transformative careers and lives. These experiences challenge students to apply new skills, make discoveries about themselves, and forge paths that they will follow long after graduation. <strong>Through the support of 2O36, we can help cultivate an entire generation of Emory leaders.</strong></p>",
         "layout": "right",
@@ -99,7 +99,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Research Moves Us Forward to 2O36",
         "body": "<p>Our students are some of the best in the country. When they come to Emory, our top tier faculty guide them through research projects in their respective fields of study. Our undergraduate research programs support scholarship opportunities in classrooms, laboratories, libraries, studios, and overseas programs; graduate research opportunities are equally vast, and position students alongside leading professors and experts. Over our history, Emory has established itself as a research powerhouse, but it’s important that we continue to accelerate research excellence. <strong>This is Emory’s chance to shape the future on the road to 2O36, fueled by continued investment in pioneering research.</strong></p><p>Investments in research allow our faculty, students, and researchers to address some of the most pressing issues of the day. Exciting research in the humanities, social sciences, law, and theology is uncovering challenges to address to advance social and racial justice. Scientists and biomedical researchers across the university and Emory Healthcare are working toward eliminating cancer and the effects of brain traumas. And we’re modeling into the future to understand how artificial intelligence can better serve humanity in the many ways it will be used.</p>",
         "layout": "right",
@@ -129,7 +129,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "STUDENT FLOURISHING",
         "items": [
           {

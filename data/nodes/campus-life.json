@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Rewarding Student-Athletes in 2O36",
         "body": "<p>It’s time for Emory Athletics to get its due. In the same way that the arts are an essential part of Emory’s culture, sports make an invaluable contribution to campus life for participants and fans alike. <strong>2O36 will endow all 19 varsity sports, enhancing the student-athlete experience and reinvigorating school spirit and pride across the Emory community.</strong></p><p>Armed with sustainable funding, coaches for every sport will be able to meet the changing needs of our student-athletes. Endowments will support customized nutrition plans and wellness programs and address the inherent challenges that are part and parcel of all college athletics, from transportation and equipment costs to stipends for assistant coaches. If we are serious about supporting the entire Emory community—and we are—student-athletes must be recognized as essential members and leaders of our community.</p>",
         "layout": "right",
@@ -91,7 +91,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2O36, Students Are Global Citizens",
         "body": "<p>While our physical campuses will always remain the heart and soul of our community, Emory’s off-campus presence is more important than ever: across Atlanta, throughout the country, and around the world. Preparing students to become community leaders will be a key part of our future, but how can we accomplish this in an engaging way? How do we encourage Emory graduates to become agents of change? <strong>2O36 will invest in global citizenship experiences designed to provide students with life-changing, real-world learning opportunities.</strong></p><p>Tutoring K-12 students at an Atlanta public school. Registering voters in historically marginalized communities. Whatever piques our students’ interests. We want them to engage with the world around them firsthand—to be ambitious but open-minded; eager for change but realistic about what it takes. With your support, students can make a direct link between the classroom and the community while learning how to listen, act, collaborate, and grow.</p>",
         "layout": "right",
@@ -122,7 +122,7 @@
       "component": "AccordionComponent",
       "props": {
         "pretitle": "CAMPUS LIFE",
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "items": [
           {
             "title": "Centering on Well-Being Through 2O36",

@@ -54,7 +54,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Top Faculty Attracts Top Faculty",
         "body": "<p>Through teaching, research, and service, Emory faculty members play an essential role in helping the university achieve its vision of an inquiry-driven, ethically engaged, and inclusive intellectual community. Emory faculty do more than just teach. They are distinguished scientists and researchers, authors, and public intellectuals who’ve become household names, like Dr. Sanjay Gupta, CNN chief medical correspondent; and Carol Anderson, the author of White Rage: The Unspoken Truth of Our Racial Divide. Among our distinguished faculty, we can boast of two Pulitzer Prize and two Nobel Peace Prize winners.</p><p>Our faculty’s commitment to their communities and their students leaves an impression well beyond their time at Emory. While inspiring students and driving educational excellence, Emory’s world-renowned professors have the attention of their peers, both in their fields and related fields. Because top scholars want to study, teach, and work alongside each other, the more our faculty are recognized as leaders in their fields, the more they attract new highly respected faculty. <strong>By funding 2O36, you can help facilitate these academics’ research pursuits so they can reach their full potential and achieve such distinction.</strong></p>",
         "layout": "right",
@@ -69,7 +69,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Attracting Top Scholars",
         "body": "<p>Gone are the days of offering only traditional majors. Cross-disciplinary research allows Emory students to combine their specific areas of study with their varied passions, and even to respond to new trends and challenges in science, business, society, and beyond. We foster creativity, curiosity, and the freedom that enables a vision for change. By creating their own academic paths and combining seemingly unrelated studies, students create  ingenious ways to make the world better.</p><p>Singular research opportunities with ​​some of the brightest minds in academia, partnerships with major research institutions, and the ability to tailor their educational experiences are just some of the many reasons Emory’s student body represents more than 100 countries. That academic and social diversity allows our community to thrive. <strong>Your support of 2O36 allows for research funding, and for the scholarships needed to support students using their creativity and ingenuity to make a better world.</strong></p>",
         "layout": "right",
@@ -100,7 +100,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Research Shapes Curriculum",
         "body": "<p>At Emory, learning isn’t relegated to the classroom. Research isn’t just important for the discoveries themselves and the improvements those discoveries can make in people’s lives, it’s an essential part of the Emory educational experience.</p><p>In research, students get first-hand experience that can’t be found in a textbook. Our local community benefits from the work of students and faculty. And as students are able to study abroad, they gain an understanding of how their discoveries can have effects far from home. <strong>With an education built on rigorous experiential learning, Emory students have near endless opportunities to explore thrilling ideas, a broadened sense of their potential, and a distinctive foundation to build pathways to meaningful careers.</strong></p>",
         "layout": "right",
@@ -130,7 +130,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "RESEARCH EXCELLENCE",
         "items": [
           {

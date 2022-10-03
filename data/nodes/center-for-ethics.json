@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2O36, Graduate Studies in Ethics are Available to All",
         "body": "<p>As we’ve seen throughout the COVID-19 pandemic, the study of social and ethical challenges facing medicine and life sciences is continually evolving. Professionals and students dive deep into these challenges with rigorous interdisciplinary study in the Master of Arts in Bioethics program.</p><p>Our graduates help advance the national conversation on important issues influencing public policy, scholarship, practice, and education in these fields. <strong>Funding for scholarships allows us to recruit the best and the brightest, while leveling the playing field for students to pursue careers aligned with their passions and talents without worrying about overwhelming debt.</strong> The successful future for health and the life sciences depend on our ability to financially support scholars learning how to address ongoing and emerging social and ethical challenges in healthcare.</p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Experiential Learning Trains the Ethical Leaders of the Future",
         "body": "<p>The need for ethical servant leaders has never been greater. The Center's D. Abbott Turner Program in Ethics and Servant Leadership (EASL) is shaping future community leaders with hands-on training and a guided, purposeful opportunity for individual reflection. Students live out ethical leadership in this sought-after summer internship program that benefits local nonprofits. The expertise they gain in real-world situations has lasting effects on Emory and wider society.</p><p><strong>Increasing scholarship support will allow students from all backgrounds to participate in this important program regardless of financial situation, while providing Atlanta’s community organizations with skilled and talented support to further their missions. </strong></p>",
         "layout": "right",
@@ -106,7 +106,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Advancing Humanity with Ethical AI",
         "body": "<p>The remarkable advances in artificial intelligence (AI) promise unprecedented advantages—in commerce, medicine, and our everyday lives. Yet, the development of AI is fraught with complex challenges. Ethics is intrinsic to AI and the Center for Ethics is on the frontline, expertly guiding scholars, researchers, professionals, and entrepreneurs in ways that AI applications will promote human flourishing, eliminate bias, manage ambiguity, and employ ethical decision-making.</p><p>The Center for Ethics is prepared to advance the creation of review boards for far-reaching AI decisions, while also providing ethics training for those working in machine learning at research institutions, private companies, and government oversight agencies.</p><p>A generous gift to 2O36 will allow us to create an Endowed Program Leader in AI and Ethics to ensure we bring ethics to bear when developing, funding, implementing, and responding to AI in different settings.</p>",
         "layout": "right",

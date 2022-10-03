@@ -57,7 +57,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Create a Hub for Scientific Discoveries",
         "body": "<p>Emory University’s latest beacon of biomedical research, the Health Sciences Research Building II (HSRBII) will be a hub for scientific discoveries and entrepreneurial research. <strong>Investment in 2O36 will support this facility, providing laboratories for 130 principal investigators in many specialties.</strong> With a state-of-the-art building that reflects the school’s ambitious vision, we can dramatically increase our recruitment capabilities, bringing in the world’s leading scientists and scholars to help us transform patient care.</p><p>HSRBII will inspire connectivity, cross-disciplinary research, and collaboration, fostering innovation across a wide range of areas, from biomedical engineering and informatics to imaging sciences, brain health, cardiovascular medicine, child health, cancer, inflammation, and immunotherapy.</p>",
         "layout": "right",
@@ -72,7 +72,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Mastering the Art and Science of Medicine",
         "body": "<p>In an era of artificial intelligence and other automated processes, physicians who understand both the art and science of medicine are increasingly rare. This is why they’re so important in medical education. <strong>With endowment funding, Emory School of Medicine will attract master clinicians to guide students with expertise and empathy.</strong> By teaching our students the art of medicine and the latest science, these master clinicians will ensure that new Emory physicians will provide effective, compassionate care.</p>",
         "layout": "right",
@@ -103,7 +103,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Access for More Students",
         "body": "<p>Health care—both in practice and accessibility—must become more equitable. To that end, the Emory School of Medicine is committed to offering scholarships to students and trainees across all backgrounds, regardless of their financial situation.</p><p>By providing more scholarship opportunities, students will be able to pursue fulfilling and meaningful careers without having to prioritize specialties that promise the highest potential earnings. <strong>Thanks to 2O36, Emory School of Medicine will continue to be a leader in education, increasing access for talented aspiring physicians eager to keep our communities healthy.</strong></p>",
         "layout": "right",
@@ -118,7 +118,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "SCHOOL OF MEDICINE",
         "items": [
           {
