@@ -136,6 +136,8 @@
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "PRIORITIES",
+        "pretitle": "OXFORD COLLEGE",
         "items": [
           {
             "title": "Sustainability is Essential",
