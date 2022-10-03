@@ -121,6 +121,8 @@
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "PRIORITIES",
+        "pretitle": "CENTER FOR ETHICS",
         "items": [
           {
             "title": "Cultivating the Ethics and the Arts Program",
