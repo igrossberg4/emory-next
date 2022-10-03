@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2036, Students Flourish",
         "body": "<p>Our faculty, our facilities, and our proximity to the Centers for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p>Scholarships for Masters of Public Health students will help address the enormous surge in student interest in public health. Increasing support for PhD students will ensure Rollins a competitive edge in attracting leading candidates, which will strengthen faculty recruitment and research. <strong>Rollins seeks to expand our ability to provide both financial support and valuable career-enhancing experiences to a higher percentage of our students through our work-study and global field experience funds.</strong></p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "The Power of Flexible Support",
         "body": "<p>Unrestricted endowment funds allow the dean to respond to priority needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 25 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
         "layout": "right",
@@ -107,7 +107,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Improving Cancer Prevention",
         "body": "<p>Working with the Georgia Cancer Registry, Rollins researchers are building the world’s first database of cancer recurrence, launched by a time-limited National Institutes of Health grant. Given that 15 million cancer survivors live in the United States alone, the new registry will fill an important gap in knowledge. Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.</p>",
         "layout": "right",
@@ -138,7 +138,7 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "pretitle": "ROLLINS SCHOOL OF PUBLIC HEALTH",
         "items": [
           {

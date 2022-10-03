@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Broaden Career Opportunities",
         "body": "<p>What good is a graduate degree—to students, their communities, or the world—without understanding how to do the most good with it? That’s the thinking behind the Graduate Institute for Professional Development and Career Planning. <strong>A named endowment would allow this institute to develop new ways to prepare students for a competitive, ever-changing job market and open their eyes to a wider range of career paths.</strong></p><p>This endowment opportunity would support additional training and workshops around ethics, pedagogy, grant writing, and diverse career exploration. It would connect students with research and training opportunities through partnerships with the Centers for Disease Control and Prevention, the High Museum of Art, Fortune 500 companies, and other organizations. All the while, students will develop professional skills that enhance their abilities to thrive in both academic and nonacademic careers.</p>",
         "layout": "right",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Remove Barriers",
         "body": "<p>Since its initial pilot in 2016-2018, Communities of Practice has brought together doctoral and master’s students, faculty, and practitioners from across the humanities and social sciences. Together, they break down the boundaries between the university and the world, combining utilitarian approaches to international development—which stress efficiency, rationality, and personal gain—and those that recognize the importance of culture and meaning in understanding behavior.</p><p>Endowing our Communities of Practice program allows us to expand and diversify our student population by engaging Atlanta’s diverse international communities. <strong>Providing much-needed tuition support and alleviating program-related expenses will make Emory the top choice for students from across the United States and around the world, allowing them to graduate with little or no debt</strong> as they enter service-related careers in global sustainable development.</p>",
         "layout": "left",
@@ -106,7 +106,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "In 2O36, Connections are Vital",
         "body": "<p>Emory graduate students are harnessing the power of artificial intelligence and natural language processing to, for example, remedy depression, loneliness, and symptoms of Alzheimer’s disease. In developing a chatbot for Amazon Alexa that makes logical inferences, rather than functioning as a search engine, they’re teaching bots to ask questions that lead people to seek much-needed human companionship and treatment. Without the mentorship of faculty researchers and connections to organizations outside of Emory, this kind of groundbreaking work wouldn’t be possible.</p><p><strong>2O36 will generate support for the Laney Fund for Professional Gateway Fellowships, which offer graduate students supplemental income during professional internships. </strong> These real-world experiences are a gateway into new industries, positions, and uses for their degrees. By helping students form deep connections within organizations in Atlanta and around the world, we give them a competitive edge.</p>",
         "layout": "right",
@@ -138,7 +138,7 @@
       "component": "AccordionComponent",
       "props": {
         "pretitle": "LANEY GRADUATE SCHOOL",
-        "title": "KEY PRIORITIES",
+        "title": "PRIORITIES",
         "items": [
           {
             "title": "Support Courage",

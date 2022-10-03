@@ -61,7 +61,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Better Access Starts with 2O36",
         "body": "<p>Every family sending a student to college cares about the value proposition. Oxford provides an education of true and abiding value for our graduates, preparing them for personal and professional success. Making that education affordable for students from all backgrounds is integral to our educational mission.</p><p>Trailing our peer colleges and universities in endowment funding, Oxford needs endowed funds to provide student scholarships in perpetuity. <strong>With your support for 2O36, we can offer more scholarships so that more high-ability, high-potential students from all income levels will be able to attend and graduate from Oxford College.</strong> Scholarship endowments open Oxford’s doors to students who are engaged in their communities and looking to make the world—in ways big and small—a better place.</p>",
         "layout": "left",
@@ -76,7 +76,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Expanding Student Horizons by 2036",
         "body": "<p>The Oxford College student experience applies the liberal arts to leadership in real life. Starting their first year, students can take advantage of learning experiences outside of the classroom. <strong>Through 2O36, we can create a Center for Pathways and Purpose to unite our curricular and co-curricular programs in leadership education, internships and community engagement, global studies, and career exploration.</strong></p><p>Whether in Oxford, Georgia, or Oxford, England, students will get firsthand experience that can’t be found in a textbook. Our local community will benefit from the work that student volunteers perform in public schools, medical facilities, senior living communities, and other spaces. And as students study abroad, we prepare them to make a difference in the world and elevate Oxford’s identity as an international liberal arts college. With an education built on this kind of holistic, experiential learning, Oxford College students can build pathways from the liberal arts to meaningful careers.</p>",
         "layout": "right",
@@ -106,7 +106,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Key Priority",
+        "pretitle": "Campaign Priority",
         "title": "Research Isn’t Just for Faculty",
         "body": "<p>An Oxford education centers on the close attention of faculty teaching and mentoring our students through their academic and research pursuits. <strong>Through your support for 2O36, we can create an endowed fund for student-faculty collaborative research so that more Oxford students can access valuable research opportunities.</strong> Collaborative projects bolster students’ educational experience, prepare them for professional opportunities, and enable Oxford to compete with top liberal arts colleges and research universities alike.</p>",
         "layout": "left",
@@ -136,6 +136,8 @@
     {
       "component": "AccordionComponent",
       "props": {
+        "title": "PRIORITIES",
+        "pretitle": "OXFORD COLLEGE",
         "items": [
           {
             "title": "Sustainability is Essential",
