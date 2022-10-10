@@ -4,7 +4,7 @@
   "page_props": {
     "header": "ROLLINS SCHOOL<br>OF PUBLIC HEALTH",
     "about": "school spotlight",
-    "text": "A place where students learn to identify, analyze, and create solutions to global health problems.",
+    "text": "​​Our mission—producing knowledge through education and research to improve health on a global scale—has never been more relevant.",
     "button_scroll": "Scroll to explore",
     "img_src": "rollins_lede.jpg",
     "footer": {
@@ -33,7 +33,7 @@
       "props": {
         "header": "Cultivating the public health leaders of tomorrow, the Rollins School of Public Health improves health and well-being through excellence in teaching, research, and the application of knowledge in partnership with domestic and global communities.",
         "background_image": "rollins_isolated_bg.png",
-        "text": "<p>Founded just more than 30 years ago, Rollins has experienced unparalleled growth. Now recognized as one of the world’s leading schools of public health, Rollins strives to be second to none. The global pandemic has brought into sharp focus the necessity of a robust, well-trained public health workforce. Our mission—producing knowledge through education and research to improve health on a global scale—has never been more relevant.</p>",
+        "text": "<p>Founded just more than 30 years ago, Rollins has experienced unparalleled growth in size and stature. Now recognized as one of the world’s leading schools of public health, Rollins strives to be second to none. The global pandemic has brought into sharp focus the necessity of a robust, well-trained public health workforce.</p>",
         "img_src": "rollins_intro.jpg",
         "media_src": "https://vimeo.com/635621432/7e0ecfcf55",
         "media_alt": "Rollins student abroad",
@@ -45,8 +45,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "At Rollins, we share the value of investing in people knowing that investments in our students have an immediate impact on their lives and long-term implications for the well-being, health, and happiness of populations throughout the world. We are preparing students for lives of leadership on a global scale.",
-        "attribution": "— James W. Curran, MD, MPH, James W. Curran Dean of Public Health<br/>Co-Director, Emory Center for AIDS Research<br/>Professor of Epidemiology"
+        "text": "These are challenging times. Throughout the world, we are facing newly emerging infections, accelerated chronic diseases, deteriorating mental health, natural disasters, wars, climate crises, limited reproductive health care options, continued gun violence, acts of racism, and the ongoing COVID-19 pandemic. Rollins faculty and students are meeting these challenges and our scholarship, practice, and research are needed now more than ever.",
+        "attribution": "— M. Daniele Fallin, PhD, James W. Curran Dean of Public Health"
       }
     },
     {
@@ -63,7 +63,7 @@
       "props": {
         "pretitle": "Campaign Priority",
         "title": "In 2036, Students Flourish",
-        "body": "<p>Our faculty, our facilities, and our proximity to the Centers for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p>Scholarships for Masters of Public Health students will help address the enormous surge in student interest in public health. Increasing support for PhD students will ensure Rollins a competitive edge in attracting leading candidates, which will strengthen faculty recruitment and research. <strong>Rollins seeks to expand our ability to provide both financial support and valuable career-enhancing experiences to a higher percentage of our students through our work-study and global field experience funds.</strong></p>",
+        "body": "<p>At Rollins, we share the value of investing in people knowing that investments in our students have an immediate impact on their lives and long-term implications for the well-being, health, and happiness of populations throughout the world. We are preparing students for lives of leadership on a global scale.</p><p>Our faculty, our facilities, and our proximity to the Centers for Disease Control and Prevention all help to attract some of the nation’s best students. But our inability to provide scholarship support to more than a fraction of them, however, limits the number who are able to attend.</p><p>Scholarships for Masters of Public Health students will help address the enormous surge in student interest in public health. Increasing support for PhD students will ensure Rollins a competitive edge in attracting leading candidates, which will strengthen faculty recruitment and research. <strong>Rollins seeks to expand our ability to provide both financial support and valuable career-enhancing experiences to a higher percentage of our students through our work-study and global field experience funds.</strong></p>",
         "layout": "right",
         "img_src": "rollins_priority_1.jpg",
         "media_src": "rollins_priority_1_popup.jpg",
@@ -78,7 +78,7 @@
       "props": {
         "pretitle": "Campaign Priority",
         "title": "The Power of Flexible Support",
-        "body": "<p>Unrestricted endowment funds allow the dean to respond to priority needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 25 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
+        "body": "<p>Unrestricted endowment funds allow the dean to respond to priority needs and opportunities. In recent years, for example, unrestricted funding has helped support more than half of the school’s department chairs and many assistant professors. By dedicating a small percentage of unrestricted endowment income to match scholarship gifts, Rollins has established more than 30 new endowed funds for student scholarships. <strong>Increasing the unrestricted endowment will enable Rollins to compete with other top-ranked schools of public health and to recruit and retain stellar faculty members.</strong></p>",
         "layout": "right",
         "img_src": "rollins_priority_2.jpg",
         "media_src": "rollins_priority_2_popup.jpg",
@@ -105,22 +105,6 @@
       }
     },
     {
-      "component": "TextImageHeader",
-      "props": {
-        "pretitle": "Campaign Priority",
-        "title": "Improving Cancer Prevention",
-        "body": "<p>Working with the Georgia Cancer Registry, Rollins researchers are building the world’s first database of cancer recurrence, launched by a time-limited National Institutes of Health grant. Given that 15 million cancer survivors live in the United States alone, the new registry will fill an important gap in knowledge. Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.</p>",
-        "layout": "right",
-        "img_src": "rollins_priority_3.jpg",
-        "media_src": "rollins_priority_3_popup.jpg",
-        "media_alt": "Two faculty members.",
-        "media_type": "image",
-        "media_header": "Power in Prevention",
-        "media_text": "Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.",
-        "media_byline": "Featured: Tim Lash, Professor and Chair of the Department of Epidemiology; Kevin Ward, Director of the Georgia Center for Cancer Statistics and an Assistant Professor of Epidemiology"
-      }
-    },
-    {
       "component": "VideoQuote",
       "props": {
         "pretitle": "A MESSAGE FROM",
@@ -142,28 +126,40 @@
         "pretitle": "ROLLINS SCHOOL OF PUBLIC HEALTH",
         "items": [
           {
-            "title": "Research Abounds",
-            "description": "<p>Emory is in a strong position to be a global leader in implementation science research to address health disparity. An emerging field of study, implementation science explores the application of research findings into routine practice and policy. <strong>With support for implementation science research in health disparities, Rollins will develop an interdisciplinary focus on social determinants of health and environmental justice.</strong> 2O36 will support grant proposal development, capacity building, training, community-based collaborations, and partnerships with CARE and the Centers for Disease Control and Prevention.</p>"
-          },
-          {
             "title": "Addressing Climate Change",
             "description": "<p>Beyond the COVID-19 pandemic, climate change is the greatest threat to human health. To better understand the public health consequences of global climate change, the Gangarosa Department of Environmental Health is building connections with partners around the world and in the Atlanta community. <strong>The department leads high-impact research on climate effects, strategies for reducing greenhouse gas emissions, and approaches for increasing resilience to climate change. A national leader in training future leaders to combat climate change, the department plays a key role in translating research into policy and practice.</strong> With the support of 2O36, we will continue this important work."
           },
           {
-            "title": "Bridge the Gap in Preventable Diseases",
-            "description": "<p>HIV/AIDS, diabetes, and cancer are preventable yet major causes of death for many Americans. The Hubert Department of Global Health seeks funding to build collaborations with partners worldwide to enhance our work in HIV/AIDS; global safe water, sanitation, and hygiene;, cancer; and diabetes. <strong>With the help of 2O36, we will combat diseases and save lives, and under-resourced countries will have new strategies for responding to these health threats.</strong></p>"
+            "title": "Facing the Challenges of Mental Health",
+            "description": "<p>The state of the nation’s mental health is a major public health crisis that has been further exacerbated by the COVID-19 pandemic and a tumultuous racial and political climate.  This is particularly true among American youth who are experiencing a steady rise in mental health concerns and an alarming increase in suicide rates making it the second cause of death for youth ages 10-24. For twenty years, Rollins has been at the forefront of mental health research, teaching, and practice approaching mental health challenges through a public health lens. From the epidemiologic burden of mental illness on society, PTSD and ischemic heart disease, air pollutants and neurodegeneration incidence, epigenetics and neuropsychiatric disorders, air pollution and Alzheimer’s, Rollins researchers, policy makers, and advocates seek to identify the causes of and risk factors of mental illnesses while providing vital training, comprehensive perspectives, and solutions to these critical threats to health and well-being.</p>"
           },
           {
-            "title": "Health Policy and Equity Take Lead",
-            "description": "<p>Collaboration is central to everything we do at Emory, and that extends to health equity. Support for our work in this important area of research would bring together faculty from different disciplines to determine how health policy and health care systems affect health inequities. <strong>Through 2O36, we will organize educational programming and training activities to influence policies that improve health for all.</strong></p>"
+            "title": "Eliminating Substance Use Disorders",
+            "description": "<p>Substance use disorders affect almost every family in the United States, and the COVID-19 pandemic has only exacerbated the problem. Rollins is working to help end suffering from substance use disorders and related maladies, including overdoses, hepatitis C, HIV, and neonatal opioid withdrawal syndrome. Rollins faculty, staff, students, and collaborators are advancing research and developing interventions, which we will further advance through 2O36. These efforts will encompass drug discovery, novel clinical interventions, community-based interventions, and policy research.</p>"
+          },
+          {
+            "title": "Preventing Diabetes",
+            "description": "<p>Since 2011, Emory’s Global Diabetes Research Center (EGDRC) at the Rollins School of Public Health has been at the vanguard of diabetes research, training, and public policy around the world. Utilizing a multi-pronged approach to address the problem of diabetes and its associated complications through integrating innovative investigations into the causes and cures for the disease, the EGDRC also serves as a leader in Georgia, nationwide, and globally in development, innovation, treatment and prevention of diabetes and hypertension, two of the world’s costliest, fastest growing, and most deadly and disabling diseases. With support from 2036, we will continue to explore, via groundbreaking techniques, the root causes of the disease as well as precise ways to personalize medicine for diabetes, interventions to prevent diabetes, applications of advanced technologies including artificial intelligence (AI) to improve care delivery, and public health and policy approaches for improving the quality of care and health equity.</p>"
+          },
+          {
+            "title": "Improving Cancer Prevention",
+            "description": "<p>Working with the Georgia Cancer Registry, Rollins researchers are building the world’s first database of cancer recurrence, launched by a time-limited National Institutes of Health grant. Given that 15 million cancer survivors live in the United States alone, the new registry will fill an important gap in knowledge. Through 2036, we will support the program’s sustainability, which will help to increase the understanding of cancer outcomes and advance research on patterns and predictors of recurrence.</p>"
+          },
+          {
+            "title": "Bridge the Gap in Preventable Diseases",
+            "description": "<p>HIV/AIDS, diabetes, and cancer are preventable yet major causes of death for many Americans. The Hubert Department of Global Health seeks funding to build collaborations with partners worldwide to enhance our work in HIV/AIDS; global safe water, sanitation, and hygiene; cancer; and diabetes. With the help of 2O36, we will combat diseases and save lives, and under-resourced countries will have new strategies for responding to these health threats.</p>"
+          },
+          {
+            "title": "Translating Research into Practice",
+            "description": "<p>Emory is in a strong position to be a global leader in implementation science research to address health disparity. An emerging field of study, implementation science explores the application of research findings into routine practice and policy. With support for implementation science research in health disparities, Rollins will develop an interdisciplinary focus on social determinants of health and environmental justice. 2O36 will support grant proposal development, capacity building, training, community-based collaborations, and partnerships with CARE and the Centers for Disease Control and Prevention.</p>"
+          },
+          {
+            "title": "Leading Health Policy and Equity",
+            "description": "<p>Collaboration is central to everything we do at Emory, and that extends to health equity. Support for our work in this important area of research brings together faculty from different disciplines to determine how health policy and health care systems affect health inequities. Through 2O36, we will organize educational programming and training activities to influence policies that improve health for all.</p>"
           },
           {
             "title": "Preparing for the Next Crisis",
-            "description": "<p>The COVID-19 pandemic is far from over, and we’ve already learned several lessons related to public health. For one, we know that global pandemics require increased investments in infectious disease research and disaster preparedness. New strategies for pandemic response and public education are imperative if we want to be prepared for the next disruptive event. <strong>With increased investments through 2O36, Rollins will have a head start in crafting pandemic responses, disease prevention plans, public health communications, vaccine denial responses, and strategies that improve testing and tracing.</strong></p>"
-          },
-          {
-            "title": "Addressing Substance Use Disorders",
-            "description": "<p>Substance use disorders affect almost every family in the United States, and the COVID-19 pandemic has only exacerbated the problem. Rollins is working to help end suffering from substance use disorders and related maladies, including overdoses, hepatitis C, HIV, and neonatal opioid withdrawal syndrome. <strong>Rollins faculty, staff, students, and collaborators are advancing research and developing interventions, which we will further advance through 2O36.</strong> These efforts will encompass drug discovery, novel clinical interventions, community-based interventions, and policy research.</p>"
+            "description": "<p>The COVID-19 pandemic is far from over, and we’ve already learned several lessons related to public health. For one, we know that global pandemics require increased investments in infectious disease research and disaster preparedness. New strategies for pandemic response and public education are imperative if we want to be prepared for the next disruptive event. With increased investments through 2O36, Rollins will have a head start in crafting pandemic responses, disease prevention plans, public health communications, vaccine denial responses, and strategies that improve testing and tracing.</p>"
           }
         ]
       }
