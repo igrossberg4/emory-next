@@ -6,6 +6,11 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
+async function getData(url: string) {
+    let obj = (await fetch(url)).json();
+    return obj
+}
+
 function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any, index: number) {
     const slides = pages.map(page => {
         let nodeFinded;
@@ -338,9 +343,14 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
 }
 
-export function getNodes() {
-    const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
-        .filter(value => value.endsWith('.json')));
+export async function getNodes() {
+    // const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
+    //     .filter(value => value.endsWith('.json')));
+
+    let nodes = await getData('http://host.docker.internal:3001/api/v1/pages');
+    // const nodes = process_page(nodesFull);
     const pages = nodes.map(node => ({ list: node.list, nodeBase: node })).filter(value => value.list !== undefined);
+    fs.writeFileSync("pages.json", JSON.stringify(pages));
+    fs.writeFileSync("paths.json", JSON.stringify(pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat()));
     return { paths: pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat() };
 }
