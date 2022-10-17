@@ -4,7 +4,7 @@
   "page_props": {
     "header": "EMORY GLOBAL HEALTH<br>INSTITUTE",
     "about": "unit spotlight",
-    "text": "Research, resources, and training designed to advance Emory University’s efforts to improve health around the world.",
+    "text": "Advancing Emory University’s efforts to improve global health through its multidisciplinary research, resources, programs, training, and events.",
     "button_scroll": "Scroll to explore",
     "img_src": "global_lede.jpg",
     "footer": {
@@ -31,9 +31,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "Founded in 2006, Emory Global Health Institute is a recognized leader in building healthier communities abroad and developing new tools to combat public health problems at home.",
+        "header": "Founded in 2006, Emory Global Health Institute (EGHI) works with students, faculty, and partners to bring into focus the health challenges faced by individuals and underserved communities around the world.",
         "background_image": "global_isolated_bg.png",
-        "text": "<p>For more than a decade, Emory Global Health Institute (EGHI) has improved health worldwide by fostering global partnerships, supporting Emory faculty and their research, and training leaders in global health. EGHI’s mission is more important than ever. From expert faculty to entrepreneurial students to one-of-a-kind programs, EGHI looks forward to continuing its legacy as an invaluable catalyst for change.</p>",
+        "text": "<p>EGHI harnesses the power of a multidisciplinary approach to global health problems, cultivates the next generation of global health leaders, catalyzes evidence-based data into action, links global health stakeholders, and shares Emory’s scientific eminence with the world.</p>",
         "img_src": "global_intro.jpg",
         "media_src": "https://vimeo.com/633273243/9aa23f6e1e",
         "media_alt": "Hospital in India",
@@ -45,8 +45,8 @@
     {
       "component": "Quote",
       "props": {
-        "text": "EGHI is important to me because of the principles that guide our work, which include equity, innovation, and commitment to multidisciplinary and results-based global health programs.",
-        "attribution": "— Parminder Suchdev, Associate Director, Emory Global Health Institute<br/>Director, Global Health Office of Pediatrics<br/>Professor of Pediatrics and Global Health"
+        "text": "The world can only solve its global health problems by uniting learners and leaders from across disciplines for research, discourse, and partnerships that lead to innovative, equitable and community-driven solutions. That’s the kind of work we do every day at EGHI.",
+        "attribution": "— REBECCA MARTIN, VICE PRESIDENT FOR GLOBAL HEALTH</br>DIRECTOR OF EMORY GLOBAL HEALTH INSTITUTE"
       }
     },
     {
@@ -62,8 +62,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Campaign Priority",
-        "title": "Empowering Global Health Leaders in 2036",
-        "body": "<p>Today’s global health challenges require a variety of skills, approaches, and insights to develop creative and sustainable solutions. But most important, global health requires leadership. <strong>2O36 will dedicate resources to securing an endowed directorship to lead Emory Global Health Institute at a pivotal time, while providing perpetual funding for programs, research, and scholarship opportunities.</strong></p><p>In addition to allowing institute leaders to encourage, promote, and facilitate multidisciplinary approaches, an endowment will generate much-needed support for vulnerable populations living in low- and middle-income countries and help recruit and retain top talent to carry on the EGHI mission and vision. Thanks to your generosity, Emory and EGHI will continue to lead the way forward in creating a healthier future.</p>",
+        "title": "In 2036, Empowering Global Health Leaders",
+        "body": "<p>Today’s global health challenges require a variety of skills, approaches, and insights to develop creative and sustainable solutions. Most importantly, global health requires leadership. <strong>2O36 will dedicate resources to securing an endowed directorship to lead EGHI at a pivotal time while providing perpetual funding for programs, research, and scholarship opportunities.</strong></p><p>Your generosity will allow EGHI to further its mission and continue its multidisciplinary work with scholars from across Emory University and throughout the world. In partnership, our efforts focus on low- and middle-income countries with the highest burden of preventable disease, disability, and death, including urgent investments to understand and prevent child mortality.</p>",
         "layout": "right",
         "img_src": "global_priority_1.jpg",
         "media_src": "global_priority_1_popup.jpg",
@@ -77,8 +77,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Campaign Priority",
-        "title": "In 2036, Research is Limitless",
-        "body": "<p>When it comes to advances in global health, few things are more important than the time, energy, and brain power it takes to solve complex, evolving challenges. It also takes investment. <strong>2O36 will provide Emory faculty members with pilot funding to address global health issues.</strong></p><p>Pilot funds are essential for giving faculty a platform to pursue game-changing ideas before they are ready for national funding. Not only will your support directly advance the work of Emory and EGHI faculty, it will also enhance our students’ experiences, offering opportunities to observe and participate in the kind of groundbreaking initiatives they hope to create one day.</p>",
+        "title": "In 2036, Resources for Groundbreaking Research",
+        "body": "<p>When it comes to advances in global health, time, energy, and brain power are key to identifying and understanding evolving challenges. <strong>2O36 will provide Emory faculty members with pilot funds to tackle pressing and growing global health needs.</strong> Pilot funds are essential for giving faculty a platform to pursue game-changing ideas before they are ready for national funding.</p><p>EGHI also offers Rapid Response Grants to faculty for urgent, short-term, and multidisciplinary global health research or programmatic work. This program allows faculty to receive, via an expedited process, up to $10,000 for grant funding.</p><p>Emory Global Health Institute Faculty Fellows is another prestigious EGHI program, bringing together faculty members from all Emory Schools with global health leaders from the Carter Center, the Task Force for Global Health, and Georgia Institute of Technology.</p>",
         "layout": "right",
         "img_src": "global_priority_2.jpg",
         "media_src": "global_priority_2_popup.jpg",
@@ -108,8 +108,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Campaign Priority",
-        "title": "In 2036, Students Lead",
-        "body": "<p>The more people working together to solve global health issues, the better — whether they’ve got 40 years of professional experience or are 2 years into a pre-med program. Harnessing fresh ideas from young leaders in training, the Emory Morningside Global Health Case Competition and the Intramural Emory Global Health Case Competition allow graduate and undergraduate students from multiple disciplines to collaborate on solutions for 21st century global health issues. <strong>2O36 promises to expand these annual competitions, which offer unparalleled professional development opportunities and build Emory’s reputation in global health.</strong></p><p>In 2021, the Emory Morningside Global Health Competition featured 52 teams from universities across 15 countries and 6 continents to develop plans for COVID-19 vaccination programs. The Emory model has grown into an internationally recognized program and has been replicated at other leading institutions. Now is the time to build on our momentum. With your support, imagine all the ways in which the global health experts of tomorrow can benefit from these hands-on learning experiences.</p>",
+        "title": "In 2036, Bridging Academia into Student-led Action",
+        "body": "<p>The more people from diverse backgrounds working together to solve global health problems, the better. Whether they have 40 years of professional experience or are 2 years into a pre-med program, EGHI understands this and offers global health programs that harness fresh ideas from young leaders in training. Our student enrichment opportunities include intramural and international case competitions, an annual hackathon, a global health photography contest, and the Field Scholars Awards Program.</p><p><strong>Your support directly advances the work of Emory University and EGHI and our shared goal of turning academia into action by offering unparalleled professional development, programs, and support for Emory students, the next generation of global health leaders.</strong></p>",
         "layout": "right",
         "img_src": "global_priority_3.jpg",
         "media_src": "global_priority_3_popup.jpg",
@@ -123,8 +123,8 @@
       "component": "TextImageHeader",
       "props": {
         "pretitle": "Campaign Priority",
-        "title": "Perspectives are Global in 2036",
-        "body": "<p>We can’t expect to help communities around the world without a solid understanding and appreciation of their cultures. <strong>2O36 will invest in programs that promote cultural awareness around global health.</strong> By funding experiential projects that directly connect students with people from all walks of life, all around the world, we can prepare them to become global health leaders who appreciate the importance that cultural factors play in health outcomes.</p>",
+        "title": "In 2036, Perspectives are Global",
+        "body": "<p>We can only help communities around the world if we have a solid understanding and appreciation of their cultures, needs and barriers to health. <strong>2O36 will invest in programs that promote cultural awareness around global health.</strong> By funding projects that directly connect students with people from all walks of life, we can prepare them to become compassionate global health leaders who, as they work with and within communities to remove barriers and improve health outcomes, appreciate the significance of social determinants of health.</p>",
         "layout": "right",
         "img_src": "global_priority_4.jpg",
         "media_src": "global_priority_4_popup.jpg",
