@@ -194,7 +194,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 5: Coming soon October 18",
+        "pretitle": "episode 5",
         "title": "2O36: A Future Where Computers Are More Like Us",
         "body": "When you talk to your computer, does it actually talk back? As part of the team that won Amazon’s 2020 Alexa Prize SocialBot Grand Challenge, Emory University’s Jinho Choi and computer science doctoral students Sarah and James Finch are pushing the boundaries of technology and communication. In this episode, they speak with Emory Alumni Board President Munir Meghjani about the future of artificial intelligence and how conversations with computers are becoming more human.",
         "tags": [
@@ -227,13 +227,13 @@
         ],
         "layout": "right",
         "img_src": "podcast_episode_5.png",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-05-05-emory-iup-podcast-jinho-choi-sarah-james-finch.mp3",
         "media_alt": "A Future Where Computers Are More Like Us",
         "media_type": "video",
         "media_header": "A Future Where Computers Are More Like Us",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     },
     {
