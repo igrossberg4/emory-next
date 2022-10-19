@@ -343,7 +343,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
 }
 
-export async function getNodes(api_url: string | undefined) {
+export async function getNodes(api_url: string) {
     // const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
     //     .filter(value => value.endsWith('.json')));
 
