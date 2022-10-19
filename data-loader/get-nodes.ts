@@ -66,7 +66,8 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
             }
         }
     });
-    const slidesCloned = [];
+    // const slidesCloned = [];
+    const slidesCloned : Object[] = [];
     for (let i = Math.round(slides.length / 2); i < slides.length; i++) {
         if (i + index > slides.length - 1) {
             slidesCloned.push(slides[index + i - slides.length]);
