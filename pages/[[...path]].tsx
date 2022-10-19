@@ -749,7 +749,7 @@ export async function getStaticPaths() {
       params: { path: post.id.toString().split('/') },
     }))
   */
-    const paths = (await getNodes()).paths.map((post) => ({
+    const paths = (await getNodes(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT)).paths.map((post) => ({
     params: { path: post.path.toString().split("/") },
   }));
   // We'll pre-render only these paths at build time.
