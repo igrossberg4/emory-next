@@ -347,7 +347,7 @@ export async function getNodes() {
     // const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
     //     .filter(value => value.endsWith('.json')));
 
-    let nodes = await getData(process.env.API_PAGES_ENDPOINT);
+    let nodes = await getData(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT);
     // const nodes = process_page(nodesFull);
     const pages = nodes.map(node => ({ list: node.list, nodeBase: node })).filter(value => value.list !== undefined);
     // fs.writeFileSync("pages.json", JSON.stringify(pages));
