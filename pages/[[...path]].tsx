@@ -728,7 +728,7 @@ export default function Home(props: any) {
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
-  const findPath = (await getNodes()).paths.find((value) => value.path === joinPath);
+  const findPath = (await getNodes(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT)).paths.find((value) => value.path === joinPath);
   return {
     props: findPath,
     // Next.js will attempt to re-generate the page:
