@@ -347,10 +347,10 @@ export async function getNodes() {
     // const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
     //     .filter(value => value.endsWith('.json')));
 
-    let nodes = await getData('http://host.docker.internal:3001/api/v1/pages');
+    let nodes = await getData(process.env.API_PAGES_ENDPOINT);
     // const nodes = process_page(nodesFull);
     const pages = nodes.map(node => ({ list: node.list, nodeBase: node })).filter(value => value.list !== undefined);
-    fs.writeFileSync("pages.json", JSON.stringify(pages));
-    fs.writeFileSync("paths.json", JSON.stringify(pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat()));
+    // fs.writeFileSync("pages.json", JSON.stringify(pages));
+    // fs.writeFileSync("paths.json", JSON.stringify(pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat()));
     return { paths: pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat() };
 }
