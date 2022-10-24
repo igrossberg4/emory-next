@@ -148,7 +148,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 5: Coming soon October 25",
+        "pretitle": "episode 5",
         "title": "A Talk with Jen Heemstra",
         "body": "As a former chemistry professor at Emory University, Jen Heemstra displayed a passion for conducting research. But she believed her most important work was mentoring other researchers—her students. In this talk, Heemstra shares how a breakthrough discovery by a student in her lab could help improve the detection and diagnosis of cancer. It’s just one example of student flourishing at Emory that is shaping the future.",
         "tags": [
@@ -167,13 +167,13 @@
         ],
         "layout": "right",
         "img_src": "podium_jen_heemstra.png",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "https://vimeo.com/725349574/0c78bb4550",
         "media_alt": "Jen Heemstra",
         "media_type": "video",
         "media_header": "Jen Heemstra",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     },
     {
