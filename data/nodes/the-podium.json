@@ -179,7 +179,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 6: Coming soon November 8",
+        "pretitle": "episode 6",
         "title": "A Talk with Kristin Johnson",
         "body": "In recent years, artificial intelligence (AI) has played an increasingly significant role in our lives, from driving our cars to assisting with contact tracing during the pandemic. Integrating AI technology into our society has many benefits, but AI algorithms may not take into account inequities that disproportionately affect marginalized people. In this talk, Emory law professor Kristin Johnson shares insight about the applications of AI and raises important questions about the values and biases embedded within.",
         "tags": [
@@ -194,13 +194,13 @@
         ],
         "layout": "left",
         "img_src": "podium_kristin_johnson.png",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "https://vimeo.com/731380588/32238653fe",
         "media_alt": "Kristin Johnson",
         "media_type": "video",
         "media_header": "Kristin Johnson",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     },
     {
