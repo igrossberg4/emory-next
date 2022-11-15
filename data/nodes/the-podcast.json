@@ -284,7 +284,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 7: Coming soon November 15",
+        "pretitle": "episode 7",
         "title": "2O36: A Future of First-Generation Students",
         "body": "Finding your path as a first-year college student can be challenging for anyone. But without guidance from family members who have been there before, first-generation students often have an even harder time navigating higher education. In this episode, Emory University graduate Anna Dix and first-generation student Xiomara Fernandez talk with Emory Alumni Board President Munir Meghjani about the unique challenges first-gen students face and how, through the 1915 Scholars Program, Emory’s alumni community is coming together to provide support.",
         "tags": [
@@ -309,13 +309,13 @@
         ],
         "layout": "right",
         "img_src": "podcast_episode_7.png",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-05-05-emory-iup-podcast-anna-dix-xiomara-fernandex.mp3",
         "media_alt": "A Future of First-Generation Students",
-        "media_type": "video",
+        "media_type": "audio",
         "media_header": "A Future of First-Generation Students",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     },
     {
