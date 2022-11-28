@@ -321,7 +321,7 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "episode 8: Coming soon November 29",
+        "pretitle": "episode 8",
         "title": "2O36: A Future Where Ingenuity Meets Opportunity",
         "body": "What does it take to cure diseases like HIV and cancer? How do breakthroughs in drug development happen? In this episode, Emory University President Greg Fenves speaks with Dennis Liotta and George Painter of Drug Innovation Ventures at Emory (DRIVE) about their role in advancing breakthrough therapies and how Emory is pairing academic researchers with innovators to facilitate drug development.",
         "tags": [
@@ -350,13 +350,13 @@
         ],
         "layout": "left",
         "img_src": "podcast_episode_8.png",
-        "media_src": "https://vimeo.com/636508070/3b66fe1932",
+        "media_src": "/sounds/2022-04-30-emory-iup-podcast-painter-and-liotta.mp3",
         "media_alt": "A Future Where Ingenuity Meets Opportunity",
-        "media_type": "video",
+        "media_type": "audio",
         "media_header": "A Future Where Ingenuity Meets Opportunity",
         "media_text": "",
         "media_byline": "",
-        "disabled": true
+        "disabled": false
       }
     }
   ]
