@@ -371,12 +371,6 @@
             "media_alt": "Portrait of Roy Simpson"
           },
           {
-            "name": "Chris Smith P21 P23 P24",
-            "description": "Parents",
-            "img_src": "headshots/c_smith_1.jpg",
-            "media_alt": "Portrait of Chris Smith P21 P23 P24"
-          },
-          {
             "name": "Ginger Smith 77C 82G",
             "description": "University Libraries",
             "img_src": "headshots/g_smith_1.jpg",
@@ -411,12 +405,6 @@
             "description": "Oxford College",
             "img_src": "headshots/k_williams_1.jpg",
             "media_alt": "Portrait of Kelly Williams P16 P18 P20 P22"
-          },
-          {
-            "name": "Linda Yarden P21 P23 P24",
-            "description": "Parents",
-            "img_src": "headshots/l_yarden_1.jpg",
-            "media_alt": "Portrait of Linda Yarden P21 P23 P24"
           }
         ]
       }
