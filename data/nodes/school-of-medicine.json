@@ -27,9 +27,9 @@
     {
       "component": "SectionIntro",
       "props": {
-        "header": "During extraordinary times, Emory School of Medicine is changing the way we think of medicine.",
+        "header": "Emory School of Medicine is at an inflection point, poised to move from <i>excellence</i> to <i>eminence</i>.",
         "background_image": "medicine_isolated_bg.png",
-        "text": "<p>Throughout the School of Medicine’s remarkable history, our objectives have remained the same: provide outstanding educational programs; develop excellent clinicians and investigators; conduct breakthrough collaborative research across disciplines; advance the detection, treatment, and prevention of disease; and ensure the highest ethical and professional standards.</p><p>By balancing each of these goals, Emory prepares students to challenge the conventions of traditional care, reshape how medicine is practiced, and promote the health of their patients and communities.</p>",
+        "text": "<p>At Emory School of Medicine, our path demands innovation that takes on big problems in human health, and solutions will require synergy across our three missions of clinical care, research, and education. This interconnectivity improves patient outcomes, enables specialized health care services for complex illnesses, and leads to discoveries that would not otherwise exist.</p><p>We must learn something important from every patient encounter in our academic medical center. In this way, we will advance from excellence to eminence in research and education, which will pay lifesaving dividends for patients in Georgia and beyond.</p>",
         "img_src": "medicine_intro.jpg",
         "media_src": "https://vimeo.com/622527821/cb01c0f10f",
         "media_alt": "Medical staff",
@@ -57,9 +57,9 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Campaign Priority",
-        "title": "Create a Hub for Scientific Discoveries",
-        "body": "<p>Emory University’s latest beacon of biomedical research, the Health Sciences Research Building II (HSRBII) will be a hub for scientific discoveries and entrepreneurial research. <strong>Investment in 2O36 will support this facility, providing laboratories for 130 principal investigators in many specialties.</strong> With a state-of-the-art building that reflects the school’s ambitious vision, we can dramatically increase our recruitment capabilities, bringing in the world’s leading scientists and scholars to help us transform patient care.</p><p>HSRBII will inspire connectivity, cross-disciplinary research, and collaboration, fostering innovation across a wide range of areas, from biomedical engineering and informatics to imaging sciences, brain health, cardiovascular medicine, child health, cancer, inflammation, and immunotherapy.</p>",
+        "pretitle": "LEVERAGING STRENGTHS",
+        "title": "Clinical and Research Strategy",
+        "body": "<p>We are targeting six areas based on our greatest existing clinical and research strengths, the potential for impact on human health through clinical service lines at Emory Healthcare and other clinical partners, philanthropic opportunities, National Institutes of Health (NIH) investment trends, and our ability to leverage multiple programs.</p><p>These areas are brain health and aging, cancer, cardiovascular health, child health, infectious diseases and immunology, and biomedical engineering and data science. Brain health and aging, cancer, and cardiovascular health are the highest priorities for funding.</p>",
         "layout": "right",
         "img_src": "medicine_priority_1.jpg",
         "media_src": "medicine_priority_1_popup.jpg",
@@ -72,9 +72,9 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Campaign Priority",
-        "title": "Mastering the Art and Science of Medicine",
-        "body": "<p>In an era of artificial intelligence and other automated processes, physicians who understand both the art and science of medicine are increasingly rare. This is why they’re so important in medical education. <strong>With endowment funding, Emory School of Medicine will attract master clinicians to guide students with expertise and empathy.</strong> By teaching our students the art of medicine and the latest science, these master clinicians will ensure that new Emory physicians will provide effective, compassionate care.</p>",
+        "pretitle": "HEALTH CARE INNOVATION",
+        "title": "Innovation Ecosystem and Clinic of the Future",
+        "body": "<p>To accelerate the translation of research discoveries into health care settings—where they will transform patient care—Dean Vikas Sukhatme and other Emory leaders are defining a “Clinic of the Future” initiative. Key entities within the Emory community that are anticipated to play a role in this concept include Emory Healthcare, the Goizueta Institute @ Emory Brain Health, the Emory Morningside Center for Innovative and Affordable Medicine, Emory Executive Health, Winship Cancer Institute, and the Emory Laboratory for Innovative Assay Development.</p><p>A major effort of this innovative care model will be to combine artificial intelligence and simulation with cutting-edge diagnostics to offer personalized care with repurposed, FDA-approved drugs. The goal is not only to treat and monitor disease, but also to improve early diagnosis, help people avoid disease in the first place, and, most important, promote peak wellness and healthy longevity.</p>",
         "layout": "right",
         "img_src": "medicine_priority_2.jpg",
         "media_src": "medicine_priority_2_popup.jpg",
@@ -103,9 +103,9 @@
     {
       "component": "TextImageHeader",
       "props": {
-        "pretitle": "Campaign Priority",
-        "title": "Access for More Students",
-        "body": "<p>Health care—both in practice and accessibility—must become more equitable. To that end, the Emory School of Medicine is committed to offering scholarships to students and trainees across all backgrounds, regardless of their financial situation.</p><p>By providing more scholarship opportunities, students will be able to pursue fulfilling and meaningful careers without having to prioritize specialties that promise the highest potential earnings. <strong>Thanks to 2O36, Emory School of Medicine will continue to be a leader in education, increasing access for talented aspiring physicians eager to keep our communities healthy.</strong></p>",
+        "pretitle": "CULTURE AND INFRASTRUCTURE",
+        "title": "An Ideal Environment for Discovery",
+        "body": "<p>We are trading reticence for action, investing in pilot studies, and moving faster. For every new idea, initiative, and strategy, we ask: Will this accelerate discovery and innovation? Is it bold enough? (We aim for cures.) Does it create connection and synergy? Can it be supported by data? Does this promote engagement, creating diverse viewpoints and a culture of mutual respect?  Is it fun?</p><p>The <strong>Dean’s Imagine, Innovate, and Impact Awards</strong> seek to answer all of these questions, seeding new collaborations, programs, and centers. This highly successful program has created a 6:1 return on investment in just three years, with awards distributed across all 22 SOM departments. Supporting discovery across disciplines, the <strong>Health Sciences Research Building II</strong> will enable the interdisciplinary collaboration that improves health through the integration of education, discovery, and patient care.</p>",
         "layout": "right",
         "img_src": "medicine_priority_3.jpg",
         "media_src": "medicine_priority_3_popup.jpg",
@@ -118,32 +118,32 @@
     {
       "component": "AccordionComponent",
       "props": {
-        "title": "PRIORITIES",
+        "title": "Education Strategy",
         "pretitle": "SCHOOL OF MEDICINE",
         "items": [
           {
-            "title": "Faculty to Fight Heart Disease",
-            "description": "<p><strong>Emory School of Medicine will recruit 15 faculty members across multiple academic departments to tackle heart disease and heart-related chronic conditions through 2O36.</strong> Life-saving results will be achieved through collaboration between the Emory Clinical Cardiovascular Research Institute, the School of Nursing, and the Rollins School of Public Health—finding novel solutions, refining minimally invasive therapies, and leading clinical trials for promising new treatments.</p>"
+            "title": "Creativity and Innovation Space",
+            "description": "<p>We will create both physical and virtual resources and dedicate time to support learners in pursuing discovery, innovating, and effecting change. We have developed a five-year investment plan for our simulation program, which provides procedural skills; immersive, high-fidelity team simulation; and advanced approaches that rely on technologies such as 3D printing, virtual reality, and augmented reality. When built more than a decade ago, Emory’s simulation lab was viewed as a best-in-class facility. With the rapid changes in technology and the high costs associated with equipment, we recognize the need for reinvestment to support eminence in simulation-based education and research.</p>"
           },
           {
-            "title": "Faculty to Take on Brain Health",
-            "description": "<p><strong>With your support of 2O36, Emory School of Medicine will be able to recruit 15 top scientists and physicians to collaborate with the Emory Brain Health Center and Goizueta Alzheimer’s Disease Research Center.</strong> Together they will pursue cures for Alzheimer’s disease, Parkinson’s, and other conditions that can accompany aging and affect the brain.</p>"
+            "title": "Faculty Growth",
+            "description": "<p>We must articulate the skills, competencies, and experience types required to support pedagogical initiatives such as design thinking, change management, leadership, and entrepreneurship. We will prepare existing faculty members and recruit new experts to fill any gaps. Philanthropy will create endowed leadership positions appropriate for master clinician-educators. Endowment income creates more protected time for outstanding teaching.</p>"
           },
           {
-            "title": "Faculty to Pursue New Cancer Breakthroughs",
-            "description": "<p>Winship Cancer Institute is Georgia’s only National Cancer Institute-designated comprehensive cancer center. <strong>2O36 will allow Winship to add 23 faculty members who will create new ways of thinking about every type of cancer and translate that knowledge into new discoveries for patients.</strong> Together, we can increase access to the most advanced treatments available, transforming the care experience.</p>"
+            "title": "Student Support and Well-Being",
+            "description": "<p>We will foster a culture that is collaborative, supportive, inclusive, compassionate, and focused on student connectedness and community building. This student-centric culture will include expanded resources that strengthen the overall student experience, safeguard mental health, and improve well-being. Scholarship support continues to be a high priority to reduce financial barriers and remain competitive with top medical schools, some of which are making drastic changes to their tuition requirements.</p>"
           },
           {
-            "title": "The Power of Collaboration in 2036",
-            "description": "<p><strong>With your support of 2O36, we can recruit three distinguished professors and seven professors for the Wallace H. Coulter Department of Biomedical Engineering.</strong> These faculty leaders will develop new strategies for improving health, curing disease, and creating practical solutions to complex problems.</p>"
+            "title": "Forward-Thinking Education",
+            "description": "<p>We will define priorities for educational programming and allocate resources in areas such as leadership, change management, and health disparities. We will develop and document preferred approaches and modalities such as self-regulated learning, change agents, simulation, and virtual reality. Lastly, we will integrate the Emory diversity, equity, and inclusion framework into our educational programming environment and curriculum.</p>"
           },
           {
-            "title": "Advancing the Study of Infectious Diseases and Immunology",
-            "description": "<p><strong>2O36 will support the recruitment of 10 faculty members to teach and conduct research in infectious diseases and immunology—further cementing Emory’s reputation in the field.</strong> Tangible outcomes include the creation of vaccines that eliminate disease, along with cancer treatments that allow the body to fight back and heal.</p>"
+            "title": "Connectivity and Partnerships",
+            "description": "<p>We view Atlanta as a learning laboratory and seek to address community health care needs throughout Georgia. To connect with our communities, we will lead interprofessional education initiatives with key partners—including the Nell Hodgson Woodruff School of Nursing—and actively participate in the Woodruff Health Sciences Center’s broader interprofessional education strategies.</p>"
           },
           {
-            "title": "Funding for Now",
-            "description": "<p><strong>Supporting the Future of Medicine through Scholarships</strong><br/>To deliver the highest quality of care, Emory School of Medicine must recruit the best students and trainees from all ethnic, cultural, and experiential backgrounds—regardless of their financial situations.</p><p><strong>Transform Education Models</strong><br/>2O36 will support a focus on entrepreneurial teaching, transforming existing education models into methods that consider infrastructure, space, and technology in order to dramatically improve clinical practice and health care, and attract top students, trainees, and contributors to our communities.</p><p><strong>Bringing Simulation Learning to 2036</strong><br/>Emory will incorporate simulation programs into our methodology, improving patient safety and lowering health care costs.</p><p><strong>Serving Communities in 2036</strong><br/>Investment in 2O36 will expand our community medical service and educational programs in order to advance disease prevention, create more accessible care and education, and foster excellent experiential learning opportunities.</p><p><strong>Promoting Innovation in Teaching</strong><br/>2O36 will strengthen the Imagine/Innovate/Impact (I3) teaching awards to continue supporting researchers’ development of novel approaches that enhance the undergraduate and graduate medical education experience.</p><p><strong>2O36 Awards Research</strong><br/>The I3 Research Awards program will provide opportunities for talented and creative physician scientists to create life-changing knowledge.</p><p><strong>Pursuing Health Care Innovations</strong><br/>2O36 will create the space and ability to pursue health care innovations, recruit a diverse group of problem solvers, and focus on transformation in key areas.</p><p><strong>Leading in Pilots, Initiatives, and Programs</strong><br/>2O36 will support promising research and accelerate the rate of medical discoveries that race against time for patients living with illness.</p><p><strong>Putting Data to Work</strong><br/>2O36 will help us leverage the power of data to advance the quality of entire health systems, improve patient outcomes, and reduce costs.</p><p><strong>Recruiting the Best in 2036</strong><br/>Supporting recruitment of world-renowned physician scientists through 2O36 will enhance the student experience and create an environment for these scientists to begin work immediately.</p><p><strong>With 2O36, Research Initiatives Can Flourish</strong><br/>2O36 will increase immediate funding for projects, like medical breakthroughs, that could change the world.</p><p><strong>Industry-Funded Research in 2O36</strong><br/>Increasing funding opportunities from industry partners through 2O36 will attract leading physicians and scientists to Emory School of Medicine and allow for more discoveries in health care.</p>"
+            "title": "Personal Learning Roadmap",
+            "description": "<p>We aim to develop a customizable user interface that provides a single entry point for accessing learning objects and systems and for mapping and monitoring student journeys. We will define a coaching role with clear expectations and accountability, and we will identify, train, and recruit coaches.</p>"
           }
         ]
       }
