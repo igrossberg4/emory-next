@@ -45,7 +45,7 @@
     {
       "component": "Quote",
       "props": {
-        "text": "The responsibility of libraries is beginning to shift. No longer a neutral entity, libraries need to amplify voices around social justice and social change. We do this through our collections and also through what we do, what we say, and who we interact with.",
+        "text": "No longer neutral entities, libraries need to amplify voices around social justice and social change. We do this through our collections and also through what we do, what we say, and who we interact with.",
         "attribution": "— VALEDA F. DENT, VICE PROVOST OF LIBRARIES AND MUSEUM"
       }
     },
