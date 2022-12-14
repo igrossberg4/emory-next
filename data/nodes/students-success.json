@@ -26,7 +26,7 @@
       "props": {
         "header": "Emory prepares students for a lifelong journey of transformation, contribution, and service.",
         "background_image": "student_isolated_bg.png",
-        "text": "<p>Our students are our future. And supporting student flourishing means helping them become thinkers, doers, and team players. It means creating an inclusive environment where our diverse student body feels at home, strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
+        "text": "<p>Our students are our future. And supporting <a href=\"https://studentflourishing.emory.edu/\" target=\"_blank\">student flourishing</a> means helping them become thinkers, doers, and team players. It means creating an inclusive environment where our diverse student body feels at home, strengthening their values, developing skills, and preparing them for advanced and professional studies, and for their careers. Their success empowers them to contribute to the world around us. Emory’s top priority is guiding students as they realize their potential, and enabling them to excel.</p>",
         "img_src": "student_intro.jpg",
         "media_src": "https://vimeo.com/755175765/2d5e7d2bd4",
         "media_alt": "Man in suit speaking.",
@@ -141,6 +141,15 @@
             "description": "<p>Wellness is multidimensional—behavioral, spiritual, emotional, physical—and resources to promote balance are deepened through Emory’s commitment to our student body. Faculty and staff are key to identifying and supporting students in need, and <strong>2O36 will bolster the training necessary to continue increasing prevention, awareness and response.</strong></p>"
           }
         ]
+      }
+    },
+    {
+      "component": "TextBg",
+      "props": {
+        "text": "The Student Flourishing initiative creates an integrated experience that embraces the whole student",
+        "image_src": "student_divider_bg.jpg",
+        "cta_link": "https://studentflourishing.emory.edu/",
+        "cta_text": "Learn more about the initiative"
       }
     }
   ]
