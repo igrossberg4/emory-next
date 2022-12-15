@@ -17,7 +17,7 @@ export default function TextBg(props:any) {
       <div className="text-bg__overlay"></div>
       <div className="container">
         <div className="row">
-          <div className=" col-md-9">
+          <div className={props.wide ? "col-md-12" : "col-md-9"}>
             <h2 className="header-h2" dangerouslySetInnerHTML={{__html:props.text}}></h2>
             {
               props.cta_link && props.cta_text ?
