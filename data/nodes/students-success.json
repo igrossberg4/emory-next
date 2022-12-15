@@ -146,10 +146,10 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "LEARN MORE",
+        "text": "EXPLORE THE STUDENT FLOURISHING INITIATIVE",
         "image_src": "student_divider_bg.jpg",
         "cta_link": "https://studentflourishing.emory.edu/",
-        "cta_text": "EXPLORE THE STUDENT FLOURISHING INITIATIVE",
+        "cta_text": "LEARN MORE",
         "wide": true
       }
     }
