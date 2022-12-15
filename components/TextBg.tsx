@@ -23,7 +23,7 @@ export default function TextBg(props:any) {
               props.cta_link && props.cta_text ?
               <div className="text-bg__cta">
                 <Link  href={ props.cta_link }>
-                  <a className="link-button" >{props.cta_text}</a>
+                    <a className="link-button" target={props.new_tab ? "_blank" : "_self"}>{props.cta_text}</a>
                 </Link>
               </div>
               : ''
