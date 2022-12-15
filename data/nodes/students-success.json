@@ -146,10 +146,11 @@
     {
       "component": "TextBg",
       "props": {
-        "text": "The Student Flourishing initiative creates an integrated experience that embraces the whole student",
+        "text": "Learn more about the Student Flourishing initiative",
         "image_src": "student_divider_bg.jpg",
         "cta_link": "https://studentflourishing.emory.edu/",
-        "cta_text": "Learn more about the initiative"
+        "cta_text": "Learn more about the initiative",
+        "wide": true
       }
     }
   ]
