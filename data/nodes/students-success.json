@@ -150,7 +150,8 @@
         "image_src": "student_divider_bg.jpg",
         "cta_link": "https://studentflourishing.emory.edu/",
         "cta_text": "LEARN MORE",
-        "wide": true
+        "wide": true,
+        "new_tab": true
       }
     }
   ]
