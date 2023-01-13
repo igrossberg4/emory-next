@@ -72,3 +72,7 @@ mounts:
     '/.next':
         source: local
         source_path: 'next'
+
+    "/out":
+        source: local
+        source_path: "out"
