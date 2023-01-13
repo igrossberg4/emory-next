@@ -6,6 +6,11 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
         .map(fileLoaded => JSON.parse(fileLoaded.toString())).flat()
 }
 
+async function getData(url: string) {
+    let obj = (await fetch(url)).json();
+    return obj
+}
+
 function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode: any, nextNode: any, nodeBase: any, index: number) {
     const slides = pages.map(page => {
         let nodeFinded;
@@ -61,7 +66,8 @@ function findSlides(pages: Array<any>, nodes: Array<any>, actual: any, lastNode:
             }
         }
     });
-    const slidesCloned = [];
+    // const slidesCloned = [];
+    const slidesCloned : Object[] = [];
     for (let i = Math.round(slides.length / 2); i < slides.length; i++) {
         if (i + index > slides.length - 1) {
             slidesCloned.push(slides[index + i - slides.length]);
@@ -338,9 +344,8 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 
 }
 
-export function getNodes() {
-    const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
-        .filter(value => value.endsWith('.json')));
+export async function getNodes(api_url: string) {
+    let nodes = await getData(api_url);
     const pages = nodes.map(node => ({ list: node.list, nodeBase: node })).filter(value => value.list !== undefined);
     return { paths: pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat() };
 }

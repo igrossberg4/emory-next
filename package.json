@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "postbuild": "./scripts/nextjs-fix-route-collisions.sh && next-sitemap",
     "start": "next start",
     "lint": "next lint",
@@ -56,6 +56,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^3.0.0-beta.1",
+    "@types/node": "^18.11.2",
     "@types/object-hash": "^2.1.1",
     "@types/react": "17.0.15",
     "@types/react-scroll": "^1.8.3",
