@@ -345,13 +345,7 @@ function generatePageWithComponents(pages_list: { list: Array<string>, nodeBase:
 }
 
 export async function getNodes(api_url: string) {
-    // const nodes = loadFilesAndParse('./data/nodes', fs.readdirSync(path.join('./data/nodes'))
-    //     .filter(value => value.endsWith('.json')));
-
     let nodes = await getData(api_url);
-    // const nodes = process_page(nodesFull);
     const pages = nodes.map(node => ({ list: node.list, nodeBase: node })).filter(value => value.list !== undefined);
-    // fs.writeFileSync("pages.json", JSON.stringify(pages));
-    // fs.writeFileSync("paths.json", JSON.stringify(pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat()));
     return { paths: pages.map(pages_list => generatePageWithComponents(pages_list, nodes)).flat() };
 }
