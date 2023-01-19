@@ -1,4 +1,3 @@
-import React, { Fragment, useCallback, useContext, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Video from "./Video";
@@ -6,8 +5,9 @@ import IconButton from "./IconButton";
 import Overlay from "./Overlay";
 import { imageLoader } from "./utils/imageLoader";
 import Audio from "./Audio";
-import AsdfCarousel from "./AsdfCarousel";
 import classNames from "classnames";
+import { useCallback } from "react";
+import AsdfCarousel from "./AsdfCarousel";
 
 export default function MediaWithExpantion(props: any) {
   let multipleSizesImgPrincipal;
@@ -16,7 +16,7 @@ export default function MediaWithExpantion(props: any) {
   multipleSizesImgPrincipal = require(`../public/images/${
     props.img_src ? props.img_src : props.media_src
   }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  if (props.media_type != "video") {
+  if (props.media_type !== "video" && props.media_type !== "audio") {
     multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
   }
 
@@ -86,9 +86,6 @@ export default function MediaWithExpantion(props: any) {
           // animate={{ opacity: 1 }}
           >
             <img
-              className={classNames({
-                teaser__image: props.is_carousel,
-              })}
               alt={props.media_alt}
               srcSet={multipleSizesImgPrincipal.srcSet}
               src={multipleSizesImgPrincipal.src}
@@ -101,26 +98,19 @@ export default function MediaWithExpantion(props: any) {
           <Overlay
             onOverlayOpen={handleOverlayOpen}
             onOverlayClose={handleOverlayClose}
-            is_carousel={true}
+            is_carousel={props.is_carousel}
             expand_action={
-              !props.hide_icons ? (
-                <div className="actions" onClick={() => onSlideClick()}>
-                  {props.media_type === "image" ? (
-                    <IconButton icon={"eye"} label="See more"></IconButton>
-                  ) : (
-                    <IconButton icon={"play"} label="See more" />
-                  )}
-                </div>
-              ) : (
-                ""
-              )
+              <div className="actions" onClick={() => onSlideClick()}>
+                <IconButton
+                  icon={props.media_type === "image" ? "eye" : "play"}
+                  label="See more"
+                />
+              </div>
             }
             expanded_content={
               <>
                 <motion.figure data-media={props.media_type}>
-                  {props.type === "gallery" ? (
-                    <AsdfCarousel slides={props.slides}></AsdfCarousel>
-                  ) : props.media_type === "image" ? (
+                  {props.media_type === "image" && (
                     <div className="image-wrapper">
                       <Image
                         loader={imageLoader(multipleSizesImgExpanded) as any}
@@ -130,10 +120,17 @@ export default function MediaWithExpantion(props: any) {
                         layout={"responsive"}
                         width={multipleSizesImgExpanded.width}
                         height={multipleSizesImgExpanded.height}
-                      ></Image>
+                      />
                     </div>
-                  ) : (
-                    <Video {...props} controls={true}></Video>
+                  )}
+                  {props.type === "gallery" ? (
+                    <AsdfCarousel slides={props.slides}></AsdfCarousel>
+                  ) : null}
+                  {props.media_type === "video" && (
+                    <Video {...props} controls={true} />
+                  )}
+                  {props.media_type === "audio" && (
+                    <Audio {...props} controls={true} />
                   )}
                   <figcaption className="overlay__text">
                     <h6 className="title text-body">{props.header}</h6>

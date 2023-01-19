@@ -28,8 +28,15 @@ module.exports = withPlugins(
       disableStaticImages: true,
       loader: "imgix",
       path: "/",
-      deviceSizes: [300, 600, 1024, 1200, 2048],
+      // deviceSizes: [300, 600, 1024, 1200, 2048],
     },
+
+    // https://github.com/vercel/next.js/issues/21079
+    // Remove this workaround whenever the issue is fixed
+    // images: {
+    //   loader: "imgix",
+    //   path: "",
+    // },
     sassOptions: {
       includePaths: [path.join(__dirname, "styles")],
     },
