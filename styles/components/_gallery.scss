@@ -1,5 +1,5 @@
 .section.gallery-carousel {
-  padding: 70px 0 0 0;
+  padding: 0;
 }
 
 .gallery-carousel .overlay {
@@ -33,7 +33,9 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  // max-height: var(--slide-height);
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  max-height: 650px;
 }
 
 .embla-gallery__slide__img {
@@ -277,16 +279,6 @@
 @include media-breakpoint-down(md) {
   .section.gallery-carousel {
     padding: 0 !important;
-
-    & > h2 {
-      margin-bottom: 40px;
-    }
-
-    .embla__slide {
-      h3.event_location {
-        margin-top: 0px;
-      }
-    }
   }
 
   .gallery-carousel .embla::before {
