@@ -71,7 +71,7 @@ export default function Footer(props: any) {
         ) : (
           ""
         )}
-        {props.cta_contact_info.big_title ? (
+        {props.cta_contact_info?.big_title ? (
           <h2 className="header-h1">{props.cta_contact_info.big_title}</h2>
         ) : (
           <p className="footer__title">The future starts here</p>
