@@ -110,23 +110,25 @@ export default function MediaWithExpantion(props: any) {
             expanded_content={
               <>
                 <motion.figure data-media={props.media_type}>
-                  {props.media_type === "image" && (
-                    <div className="image-wrapper">
-                      <Image
-                        loader={imageLoader(multipleSizesImgExpanded) as any}
-                        priority={true}
-                        alt={props.media_alt}
-                        src={multipleSizesImgExpanded.src}
-                        layout={"responsive"}
-                        width={multipleSizesImgExpanded.width}
-                        height={multipleSizesImgExpanded.height}
-                      />
-                    </div>
-                  )}
                   {props.type === "gallery" ? (
                     <AsdfCarousel slides={props.slides}></AsdfCarousel>
                   ) : (
                     <div>
+                      {props.media_type === "image" && (
+                        <div className="image-wrapper">
+                          <Image
+                            loader={
+                              imageLoader(multipleSizesImgExpanded) as any
+                            }
+                            priority={true}
+                            alt={props.media_alt}
+                            src={multipleSizesImgExpanded.src}
+                            layout={"responsive"}
+                            width={multipleSizesImgExpanded.width}
+                            height={multipleSizesImgExpanded.height}
+                          />
+                        </div>
+                      )}
                       {props.media_type === "video" && (
                         <Video {...props} controls={true} />
                       )}
