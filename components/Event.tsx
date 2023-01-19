@@ -44,20 +44,17 @@ export default function Event(props: any) {
                 </a>
               </Link>
             </div>
-            <div className="image-wrapper">
-              <MediaWithExpantion
-                img_src={props.img_src}
-                media_src={props.media_src}
-                media_alt={props.media_alt}
-                media_type={props.media_type}
-                size="big"
-                header={props.media_header}
-                text={props.media_text}
-                byline={props.media_byline}
-                hide_icons={true}
-              ></MediaWithExpantion>
-              <div className="text-image-header__line"></div>
-            </div>
+            <MediaWithExpantion
+              img_src={props.img_src}
+              media_src={props.media_src}
+              media_alt={props.media_alt}
+              media_type={props.media_type}
+              size="big"
+              header={props.media_header}
+              text={props.media_text}
+              byline={props.media_byline}
+              hide_icons={true}
+            ></MediaWithExpantion>
           </div>
         </div>
       </div>

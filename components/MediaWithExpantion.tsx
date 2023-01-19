@@ -125,12 +125,15 @@ export default function MediaWithExpantion(props: any) {
                   )}
                   {props.type === "gallery" ? (
                     <AsdfCarousel slides={props.slides}></AsdfCarousel>
-                  ) : null}
-                  {props.media_type === "video" && (
-                    <Video {...props} controls={true} />
-                  )}
-                  {props.media_type === "audio" && (
-                    <Audio {...props} controls={true} />
+                  ) : (
+                    <div>
+                      {props.media_type === "video" && (
+                        <Video {...props} controls={true} />
+                      )}
+                      {props.media_type === "audio" && (
+                        <Audio {...props} controls={true} />
+                      )}
+                    </div>
                   )}
                   <figcaption className="overlay__text">
                     <h6 className="title text-body">{props.header}</h6>

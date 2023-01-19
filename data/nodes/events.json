@@ -65,13 +65,13 @@
               "event_date": "11/14/22",
               "slides": [
                 {
-                  "img_src": "events_dc.jpg",
-                  "media_src": "events_dc.jpg",
+                  "img_src": "slide_1.png",
+                  "media_src": "slide_1.png",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "events_dc.jpg",
-                  "media_src": "events_dc.jpg",
+                  "img_src": "slide_1.png",
+                  "media_src": "slide_1.png",
                   "media_type": "image"
                 }
               ]
@@ -99,8 +99,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -121,8 +121,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -143,8 +143,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -165,8 +165,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -187,8 +187,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -209,8 +209,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -231,8 +231,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -253,8 +253,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -275,8 +275,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -297,8 +297,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -319,8 +319,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
@@ -341,8 +341,8 @@
             "component": "Teaser",
             "props": {
               "title": "CampaignCarousel: 'Teaser title' Brain Health",
-              "img_src": "events_dc.jpg",
-              "media_src": "events_dc.jpg",
+              "img_src": "slide_1.png",
+              "media_src": "slide_1.png",
               "media_type": "image",
               "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
               "type": "gallery",
