@@ -1,0 +1,143 @@
+.event-container {
+  margin-top: 230px;
+}
+
+.event-container .title {
+  text-align: center;
+  // font-size: 96px;
+  // line-height: 90%;
+  margin-bottom: 10px;
+}
+
+.event-container .subheader {
+  text-align: center;
+  font-family: "Pangram";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #5f5c59;
+  margin-bottom: 88px;
+}
+
+.event-container .text-image-header .container {
+  min-height: 373px;
+}
+
+// .event-container .col-md-6.column-text {
+//   display: flex;
+//   flex-flow: column;
+
+//   .event-title {
+//     order: 2;
+//   }
+
+//   .event-date {
+//     order: 3;
+//     display: inline;
+//   }
+
+//   .event-time {
+//     order: 4;
+//     display: inline;
+//   }
+
+//   .cta-button-container {
+//     margin: 0 auto;
+//     order: 5;
+//     display: inline;
+//   }
+
+//   .image-wrapper {
+//     order: 1;
+//   }
+// }
+
+.event-container h4.event-title {
+  font-family: "Pangram";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 60px;
+  margin-bottom: 20px;
+
+  &::first-letter {
+    margin-left: -0.06em;
+  }
+}
+
+.event-container .event-date {
+  margin-bottom: 0px;
+}
+
+.event-container .event-time {
+  margin-bottom: 20px;
+}
+
+.event-container .section {
+  padding: 32px 0;
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .event-container {
+    margin-top: 65px;
+
+    .section.text-image-header {
+      padding: 0 0 30px 0;
+
+      &:last-child {
+        margin: 30px;
+      }
+    }
+
+    .subheader {
+      margin-bottom: 60px;
+    }
+
+    .col-md-6.column-text {
+      display: flex;
+      flex-flow: column;
+
+      .event-title,
+      .event-date,
+      .event-time {
+        text-align: center;
+      }
+
+      .event-title {
+        order: 2;
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      .event-date {
+        order: 3;
+        display: inline;
+      }
+
+      .event-time {
+        order: 4;
+        display: inline;
+      }
+
+      .cta-button-container {
+        margin: 0 auto;
+        order: 5;
+        display: inline;
+      }
+
+      .image-wrapper {
+        order: 1;
+
+        .component-media-with-expansion {
+          max-width: 56vw;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

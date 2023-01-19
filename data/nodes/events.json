@@ -1,0 +1,709 @@
+{
+  "id": "events",
+  "type": "collection",
+  "page_props": {
+    "header": "Regional<br>Events",
+    "header_expanded": "Page Props: Header Expanded",
+    "text": "Up Next: Miami<br>January 31, 6:30 p.m. – 8:30 p.m.",
+    "about": "Emory Explores the Future",
+    "button_scroll": "Scroll to details",
+    "about_before_scroll": "ABOUT THE CAMPAIGN",
+    "img_src": "events_lede.jpg",
+    "video_src": "videos/intro_video_v03.mp4",
+    "video_poster": "videos/poster.jpg",
+    "video_webm_src": "videos/intro_video_v03.webm",
+    "text_play": "Begin\r\nyour\r\nexperience",
+    "text_skip": "Skip video",
+    "cta_button_new_tab": "true",
+    "cta_button_text": "REGISTER NOW",
+    "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=16954&cid=25625",
+    "vertical_header_line": "true",
+    "custom_css": ".section.component-intro-text { margin-top: 40px; padding-top: 194px; } .footer__contact__links a { text-decoration: none; } .footer__contact__heading { margin-bottom: 20px; } @media (max-width: 767.98px) { .section.component-intro-text { padding-top: 60px; } } .section.component-intro-text .body-container { padding-top: 15px; } .section.component-intro-text .body-container .col-md-8.image-container { margin-bottom: 20px; }",
+    "footer": {
+      "cta_contact_info": {
+        "big_title": "CONTACT INFORMATION",
+        "heading": "Advancement Events",
+        "email": "advancementevents@emory.edu",
+        "hide_contact_information": "true",
+        "hide_cta_button": "true"
+      }
+    }
+  },
+  "path": "events",
+  "metatag": {
+    "title": "Events - Emory 2036",
+    "description": "",
+    "image": "og_image.jpg",
+    "robots": "noindex,nofollow"
+  },
+  "components": [
+    {
+      "component": "SectionIntro",
+      "props": {
+        "header": "We’re bringing our vision of the future on the road! Attend one of our regional events to learn how 2O36 is making a difference for Emory, your city, and the world.",
+        "background_image": "about_isolated_bg_darker.png",
+        "text": "<p>Enjoy an unforgettable evening of food, libations, connection, and inspiration with local Emory alumni, parents, and friends. Hear from a diverse panel of Emory leaders as they share the progress 2O36 is making for students and our shared future. You’ll come away with exclusive insight into the campaign’s signature themes, including student flourishing, A.I. humanity, cancer, and brain health.</p> <p>Regional events are free to attend, but registration is required using the links below.* Business or cocktail attire is recommended.</p>",
+        "img_src": "events_section_intro.jpg",
+        "media_src": "https://vimeo.com/videos/744364283/c02961400c",
+        "media_alt": "SectionIntro 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+        "media_type": "video"
+      }
+    },
+    {
+      "component": "GalleryCarousel",
+      "props": {
+        "title": "Past Event Photos",
+        "slides": [
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Seoul",
+              "event_date": "11/14/22",
+              "slides": [
+                {
+                  "img_src": "events_dc.jpg",
+                  "media_src": "events_dc.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "events_dc.jpg",
+                  "media_src": "events_dc.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Washington, DC",
+              "event_date": "10/24/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Birmingham",
+              "event_date": "10/13/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Nashville",
+              "event_date": "10/6/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "New York",
+              "event_date": "9/19/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Seattle",
+              "event_date": "9/7/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Denver",
+              "event_date": "6/30/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "London",
+              "event_date": "6/14/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Los Angeles",
+              "event_date": "5/26/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Chicago",
+              "event_date": "5/24/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "San Francisco",
+              "event_date": "4/14/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Menlo Park",
+              "event_date": "4/14/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "Los Angeles",
+              "event_date": "4/12/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "title": "CampaignCarousel: 'Teaser title' Brain Health",
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "body": "CampaignCarousel: 'Teaser body' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus suscipit non, turpis aliquam id dui fusce ultrices at.",
+              "type": "gallery",
+              "event_location": "New York",
+              "event_date": "4/6/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_alt": "TextImageBg 'media_alt' Duis rutrum, nisiac posuere rutrum, elit odio faucibus dui.",
+                  "media_type": "image",
+                  "media_header": "TextImageBg 'media_header' Imfage title"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Atlanta",
+              "event_date": "3/25/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Houston",
+              "event_date": "3/11/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Dallas",
+              "event_date": "3/11/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Austin",
+              "event_date": "3/9/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Miami",
+              "event_date": "2/16/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Tampa",
+              "event_date": "2/8/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Orlando",
+              "event_date": "2/7/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "events_dc.jpg",
+              "media_src": "events_dc.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Savannah",
+              "event_date": "2/4/22",
+              "slides": [
+                {
+                  "img_src": "carlos_divider_bg.jpg",
+                  "media_src": "carlos_divider_bg.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "component": "EventContainer",
+      "props": {
+        "header": "Upcoming Events",
+        "subheader": "* All times listed are local",
+        "items": [
+          {
+            "component": "Event",
+            "props": {
+              "title": "Miami",
+              "date": "January 31",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=16954&cid=25625",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_student_flourishing.png",
+              "img_title": "Student Flourishing",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_student_flourishing.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "left"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Boca Raton",
+              "date": "February 8",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17080&cid=25792&bledit=1&dids=12334&appealcode=3VECE",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_cancer.png",
+              "img_title": "AI.Humanity",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_cancer.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "right"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Tampa",
+              "date": "February 22",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17083&cid=25796&bledit=1&dids=3318&appealcode=3VEBH",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_brain_health.png",
+              "img_title": "Student Flourishing",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_brain_health.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "left"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Orlando",
+              "date": "February 23",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17090&cid=25805&bledit=1&dids=3318&appealcode=3VEBH",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_brain_health.png",
+              "img_title": "AI.Humanity",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_brain_health.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "right"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "New York City",
+              "date": "March 3",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17102&cid=2582&bledit=1&dids=1004&appealcode=3VAIH",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_ai.png",
+              "img_title": "Student Flourishing",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_ai.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "left"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Houston",
+              "date": "March 8",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17093&cid=25809&bledit=1&dids=7&appealcode=3VSFT",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_student_flourishing.png",
+              "img_title": "AI.Humanity",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_student_flourishing.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "right"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Dallas",
+              "date": "March 9",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://www.engage.emory.edu/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17095&cid=25812&ecid=25812&crid=0&calpgid=13&calcid=1160",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_student_flourishing.png",
+              "img_title": "Student Flourishing",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_student_flourishing.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "left"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Los Angeles",
+              "date": "April 10",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17105&cid=25825&bledit=1&dids=7&appealcode=3VSFT",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_student_flourishing.png",
+              "img_title": "AI.Humanity",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_student_flourishing.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "right"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Washington, DC",
+              "date": "April 13",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17108&cid=25829&bledit=1&dids=7&appealcode=3VSFT",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_cancer.png",
+              "img_title": "Student Flourishing",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_cancer.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "left"
+            }
+          },
+          {
+            "component": "Event",
+            "props": {
+              "title": "Boston",
+              "date": "May 18",
+              "time": "6:30 P.M. - 8:30 P.M.",
+              "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=17111&cid=25833&bledit=1&dids=7&appealcode=3VSFT",
+              "cta_button_text": "REGISTER NOW",
+              "cta_new_tab": true,
+              "img_src": "events_student_flourishing.png",
+              "img_title": "AI.Humanity",
+              "img_subtitle": "EMORY EXPLORES THE FUTURE",
+              "media_src": "events_student_flourishing.png",
+              "media_alt": "asdf",
+              "media_type": "image",
+              "hide_icon": "true",
+              "layout": "right"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

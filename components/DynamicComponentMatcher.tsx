@@ -3,38 +3,42 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import HeaderTop from "./HeaderTop";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const IntroPage = dynamic(()=> import('./IntroPage'));
-const SectionIntro = dynamic(()=> import('./SectionIntro'));
-const LateralImageExpanded = dynamic(()=> import('./LateralImageExpanded'));
-const CarouselNavigation = dynamic(()=> import('./CarouselNavigation'));
-const CarouselItem = dynamic(()=> import('./CarouselItem'));
-const BottomNavigation = dynamic(()=> import('./BottomNavigation'));
-const AccordionComponent = dynamic(()=> import('./AccordionComponent'));
-const Video = dynamic(()=> import('./Video'));
-const CircleContentWrapper = dynamic(()=> import('./CircleContentWrapper'));
-const MediaWithExpantion = dynamic(()=> import('./MediaWithExpantion'));
-const MainMenu = dynamic(()=> import('./MainMenu'));
-const SchoolsMenu = dynamic(()=> import('./SchoolsMenu'));
-const Quote = dynamic(()=> import('./Quote'));
-const VideoQuote = dynamic(()=> import('./VideoQuote'));
-const ProfileGrid = dynamic(()=> import('./ProfileGrid'));
-const ColumnsText = dynamic(()=> import('./ColumnsText'));
-const QuoteParagraphColumn = dynamic(()=> import('./QuoteParagraphColumn'));
-const TextBg = dynamic(()=> import('./TextBg'));
-const Footer = dynamic(()=> import('./Footer'));
-const TextImageBg = dynamic(()=> import('./TextImageBg'));
-const Carousel = dynamic(()=> import('./Carousel'));
-const CampaignCarousel = dynamic(()=> import('./CampaignCarousel'));
-const Audio = dynamic(()=> import('./Audio'));
-const Teaser = dynamic(()=> import('./Teaser'));
-const CarouselItem2036 = dynamic(()=> import('./CarouselItem2036'));
-const TextImageHeader = dynamic(()=> import('./TextImageHeader'));
-const TextLargeImage = dynamic(()=> import('./TextLargeImage'));
-const Tag = dynamic(()=> import('./Tag'));
-const Header = dynamic(()=> import('./Header'));
-const ImageTextOneColumn = dynamic(()=> import('./ImageTextOneColumn'));
+const IntroPage = dynamic(() => import("./IntroPage"));
+const SectionIntro = dynamic(() => import("./SectionIntro"));
+const LateralImageExpanded = dynamic(() => import("./LateralImageExpanded"));
+const CarouselNavigation = dynamic(() => import("./CarouselNavigation"));
+const CarouselItem = dynamic(() => import("./CarouselItem"));
+const BottomNavigation = dynamic(() => import("./BottomNavigation"));
+const AccordionComponent = dynamic(() => import("./AccordionComponent"));
+const Video = dynamic(() => import("./Video"));
+const CircleContentWrapper = dynamic(() => import("./CircleContentWrapper"));
+const MediaWithExpantion = dynamic(() => import("./MediaWithExpantion"));
+const MainMenu = dynamic(() => import("./MainMenu"));
+const SchoolsMenu = dynamic(() => import("./SchoolsMenu"));
+const Quote = dynamic(() => import("./Quote"));
+const VideoQuote = dynamic(() => import("./VideoQuote"));
+const ProfileGrid = dynamic(() => import("./ProfileGrid"));
+const ColumnsText = dynamic(() => import("./ColumnsText"));
+const QuoteParagraphColumn = dynamic(() => import("./QuoteParagraphColumn"));
+const TextBg = dynamic(() => import("./TextBg"));
+const Footer = dynamic(() => import("./Footer"));
+const TextImageBg = dynamic(() => import("./TextImageBg"));
+const Carousel = dynamic(() => import("./Carousel"));
+const CampaignCarousel = dynamic(() => import("./CampaignCarousel"));
+const Audio = dynamic(() => import("./Audio"));
+const Teaser = dynamic(() => import("./Teaser"));
+const CarouselItem2036 = dynamic(() => import("./CarouselItem2036"));
+const TextImageHeader = dynamic(() => import("./TextImageHeader"));
+const TextLargeImage = dynamic(() => import("./TextLargeImage"));
+const Tag = dynamic(() => import("./Tag"));
+const Header = dynamic(() => import("./Header"));
+const ImageTextOneColumn = dynamic(() => import("./ImageTextOneColumn"));
+const GalleryCarousel = dynamic(() => import("./GalleryCarousel"));
+const EventContainer = dynamic(() => import("./EventContainer"));
+const Event = dynamic(() => import("./Event"));
+const AsdfCarousel = dynamic(() => import("./AsdfCarousel"));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -42,7 +46,9 @@ function DynamicComponentMatcher(props: any) {
       {props.view.map((component: any, i: number) => {
         switch (component.component) {
           case "IntroPage":
-            return <IntroPage key={i.toString()} {...component.props}></IntroPage>;
+            return (
+              <IntroPage key={i.toString()} {...component.props}></IntroPage>
+            );
 
           case "HeaderTop":
             return (
@@ -139,76 +145,156 @@ function DynamicComponentMatcher(props: any) {
           case "MediaWithExpantion":
             return (
               <MediaWithExpantion
-              {...component.props}
-              key={i.toString()}>
-              </MediaWithExpantion>
+                {...component.props}
+                key={i.toString()}
+              ></MediaWithExpantion>
             );
 
-          case 'MainMenu':
-            return <MainMenu {...component.props} key={i.toString()}></MainMenu>;
+          case "MainMenu":
+            return (
+              <MainMenu {...component.props} key={i.toString()}></MainMenu>
+            );
 
-          case 'SchoolsMenu':
-            return <SchoolsMenu {...component.props} key={i.toString()}></SchoolsMenu>
-
-          case 'Quote':
-            return <Quote {...component.props} key={i.toString()}></Quote>
-
-          case 'VideoQuote':
-            return <VideoQuote {...component.props} key={i.toString()}></VideoQuote>
-
-          case 'ColumnsText':
-            return <ColumnsText {...component.props} key={i.toString()}></ColumnsText>
-
-          case 'QuoteParagraphColumn':
-            return <QuoteParagraphColumn {...component.props} key={i.toString()}></QuoteParagraphColumn>
-
-          case 'TextBg':
-            return <TextBg {...component.props} key={i.toString()}></TextBg>
-
-          case 'Footer':
-            return <Footer {...component.props} key={i.toString()}></Footer>
-
-          case 'TextImageBg':
-            return <TextImageBg {...component.props} key={i.toString()}></TextImageBg>
-
-          case 'CampaignCarousel':
-            return <CampaignCarousel {...component.props} key={i.toString}></CampaignCarousel>
-
-          case 'Audio':
-            return <Audio {...component.props} key={i.toString()}></Audio>
-
-          case 'Teaser':
-            return <Teaser {...component.props} key={i.toString()}></Teaser>
-
-            case "MediaWithExpantion":
-              return (
-                <MediaWithExpantion
+          case "SchoolsMenu":
+            return (
+              <SchoolsMenu
                 {...component.props}
-                key={i.toString()}>
-                </MediaWithExpantion>
-              );
+                key={i.toString()}
+              ></SchoolsMenu>
+            );
 
-          case 'CarouselItem2036':
-            return (<CarouselItem2036 key={i.toString()}
-              {...component.props}></CarouselItem2036>)
+          case "Quote":
+            return <Quote {...component.props} key={i.toString()}></Quote>;
 
-          case 'TextImageHeader':
-            return <TextImageHeader {...component.props} key={i.toString()}></TextImageHeader>
+          case "VideoQuote":
+            return (
+              <VideoQuote {...component.props} key={i.toString()}></VideoQuote>
+            );
 
-          case 'TextLargeImage':
-            return <TextLargeImage {...component.props} key={i.toString()}></TextLargeImage>
+          case "ColumnsText":
+            return (
+              <ColumnsText
+                {...component.props}
+                key={i.toString()}
+              ></ColumnsText>
+            );
 
-          case 'Tag':
-            return <Tag {...component.props} key={i.toString()}></Tag>
+          case "QuoteParagraphColumn":
+            return (
+              <QuoteParagraphColumn
+                {...component.props}
+                key={i.toString()}
+              ></QuoteParagraphColumn>
+            );
 
-          case 'Header':
-            return <Header {...component.props} key={i.toString()}></Header>
+          case "TextBg":
+            return <TextBg {...component.props} key={i.toString()}></TextBg>;
 
-          case 'ImageTextOneColumn':
-            return <ImageTextOneColumn {...component.props} key={i.toString()}></ImageTextOneColumn>
+          case "Footer":
+            return <Footer {...component.props} key={i.toString()}></Footer>;
 
-          case 'ProfileGrid':
-            return <ProfileGrid {...component.props} key={i.toString()}></ProfileGrid>
+          case "TextImageBg":
+            return (
+              <TextImageBg
+                {...component.props}
+                key={i.toString()}
+              ></TextImageBg>
+            );
+
+          case "CampaignCarousel":
+            return (
+              <CampaignCarousel
+                {...component.props}
+                key={i.toString}
+              ></CampaignCarousel>
+            );
+
+          case "GalleryCarousel":
+            return (
+              <GalleryCarousel
+                {...component.props}
+                key={i.toString}
+              ></GalleryCarousel>
+            );
+
+          case "EventContainer":
+            return (
+              <EventContainer
+                {...component.props}
+                key={i.toString}
+              ></EventContainer>
+            );
+
+          case "Event":
+            return <Event {...component.props} key={i.toString}></Event>;
+
+          case "AsdfCarousel":
+            return (
+              <AsdfCarousel
+                {...component.props}
+                key={i.toString}
+              ></AsdfCarousel>
+            );
+
+          case "Audio":
+            return <Audio {...component.props} key={i.toString()}></Audio>;
+
+          case "Teaser":
+            return <Teaser {...component.props} key={i.toString()}></Teaser>;
+
+          case "MediaWithExpantion":
+            return (
+              <MediaWithExpantion
+                {...component.props}
+                key={i.toString()}
+              ></MediaWithExpantion>
+            );
+
+          case "CarouselItem2036":
+            return (
+              <CarouselItem2036
+                key={i.toString()}
+                {...component.props}
+              ></CarouselItem2036>
+            );
+
+          case "TextImageHeader":
+            return (
+              <TextImageHeader
+                {...component.props}
+                key={i.toString()}
+              ></TextImageHeader>
+            );
+
+          case "TextLargeImage":
+            return (
+              <TextLargeImage
+                {...component.props}
+                key={i.toString()}
+              ></TextLargeImage>
+            );
+
+          case "Tag":
+            return <Tag {...component.props} key={i.toString()}></Tag>;
+
+          case "Header":
+            return <Header {...component.props} key={i.toString()}></Header>;
+
+          case "ImageTextOneColumn":
+            return (
+              <ImageTextOneColumn
+                {...component.props}
+                key={i.toString()}
+              ></ImageTextOneColumn>
+            );
+
+          case "ProfileGrid":
+            return (
+              <ProfileGrid
+                {...component.props}
+                key={i.toString()}
+              ></ProfileGrid>
+            );
 
           default:
             return "";
@@ -217,4 +303,4 @@ function DynamicComponentMatcher(props: any) {
     </Fragment>
   );
 }
-export default (DynamicComponentMatcher)
+export default DynamicComponentMatcher;

@@ -712,6 +712,15 @@ export default function Home(props: any) {
 
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
+
+        {/* Allow custom CSS on the page level */}
+        {props.meta.custom_css ? (
+          <style
+            dangerouslySetInnerHTML={{
+              __html: props.meta.custom_css,
+            }}
+          ></style>
+        ) : null}
       </Head>
       <noscript
         dangerouslySetInnerHTML={{

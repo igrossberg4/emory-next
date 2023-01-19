@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 @import "_functions";
 
@@ -14,6 +14,8 @@
 
 @import "_atoms";
 
+@import "components/_event";
+@import "components/_gallery";
 @import "components/_intro";
 @import "components/_header-top";
 @import "components/_footer";

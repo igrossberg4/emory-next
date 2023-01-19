@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 @import "_variables";
 @import "mixins/_breakpoints";
 
@@ -16,8 +16,8 @@
     height: 101vh;
   }
 
-  &.transitioning{
-    .actions{
+  &.transitioning {
+    .actions {
       opacity: 0;
     }
     + #carouselContent {
@@ -39,34 +39,34 @@
   overflow: hidden;
   width: 100%;
 
-  &:before{
+  &:before {
     position: absolute;
     left: 0;
     top: 0;
     content: " ";
-    opacity:0;
-    content: ' ';
+    opacity: 0;
+    content: " ";
     transition: opacity $main-carousel-transition-duration ease-in-out;
 
     background-position-x: 38% !important;
-    background-position-y:  calc(100vh / 40) !important;
-    top:30px;
+    background-position-y: calc(100vh / 40) !important;
+    top: 30px;
     background-size: calc(55vh * 2) !important;
     @include media-breakpoint-up(sm) {
-      top:30px;
+      top: 30px;
       background-position-x: 41% !important;
-      background-position-y:  calc(-100vh / 7) !important;
+      background-position-y: calc(-100vh / 7) !important;
       background-size: calc(75vh * 2) !important;
     }
     @include media-breakpoint-up(md) {
       background-position-x: 50% !important;
-      top:30px;
-      background-position-y:  calc(-100vh / 3.7) !important;
+      top: 30px;
+      background-position-y: calc(-100vh / 3.7) !important;
       background-size: calc(100vh * 2) !important;
     }
   }
-  &.background-visible{
-    &:before{
+  &.background-visible {
+    &:before {
       opacity: 1;
     }
   }
@@ -87,7 +87,7 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  will-change: transform;
+  // will-change: transform;
   transition: all $main-carousel-transition-duration ease-in-out;
 
   .no_selected {
@@ -101,7 +101,7 @@
   z-index: 5;
 }
 
-.embla--carousel-navigation .embla__container{
+.embla--carousel-navigation .embla__container {
   position: absolute;
 }
 
@@ -130,13 +130,14 @@
   padding: 0;
   border-radius: 50%;
   box-shadow: $default-box-shadow;
-  transition: box-shadow .25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: $default-box-shadow--hover;
   }
 
-  @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+  @media (max-width: map-get($grid-breakpoints, "sm")) and (max-height: $round-image-vertical-breakpoint-sm) {
     width: 40px;
     height: 40px;
   }
@@ -199,15 +200,14 @@ body.is-scrolled {
     }
   }
 }
-.embla_slide_present{
+.embla_slide_present {
   position: absolute;
   transition: transform $main-carousel-transition-duration ease-in-out,
-              margin-left $main-carousel-transition-duration ease-in-out;
+    margin-left $main-carousel-transition-duration ease-in-out;
   &.first {
     margin-left: calc(60% - #{math.div($round-image-size, 2) - 0px});
 
     @include media-breakpoint-up(sm) {
-
       // Animation version 1
       margin-left: calc(50% - #{math.div($round-image-size, 2) - 0px});
 
@@ -223,7 +223,6 @@ body.is-scrolled {
       //margin-left: - math.div($round-image-size, 2) + 50px;
     }
     @include media-breakpoint-up(lg) {
-
       // Animation version 1
       margin-left: calc(50% - #{math.div($round-image-size-medium, 2) - 50px});
 
@@ -238,7 +237,6 @@ body.is-scrolled {
       //margin-left: - math.div($round-image-size-medium, 2) + 50px;
     }
     @include media-breakpoint-up(xl) {
-
       // Animation version 1
       margin-left: calc(50% - #{math.div($round-image-size-big, 2) - 100px});
 
@@ -258,7 +256,6 @@ body.is-scrolled {
     margin-left: calc(-60% + #{math.div($round-image-size, 2) - 0px});
 
     @include media-breakpoint-up(sm) {
-
       // Animation version 1
       margin-left: calc(-50% + #{math.div($round-image-size, 2) - 0px});
 
@@ -274,7 +271,6 @@ body.is-scrolled {
       //margin-left: math.div($round-image-size, 2) - 50px;
     }
     @include media-breakpoint-up(lg) {
-
       // Animation version 1
       margin-left: calc(-50% + #{math.div($round-image-size-medium, 2) - 50px});
 
@@ -303,24 +299,21 @@ body.is-scrolled {
       //margin-left: math.div($round-image-size-big, 2) - 100px;
     }
   }
-
 }
 
-.embla--carousel-navigation{
-
+.embla--carousel-navigation {
   &.transitioning,
   &.blocked {
-    .embla__button{
+    .embla__button {
       // Not required because the carousel is working without blocking.
-    //  opacity: 0.4;
-    //  cursor: not-allowed;
+      //  opacity: 0.4;
+      //  cursor: not-allowed;
     }
   }
 }
 
-body.hide-lateral{
-
-  .embla_slide_present.no_selected{
+body.hide-lateral {
+  .embla_slide_present.no_selected {
     //display: none;
   }
   .embla--carousel-navigation {
@@ -328,10 +321,10 @@ body.hide-lateral{
       display: none;
     }
   }
-  .header-menu.header-menu--schools{
+  .header-menu.header-menu--schools {
     display: none;
   }
-  .header-menu.header-menu--main{
+  .header-menu.header-menu--main {
     display: none;
   }
 }
@@ -347,7 +340,7 @@ body.hide-lateral{
     margin: 0 auto;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 143px;
@@ -393,4 +386,173 @@ body.hide-lateral{
       }
     }
   }
+}
+
+.embla-thumbs {
+  --thumbs-slide-spacing: 0.8rem;
+  --thumbs-slide-height: 9rem;
+  margin-top: var(--thumbs-slide-spacing);
+}
+
+.embla-thumbs__viewport {
+  overflow: hidden;
+}
+
+.embla-thumbs__container {
+  display: flex;
+  flex-direction: row;
+  margin-left: calc(var(--thumbs-slide-spacing) * -1);
+}
+
+.embla-thumbs__slide {
+  flex: 0 0 28%;
+  min-width: 0;
+  padding-left: var(--thumbs-slide-spacing);
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .embla-thumbs__slide {
+    flex: 0 0 18%;
+  }
+}
+
+.embla-thumbs__slide__button {
+  -webkit-appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+
+.embla-thumbs__slide--selected .embla-thumbs__slide__button {
+  opacity: 1;
+}
+
+.embla-thumbs__slide__img {
+  display: block;
+  height: var(--thumbs-slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+
+.embla-thumbs__slide__number {
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  border-radius: 50%;
+  background-color: rgba(var(--background-site-rgb-value), 0.85);
+  line-height: 3rem;
+  font-weight: 500;
+  text-align: center;
+  pointer-events: none;
+}
+
+.embla-thumbs__slide__number > span {
+  color: var(--brand-primary);
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.4rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.embla__dot,
+.embla__button-gallery {
+  -webkit-appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.embla__dots {
+  z-index: 1;
+  bottom: 1.2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.embla__dot {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.embla__dot:after {
+  background: var(--background-site);
+  border-radius: 0.2rem;
+  width: 100%;
+  height: 0.3rem;
+  content: "";
+}
+
+.embla__dot--selected:after {
+  background: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+}
+
+.embla__button-gallery {
+  z-index: 1;
+  color: var(--background-site);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}
+
+.embla__button-gallery--prev {
+  left: 1.6rem;
+}
+
+.embla__button-gallery--next {
+  right: 1.6rem;
+}
+
+.embla__button-gallery:disabled {
+  opacity: 0.3;
+}
+
+.embla__button-gallery__svg {
+  width: 65%;
+  height: 65%;
 }
