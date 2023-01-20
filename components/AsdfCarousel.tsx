@@ -172,6 +172,22 @@ export default function AsdfCarousel(props: any) {
     [embla, emblaThumbsApi]
   );
 
+  const onThumbPrevClick = useCallback(
+    (index: number) => {
+      if (!embla || !emblaThumbsApi) return;
+      if (emblaThumbsApi.clickAllowed()) embla.scrollTo(index);
+    },
+    [embla, emblaThumbsApi]
+  );
+
+  const onThumbNextClick = useCallback(
+    (index: number) => {
+      if (!embla || !emblaThumbsApi) return;
+      if (emblaThumbsApi.clickAllowed()) embla.scrollTo(index);
+    },
+    [embla, emblaThumbsApi]
+  );
+
   const onSelect = useCallback(() => {
     if (!embla || !emblaThumbsApi) return;
     setSelectedIndex(embla.selectedScrollSnap());

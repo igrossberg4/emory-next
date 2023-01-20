@@ -18,7 +18,7 @@
     "cta_button_text": "REGISTER NOW",
     "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=16954&cid=25625",
     "vertical_header_line": "true",
-    "custom_css": ".footer__cta a.link-button { display: none; } .section.component-intro-text { padding-top: 194px; } .footer__contact__links a { text-decoration: none; } .footer__contact__heading { margin-bottom: 20px; } @media (max-width: 767.98px) { .section.component-intro-text { padding-top: 60px; } } .section.component-intro-text .body-container { padding-top: 15px; } .section.component-intro-text .body-container .col-md-8.image-container { margin-bottom: 20px; } .section.component-bottom-navigation { display: none; }",
+    "custom_css": ".main-container>#carouselContent>.section.campaign-carousel { margin-top: 100px; } .footer__cta a.link-button { display: none; } .section.component-intro-text { padding-top: 194px; } .footer__contact__links a { text-decoration: none; } .footer__contact__heading { margin-bottom: 20px; } .event-container .component-media-with-expansion .actions { display: none; } @media (max-width: 767.98px) { .section.component-intro-text { padding-top: 60px; } .main-container>#carouselContent>.section.campaign-carousel { margin-top: 40px; } } .section.component-intro-text .body-container { padding-top: 15px; } .section.component-intro-text .body-container .col-md-8.image-container { margin-bottom: 20px; } .section.component-bottom-navigation { display: none; }",
     "footer": {
       "cta_contact_info": {
         "big_title": "CONTACT INFORMATION",
@@ -31,10 +31,9 @@
   },
   "path": "events",
   "metatag": {
-    "title": "Events - Emory 2036",
+    "title": "Regional Events - Emory 2036",
     "description": "",
-    "image": "og_image.jpg",
-    "robots": "noindex,nofollow"
+    "image": "og_image.jpg"
   },
   "components": [
     {
@@ -54,6 +53,329 @@
       "props": {
         "title": "Past Event Photos",
         "slides": [
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
+              "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Birmingham",
+              "event_date": "10/13/22",
+              "slides": [
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060886.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060886.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060887.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060887.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060892.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060892.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060894.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060894.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060906.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060906.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060912.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060912.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060916.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060916.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060919.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060919.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060921.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060921.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060924.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060924.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060927.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060927.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060933.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060933.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060937.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060937.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060940.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060940.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060941.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060941.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060966.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060966.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060987.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060987.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060990.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060990.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060994.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060994.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060998.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060998.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061002.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061002.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061005.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061005.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061008.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061008.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061012.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061012.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061015.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061015.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061021.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061021.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061025.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061025.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061027.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061027.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061035.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061035.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061042.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061042.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061044.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061044.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061045.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061045.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061050.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061050.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061056.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061056.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061110.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061110.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061188.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061188.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061195.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061195.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061352.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061352.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061370.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061370.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061376.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061376.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061448.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061448.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061480.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061480.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061553.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061553.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061558.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061558.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061576.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061576.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061578.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061578.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061581.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061581.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061590.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061590.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061603.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061603.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061606.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061606.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061618.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061618.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061628.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061628.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061633.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061633.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061634.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061634.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061644.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061644.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-2021-08-26-18-13-02-utc.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-2021-08-26-18-13-02-utc.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-downtown-city-skyline-2021-09-03-22-27-29-utc.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-downtown-city-skyline-2021-09-03-22-27-29-utc.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060721.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060721.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060809.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060809.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060862.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060862.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060955.jpg",
+                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060955.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
           {
             "component": "Teaser",
             "props": {
