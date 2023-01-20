@@ -26,11 +26,11 @@ module.exports =
       ];
     },
     images: {
-      // disableStaticImages: true,
-      // loader: "imgix",
-      // path: "/",
-      // deviceSizes: [300, 600, 1024, 1200, 2048],
-      unoptimized: true,
+      disableStaticImages: true,
+      loader: "imgix",
+      path: "/",
+      deviceSizes: [300, 600, 1024, 1200, 2048],
+      // unoptimized: true,
     },
 
     // https://github.com/vercel/next.js/issues/21079

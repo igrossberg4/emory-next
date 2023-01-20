@@ -267,14 +267,23 @@ export default function AsdfCarousel(props: any) {
                   <div className="embla-gallery__slide__number">
                     <span>{i + 1}</span>
                   </div>
-                  <img
-                    className="embla-gallery__slide__img"
-                    src={
-                      require(`../public/images/${value.img_src}?resize&sizes[]=2048&format=png`)
-                        .src
-                    }
-                    alt="Your alt text"
-                  />
+
+                  {value.host_externally ? (
+                    <img
+                      className="embla-gallery__slide__img"
+                      src={value.img_src}
+                      alt="Your alt text"
+                    />
+                  ) : (
+                    <img
+                      className="embla-gallery__slide__img"
+                      src={
+                        require(`../public/images/${value.img_src}?resize&sizes[]=2048&format=png`)
+                          .src
+                      }
+                      alt="Your alt text"
+                    />
+                  )}
                 </div>
               );
             })}
@@ -303,8 +312,9 @@ export default function AsdfCarousel(props: any) {
                   selected={i === selectedIndex}
                   index={i}
                   imgSrc={
-                    require(`../public/images/${value.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`)
-                      .src
+                    value.img_src
+                    // require(`../public/images/${value.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`)
+                    //   .src
                   }
                   key={i}
                 />
