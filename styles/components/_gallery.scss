@@ -256,11 +256,33 @@
 }
 
 .embla-gallery-thumbs__button--prev {
-  left: 23.6rem;
+  left: 24.1rem;
 }
 
 .embla-gallery-thumbs__button--next {
-  right: 23.6rem;
+  right: 24.1rem;
+}
+
+@media (min-width: 1440px) and (max-width: 1441px) {
+  .embla-gallery-thumbs__button {
+    top: 107%;
+  }
+
+  .embla-gallery__button--prev {
+    left: 9rem;
+  }
+
+  .embla-gallery__button--next {
+    right: 9rem;
+  }
+
+  .embla-gallery-thumbs__button--prev {
+    left: 9rem;
+  }
+
+  .embla-gallery-thumbs__button--next {
+    right: 9rem;
+  }
 }
 
 @include media-breakpoint-down(md) {
