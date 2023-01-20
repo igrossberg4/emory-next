@@ -36,37 +36,84 @@ export default function Footer(props: any) {
           <div
             className="footer__scrolltop btn text-label"
             style={{ cursor: "pointer" }}
-            onClick={(e) => {
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              });
-              setTimeout(() => {
-                document.body.classList.remove("is-scrolled");
-                dispatch({ type: "IS_TRANSITIONING", payload: true });
-                dispatch({
-                  type: "GOING_UP",
-                  payload: false,
+          >
+            {props?.cta_contact_info?.person ? (
+              <IconButton
+                icon="address-book-thin"
+                label="Contact us"
+                onClick={(e: any) => {
+                  window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth",
+                  });
+                  setTimeout(() => {
+                    document.body.classList.remove("is-scrolled");
+                    dispatch({ type: "IS_TRANSITIONING", payload: true });
+                    dispatch({
+                      type: "GOING_DOWN",
+                      payload: false,
+                    });
+                    setTimeout(() => {
+                      dispatch({ type: "IS_TRANSITIONING", payload: false });
+                    }, 600);
+                    const element = document.getElementById("selected");
+                    if (element) {
+                      const activeElement = element.querySelector(
+                        ".content-header__container"
+                      );
+                      activeElement?.setAttribute(
+                        "data-animation",
+                        "no-active"
+                      );
+                    }
+                    const elementHeader = document.getElementById("header");
+                    if (element) {
+                      element.classList.remove("hide");
+                    }
+                  }, 400);
+                }}
+              ></IconButton>
+            ) : null}
+            <IconButton
+              icon="chevron-up"
+              label="Back to top"
+              onClick={(e: {
+                target: any;
+                currentTarget: any;
+                relatedTarget: any;
+              }) => {
+                console.log(e.target);
+                console.log(e.currentTarget);
+                console.log(e.relatedTarget);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
                 });
                 setTimeout(() => {
-                  dispatch({ type: "IS_TRANSITIONING", payload: false });
-                }, 600);
-                const element = document.getElementById("selected");
-                if (element) {
-                  const activeElement = element.querySelector(
-                    ".content-header__container"
-                  );
-                  activeElement?.setAttribute("data-animation", "no-active");
-                }
-                const elementHeader = document.getElementById("header");
-                if (element) {
-                  element.classList.remove("hide");
-                }
-              }, 400);
-            }}
-          >
-            <IconButton icon="chevron-up" label="Back to top"></IconButton>
-            Back to top
+                  document.body.classList.remove("is-scrolled");
+                  dispatch({ type: "IS_TRANSITIONING", payload: true });
+                  dispatch({
+                    type: "GOING_UP",
+                    payload: false,
+                  });
+                  setTimeout(() => {
+                    dispatch({ type: "IS_TRANSITIONING", payload: false });
+                  }, 600);
+                  const element = document.getElementById("selected");
+                  if (element) {
+                    const activeElement = element.querySelector(
+                      ".content-header__container"
+                    );
+                    activeElement?.setAttribute("data-animation", "no-active");
+                  }
+                  const elementHeader = document.getElementById("header");
+                  if (element) {
+                    element.classList.remove("hide");
+                  }
+                }, 400);
+              }}
+            ></IconButton>
+            <span className="back-to-top">Back to top</span>
           </div>
         ) : (
           ""

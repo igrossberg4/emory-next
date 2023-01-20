@@ -18,9 +18,18 @@ footer[role="contentinfo"] {
 
   .footer__scrolltop {
     margin-bottom: 5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    margin: 0;
+    z-index: 4;
 
     button {
       margin-bottom: math.div($grid-gutter-width, 2);
+
+      &[aria-label="Contact us"] svg {
+        width: 22px;
+      }
     }
 
     @include media-breakpoint-up(md) {
@@ -29,6 +38,13 @@ footer[role="contentinfo"] {
       right: 30px;
       margin: 0;
       z-index: 4;
+
+      @include media-breakpoint-down(md) {
+        button[aria-label="Back to top"],
+        span.back-to-top {
+          display: none;
+        }
+      }
     }
   }
 

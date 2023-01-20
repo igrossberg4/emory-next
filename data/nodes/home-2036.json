@@ -62,7 +62,7 @@
       "component": "SectionIntro",
       "props": {
         "header": "2O36 inspires investment in people for the benefit of people, bringing the Emory community together to build on our mission to serve humanity through knowledge.",
-        "background_image": "about_isolated_bg.png",
+        "background_image": "about_isolated_bg_darker.png",
         "text": "<p>It’s our vision that Emory will transform the world to come—contributing to boundary-pushing advancements that will spark change, inspire wonder, and catalyze action.</p><p>With an eye on Emory’s bicentennial, 2O36 will spearhead a movement to shape the future, providing access to transformative and experiential learning environments with world-renowned faculty and groundbreaking research opportunities.</p><p>As a community, we have a duty to purposefully prepare students for careers with the potential to change hearts, minds, and through that, the world.</p><p>Together, we can bring to life an ever promising future.</p>",
         "img_src": "about_intro.jpg",
         "media_src": "https://vimeo.com/765872164/833ee1cc06",

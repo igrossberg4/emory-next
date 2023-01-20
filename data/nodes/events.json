@@ -56,321 +56,649 @@
           {
             "component": "Teaser",
             "props": {
-              "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
-              "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
+              "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-1.jpg",
+              "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-1.jpg",
               "media_type": "image",
               "type": "gallery",
-              "event_location": "Birmingham",
-              "event_date": "10/13/22",
+              "event_location": "Seoul",
+              "event_date": "11/14/22",
               "slides": [
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060866.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-1.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-1.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060886.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060886.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-27.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-27.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060887.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060887.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-44.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-44.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060892.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060892.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-61.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-61.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060894.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060894.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-10.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-10.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060906.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060906.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-28.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-28.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060912.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060912.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-45.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-45.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060916.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060916.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-62.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-62.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060919.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060919.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-11.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-11.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060921.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060921.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-29.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-29.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060924.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060924.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-46.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-46.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060927.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060927.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-63.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-63.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060933.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060933.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-12.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-12.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060937.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060937.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-3.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-3.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060940.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060940.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-47.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-47.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060941.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060941.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-64.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-64.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060966.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060966.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-13.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-13.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060987.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060987.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-30.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-30.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060990.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060990.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-48.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-48.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060994.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060994.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-65.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-65.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060998.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060998.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-14.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-14.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061002.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061002.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-31.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-31.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061005.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061005.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-49.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-49.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061008.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061008.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-66.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-66.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061012.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061012.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-15.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-15.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061015.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061015.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-32.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-32.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061021.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061021.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-5.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-5.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061025.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061025.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-67.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-67.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061027.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061027.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-16.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-16.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061035.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061035.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-33.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-33.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061042.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061042.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-50.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-50.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061044.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061044.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-68.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-68.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061045.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061045.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-17.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-17.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061050.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061050.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-34.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-34.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061056.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061056.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-51.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-51.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061110.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061110.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-69.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-69.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061188.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061188.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-18.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-18.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061195.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061195.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-35.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-35.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061352.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061352.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-52.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-52.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061370.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061370.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-7.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-7.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061376.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061376.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-19.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-19.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061448.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061448.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-36.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-36.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061480.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061480.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-53.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-53.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061553.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061553.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-70.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-70.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061558.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061558.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-2.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-2.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061576.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061576.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-37.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-37.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061578.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061578.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-54.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-54.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061581.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061581.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-71.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-71.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061590.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061590.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-20.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-20.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061603.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061603.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-38.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-38.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061606.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061606.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-55.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-55.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061618.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061618.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-72.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-72.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061628.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061628.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-21.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-21.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061633.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061633.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-39.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-39.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061634.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061634.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-56.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-56.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061644.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z061644.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-73.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-73.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-2021-08-26-18-13-02-utc.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-2021-08-26-18-13-02-utc.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-22.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-22.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-downtown-city-skyline-2021-09-03-22-27-29-utc.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22_birmingham-alabama-usa-downtown-city-skyline-2021-09-03-22-27-29-utc.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-4.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-4.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060721.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060721.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-57.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-57.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060809.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060809.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-74.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-74.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060862.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060862.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-23.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-23.jpg",
                   "media_type": "image"
                 },
                 {
-                  "img_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060955.jpg",
-                  "media_src": "2022-10-13_birmingham/2036_Regional_AL_10.13.22__Z060955.jpg",
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-40.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-40.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-58.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-58.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-80.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-80.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-24.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-24.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-41.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-41.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-59.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-59.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-90.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-90.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-25.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-25.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-42.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-42.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-6.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-6.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-26.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-26.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-43.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-43.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-60.jpg",
+                  "media_src": "2022-11-14_seoul/2036Regional_Seoul_Selects-60.jpg",
+                  "media_type": "image"
+                }
+              ]
+            }
+          },
+          {
+            "component": "Teaser",
+            "props": {
+              "img_src": "2022-10-24_dc/249A0005.jpg",
+              "media_src": "2022-10-24_dc/249A0005.jpg",
+              "media_type": "image",
+              "type": "gallery",
+              "event_location": "Washington, DC",
+              "event_date": "10/24/22",
+              "slides": [
+                {
+                  "img_src": "2022-10-24_dc/249A0005.jpg",
+                  "media_src": "2022-10-24_dc/249A0005.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0084.jpg",
+                  "media_src": "2022-10-24_dc/249A0084.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0600.jpg",
+                  "media_src": "2022-10-24_dc/249A0600.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0729.jpg",
+                  "media_src": "2022-10-24_dc/249A0729.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0746.jpg",
+                  "media_src": "2022-10-24_dc/249A0746.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0780.jpg",
+                  "media_src": "2022-10-24_dc/249A0780.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0832.jpg",
+                  "media_src": "2022-10-24_dc/249A0832.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9917.jpg",
+                  "media_src": "2022-10-24_dc/249A9917.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9987.jpg",
+                  "media_src": "2022-10-24_dc/249A9987.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0020.jpg",
+                  "media_src": "2022-10-24_dc/249A0020.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0124.jpg",
+                  "media_src": "2022-10-24_dc/249A0124.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0640.jpg",
+                  "media_src": "2022-10-24_dc/249A0640.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0732.jpg",
+                  "media_src": "2022-10-24_dc/249A0732.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0750.jpg",
+                  "media_src": "2022-10-24_dc/249A0750.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0781.jpg",
+                  "media_src": "2022-10-24_dc/249A0781.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9808.jpg",
+                  "media_src": "2022-10-24_dc/249A9808.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9922.jpg",
+                  "media_src": "2022-10-24_dc/249A9922.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9991.jpg",
+                  "media_src": "2022-10-24_dc/249A9991.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0027.jpg",
+                  "media_src": "2022-10-24_dc/249A0027.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0351.jpg",
+                  "media_src": "2022-10-24_dc/249A0351.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0665.jpg",
+                  "media_src": "2022-10-24_dc/249A0665.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0735.jpg",
+                  "media_src": "2022-10-24_dc/249A0735.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0759.jpg",
+                  "media_src": "2022-10-24_dc/249A0759.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0783.jpg",
+                  "media_src": "2022-10-24_dc/249A0783.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9812.jpg",
+                  "media_src": "2022-10-24_dc/249A9812.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9928.jpg",
+                  "media_src": "2022-10-24_dc/249A9928.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9993.jpg",
+                  "media_src": "2022-10-24_dc/249A9993.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0030.jpg",
+                  "media_src": "2022-10-24_dc/249A0030.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0356.jpg",
+                  "media_src": "2022-10-24_dc/249A0356.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0693.jpg",
+                  "media_src": "2022-10-24_dc/249A0693.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0739.jpg",
+                  "media_src": "2022-10-24_dc/249A0739.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0771.jpg",
+                  "media_src": "2022-10-24_dc/249A0771.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0807.jpg",
+                  "media_src": "2022-10-24_dc/249A0807.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9836.jpg",
+                  "media_src": "2022-10-24_dc/249A9836.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9934.jpg",
+                  "media_src": "2022-10-24_dc/249A9934.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0050.jpg",
+                  "media_src": "2022-10-24_dc/249A0050.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0590.jpg",
+                  "media_src": "2022-10-24_dc/249A0590.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0709.jpg",
+                  "media_src": "2022-10-24_dc/249A0709.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0743.jpg",
+                  "media_src": "2022-10-24_dc/249A0743.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0772.jpg",
+                  "media_src": "2022-10-24_dc/249A0772.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0816.jpg",
+                  "media_src": "2022-10-24_dc/249A0816.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9896.jpg",
+                  "media_src": "2022-10-24_dc/249A9896.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9940.jpg",
+                  "media_src": "2022-10-24_dc/249A9940.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0081.jpg",
+                  "media_src": "2022-10-24_dc/249A0081.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0594.jpg",
+                  "media_src": "2022-10-24_dc/249A0594.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0725.jpg",
+                  "media_src": "2022-10-24_dc/249A0725.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0744.jpg",
+                  "media_src": "2022-10-24_dc/249A0744.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0777.jpg",
+                  "media_src": "2022-10-24_dc/249A0777.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A0820.jpg",
+                  "media_src": "2022-10-24_dc/249A0820.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9898.jpg",
+                  "media_src": "2022-10-24_dc/249A9898.jpg",
+                  "media_type": "image"
+                },
+                {
+                  "img_src": "2022-10-24_dc/249A9983.jpg",
+                  "media_src": "2022-10-24_dc/249A9983.jpg",
                   "media_type": "image"
                 }
               ]
