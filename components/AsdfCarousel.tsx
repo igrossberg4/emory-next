@@ -95,19 +95,19 @@ export const PrevButtonThumbs: React.FC<PrevNextButtonPropType> = (props) => {
 
   return (
     <button
-      className="embla-gallery-thumbs__button embla-gallery-thumbs__button--next"
+      className="embla-gallery-thumbs__button embla-gallery-thumbs__button--prev"
       onClick={onClick}
       disabled={!enabled}
     >
       <svg
-        width="17"
-        height="29"
-        viewBox="0 0 17 29"
+        width="7"
+        height="13"
+        viewBox="0 0 7 13"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14.6425 28.3924L0.5 14.2499L14.6425 0.107422L16.41 1.87492L4.035 14.2499L16.41 26.6249L14.6425 28.3924Z"
+          d="M5.657 12.157L0 6.50002L5.657 0.843018L6.364 1.55002L1.414 6.50002L6.364 11.45L5.657 12.157Z"
           fill="#212322"
         />
       </svg>
@@ -125,14 +125,14 @@ export const NextButtonThumbs: React.FC<PrevNextButtonPropType> = (props) => {
       disabled={!enabled}
     >
       <svg
-        width="17"
-        height="29"
-        viewBox="0 0 17 29"
+        width="7"
+        height="13"
+        viewBox="0 0 7 13"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M2.26756 28.3924L16.4101 14.2499L2.26756 0.107422L0.500061 1.87492L12.8751 14.2499L0.500061 26.6249L2.26756 28.3924Z"
+          d="M0.707 12.157L6.364 6.50002L0.707 0.843018L0 1.55002L4.95 6.50002L0 11.45L0.707 12.157Z"
           fill="#212322"
         />
       </svg>
@@ -143,15 +143,14 @@ export const NextButtonThumbs: React.FC<PrevNextButtonPropType> = (props) => {
 export default function AsdfCarousel(props: any) {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  // const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedThumbIndex, setSelectedThumbIndex] = useState(0);
+  const SLIDE_COUNT = props.slides.length;
 
   const [viewportRef, embla] = useEmblaCarousel({
     slidesToScroll: 1,
     skipSnaps: false,
     align: isMobile ? "center" : "start",
   });
-
-  // const [emblaMainRef, emblaMainApi] = useEmblaCarousel(OPTIONS)
 
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
@@ -172,21 +171,41 @@ export default function AsdfCarousel(props: any) {
     [embla, emblaThumbsApi]
   );
 
-  const onThumbPrevClick = useCallback(
-    (index: number) => {
-      if (!embla || !emblaThumbsApi) return;
-      if (emblaThumbsApi.clickAllowed()) embla.scrollTo(index);
-    },
-    [embla, emblaThumbsApi]
-  );
+  const onThumbPrevClick = useCallback(() => {
+    if (!embla || !emblaThumbsApi) return;
+    if (emblaThumbsApi.clickAllowed()) {
+      const nextSlide = selectedThumbIndex - 7;
 
-  const onThumbNextClick = useCallback(
-    (index: number) => {
-      if (!embla || !emblaThumbsApi) return;
-      if (emblaThumbsApi.clickAllowed()) embla.scrollTo(index);
-    },
-    [embla, emblaThumbsApi]
-  );
+      if (nextSlide < 0) {
+        setSelectedThumbIndex(0);
+        emblaThumbsApi.scrollTo(0);
+      } else if (nextSlide > SLIDE_COUNT - 1) {
+        setSelectedThumbIndex(SLIDE_COUNT - 1);
+        emblaThumbsApi.scrollTo(SLIDE_COUNT - 1);
+      } else {
+        setSelectedThumbIndex(selectedThumbIndex - 7);
+        emblaThumbsApi.scrollTo(selectedThumbIndex - 7);
+      }
+    }
+  }, [embla, emblaThumbsApi, selectedThumbIndex]);
+
+  const onThumbNextClick = useCallback(() => {
+    if (!embla || !emblaThumbsApi) return;
+    if (emblaThumbsApi.clickAllowed()) {
+      const nextSlide = selectedThumbIndex + 7;
+
+      if (nextSlide < 0) {
+        setSelectedThumbIndex(0);
+        emblaThumbsApi.scrollTo(0);
+      } else if (nextSlide > SLIDE_COUNT - 1) {
+        setSelectedThumbIndex(SLIDE_COUNT - 1);
+        emblaThumbsApi.scrollTo(SLIDE_COUNT - 1);
+      } else {
+        setSelectedThumbIndex(nextSlide);
+        emblaThumbsApi.scrollTo(nextSlide);
+      }
+    }
+  }, [embla, emblaThumbsApi, selectedThumbIndex]);
 
   const onSelect = useCallback(() => {
     if (!embla || !emblaThumbsApi) return;
@@ -194,6 +213,7 @@ export default function AsdfCarousel(props: any) {
     setPrevBtnAsdfEnabled(embla.canScrollPrev());
     setNextBtnAsdfEnabled(embla.canScrollNext());
     emblaThumbsApi.scrollTo(embla.selectedScrollSnap());
+    setSelectedThumbIndex(embla.selectedScrollSnap());
   }, [embla, emblaThumbsApi, setSelectedIndex]);
 
   useEffect(() => {
@@ -233,8 +253,6 @@ export default function AsdfCarousel(props: any) {
     document.body.addEventListener("keydown", handleKey, { passive: false });
     return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView, scrollNext, scrollPrev]); // @ts-ignore
-
-  const SLIDE_COUNT = props.slides.length;
   return (
     <div
       ref={refViewport}
@@ -292,6 +310,17 @@ export default function AsdfCarousel(props: any) {
                 />
               ))}
             </div>
+
+            {prevBtnAsdfEnabled ? (
+              <PrevButtonThumbs onClick={onThumbPrevClick} enabled={true} />
+            ) : (
+              ""
+            )}
+            {nextBtnAsdfEnabled ? (
+              <NextButtonThumbs onClick={onThumbNextClick} enabled={true} />
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
