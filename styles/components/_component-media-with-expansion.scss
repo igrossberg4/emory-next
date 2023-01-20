@@ -3,37 +3,12 @@
   display: inline-block;
   margin-bottom: math.div($icon-button-size, 2);
 
-  &--has-link {
-    @include media-breakpoint-down(md) {
-      margin-bottom: math.div($icon-button-size, 2) + 80px !important;
-    }
-
-    &.component-media-with-expansion--disabled {
-      @include media-breakpoint-down(md) {
-        margin-bottom: math.div($icon-button-size, 2) + 95px !important;
-      }
-    }
-  }
-
   .actions {
     position: absolute;
     bottom: 0;
     left: 50%;
     z-index: 2;
     transform: translate(-50%, 35%);
-  }
-  
-  .round-wp {
-    position: relative;
-
-    .image-overlay {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
   }
 
   .overlay {
@@ -56,7 +31,7 @@
     // aspect ratio and hard reset Next.js. Thanks for nothing, Next.js.
     .image-wrapper {
       overflow: hidden;
-      display:inline-block;
+      display: inline-block;
 
       > div {
         display: inline-block !important;
@@ -79,25 +54,25 @@
     figure {
       display: table;
 
-      video{
+      video {
         max-width: 900px;
         width: 100%;
         max-height: 50vh;
       }
     }
-    
+
     .overlay__text {
       display: table-caption;
       caption-side: bottom;
       margin: 20px auto;
       // max-width: map-get($container-max-widths, 'md');
-      .text-body{
-        &::before{
+      .text-body {
+        &::before {
           content: unset;
         }
       }
     }
-    
+
     [data-media="video"] .overlay__text {
       text-align: center;
     }

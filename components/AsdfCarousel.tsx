@@ -222,7 +222,7 @@ export default function AsdfCarousel(props: any) {
   return (
     <div
       ref={refViewport}
-      className="section campaign-carousel gallery-carousel"
+      className="section campaign-carousel gallery-carousel asdf-carousel"
     >
       <div className="embla-gallery">
         <div className="embla-gallery__viewport" ref={viewportRef}>
@@ -245,9 +245,6 @@ export default function AsdfCarousel(props: any) {
               );
             })}
           </div>
-          <span className="slide-num">{`${
-            selectedIndex + 1
-          } / ${SLIDE_COUNT}`}</span>
           {prevBtnAsdfEnabled ? (
             <PrevButton onClick={scrollPrev} enabled={prevBtnAsdfEnabled} />
           ) : (
@@ -261,6 +258,9 @@ export default function AsdfCarousel(props: any) {
         </div>
 
         <div className="embla-gallery-thumbs">
+          <span className="slide-num">{`${
+            selectedIndex + 1
+          } / ${SLIDE_COUNT}`}</span>
           <div className="embla-gallery-thumbs__viewport" ref={emblaThumbsRef}>
             <div className="embla-gallery-thumbs__container">
               {props.slides.map((value: any, i: number) => (

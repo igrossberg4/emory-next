@@ -18,7 +18,7 @@
     "cta_button_text": "REGISTER NOW",
     "cta_button_link": "https://securelb.imodules.com/s/1705/21/interior.aspx?sid=1705&gid=3&pgid=16954&cid=25625",
     "vertical_header_line": "true",
-    "custom_css": "#carouselContent > .section.gallery-carousel { padding-top: 160px !important; } .footer__cta a.link-button { display: none; } .section.component-intro-text { padding-top: 194px; } .footer__contact__links a { text-decoration: none; } .footer__contact__heading { margin-bottom: 20px; } @media (max-width: 767.98px) { .section.component-intro-text { padding-top: 60px; } .section.gallery-carousel { padding-top: 100px !important; } } .section.component-intro-text .body-container { padding-top: 15px; } .section.component-intro-text .body-container .col-md-8.image-container { margin-bottom: 20px; } .section.component-bottom-navigation { display: none; }",
+    "custom_css": ".footer__cta a.link-button { display: none; } .section.component-intro-text { padding-top: 194px; } .footer__contact__links a { text-decoration: none; } .footer__contact__heading { margin-bottom: 20px; } @media (max-width: 767.98px) { .section.component-intro-text { padding-top: 60px; } } .section.component-intro-text .body-container { padding-top: 15px; } .section.component-intro-text .body-container .col-md-8.image-container { margin-bottom: 20px; } .section.component-bottom-navigation { display: none; }",
     "footer": {
       "cta_contact_info": {
         "big_title": "CONTACT INFORMATION",
