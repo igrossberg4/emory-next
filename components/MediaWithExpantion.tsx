@@ -99,6 +99,7 @@ export default function MediaWithExpantion(props: any) {
                   ? props.media_src
                   : multipleSizesImgPrincipal.src
               }
+              loading="lazy"
               style={props.img_size ? { objectFit: props.img_size } : {}}
             />
           </motion.figure>
