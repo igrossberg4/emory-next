@@ -92,7 +92,7 @@ export default function CampaignCarousel(props: any) {
                 return null;
               }
               return (
-                <div className="embla__slide">
+                <div className="embla__slide" key={MD5(value) + i.toString()}>
                   {/* <DynamicComponentMatcher
                                         key={MD5(value) + i.toString()}
                                         view={[
@@ -107,11 +107,7 @@ export default function CampaignCarousel(props: any) {
                                         ]}
                                     ></DynamicComponentMatcher> */}
 
-                  <Teaser
-                    galleryApi={embla}
-                    {...value.props}
-                    key={MD5(value) + i.toString()}
-                  ></Teaser>
+                  <Teaser galleryApi={embla} {...value.props}></Teaser>
 
                   <h3 className="event_location">
                     {value.props.event_location}
