@@ -8,16 +8,16 @@ import MediaWithExpantion from "./MediaWithExpantion";
 export default function Teaser(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
-  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+
+  let multipleSizesImgPrincipal;
+
+  if (!props.hosted_externally) {
+    multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`);
+  }
 
   return (
     <div className="teaser">
       {props.type == "gallery" ? (
-        // console.log(props.items)
-
-        // props.items.map((item: any, index: any) => (
-
-        // ))
         <MediaWithExpantion
           img_src={props.img_src}
           media_src={props.media_src}
@@ -30,6 +30,7 @@ export default function Teaser(props: any) {
           text={props.media_text}
           byline={props.media_byline}
           slides={props.slides}
+          hosted_externally={props.hosted_externally}
           galleryApi={props.galleryApi}
         ></MediaWithExpantion>
       ) : (

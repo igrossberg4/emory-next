@@ -268,7 +268,7 @@ export default function AsdfCarousel(props: any) {
                     <span>{i + 1}</span>
                   </div>
 
-                  {value.host_externally ? (
+                  {value.hosted_externally ? (
                     <img
                       className="embla-gallery__slide__img"
                       src={value.img_src}

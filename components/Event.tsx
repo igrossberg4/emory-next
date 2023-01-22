@@ -55,6 +55,7 @@ export default function Event(props: any) {
               byline={props.media_byline}
               hide_icons={true}
             ></MediaWithExpantion>
+            <div className="text-image-header__line"></div>
           </div>
         </div>
       </div>

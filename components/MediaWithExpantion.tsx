@@ -13,11 +13,13 @@ export default function MediaWithExpantion(props: any) {
   let multipleSizesImgPrincipal;
   let multipleSizesImgExpanded;
 
-  multipleSizesImgPrincipal = require(`../public/images/${
-    props.img_src ? props.img_src : props.media_src
-  }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  if (props.media_type !== "video" && props.media_type !== "audio") {
-    multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
+  if (!props.hosted_externally) {
+    multipleSizesImgPrincipal = require(`../public/images/${
+      props.img_src ? props.img_src : props.media_src
+    }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+    if (props.media_type !== "video" && props.media_type !== "audio") {
+      multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
+    }
   }
 
   const onSlideClick = useCallback(() => {
@@ -87,8 +89,16 @@ export default function MediaWithExpantion(props: any) {
           >
             <img
               alt={props.media_alt}
-              srcSet={multipleSizesImgPrincipal.srcSet}
-              src={multipleSizesImgPrincipal.src}
+              srcSet={
+                props.hosted_externally
+                  ? null
+                  : multipleSizesImgPrincipal.srcSet
+              }
+              src={
+                props.hosted_externally
+                  ? props.media_src
+                  : multipleSizesImgPrincipal.src
+              }
               style={props.img_size ? { objectFit: props.img_size } : {}}
             />
           </motion.figure>
