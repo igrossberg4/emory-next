@@ -82,9 +82,6 @@ export default function Footer(props: any) {
                 currentTarget: any;
                 relatedTarget: any;
               }) => {
-                console.log(e.target);
-                console.log(e.currentTarget);
-                console.log(e.relatedTarget);
                 window.scrollTo({
                   top: 0,
                   behavior: "smooth",

@@ -128,7 +128,7 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
     "./data/menu",
     fs
       .readdirSync(path.join("./data/menu"))
-      .filter((value) => value.startsWith("main"))
+      .filter((value) => value.startsWith("main-menu-v2"))
       .filter((value) => value.endsWith(".json"))
   );
   const schoolMenu = loadFilesAndParse(
@@ -170,7 +170,8 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
       link_to: link,
     };
   });
-  const optionsMenu = mainMenu[0].links.map((link: any) => {
+
+  const optionsCampaignsMenu = mainMenu[0].campaigns.map((link: any) => {
     try {
       const nodeArraySelect = link.standalone ? allNodes : nodes;
       const nodeFind = nodeArraySelect.find((node) => link.id === node.id);
@@ -178,7 +179,6 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
         baseNode.id === nodeFind.id
           ? `${baseNode.path}`
           : `${baseNode.path}/${nodeFind.path}`;
-
       return {
         title: link.title ? link.title : nodeFind.page_props.title,
         link_to: linkFound,
@@ -194,6 +194,55 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
     }
   });
 
+  // console.log(mainMenu[0]);
+
+  const optionsExploresMenu = mainMenu[0].explore_mores.map((link: any) => {
+    try {
+      const nodeArraySelect = link.standalone ? allNodes : nodes;
+      const nodeFind = nodeArraySelect.find((node) => link.id === node.id);
+      const linkFound =
+        baseNode.id === nodeFind.id
+          ? `${baseNode.path}`
+          : `${baseNode.path}/${nodeFind.path}`;
+      return {
+        title: link.title ? link.title : nodeFind.page_props.title,
+        link_to: linkFound,
+        new: link.new ?? false,
+      };
+    } catch (e) {
+      throw (
+        "Link page with id " +
+        link.id +
+        " at menu not found in pages with base collection " +
+        baseNode.id
+      );
+    }
+  });
+
+  // const optionsMenu = mainMenu[0].links.map((link: any) => {
+  //   try {
+  //     const nodeArraySelect = link.standalone ? allNodes : nodes;
+  //     const nodeFind = nodeArraySelect.find((node) => link.id === node.id);
+  //     const linkFound =
+  //       baseNode.id === nodeFind.id
+  //         ? `${baseNode.path}`
+  //         : `${baseNode.path}/${nodeFind.path}`;
+
+  //     return {
+  //       title: link.title ? link.title : nodeFind.page_props.title,
+  //       link_to: linkFound,
+  //       new: link.new ?? false,
+  //     };
+  //   } catch (e) {
+  //     throw (
+  //       "Link page with id " +
+  //       link.id +
+  //       " at menu not found in pages with base collection " +
+  //       baseNode.id
+  //     );
+  //   }
+  // });
+
   return {
     component: "DynamicComponentMatcher",
     props: {
@@ -208,7 +257,8 @@ function prepareMenu(nodes: Array<any>, baseNode: any, allNodes: Array<any>) {
             },
             main_menu: {
               title: "Menu",
-              options: optionsMenu,
+              options_campaigns: optionsCampaignsMenu,
+              options_explores: optionsExploresMenu,
               social: mainMenu[0].social,
             },
           },

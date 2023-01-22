@@ -7,7 +7,7 @@ import { imageLoader } from "./utils/imageLoader";
 import Audio from "./Audio";
 import classNames from "classnames";
 import { useCallback } from "react";
-import AsdfCarousel from "./AsdfCarousel";
+import AsdfCarousel from "./GalleryCarouselItem";
 
 export default function MediaWithExpantion(props: any) {
   let multipleSizesImgPrincipal;
@@ -99,7 +99,7 @@ export default function MediaWithExpantion(props: any) {
                   ? props.media_src
                   : multipleSizesImgPrincipal.src
               }
-              loading="lazy"
+              // loading="lazy"
               style={props.img_size ? { objectFit: props.img_size } : {}}
             />
           </motion.figure>

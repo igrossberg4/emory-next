@@ -38,7 +38,7 @@ const ImageTextOneColumn = dynamic(() => import("./ImageTextOneColumn"));
 const GalleryCarousel = dynamic(() => import("./GalleryCarousel"));
 const EventContainer = dynamic(() => import("./EventContainer"));
 const Event = dynamic(() => import("./Event"));
-const AsdfCarousel = dynamic(() => import("./AsdfCarousel"));
+const GalleryCarouselItem = dynamic(() => import("./GalleryCarouselItem"));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -228,12 +228,12 @@ function DynamicComponentMatcher(props: any) {
           case "Event":
             return <Event {...component.props} key={i.toString}></Event>;
 
-          case "AsdfCarousel":
+          case "GalleryCarouselItem":
             return (
-              <AsdfCarousel
+              <GalleryCarouselItem
                 {...component.props}
                 key={i.toString}
-              ></AsdfCarousel>
+              ></GalleryCarouselItem>
             );
 
           case "Audio":
