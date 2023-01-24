@@ -41,6 +41,7 @@ a {
   @extend %rounded-with-shadow;
   width: $icon-button-size;
   height: $icon-button-size;
+  color: #212322;
 
   svg {
     width: 30px;
@@ -168,10 +169,10 @@ a {
 }
 
 .visually-hidden {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

@@ -60,7 +60,7 @@ export default function MainMenuV2(props: any) {
                     ))}
                     <div className="menu-main__cta">
                       <Link href="https://together.emory.edu/give">
-                        <a className="link-button">Support The Campaign</a>
+                        <a className="link-button">Support Emory</a>
                       </Link>
                     </div>
                   </div>
