@@ -288,7 +288,7 @@ export default function GalleryCarouselItem(props: any) {
                   selected={i === selectedIndex}
                   index={i}
                   imgSrc={
-                    value.img_src
+                    value.thumb_src
                     // require(`../public/images/${value.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`)
                     //   .src
                   }

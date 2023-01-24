@@ -96,7 +96,9 @@ export default function MediaWithExpantion(props: any) {
               }
               src={
                 props.hosted_externally
-                  ? props.media_src
+                  ? props.thumb_src
+                    ? props.thumb_src
+                    : props.media_src
                   : multipleSizesImgPrincipal.src
               }
               // loading="lazy"
