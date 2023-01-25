@@ -14,8 +14,7 @@
     justify-content: center;
     height: 100%;
     will-change: opacity, margin-left;
-    transition:
-      opacity $main-carousel-transition-duration ease-in-out;
+    transition: opacity $main-carousel-transition-duration ease-in-out;
     //transform $main-carousel-transition-duration ease-in-out;
     //margin-left $main-carousel-transition-duration ease-in-out;
     width: 100%;
@@ -25,7 +24,7 @@
     z-index: 2;
 
     .no_selected & {
-      opacity: .3;
+      opacity: 0.3;
     }
   }
 
@@ -49,16 +48,16 @@
     text-transform: uppercase;
     font-size: $h2-font-size;
 
-    @include media-breakpoint-up(xl){
+    @include media-breakpoint-up(xl) {
       font-size: $h2-font-size--desktop;
     }
 
-    @media (min-width: map-get($grid-breakpoints, 'lg')) and (max-height: $round-image-vertical-breakpoint-lg) {
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-height: $round-image-vertical-breakpoint-lg) {
       font-size: $h2-font-size;
     }
 
     // ¡Vertical media queries take precedence!
-    @media (min-width: map-get($grid-breakpoints, 'lg')) and (max-height: $round-image-vertical-breakpoint-md) {
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-height: $round-image-vertical-breakpoint-md) {
       font-size: $h3-font-size;
     }
 
@@ -76,19 +75,24 @@
 
   .subtitle {
     margin: 0 auto;
-    max-width: map-get($container-max-widths, 'sm');
+    max-width: map-get($container-max-widths, "sm");
+    font-size: 24px;
 
-    @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-md) {
+    @media (min-width: map-get($grid-breakpoints, "sm")) and (max-height: $round-image-vertical-breakpoint-md) {
       font-size: $font-size-base;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 22px;
     }
   }
 
   @keyframes fadeIn {
     0% {
-      opacity:0;
+      opacity: 0;
     }
     100% {
-      opacity:1;
+      opacity: 1;
     }
   }
 
@@ -97,7 +101,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    animation: fadeIn math.div($main-carousel-transition-duration, 2) ease-in-out;
+    animation: fadeIn math.div($main-carousel-transition-duration, 2)
+      ease-in-out;
     z-index: 2;
     //transition: opacity math.div($main-carousel-transition-duration, 3) ease-in-out;
     padding-bottom: $default-separation * 1.5;
@@ -135,8 +140,7 @@
     width: $round-image-size-small;
     height: $round-image-size-small;
     will-change: width, height, opacity, bottom, transform, margin-bottom;
-    transition:
-      width $scroll-down-transition-duration ease-in-out,
+    transition: width $scroll-down-transition-duration ease-in-out,
       height $scroll-down-transition-duration ease-in-out,
       opacity math.div($scroll-down-transition-duration, 2) ease-in-out,
       bottom $scroll-down-transition-duration ease-in-out,
@@ -156,6 +160,22 @@
       width: $round-image-size-big;
       height: $round-image-size-big;
       bottom: 30%;
+    }
+
+    // ¡Vertical media queries take precedence!
+
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-height: $round-image-vertical-breakpoint-md) {
+      width: $round-image-size-medium;
+      height: $round-image-size-medium;
+    }
+
+    &:not(#video-container) {
+      @media (max-height: $round-image-vertical-breakpoint-sm) {
+        width: $round-image-size-tiny;
+        height: $round-image-size-tiny;
+        bottom: 40%;
+        border-width: 6px;
+      }
     }
 
     // ¡Vertical media queries take precedence!
@@ -195,7 +215,7 @@
       top: 65%;
     }
     @include media-breakpoint-up(lg) {
-      top:70%;
+      top: 70%;
     }
     @include media-breakpoint-up(xl) {
       top: 75%;
@@ -220,7 +240,7 @@
     width: 100%;
     left: 0;
     right: 0;
-    text-align:center;
+    text-align: center;
     opacity: 0;
     margin-bottom: 0;
     transition: all $scroll-down-transition-duration ease-out;
@@ -244,7 +264,7 @@
       height: 110vw !important;
       // transform: translate(0, 0);
       margin-bottom: 0;
-      opacity: .5;
+      opacity: 0.5;
 
       @media (orientation: portrait) {
         width: 110vh !important;
@@ -263,12 +283,12 @@
       margin: 12px 0 calc(32px - 0.17em) 0;
       white-space: normal;
 
-      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+      @media (max-width: map-get($grid-breakpoints, "sm")) and (max-height: $round-image-vertical-breakpoint-sm) {
         font-size: $h4-font-size;
         margin: 0 5px;
       }
 
-      @media (min-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
+      @media (min-width: map-get($grid-breakpoints, "sm")) and (max-height: $round-image-vertical-breakpoint-sm) {
         font-size: $h2-font-size;
       }
 
@@ -288,10 +308,9 @@
 
     .subtitle {
       padding: 0 10px;
-      @media (max-width: map-get($grid-breakpoints, 'sm')) and (max-height: $round-image-vertical-breakpoint-sm) {
-        font-size: $font-size-base
+      @media (max-width: map-get($grid-breakpoints, "sm")) and (max-height: $round-image-vertical-breakpoint-sm) {
+        font-size: $font-size-base;
       }
     }
-
   }
 }

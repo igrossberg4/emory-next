@@ -1,6 +1,7 @@
 .chakra-menu__menu-button {
   @extend %text-label;
   text-transform: uppercase;
+  color: #212322;
 
   .chakra-button__icon {
     svg {

@@ -5,31 +5,77 @@ import IconButton from "./IconButton";
 import Overlay from "./Overlay";
 import { imageLoader } from "./utils/imageLoader";
 import Audio from "./Audio";
+import classNames from "classnames";
+import { useCallback } from "react";
+import AsdfCarousel from "./GalleryCarouselItem";
 
 export default function MediaWithExpantion(props: any) {
   let multipleSizesImgPrincipal;
   let multipleSizesImgExpanded;
 
-  multipleSizesImgPrincipal = require(`../public/images/${
-    props.img_src ? props.img_src : props.media_src
-  }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  if (props.media_type !== "video" && props.media_type !== "audio") {
-    multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
+  if (!props.hosted_externally) {
+    multipleSizesImgPrincipal = require(`../public/images/${
+      props.img_src ? props.img_src : props.media_src
+    }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+    if (props.media_type !== "video" && props.media_type !== "audio") {
+      multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
+    }
   }
+
+  const onSlideClick = useCallback(() => {
+    if (props.galleryApi && props.galleryApi.clickAllowed()) {
+      // You might wanna check that the zoom mode isn't active here too
+
+      // Re-initalize Embla without pointer interactions
+      props.galleryApi.reInit({ draggable: false });
+
+      // Activate zoom here because Embla says the pointer interaction was a click and NOT a drag move
+    }
+  }, [props.galleryApi]);
+
+  const handleOverlayOpen = () => {
+    // code to run when overlay is closed
+    // Fix for carousels with galleries
+    var elements = document.getElementsByClassName("embla__container");
+    for (let i = 0; i < elements.length; i++) {
+      (elements[i] as HTMLElement).style.setProperty(
+        "transform",
+        "none",
+        "important"
+      );
+    }
+    () => onSlideClick();
+  };
+
+  const handleOverlayClose = () => {
+    // code to run when overlay is closed
+    // Fix for carousels with galleries
+    var elements = document.getElementsByClassName("embla__container");
+    for (let i = 0; i < elements.length; i++) {
+      (elements[i] as HTMLElement).style.setProperty("transform", "none");
+    }
+
+    if (props.galleryApi) {
+      props.galleryApi.reInit({ draggable: true });
+    }
+  };
 
   //const files = fs.readdirSync(__dirname);
   //const moduleName = path.join(__dirname, files[0]);
   return (
     <>
       <div
-        className={`component-media-with-expansion${props.links && props.links.length > 0 ? ' component-media-with-expansion--has-link' : ''}${props.disabled ? ' component-media-with-expansion--disabled' : ''}`}
+        className={`component-media-with-expansion${
+          props.links && props.links.length > 0
+            ? " component-media-with-expansion--has-link"
+            : ""
+        }${props.disabled ? " component-media-with-expansion--disabled" : ""}`}
       >
         <motion.figure
-          className={
-            props.size !== "normal"
-              ? "round-wp size--" + props.size
-              : "round-wp"
-          }
+          className={classNames("round-wp", {
+            ["size--" + props.size]: props.size !== "normal",
+            teaser__image_carousel: props.is_carousel,
+          })}
           // layout
           // layoutId={layoutId}
           initial={{ opacity: 0 }}
@@ -43,8 +89,19 @@ export default function MediaWithExpantion(props: any) {
           >
             <img
               alt={props.media_alt}
-              srcSet={multipleSizesImgPrincipal.srcSet}
-              src={multipleSizesImgPrincipal.src}
+              srcSet={
+                props.hosted_externally
+                  ? null
+                  : multipleSizesImgPrincipal.srcSet
+              }
+              src={
+                props.hosted_externally
+                  ? props.thumb_src
+                    ? props.thumb_src
+                    : props.media_src
+                  : multipleSizesImgPrincipal.src
+              }
+              // loading="lazy"
               style={props.img_size ? { objectFit: props.img_size } : {}}
             />
           </motion.figure>
@@ -52,36 +109,46 @@ export default function MediaWithExpantion(props: any) {
         </motion.figure>
         {!props.disabled && (
           <Overlay
+            onOverlayOpen={handleOverlayOpen}
+            onOverlayClose={handleOverlayClose}
+            is_carousel={props.is_carousel}
             expand_action={
-              <div className="actions">
-                <IconButton icon={props.media_type === "image" ? "eye" : "play"} label="See more" />
+              <div className="actions" onClick={() => onSlideClick()}>
+                <IconButton
+                  icon={props.media_type === "image" ? "eye" : "play"}
+                  label="See more"
+                />
               </div>
             }
             expanded_content={
               <>
-                <motion.figure
-                  data-media={props.media_type}
-                >
-                  {props.media_type === "image" && (
-                    <div
-                      className="image-wrapper"
-                    >
-                      <Image
-                        loader={imageLoader(multipleSizesImgExpanded) as any}
-                        priority={true}
-                        alt={props.media_alt}
-                        src={multipleSizesImgExpanded.src}
-                        layout={"responsive"}
-                        width={multipleSizesImgExpanded.width}
-                        height={multipleSizesImgExpanded.height}
-                      />
+                <motion.figure data-media={props.media_type}>
+                  {props.type === "gallery" ? (
+                    <AsdfCarousel slides={props.slides}></AsdfCarousel>
+                  ) : (
+                    <div>
+                      {props.media_type === "image" && (
+                        <div className="image-wrapper">
+                          <Image
+                            loader={
+                              imageLoader(multipleSizesImgExpanded) as any
+                            }
+                            priority={true}
+                            alt={props.media_alt}
+                            src={multipleSizesImgExpanded.src}
+                            layout={"responsive"}
+                            width={multipleSizesImgExpanded.width}
+                            height={multipleSizesImgExpanded.height}
+                          />
+                        </div>
+                      )}
+                      {props.media_type === "video" && (
+                        <Video {...props} controls={true} />
+                      )}
+                      {props.media_type === "audio" && (
+                        <Audio {...props} controls={true} />
+                      )}
                     </div>
-                  )}
-                  {props.media_type === "video" && (
-                    <Video {...props} controls={true} />
-                  )}
-                  {props.media_type === "audio" && (
-                    <Audio {...props} controls={true} />
                   )}
                   <figcaption className="overlay__text">
                     <h6 className="title text-body">{props.header}</h6>

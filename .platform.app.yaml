@@ -4,7 +4,12 @@
 name: app
 
 # The type key specifies the language and version for your application.
-type: 'nodejs:15'
+type: "nodejs:15"
+
+# Define environment variables used in all environments.
+variables:
+  env:
+    SITE_URL: "https://2036.emory.edu"
 
 # Define environment variables used in all environments.
 variables:
@@ -13,40 +18,39 @@ variables:
 
 # The hooks that will be triggered when the package is deployed.
 hooks:
-    # The build hook runs after container dependencies are available.
-    # No services are available but the disk is writeable.
-    build: |
-        set -x
-        npm install
-        npm run build
-        # Move committed files in soon-to-be mounts into temp directory.
-        chmod +x scripts/platformsh_handle_mounts.sh
-        ./scripts/platformsh_handle_mounts.sh
-        # ls -al /app/out
-    # The deploy hook runs after your application has been deployed and started.
-    # Code cannot be modified at this point but the database is available.
-    # The site is not accepting requests while this script runs so keep it
-    # fast.
-    deploy: |
-        set -x
-        # Move committed files from temp directory back into mounts.
-        ./scripts/platformsh_handle_mounts.sh
-        # ls -al /app/out
+  # The build hook runs after container dependencies are available.
+  # No services are available but the disk is writeable.
+  build: |
+    set -x
+    npm install
+    npm run build
+    # Move committed files in soon-to-be mounts into temp directory.
+    chmod +x scripts/platformsh_handle_mounts.sh
+    ./scripts/platformsh_handle_mounts.sh
+    # ls -al /app/out
+  # The deploy hook runs after your application has been deployed and started.
+  # Code cannot be modified at this point but the database is available.
+  # The site is not accepting requests while this script runs so keep it
+  # fast.
+  deploy: |
+    set -x
+    # Move committed files from temp directory back into mounts.
+    ./scripts/platformsh_handle_mounts.sh
+    # ls -al /app/out
 # Configure the web server to serve our static site.
 web:
-    commands:
-        start: npx next start
-
+  commands:
+    start: npx next start
 
 # The size of the persistent disk of the application (in MB).
 disk: 5120
 
 mounts:
-    # Next.js will try to cache files, so it must be writeable.
-    '/.next':
-        source: local
-        source_path: 'next'
+  # Next.js will try to cache files, so it must be writeable.
+  "/.next":
+    source: local
+    source_path: "next"
 
-    "/out":
-        source: local
-        source_path: "out"
+  "/out":
+    source: local
+    source_path: "out"

@@ -191,7 +191,7 @@ export default function EmblaCarousel({
         const newErr = new Error("Abort route");
         (newErr as any).cancelled = true;
         throw newErr;
-      }else{
+      } else {
         window.scroll({ top: 0, behavior: "smooth" });
         const scrollbarWidth = window.innerWidth - document.body.scrollWidth;
         document.body.style.overflowY = "hidden";
@@ -229,7 +229,6 @@ export default function EmblaCarousel({
         queue.concat(slides[page + newDirection].props.view[0].props.path)
       );
       dispatch({ type: "IS_TRANSITIONING", payload: true });
-
     },
     [changeRoute, page, slides, queue, setQueue]
   );
@@ -270,11 +269,11 @@ export default function EmblaCarousel({
   }, [inView, page, queue, state.isCircleExpanded]); // @ts-ignore
 
   useEffect(() => {
-    const element = document.getElementById('carousel');
+    const element = document.getElementById("carousel");
     if (element && element instanceof HTMLElement) {
-      element.style.height = window.innerHeight.toString() + 'px';
+      element.style.height = window.innerHeight.toString() + "px";
     }
-  }, [])
+  }, []);
 
   const isSmall = useMediaQuery({ query: `(max-width: 800px)` });
   const isMedium = useMediaQuery({ query: `(max-width: 1000px)` });
@@ -283,11 +282,11 @@ export default function EmblaCarousel({
       <>
         <div
           id="carousel"
-          ref={(ref)=>{
-            document.body.style.visibility = 'visible';
+          ref={(ref) => {
+            document.body.style.visibility = "visible";
           }}
           style={{
-            height: process.browser ? window.innerHeight : '100vh'
+            height: process.browser ? window.innerHeight : "100vh",
           }}
           className={`embla embla--carousel-navigation
         ${!navigation ? "page-carousel" : ""}
@@ -337,7 +336,7 @@ export default function EmblaCarousel({
                           setTimeout(() => {
                             setPerformTransition(true);
                           }, 0);
-                          setTransitioning(false)
+                          setTransitioning(false);
                         }
                       }
                     : undefined

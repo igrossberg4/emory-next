@@ -712,6 +712,15 @@ export default function Home(props: any) {
 
         <meta name="msapplication-TileColor" content="#f5f4f5" />
         <meta name="theme-color" content="#ffffff"></meta>
+
+        {/* Allow custom CSS on the page level */}
+        {props.meta.custom_css ? (
+          <style
+            dangerouslySetInnerHTML={{
+              __html: props.meta.custom_css,
+            }}
+          ></style>
+        ) : null}
       </Head>
       <noscript
         dangerouslySetInnerHTML={{
@@ -728,7 +737,9 @@ export default function Home(props: any) {
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { path: [] } }) {
   const joinPath = params.path ? params.path.join("/") : "";
-  const findPath = (await getNodes(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT!)).paths.find((value) => value.path === joinPath);
+  const findPath = (
+    await getNodes(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT!)
+  ).paths.find((value) => value.path === joinPath);
   return {
     props: findPath,
     // Next.js will attempt to re-generate the page:
@@ -749,7 +760,9 @@ export async function getStaticPaths() {
       params: { path: post.id.toString().split('/') },
     }))
   */
-    const paths = (await getNodes(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT!)).paths.map((post) => ({
+  const paths = (
+    await getNodes(process.env.NEXT_PUBLIC_API_PAGES_ENDPOINT!)
+  ).paths.map((post) => ({
     params: { path: post.path.toString().split("/") },
   }));
   // We'll pre-render only these paths at build time.

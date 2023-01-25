@@ -7,13 +7,13 @@ $landscape-video-size: 125vw;
 $landscape-left-offset: (100vw - $landscape-video-size) * 0.5;
 $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
 
-
 // Intro page.
 .container-video-intro {
   position: relative;
 
   &.video-no-played {
-    .header-inner-content__img#video-container { // ID is to ensure overrides
+    .header-inner-content__img#video-container {
+      // ID is to ensure overrides
       margin-left: 0 !important;
       margin-top: 0 !important;
       z-index: 999 !important;
@@ -50,7 +50,6 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
         left: $landscape-left-offset !important;
         bottom: $landscape-bottom-offset !important;
       }
-
     }
 
     .content-header__container {
@@ -64,7 +63,7 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
 
     .video-paused {
       video {
-        opacity: .5;
+        opacity: 0.5;
         transition: opacity 1s;
       }
     }
@@ -88,7 +87,7 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
       height: 48px;
 
       svg {
-        height:28px;
+        height: 28px;
         width: auto;
       }
     }
@@ -122,7 +121,7 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     video {
       border-radius: 50%;
       //position: absolute;
-      width:400px;
+      width: 400px;
       height: 400px;
     }
   }
@@ -142,21 +141,21 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: .15em;
+    letter-spacing: 0.15em;
     color: $color-black;
     white-space: break-spaces;
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-    z-index:60;
-    opacity:0;
+    z-index: 60;
+    opacity: 0;
     transition: opacity 1s;
-    &.paused{
+    &.paused {
       opacity: 1;
     }
     &:hover {
-      background-color: rgba($color-white, .8);
+      background-color: rgba($color-white, 0.8);
     }
 
     &.playing {
@@ -174,16 +173,16 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
     color: $color-black;
     font-size: 14px;
     line-height: 34px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    background-color: rgba($color-white, .9);
+    background-color: rgba($color-white, 0.9);
     transition: $default-transition;
     position: fixed;
     bottom: 68px + (math.div((48px - 34px), 2));
     left: 24px;
     margin-top: 40vh;
     opacity: 0;
-    z-index:60;
+    z-index: 60;
     box-shadow: $default-box-shadow;
 
     &:hover,
@@ -206,7 +205,6 @@ $landscape-bottom-offset: calc(50% - (#{math.div($landscape-video-size, 2)}));
 }
 
 body.is-mobile .animate_video {
-
   // Mobile browsers have less RAM for animating video zoom, so fallback to a
   // fade out, size change, then fade in.
   &.header-inner-content__img {
@@ -218,16 +216,22 @@ body.is-mobile .animate_video {
   }
 }
 
-
-.main-container.full_video{
+.main-container.full_video {
   .header-menu,
   .embla__button,
   .line-separator,
-  .actions{
-    display:none;
+  .actions {
+    display: none;
   }
-  .embla_slide_present.no_selected{
-    display:none;
+  .embla_slide_present.no_selected {
+    display: none;
   }
 }
 
+.main-container .header-cta {
+  margin-top: 30px !important;
+  width: auto !important;
+  padding: 12px 30px !important;
+  position: static !important;
+  font-size: 0.8775rem !important;
+}

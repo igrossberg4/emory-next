@@ -9,7 +9,7 @@
   }
 
   .component-media-with-expansion {
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     display: block;
 
     .round-wp {
@@ -58,7 +58,7 @@
       z-index: -1;
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         bottom: 0;
@@ -92,7 +92,8 @@
         @include media-breakpoint-up(md) {
           right: auto;
           left: 0;
-          background: url("../../public/svg/line-right.svg") no-repeat center right;
+          background: url("../../public/svg/line-right.svg") no-repeat center
+            right;
         }
       }
     }

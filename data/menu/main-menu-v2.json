@@ -1,0 +1,76 @@
+{
+  "campaigns": [
+    {
+      "title": "ABOUT THE CAMPAIGN",
+      "id": "home-2036"
+    },
+    {
+      "title": "STUDENT FLOURISHING",
+      "id": "student-flourishing"
+    },
+    {
+      "title": "FACULTY EMINENCE",
+      "id": "faculty-eminence"
+    },
+    {
+      "title": "RESEARCH EXCELLENCE",
+      "id": "research-excellence"
+    },
+    {
+      "title": "SIGNATURE THEMES",
+      "id": "signature-themes"
+    }
+  ],
+  "explore_mores": [
+    {
+      "title": "THE PODIUM",
+      "id": "the-podium"
+    },
+    {
+      "title": "THE PODCAST",
+      "id": "the-podcast"
+    },
+    {
+      "title": "REGIONAL EVENTS",
+      "id": "events",
+      "new": true
+    },
+    {
+      "title": "CAMPAIGN LEADERSHIP",
+      "id": "campaign-leadership",
+      "standalone": true
+    }
+  ],
+  "social": [
+    {
+      "link_to": "https://www.facebook.com/EmoryAlumniAssociation/",
+      "type": "facebook",
+      "target": "_blank",
+      "title": "facebook"
+    },
+    {
+      "link_to": "https://www.linkedin.com/company/emory-alumni-association/",
+      "type": "linkedin",
+      "target": "_blank",
+      "title": "linkedin"
+    },
+    {
+      "link_to": "https://twitter.com/EmoryAlumni",
+      "type": "twitter",
+      "target": "_blank",
+      "title": "twitter"
+    },
+    {
+      "link_to": "https://www.youtube.com/user/EmoryUniversity",
+      "type": "youtube",
+      "target": "_blank",
+      "title": "youtube"
+    },
+    {
+      "link_to": "https://www.instagram.com/emoryalumni/",
+      "type": "instagram",
+      "target": "_blank",
+      "title": "instagram"
+    }
+  ]
+}
