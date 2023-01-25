@@ -8,6 +8,11 @@ function loadFilesAndParse(basePath: string, files: Array<string>) {
     .flat();
 }
 
+async function getData(url: string) {
+  let obj = (await fetch(url)).json();
+  return obj;
+}
+
 function findSlides(
   pages: Array<any>,
   nodes: Array<any>,
@@ -597,13 +602,25 @@ function generatePageWithComponents(
     .filter(Boolean);
 }
 
-export function getNodes() {
-  const nodes = loadFilesAndParse(
-    "./data/nodes",
-    fs
-      .readdirSync(path.join("./data/nodes"))
-      .filter((value) => value.endsWith(".json"))
-  );
+// export function getNodes() {
+//   const nodes = loadFilesAndParse(
+//     "./data/nodes",
+//     fs
+//       .readdirSync(path.join("./data/nodes"))
+//       .filter((value) => value.endsWith(".json"))
+//   );
+//   const pages = nodes
+//     .map((node) => ({ list: node.list, nodeBase: node }))
+//     .filter((value) => value.list !== undefined);
+//   return {
+//     paths: pages
+//       .map((pages_list) => generatePageWithComponents(pages_list, nodes))
+//       .flat(),
+//   };
+// }
+
+export async function getNodes(api_url: string) {
+  let nodes = await getData(api_url);
   const pages = nodes
     .map((node) => ({ list: node.list, nodeBase: node }))
     .filter((value) => value.list !== undefined);
