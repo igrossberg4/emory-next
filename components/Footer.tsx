@@ -37,43 +37,44 @@ export default function Footer(props: any) {
             className="footer__scrolltop btn text-label"
             style={{ cursor: "pointer" }}
           >
-            {props?.cta_contact_info?.person ? (
-              <IconButton
-                icon="address-book-thin"
-                label="Contact us"
-                onClick={(e: any) => {
-                  window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: "smooth",
-                  });
-                  setTimeout(() => {
-                    document.body.classList.remove("is-scrolled");
-                    dispatch({ type: "IS_TRANSITIONING", payload: true });
-                    dispatch({
-                      type: "GOING_DOWN",
-                      payload: false,
-                    });
-                    setTimeout(() => {
-                      dispatch({ type: "IS_TRANSITIONING", payload: false });
-                    }, 600);
-                    const element = document.getElementById("selected");
-                    if (element) {
-                      const activeElement = element.querySelector(
-                        ".content-header__container"
-                      );
-                      activeElement?.setAttribute(
-                        "data-animation",
-                        "no-active"
-                      );
-                    }
-                    const elementHeader = document.getElementById("header");
-                    if (element) {
-                      element.classList.remove("hide");
-                    }
-                  }, 400);
-                }}
-              ></IconButton>
-            ) : null}
+            {props?.cta_contact_info?.person
+              ? // <IconButton
+                //   icon="address-book-thin"
+                //   label="Contact us"
+                //   onClick={(e: any) => {
+                //     window.scrollTo({
+                //       top: document.body.scrollHeight,
+                //       behavior: "smooth",
+                //     });
+                //     setTimeout(() => {
+                //       document.body.classList.remove("is-scrolled");
+                //       dispatch({ type: "IS_TRANSITIONING", payload: true });
+                //       dispatch({
+                //         type: "GOING_DOWN",
+                //         payload: false,
+                //       });
+                //       setTimeout(() => {
+                //         dispatch({ type: "IS_TRANSITIONING", payload: false });
+                //       }, 600);
+                //       const element = document.getElementById("selected");
+                //       if (element) {
+                //         const activeElement = element.querySelector(
+                //           ".content-header__container"
+                //         );
+                //         activeElement?.setAttribute(
+                //           "data-animation",
+                //           "no-active"
+                //         );
+                //       }
+                //       const elementHeader = document.getElementById("header");
+                //       if (element) {
+                //         element.classList.remove("hide");
+                //       }
+                //     }, 400);
+                //   }}
+                // ></IconButton>
+                null
+              : null}
             <IconButton
               icon="chevron-up"
               label="Back to top"
