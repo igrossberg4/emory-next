@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "postbuild": "./scripts/nextjs-fix-route-collisions.sh && next-sitemap",
     "start": "next start",
     "lint": "next lint",
