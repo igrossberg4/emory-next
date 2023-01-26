@@ -14,10 +14,12 @@ import { Fragment, createContext, useReducer } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import { getNodes } from "../data-loader/get-nodes";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 import { browserName, isMobile, isIOS } from "react-device-detect";
 import { videoContainerBottomCalculator } from "../components/utils/videoContainerBottomCalculator";
+
+const hash = require("hash-sum");
 
 function getElementXPath(element: any): string {
   if (element.id) {
@@ -640,7 +642,7 @@ export default function Home(props: any) {
     ) : (
       ""
     );
-  }, [router.asPath, state.route, MD5(props.view), state.comesFromCarousel]);
+  }, [router.asPath, state.route, hash(props.view), state.comesFromCarousel]);
 
   return (
     <Fragment>

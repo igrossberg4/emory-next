@@ -8,8 +8,10 @@ import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 import Tag from "./Tag";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import { imageLoader } from "./utils/imageLoader";
+
+const hash = require("hash-sum");
 
 export default function Event(props: any) {
   const router = useRouter();

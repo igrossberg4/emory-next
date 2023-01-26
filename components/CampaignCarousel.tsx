@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 import { ButtonEnabled } from "./Carousel";
 import { useInView } from "react-intersection-observer";
+
+const hash = require("hash-sum");
+
 export const PrevCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
   <button
     type="button"
@@ -33,13 +36,13 @@ export const NextCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
   </button>
 );
 
-export default function CampaignCarousel(props:any) {
+export default function CampaignCarousel(props: any) {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   const [viewportRef, embla] = useEmblaCarousel({
     slidesToScroll: 1,
     skipSnaps: false,
-    align: isMobile ? 'center' : 'start'
+    align: isMobile ? "center" : "start",
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
@@ -61,32 +64,33 @@ export default function CampaignCarousel(props:any) {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       e.preventDefault();
-      if(inView) {
-        switch(e.key) {
-          case 'ArrowLeft':
+      if (inView) {
+        switch (e.key) {
+          case "ArrowLeft":
             scrollPrev();
             return;
-          case 'ArrowRight':
+          case "ArrowRight":
             scrollNext();
             return;
         }
       }
-
     };
     document.body.addEventListener("keydown", handleKey, { passive: false });
-    return () =>  document.body.removeEventListener("keydown", handleKey);
+    return () => document.body.removeEventListener("keydown", handleKey);
   }, [inView, scrollNext, scrollPrev]); // @ts-ignore
   return (
     <div ref={refViewport} className="section campaign-carousel">
-      <h2 className="campaign-carousel__title container header-h1">{props.title}</h2>
+      <h2 className="campaign-carousel__title container header-h1">
+        {props.title}
+      </h2>
       <div className="embla">
         <div className="embla__viewport" ref={viewportRef}>
           <div className="embla__container">
             {props.slides.map((value: any, i: number) => {
               return (
-                <div className="embla__slide" key={MD5(value) + i.toString()}>
+                <div className="embla__slide" key={hash(value) + i.toString()}>
                   <DynamicComponentMatcher
-                    key={MD5(value) + i.toString()}
+                    key={hash(value) + i.toString()}
                     view={[
                       {
                         component: "DynamicComponentMatcher",
@@ -103,8 +107,16 @@ export default function CampaignCarousel(props:any) {
             })}
           </div>
         </div>
-        {prevBtnEnabled ? <PrevCampaignButton onClick={scrollPrev} enabled={prevBtnEnabled} /> : ''}
-        {nextBtnEnabled ? <NextCampaignButton onClick={scrollNext} enabled={nextBtnEnabled} /> : ''}
+        {prevBtnEnabled ? (
+          <PrevCampaignButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+        ) : (
+          ""
+        )}
+        {nextBtnEnabled ? (
+          <NextCampaignButton onClick={scrollNext} enabled={nextBtnEnabled} />
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

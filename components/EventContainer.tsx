@@ -7,8 +7,10 @@ import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 import Tag from "./Tag";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
+
+const hash = require("hash-sum");
 
 export default function EventContainer(props: any) {
   const router = useRouter();
@@ -21,7 +23,7 @@ export default function EventContainer(props: any) {
       {props.items.map((value: any, i: number) => {
         return (
           <DynamicComponentMatcher
-            key={MD5(value) + i.toString()}
+            key={hash(value) + i.toString()}
             view={[
               {
                 component: "DynamicComponentMatcher",

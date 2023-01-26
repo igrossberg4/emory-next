@@ -10,12 +10,15 @@ import {
 } from "react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { AnimatePresence, motion } from "framer-motion";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import { Context } from "../state/Store";
 import { useInView } from "react-intersection-observer";
 import { css, cx } from "@emotion/css";
 import { animated, useSpring } from "react-spring";
 import { useMediaQuery } from "react-responsive";
+
+const hash = require("hash-sum");
+
 function useWindowSize() {
   const getSize = () => {
     return {
@@ -172,7 +175,7 @@ export default function EmblaCarousel({
 }) {
   const router = useRouter();
   const index = actual
-    ? slides.findIndex((slide: any) => MD5(slide) === MD5(actual.actual))
+    ? slides.findIndex((slide: any) => hash(slide) === hash(actual.actual))
     : 0;
   const [state, dispatch] = useContext(Context) as any;
   const [[page, direction], setPage] = useState([index, 1]);
@@ -352,7 +355,7 @@ export default function EmblaCarousel({
                     : 0;
                   return (
                     <div
-                      key={MD5(value) + i.toString()}
+                      key={hash(value) + i.toString()}
                       ref={page === i ? refViewport : undefined}
                       id={page === i && !performTransition ? "selected" : ""}
                       style={{
@@ -381,7 +384,7 @@ export default function EmblaCarousel({
                       <div className="embla__slide">
                         <div className="embla__slide__inner">
                           <DynamicComponentMatcher
-                            key={MD5(value) + i.toString()}
+                            key={hash(value) + i.toString()}
                             view={[
                               {
                                 component: "DynamicComponentMatcher",
@@ -416,7 +419,10 @@ export default function EmblaCarousel({
           />
         </div>
         {navigation ? (
-          <div key={MD5(slides[page].props.view.slice(1))} id="carouselContent">
+          <div
+            key={hash(slides[page].props.view.slice(1))}
+            id="carouselContent"
+          >
             <div className="line-separator line-separator--overflowed-top-1-3"></div>
             <DynamicComponentMatcher
               view={[

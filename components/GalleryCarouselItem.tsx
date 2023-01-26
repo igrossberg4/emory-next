@@ -2,11 +2,13 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
 import { Thumb } from "./Thumb";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 import { ButtonEnabled } from "./Carousel";
 import { useInView } from "react-intersection-observer";
 import { OptionsType } from "embla-carousel/embla-carousel-vanilla/options";
+
+const hash = require("hash-sum");
 
 type PrevNextButtonPropType = {
   enabled: boolean;
@@ -238,7 +240,7 @@ export default function GalleryCarouselItem(props: any) {
               return (
                 <div
                   className="embla-gallery__slide"
-                  key={MD5(value) + i.toString()}
+                  key={hash(value) + i.toString()}
                 >
                   <div className="embla-gallery__slide__number">
                     <span>{i + 1}</span>
@@ -292,7 +294,7 @@ export default function GalleryCarouselItem(props: any) {
                     // require(`../public/images/${value.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`)
                     //   .src
                   }
-                  key={MD5(value) + i.toString()}
+                  key={hash(value) + i.toString()}
                 />
               ))}
             </div>

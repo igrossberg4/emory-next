@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import DynamicComponentMatcher from "./DynamicComponentMatcher";
-import { MD5 } from "object-hash";
+// import { MD5 } from "object-hash";
 import { useMediaQuery } from "react-responsive";
 import { ButtonEnabled } from "./Carousel";
 import { useInView } from "react-intersection-observer";
 import Teaser from "./Teaser";
+
+const hash = require("hash-sum");
+
 export const PrevCampaignButton = ({ enabled, onClick }: ButtonEnabled) => (
   <button
     type="button"
@@ -92,9 +95,9 @@ export default function CampaignCarousel(props: any) {
                 return null;
               }
               return (
-                <div className="embla__slide" key={MD5(value) + i.toString()}>
+                <div className="embla__slide" key={hash(value) + i.toString()}>
                   {/* <DynamicComponentMatcher
-                                        key={MD5(value) + i.toString()}
+                                        key={hash(value) + i.toString()}
                                         view={[
                                             {
                                                 component: "DynamicComponentMatcher",
