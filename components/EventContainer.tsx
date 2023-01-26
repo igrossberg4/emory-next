@@ -23,6 +23,7 @@ export default function EventContainer(props: any) {
       {props.items.map((value: any, i: number) => {
         return (
           <DynamicComponentMatcher
+            // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
             key={hash(value) + i.toString()}
             view={[
               {
