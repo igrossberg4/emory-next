@@ -16,6 +16,8 @@
 }
 
 button {
+  color: inherit;
+
   &:focus-visible {
     outline: auto 1px;
   }
