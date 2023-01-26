@@ -33,6 +33,7 @@ export default function TextImageHeader(props: any) {
                 {props?.tags.map((tag: any, index: number) => {
                   return (
                     <Tag
+                      // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                       key={hash(tag) + index.toString()}
                       label={tag.label}
                       url={tag.url}

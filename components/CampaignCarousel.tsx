@@ -88,8 +88,10 @@ export default function CampaignCarousel(props: any) {
           <div className="embla__container">
             {props.slides.map((value: any, i: number) => {
               return (
+                // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                 <div className="embla__slide" key={hash(value) + i.toString()}>
                   <DynamicComponentMatcher
+                    // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                     key={hash(value) + i.toString()}
                     view={[
                       {

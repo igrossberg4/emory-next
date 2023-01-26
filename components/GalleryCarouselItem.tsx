@@ -240,6 +240,7 @@ export default function GalleryCarouselItem(props: any) {
               return (
                 <div
                   className="embla-gallery__slide"
+                  // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                   key={hash(value) + i.toString()}
                 >
                   <div className="embla-gallery__slide__number">
@@ -289,11 +290,8 @@ export default function GalleryCarouselItem(props: any) {
                   onClick={() => onThumbClick(i)}
                   selected={i === selectedIndex}
                   index={i}
-                  imgSrc={
-                    value.thumb_src
-                    // require(`../public/images/${value.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`)
-                    //   .src
-                  }
+                  imgSrc={value.thumb_src}
+                  // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                   key={hash(value) + i.toString()}
                 />
               ))}

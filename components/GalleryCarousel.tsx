@@ -95,32 +95,14 @@ export default function CampaignCarousel(props: any) {
                 return null;
               }
               return (
+                // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                 <div className="embla__slide" key={hash(value) + i.toString()}>
-                  {/* <DynamicComponentMatcher
-                                        key={hash(value) + i.toString()}
-                                        view={[
-                                            {
-                                                component: "DynamicComponentMatcher",
-                                                props: {
-                                                    view: value?.props?.view
-                                                        ? [value.props.view[0]]
-                                                        : [value],
-                                                },
-                                            },
-                                        ]}
-                                    ></DynamicComponentMatcher> */}
-
                   <Teaser galleryApi={embla} {...value.props}></Teaser>
 
                   <h3 className="event_location">
                     {value.props.event_location}
                   </h3>
                   <h4 className="event_date">{value.props.event_date}</h4>
-
-                  {/* <img
-                                        className="embla-gallery__slide__img"
-                                        src={require(`../public/images/${value.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=webp`).src}
-                                    /> */}
                 </div>
               );
             })}

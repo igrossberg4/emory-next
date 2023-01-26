@@ -643,6 +643,7 @@ export default function Home(props: any) {
       ""
     );
   }, [router.asPath, state.route, hash(props.view), state.comesFromCarousel]);
+  // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
 
   return (
     <Fragment>

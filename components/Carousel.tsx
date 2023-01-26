@@ -174,6 +174,7 @@ export default function EmblaCarousel({
   navigation: boolean;
 }) {
   const router = useRouter();
+  // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
   const index = actual
     ? slides.findIndex((slide: any) => hash(slide) === hash(actual.actual))
     : 0;
@@ -355,6 +356,7 @@ export default function EmblaCarousel({
                     : 0;
                   return (
                     <div
+                      // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                       key={hash(value) + i.toString()}
                       ref={page === i ? refViewport : undefined}
                       id={page === i && !performTransition ? "selected" : ""}
@@ -384,6 +386,7 @@ export default function EmblaCarousel({
                       <div className="embla__slide">
                         <div className="embla__slide__inner">
                           <DynamicComponentMatcher
+                            // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
                             key={hash(value) + i.toString()}
                             view={[
                               {
@@ -420,6 +423,7 @@ export default function EmblaCarousel({
         </div>
         {navigation ? (
           <div
+            // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
             key={hash(slides[page].props.view.slice(1))}
             id="carouselContent"
           >
