@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.gallery-carousel .embla__container {
+  will-change: auto !important;
+}
+
 .embla-gallery {
   --slide-spacing: 1rem;
   --slide-size: 100%;
