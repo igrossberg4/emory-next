@@ -17,7 +17,7 @@ export default function Teaser(props: any) {
 
   return (
     <div className="teaser">
-      {props.type == "gallery" ? (
+      {props.carousel_type == "gallery" ? (
         <MediaWithExpantion
           img_src={props.img_src}
           media_src={props.media_src}
@@ -25,7 +25,7 @@ export default function Teaser(props: any) {
           media_type={props.media_type}
           size="normal"
           is_carousel="true"
-          type={props.type}
+          type={props.carousel_type}
           header={props.media_header}
           text={props.media_text}
           byline={props.media_byline}
@@ -34,10 +34,6 @@ export default function Teaser(props: any) {
           galleryApi={props.galleryApi}
         ></MediaWithExpantion>
       ) : (
-        ""
-      )}
-
-      {props.type !== "gallery" && (
         <img
           alt={props.title}
           className="teaser__image round-wp"
@@ -45,6 +41,15 @@ export default function Teaser(props: any) {
           srcSet={multipleSizesImgPrincipal.srcSet}
         ></img>
       )}
+
+      {/* {props.carousel_type !== "gallery" && (
+        <img
+          alt={props.title}
+          className="teaser__image round-wp"
+          src={multipleSizesImgPrincipal.src}
+          srcSet={multipleSizesImgPrincipal.srcSet}
+        ></img>
+      )} */}
       {/* <h3 className="teaser__title">{props.title}</h3>
       <p className="teaser__body">{props.body}</p>
       {props.explore_link && !props.internal_link ? (
