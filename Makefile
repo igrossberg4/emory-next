@@ -36,6 +36,20 @@ build:
 	@echo "\n---> WARNING: This command breaks the development build, run 'make dev' to have it running properly again. <---"
 
 
+## staging:  Provision docker container for staging. Internally this
+##           executes `npm run dev` to watch your filesystem for changes and
+##           auto-reload the browser at http://localhost:3000/.
+##
+.PHONY: staging
+staging:
+	docker-compose stop next_staging
+	docker-compose up --build -d next_staging
+	docker-compose exec -T next_staging npm install
+	@echo "\n\n\n---> Development: http://localhost:3000 <---"
+	@echo "\n---> NOTE: Please allow several seconds on initial page load for Next.js to finish dev compilation. <---"
+	docker-compose exec -T next_staging npm run dev
+
+
 ## release: Bumps the package version and creates a release.
 ##
 .PHONY: release
