@@ -123,7 +123,7 @@ export default function Footer(props: any) {
         )}
         <div className="footer__cta">
           {props.cta_support_button !== false ? (
-            props.cta_contact_info?.hide_cta_button ? (
+            !props.cta_contact_info?.hide_cta_button ? (
               <Link
                 href={
                   props?.cta_support_button?.url
