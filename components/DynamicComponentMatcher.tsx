@@ -39,6 +39,7 @@ const GalleryCarousel = dynamic(() => import("./GalleryCarousel"));
 const EventContainer = dynamic(() => import("./EventContainer"));
 const Event = dynamic(() => import("./Event"));
 const GalleryCarouselItem = dynamic(() => import("./GalleryCarouselItem"));
+const DynamicAccordion = dynamic(() => import("./DynamicAccordion"));
 
 function DynamicComponentMatcher(props: any) {
   return (
@@ -296,8 +297,21 @@ function DynamicComponentMatcher(props: any) {
               ></ProfileGrid>
             );
 
-          case 'ProfileGrid':
-            return <ProfileGrid {...component.props} key={i.toString()}></ProfileGrid>
+          case "ProfileGrid":
+            return (
+              <ProfileGrid
+                {...component.props}
+                key={i.toString()}
+              ></ProfileGrid>
+            );
+
+          case "DynamicAccordion":
+            return (
+              <DynamicAccordion
+                {...component.props}
+                key={i.toString}
+              ></DynamicAccordion>
+            );
 
           default:
             return "";

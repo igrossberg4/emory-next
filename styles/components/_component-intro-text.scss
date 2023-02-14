@@ -6,6 +6,23 @@
   background-size: 50%;
   background-blend-mode: multiply;
 
+  .dynamic-component-bg-img {
+    img {
+      position: absolute;
+      right: 0;
+      transform: translateY(-120px);
+      display: block;
+      max-width: 50%;
+      max-height: 50%;
+      width: auto;
+      height: auto;
+
+      @include media-breakpoint-down(md) {
+        display: none !important;
+      }
+    }
+  }
+
   @include media-breakpoint-down(md) {
     background-image: none !important;
     margin-bottom: 0;
@@ -47,7 +64,7 @@
       background-position: 100% 0;
       background-size: contain;
       background-blend-mode: multiply;
-      
+
       @include media-breakpoint-up(md) {
         display: none;
       }

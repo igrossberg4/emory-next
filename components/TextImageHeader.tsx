@@ -31,6 +31,9 @@ export default function TextImageHeader(props: any) {
             {props.tags && (
               <div className="tags">
                 {props?.tags.map((tag: any, index: number) => {
+                  {
+                    tag.internal_link = tag.url[0] == "/";
+                  }
                   return (
                     <Tag
                       // Replace object-hash/MD5 with hash-sum/hash. MD5 is CPU-intensive and causes lag on large pages.
