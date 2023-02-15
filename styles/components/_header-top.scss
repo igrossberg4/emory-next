@@ -6,6 +6,8 @@
   justify-content: center;
   // padding: 60px 0 80px 0;
   text-align: center;
+  height: 100vh;
+  max-height: -webkit-fill-available;
 
   .header-inner-content {
     display: flex;
@@ -180,7 +182,7 @@
 
     // ¡Vertical media queries take precedence!
 
-    @media (min-width: map-get($grid-breakpoints, 'lg')) and (max-height: $round-image-vertical-breakpoint-md) {
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-height: $round-image-vertical-breakpoint-md) {
       width: $round-image-size-medium;
       height: $round-image-size-medium;
     }
@@ -193,7 +195,6 @@
         border-width: 6px;
       }
     }
-
 
     img {
       object-fit: cover;

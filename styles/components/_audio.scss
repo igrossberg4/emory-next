@@ -1,5 +1,4 @@
 .audio {
-
   .audio__image {
     position: relative;
     display: flex;
@@ -35,6 +34,14 @@
     }
 
     button {
+      svg {
+        width: 18px;
+
+        @include media-breakpoint-down(sm) {
+          width: 14px;
+        }
+      }
+
       @include media-breakpoint-up(md) {
         width: 100px;
         height: 100px;

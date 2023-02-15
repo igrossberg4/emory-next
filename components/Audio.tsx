@@ -4,27 +4,48 @@ import IconButton from "./IconButton";
 export default function Audio(props: any) {
   const audioRef = useRef<HTMLAudioElement>();
   const [isPlaying, setPlaying] = useState(false);
-  const multipleSizesImgPrincipal = require(`../public/images/${(props.img_src)}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  
+  const [buttonHasUpdated, updatedButton] = useState(false);
+  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+
   return (
     <div className="section audio">
       <div className="container">
         <div className="audio__image">
-          <img alt={props.img_alt} src={multipleSizesImgPrincipal.src} srcSet={multipleSizesImgPrincipal.srcSet} ></img>
+          <img
+            alt={props.img_alt}
+            src={multipleSizesImgPrincipal.src}
+            srcSet={multipleSizesImgPrincipal.srcSet}
+          ></img>
           {isPlaying && (
-            <div onClick={(e) => { audioRef?.current?.pause(); }}>
-              <IconButton icon="pause" label="Pause"></IconButton>
+            <div
+              onClick={(e) => {
+                updatedButton(true);
+                audioRef?.current?.pause();
+              }}
+              className={buttonHasUpdated ? "updated" : ""}
+            >
+              <IconButton icon="audio-pause" label="Pause"></IconButton>
             </div>
           )}
           {!isPlaying && (
-            <div onClick={(e) => { audioRef?.current?.play(); }}>
-              <IconButton icon="play" label="play"></IconButton>
+            <div
+              onClick={(e) => {
+                updatedButton(true);
+                audioRef?.current?.play();
+              }}
+              className={buttonHasUpdated ? "updated" : ""}
+            >
+              <IconButton icon="audio-play" label="play"></IconButton>
             </div>
           )}
         </div>
         <audio
-          onPause={(e) => { setPlaying(false); }}
-          onPlay={(e) => { setPlaying(true); }}
+          onPause={(e) => {
+            setPlaying(false);
+          }}
+          onPlay={(e) => {
+            setPlaying(true);
+          }}
           ref={(ref) => {
             if (ref) {
               audioRef.current = ref;
