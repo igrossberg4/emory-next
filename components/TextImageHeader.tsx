@@ -18,7 +18,7 @@ export default function TextImageHeader(props: any) {
     <div
       className={`section text-image-header ${
         props.layout === "left" ? "layout-left" : "layout-right"
-      }`}
+      } ${props.disabled ? "text-image-header__disabled" : ""}`}
     >
       <div className="container">
         <div className="row">
