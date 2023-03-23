@@ -8,6 +8,12 @@
     }
   }
 
+  &__disabled {
+    .column-text {
+      opacity: 70%;
+    }
+  }
+
   .component-media-with-expansion {
     margin: 0 auto 20px;
     display: block;
