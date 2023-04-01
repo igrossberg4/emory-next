@@ -57,6 +57,8 @@ export default function TextImageHeader(props: any) {
               text={props.media_text}
               byline={props.media_byline}
               disabled={props.disabled}
+              hosted_externally={props.hosted_externally}
+              thumb_src={props.thumb_src}
             />
             <div className="text-image-header__line"></div>
             <div
