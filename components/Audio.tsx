@@ -5,7 +5,16 @@ export default function Audio(props: any) {
   const audioRef = useRef<HTMLAudioElement>();
   const [isPlaying, setPlaying] = useState(false);
   const [buttonHasUpdated, updatedButton] = useState(false);
-  const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  // const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+
+  let multipleSizesImgPrincipal;
+
+  if (!props.hosted_externally) {
+    multipleSizesImgPrincipal = require(`../public/images/${
+      props.img_src ? props.img_src : props.media_src
+    }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  } else {
+  }
 
   return (
     <div className="section audio">
@@ -13,8 +22,16 @@ export default function Audio(props: any) {
         <div className="audio__image">
           <img
             alt={props.img_alt}
-            src={multipleSizesImgPrincipal.src}
-            srcSet={multipleSizesImgPrincipal.srcSet}
+            src={
+              props.hosted_externally
+                ? props.thumb_src
+                  ? props.thumb_src
+                  : props.media_src
+                : multipleSizesImgPrincipal.src
+            }
+            srcSet={
+              props.hosted_externally ? null : multipleSizesImgPrincipal.srcSet
+            }
           ></img>
           {isPlaying && (
             <div
