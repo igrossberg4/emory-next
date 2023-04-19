@@ -35,7 +35,7 @@ export default function DynamicAccordion(props: any) {
       <div className="section container accordion">
         <Accordion
           allowToggle
-          defaultIndex={props.openByDefault ? 0 : undefined}
+          defaultIndex={props.open_by_default ? 0 : undefined}
         >
           <AccordionItem>
             <h3 className="accordion-item__title text-body--lg">

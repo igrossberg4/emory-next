@@ -19,6 +19,15 @@ export default function CarouselItem(props: any) {
   const [state, dispatch] = useContext(Context) as any;
 
   const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  const isExternalImg = props.img_src.startsWith("https://");
+
+  // let isExternalImg = props.img_src
+  //   ? props.img_src.startsWith("https://")
+  //   : false;
+  // let multipleSizesImgPrincipal = isExternalImg
+  //   ? undefined
+  //   : require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+
   const memo = useMemo(() => {
     return (
       <div
@@ -32,9 +41,15 @@ export default function CarouselItem(props: any) {
         <div className="header-inner-content">
           <div className="header-inner-content__img round-wp">
             <Image
-              loader={imageLoader(multipleSizesImgPrincipal) as any}
+              loader={
+                isExternalImg
+                  ? null
+                  : (imageLoader(multipleSizesImgPrincipal) as any)
+              }
               priority={true}
-              src={multipleSizesImgPrincipal.src}
+              src={
+                isExternalImg ? props.img_src : multipleSizesImgPrincipal.src
+              }
               alt={props.header}
               layout={"fill"}
             />
