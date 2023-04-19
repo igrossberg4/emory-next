@@ -10,17 +10,31 @@ import { useCallback } from "react";
 import AsdfCarousel from "./GalleryCarouselItem";
 
 export default function MediaWithExpantion(props: any) {
-  let multipleSizesImgPrincipal;
-  let multipleSizesImgExpanded;
+  // let multipleSizesImgPrincipal;
+  // let multipleSizesImgExpanded;
 
-  if (!props.hosted_externally) {
-    multipleSizesImgPrincipal = require(`../public/images/${
-      props.img_src ? props.img_src : props.media_src
-    }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-    if (props.media_type !== "video" && props.media_type !== "audio") {
-      multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
-    }
-  }
+  // if (!props.hosted_externally) {
+  //   multipleSizesImgPrincipal = require(`../public/images/${
+  //     props.img_src ? props.img_src : props.media_src
+  //   }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  //   if (props.media_type !== "video" && props.media_type !== "audio") {
+  //     multipleSizesImgExpanded = require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`);
+  //   }
+  // }
+
+  let isExternalImg =
+    props.img_src.startsWith("https://") ||
+    (props.thumb_src && props.thumb_src.startsWith("https://"));
+  let multipleSizesImgPrincipal = isExternalImg
+    ? undefined
+    : require(`../public/images/${
+        props.img_src ? props.img_src : props.media_src
+      }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  let multipleSizesImgExpanded = isExternalImg
+    ? undefined
+    : props.media_type !== "video" && props.media_type !== "audio"
+    ? require(`../public/images/${props.media_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=1200,sizes[]=2048&format=png`)
+    : undefined;
 
   const onSlideClick = useCallback(() => {
     if (props.galleryApi && props.galleryApi.clickAllowed()) {
@@ -89,13 +103,9 @@ export default function MediaWithExpantion(props: any) {
           >
             <img
               alt={props.media_alt}
-              srcSet={
-                props.hosted_externally
-                  ? null
-                  : multipleSizesImgPrincipal.srcSet
-              }
+              srcSet={isExternalImg ? null : multipleSizesImgPrincipal.srcSet}
               src={
-                props.hosted_externally
+                isExternalImg
                   ? props.thumb_src
                     ? props.thumb_src
                     : props.media_src
@@ -129,17 +139,29 @@ export default function MediaWithExpantion(props: any) {
                     <div>
                       {props.media_type === "image" && (
                         <div className="image-wrapper">
-                          <Image
-                            loader={
-                              imageLoader(multipleSizesImgExpanded) as any
-                            }
-                            priority={true}
-                            alt={props.media_alt}
-                            src={multipleSizesImgExpanded.src}
-                            layout={"responsive"}
-                            width={multipleSizesImgExpanded.width}
-                            height={multipleSizesImgExpanded.height}
-                          />
+                          {isExternalImg ? (
+                            <Image
+                              unoptimized
+                              alt={props.media_alt}
+                              src={props.media_src}
+                              width="100%"
+                              height="100%"
+                              layout="responsive"
+                              objectFit="contain"
+                            />
+                          ) : (
+                            <Image
+                              loader={
+                                imageLoader(multipleSizesImgExpanded) as any
+                              }
+                              priority={true}
+                              alt={props.media_alt}
+                              src={multipleSizesImgExpanded.src}
+                              layout={"responsive"}
+                              width={multipleSizesImgExpanded.width}
+                              height={multipleSizesImgExpanded.height}
+                            />
+                          )}
                         </div>
                       )}
                       {props.media_type === "video" && (

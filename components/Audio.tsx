@@ -7,14 +7,21 @@ export default function Audio(props: any) {
   const [buttonHasUpdated, updatedButton] = useState(false);
   // const multipleSizesImgPrincipal = require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
 
-  let multipleSizesImgPrincipal;
+  // let multipleSizesImgPrincipal;
 
-  if (!props.hosted_externally) {
-    multipleSizesImgPrincipal = require(`../public/images/${
-      props.img_src ? props.img_src : props.media_src
-    }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
-  } else {
-  }
+  // if (!props.hosted_externally) {
+  //   multipleSizesImgPrincipal = require(`../public/images/${
+  //     props.img_src ? props.img_src : props.media_src
+  //   }?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
+  // } else {
+  // }
+
+  let isExternalImg =
+    props.img_src.startsWith("https://") ||
+    props.thumb_src.startsWith("https://");
+  let multipleSizesImgPrincipal = isExternalImg
+    ? undefined
+    : require(`../public/images/${props.img_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
 
   return (
     <div className="section audio">
@@ -23,15 +30,13 @@ export default function Audio(props: any) {
           <img
             alt={props.img_alt}
             src={
-              props.hosted_externally
+              isExternalImg
                 ? props.thumb_src
                   ? props.thumb_src
                   : props.media_src
                 : multipleSizesImgPrincipal.src
             }
-            srcSet={
-              props.hosted_externally ? null : multipleSizesImgPrincipal.srcSet
-            }
+            srcSet={isExternalImg ? null : multipleSizesImgPrincipal.srcSet}
           ></img>
           {isPlaying && (
             <div

@@ -7,22 +7,46 @@ import { AnimateSharedLayout, motion } from "framer-motion";
 import { Context } from "../state/Store";
 import MediaWithExpantion from "./MediaWithExpantion";
 
-export default function ImageTextOneColumn(props:any) {
+export default function ImageTextOneColumn(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
   const [expanded, setExpanded] = useState(false);
-  const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`) : undefined;
+  // const multipleSizesImgPrincipal = props.background_image ? require(`../public/images/${(props.background_image)}?resize&sizes[]=2048&format=png`) : undefined;
+
+  let isExternalImg = props.background_image.startsWith("https://");
+  let multipleSizesImgPrincipal = isExternalImg
+    ? undefined
+    : require(`../public/images/${props.background_image}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
 
   return (
-    <div className="section component-image-text-one-column" style={{backgroundImage:props.background_image ? `url(/${multipleSizesImgPrincipal.src})` : ''}}>
+    <div
+      className="section component-image-text-one-column"
+      style={{
+        backgroundImage: props.background_image
+          ? `url(/${multipleSizesImgPrincipal.src})`
+          : "",
+      }}
+    >
       <div className="container">
         <div className="row">
           <div className="column">
             <h2 className="title header-h3">{props.header}</h2>
             <div className="floating-media">
-              <MediaWithExpantion img_src={props.img_src} media_src={props.media_src} media_alt={props.media_alt} media_type={props.media_type} size="big" header={props.media_header} text={props.media_text} byline={props.media_byline}  ></MediaWithExpantion>
+              <MediaWithExpantion
+                img_src={props.img_src}
+                media_src={props.media_src}
+                media_alt={props.media_alt}
+                media_type={props.media_type}
+                size="big"
+                header={props.media_header}
+                text={props.media_text}
+                byline={props.media_byline}
+              ></MediaWithExpantion>
             </div>
-            <div className="body" dangerouslySetInnerHTML={{__html:props.text}}></div>
+            <div
+              className="body"
+              dangerouslySetInnerHTML={{ __html: props.text }}
+            ></div>
           </div>
         </div>
       </div>

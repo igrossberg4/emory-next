@@ -28,6 +28,14 @@ module.exports = withPlugins(
       disableStaticImages: true,
       loader: "imgix",
       path: "/",
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "**",
+          port: "",
+          pathname: "**",
+        },
+      ],
       // deviceSizes: [300, 600, 1024, 1200, 2048],
     },
 
