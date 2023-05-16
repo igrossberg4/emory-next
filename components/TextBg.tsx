@@ -17,7 +17,7 @@ export default function TextBg(props: any) {
     : require(`../public/images/${props.image_src}?resize&sizes[]=300,sizes[]=600,sizes[]=1024,sizes[]=2048&format=png`);
 
   return (
-    <div className="text-bg">
+    <div className="text-bg" id={props.anchor_id ? props.anchor_id : undefined}>
       {isExternalImg ? (
         <Image
           alt=""
