@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import {
@@ -29,13 +29,19 @@ const hash = require("hash-sum");
 export default function DynamicAccordion(props: any) {
   const router = useRouter();
   const [state, dispatch] = useContext(Context) as any;
+  const [hasAnchor, setHasAnchor] = useState(false);
+
+  useEffect(() => {
+    const anchorExists = router.asPath.includes("#");
+    setHasAnchor(anchorExists);
+  }, [router.asPath]);
 
   return (
     <Fragment>
       <div className="section container accordion">
         <Accordion
           allowToggle
-          defaultIndex={props.open_by_default ? 0 : undefined}
+          index={props.open_by_default || hasAnchor ? [0] : undefined}
         >
           <AccordionItem>
             <h3 className="accordion-item__title text-body--lg">
